@@ -1,0 +1,43 @@
+{
+  "env": {
+    "jest/globals": true
+  },
+  "extends": ["airbnb","react-app"],
+  "globals": {
+    "page": true,
+    "document": true
+  },
+  "plugins": ["jest"],
+  "rules": {
+    "import/prefer-default-export": "off",
+    "no-console": "off",
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "require-jsdoc": ["error", {
+      "require": {
+        "FunctionDeclaration": true,
+        "MethodDefinition": true,
+        "ClassDeclaration": true,
+        "ArrowFunctionExpression": true,
+        "FunctionExpression": true
+      }
+    }],
+    "no-underscore-dangle": "off",
+    "react/prefer-stateless-function": "off",
+    "sort-keys": ["error", "asc", {
+      "caseSensitive": false,
+      "natural": false
+    }],
+    "react/jsx-props-no-spreading": "off",
+    "react/function-component-definition": "off",
+    "default-param-last": "off",
+    "arrow-parens": "off",
+    "import/no-anonymous-default-export": "off",
+    "max-len": ["error", {
+      "code": 120,
+      "ignoreComments": true,
+      "ignoreStrings": true,
+      "ignoreTemplateLiterals": true,
+      "ignoreRegExpLiterals": true
+    }]
+  }
+}
