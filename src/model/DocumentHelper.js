@@ -34,7 +34,7 @@ DocumentHelper.validFolioName = function validFolioName( folioName ) {
 };
 
 DocumentHelper.folioURL = function( folioID ) {
-  return `http://localhost:4444/bnf-ms-fr-640/local011323-1/${folioID}`;
+  return `https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/${folioID}`;
 }
 
 DocumentHelper.generateFolioID = function( bnfLabel ) {

@@ -75,7 +75,7 @@ module.exports = (env, options) => {
     ...config,
     devServer: {
       hot: true,
-      port: 4444,
+      port: 4000,
       static: [
         './__tests__/integration/editioncrafter'
       ],
