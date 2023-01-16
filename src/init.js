@@ -1,4 +1,4 @@
-import EditionCrafter from './lib/EditionCrafter';
+import EditionCrafter from './EditionCrafter';
 
 /**
  * Default Mirador instantiation
