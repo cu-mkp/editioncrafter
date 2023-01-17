@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#000000">
+
+  	<!-- This is the end result of a sass build -->
+    <link href="css/index.css" rel="stylesheet">
+    <title>EditionCrafter</title>
+  </head>
+  <body>
+    <div id="ec" style="position: absolute; top: 0; bottom: 0; left: 0; right: 0;"></div>
+    <script>document.write("<script type='text/javascript' src='../../../dist/editioncrafter.min.js?v=" + Date.now() + "'><\/script>");</script>
+    <script type="text/javascript">
+      var ec = EditionCrafter.viewer({
+        id: 'ec'
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+.paginationComponent {
+	white-space: nowrap;
+	
+	text-align: center;
+	font-size: 1.2rem;
+	font-weight: 700;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+      user-select: none;
+      margin-top:52px;
+	@include md {
+		margin-bottom: 0;
+	}
+}
+// .paginationComponent:nth-of-type(3){
+//   padding:1rem 0 0 0;
+// }
+
+.paginationControl {
+	padding: 16px;
+	
+}
+
+.paginationControl .arrow {
+	font-size: 1.8rem;
+	color: #4A4A4A;
+	margin: 1rem 1rem 0;
+	cursor: pointer;
+}
+
+.paginationControl .folioName {
+	position: relative;
+	top: -.2rem;
+	color: #4A4A4A;
+}
