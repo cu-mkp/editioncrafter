@@ -6,10 +6,10 @@ import rootSaga from '../saga/rootSaga';
 
 
 // Call this once to create a new redux store that is properly configured.
-export function createReduxStore() {
+export function createReduxStore(config) {
   let sagaMiddleware = createSagaMiddleware()
   let store = createStore(
-    rootReducer(),
+    rootReducer(config),
     window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
     applyMiddleware(sagaMiddleware)
   );

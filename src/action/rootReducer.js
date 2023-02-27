@@ -11,11 +11,12 @@ import documentInitialState from './initialState/documentInitialState';
 import CommentActions from './CommentActions';
 import commentInitialState from './initialState/commentInitialState';
 
-export default function rootReducer() {
+export default function rootReducer(config) {
+    const { editionBaseURL } = config
     return combineReducers({
         diplomatic: createReducer( 'DiplomaticActions', DiplomaticActions, diplomaticInitialState ),
-        document: createReducer( 'DocumentActions', DocumentActions, documentInitialState ),
-        glossary: createReducer( 'GlossaryActions', GlossaryActions, glossaryInitialState ),
-        comments: createReducer( 'CommentActions', CommentActions, commentInitialState ),
+        document: createReducer( 'DocumentActions', DocumentActions, documentInitialState(editionBaseURL) ),
+        glossary: createReducer( 'GlossaryActions', GlossaryActions, glossaryInitialState(editionBaseURL) ),
+        comments: createReducer( 'CommentActions', CommentActions, commentInitialState(editionBaseURL) ),
     });    
 };

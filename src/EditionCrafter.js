@@ -18,7 +18,7 @@ class EditionCrafter {
       this.container = document.getElementById(config.id);
       config.id && ReactDOM.render(
         <ThemeProvider theme={theme}>
-          <DiploMatic store={createReduxStore()} />
+          <DiploMatic store={createReduxStore(config)} />
         </ThemeProvider>,
         this.container
       )
