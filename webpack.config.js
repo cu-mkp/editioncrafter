@@ -77,7 +77,7 @@ module.exports = (env, options) => {
       hot: true,
       port: 4000,
       static: [
-        './__tests__/integration/editioncrafter'
+        './__tests__/integration/editioncrafter',
       ],
     },
     devtool: 'eval-source-map',

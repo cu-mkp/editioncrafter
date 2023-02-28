@@ -1,12 +1,11 @@
+const CommentsActions = {};
 
-var CommentsActions = {};
-
-CommentsActions.loadComments = function loadComments( state, commentData ) {
-    return {
-        ...state,
-        loaded: true,
-        comments: commentData
-    }
+CommentsActions.loadComments = function loadComments(state, commentData) {
+  return {
+    ...state,
+    loaded: true,
+    comments: commentData,
+  };
 };
 
 export default CommentsActions;

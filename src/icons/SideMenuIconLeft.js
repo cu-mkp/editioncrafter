@@ -1,4 +1,4 @@
-import * as React from "react"
+import * as React from 'react';
 
 function SideMenuIconLeft(props) {
   return (
@@ -12,7 +12,7 @@ function SideMenuIconLeft(props) {
       <g
         data-name="Component 14 \u2013 1"
         fill="none"
-        stroke={props.color ? props.color : "#000"}
+        stroke={props.color ? props.color : '#000'}
         strokeLinecap="round"
         strokeWidth={18}
       >
@@ -26,7 +26,7 @@ function SideMenuIconLeft(props) {
         <path data-name="Line 139" d="M164 50l-32 30" />
       </g>
     </svg>
-  )
+  );
 }
 
-export default SideMenuIconLeft
+export default SideMenuIconLeft;
