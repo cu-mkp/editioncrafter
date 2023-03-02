@@ -16,6 +16,7 @@
     "no-underscore-dangle": "off",
     "no-plusplus": "off",
     "no-param-reassign": "off",
+    "react/sort-comp": "off",
     "camelcase": "off",
     "react/prefer-stateless-function": "off",
     "sort-keys": "off",

@@ -22,13 +22,8 @@ export function dispatchAction(props, action, ...params) {
 }
 
 // Dispatch the action via Redux Saga.
-export function* putAction(action, ...params) {
-  return yield put({ type: action, payload: { params } });
-}
-
-// Dispatch the action via Redux Saga.
 export function* putResolveAction(action, ...params) {
-  return yield put.resolve({ type: action, payload: { params } });
+  return yield put({ type: action, payload: { params } });
 }
 
 // Take the action and call it with the current redux state.

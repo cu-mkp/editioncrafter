@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import Parser from 'html-react-parser';
-import domToReact from 'html-react-parser/lib/dom-to-react';
+import Parser, { domToReact } from 'html-react-parser';
 import Navigation from './Navigation';
 import Pagination from './Pagination';
 import EditorComment from './EditorComment';
