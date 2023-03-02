@@ -8,7 +8,6 @@ class ImageGridView extends React.Component {
     super(props, context);
     this.generateThumbs = this.generateThumbs.bind(this);
     this.loadIncrement = 10;
-    this.thumbnailNavigationModeSize = 312;
     this.state = {
       jumpToBuffer: '',
       thumbs: '',
@@ -73,7 +72,7 @@ class ImageGridView extends React.Component {
     );
   }
 
-  componentWillMount() {
+  componentDidMount() {
     const folioID = this.props.documentView[this.props.side].iiifShortID;
     const folioURL = DocumentHelper.folioURL(folioID);
     const thumbs = this.generateThumbs(folioURL, this.props.document.folios);
@@ -109,9 +108,9 @@ class ImageGridView extends React.Component {
     const thumbCount = visibleThumbs.length + this.loadIncrement;
 
     if (thumbs.length >= thumbCount) {
-		  visibleThumbs = thumbs.slice(0, thumbCount);
+      visibleThumbs = thumbs.slice(0, thumbCount);
     } else {
-		  visibleThumbs = thumbs;
+      visibleThumbs = thumbs;
     }
 
     this.setState({ visibleThumbs });

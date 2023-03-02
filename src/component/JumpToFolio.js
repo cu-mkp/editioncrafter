@@ -21,7 +21,7 @@ class JumpToFolio extends React.Component {
     // Hide and clear
     this.props.blurHandler();
     this.setState({ textInput: '' });
-  	}
+  }
 
   componentWillReceiveProps(nextProps) {
     // FIXME: this is an over-clever hack, but how else do you force focus?

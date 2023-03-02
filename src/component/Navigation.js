@@ -29,7 +29,7 @@ class Navigation extends React.Component {
     };
   }
 
-  onJumpBoxBlur = function (event) {
+  onJumpBoxBlur = function onJumpBoxBlur(event) {
     this.setState({ popoverVisible: false });
   };
 
@@ -47,7 +47,7 @@ class Navigation extends React.Component {
     });
   };
 
-  toggleBookmode = function (event) {
+  toggleBookmode = function toggleBookmode(event) {
     if (!this.props.documentView.bookMode === true) {
       this.props.documentViewActions.changeCurrentFolio(
         this.props.documentView.left.iiifShortID,
@@ -68,7 +68,7 @@ class Navigation extends React.Component {
     );
   };
 
-  toggleXMLMode = function (event) {
+  toggleXMLMode = function toggleXMLMode(event) {
     if (this.props.documentView.inSearchMode) {
       this.props.documentViewActions.toggleXMLMode();
     } else {
@@ -80,14 +80,14 @@ class Navigation extends React.Component {
   };
 
   // aka gridMode
-  toggleColumns = function (event) {
+  toggleColumns = function toggleColumns(event) {
     this.props.documentViewActions.setGridMode(
       this.props.side,
       !this.props.documentView[this.props.side].isGridMode,
     );
   };
 
-  toggleLockmode = function (event) {
+  toggleLockmode = function toggleLockmode(event) {
     if (this.props.documentView.bookMode) {
       this.toggleBookmode();
       return;
@@ -129,17 +129,13 @@ class Navigation extends React.Component {
     );
   };
 
-  revealJumpBox = function (event) {
+  revealJumpBox = function revealJumpBox(event) {
     this.setState({
       popoverVisible: true,
       popoverX: event.clientX,
       popoverY: event.clientY,
     });
   };
-
-  renderData(item) {
-    return <div key={item.id}>{item.name}</div>;
-  }
 
   render() {
     if (!this.props.documentView) {

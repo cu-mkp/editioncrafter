@@ -39,13 +39,13 @@ class XMLView extends Component {
     if (this.state.currentlyLoaded !== nextFolioURL) {
       this.contentChange = true;
       this.loadFolio(DocumentHelper.getFolio(this.props.document, nextFolioURL));
-  	}
+    }
   }
 
   componentDidUpdate() {
     // TODO make this work for XML view
 
-  	if (this.contentChange) {
+    if (this.contentChange) {
       // Scroll content to top
       const selector = `xmlViewComponent_${this.props.side}`;
       const el = document.getElementById(selector);

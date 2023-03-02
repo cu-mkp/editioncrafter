@@ -1,4 +1,4 @@
-export default function (editionBaseURL) {
+export default function commentInitialState(editionBaseURL) {
   return {
     commentsURL: `${editionBaseURL}/comments.json`,
     comments: {},

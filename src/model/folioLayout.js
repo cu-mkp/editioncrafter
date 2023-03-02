@@ -183,7 +183,7 @@ function layoutMargin(html, emptyZoneFrame, layoutDecoder) {
   folioDiv.innerHTML = html;
   const zones = folioDiv.children;
 
-  const validLayoutCode = function (layoutCode) {
+  const validLayoutCode = function validLayoutCode(layoutCode) {
     if (Object.keys(emptyMarginFrame).includes(layoutCode)) {
       return layoutCode;
     }
@@ -259,7 +259,7 @@ function zoneGridToLayout(zoneGrid) {
   const zoneGridFinal = [...zoneGrid];
 
   // ignore the first row if there are no block sets in it
-  if (zoneGrid[0] && zoneGrid[0][0] === '.' && zoneGrid[0][1] === '.' & zoneGrid[0][1] === '.') {
+  if (zoneGrid[0] && zoneGrid[0][0] === '.' && zoneGrid[0][1] === '.') {
     zoneGridFinal.shift();
   }
 

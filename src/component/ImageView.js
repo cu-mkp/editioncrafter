@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import React, { Component } from 'react';
 
 import Navigation from './Navigation';
-import ImageZoomControl from './ImageZoomControl.js';
+import ImageZoomControl from './ImageZoomControl';
 
 import DocumentHelper from '../model/DocumentHelper';
 

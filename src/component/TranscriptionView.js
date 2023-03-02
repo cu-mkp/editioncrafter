@@ -16,7 +16,7 @@ class TranscriptionView extends Component {
     // window.loadingModal_stop();
   }
 
- 	// Recursively unpack a node tree object and just return the text
+  // Recursively unpack a node tree object and just return the text
   nodeTreeToString(node) {
     let term = '';
     for (let x = 0; x < node.length; x++) {
@@ -26,7 +26,7 @@ class TranscriptionView extends Component {
         term += this.nodeTreeToString(node[x].children);
       }
     }
-  	  return term.trim();
+    return term.trim();
   }
 
   loadFolio(folio) {
@@ -47,15 +47,15 @@ class TranscriptionView extends Component {
     });
   }
 
-  	// Refresh the content if there is an incoming change
+  // Refresh the content if there is an incoming change
   componentWillReceiveProps(nextProps) {
     this.contentChange = false;
     const nextfolioID = nextProps.documentView[this.props.side].iiifShortID;
     const nextfolioURL = DocumentHelper.folioURL(nextfolioID);
-  		if (this.state.currentlyLoaded !== nextfolioURL) {
+    if (this.state.currentlyLoaded !== nextfolioURL) {
       this.contentChange = true;
       this.loadFolio(DocumentHelper.getFolio(this.props.document, nextfolioURL));
-	  	}
+    }
   }
 
   componentDidUpdate() {
@@ -70,152 +70,7 @@ class TranscriptionView extends Component {
     }
   }
 
-  watermark() {
-    return (
-      <div className="watermark">
-        <div className="watermark_contents" />
-      </div>
-    );
-  }
-
-  htmlToReactParserOptions(side) {
-    const this2 = this;
-    var parserOptions = {
-			 replace(domNode) {
-				 switch (domNode.name) {
-          case 'add':
-            return (
-              <span className="add">
-                {domToReact(domNode.children, parserOptions)}
-              </span>
-            );
-
-          case 'del':
-            return (
-              <s className="del">
-                {domToReact(domNode.children, parserOptions)}
-              </s>
-            );
-
-          case 'comment':
-            const commentID = domNode.attribs.rid; // ( domNode.children && domNode.children[0] ) ? domNode.children[0].data : null
-            return (
-              <EditorComment commentID={commentID} />
-            );
-
-          case 'corr':
-            return (
-              <span className="corr">
-                &#91;
-                {domToReact(domNode.children, parserOptions)}
-                &#93;
-              </span>
-            );
-
-          case 'superscript':
-            return (
-              <sup>{domToReact(domNode.children, parserOptions)}</sup>
-            );
-
-          case 'de':
-          case 'el':
-          case 'es':
-          case 'fr':
-          case 'it':
-          case 'la':
-            return (
-              <i>
-                {domToReact(domNode.children, parserOptions)}
-              </i>
-            );
-
-          case 'exp':
-            return (
-              <span className="exp">
-                &#123;
-                {domToReact(domNode.children, parserOptions)}
-                &#125;
-              </span>
-            );
-
-          case 'underline':
-            return (
-              <u>{domToReact(domNode.children, parserOptions)}</u>
-            );
-
-          case 'unc':
-            return (
-              <span>
-                [
-                {domToReact(domNode.children, parserOptions)}
-                ?]
-              </span>
-            );
-
-          case 'sup':
-            return (
-              <span />
-            );
-
-          case 'lb':
-            return (
-              <br />
-            );
-
-          case 'gap':
-            return (
-              <i>[gap]</i>
-            );
-
-          case 'ill':
-            return (
-              <i>[illegible]</i>
-            );
-
-          case 'ups':
-            return (
-              <span className="ups">{domToReact(domNode.children, parserOptions)}</span>
-            );
-
-          case 'al':
-          case 'bp':
-          case 'cn':
-          case 'df':
-          case 'env':
-          case 'm':
-          case 'mark':
-          case 'md':
-          case 'ms':
-          case 'mu':
-          case 'pa':
-          case 'pl':
-          case 'pn':
-          case 'pro':
-          case 'sn':
-          case 'tl':
-          case 'tmp':
-          case 'wp':
-            return (
-              <span>{domToReact(domNode.children, parserOptions)}</span>
-            );
-
-          case 'emph':
-          case 'man':
-          case 'rub':
-            return (
-              <b>
-                {domToReact(domNode.children, parserOptions)}
-              </b>
-            );
-
-          default:
-            /* Otherwise, Just pass through */
-            return domNode;
-				 }
-			 },
-		 };
-		 return parserOptions;
-  }
+  
 
   getTranscriptionData(transcription) {
     if (typeof transcription === 'undefined') return null;
@@ -243,18 +98,18 @@ class TranscriptionView extends Component {
     // Retrofit - the folios are loaded asynchronously
     const folioID = this.props.documentView[this.props.side].iiifShortID;
     if (folioID === '-1') {
-      return this.watermark();
+      return watermark();
     } if (!this.state.isLoaded) {
       const folioURL = DocumentHelper.folioURL(folioID);
       this.loadFolio(DocumentHelper.getFolio(this.props.document, folioURL));
-      return this.watermark();
+      return watermark();
     }
 
     const transcriptionData = this.getTranscriptionData(this.state.folio.transcription[this.props.documentView[this.props.side].transcriptionType]);
 
     if (!transcriptionData) {
       console.log(`Undefined transcription for side: ${this.props.side}`);
-      return this.watermark();
+      return watermark();
     }
 
     // Determine class and id for this component
@@ -271,7 +126,7 @@ class TranscriptionView extends Component {
       }
 
       // Configure parser to replace certain tags with components
-      const htmlToReactParserOptions = this.htmlToReactParserOptions(side);
+      const htmlToReactParserOptionsSide = htmlToReactParserOptions(side);
 
       let { content } = transcriptionData;
       const { transcriptionType } = this.props.documentView[side];
@@ -302,7 +157,7 @@ class TranscriptionView extends Component {
                   style={surfaceStyle}
                 >
 
-                  {Parser(content, htmlToReactParserOptions)}
+                  {Parser(content, htmlToReactParserOptionsSide)}
                 </div>
               </ErrorBoundary>
             </div>
@@ -323,11 +178,157 @@ class TranscriptionView extends Component {
         <Navigation side={side} documentView={this.props.documentView} documentViewActions={this.props.documentViewActions} />
         <div className="transcriptContent">
           <Pagination side={side} className="pagination_upper" documentView={this.props.documentView} documentViewActions={this.props.documentViewActions} />
-          { this.watermark() }
+          { watermark() }
         </div>
       </div>
     );
   }
+}
+
+function htmlToReactParserOptions(side) {
+  const parserOptions = {
+    replace(domNode) {
+      switch (domNode.name) {
+        case 'add':
+          return (
+            <span className="add">
+              {domToReact(domNode.children, parserOptions)}
+            </span>
+          );
+
+        case 'del':
+          return (
+            <s className="del">
+              {domToReact(domNode.children, parserOptions)}
+            </s>
+          );
+
+        case 'comment':
+          const commentID = domNode.attribs.rid; // ( domNode.children && domNode.children[0] ) ? domNode.children[0].data : null
+          return (
+            <EditorComment commentID={commentID} />
+          );
+
+        case 'corr':
+          return (
+            <span className="corr">
+              &#91;
+              {domToReact(domNode.children, parserOptions)}
+              &#93;
+            </span>
+          );
+
+        case 'superscript':
+          return (
+            <sup>{domToReact(domNode.children, parserOptions)}</sup>
+          );
+
+        case 'de':
+        case 'el':
+        case 'es':
+        case 'fr':
+        case 'it':
+        case 'la':
+          return (
+            <i>
+              {domToReact(domNode.children, parserOptions)}
+            </i>
+          );
+
+        case 'exp':
+          return (
+            <span className="exp">
+              &#123;
+              {domToReact(domNode.children, parserOptions)}
+              &#125;
+            </span>
+          );
+
+        case 'underline':
+          return (
+            <u>{domToReact(domNode.children, parserOptions)}</u>
+          );
+
+        case 'unc':
+          return (
+            <span>
+              [
+              {domToReact(domNode.children, parserOptions)}
+              ?]
+            </span>
+          );
+
+        case 'sup':
+          return (
+            <span />
+          );
+
+        case 'lb':
+          return (
+            <br />
+          );
+
+        case 'gap':
+          return (
+            <i>[gap]</i>
+          );
+
+        case 'ill':
+          return (
+            <i>[illegible]</i>
+          );
+
+        case 'ups':
+          return (
+            <span className="ups">{domToReact(domNode.children, parserOptions)}</span>
+          );
+
+        case 'al':
+        case 'bp':
+        case 'cn':
+        case 'df':
+        case 'env':
+        case 'm':
+        case 'mark':
+        case 'md':
+        case 'ms':
+        case 'mu':
+        case 'pa':
+        case 'pl':
+        case 'pn':
+        case 'pro':
+        case 'sn':
+        case 'tl':
+        case 'tmp':
+        case 'wp':
+          return (
+            <span>{domToReact(domNode.children, parserOptions)}</span>
+          );
+
+        case 'emph':
+        case 'man':
+        case 'rub':
+          return (
+            <b>
+              {domToReact(domNode.children, parserOptions)}
+            </b>
+          );
+
+        default:
+          /* Otherwise, Just pass through */
+          return domNode;
+      }
+    },
+  };
+  return parserOptions;
+}
+
+function watermark() {
+  return (
+    <div className="watermark">
+      <div className="watermark_contents" />
+    </div>
+  );
 }
 
 function mapStateToProps(state) {

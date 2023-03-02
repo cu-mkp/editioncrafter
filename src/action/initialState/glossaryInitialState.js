@@ -1,4 +1,4 @@
-export default function (editionBaseURL) {
+export default function glossaryInitialState(editionBaseURL) {
   return {
     glossaryURL: `${editionBaseURL}/glossary.json`,
     glossary: {},

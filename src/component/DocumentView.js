@@ -44,7 +44,7 @@ class DocumentView extends Component {
     };
   }
 
-  componentWillMount() {
+  componentDidMount() {
     dispatchAction(this.props, 'DiplomaticActions.setFixedFrameMode', true);
   }
 
@@ -143,22 +143,22 @@ class DocumentView extends Component {
   navigateFolios(folioID, transcriptionType, folioID2, transcriptionType2) {
     if (!folioID) {
       // goto grid view
-    		this.props.history.push('/folios');
+      this.props.history.push('/folios');
       return;
     }
     if (!transcriptionType) {
       // goto folioID, tc
-    		this.props.history.push(`/folios/${folioID}`);
+      this.props.history.push(`/folios/${folioID}`);
       return;
     }
     if (!folioID2) {
       // goto folioID, transcriptionType
-    		this.props.history.push(`/folios/${folioID}/${transcriptionType}`);
+      this.props.history.push(`/folios/${folioID}/${transcriptionType}`);
       return;
     }
     if (!transcriptionType2) {
       // goto folioID, transcriptionType, folioID2, tc
-    		this.props.history.push(`/folios/${folioID}/${transcriptionType}/${folioID2}/tc`);
+      this.props.history.push(`/folios/${folioID}/${transcriptionType}/${folioID2}/tc`);
       return;
     }
     // goto folioID, transcriptionType, folioID2, transcriptionType2
@@ -368,7 +368,7 @@ class DocumentView extends Component {
             leftPane={this.renderPane('left', docView)}
             rightPane={this.renderPane('right', docView)}
             inSearchMode={false}
-            onWidth={this.onWidth.bind(this)}
+            onWidth={this.onWidth}
           />
         </div>
       );

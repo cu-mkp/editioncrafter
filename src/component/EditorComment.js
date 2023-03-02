@@ -7,10 +7,13 @@ import Paper from '@material-ui/core/Paper';
 import Parser from 'html-react-parser';
 
 class EditorComment extends Component {
-  state = {
-    anchorRef: null,
-    open: false,
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      anchorRef: null,
+      open: false,
+    };
+  }
 
   onOpen = event => {
     this.setState({ anchorRef: event.currentTarget, open: true });

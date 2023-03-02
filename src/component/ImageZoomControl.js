@@ -3,7 +3,7 @@ import React from 'react';
 export default class ImageZoomControl extends React.Component {
   render() {
     const in_id = `os-zoom-in ${this.props.side}`;
-	 	const out_id = `os-zoom-out ${this.props.side}`;
+    const out_id = `os-zoom-out ${this.props.side}`;
     const onZoomGrid = (this.props.documentView.bookMode ? null : this.props.onZoomGrid);
     return (
       <ul className="ImageZoomControl">

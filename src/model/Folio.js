@@ -56,17 +56,17 @@ class Folio {
             ) => {
               this.transcription = {};
 
-              this.transcription.tc = this.parseTranscription(tc_response.data);
+              this.transcription.tc = parseTranscription(tc_response.data);
               if (this.transcription.tc === null) {
                 reject(new Error(`Unable to parse <folio> element in ${transcriptionURL_tc}`));
               }
 
-              this.transcription.tcn = this.parseTranscription(tcn_response.data);
+              this.transcription.tcn = parseTranscription(tcn_response.data);
               if (this.transcription.tcn.html === null) {
                 reject(new Error(`Unable to parse <folio> element in ${transcriptionURL_tcn}`));
               }
 
-              this.transcription.tl = this.parseTranscription(tl_response.data);
+              this.transcription.tl = parseTranscription(tl_response.data);
               if (this.transcription.tl.html === null) {
                 reject(new Error(`Unable to parse <folio> element in ${transcriptionURL_tl}`));
               }
@@ -114,37 +114,37 @@ class Folio {
       }
     });
   }
+}
 
-  errorMessage(message) {
-    return {
-      layout: 'margin',
-      html: `<div id="error"><div data-layout="middle">${message}</div></div>`,
-    };
-  }
+// returns transcription or error message if unable to parse
+function parseTranscription(html) {
+  const folioTag = '<folio';
+  const openDivIndex = html.indexOf(folioTag);
+  if (openDivIndex === -1) return errorMessage('Folio element not found.');
+  const start = html.indexOf('>', openDivIndex) + 1;
+  const end = html.lastIndexOf('</folio>');
+  if (end === -1) return errorMessage('Folio element closing tag not found.');
+  if (start > end) return errorMessage('Unable to parse folio element.');
 
-  // returns transcription or error message if unable to parse
-  parseTranscription(html) {
-    const folioTag = '<folio';
-    const openDivIndex = html.indexOf(folioTag);
-    if (openDivIndex === -1) return this.errorMessage('Folio element not found.');
-    const start = html.indexOf('>', openDivIndex) + 1;
-    const end = html.lastIndexOf('</folio>');
-    if (end === -1) return this.errorMessage('Folio element closing tag not found.');
-    if (start > end) return this.errorMessage('Unable to parse folio element.');
+  // detect folio mode
+  const folioAttribs = html.slice(openDivIndex + folioTag.length, start - 1);
+  const layoutAttr = 'layout=';
+  const layoutAttrIndex = folioAttribs.indexOf(layoutAttr);
+  if (layoutAttrIndex === -1) return errorMessage('Unable to parse layout attribute in folio element.');
+  const layoutAttrStart = layoutAttrIndex + layoutAttr.length + 1;
+  const layoutType = folioAttribs.slice(layoutAttrStart, folioAttribs.indexOf('"', layoutAttrStart));
+  const transcription = html.slice(start, end);
+  return {
+    layout: layoutType,
+    html: transcription,
+  };
+}
 
-    // detect folio mode
-    const folioAttribs = html.slice(openDivIndex + folioTag.length, start - 1);
-    const layoutAttr = 'layout=';
-    const layoutAttrIndex = folioAttribs.indexOf(layoutAttr);
-    if (layoutAttrIndex === -1) return this.errorMessage('Unable to parse layout attribute in folio element.');
-    const layoutAttrStart = layoutAttrIndex + layoutAttr.length + 1;
-    const layoutType = folioAttribs.slice(layoutAttrStart, folioAttribs.indexOf('"', layoutAttrStart));
-    const transcription = html.slice(start, end);
-    return {
-      layout: layoutType,
-      html: transcription,
-    };
-  }
+function errorMessage(message) {
+  return {
+    layout: 'margin',
+    html: `<div id="error"><div data-layout="middle">${message}</div></div>`,
+  };
 }
 
 export default Folio;

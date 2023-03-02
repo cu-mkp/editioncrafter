@@ -11,29 +11,6 @@ class GlossaryView extends Component {
     this.state = { filterTerm: '' };
   }
 
-  changeType = (event) => {
-    // Change viewtype
-    this.props.documentViewActions.changeTranscriptionType(
-      this.props.side,
-      event.currentTarget.dataset.id,
-    );
-  };
-
-  renderMeanings(entry) {
-    const meaningList = [];
-    for (let i = 0; i < entry.meanings.length; i++) {
-      const meaning = entry.meanings[i];
-
-      const refString = meaning.references ? ` [${meaning.references}]` : '';
-      const numString = (entry.meanings.length > 1) ? `${i + 1}. ` : '';
-      const space = i < entry.meanings.length - 1 ? ' ' : '';
-      meaningList.push(
-        `${numString}${meaning.meaning}${refString}${space}`,
-      );
-    }
-    return meaningList;
-  }
-
   renderGlossary() {
     const { glossary } = this.props.glossary;
     const filterTerm = this.state.filterTerm.toLowerCase();
@@ -74,7 +51,7 @@ class GlossaryView extends Component {
                 || (filterTerm.length !== 0 && checkHeadwords(lowerCaseModSpellings, filterTerm, ' '))
                 || (filterTerm.length !== 0 && checkHeadwords(lowerCaseAltSpellings, filterTerm, ', '))
       ) {
-        const meanings = this.renderMeanings(entry);
+        const meanings = renderMeanings(entry);
         const meaningsEndWithPeriod = meanings[meanings.length - 1].endsWith('.');
         const altString = entry.alternateSpellings ? `, ${entry.alternateSpellings}` : '';
         const pos = entry.meanings[0].partOfSpeech;
@@ -151,6 +128,21 @@ class GlossaryView extends Component {
       </div>
     );
   }
+}
+
+function renderMeanings(entry) {
+  const meaningList = [];
+  for (let i = 0; i < entry.meanings.length; i++) {
+    const meaning = entry.meanings[i];
+
+    const refString = meaning.references ? ` [${meaning.references}]` : '';
+    const numString = (entry.meanings.length > 1) ? `${i + 1}. ` : '';
+    const space = i < entry.meanings.length - 1 ? ' ' : '';
+    meaningList.push(
+      `${numString}${meaning.meaning}${refString}${space}`,
+    );
+  }
+  return meaningList;
 }
 
 function mapStateToProps(state) {

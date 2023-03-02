@@ -28,11 +28,11 @@ DocumentHelper.validFolioName = function validFolioName(folioName) {
   return null;
 };
 
-DocumentHelper.folioURL = function (folioID) {
+DocumentHelper.folioURL = function folioURL(folioID) {
   return `https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/${folioID}`;
 };
 
-DocumentHelper.generateFolioID = function (bnfLabel) {
+DocumentHelper.generateFolioID = function generateFolioID(bnfLabel) {
   // grab r or v off the end
   const rectoOrVerso = bnfLabel.slice(bnfLabel.length - 1);
   const id = parseInt(bnfLabel.slice(0, bnfLabel.length - 1), 10);

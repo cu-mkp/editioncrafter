@@ -1,4 +1,4 @@
-export default function (editionBaseURL) {
+export default function documentInitalState(editionBaseURL) {
   return {
     currentDocumentName: 'BnF Ms. Fr. 640',
     manifestURL: `${editionBaseURL}/manifest.json`,

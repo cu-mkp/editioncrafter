@@ -42,9 +42,9 @@ class SplitPaneView extends Component {
       // Update as long as we're within limits
       const leftLimit = (this.props.inSearchMode) ? this.leftPaneMinWidth_inSearchMode : this.leftPaneMinWidth;
       if (left_viewWidth > leftLimit
-			   && right_viewWidth > this.rightPaneMinWidth) {
-				   this.splitFraction = (whole === 0) ? 0.0 : left_viewWidth / whole;
-				   this.updateUI();
+        && right_viewWidth > this.rightPaneMinWidth) {
+        this.splitFraction = (whole === 0) ? 0.0 : left_viewWidth / whole;
+        this.updateUI();
       }
 
       this.updatePaneSize();
@@ -90,6 +90,7 @@ class SplitPaneView extends Component {
   }
 
   componentDidMount() {
+    this.updateUI();
     window.addEventListener('mousemove', this.onDrag);
     window.addEventListener('mouseup', this.onEndDrag);
     window.addEventListener('resize', this.onResize);
@@ -106,10 +107,6 @@ class SplitPaneView extends Component {
     window.removeEventListener('mousemove', this.onDrag);
     window.removeEventListener('mouseup', this.onEndDrag);
     window.removeEventListener('resize', this.onResize);
-  }
-
-  componentWillMount() {
-    this.updateUI();
   }
 
   renderDivider() {

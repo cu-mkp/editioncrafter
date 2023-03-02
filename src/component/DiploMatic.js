@@ -8,16 +8,7 @@ import DocumentView from './DocumentView';
 import RouteListener from './RouteListener';
 
 class DiploMatic extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      searchOpen: false,
-      mobileMenuOpen: false,
-      searchHelpAnchor: null,
-    };
-  }
-
-  componentWillMount() {
+  componentDidMount() {
     const history = createBrowserHistory();
     history.listen(() => {
       window.scrollTo(0, 0);
