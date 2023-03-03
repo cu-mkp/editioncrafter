@@ -1,3 +1,3 @@
 export default {
-    fixedFrameMode: false
-}	
+  fixedFrameMode: false,
+};

@@ -8,111 +8,104 @@ import DocumentView from './DocumentView';
 import RouteListener from './RouteListener';
 
 class DiploMatic extends Component {
+  componentDidMount() {
+    const history = createBrowserHistory();
+    history.listen(() => {
+      window.scrollTo(0, 0);
+    });
+  }
 
-	constructor(props) {
-		super(props);
-		this.state = { 
-			searchOpen: false,
-			mobileMenuOpen: false,
-			searchHelpAnchor: null,
-		};
-	}
+  renderDocumentView = (props) => {
+    const {
+      folioID, transcriptionType, folioID2, transcriptionType2,
+    } = props.match.params;
+    let viewports;
 
-	componentWillMount() {
-		const history = createBrowserHistory()
-		history.listen(() => {
-			window.scrollTo(0, 0);
-		})	
+    if (!folioID) {
+      // route /folios
+      viewports = {
+        left: {
+          folioID: '-1',
+          transcriptionType: 'g',
+        },
+        right: {
+          folioID: (isWidthUp('md', this.props.width)) ? '-1' : '1r',
+          transcriptionType: 'tc',
+        },
+      };
+    } else {
+      const leftFolioID = folioID;
+      let leftTranscriptionType; let rightFolioID; let
+        rightTranscriptionType;
+      if (folioID2) {
+        // route /folios/:folioID/:transcriptionType/:folioID2/:transcriptionType2
+        leftTranscriptionType = transcriptionType;
+        rightFolioID = folioID2;
+        rightTranscriptionType = transcriptionType2 || 'tc';
+      } else {
+        // route /folios/:folioID
+        // route /folios/:folioID/:transcriptionType
+        leftTranscriptionType = 'f';
+        rightFolioID = folioID;
+        rightTranscriptionType = transcriptionType || 'tc';
+      }
+
+      viewports = {
+        left: {
+          folioID: leftFolioID,
+          transcriptionType: leftTranscriptionType,
+        },
+        right: {
+          folioID: rightFolioID,
+          transcriptionType: rightTranscriptionType,
+        },
+      };
     }
 
-	renderDocumentView = (props) => {
-		const { folioID, transcriptionType, folioID2, transcriptionType2 } = props.match.params;
-		let viewports;
+    return (
+      <DocumentView viewports={viewports} history={props.history} />
+    );
+  };
 
-		if( !folioID ) {
-			// route /folios
-			viewports = {
-				left: {
-					folioID: '-1',
-					transcriptionType: 'g'
-				},
-				right: {
-					folioID: (isWidthUp('md', this.props.width)) ? '-1' : '1r',
-					transcriptionType: 'tc'
-				}
-			}
-		} else {
-			let leftFolioID = folioID;
-			let leftTranscriptionType, rightFolioID, rightTranscriptionType;
-			if( folioID2 ) {
-				// route /folios/:folioID/:transcriptionType/:folioID2/:transcriptionType2
-				leftTranscriptionType = transcriptionType;
-				rightFolioID = folioID2;
-				rightTranscriptionType = transcriptionType2 ? transcriptionType2 : 'tc'
-			} else {
-				// route /folios/:folioID
-				// route /folios/:folioID/:transcriptionType
-				leftTranscriptionType = 'f';
-				rightFolioID = folioID;
-				rightTranscriptionType = transcriptionType ? transcriptionType : 'tc';
-			}
+  renderContent() {
+    return (
+      <div id="content">
+        <Switch>
+          <Route path="/folios/:folioID/:transcriptionType/:folioID2/:transcriptionType2" render={this.renderDocumentView} exact />
+          <Route path="/folios/:folioID/:transcriptionType" render={this.renderDocumentView} exact />
+          <Route path="/folios/:folioID" render={this.renderDocumentView} exact />
+          <Route path="/folios" render={this.renderDocumentView} exact />
+        </Switch>
+      </div>
+    );
+  }
 
-			viewports = {
-				left: {
-					folioID: leftFolioID,
-					transcriptionType: leftTranscriptionType
-				},
-				right: {
-					folioID: rightFolioID,
-					transcriptionType: rightTranscriptionType
-				}	
-			}	
-		}
-	
-		return (
-			<DocumentView viewports={viewports} history={props.history}></DocumentView>
-		);
-	}
+  render() {
+    const { fixedFrameMode } = this.props.diplomatic;
+    const fixedFrameModeClass = fixedFrameMode ? 'fixed' : 'sticky';
 
-	renderContent() {
-		return (
-			<div id="content">
-				<Switch>
-					<Route path="/folios/:folioID/:transcriptionType/:folioID2/:transcriptionType2" render={this.renderDocumentView} exact/>
-					<Route path="/folios/:folioID/:transcriptionType" render={this.renderDocumentView} exact/>
-					<Route path="/folios/:folioID" render={this.renderDocumentView} exact/>
-					<Route path="/folios" render={this.renderDocumentView} exact/>
-				</Switch>
-			</div>
-		);
-	}
-
-	render() {
-		const { fixedFrameMode } = this.props.diplomatic
-		const fixedFrameModeClass = fixedFrameMode ? 'fixed' : 'sticky';
-
-		return (
-			<Provider store={this.props.store}>
-				<HashRouter>
-					<div id="diplomatic" className={fixedFrameModeClass}>
-						<RouteListener/>
-						{ this.renderContent() }
-					</div>	
-				</HashRouter>
-			</Provider>
-		);
-	}
+    return (
+      <Provider store={this.props.store}>
+        <HashRouter>
+          <div id="diplomatic" className={fixedFrameModeClass}>
+            <RouteListener />
+            { this.renderContent() }
+          </div>
+        </HashRouter>
+      </Provider>
+    );
+  }
 }
 
 DiploMatic.propTypes = {
-	store: PropTypes.object.isRequired
-}
+  store: PropTypes.object.isRequired,
+};
 
 function mapStateToProps(state) {
-	return {
-		diplomatic: state.diplomatic,
-		documentView: state.documentView
-	};
+  return {
+    diplomatic: state.diplomatic,
+    documentView: state.documentView,
+  };
 }
 
-export default withWidth() (connect(mapStateToProps)(DiploMatic));
+export default withWidth()(connect(mapStateToProps)(DiploMatic));

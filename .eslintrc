@@ -12,32 +12,24 @@
     "import/prefer-default-export": "off",
     "no-console": "off",
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
-    "require-jsdoc": ["error", {
-      "require": {
-        "FunctionDeclaration": true,
-        "MethodDefinition": true,
-        "ClassDeclaration": true,
-        "ArrowFunctionExpression": true,
-        "FunctionExpression": true
-      }
-    }],
+    "require-jsdoc": "off",
     "no-underscore-dangle": "off",
+    "no-plusplus": "off",
+    "no-param-reassign": "off",
+    "react/sort-comp": "off",
+    "camelcase": "off",
+    "jsx-a11y/click-events-have-key-events": "off",
+    "jsx-a11y/no-static-element-interactions": "off",
+    "react/no-access-state-in-setstate": "off",
     "react/prefer-stateless-function": "off",
-    "sort-keys": ["error", "asc", {
-      "caseSensitive": false,
-      "natural": false
-    }],
+    "sort-keys": "off",
     "react/jsx-props-no-spreading": "off",
     "react/function-component-definition": "off",
+    "react/destructuring-assignment": "off",
+    "react/prop-types": "off",
     "default-param-last": "off",
     "arrow-parens": "off",
     "import/no-anonymous-default-export": "off",
-    "max-len": ["error", {
-      "code": 120,
-      "ignoreComments": true,
-      "ignoreStrings": true,
-      "ignoreTemplateLiterals": true,
-      "ignoreRegExpLiterals": true
-    }]
+    "max-len": "off"
   }
 }

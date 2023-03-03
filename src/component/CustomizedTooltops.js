@@ -51,46 +51,46 @@ function arrowGenerator(color) {
 }
 
 const styles = theme => ({
-    button: {
+  button: {
     margin: theme.spacing(),
-    },
-    lightTooltip: {
+  },
+  lightTooltip: {
     backgroundColor: theme.palette.common.white,
     color: 'rgba(0, 0, 0, 0.87)',
     boxShadow: theme.shadows[1],
     fontSize: 11,
-    },
-    arrowPopper: arrowGenerator(theme.palette.grey[700]),
-    arrow: {
+  },
+  arrowPopper: arrowGenerator(theme.palette.grey[700]),
+  arrow: {
     position: 'absolute',
     fontSize: 6,
     width: '3em',
     height: '3em',
     '&::before': {
-        content: '""',
-        margin: 'auto',
-        display: 'block',
-        width: 0,
-        height: 0,
-        borderStyle: 'solid',
+      content: '""',
+      margin: 'auto',
+      display: 'block',
+      width: 0,
+      height: 0,
+      borderStyle: 'solid',
     },
-    },
-    bootstrapPopper: arrowGenerator(theme.palette.common.black),
-    bootstrapTooltip: {
+  },
+  bootstrapPopper: arrowGenerator(theme.palette.common.black),
+  bootstrapTooltip: {
     backgroundColor: theme.palette.common.black,
-    },
-    bootstrapPlacementLeft: {
+  },
+  bootstrapPlacementLeft: {
     margin: '0 8px',
-    },
-    bootstrapPlacementRight: {
+  },
+  bootstrapPlacementRight: {
     margin: '0 8px',
-    },
-    bootstrapPlacementTop: {
+  },
+  bootstrapPlacementTop: {
     margin: '8px 0',
-    },
-    bootstrapPlacementBottom: {
+  },
+  bootstrapPlacementBottom: {
     margin: '8px 0',
-    },
+  },
   htmlPopper: arrowGenerator('#dadde9'),
   htmlTooltip: {
     backgroundColor: '#f5f5f9',
@@ -119,30 +119,30 @@ class CustomizedTooltips extends React.Component {
     const { classes } = this.props;
 
     return (
-        <Tooltip
-          classes={{
-            popper: classes.htmlPopper,
-            tooltip: classes.htmlTooltip,
-          }}
-          PopperProps={{
-            popperOptions: {
-              modifiers: {
-                arrow: {
-                  enabled: Boolean(this.state.arrowRef),
-                  element: this.state.arrowRef,
-                },
+      <Tooltip
+        classes={{
+          popper: classes.htmlPopper,
+          tooltip: classes.htmlTooltip,
+        }}
+        PopperProps={{
+          popperOptions: {
+            modifiers: {
+              arrow: {
+                enabled: Boolean(this.state.arrowRef),
+                element: this.state.arrowRef,
               },
             },
-          }}
-          title={
-            <React.Fragment>
-              { this.props.htmlFragment }
-              <span className={classes.arrow} ref={this.handleArrowRef} />
-            </React.Fragment>
-          }
-        >
-          { this.props.inner }
-        </Tooltip>
+          },
+        }}
+        title={(
+          <>
+            { this.props.htmlFragment }
+            <span className={classes.arrow} ref={this.handleArrowRef} />
+          </>
+          )}
+      >
+        { this.props.inner }
+      </Tooltip>
     );
   }
 }

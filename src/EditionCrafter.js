@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { ThemeProvider } from '@material-ui/core/styles';
 import DiploMatic from './component/DiploMatic';
-import {createReduxStore} from './model/ReduxStore';
-import { ThemeProvider } from '@material-ui/core/styles'
-import theme from './theme'
+import { createReduxStore } from './model/ReduxStore';
+import theme from './theme';
 
 /**
  * Default instantiation
@@ -20,12 +20,11 @@ class EditionCrafter {
         <ThemeProvider theme={theme}>
           <DiploMatic store={createReduxStore(config)} />
         </ThemeProvider>,
-        this.container
-      )
+        this.container,
+      );
     }
   }
 
- 
   /**
    * Cleanup method to unmount from the dom
    */

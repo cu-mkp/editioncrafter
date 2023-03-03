@@ -1,4 +1,4 @@
-import * as React from "react"
+import * as React from 'react';
 
 function SideMenuIconRight(props) {
   return (
@@ -26,7 +26,7 @@ function SideMenuIconRight(props) {
         <path data-name="Line 139" d="M132 112l32-30" />
       </g>
     </svg>
-  )
+  );
 }
 
-export default SideMenuIconRight
+export default SideMenuIconRight;
