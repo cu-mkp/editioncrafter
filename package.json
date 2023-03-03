@@ -33,7 +33,6 @@
     "@material-ui/core": "^4.12.4",
     "@material-ui/icons": "^4.11.3",
     "axios": "^1.3.4",
-    "history": "^4.10.1",
     "html-react-parser": "^3.0.9",
     "openseadragon": "^4.0.0",
     "prop-types": "^15.5.10",
