@@ -106,7 +106,6 @@ function parseManifest(manifest) {
     const canvasLabel = parseLabel(canvas);
     const { imageURL, thumbnailURL } = parseImageURLs(canvas);
     const annotationURLs = parseAnnotationURLs(canvas);
-    if( Object.keys(annotationURLs).length > 0 ) debugger
 
     const folio = new Folio({
       id: canvas.id,
