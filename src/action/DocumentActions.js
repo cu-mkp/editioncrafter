@@ -40,7 +40,7 @@ function displayWarning(message) {
   console.warn(`IIIF manifest parser warning: ${message}`)
 }
 
-function parseImageURL(canvas) {
+function parseImageURLs(canvas) {
   for( const annotationPage of canvas.items ) {
       if( annotationPage.type !== "AnnotationPage" ) throwError(`Expected AnnotationPage in items property of ${canvas.id}`)
       if( !annotationPage.items ) throwError(`Expected items property in AnnotationPage ${annotationPage.id}`)
@@ -48,10 +48,14 @@ function parseImageURL(canvas) {
         if( annotation.type !== "Annotation" ) throwError(`Expected Annotation in items property of ${annotationPage.id}`)
         if( annotation.motivation === "painting" ) {
           if( !annotation.body ) throwError(`Expected body property in Annotation ${annotation.id}`)
-          return `${annotation.body.id}/info.json`
+          if( !annotation.body.thumbnail ) throwError(`Expected body.thumbnail property in Annotation ${annotation.id}`)
+          const thumbnailURL = annotation.body.thumbnail[0].id
+          if( !thumbnailURL ) throwError(`Unable to find thumbnail for resource: ${annotation.body.id}`)
+          return { imageURL: `${annotation.body.id}/info.json`, thumbnailURL }
         }
       }
   }
+  throwError(`Unable to find painting Annotation for canvas: ${canvas.id}`)
 }
 
 function parseLabel(canvas) {
@@ -63,26 +67,22 @@ function parseLabel(canvas) {
   return canvas.label.none[0]
 }
 
-function parseThumbnailURL(canvas) {
-  // TODO need a thumbnail 
-  // `${canvas.thumbnail['@id']}/full/native.jpg`;
-  
-}
-
 function parseAnnotationURLs(canvas) {
   const annos = {}
-  for( const annotationPage of canvas.annotations ) {
-    if( annotationPage.type !== "AnnotationPage" ) throwError(`Expected AnnotationPage in annotations property of ${canvas.id}`)
-    if( !annotationPage.items ) throwError(`Expected items property in AnnotationPage ${annotationPage.id}`)
-    for( const annotation of annotationPage.items ) {
-      if( annotation.type !== "Annotation" ) throwError(`Expected Annotation in items property of ${annotationPage.id}`)
-      if( annotation.motivation === "supplementing" ) {
-        if( !annotation.body ) throwError(`Expected body property in Annotation ${annotation.id}`)
-        if( annotation.body.profile === textPartialResourceProfileID ) {
-          annos[annotation.body.label] = annotation.body.id
+  if( canvas.annotations ) {
+    for( const annotationPage of canvas.annotations ) {
+      if( annotationPage.type !== "AnnotationPage" ) throwError(`Expected AnnotationPage in annotations property of ${canvas.id}`)
+      if( !annotationPage.items ) throwError(`Expected items property in AnnotationPage ${annotationPage.id}`)
+      for( const annotation of annotationPage.items ) {
+        if( annotation.type !== "Annotation" ) throwError(`Expected Annotation in items property of ${annotationPage.id}`)
+        if( annotation.motivation === "supplementing" ) {
+          if( !annotation.body ) throwError(`Expected body property in Annotation ${annotation.id}`)
+          if( annotation.body.profile === textPartialResourceProfileID ) {
+            annos[annotation.body.label.none[0]] = annotation.body.id
+          }
         }
       }
-    }
+    }  
   }
   return annos
 }
@@ -91,7 +91,7 @@ function parseManifest(manifest) {
   const folios = [];
 
   // make sure this is a IIIF Presentation API v3 Manifest 
-  if( !manifest['@context'] || manifest['@context'].includes("http://iiif.io/api/presentation/3/context.json") ) {
+  if( !manifest['@context'] || !manifest['@context'].includes("http://iiif.io/api/presentation/3/context.json") ) {
     throwError("Expected root object to have a @context containing: http://iiif.io/api/presentation/3/context.json");
   }
 
@@ -104,9 +104,9 @@ function parseManifest(manifest) {
     if( canvas.type !== "Canvas" ) throwError(`Expected items[${i}] to be of type 'Canvas'.`);
     if( !canvas.id ) throwError(`Expected items[${i}] to have an id property.`);
     const canvasLabel = parseLabel(canvas);
-    const imageURL = parseImageURL(canvas);
-    const thumbnailURL = parseThumbnailURL(canvas);
+    const { imageURL, thumbnailURL } = parseImageURLs(canvas);
     const annotationURLs = parseAnnotationURLs(canvas);
+    if( Object.keys(annotationURLs).length > 0 ) debugger
 
     const folio = new Folio({
       id: canvas.id,
