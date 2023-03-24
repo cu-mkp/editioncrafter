@@ -2,6 +2,9 @@ import Folio from '../model/Folio';
 
 const DocumentActions = {};
 
+// Profile ID for EditionCrafter text partials
+const textPartialResourceProfileID = 'https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md'
+
 DocumentActions.loadDocument = function loadDocument(state, manifestData) {
   const folios = parseManifest(manifestData);
   const { folioIndex, nameByID, idByName } = createFolioIndex(folios);
@@ -39,11 +42,16 @@ function displayWarning(message) {
 
 function parseImageURL(canvas) {
   for( const annotationPage of canvas.items ) {
-      
+      if( annotationPage.type !== "AnnotationPage" ) throwError(`Expected AnnotationPage in items property of ${canvas.id}`)
+      if( !annotationPage.items ) throwError(`Expected items property in AnnotationPage ${annotationPage.id}`)
+      for( const annotation of annotationPage.items ) {
+        if( annotation.type !== "Annotation" ) throwError(`Expected Annotation in items property of ${annotationPage.id}`)
+        if( annotation.motivation === "painting" ) {
+          if( !annotation.body ) throwError(`Expected body property in Annotation ${annotation.id}`)
+          return `${annotation.body.id}/info.json`
+        }
+      }
   }
-  // look for an annotation page containing an annotation with a painting motivation
-  // the ID of the body is the image API URL
-  // add info.json to it
 }
 
 function parseLabel(canvas) {
@@ -56,12 +64,27 @@ function parseLabel(canvas) {
 }
 
 function parseThumbnailURL(canvas) {
-  // TODO 
+  // TODO need a thumbnail 
   // `${canvas.thumbnail['@id']}/full/native.jpg`;
+  
 }
 
 function parseAnnotationURLs(canvas) {
-  // TODO
+  const annos = {}
+  for( const annotationPage of canvas.annotations ) {
+    if( annotationPage.type !== "AnnotationPage" ) throwError(`Expected AnnotationPage in annotations property of ${canvas.id}`)
+    if( !annotationPage.items ) throwError(`Expected items property in AnnotationPage ${annotationPage.id}`)
+    for( const annotation of annotationPage.items ) {
+      if( annotation.type !== "Annotation" ) throwError(`Expected Annotation in items property of ${annotationPage.id}`)
+      if( annotation.motivation === "supplementing" ) {
+        if( !annotation.body ) throwError(`Expected body property in Annotation ${annotation.id}`)
+        if( annotation.body.profile === textPartialResourceProfileID ) {
+          annos[annotation.body.label] = annotation.body.id
+        }
+      }
+    }
+  }
+  return annos
 }
 
 function parseManifest(manifest) {
