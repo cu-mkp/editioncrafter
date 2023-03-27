@@ -12,10 +12,10 @@ import CommentActions from './CommentActions';
 import commentInitialState from './initialState/commentInitialState';
 
 export default function rootReducer(config) {
-  const { editionBaseURL } = config;
+  const { editionBaseURL, channels } = config;
   return combineReducers({
     diplomatic: createReducer('DiplomaticActions', DiplomaticActions, diplomaticInitialState),
-    document: createReducer('DocumentActions', DocumentActions, documentInitialState(editionBaseURL)),
+    document: createReducer('DocumentActions', DocumentActions, documentInitialState(editionBaseURL, channels)),
     glossary: createReducer('GlossaryActions', GlossaryActions, glossaryInitialState(editionBaseURL)),
     comments: createReducer('CommentActions', CommentActions, commentInitialState(editionBaseURL)),
   });

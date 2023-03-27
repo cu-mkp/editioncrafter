@@ -6,7 +6,7 @@ const DocumentActions = {};
 const textPartialResourceProfileID = 'https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md'
 
 DocumentActions.loadDocument = function loadDocument(state, manifestData) {
-  const folios = parseManifest(manifestData);
+  const folios = parseManifest(manifestData, state.channels);
   const { folioIndex, nameByID, idByName } = createFolioIndex(folios);
   return {
     ...state,
@@ -58,17 +58,18 @@ function parseImageURLs(canvas) {
   throwError(`Unable to find painting Annotation for canvas: ${canvas.id}`)
 }
 
-function parseLabel(canvas) {
+function parseLabel(parent) {
   // TODO support labels in different languages, multiple labels in same language
-  if( !canvas.label ) {
-    displayWarning(`${canvas.id} does not have a label property.`);
+  if( !parent.label ) {
+    displayWarning(`${parent.id} does not have a label property.`);
     return "";
   }
-  return canvas.label.none[0]
+  return parent.label.none[0]
 }
 
-function parseAnnotationURLs(canvas) {
+function parseAnnotationURLs(canvas, channels) {
   const annos = {}
+
   if( canvas.annotations ) {
     for( const annotationPage of canvas.annotations ) {
       if( annotationPage.type !== "AnnotationPage" ) throwError(`Expected AnnotationPage in annotations property of ${canvas.id}`)
@@ -77,8 +78,18 @@ function parseAnnotationURLs(canvas) {
         if( annotation.type !== "Annotation" ) throwError(`Expected Annotation in items property of ${annotationPage.id}`)
         if( annotation.motivation === "supplementing" ) {
           if( !annotation.body ) throwError(`Expected body property in Annotation ${annotation.id}`)
-          if( annotation.body.profile === textPartialResourceProfileID ) {
-            annos[annotation.body.label.none[0]] = annotation.body.id
+          const { body: annotationBody } = annotation
+          if( annotationBody.profile === textPartialResourceProfileID && annotationBody.type === "TextPartial" ) {
+            const { id, format } = annotationBody
+            const label = parseLabel(annotationBody)
+            for( const channelName of Object.keys(channels) ) {
+              const channel = channels[channelName]
+              if( channel.includes(label) ) {
+                if( !annos[channelName] ) annos[channelName] = {}
+                if( format === 'text/html' ) annos[channelName].htmlURL = id
+                if( format === 'text/xml' ) annos[channelName].xmlURL = id
+              }
+            }
           }
         }
       }
@@ -87,7 +98,7 @@ function parseAnnotationURLs(canvas) {
   return annos
 }
 
-function parseManifest(manifest) {
+function parseManifest(manifest, channels) {
   const folios = [];
 
   // make sure this is a IIIF Presentation API v3 Manifest 
@@ -105,7 +116,7 @@ function parseManifest(manifest) {
     if( !canvas.id ) throwError(`Expected items[${i}] to have an id property.`);
     const canvasLabel = parseLabel(canvas);
     const { imageURL, thumbnailURL } = parseImageURLs(canvas);
-    const annotationURLs = parseAnnotationURLs(canvas);
+    const annotationURLs = parseAnnotationURLs(canvas, channels);
 
     const folio = new Folio({
       id: canvas.id,
