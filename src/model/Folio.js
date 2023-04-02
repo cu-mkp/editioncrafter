@@ -7,7 +7,7 @@ class Folio {
     this.name = props.name;
     this.image_zoom_url = props.image_zoom_url;
     this.image_thumbnail_url = props.image_thumbnail_url;
-    this.annotationListURL = props.annotationListURL;
+    this.annotationURLs = props.annotationURLs;
     this.tileSource = null;
     this.transcription = null;
     this.loaded = false;
@@ -22,66 +22,61 @@ class Folio {
     }
     // promise to load all the data for this folio
     return new Promise((resolve, reject) => {
-      if (this.annotationListURL) {
-        axios.all([
-          axios.get(this.image_zoom_url),
-          axios.get(this.annotationListURL),
-        ])
-          .then(axios.spread((imageServerResponse, annotationListResponse) => {
-            // Handle the image server response
-            this.tileSource = new OpenSeadragon.IIIFTileSource(imageServerResponse.data);
+      if (this.annotationURLs) {
+        axios.get(this.image_zoom_url).then((imageServerResponse) => {
+          // Handle the image server response
+          this.tileSource = new OpenSeadragon.IIIFTileSource(imageServerResponse.data);
 
-            // Grab all three transcripts and pre-cache them
-            // 0 = tc (French) | 1 = tcn (French Standard) | 2 = tl (English)
-            const transcriptionURL_tc = annotationListResponse.data.resources[0].resource['@id'];
-            const transcriptionURL_tcn = annotationListResponse.data.resources[1].resource['@id'];
-            const transcriptionURL_tl = annotationListResponse.data.resources[2].resource['@id'];
-            const transcriptionURL_tc_xml = annotationListResponse.data.resources[3].resource['@id'];
-            const transcriptionURL_tcn_xml = annotationListResponse.data.resources[4].resource['@id'];
-            const transcriptionURL_tl_xml = annotationListResponse.data.resources[5].resource['@id'];
-            axios.all([
-              axios.get(transcriptionURL_tc),
-              axios.get(transcriptionURL_tcn),
-              axios.get(transcriptionURL_tl),
-              axios.get(transcriptionURL_tc_xml),
-              axios.get(transcriptionURL_tcn_xml),
-              axios.get(transcriptionURL_tl_xml),
-            ]).then(axios.spread((
-              tc_response,
-              tcn_response,
-              tl_response,
-              tc_xml_response,
-              tcn_xml_response,
-              tl_xml_response,
-            ) => {
-              this.transcription = {};
+          // Grab all three transcripts and pre-cache them
+          const transcriptionURL_tc = this.annotationURLs.tc.html;
+          const transcriptionURL_tcn = this.annotationURLs.tcn.html;
+          const transcriptionURL_tl = this.annotationURLs.tl.html;
+          const transcriptionURL_tc_xml = this.annotationURLs.tc.xml;
+          const transcriptionURL_tcn_xml = this.annotationURLs.tcn.xml;
+          const transcriptionURL_tl_xml = this.annotationURLs.tl.xml;
+          axios.all([
+            axios.get(transcriptionURL_tc),
+            axios.get(transcriptionURL_tcn),
+            axios.get(transcriptionURL_tl),
+            axios.get(transcriptionURL_tc_xml),
+            axios.get(transcriptionURL_tcn_xml),
+            axios.get(transcriptionURL_tl_xml),
+          ]).then(axios.spread((
+            tc_response,
+            tcn_response,
+            tl_response,
+            tc_xml_response,
+            tcn_xml_response,
+            tl_xml_response,
+          ) => {
+            this.transcription = {};
 
-              this.transcription.tc = parseTranscription(tc_response.data);
-              if (this.transcription.tc === null) {
-                reject(new Error(`Unable to parse <folio> element in ${transcriptionURL_tc}`));
-              }
+            this.transcription.tc = parseTranscription(tc_response.data);
+            if (this.transcription.tc === null) {
+              reject(new Error(`Unable to parse <folio> element in ${transcriptionURL_tc}`));
+            }
 
-              this.transcription.tcn = parseTranscription(tcn_response.data);
-              if (this.transcription.tcn.html === null) {
-                reject(new Error(`Unable to parse <folio> element in ${transcriptionURL_tcn}`));
-              }
+            this.transcription.tcn = parseTranscription(tcn_response.data);
+            if (this.transcription.tcn.html === null) {
+              reject(new Error(`Unable to parse <folio> element in ${transcriptionURL_tcn}`));
+            }
 
-              this.transcription.tl = parseTranscription(tl_response.data);
-              if (this.transcription.tl.html === null) {
-                reject(new Error(`Unable to parse <folio> element in ${transcriptionURL_tl}`));
-              }
+            this.transcription.tl = parseTranscription(tl_response.data);
+            if (this.transcription.tl.html === null) {
+              reject(new Error(`Unable to parse <folio> element in ${transcriptionURL_tl}`));
+            }
 
-              this.transcription.tc_xml = tc_xml_response.data;
-              this.transcription.tcn_xml = tcn_xml_response.data;
-              this.transcription.tl_xml = tl_xml_response.data;
+            this.transcription.tc_xml = tc_xml_response.data;
+            this.transcription.tcn_xml = tcn_xml_response.data;
+            this.transcription.tl_xml = tl_xml_response.data;
 
-              this.loaded = true;
-              resolve(this);
-            }))
-              .catch((error) => {
-                reject(error);
-              });
+            this.loaded = true;
+            resolve(this);
           }))
+            .catch((error) => {
+              reject(error);
+            });
+        })
           .catch((error) => {
             reject(error);
           });
