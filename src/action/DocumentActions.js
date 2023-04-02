@@ -25,6 +25,7 @@ function createFolioIndex(folios) {
   const idByName = {};
   for (let idx = 0; idx < folios.length; idx++) {
     const shortID = folios[idx].id.substr(folios[idx].id.lastIndexOf('/') + 1);
+debugger
     folioIndex.push(shortID);
     nameByID[shortID] = folios[idx].name;
     idByName[folios[idx].name] = shortID;
