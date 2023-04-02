@@ -3,7 +3,7 @@ import Folio from '../model/Folio';
 const DocumentActions = {};
 
 // Profile ID for EditionCrafter text partials
-const textPartialResourceProfileID = 'https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md'
+const textPartialResourceProfileID = 'https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md';
 
 DocumentActions.loadDocument = function loadDocument(state, manifestData) {
   const folios = parseManifest(manifestData, state.channels);
@@ -33,87 +33,88 @@ function createFolioIndex(folios) {
 }
 
 function throwError(message) {
-  throw new Error(`IIIF manifest parser error: ${message}`)
+  throw new Error(`IIIF manifest parser error: ${message}`);
 }
 
 function displayWarning(message) {
-  console.warn(`IIIF manifest parser warning: ${message}`)
+  console.warn(`IIIF manifest parser warning: ${message}`);
 }
 
 function parseImageURLs(canvas) {
-  for( const annotationPage of canvas.items ) {
-      if( annotationPage.type !== "AnnotationPage" ) throwError(`Expected AnnotationPage in items property of ${canvas.id}`)
-      if( !annotationPage.items ) throwError(`Expected items property in AnnotationPage ${annotationPage.id}`)
-      for( const annotation of annotationPage.items ) {
-        if( annotation.type !== "Annotation" ) throwError(`Expected Annotation in items property of ${annotationPage.id}`)
-        if( annotation.motivation === "painting" ) {
-          if( !annotation.body ) throwError(`Expected body property in Annotation ${annotation.id}`)
-          if( !annotation.body.thumbnail ) throwError(`Expected body.thumbnail property in Annotation ${annotation.id}`)
-          const thumbnailURL = annotation.body.thumbnail[0].id
-          if( !thumbnailURL ) throwError(`Unable to find thumbnail for resource: ${annotation.body.id}`)
-          return { imageURL: `${annotation.body.id}/info.json`, thumbnailURL }
-        }
+  for (const annotationPage of canvas.items) {
+    if (annotationPage.type !== 'AnnotationPage') throwError(`Expected AnnotationPage in items property of ${canvas.id}`);
+    if (!annotationPage.items) throwError(`Expected items property in AnnotationPage ${annotationPage.id}`);
+    for (const annotation of annotationPage.items) {
+      if (annotation.type !== 'Annotation') throwError(`Expected Annotation in items property of ${annotationPage.id}`);
+      if (annotation.motivation === 'painting') {
+        if (!annotation.body) throwError(`Expected body property in Annotation ${annotation.id}`);
+        if (!annotation.body.thumbnail) throwError(`Expected body.thumbnail property in Annotation ${annotation.id}`);
+        const thumbnailURL = annotation.body.thumbnail[0].id;
+        if (!thumbnailURL) throwError(`Unable to find thumbnail for resource: ${annotation.body.id}`);
+        return { imageURL: `${annotation.body.id}/info.json`, thumbnailURL };
       }
+    }
   }
-  throwError(`Unable to find painting Annotation for canvas: ${canvas.id}`)
+  throwError(`Unable to find painting Annotation for canvas: ${canvas.id}`);
+  return null;
 }
 
 function parseLabel(parent) {
   // TODO support labels in different languages, multiple labels in same language
-  if( !parent.label ) {
+  if (!parent.label) {
     displayWarning(`${parent.id} does not have a label property.`);
-    return "";
+    return '';
   }
-  return parent.label.none[0]
+  return parent.label.none[0];
 }
 
 function parseAnnotationURLs(canvas, channels) {
-  const annos = {}
+  const annos = {};
 
-  if( canvas.annotations ) {
-    for( const annotationPage of canvas.annotations ) {
-      if( annotationPage.type !== "AnnotationPage" ) throwError(`Expected AnnotationPage in annotations property of ${canvas.id}`)
-      if( !annotationPage.items ) throwError(`Expected items property in AnnotationPage ${annotationPage.id}`)
-      for( const annotation of annotationPage.items ) {
-        if( annotation.type !== "Annotation" ) throwError(`Expected Annotation in items property of ${annotationPage.id}`)
-        if( annotation.motivation === "supplementing" ) {
-          if( !annotation.body ) throwError(`Expected body property in Annotation ${annotation.id}`)
-          const { body: annotationBody } = annotation
-          if( annotationBody.profile === textPartialResourceProfileID && annotationBody.type === "TextPartial" ) {
-            const { id, format } = annotationBody
-            const label = parseLabel(annotationBody)
-            for( const channelName of Object.keys(channels) ) {
-              const channel = channels[channelName]
-              if( channel.includes(label) ) {
-                if( !annos[channelName] ) annos[channelName] = {}
-                if( format === 'text/html' ) annos[channelName].htmlURL = id
-                if( format === 'text/xml' ) annos[channelName].xmlURL = id
+  if (canvas.annotations) {
+    for (const annotationPage of canvas.annotations) {
+      if (annotationPage.type !== 'AnnotationPage') throwError(`Expected AnnotationPage in annotations property of ${canvas.id}`);
+      if (!annotationPage.items) throwError(`Expected items property in AnnotationPage ${annotationPage.id}`);
+      for (const annotation of annotationPage.items) {
+        if (annotation.type !== 'Annotation') throwError(`Expected Annotation in items property of ${annotationPage.id}`);
+        if (annotation.motivation === 'supplementing') {
+          if (!annotation.body) throwError(`Expected body property in Annotation ${annotation.id}`);
+          const { body: annotationBody } = annotation;
+          if (annotationBody.profile === textPartialResourceProfileID && annotationBody.type === 'TextPartial') {
+            const { id, format } = annotationBody;
+            const label = parseLabel(annotationBody);
+            for (const channelName of Object.keys(channels)) {
+              const channel = channels[channelName];
+              if (channel.includes(label)) {
+                if (!annos[channelName]) annos[channelName] = {};
+                if (format === 'text/html') annos[channelName].htmlURL = id;
+                if (format === 'text/xml') annos[channelName].xmlURL = id;
               }
             }
           }
         }
       }
-    }  
+    }
   }
-  return annos
+  return annos;
 }
 
 function parseManifest(manifest, channels) {
   const folios = [];
 
-  // make sure this is a IIIF Presentation API v3 Manifest 
-  if( !manifest['@context'] || !manifest['@context'].includes("http://iiif.io/api/presentation/3/context.json") ) {
-    throwError("Expected root object to have a @context containing: http://iiif.io/api/presentation/3/context.json");
+  // make sure this is a IIIF Presentation API v3 Manifest
+  if (!manifest['@context'] || !manifest['@context'].includes('http://iiif.io/api/presentation/3/context.json')) {
+    throwError('Expected root object to have a @context containing: http://iiif.io/api/presentation/3/context.json');
   }
 
-  if( manifest.type !== "Manifest" ) throwError("Expected root object of type 'Manifest'.");
-  if( !manifest.items ) throwError("Expected manifest to have an items property.");
+  if (manifest.type !== 'Manifest') throwError("Expected root object of type 'Manifest'.");
+  if (!manifest.items) throwError('Expected manifest to have an items property.');
   const canvases = manifest.items;
 
-  for ( let i=0; i < canvases.length; i++) {
-    const canvas = canvases[i]
-    if( canvas.type !== "Canvas" ) throwError(`Expected items[${i}] to be of type 'Canvas'.`);
-    if( !canvas.id ) throwError(`Expected items[${i}] to have an id property.`);
+  for (let i = 0; i < canvases.length; i++) {
+    const canvas = canvases[i];
+    if (canvas.type !== 'Canvas') throwError(`Expected items[${i}] to be of type 'Canvas'.`);
+    if (!canvas.id) throwError(`Expected items[${i}] to have an id property.`);
     const canvasLabel = parseLabel(canvas);
     const { imageURL, thumbnailURL } = parseImageURLs(canvas);
     const annotationURLs = parseAnnotationURLs(canvas, channels);
