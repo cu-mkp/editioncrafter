@@ -221,7 +221,8 @@ class DocumentView extends Component {
   }
 
   viewportState(side) {
-    const { document: doc, viewport } = this.props;
+    const { document: doc, viewports } = this.props;
+    const viewport = viewports[side];
 
     // blank folio ID
     if (viewport.folioID === '-1') {
