@@ -27,7 +27,7 @@ class ImageView extends Component {
     const folioID = nextProps.documentView[side].iiifShortID;
     if (folioID) {
       if (folioID !== this.state.currentFolioID) {
-        this.loadFolio(DocumentHelper.getFolio(document, folioID));
+        this.loadFolio(document.folioIndex[folioID]);
       }
     }
   }
@@ -38,7 +38,7 @@ class ImageView extends Component {
     const folioID = documentView[this.props.side].iiifShortID;
     if (folioID) {
       if (folioID !== this.state.currentFolioID) {
-        this.loadFolio(DocumentHelper.getFolio(document, folioID));
+        this.loadFolio(document.folioIndex[folioID]);
       }
     }
   }

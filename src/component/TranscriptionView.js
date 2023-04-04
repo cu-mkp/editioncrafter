@@ -53,7 +53,7 @@ class TranscriptionView extends Component {
     const nextfolioID = nextProps.documentView[this.props.side].iiifShortID;
     if (this.state.currentlyLoaded !== nextfolioID) {
       this.contentChange = true;
-      this.loadFolio(DocumentHelper.getFolio(this.props.document, nextfolioID));
+      this.loadFolio(this.props.document.folioIndex[nextfolioID]);
     }
   }
 
@@ -101,7 +101,7 @@ class TranscriptionView extends Component {
     if (folioID === '-1') {
       return watermark();
     } if (!this.state.isLoaded) {
-      this.loadFolio(DocumentHelper.getFolio(document, folioID));
+      this.loadFolio(document.folioIndex[folioID]);
       return watermark();
     }
 

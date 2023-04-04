@@ -37,7 +37,7 @@ class XMLView extends Component {
     const nextFolioID = nextProps.documentView[this.props.side].iiifShortID;
     if (this.state.currentlyLoaded !== nextFolioID) {
       this.contentChange = true;
-      this.loadFolio(DocumentHelper.getFolio(this.props.document, nextFolioID));
+      this.loadFolio(this.props.document.folioIndex[nextFolioID]);
     }
   }
 
@@ -73,7 +73,7 @@ class XMLView extends Component {
         </div>
       );
     } if (!this.state.isLoaded) {
-      this.loadFolio(DocumentHelper.getFolio(document, folioID));
+      this.loadFolio(document.folioIndex[folioID]);
       return (
         <div className="watermark">
           <div className="watermark_contents" />

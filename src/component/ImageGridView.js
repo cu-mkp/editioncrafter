@@ -22,8 +22,7 @@ class ImageGridView extends React.Component {
     const nextFolioID = nextProps.documentView[this.props.side].iiifShortID;
 
     if (folioID !== nextFolioID) {
-      const nextFolioURL = DocumentHelper.folioURL(nextProps.document, nextFolioID);
-      const thumbs = this.generateThumbs(nextFolioURL, nextProps.document.folios);
+      const thumbs = this.generateThumbs(nextFolioID, nextProps.document.folios);
       const thumbCount = (thumbs.length > this.loadIncrement) ? this.loadIncrement : thumbs.length;
       const visibleThumbs = thumbs.slice(0, thumbCount);
       this.setState({ thumbs, visibleThumbs });
@@ -73,10 +72,9 @@ class ImageGridView extends React.Component {
   }
 
   componentDidMount() {
-    const { documentView, document } = this.props;
+    const { documentView } = this.props;
     const folioID = documentView[this.props.side].iiifShortID;
-    const folioURL = DocumentHelper.folioURL(document, folioID);
-    const thumbs = this.generateThumbs(folioURL, this.props.document.folios);
+    const thumbs = this.generateThumbs(folioID, this.props.document.folios);
     const thumbCount = (thumbs.length > this.loadIncrement) ? this.loadIncrement : thumbs.length;
     const visibleThumbs = thumbs.slice(0, thumbCount);
     this.setState({ thumbs, visibleThumbs });
