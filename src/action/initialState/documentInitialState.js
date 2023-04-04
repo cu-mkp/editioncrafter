@@ -5,8 +5,7 @@ export default function documentInitalState(editionBaseURL, channels) {
     channels,
     folios: [],
     loaded: false,
-    folioIndex: [],
-    folioNameByIDIndex: {},
-    folioIDByNameIndex: {},
+    folioIndex: {},
+    folioByName: {},
   };
 }

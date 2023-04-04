@@ -30,17 +30,17 @@ class TranscriptionView extends Component {
   }
 
   loadFolio(folio) {
+    const { side, documentView } = this.props;
     if (typeof folio === 'undefined') {
       // console.log("TranscriptView: Folio is undefined when you called loadFolio()!");
       return;
     }
     folio.load().then((folio) => {
-      const folioID = this.props.documentView[this.props.side].iiifShortID;
-      const folioURL = DocumentHelper.folioURL(folioID);
+      const folioID = documentView[side].iiifShortID;
       this.setState({
         folio,
         isLoaded: true,
-        currentlyLoaded: folioURL,
+        currentlyLoaded: folioID,
       });
     }, (error) => {
       console.log(`Unable to load transcription: ${error}`);
@@ -48,13 +48,12 @@ class TranscriptionView extends Component {
   }
 
   // Refresh the content if there is an incoming change
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     this.contentChange = false;
     const nextfolioID = nextProps.documentView[this.props.side].iiifShortID;
-    const nextfolioURL = DocumentHelper.folioURL(nextfolioID);
-    if (this.state.currentlyLoaded !== nextfolioURL) {
+    if (this.state.currentlyLoaded !== nextfolioID) {
       this.contentChange = true;
-      this.loadFolio(DocumentHelper.getFolio(this.props.document, nextfolioURL));
+      this.loadFolio(DocumentHelper.getFolio(this.props.document, nextfolioID));
     }
   }
 
@@ -69,8 +68,6 @@ class TranscriptionView extends Component {
       }
     }
   }
-
-  
 
   getTranscriptionData(transcription) {
     if (typeof transcription === 'undefined') return null;
@@ -95,31 +92,32 @@ class TranscriptionView extends Component {
 
   // RENDER
   render() {
+    const {
+      side, document, documentView, documentViewActions,
+    } = this.props;
+
     // Retrofit - the folios are loaded asynchronously
-    const folioID = this.props.documentView[this.props.side].iiifShortID;
+    const folioID = documentView[side].iiifShortID;
     if (folioID === '-1') {
       return watermark();
     } if (!this.state.isLoaded) {
-      const folioURL = DocumentHelper.folioURL(folioID);
-      this.loadFolio(DocumentHelper.getFolio(this.props.document, folioURL));
+      this.loadFolio(DocumentHelper.getFolio(document, folioID));
       return watermark();
     }
 
-    const transcriptionData = this.getTranscriptionData(this.state.folio.transcription[this.props.documentView[this.props.side].transcriptionType]);
+    const transcriptionData = this.getTranscriptionData(this.state.folio.transcription[documentView[side].transcriptionType]);
 
     if (!transcriptionData) {
-      console.log(`Undefined transcription for side: ${this.props.side}`);
+      console.log(`Undefined transcription for side: ${side}`);
       return watermark();
     }
 
     // Determine class and id for this component
-    const { side } = this.props;
-
     if (transcriptionData.content.length !== 0) {
       let surfaceClass = 'surface';
       const surfaceStyle = {};
       // Handle grid mode
-      const isGridMode = (this.props.documentView.inSearchMode) ? true : this.props.documentView[this.props.side].isGridMode;
+      const { isGridMode } = documentView[side];
       if (isGridMode) {
         surfaceClass += ' grid-mode';
         surfaceStyle.gridTemplateAreas = transcriptionData.layout;
@@ -128,16 +126,7 @@ class TranscriptionView extends Component {
       // Configure parser to replace certain tags with components
       const htmlToReactParserOptionsSide = htmlToReactParserOptions(side);
 
-      let { content } = transcriptionData;
-      const { transcriptionType } = this.props.documentView[side];
-
-      // Mark any found search terms
-      if (this.props.documentView.inSearchMode) {
-        const searchResults = this.props.search.results[transcriptionType];
-        const folioName = this.props.document.folioNameByIDIndex[folioID];
-        const properFolioName = DocumentHelper.generateFolioID(folioName);
-        content = this.props.search.index.markMatchedTerms(searchResults, 'folio', properFolioName, content);
-      }
+      const { content } = transcriptionData;
 
       return (
       // Render the transcription
@@ -145,10 +134,10 @@ class TranscriptionView extends Component {
         <div>
           <Navigation
             side={side}
-            documentView={this.props.documentView}
-            documentViewActions={this.props.documentViewActions}
+            documentView={documentView}
+            documentViewActions={documentViewActions}
           />
-          <Pagination side={side} documentView={this.props.documentView} documentViewActions={this.props.documentViewActions} />
+          <Pagination side={side} documentView={documentView} documentViewActions={documentViewActions} />
           <div className="transcriptionViewComponent">
             <div className="transcriptContent">
               <ErrorBoundary>
@@ -165,8 +154,8 @@ class TranscriptionView extends Component {
 
           <Pagination
             side={side}
-            documentView={this.props.documentView}
-            documentViewActions={this.props.documentViewActions}
+            documentView={documentView}
+            documentViewActions={documentViewActions}
           />
 
         </div>
@@ -175,9 +164,9 @@ class TranscriptionView extends Component {
     // Empty content
     return (
       <div>
-        <Navigation side={side} documentView={this.props.documentView} documentViewActions={this.props.documentViewActions} />
+        <Navigation side={side} documentView={documentView} documentViewActions={documentViewActions} />
         <div className="transcriptContent">
-          <Pagination side={side} className="pagination_upper" documentView={this.props.documentView} documentViewActions={this.props.documentViewActions} />
+          <Pagination side={side} className="pagination_upper" documentView={documentView} documentViewActions={documentViewActions} />
           { watermark() }
         </div>
       </div>
@@ -335,7 +324,6 @@ function mapStateToProps(state) {
   return {
     annotations: state.annotations,
     document: state.document,
-    search: state.search,
   };
 }
 

@@ -117,15 +117,18 @@ class Navigation extends React.Component {
   };
 
   changeCurrentFolio = (event) => {
+    const {
+      documentViewActions, documentView, side,
+    } = this.props;
+
     if (typeof event.currentTarget.dataset.id === 'undefined' || event.currentTarget.dataset.id.length === 0) {
       return;
     }
-    console.log(event.currentTarget.dataset.id);
-    const longID = DocumentHelper.folioURL(event.currentTarget.dataset.id);
-    this.props.documentViewActions.changeCurrentFolio(
-      longID,
-      this.props.side,
-      this.props.documentView[this.props.side].transcriptionType,
+    const folioID = event.currentTarget.dataset.id;
+    documentViewActions.changeCurrentFolio(
+      folioID,
+      side,
+      documentView[side].transcriptionType,
     );
   };
 
@@ -190,7 +193,7 @@ class Navigation extends React.Component {
               <span
                 title="Toggle XML mode"
                 onClick={this.toggleXMLMode}
-                className={(this.props.documentView.inSearchMode | imageViewActive) ? 'invisible' : xmlIconClass}
+                className={imageViewActive ? 'invisible' : xmlIconClass}
               />
                                                 &nbsp;
               {/* <span title="Toggle single column mode"  onClick={this.toggleColumns}

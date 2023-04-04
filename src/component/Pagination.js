@@ -2,8 +2,6 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Icon } from 'react-font-awesome-5';
 
-import DocumentHelper from '../model/DocumentHelper';
-
 class Pagination extends React.Component {
   constructor(props, context) {
     super(props, context);
@@ -11,15 +9,20 @@ class Pagination extends React.Component {
   }
 
   changeCurrentFolio = (event) => {
-    if (typeof event.currentTarget.dataset.id === 'undefined' || event.currentTarget.dataset.id.length === 0) {
+    const {
+      side, documentView, documentViewActions,
+    } = this.props;
+    const { dataset } = event.currentTarget;
+
+    if (typeof dataset.id === 'undefined' || dataset.id.length === 0) {
       return;
     }
 
-    const longID = DocumentHelper.folioURL(event.currentTarget.dataset.id);
-    this.props.documentViewActions.changeCurrentFolio(
-      longID,
-      this.props.side,
-      this.props.documentView[this.props.side].transcriptionType,
+    const folioID = dataset.id;
+    documentViewActions.changeCurrentFolio(
+      folioID,
+      side,
+      documentView[side].transcriptionType,
     );
   };
 

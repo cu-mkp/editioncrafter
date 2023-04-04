@@ -12,17 +12,17 @@ class XMLView extends Component {
   }
 
   loadFolio(folio) {
+    const { side, documentView } = this.props;
     if (typeof folio === 'undefined') {
       // console.log("TranscriptView: Folio is undefined when you called loadFolio()!");
       return;
     }
     folio.load().then((folio) => {
-      const folioID = this.props.documentView[this.props.side].iiifShortID;
-      const folioURL = DocumentHelper.folioURL(folioID);
+      const folioID = documentView[side].iiifShortID;
       this.setState({
         folio,
         isLoaded: true,
-        currentlyLoaded: folioURL,
+        currentlyLoaded: folioID,
       });
       // this.forceUpdate();
     }, (error) => {
@@ -32,13 +32,12 @@ class XMLView extends Component {
   }
 
   // Refresh the content if there is an incoming change
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     this.contentChange = false;
     const nextFolioID = nextProps.documentView[this.props.side].iiifShortID;
-    const nextFolioURL = DocumentHelper.folioURL(nextFolioID);
-    if (this.state.currentlyLoaded !== nextFolioURL) {
+    if (this.state.currentlyLoaded !== nextFolioID) {
       this.contentChange = true;
-      this.loadFolio(DocumentHelper.getFolio(this.props.document, nextFolioURL));
+      this.loadFolio(DocumentHelper.getFolio(this.props.document, nextFolioID));
     }
   }
 
@@ -58,20 +57,23 @@ class XMLView extends Component {
 
   // RENDER
   render() {
-    const thisClass = `xmlViewComponent ${this.props.side}`;
-    const thisID = `xmlViewComponent_${this.props.side}`;
+    const {
+      side, document, documentView, documentViewActions,
+    } = this.props;
+
+    const thisClass = `xmlViewComponent ${side}`;
+    const thisID = `xmlViewComponent_${side}`;
 
     // Retrofit - the folios are loaded asynchronously
-    const folioID = this.props.documentView[this.props.side].iiifShortID;
-    const folioURL = DocumentHelper.folioURL(folioID);
-    if (folioURL === '-1') {
+    const folioID = documentView[side].iiifShortID;
+    if (folioID === '-1') {
       return (
         <div className="watermark">
           <div className="watermark_contents" />
         </div>
       );
     } if (!this.state.isLoaded) {
-      this.loadFolio(DocumentHelper.getFolio(this.props.document, folioURL));
+      this.loadFolio(DocumentHelper.getFolio(document, folioID));
       return (
         <div className="watermark">
           <div className="watermark_contents" />
@@ -80,14 +82,14 @@ class XMLView extends Component {
     }
 
     // get the xml for this transcription
-    const { transcriptionType } = this.props.documentView[this.props.side];
+    const { transcriptionType } = documentView[side];
     const xmlContent = this.state.folio.transcription[`${transcriptionType}_xml`];
 
     return (
       <div id={thisID} className={thisClass}>
-        <Navigation side={this.props.side} documentView={this.props.documentView} documentViewActions={this.props.documentViewActions} />
+        <Navigation side={side} documentView={documentView} documentViewActions={documentViewActions} />
         <div className="xmlContent">
-          <Pagination side={this.props.side} className="pagination_upper" documentView={this.props.documentView} documentViewActions={this.props.documentViewActions} />
+          <Pagination side={side} className="pagination_upper" documentView={documentView} documentViewActions={documentViewActions} />
 
           <div className="xmlContentInner">
             <pre>{xmlContent}</pre>

@@ -7,29 +7,26 @@ const textPartialResourceProfileID = 'https://github.com/cu-mkp/editioncrafter-p
 
 DocumentActions.loadDocument = function loadDocument(state, manifestData) {
   const folios = parseManifest(manifestData, state.channels);
-  const { folioIndex, nameByID, idByName } = createFolioIndex(folios);
+  const { folioIndex, folioByName } = createFolioIndex(folios);
   return {
     ...state,
     loaded: true,
     folios,
     folioIndex,
-    folioNameByIDIndex: nameByID,
-    folioIDByNameIndex: idByName,
+    folioByName,
   };
 };
 
 function createFolioIndex(folios) {
   // Store an ordered array of folio ids, used for next/prev navigation purposes later
-  const folioIndex = [];
-  const nameByID = {};
-  const idByName = {};
+  const folioIndex = {};
+  const folioByName = {};
   for (let idx = 0; idx < folios.length; idx++) {
-    const shortID = folios[idx].id.substr(folios[idx].id.lastIndexOf('/') + 1);
-    folioIndex.push(shortID);
-    nameByID[shortID] = folios[idx].name;
-    idByName[folios[idx].name] = shortID;
+    const folio = folios[idx];
+    folioIndex[folio.id] = folio;
+    folioByName[folio.name] = folio;
   }
-  return { folioIndex, nameByID, idByName };
+  return { folioIndex, folioByName };
 }
 
 function throwError(message) {
