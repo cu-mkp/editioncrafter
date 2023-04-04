@@ -5,8 +5,6 @@ import React, { Component } from 'react';
 import Navigation from './Navigation';
 import ImageZoomControl from './ImageZoomControl';
 
-import DocumentHelper from '../model/DocumentHelper';
-
 class ImageView extends Component {
   constructor(props, context) {
     super(props, context);
