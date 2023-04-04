@@ -29,12 +29,12 @@ class Folio {
           this.tileSource = new OpenSeadragon.IIIFTileSource(imageServerResponse.data);
 
           // Grab all three transcripts and pre-cache them
-          const transcriptionURL_tc = this.annotationURLs.tc.html;
-          const transcriptionURL_tcn = this.annotationURLs.tcn.html;
-          const transcriptionURL_tl = this.annotationURLs.tl.html;
-          const transcriptionURL_tc_xml = this.annotationURLs.tc.xml;
-          const transcriptionURL_tcn_xml = this.annotationURLs.tcn.xml;
-          const transcriptionURL_tl_xml = this.annotationURLs.tl.xml;
+          const transcriptionURL_tc = this.annotationURLs.tc.htmlURL;
+          const transcriptionURL_tcn = this.annotationURLs.tcn.htmlURL;
+          const transcriptionURL_tl = this.annotationURLs.tl.htmlURL;
+          const transcriptionURL_tc_xml = this.annotationURLs.tc.xmlURL;
+          const transcriptionURL_tcn_xml = this.annotationURLs.tcn.xmlURL;
+          const transcriptionURL_tl_xml = this.annotationURLs.tl.xmlURL;
           axios.all([
             axios.get(transcriptionURL_tc),
             axios.get(transcriptionURL_tcn),
