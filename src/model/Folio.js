@@ -5,6 +5,7 @@ class Folio {
   constructor(props) {
     this.id = props.id;
     this.name = props.name;
+    this.pageNumber = props.pageNumber;
     this.image_zoom_url = props.image_zoom_url;
     this.image_thumbnail_url = props.image_thumbnail_url;
     this.annotationURLs = props.annotationURLs;

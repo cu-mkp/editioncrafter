@@ -120,6 +120,7 @@ function parseManifest(manifest, channels) {
     const folio = new Folio({
       id: folioID,
       name: canvasLabel,
+      pageNumber: i,
       image_zoom_url: imageURL,
       image_thumbnail_url: thumbnailURL,
       annotationURLs,
