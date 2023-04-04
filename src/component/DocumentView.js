@@ -245,18 +245,18 @@ class DocumentView extends Component {
       const current_idx = doc.folioIndex[versoID].pageNumber;
       if (current_idx > -1) {
         current_hasNext = (current_idx < (folioCount - 2));
-        nextID = current_hasNext ? doc.folios[current_idx + 2] : '';
+        nextID = current_hasNext ? doc.folios[current_idx + 2].id : '';
         current_hasPrev = (current_idx > 1 && folioCount > 1);
-        prevID = current_hasPrev ? doc.folios[current_idx - 2] : '';
+        prevID = current_hasPrev ? doc.folios[current_idx - 2].id : '';
       }
     } else {
       const current_idx = doc.folioIndex[shortID].pageNumber;
       if (current_idx > -1) {
         current_hasNext = (current_idx < (folioCount - 1));
-        nextID = current_hasNext ? doc.folios[current_idx + 1] : '';
+        nextID = current_hasNext ? doc.folios[current_idx + 1].id : '';
 
         current_hasPrev = (current_idx > 0 && folioCount > 1);
-        prevID = current_hasPrev ? doc.folios[current_idx - 1] : '';
+        prevID = current_hasPrev ? doc.folios[current_idx - 1].id : '';
       }
     }
 
