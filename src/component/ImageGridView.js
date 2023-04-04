@@ -15,13 +15,14 @@ class ImageGridView extends React.Component {
     };
   }
 
-  componentWillReceiveProps(nextProps) {
-    const folioID = this.props.documentView[this.props.side].iiifShortID;
+  // TODO REFACTOR
+  UNSAFE_componentWillReceiveProps(nextProps) {
+    const { documentView } = this.props;
+    const folioID = documentView[this.props.side].iiifShortID;
     const nextFolioID = nextProps.documentView[this.props.side].iiifShortID;
 
     if (folioID !== nextFolioID) {
-      const nextFolioURL = DocumentHelper.folioURL(nextFolioID);
-      const thumbs = this.generateThumbs(nextFolioURL, nextProps.document.folios);
+      const thumbs = this.generateThumbs(nextFolioID, nextProps.document.folios);
       const thumbCount = (thumbs.length > this.loadIncrement) ? this.loadIncrement : thumbs.length;
       const visibleThumbs = thumbs.slice(0, thumbCount);
       this.setState({ thumbs, visibleThumbs });
@@ -39,12 +40,10 @@ class ImageGridView extends React.Component {
     event.preventDefault();
 
     // Convert folioName to ID (and confirm it exists)
-    const validFolioName = DocumentHelper.validFolioName(jumpToBuffer);
-    if (validFolioName) {
-      const folioID = document.folioIDByNameIndex[validFolioName];
-      if (typeof folioID !== 'undefined') {
-        const longID = DocumentHelper.folioURL(folioID);
-        documentViewActions.changeCurrentFolio(longID, side);
+    if (document.folioByName[jumpToBuffer]) {
+      const folio = document.folioByName[jumpToBuffer];
+      if (folio) {
+        documentViewActions.changeCurrentFolio(folio.id, side);
       }
     }
 
@@ -73,9 +72,9 @@ class ImageGridView extends React.Component {
   }
 
   componentDidMount() {
-    const folioID = this.props.documentView[this.props.side].iiifShortID;
-    const folioURL = DocumentHelper.folioURL(folioID);
-    const thumbs = this.generateThumbs(folioURL, this.props.document.folios);
+    const { documentView } = this.props;
+    const folioID = documentView[this.props.side].iiifShortID;
+    const thumbs = this.generateThumbs(folioID, this.props.document.folios);
     const thumbCount = (thumbs.length > this.loadIncrement) ? this.loadIncrement : thumbs.length;
     const visibleThumbs = thumbs.slice(0, thumbCount);
     this.setState({ thumbs, visibleThumbs });

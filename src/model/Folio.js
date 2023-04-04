@@ -5,6 +5,7 @@ class Folio {
   constructor(props) {
     this.id = props.id;
     this.name = props.name;
+    this.pageNumber = props.pageNumber;
     this.image_zoom_url = props.image_zoom_url;
     this.image_thumbnail_url = props.image_thumbnail_url;
     this.annotationURLs = props.annotationURLs;
@@ -22,18 +23,18 @@ class Folio {
     }
     // promise to load all the data for this folio
     return new Promise((resolve, reject) => {
-      if (this.annotationURLs) {
+      if (this.annotationURLs && this.annotationURLs.tc) {
         axios.get(this.image_zoom_url).then((imageServerResponse) => {
           // Handle the image server response
           this.tileSource = new OpenSeadragon.IIIFTileSource(imageServerResponse.data);
 
           // Grab all three transcripts and pre-cache them
-          const transcriptionURL_tc = this.annotationURLs.tc.html;
-          const transcriptionURL_tcn = this.annotationURLs.tcn.html;
-          const transcriptionURL_tl = this.annotationURLs.tl.html;
-          const transcriptionURL_tc_xml = this.annotationURLs.tc.xml;
-          const transcriptionURL_tcn_xml = this.annotationURLs.tcn.xml;
-          const transcriptionURL_tl_xml = this.annotationURLs.tl.xml;
+          const transcriptionURL_tc = this.annotationURLs.tc.htmlURL;
+          const transcriptionURL_tcn = this.annotationURLs.tcn.htmlURL;
+          const transcriptionURL_tl = this.annotationURLs.tl.htmlURL;
+          const transcriptionURL_tc_xml = this.annotationURLs.tc.xmlURL;
+          const transcriptionURL_tcn_xml = this.annotationURLs.tcn.xmlURL;
+          const transcriptionURL_tl_xml = this.annotationURLs.tl.xmlURL;
           axios.all([
             axios.get(transcriptionURL_tc),
             axios.get(transcriptionURL_tcn),

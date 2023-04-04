@@ -5,8 +5,6 @@ import React, { Component } from 'react';
 import Navigation from './Navigation';
 import ImageZoomControl from './ImageZoomControl';
 
-import DocumentHelper from '../model/DocumentHelper';
-
 class ImageView extends Component {
   constructor(props, context) {
     super(props, context);
@@ -17,34 +15,35 @@ class ImageView extends Component {
 
     this.state = {
       isLoaded: false,
-      currentFolioURL: '',
+      currentFolioID: '',
     };
   }
 
   // Refresh the content only if there is an incoming change
-  componentWillReceiveProps(nextProps) {
-    const folioID = nextProps.documentView[this.props.side].iiifShortID;
+  UNSAFE_componentWillReceiveProps(nextProps) {
+    const { side, document } = this.props;
+    const folioID = nextProps.documentView[side].iiifShortID;
     if (folioID) {
-      const folioURL = DocumentHelper.folioURL(folioID);
-      if (folioURL !== this.state.currentFolioURL) {
-        this.loadFolio(DocumentHelper.getFolio(this.props.document, folioURL));
+      if (folioID !== this.state.currentFolioID) {
+        this.loadFolio(document.folioIndex[folioID]);
       }
     }
   }
 
   componentDidMount() {
-    const folioID = this.props.documentView[this.props.side].iiifShortID;
+    const { documentView, document } = this.props;
+
+    const folioID = documentView[this.props.side].iiifShortID;
     if (folioID) {
-      const folioURL = DocumentHelper.folioURL(folioID);
-      if (folioURL !== this.state.currentFolioURL) {
-        this.loadFolio(DocumentHelper.getFolio(this.props.document, folioURL));
+      if (folioID !== this.state.currentFolioID) {
+        this.loadFolio(document.folioIndex[folioID]);
       }
     }
   }
 
   loadFolio(thisFolio) {
     // window.loadingModal_start();
-    this.setState({ ...this.state, currentFolioURL: thisFolio.id });
+    this.setState({ ...this.state, currentFolioID: thisFolio.id });
     if (typeof this.viewer !== 'undefined') {
       this.viewer.destroy();
     }

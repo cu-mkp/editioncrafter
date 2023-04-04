@@ -8,7 +8,6 @@ import ImageGridView from './ImageGridView';
 import TranscriptionView from './TranscriptionView';
 import XMLView from './XMLView';
 import GlossaryView from './GlossaryView';
-import DocumentHelper from '../model/DocumentHelper';
 import SinglePaneView from './SinglePaneView';
 
 class DocumentView extends Component {
@@ -24,7 +23,6 @@ class DocumentView extends Component {
     this.state = {
       linkedMode: true,
       bookMode: false,
-      inSearchMode: false,
       left: {
         ...paneDefaults,
       },
@@ -65,29 +63,24 @@ class DocumentView extends Component {
 
     if (bookMode) {
       const [versoID, rectoID] = this.findBookFolios(shortid);
-      const versoName = this.props.document.folioNameByIDIndex[versoID];
-      const rectoName = this.props.document.folioNameByIDIndex[rectoID];
-      this.navigateFolios(versoName, 'f', rectoName, 'f');
+      this.navigateFolios(versoID, 'f', rectoID, 'f');
     }
   }
 
   jumpToFolio(folioName, side) {
+    const { document, viewports } = this.props;
     // Convert folioName to ID (and confirm it exists)
-    const validFolioName = DocumentHelper.validFolioName(folioName);
-    if (validFolioName) {
-      const folioID = this.props.document.folioIDByNameIndex[validFolioName];
-      if (typeof folioID !== 'undefined') {
-        const longID = DocumentHelper.folioURL(folioID);
-        this.changeCurrentFolio(longID, side, this.props.viewports[side].transcriptionType);
-      }
+    if (document.folioByName[folioName]) {
+      const folioID = document.folioByName[folioName]?.id;
+      this.changeCurrentFolio(folioID, side, viewports[side].transcriptionType);
     }
   }
 
   findBookFolios(shortID) {
-    const doc = this.props.document;
+    const { document } = this.props;
 
-    const versoFolio = doc.folioNameByIDIndex[shortID];
-    let versoIndex = doc.folioIndex.indexOf(shortID);
+    const versoFolio = document.folioNameByIDIndex[shortID];
+    let versoIndex = document.folioIndex.indexOf(shortID);
 
     if (!versoFolio.endsWith('v')) {
       if (versoFolio.endsWith('r')) {
@@ -98,7 +91,7 @@ class DocumentView extends Component {
     }
 
     const rectoIndex = versoIndex + 1;
-    return [doc.folioIndex[versoIndex], doc.folioIndex[rectoIndex]];
+    return [document.folioIndex[versoIndex], document.folioIndex[rectoIndex]];
   }
 
   onWidth = (left, right) => {
@@ -165,17 +158,13 @@ class DocumentView extends Component {
     this.props.history.push(`/folios/${folioID}/${transcriptionType}/${folioID2}/${transcriptionType2}`);
   }
 
-  changeCurrentFolio(id, side, transcriptionType) {
+  changeCurrentFolio(folioID, side, transcriptionType) {
     // Lookup prev/next
-    const iiifShortID = id.substr(id.lastIndexOf('/') + 1);
-    const folioID = this.props.document.folioNameByIDIndex[iiifShortID];
 
     if (this.state.bookMode) {
-      const [versoID, rectoID] = this.findBookFolios(iiifShortID);
+      const [versoID, rectoID] = this.findBookFolios(folioID);
       if (versoID) {
-        const versoName = this.props.document.folioNameByIDIndex[versoID];
-        const rectoName = this.props.document.folioNameByIDIndex[rectoID];
-        this.navigateFolios(versoName, 'f', rectoName, 'f');
+        this.navigateFolios(versoID, 'f', rectoID, 'f');
       }
     } else if (this.state.linkedMode) {
       if (side === 'left') {
@@ -231,8 +220,8 @@ class DocumentView extends Component {
   }
 
   viewportState(side) {
-    const doc = this.props.document;
-    const viewport = this.props.viewports[side];
+    const { document: doc, viewports } = this.props;
+    const viewport = viewports[side];
 
     // blank folio ID
     if (viewport.folioID === '-1') {
@@ -243,7 +232,8 @@ class DocumentView extends Component {
       };
     }
 
-    const shortID = doc.folioIDByNameIndex[viewport.folioID];
+    const shortID = viewport.folioID;
+    const folioCount = doc.folios.length;
     let nextID = '';
     let prevID = '';
     let current_hasPrev = false;
@@ -251,21 +241,21 @@ class DocumentView extends Component {
 
     if (this.state.bookMode) {
       const [versoID] = this.findBookFolios(shortID);
-      const current_idx = doc.folioIndex.indexOf(versoID);
+      const current_idx = doc.folioIndex[versoID].pageNumber;
       if (current_idx > -1) {
-        current_hasNext = (current_idx < (doc.folioIndex.length - 2));
-        nextID = current_hasNext ? doc.folioIndex[current_idx + 2] : '';
-        current_hasPrev = (current_idx > 1 && doc.folioIndex.length > 1);
-        prevID = current_hasPrev ? doc.folioIndex[current_idx - 2] : '';
+        current_hasNext = (current_idx < (folioCount - 2));
+        nextID = current_hasNext ? doc.folios[current_idx + 2].id : '';
+        current_hasPrev = (current_idx > 1 && folioCount > 1);
+        prevID = current_hasPrev ? doc.folios[current_idx - 2].id : '';
       }
     } else {
-      const current_idx = doc.folioIndex.indexOf(shortID);
+      const current_idx = doc.folioIndex[shortID].pageNumber;
       if (current_idx > -1) {
-        current_hasNext = (current_idx < (doc.folioIndex.length - 1));
-        nextID = current_hasNext ? doc.folioIndex[current_idx + 1] : '';
+        current_hasNext = (current_idx < (folioCount - 1));
+        nextID = current_hasNext ? doc.folios[current_idx + 1].id : '';
 
-        current_hasPrev = (current_idx > 0 && doc.folioIndex.length > 1);
-        prevID = current_hasPrev ? doc.folioIndex[current_idx - 1] : '';
+        current_hasPrev = (current_idx > 0 && folioCount > 1);
+        prevID = current_hasPrev ? doc.folios[current_idx - 1].id : '';
       }
     }
 
@@ -367,7 +357,6 @@ class DocumentView extends Component {
           <SplitPaneView
             leftPane={this.renderPane('left', docView)}
             rightPane={this.renderPane('right', docView)}
-            inSearchMode={false}
             onWidth={this.onWidth}
           />
         </div>

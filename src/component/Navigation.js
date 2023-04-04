@@ -69,14 +69,10 @@ class Navigation extends React.Component {
   };
 
   toggleXMLMode = function toggleXMLMode(event) {
-    if (this.props.documentView.inSearchMode) {
-      this.props.documentViewActions.toggleXMLMode();
-    } else {
-      this.props.documentViewActions.setXMLMode(
-        this.props.side,
-        !this.props.documentView[this.props.side].isXMLMode,
-      );
-    }
+    this.props.documentViewActions.setXMLMode(
+      this.props.side,
+      !this.props.documentView[this.props.side].isXMLMode,
+    );
   };
 
   // aka gridMode
@@ -117,15 +113,18 @@ class Navigation extends React.Component {
   };
 
   changeCurrentFolio = (event) => {
+    const {
+      documentViewActions, documentView, side,
+    } = this.props;
+
     if (typeof event.currentTarget.dataset.id === 'undefined' || event.currentTarget.dataset.id.length === 0) {
       return;
     }
-    console.log(event.currentTarget.dataset.id);
-    const longID = DocumentHelper.folioURL(event.currentTarget.dataset.id);
-    this.props.documentViewActions.changeCurrentFolio(
-      longID,
-      this.props.side,
-      this.props.documentView[this.props.side].transcriptionType,
+    const folioID = event.currentTarget.dataset.id;
+    documentViewActions.changeCurrentFolio(
+      folioID,
+      side,
+      documentView[side].transcriptionType,
     );
   };
 
@@ -138,7 +137,9 @@ class Navigation extends React.Component {
   };
 
   render() {
-    if (!this.props.documentView) {
+    const { side, document, documentView, documentViewActions, onFilterChange } = this.props;
+
+    if (!documentView) {
       return (
         <div>
           Unknown Transcription Type
@@ -146,61 +147,61 @@ class Navigation extends React.Component {
       );
     }
 
-    const recommendedWidth = (this.props.documentView[this.props.side].width - 8);// the divder is 16 px wide so each side is minus 8
+    const recommendedWidth = (documentView[side].width - 8);// the divder is 16 px wide so each side is minus 8
     const widthStyle = { width: recommendedWidth, maxWidth: recommendedWidth };
     const selectContainerStyle = (isWidthUp('md', this.props.width))
-      ? ((this.props.documentView[this.props.side].width < 500) ? { display: 'none' } : { display: 'flex' })
+      ? ((documentView[side].width < 500) ? { display: 'none' } : { display: 'flex' })
       : {};
-    const selectColorStyle = this.props.documentView[this.props.side].transcriptionType === 'f' ? { color: 'white' } : { color: 'black' };
-    const selectClass = this.props.documentView[this.props.side].transcriptionType === 'f' ? 'dark' : 'light';
-    const showButtonsStyle = this.props.documentView[this.props.side].transcriptionType === 'glossary' ? { visibility: 'hidden' } : { visibility: 'visible' };
-    let lockIconClass = (this.props.documentView.linkedMode) ? 'fa fa-lock' : 'fa fa-lock-open';
-    if (!this.props.documentView.bookMode) {
+    const selectColorStyle = documentView[side].transcriptionType === 'f' ? { color: 'white' } : { color: 'black' };
+    const selectClass = documentView[side].transcriptionType === 'f' ? 'dark' : 'light';
+    const showButtonsStyle = documentView[side].transcriptionType === 'glossary' ? { visibility: 'hidden' } : { visibility: 'visible' };
+    let lockIconClass = (documentView.linkedMode) ? 'fa fa-lock' : 'fa fa-lock-open';
+    if (!documentView.bookMode) {
       lockIconClass += ' active';
     }
-    const imageViewActive = this.props.documentView[this.props.side].transcriptionType === 'f';
-    const bookIconClass = (this.props.documentView.bookMode) ? 'fa fa-book active' : 'fa fa-book';
-    const xmlIconClass = (this.props.documentView[this.props.side].isXMLMode) ? 'fa fa-code active' : 'fa fa-code';
-    // let columnIconClass = (this.props.documentView[this.props.side].isGridMode)?'fa fa-columns active':'fa fa-columns';
+    const imageViewActive = documentView[side].transcriptionType === 'f';
+    const bookIconClass = (documentView.bookMode) ? 'fa fa-book active' : 'fa fa-book';
+    const xmlIconClass = (documentView[side].isXMLMode) ? 'fa fa-code active' : 'fa fa-code';
+    // let columnIconClass = (documentView[side].isGridMode)?'fa fa-columns active':'fa fa-columns';
     //       columnIconClass += (imageViewActive)?' hidden':'';
-    const folioName = this.props.document.folioNameByIDIndex[this.props.documentView[this.props.side].iiifShortID];
+    const folioName = document.folioIndex[documentView[side].iiifShortID]?.name;
     const jumpToIconStyle = (imageViewActive) ? { color: 'white' } : { color: 'black' };
     // this is messy but faster for the moment then figuring out why the sides dont behave the same
-    const helpMarginStyle = this.props.side === 'left' ? { marginRight: '55px' } : { marginRight: '15px' };
+    const helpMarginStyle = side === 'left' ? { marginRight: '55px' } : { marginRight: '15px' };
 
     return (
       <div className="navigationComponent" style={widthStyle}>
         <div id="navigation-row" className="navigationRow">
 
-          { this.props.documentView[this.props.side].transcriptionType !== 'glossary' ? (
+          { documentView[side].transcriptionType !== 'glossary' ? (
 
             <div id="tool-bar-buttons" className="breadcrumbs" style={showButtonsStyle}>
               <span
                 title="Toggle coordination of views"
                 onClick={this.toggleLockmode}
-                className={(this.props.documentView.inSearchMode) ? 'invisible' : lockIconClass}
+                className={lockIconClass}
               />
                                                 &nbsp;
               <span
                 title="Toggle book mode"
                 onClick={this.toggleBookmode}
-                className={(this.props.documentView.inSearchMode) ? 'invisible' : bookIconClass}
+                className={bookIconClass}
               />
                                                 &nbsp;
               <span
                 title="Toggle XML mode"
                 onClick={this.toggleXMLMode}
-                className={(this.props.documentView.inSearchMode | imageViewActive) ? 'invisible' : xmlIconClass}
+                className={imageViewActive ? 'invisible' : xmlIconClass}
               />
                                                 &nbsp;
               {/* <span title="Toggle single column mode"  onClick={this.toggleColumns}
-                                                      className={(this.props.documentView.inSearchMode)?'invisible':columnIconClass}></span> */}
+                                                      className={columnIconClass}></span> */}
                                                 &nbsp;
               <span
                 title="Go back"
                 onClick={this.changeCurrentFolio}
-                data-id={this.props.documentView[this.props.side].previousFolioShortID}
-                className={(this.props.documentView[this.props.side].hasPrevious) ? 'arrow' : 'arrow disabled'}
+                data-id={documentView[side].previousFolioShortID}
+                className={(documentView[side].hasPrevious) ? 'arrow' : 'arrow disabled'}
               >
                 {' '}
                 <Icon.ArrowCircleLeft />
@@ -211,14 +212,14 @@ class Navigation extends React.Component {
               <span
                 title="Go forward"
                 onClick={this.changeCurrentFolio}
-                data-id={this.props.documentView[this.props.side].nextFolioShortID}
-                className={(this.props.documentView[this.props.side].hasNext) ? 'arrow' : 'arrow disabled'}
+                data-id={documentView[side].nextFolioShortID}
+                className={(documentView[side].hasNext) ? 'arrow' : 'arrow disabled'}
               >
                 {' '}
                 <Icon.ArrowCircleRight />
               </span>
                                                 &nbsp;&nbsp;
-              {this.props.documentView[this.props.side].currentDocumentName}
+              {documentView[side].currentDocumentName}
               {' '}
               / Folios /
               <div
@@ -231,42 +232,39 @@ class Navigation extends React.Component {
               </div>
 
               <JumpToFolio
-                side={this.props.side}
+                side={side}
                 isVisible={this.state.popoverVisible}
                 positionX={this.state.popoverX}
                 positionY={this.state.popoverY}
-                submitHandler={this.props.documentViewActions.jumpToFolio}
+                submitHandler={documentViewActions.jumpToFolio}
                 blurHandler={this.onJumpBoxBlur}
               />
 
             </div>
           )
-            : (<AlphabetLinks onFilterChange={this.props.onFilterChange} value={this.props.value} />)}
+            : (<AlphabetLinks onFilterChange={onFilterChange} value={this.props.value} />)}
 
           <div id="doc-type-help" style={selectContainerStyle} ref={e => { this.helpRef = e; }}>
             <Select
               className={selectClass}
               style={{ ...selectColorStyle, marginRight: 15 }}
-              value={this.props.documentView[this.props.side].transcriptionType}
+              value={documentView[side].transcriptionType}
               id="doc-type"
               onClick={this.changeType}
             >
               <MenuItem value="tl">{DocumentHelper.transcriptionTypeLabels.tl}</MenuItem>
               <MenuItem value="tc">{DocumentHelper.transcriptionTypeLabels.tc}</MenuItem>
               <MenuItem value="tcn">{DocumentHelper.transcriptionTypeLabels.tcn}</MenuItem>
-              { !this.props.documentView.inSearchMode && <MenuItem value="f">{DocumentHelper.transcriptionTypeLabels.f}</MenuItem> }
-              { !this.props.documentView.inSearchMode && <MenuItem value="glossary">{DocumentHelper.transcriptionTypeLabels.glossary}</MenuItem> }
+              <MenuItem value="f">{DocumentHelper.transcriptionTypeLabels.f}</MenuItem>
+              <MenuItem value="glossary">{DocumentHelper.transcriptionTypeLabels.glossary}</MenuItem>
             </Select>
-            { !this.props.documentView.inSearchMode
-                                                && (
-                                                <span
-                                                  title="Toggle folio help"
-                                                  onClick={this.toggleHelp}
-                                                  className="helpIcon"
-                                                >
-                                                  <i className="fas fa-question-circle" />
-                                                </span>
-                                                )}
+            <span
+              title="Toggle folio help"
+              onClick={this.toggleHelp}
+              className="helpIcon"
+            >
+              <i className="fas fa-question-circle" />
+            </span>
             <HelpPopper marginStyle={helpMarginStyle} anchorEl={this.helpRef} open={this.state.openHelp} onClose={this.toggleHelp} />
           </div>
 

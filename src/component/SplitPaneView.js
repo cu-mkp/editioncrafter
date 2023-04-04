@@ -9,7 +9,6 @@ class SplitPaneView extends Component {
     // Initialize the splitter
     this.rightPaneMinWidth = 200;
     this.leftPaneMinWidth = 200;
-    this.leftPaneMinWidth_inSearchMode = 400;
     this.splitFraction = 0.5;
     this.dividerWidth = 16;
     const whole = window.innerWidth;
@@ -40,8 +39,7 @@ class SplitPaneView extends Component {
       const right_viewWidth = whole - left_viewWidth;
 
       // Update as long as we're within limits
-      const leftLimit = (this.props.inSearchMode) ? this.leftPaneMinWidth_inSearchMode : this.leftPaneMinWidth;
-      if (left_viewWidth > leftLimit
+      if (left_viewWidth > this.leftPaneMinWidth
         && right_viewWidth > this.rightPaneMinWidth) {
         this.splitFraction = (whole === 0) ? 0.0 : left_viewWidth / whole;
         this.updateUI();
