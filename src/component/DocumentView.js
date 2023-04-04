@@ -23,7 +23,6 @@ class DocumentView extends Component {
     this.state = {
       linkedMode: true,
       bookMode: false,
-      inSearchMode: false,
       left: {
         ...paneDefaults,
       },
@@ -358,7 +357,6 @@ class DocumentView extends Component {
           <SplitPaneView
             leftPane={this.renderPane('left', docView)}
             rightPane={this.renderPane('right', docView)}
-            inSearchMode={false}
             onWidth={this.onWidth}
           />
         </div>

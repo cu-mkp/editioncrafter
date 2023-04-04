@@ -69,14 +69,10 @@ class Navigation extends React.Component {
   };
 
   toggleXMLMode = function toggleXMLMode(event) {
-    if (this.props.documentView.inSearchMode) {
-      this.props.documentViewActions.toggleXMLMode();
-    } else {
-      this.props.documentViewActions.setXMLMode(
-        this.props.side,
-        !this.props.documentView[this.props.side].isXMLMode,
-      );
-    }
+    this.props.documentViewActions.setXMLMode(
+      this.props.side,
+      !this.props.documentView[this.props.side].isXMLMode,
+    );
   };
 
   // aka gridMode
