@@ -112,12 +112,13 @@ function parseManifest(manifest, channels) {
     const canvas = canvases[i];
     if (canvas.type !== 'Canvas') throwError(`Expected items[${i}] to be of type 'Canvas'.`);
     if (!canvas.id) throwError(`Expected items[${i}] to have an id property.`);
+    const folioID = canvas.id.substr(canvas.id.lastIndexOf('/') + 1);
     const canvasLabel = parseLabel(canvas);
     const { imageURL, thumbnailURL } = parseImageURLs(canvas);
     const annotationURLs = parseAnnotationURLs(canvas, channels);
 
     const folio = new Folio({
-      id: canvas.id,
+      id: folioID,
       name: canvasLabel,
       image_zoom_url: imageURL,
       image_thumbnail_url: thumbnailURL,
