@@ -27,7 +27,8 @@ class Pagination extends React.Component {
   };
 
   render() {
-    const folioName = this.props.document.folioNameByIDIndex[this.props.documentView[this.props.side].iiifShortID];
+    const { side, document, documentView } = this.props;
+    const folioName = document.folioIndex[documentView[side].iiifShortID].name;
     return (
       <div className="paginationComponent">
         <div className="paginationControl">
@@ -35,8 +36,8 @@ class Pagination extends React.Component {
           <span
             title="Go back"
             onClick={this.changeCurrentFolio}
-            data-id={this.props.documentView[this.props.side].previousFolioShortID}
-            className={(this.props.documentView[this.props.side].hasPrevious) ? 'arrow' : 'arrow disabled'}
+            data-id={documentView[side].previousFolioShortID}
+            className={(documentView[side].hasPrevious) ? 'arrow' : 'arrow disabled'}
           >
             <Icon.ArrowCircleLeft />
           </span>
@@ -49,8 +50,8 @@ class Pagination extends React.Component {
           <span
             title="Go forward"
             onClick={this.changeCurrentFolio}
-            data-id={this.props.documentView[this.props.side].nextFolioShortID}
-            className={(this.props.documentView[this.props.side].hasNext) ? 'arrow' : 'arrow disabled'}
+            data-id={documentView[side].nextFolioShortID}
+            className={(documentView[side].hasNext) ? 'arrow' : 'arrow disabled'}
           >
             {' '}
             <Icon.ArrowCircleRight />
