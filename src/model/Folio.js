@@ -23,7 +23,7 @@ class Folio {
     }
     // promise to load all the data for this folio
     return new Promise((resolve, reject) => {
-      if (this.annotationURLs) {
+      if (this.annotationURLs && this.annotationURLs.tc) {
         axios.get(this.image_zoom_url).then((imageServerResponse) => {
           // Handle the image server response
           this.tileSource = new OpenSeadragon.IIIFTileSource(imageServerResponse.data);
