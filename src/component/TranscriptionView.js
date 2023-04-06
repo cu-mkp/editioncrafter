@@ -4,7 +4,6 @@ import Parser, { domToReact } from 'html-react-parser';
 import Navigation from './Navigation';
 import Pagination from './Pagination';
 import EditorComment from './EditorComment';
-import DocumentHelper from '../model/DocumentHelper';
 import ErrorBoundary from './ErrorBoundary';
 import { layoutMargin3, layoutMargin4, layoutGrid } from '../model/folioLayout';
 

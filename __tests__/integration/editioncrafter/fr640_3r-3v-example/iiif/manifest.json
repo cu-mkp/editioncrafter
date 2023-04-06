@@ -532,13 +532,13 @@
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "http://localhost:4000/fr640_3r-3v-example/tei/translation/f010.xml",
+								"id": "http://localhost:4000/fr640_3r-3v-example/tei/tl/f010.xml",
 								"format": "text/xml",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md",
 								"label": {
 									"none": [
-										"translation"
+										"tl"
 									]
 								}
 							},
@@ -549,13 +549,13 @@
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "http://localhost:4000/fr640_3r-3v-example/html/translation/f010.html",
+								"id": "http://localhost:4000/fr640_3r-3v-example/html/tl/f010.html",
 								"format": "text/html",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md",
 								"label": {
 									"none": [
-										"translation"
+										"tl"
 									]
 								}
 							},
@@ -621,13 +621,13 @@
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "http://localhost:4000/fr640_3r-3v-example/tei/translation/f011.xml",
+								"id": "http://localhost:4000/fr640_3r-3v-example/tei/tl/f011.xml",
 								"format": "text/xml",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md",
 								"label": {
 									"none": [
-										"translation"
+										"tl"
 									]
 								}
 							},
@@ -638,13 +638,13 @@
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "http://localhost:4000/fr640_3r-3v-example/html/translation/f011.html",
+								"id": "http://localhost:4000/fr640_3r-3v-example/html/tl/f011.html",
 								"format": "text/html",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md",
 								"label": {
 									"none": [
-										"translation"
+										"tl"
 									]
 								}
 							},

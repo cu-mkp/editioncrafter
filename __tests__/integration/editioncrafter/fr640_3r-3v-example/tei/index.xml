@@ -149,7 +149,7 @@
 			</classDecl>
 		</encodingDesc>
 	</teiHeader>
-	<text xml:id="translation">
+	<text xml:id="tl">
 		<body>
 			<pb facs="#f010"/>
 			<div ana="#cat-stones" decls="#cat-stones">
