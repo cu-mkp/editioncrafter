@@ -226,6 +226,7 @@ class Navigation extends React.Component {
                 onClick={this.revealJumpBox}
                 className="folioName"
               >
+                {' '}
                 {folioName}
                 {' '}
                 <span style={jumpToIconStyle} className="fa fa-hand-point-right" />
