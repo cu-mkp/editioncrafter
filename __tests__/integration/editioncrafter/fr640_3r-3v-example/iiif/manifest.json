@@ -535,12 +535,7 @@
 								"id": "http://localhost:4000/fr640_3r-3v-example/tei/tl/f010.xml",
 								"format": "text/xml",
 								"type": "TextPartial",
-								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md",
-								"label": {
-									"none": [
-										"tl"
-									]
-								}
+								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
 							"target": "http://localhost:4000/fr640_3r-3v-example/iiif/canvas/f010"
 						},
@@ -552,12 +547,7 @@
 								"id": "http://localhost:4000/fr640_3r-3v-example/html/tl/f010.html",
 								"format": "text/html",
 								"type": "TextPartial",
-								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md",
-								"label": {
-									"none": [
-										"tl"
-									]
-								}
+								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
 							"target": "http://localhost:4000/fr640_3r-3v-example/iiif/canvas/f010"
 						}
@@ -624,12 +614,7 @@
 								"id": "http://localhost:4000/fr640_3r-3v-example/tei/tl/f011.xml",
 								"format": "text/xml",
 								"type": "TextPartial",
-								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md",
-								"label": {
-									"none": [
-										"tl"
-									]
-								}
+								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
 							"target": "http://localhost:4000/fr640_3r-3v-example/iiif/canvas/f011"
 						},
@@ -641,12 +626,7 @@
 								"id": "http://localhost:4000/fr640_3r-3v-example/html/tl/f011.html",
 								"format": "text/html",
 								"type": "TextPartial",
-								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md",
-								"label": {
-									"none": [
-										"tl"
-									]
-								}
+								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
 							"target": "http://localhost:4000/fr640_3r-3v-example/iiif/canvas/f011"
 						}
