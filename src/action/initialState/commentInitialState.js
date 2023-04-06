@@ -1,6 +1,6 @@
-export default function commentInitialState(editionBaseURL) {
+export default function commentInitialState(commentsURL) {
   return {
-    commentsURL: `${editionBaseURL}/comments.json`,
+    commentsURL,
     comments: {},
     loaded: false,
   };
