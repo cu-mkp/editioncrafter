@@ -33,20 +33,11 @@
 		max-width: 250px;
 	}
 	
-	.add {
-		color: blue;
-		vertical-align: super;
-		font-size: 10pt;
-	}
-	
-	.del {
-		color: red;
-	}
-	
-	.ups {
-		background: lightgray;
-		font-size: 14px;
-	}
+	// TODO refactor to appropriate TEI element
+	// .ups {
+	// 	background: lightgray;
+	// 	font-size: 14px;
+	// }
 	
 	.x-small-inline-figure {
 		margin: 5px;

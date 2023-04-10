@@ -68,7 +68,9 @@ tei-activity:before {
   content: "activity: ";
 }
 tei-add[place=above] {
+  color: blue;
   vertical-align: super;
+  font-size: 10pt;
 }
 tei-add[place=inline]:before {
   content: "«";
@@ -276,6 +278,9 @@ tei-custodialhist {
 /* d */
 tei-date[data-tei-when]:empty:before {
   content: attr(when);
+}
+tei-del {
+  color: red;
 }
 /* e */
 tei-editionstmt {
