@@ -90,7 +90,7 @@ function parseTranscription(html, xml) {
   // const layoutType = folioAttribs.slice(layoutAttrStart, folioAttribs.indexOf('"', layoutAttrStart));
   // const transcription = html.slice(start, end);
   return {
-    layout: 'default',
+    layout: 'three-column',
     html,
     xml,
   };

@@ -181,16 +181,18 @@ function layoutMargin(html, emptyZoneFrame, layoutDecoder) {
   // load the surface into a DOM element to retrieve the grid data
   const folioDiv = document.createElement('div');
   folioDiv.innerHTML = html;
-  const zones = folioDiv.children;
+  const zones = folioDiv.getElementsByTagName('tei-body')[0].children;
 
-  const validLayoutCode = function validLayoutCode(layoutCode) {
+  const validLayoutCode = function validLayoutCode(block) {
+    const layoutCode = block.getAttribute("rend")
     if (Object.keys(emptyMarginFrame).includes(layoutCode)) {
       return layoutCode;
     }
     return 'middle';
   };
 
-  function validLayoutHint(layoutHint) {
+  function validLayoutHint(block) {
+    const layoutHint = block.getAttribute('style')
     if (hintCodes.includes(layoutHint)) {
       return layoutHint;
     }
@@ -211,8 +213,8 @@ function layoutMargin(html, emptyZoneFrame, layoutDecoder) {
       const blocks = zone.children;
 
       for (const block of blocks) {
-        const layoutCode = validLayoutCode(block.dataset.layout);
-        const hint = validLayoutHint(block.dataset.layoutHint);
+        const layoutCode = validLayoutCode(block);
+        const hint = validLayoutHint(block);
         block.setAttribute('data-entry-id', entryID);
 
         // group all the blocks together that share a layout code
