@@ -43,7 +43,6 @@ class Pagination extends React.Component {
           </span>
 
           <span className="folioName">
-            Folio&nbsp;
             {folioName}
           </span>
 

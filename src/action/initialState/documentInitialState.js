@@ -1,6 +1,6 @@
-export default function documentInitalState(iiifManifest, transcriptionTypes) {
+export default function documentInitalState(iiifManifest, documentName, transcriptionTypes) {
   return {
-    currentDocumentName: 'BnF Ms. Fr. 640',
+    documentName: documentName,
     manifestURL: iiifManifest,
     transcriptionTypes,
     folios: [],

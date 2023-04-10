@@ -50,7 +50,7 @@ class JumpToFolio extends React.Component {
     return (
       <div className="jumpToFolio_component" style={divStyle}>
         <form onSubmit={this.handleSubmit}>
-          <input placeholder="Folio Name (e.g. '3r')" value={this.state.textInput} id={id} name="folioID" type="text" onChange={this.handleChange.bind(this)} onBlur={this.props.blurHandler} />
+          <input placeholder="Page Name (e.g. '3r')" value={this.state.textInput} id={id} name="folioID" type="text" onChange={this.handleChange.bind(this)} onBlur={this.props.blurHandler} />
         </form>
       </div>
     );

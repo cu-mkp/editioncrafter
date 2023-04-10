@@ -38,13 +38,13 @@ class DiploMatic extends Component {
       let leftTranscriptionType; let rightFolioID; let
         rightTranscriptionType;
       if (folioID2) {
-        // route /folios/:folioID/:transcriptionType/:folioID2/:transcriptionType2
+        // route /ec/:folioID/:transcriptionType/:folioID2/:transcriptionType2
         leftTranscriptionType = transcriptionType;
         rightFolioID = folioID2;
         rightTranscriptionType = transcriptionType2 || 'tc';
       } else {
-        // route /folios/:folioID
-        // route /folios/:folioID/:transcriptionType
+        // route /ec/:folioID
+        // route /ec/:folioID/:transcriptionType
         leftTranscriptionType = 'f';
         rightFolioID = folioID;
         rightTranscriptionType = transcriptionType || 'tc';
@@ -71,10 +71,10 @@ class DiploMatic extends Component {
     return (
       <div id="content">
         <Switch>
-          <Route path="/folios/:folioID/:transcriptionType/:folioID2/:transcriptionType2" render={this.renderDocumentView} exact />
-          <Route path="/folios/:folioID/:transcriptionType" render={this.renderDocumentView} exact />
-          <Route path="/folios/:folioID" render={this.renderDocumentView} exact />
-          <Route path="/folios" render={this.renderDocumentView} exact />
+          <Route path="/ec/:folioID/:transcriptionType/:folioID2/:transcriptionType2" render={this.renderDocumentView} exact />
+          <Route path="/ec/:folioID/:transcriptionType" render={this.renderDocumentView} exact />
+          <Route path="/ec/:folioID" render={this.renderDocumentView} exact />
+          <Route path="/ec" render={this.renderDocumentView} exact />
         </Switch>
       </div>
     );

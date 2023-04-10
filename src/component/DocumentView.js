@@ -136,26 +136,26 @@ class DocumentView extends Component {
   navigateFolios(folioID, transcriptionType, folioID2, transcriptionType2) {
     if (!folioID) {
       // goto grid view
-      this.props.history.push('/folios');
+      this.props.history.push('/ec');
       return;
     }
     if (!transcriptionType) {
       // goto folioID, tc
-      this.props.history.push(`/folios/${folioID}`);
+      this.props.history.push(`/ec/${folioID}`);
       return;
     }
     if (!folioID2) {
       // goto folioID, transcriptionType
-      this.props.history.push(`/folios/${folioID}/${transcriptionType}`);
+      this.props.history.push(`/ec/${folioID}/${transcriptionType}`);
       return;
     }
     if (!transcriptionType2) {
       // goto folioID, transcriptionType, folioID2, tc
-      this.props.history.push(`/folios/${folioID}/${transcriptionType}/${folioID2}/tc`);
+      this.props.history.push(`/ec/${folioID}/${transcriptionType}/${folioID2}/tc`);
       return;
     }
     // goto folioID, transcriptionType, folioID2, transcriptionType2
-    this.props.history.push(`/folios/${folioID}/${transcriptionType}/${folioID2}/${transcriptionType2}`);
+    this.props.history.push(`/ec/${folioID}/${transcriptionType}/${folioID2}/${transcriptionType2}`);
   }
 
   changeCurrentFolio(folioID, side, transcriptionType) {

@@ -219,9 +219,8 @@ class Navigation extends React.Component {
                 <Icon.ArrowCircleRight />
               </span>
                                                 &nbsp;&nbsp;
-              {documentView[side].currentDocumentName}
-              {' '}
-              / Folios /
+              {document.documentName}
+              {' / '}
               <div
                 onClick={this.revealJumpBox}
                 className="folioName"
