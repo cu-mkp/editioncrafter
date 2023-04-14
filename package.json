@@ -24,7 +24,7 @@
     "build:watch": "webpack --watch --mode=development",
     "prepublishOnly": "npm run clean && npm run build:es && npm run build:cjs && npm run build",
     "size": "bundlewatch --config bundlewatch.config.json",
-    "start": "NODE_ENV=production webpack serve --open",
+    "start": "NODE_ENV=production webpack serve --open --port 5000",
     "watch-css": "sass --watch ./src/scss/:./__tests__/integration/editioncrafter/css"
   },
   "license": "MIT",
