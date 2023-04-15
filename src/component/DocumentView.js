@@ -284,12 +284,16 @@ class DocumentView extends Component {
         />
       );
     } if (viewType === 'TranscriptionView') {
+      const folioID = docView[side].iiifShortID;
+      let transcriptionType = docView[side].transcriptionType;
       return (
         <TranscriptionView
           key={key}
           documentView={docView}
           documentViewActions={this.documentViewActions}
           side={side}
+          folioID={folioID}
+          transcriptionType={transcriptionType}
         />
       );
     } if (viewType === 'XMLView') {

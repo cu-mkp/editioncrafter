@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import Parser, { domToReact } from 'html-react-parser';
+import Parser from 'html-react-parser';
 import Navigation from './Navigation';
 import Pagination from './Pagination';
 import EditorComment from './EditorComment';
@@ -8,12 +8,6 @@ import ErrorBoundary from './ErrorBoundary';
 import { layoutMargin3, layoutMargin4, layoutGrid } from '../model/folioLayout';
 
 class TranscriptionView extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { folio: [], isLoaded: false, currentlyLoaded: '' };
-    this.contentChange = true;
-    // window.loadingModal_stop();
-  }
 
   // Recursively unpack a node tree object and just return the text
   nodeTreeToString(node) {
@@ -26,46 +20,6 @@ class TranscriptionView extends Component {
       }
     }
     return term.trim();
-  }
-
-  loadFolio(folio) {
-    const { side, documentView } = this.props;
-    if (typeof folio === 'undefined') {
-      // console.log("TranscriptView: Folio is undefined when you called loadFolio()!");
-      return;
-    }
-    folio.load().then((folio) => {
-      const folioID = documentView[side].iiifShortID;
-      this.setState({
-        folio,
-        isLoaded: true,
-        currentlyLoaded: folioID,
-      });
-    }, (error) => {
-      console.log(`Unable to load transcription: ${error}`);
-    });
-  }
-
-  // Refresh the content if there is an incoming change
-  UNSAFE_componentWillReceiveProps(nextProps) {
-    this.contentChange = false;
-    const nextfolioID = nextProps.documentView[this.props.side].iiifShortID;
-    if (this.state.currentlyLoaded !== nextfolioID) {
-      this.contentChange = true;
-      this.loadFolio(this.props.document.folioIndex[nextfolioID]);
-    }
-  }
-
-  componentDidUpdate() {
-    if (this.contentChange) {
-      // Scroll content to top
-      const selector = `transcriptionViewComponent_${this.props.side}`;
-      const el = document.getElementById(selector);
-      if (el !== null) {
-        // console.log(selector + "scroll to top");
-        el.scrollTop = 0;
-      }
-    }
   }
 
   getTranscriptionData(transcription) {
@@ -92,19 +46,15 @@ class TranscriptionView extends Component {
   // RENDER
   render() {
     const {
-      side, document, documentView, documentViewActions,
+      side, folioID, transcriptionType, document, documentView, documentViewActions,
     } = this.props;
 
-    // Retrofit - the folios are loaded asynchronously
-    const folioID = documentView[side].iiifShortID;
     if (folioID === '-1') {
       return watermark();
-    } if (!this.state.isLoaded) {
-      this.loadFolio(document.folioIndex[folioID]);
-      return watermark();
-    }
+    } 
 
-    const transcriptionData = this.getTranscriptionData(this.state.folio.transcription[documentView[side].transcriptionType]);
+    const folio = document.folioIndex[folioID]
+    const transcriptionData = this.getTranscriptionData(folio.transcription[transcriptionType]);
 
     if (!transcriptionData) {
       console.log(`Undefined transcription for side: ${side}`);
