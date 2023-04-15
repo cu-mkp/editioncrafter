@@ -58,7 +58,7 @@ class ImageGridView extends React.Component {
             <span>Jump to: </span>
             <input
               id="jump-to-input"
-              placeholder="Folio Name (e.g. '3r')"
+              placeholder="Page Name (e.g. '3r')"
               onChange={this.onJumpToChange}
               value={this.state.jumpToBuffer}
             />

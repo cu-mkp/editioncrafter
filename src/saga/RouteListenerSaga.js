@@ -13,7 +13,7 @@ function* userNavigation(action) {
 
   if (pathSegments.length > 1) {
     switch (pathSegments[1]) {
-      case 'folios':
+      case 'ec':
         yield resolveComments();
         yield resolveDocumentManifest();
         yield resolveGlossary();

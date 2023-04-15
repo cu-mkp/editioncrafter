@@ -121,7 +121,7 @@ class SplitPaneView extends Component {
 
   render() {
     return (
-      <div className="split-pane-view" style={{ ...this.state.style, marginTop: 2 }}>
+      <div className="split-pane-view" style={{ ...this.state.style }}>
         { this.props.leftPane }
         { this.renderDivider() }
         { this.props.rightPane }

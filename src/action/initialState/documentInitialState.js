@@ -1,8 +1,8 @@
-export default function documentInitalState(editionBaseURL, channels) {
+export default function documentInitalState(iiifManifest, documentName, transcriptionTypes) {
   return {
-    currentDocumentName: 'BnF Ms. Fr. 640',
-    manifestURL: `${editionBaseURL}/iiif/manifest.json`,
-    channels,
+    documentName: documentName,
+    manifestURL: iiifManifest,
+    transcriptionTypes,
     folios: [],
     loaded: false,
     folioIndex: {},

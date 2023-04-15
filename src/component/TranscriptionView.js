@@ -4,7 +4,6 @@ import Parser, { domToReact } from 'html-react-parser';
 import Navigation from './Navigation';
 import Pagination from './Pagination';
 import EditorComment from './EditorComment';
-import DocumentHelper from '../model/DocumentHelper';
 import ErrorBoundary from './ErrorBoundary';
 import { layoutMargin3, layoutMargin4, layoutGrid } from '../model/folioLayout';
 
@@ -124,7 +123,7 @@ class TranscriptionView extends Component {
       }
 
       // Configure parser to replace certain tags with components
-      const htmlToReactParserOptionsSide = htmlToReactParserOptions(side);
+      const htmlToReactParserOptionsSide = htmlToReactParserOptions();
 
       const { content } = transcriptionData;
 
@@ -174,133 +173,15 @@ class TranscriptionView extends Component {
   }
 }
 
-function htmlToReactParserOptions(side) {
+function htmlToReactParserOptions() {
   const parserOptions = {
     replace(domNode) {
       switch (domNode.name) {
-        case 'add':
-          return (
-            <span className="add">
-              {domToReact(domNode.children, parserOptions)}
-            </span>
-          );
-
-        case 'del':
-          return (
-            <s className="del">
-              {domToReact(domNode.children, parserOptions)}
-            </s>
-          );
 
         case 'comment':
           const commentID = domNode.attribs.rid; // ( domNode.children && domNode.children[0] ) ? domNode.children[0].data : null
           return (
             <EditorComment commentID={commentID} />
-          );
-
-        case 'corr':
-          return (
-            <span className="corr">
-              &#91;
-              {domToReact(domNode.children, parserOptions)}
-              &#93;
-            </span>
-          );
-
-        case 'superscript':
-          return (
-            <sup>{domToReact(domNode.children, parserOptions)}</sup>
-          );
-
-        case 'de':
-        case 'el':
-        case 'es':
-        case 'fr':
-        case 'it':
-        case 'la':
-          return (
-            <i>
-              {domToReact(domNode.children, parserOptions)}
-            </i>
-          );
-
-        case 'exp':
-          return (
-            <span className="exp">
-              &#123;
-              {domToReact(domNode.children, parserOptions)}
-              &#125;
-            </span>
-          );
-
-        case 'underline':
-          return (
-            <u>{domToReact(domNode.children, parserOptions)}</u>
-          );
-
-        case 'unc':
-          return (
-            <span>
-              [
-              {domToReact(domNode.children, parserOptions)}
-              ?]
-            </span>
-          );
-
-        case 'sup':
-          return (
-            <span />
-          );
-
-        case 'lb':
-          return (
-            <br />
-          );
-
-        case 'gap':
-          return (
-            <i>[gap]</i>
-          );
-
-        case 'ill':
-          return (
-            <i>[illegible]</i>
-          );
-
-        case 'ups':
-          return (
-            <span className="ups">{domToReact(domNode.children, parserOptions)}</span>
-          );
-
-        case 'al':
-        case 'bp':
-        case 'cn':
-        case 'df':
-        case 'env':
-        case 'm':
-        case 'mark':
-        case 'md':
-        case 'ms':
-        case 'mu':
-        case 'pa':
-        case 'pl':
-        case 'pn':
-        case 'pro':
-        case 'sn':
-        case 'tl':
-        case 'tmp':
-        case 'wp':
-          return (
-            <span>{domToReact(domNode.children, parserOptions)}</span>
-          );
-
-        case 'emph':
-        case 'man':
-        case 'rub':
-          return (
-            <b>
-              {domToReact(domNode.children, parserOptions)}
-            </b>
           );
 
         default:

@@ -10,96 +10,55 @@ class Folio {
     this.image_thumbnail_url = props.image_thumbnail_url;
     this.annotationURLs = props.annotationURLs;
     this.tileSource = null;
-    this.transcription = null;
+    this.transcription = {};
     this.loaded = false;
   }
 
   load() {
     if (this.loaded) {
       // promise to resolve this immediately
-      return new Promise((resolve, reject) => {
+      return new Promise((resolve) => {
         resolve(this);
       });
     }
     // promise to load all the data for this folio
     return new Promise((resolve, reject) => {
-      if (this.annotationURLs && this.annotationURLs.tc) {
+      if (this.annotationURLs) {
         axios.get(this.image_zoom_url).then((imageServerResponse) => {
           // Handle the image server response
           this.tileSource = new OpenSeadragon.IIIFTileSource(imageServerResponse.data);
 
-          // Grab all three transcripts and pre-cache them
-          const transcriptionURL_tc = this.annotationURLs.tc.htmlURL;
-          const transcriptionURL_tcn = this.annotationURLs.tcn.htmlURL;
-          const transcriptionURL_tl = this.annotationURLs.tl.htmlURL;
-          const transcriptionURL_tc_xml = this.annotationURLs.tc.xmlURL;
-          const transcriptionURL_tcn_xml = this.annotationURLs.tcn.xmlURL;
-          const transcriptionURL_tl_xml = this.annotationURLs.tl.xmlURL;
-          axios.all([
-            axios.get(transcriptionURL_tc),
-            axios.get(transcriptionURL_tcn),
-            axios.get(transcriptionURL_tl),
-            axios.get(transcriptionURL_tc_xml),
-            axios.get(transcriptionURL_tcn_xml),
-            axios.get(transcriptionURL_tl_xml),
-          ]).then(axios.spread((
-            tc_response,
-            tcn_response,
-            tl_response,
-            tc_xml_response,
-            tcn_xml_response,
-            tl_xml_response,
-          ) => {
-            this.transcription = {};
-
-            this.transcription.tc = parseTranscription(tc_response.data);
-            if (this.transcription.tc === null) {
-              reject(new Error(`Unable to parse <folio> element in ${transcriptionURL_tc}`));
-            }
-
-            this.transcription.tcn = parseTranscription(tcn_response.data);
-            if (this.transcription.tcn.html === null) {
-              reject(new Error(`Unable to parse <folio> element in ${transcriptionURL_tcn}`));
-            }
-
-            this.transcription.tl = parseTranscription(tl_response.data);
-            if (this.transcription.tl.html === null) {
-              reject(new Error(`Unable to parse <folio> element in ${transcriptionURL_tl}`));
-            }
-
-            this.transcription.tc_xml = tc_xml_response.data;
-            this.transcription.tcn_xml = tcn_xml_response.data;
-            this.transcription.tl_xml = tl_xml_response.data;
-
-            this.loaded = true;
-            resolve(this);
-          }))
-            .catch((error) => {
-              reject(error);
-            });
+          for (const transcriptionType of Object.keys(this.annotationURLs)) {
+            const { htmlURL, xmlURL } = this.annotationURLs[transcriptionType];
+            this.transcription[transcriptionType] = {};
+            axios.all([
+              axios.get(htmlURL),
+              axios.get(xmlURL),
+            ]).then(axios.spread((
+              htmlResponse,
+              xmlResponse,
+            ) => {
+              const transcription = parseTranscription(htmlResponse.data, xmlResponse.data);
+              if (!transcription) {
+                reject(new Error(`Unable to load transcription: ${htmlURL}`));
+              } else {
+                this.transcription[transcriptionType] = transcription;
+                this.loaded = true;
+                resolve(this);
+              }
+            }))
+              .catch((error) => {
+                reject(error);
+              });
+          }
         })
           .catch((error) => {
             reject(error);
           });
-
-        // if there is no annotatation list, just load the image and provide a blank transcription
       } else {
+        // if there is no annotatation list, just load the image and provide a blank transcription
         axios.get(this.image_zoom_url)
           .then((imageServerResponse) => {
-            this.transcription = {
-              tc: {
-                layout: 'grid',
-                html: '',
-              },
-              tcn: {
-                layout: 'grid',
-                html: '',
-              },
-              tl: {
-                layout: 'grid',
-                html: '',
-              },
-            };
             this.tileSource = new OpenSeadragon.IIIFTileSource(imageServerResponse.data);
             this.loaded = true;
             resolve(this);
@@ -113,26 +72,27 @@ class Folio {
 }
 
 // returns transcription or error message if unable to parse
-function parseTranscription(html) {
-  const folioTag = '<folio';
-  const openDivIndex = html.indexOf(folioTag);
-  if (openDivIndex === -1) return errorMessage('Folio element not found.');
-  const start = html.indexOf('>', openDivIndex) + 1;
-  const end = html.lastIndexOf('</folio>');
-  if (end === -1) return errorMessage('Folio element closing tag not found.');
-  if (start > end) return errorMessage('Unable to parse folio element.');
+function parseTranscription(html, xml) {
+  // const folioTag = '<folio';
+  // const openDivIndex = html.indexOf(folioTag);
+  // if (openDivIndex === -1) return errorMessage('Folio element not found.');
+  // const start = html.indexOf('>', openDivIndex) + 1;
+  // const end = html.lastIndexOf('</folio>');
+  // if (end === -1) return errorMessage('Folio element closing tag not found.');
+  // if (start > end) return errorMessage('Unable to parse folio element.');
 
-  // detect folio mode
-  const folioAttribs = html.slice(openDivIndex + folioTag.length, start - 1);
-  const layoutAttr = 'layout=';
-  const layoutAttrIndex = folioAttribs.indexOf(layoutAttr);
-  if (layoutAttrIndex === -1) return errorMessage('Unable to parse layout attribute in folio element.');
-  const layoutAttrStart = layoutAttrIndex + layoutAttr.length + 1;
-  const layoutType = folioAttribs.slice(layoutAttrStart, folioAttribs.indexOf('"', layoutAttrStart));
-  const transcription = html.slice(start, end);
+  // // detect folio mode
+  // const folioAttribs = html.slice(openDivIndex + folioTag.length, start - 1);
+  // const layoutAttr = 'layout=';
+  // const layoutAttrIndex = folioAttribs.indexOf(layoutAttr);
+  // if (layoutAttrIndex === -1) return errorMessage('Unable to parse layout attribute in folio element.');
+  // const layoutAttrStart = layoutAttrIndex + layoutAttr.length + 1;
+  // const layoutType = folioAttribs.slice(layoutAttrStart, folioAttribs.indexOf('"', layoutAttrStart));
+  // const transcription = html.slice(start, end);
   return {
-    layout: layoutType,
-    html: transcription,
+    layout: 'three-column',
+    html,
+    xml,
   };
 }
 

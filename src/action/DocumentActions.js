@@ -6,7 +6,7 @@ const DocumentActions = {};
 const textPartialResourceProfileID = 'https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md';
 
 DocumentActions.loadDocument = function loadDocument(state, manifestData) {
-  const folios = parseManifest(manifestData, state.channels);
+  const folios = parseManifest(manifestData, state.transcriptionTypes);
   const { folioIndex, folioByName } = createFolioIndex(folios);
   return {
     ...state,
@@ -65,7 +65,7 @@ function parseLabel(parent) {
   return parent.label.none[0];
 }
 
-function parseAnnotationURLs(canvas, channels) {
+function parseAnnotationURLs(canvas, transcriptionTypes) {
   const annos = {};
 
   if (canvas.annotations) {
@@ -78,15 +78,16 @@ function parseAnnotationURLs(canvas, channels) {
           if (!annotation.body) throwError(`Expected body property in Annotation ${annotation.id}`);
           const { body: annotationBody } = annotation;
           if (annotationBody.profile === textPartialResourceProfileID && annotationBody.type === 'TextPartial') {
+            if (!annotationBody.id) throwError(`Expected id property in TextPartial in ${annotation.id}`);
+            if (!annotationBody.format) throwError(`Expected format property in TextPartial in ${annotation.id}`);
             const { id, format } = annotationBody;
-            const label = parseLabel(annotationBody);
-            for (const channelName of Object.keys(channels)) {
-              const channel = channels[channelName];
-              if (channel.includes(label)) {
-                if (!annos[channelName]) annos[channelName] = {};
-                if (format === 'text/html') annos[channelName].htmlURL = id;
-                if (format === 'text/xml') annos[channelName].xmlURL = id;
-              }
+            const idParts = id.split('/');
+            if (idParts.length < 5) throwError(`TextPartial id property is in the wrong format: ${id}`);
+            const transcriptionTypeID = idParts[idParts.length - 2];
+            if (transcriptionTypes[transcriptionTypeID]) {
+              if (!annos[transcriptionTypeID]) annos[transcriptionTypeID] = {};
+              if (format === 'text/html') annos[transcriptionTypeID].htmlURL = id;
+              if (format === 'text/xml') annos[transcriptionTypeID].xmlURL = id;
             }
           }
         }
@@ -96,7 +97,7 @@ function parseAnnotationURLs(canvas, channels) {
   return annos;
 }
 
-function parseManifest(manifest, channels) {
+function parseManifest(manifest, transcriptionTypes) {
   const folios = [];
 
   // make sure this is a IIIF Presentation API v3 Manifest
@@ -115,7 +116,7 @@ function parseManifest(manifest, channels) {
     const folioID = canvas.id.substr(canvas.id.lastIndexOf('/') + 1);
     const canvasLabel = parseLabel(canvas);
     const { imageURL, thumbnailURL } = parseImageURLs(canvas);
-    const annotationURLs = parseAnnotationURLs(canvas, channels);
+    const annotationURLs = parseAnnotationURLs(canvas, transcriptionTypes);
 
     const folio = new Folio({
       id: folioID,
