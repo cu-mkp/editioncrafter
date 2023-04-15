@@ -8,7 +8,6 @@ import ErrorBoundary from './ErrorBoundary';
 import { layoutMargin3, layoutMargin4, layoutGrid } from '../model/folioLayout';
 
 class TranscriptionView extends Component {
-
   // Recursively unpack a node tree object and just return the text
   nodeTreeToString(node) {
     let term = '';
@@ -22,27 +21,6 @@ class TranscriptionView extends Component {
     return term.trim();
   }
 
-  getTranscriptionData(transcription) {
-    if (typeof transcription === 'undefined') return null;
-
-    // Grid layout
-    if (transcription.layout === 'grid') {
-      return layoutGrid(transcription.html);
-
-      // Margin layout
-    } if (transcription.layout === 'three-column') {
-      return layoutMargin3(transcription.html);
-    } if (transcription.layout === 'four-column') {
-      return layoutMargin4(transcription.html);
-
-      // None specified, pass on without any layout
-    }
-    return {
-      content: transcription.html,
-      layout: '',
-    };
-  }
-
   // RENDER
   render() {
     const {
@@ -51,10 +29,10 @@ class TranscriptionView extends Component {
 
     if (folioID === '-1') {
       return watermark();
-    } 
+    }
 
-    const folio = document.folioIndex[folioID]
-    const transcriptionData = this.getTranscriptionData(folio.transcription[transcriptionType]);
+    const folio = document.folioIndex[folioID];
+    const transcriptionData = getTranscriptionData(folio.transcription[transcriptionType]);
 
     if (!transcriptionData) {
       console.log(`Undefined transcription for side: ${side}`);
@@ -123,16 +101,37 @@ class TranscriptionView extends Component {
   }
 }
 
+function getTranscriptionData(transcription) {
+  if (typeof transcription === 'undefined') return null;
+
+  // Grid layout
+  if (transcription.layout === 'grid') {
+    return layoutGrid(transcription.html);
+
+    // Margin layout
+  } if (transcription.layout === 'three-column') {
+    return layoutMargin3(transcription.html);
+  } if (transcription.layout === 'four-column') {
+    return layoutMargin4(transcription.html);
+
+    // None specified, pass on without any layout
+  }
+  return {
+    content: transcription.html,
+    layout: '',
+  };
+}
+
 function htmlToReactParserOptions() {
   const parserOptions = {
     replace(domNode) {
       switch (domNode.name) {
-
-        case 'comment':
+        case 'comment': {
           const commentID = domNode.attribs.rid; // ( domNode.children && domNode.children[0] ) ? domNode.children[0].data : null
           return (
             <EditorComment commentID={commentID} />
           );
+        }
 
         default:
           /* Otherwise, Just pass through */
