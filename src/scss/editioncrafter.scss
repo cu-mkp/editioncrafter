@@ -1,0 +1,109 @@
+@charset "utf-8";
+
+/* Normalize first */
+@import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css");
+
+/*  Google fonts */
+// Link to these fonts: https://fonts.google.com/share?selection.family=Lato:wght@400;700%7CMartel%7CMartel%20Sans:wght@200%7CTaviraj:wght@300
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Martel+Sans:wght@200&family=Martel:wght@400;700&family=Taviraj:wght@300;500&display=swap');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+/*
+	FontAwesome icon font http://fontawesome.io/
+	FIXME: This is still used by the imageView control panel, the rest of the app uses FA5 react npm module
+*/
+@import url("https://use.fontawesome.com/releases/v5.0.8/css/all.css");
+
+// Breakpoints
+$screen-xs-min: 0px;
+$screen-sm-min: 600px;
+$screen-md-min: 960px;
+$screen-lg-min: 1280px;
+$screen-xl-min: 1920px;
+
+// Standard Image Sizes
+$image-xs: 175px;
+$image-sm: 300px;
+$image-md: 425px;
+$image-lg: 600px;
+$image-xl: 900px;
+
+// Animation Mixins
+@mixin keyframes($animation-name) {
+	@-webkit-keyframes #{$animation-name} {
+	  @content;
+	}
+	@-moz-keyframes #{$animation-name} {
+	  @content;
+	}  
+	@-ms-keyframes #{$animation-name} {
+	  @content;
+	}
+	@-o-keyframes #{$animation-name} {
+	  @content;
+	}  
+	@keyframes #{$animation-name} {
+	  @content;
+	}
+  }
+  
+@mixin animation($str) {
+-webkit-animation: #{$str};
+-moz-animation: #{$str};
+-ms-animation: #{$str};
+-o-animation: #{$str};
+animation: #{$str};      
+}
+
+// BREAKPOINT MIXINS
+@mixin xs {
+   @media (min-width: #{$screen-xs-min}) {
+       @content;
+   }
+}
+@mixin sm {
+   @media (min-width: #{$screen-sm-min}) {
+       @content;
+   }
+}
+@mixin md {
+   @media (min-width: #{$screen-md-min}) {
+       @content;
+   }
+}
+@mixin lg {
+   @media (min-width: #{$screen-lg-min}) {
+       @content;
+   }
+}
+@mixin xl {
+   @media (min-width: #{$screen-xl-min}) {
+       @content;
+   }
+}
+
+@mixin first-child() {
+  &:first-of-type {
+    @content
+  }
+}
+
+@import "base";
+@import "globalNavigation";
+
+@import "spinner";
+@import "thumbnails";
+@import "watermark";
+@import "navigation";
+@import "pagination";
+
+@import "diplomatic";
+@import "imageGridView";
+@import "splitPaneView";
+@import "imageView";
+@import "imageZoomControl";
+@import "transcriptView";
+@import "xmlView";
+@import "glossary";
+@import "jumpbox";
+
+@import "CETEIcean";

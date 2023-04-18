@@ -1,0 +1,60 @@
+.imageGridComponent {
+	background-color: #000000;
+	font-size: 0.8rem;
+	overflow: scroll;
+	height: 100vh;
+}
+
+.imageGridComponent > ul {
+	display: flex;
+	flex-wrap: wrap;
+	list-style: none;
+	padding-left: 0;
+	margin: 1.5rem 0 8rem 2rem;
+}
+
+.imageGridComponent > ul > li {
+	margin-bottom: 20px;
+	width: 150px;
+	height: 220px;
+}
+
+.imageGridComponent > ul > li > figure {
+	margin: 8px;
+}
+
+.imageGridComponent > ul > li > figure:hover {
+	border: 2px #eee solid;
+	margin: 6px;
+}
+
+.imageGridComponent > ul > li > .thumbnail-caption {
+	text-align: center;
+	color: white;
+}
+
+.hidden {
+	display: none;
+}
+
+.imageGridComponent  {
+	.imageGridToolbar {
+		padding: 5px;
+		color: white;
+		
+		.jump-to {
+			float: right;
+			display: 'inline';
+			margin-right: 30px;
+
+			#jump-to-input {
+				margin-left: 5px;
+			}
+
+			#jump-to-button {
+				margin-left: 5px;
+				cursor: pointer;
+			}
+		}
+	}	
+}

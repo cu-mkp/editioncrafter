@@ -1,0 +1,1623 @@
+<tei-tei data-xmlns="http://www.tei-c.org/ns/1.0" data-origname="TEI">
+	<tei-teiheader xml:id="header" id="header" data-origname="teiHeader">
+		<tei-filedesc data-origname="fileDesc">
+			<tei-titlestmt data-origname="titleStmt">
+				<tei-title data-origname="title">msfr40</tei-title>
+			</tei-titlestmt>
+			<tei-publicationstmt data-origname="publicationStmt">
+				<tei-p data-origname="p" data-empty=""></tei-p>
+			</tei-publicationstmt>
+			<tei-sourcedesc data-origname="sourceDesc">
+				<tei-p data-origname="p" data-empty=""></tei-p>
+			</tei-sourcedesc>
+		</tei-filedesc>
+		<tei-encodingdesc data-origname="encodingDesc">
+			<tei-classdecl data-origname="classDecl">
+				<tei-taxonomy data-origname="taxonomy">
+					<tei-category n="animal" xml:id="rs-al" id="rs-al" data-origname="category">
+						<tei-catdesc data-origname="catDesc">denotes an animal</tei-catdesc>
+					</tei-category>
+					<tei-category n="body part" xml:id="rs-bp" id="rs-bp" data-origname="category">
+						<tei-catdesc data-origname="catDesc">denotes a human body part</tei-catdesc>
+					</tei-category>
+					<tei-category n="currency" xml:id="rs-cn" id="rs-cn" data-origname="category">
+						<tei-catdesc data-origname="catDesc">a known coin or currency</tei-catdesc>
+					</tei-category>
+					<tei-category n="definition" xml:id="rs-df" id="rs-df" data-origname="category">
+						<tei-catdesc data-origname="catDesc">denotes where the author-practitioner defines or explains a term</tei-catdesc>
+					</tei-category>
+					<tei-category n="environment" xml:id="rs-env" id="rs-env" data-origname="category">
+						<tei-catdesc data-origname="catDesc">reference to a physical space or environment, such as workshop space, room, mountains, forest, etc</tei-catdesc>
+					</tei-category>
+					<tei-category n="material" xml:id="rs-m" id="rs-m" data-origname="category">
+						<tei-catdesc data-origname="catDesc">a named physical material (e.g., "rose" but not "plant"), or a verb that implies a physical material, such as "to gild."</tei-catdesc>
+					</tei-category>
+					<tei-category n="medical" xml:id="rs-md" id="rs-md" data-origname="category">
+						<tei-catdesc data-origname="catDesc">medical and health-related terms or phrases in an entry about some other topic. Medical recipes are categorized as such, but not marked with tags.</tei-catdesc>
+					</tei-category>
+					<tei-category n="measurement" xml:id="rs-ms" id="rs-ms" data-origname="category">
+						<tei-catdesc data-origname="catDesc">units of measurement, including temporal, volume, mass, length</tei-catdesc>
+					</tei-category>
+					<tei-category n="music" xml:id="rs-mu" id="rs-mu" data-origname="category">
+						<tei-catdesc data-origname="catDesc">musical instrument</tei-catdesc>
+					</tei-category>
+					<tei-category n="plant" xml:id="rs-pa" id="rs-pa" data-origname="category">
+						<tei-catdesc data-origname="catDesc">a named plant or part of a plant, not including plant gums</tei-catdesc>
+					</tei-category>
+					<tei-category n="place" xml:id="rs-pl" id="rs-pl" data-origname="category">
+						<tei-catdesc data-origname="catDesc">place name</tei-catdesc>
+					</tei-category>
+					<tei-category n="personal name" xml:id="rs-pn" id="rs-pn" data-origname="category">
+						<tei-catdesc data-origname="catDesc">a name, including authors, mythical personages, or reference to a specific individual or entity, such as God, King, and "the one who taught me to mold" (110r)</tei-catdesc>
+					</tei-category>
+					<tei-category n="profession" xml:id="rs-pro" id="rs-pro" data-origname="category">
+						<tei-catdesc data-origname="catDesc">denotes both a recognized trade, such as goldsmith, but also a social status or identity, such as peasant, or "rustic"</tei-catdesc>
+					</tei-category>
+					<tei-category n="sensory" xml:id="rs-sn" id="rs-sn" data-origname="category">
+						<tei-catdesc data-origname="catDesc">use of the five senses to make a qualitative assessment</tei-catdesc>
+					</tei-category>
+					<tei-category n="tool" xml:id="rs-tl" id="rs-tl" data-origname="category">
+						<tei-catdesc data-origname="catDesc">tool, including any instrument, and physical or material object used to perform a process, including body parts and verbs such as "piler" (to pestle) that imply a tool.</tei-catdesc>
+					</tei-category>
+					<tei-category n="temporal" xml:id="rs-tmp" id="rs-tmp" data-origname="category">
+						<tei-catdesc data-origname="catDesc">references to time, including hour, day, season, holiday, span of time, time of day, etc.</tei-catdesc>
+					</tei-category>
+					<tei-category n="arms and armor" xml:id="rs-wp" id="rs-wp" data-origname="category">
+						<tei-catdesc data-origname="catDesc">word or phrase referring to arms and armor</tei-catdesc>
+					</tei-category>
+				</tei-taxonomy>
+				<tei-taxonomy data-origname="taxonomy">
+					<tei-category n="casting" xml:id="cat-casting" id="cat-casting" data-origname="category">
+						<tei-catdesc data-origname="catDesc">making of molds for casting, and/or casting into molds</tei-catdesc>
+					</tei-category>
+					<tei-category n="painting" xml:id="cat-painting" id="cat-painting" data-origname="category">
+						<tei-catdesc data-origname="catDesc">painting, paintings, or painters</tei-catdesc>
+					</tei-category>
+					<tei-category n="metal process" xml:id="cat-metal_process" id="cat-metal_process" data-origname="category">
+						<tei-catdesc data-origname="catDesc">a process involving metals not being cast</tei-catdesc>
+					</tei-category>
+					<tei-category n="varnish" xml:id="cat-varnish" id="cat-varnish" data-origname="category">
+						<tei-catdesc data-origname="catDesc">varnish making or application</tei-catdesc>
+					</tei-category>
+					<tei-category n="arms and armor" xml:id="cat-arms_and_armor" id="cat-arms_and_armor" data-origname="category">
+						<tei-catdesc data-origname="catDesc">arms and armor</tei-catdesc>
+					</tei-category>
+					<tei-category n="medicine" xml:id="cat-medicine" id="cat-medicine" data-origname="category">
+						<tei-catdesc data-origname="catDesc">medical, health, and healing recipes</tei-catdesc>
+					</tei-category>
+					<tei-category n="household and daily life" xml:id="cat-household_and_daily_life" id="cat-household_and_daily_life" data-origname="category">
+						<tei-catdesc data-origname="catDesc">household management or ornamentation, daily life, and quotidian subjects</tei-catdesc>
+					</tei-category>
+					<tei-category n="cultivation" xml:id="cat-cultivation" id="cat-cultivation" data-origname="category">
+						<tei-catdesc data-origname="catDesc">cultivating plants</tei-catdesc>
+					</tei-category>
+					<tei-category n="stones" xml:id="cat-stones" id="cat-stones" data-origname="category">
+						<tei-catdesc data-origname="catDesc">significant references to precious and semi-precious stones, and their imitations</tei-catdesc>
+					</tei-category>
+					<tei-category n="wood and its coloring" xml:id="cat-wood_and_its_coloring" id="cat-wood_and_its_coloring" data-origname="category">
+						<tei-catdesc data-origname="catDesc">significant references to wood and/or the coloring of wood</tei-catdesc>
+					</tei-category>
+					<tei-category n="tool" xml:id="cat-tool" id="cat-tool" data-origname="category">
+						<tei-catdesc data-origname="catDesc">references the use of a specific tool, or describes the making of tools</tei-catdesc>
+					</tei-category>
+					<tei-category n="tricks and sleight of hand" xml:id="cat-tricks_and_sleight_of_hand" id="cat-tricks_and_sleight_of_hand" data-origname="category">
+						<tei-catdesc data-origname="catDesc">sleight of hand tricks and practical jokes</tei-catdesc>
+					</tei-category>
+					<tei-category n="decorative" xml:id="cat-decorative" id="cat-decorative" data-origname="category">
+						<tei-catdesc data-origname="catDesc">making of a material or object that is used to decorate</tei-catdesc>
+					</tei-category>
+					<tei-category n="animal husbandry" xml:id="cat-animal_husbandry" id="cat-animal_husbandry" data-origname="category">
+						<tei-catdesc data-origname="catDesc">raising, care, and feeding of animals of any sort</tei-catdesc>
+					</tei-category>
+					<tei-category n="glass process" xml:id="cat-glass_process" id="cat-glass_process" data-origname="category">
+						<tei-catdesc data-origname="catDesc">making or use of glass</tei-catdesc>
+					</tei-category>
+					<tei-category n="corrosives" xml:id="cat-corrosives" id="cat-corrosives" data-origname="category">
+						<tei-catdesc data-origname="catDesc">making or use of corrosive substances</tei-catdesc>
+					</tei-category>
+					<tei-category n="dyeing" xml:id="cat-dyeing" id="cat-dyeing" data-origname="category">
+						<tei-catdesc data-origname="catDesc">preparation of dye, or the dyeing of other substances</tei-catdesc>
+					</tei-category>
+					<tei-category n="preserving" xml:id="cat-preserving" id="cat-preserving" data-origname="category">
+						<tei-catdesc data-origname="catDesc">preservation of flowers, candles, foods, and animals for future use or ornamentation</tei-catdesc>
+					</tei-category>
+					<tei-category n="wax process" xml:id="cat-wax_process" id="cat-wax_process" data-origname="category">
+						<tei-catdesc data-origname="catDesc">process involving wax as a main ingredient, and/or the manipulation of the properties of wax</tei-catdesc>
+					</tei-category>
+					<tei-category n="practical optics" xml:id="cat-practical_optics" id="cat-practical_optics" data-origname="category">
+						<tei-catdesc data-origname="catDesc">objects or processes that cause optical effects, such as perspective construction, reflection, and magnification</tei-catdesc>
+					</tei-category>
+					<tei-category n="lists" xml:id="cat-lists" id="cat-lists" data-origname="category">
+						<tei-catdesc data-origname="catDesc">text that is arrayed as a list</tei-catdesc>
+					</tei-category>
+					<tei-category n="merchants" xml:id="cat-merchants" id="cat-merchants" data-origname="category">
+						<tei-catdesc data-origname="catDesc">merchants or merchant practices</tei-catdesc>
+					</tei-category>
+					<tei-category n="printing" xml:id="cat-printing" id="cat-printing" data-origname="category">
+						<tei-catdesc data-origname="catDesc">references printing processes or printing tools</tei-catdesc>
+					</tei-category>
+					<tei-category n="la boutique" xml:id="cat-la_boutique" id="cat-la_boutique" data-origname="category">
+						<tei-catdesc data-origname="catDesc">refers to entries titled "La boutique" (the workshop); see fols. 162r and 166r</tei-catdesc>
+					</tei-category>
+					<tei-category n="alchemy" xml:id="cat-alchemy" id="cat-alchemy" data-origname="category">
+						<tei-catdesc data-origname="catDesc">processes that pursue the making of gold</tei-catdesc>
+					</tei-category>
+					<tei-category n="manuscript structure" xml:id="cat-manuscript_structure" id="cat-manuscript_structure" data-origname="category">
+						<tei-catdesc data-origname="catDesc">structural note (fol. 170v only)</tei-catdesc>
+					</tei-category>
+				</tei-taxonomy>
+			</tei-classdecl>
+		</tei-encodingdesc>
+	</tei-teiheader>
+	<tei-text xml:id="tl" id="tl" data-origname="text">
+		<tei-body data-origname="body">
+			<tei-pb facs="#f010" data-origname="pb" data-empty=""></tei-pb>
+			<tei-div ana="#cat-stones" decls="#cat-stones" data-origname="div">
+				<tei-head data-origname="head">
+					<tei-rs ref="#rs-m" data-origname="rs">Counterfeit coral</tei-rs>
+					<tei-note n="c_003r_02" data-origname="note">In this period, counterfeit does not necessarily connote a deceptive practice of imitation. See <tei-ref target="https://edition640.makingandknowing.org/#/essays/ann_045_fa_16" data-origname="ref">Lores-Chavez, “Imitating Raw Nature.”</tei-ref></tei-note>
+				</tei-head>
+				<tei-p data-origname="p">
+					<tei-metamark data-origname="metamark">+</tei-metamark>
+				</tei-p>
+				<tei-p data-origname="p">One needs to first make the branches of <tei-rs ref="#rs-m" data-origname="rs">wood</tei-rs> or take a bizarre <tei-rs ref="#rs-m" data-origname="rs">thorn branch</tei-rs>, then melt a <tei-rs ref="#rs-ms" data-origname="rs">lb</tei-rs> of the most beautiful <tei-rs ref="#rs-m" data-origname="rs">clear pitch resin</tei-rs> and put in one <tei-rs ref="#rs-ms" data-origname="rs">ounce</tei-rs> of <tei-rs ref="#rs-m" data-origname="rs">subtly ground vermilion</tei-rs> with <tei-rs ref="#rs-pa" data-origname="rs">walnut</tei-rs> oil, and if you add in a little <tei-rs ref="#rs-pl" data-origname="rs">Venice</tei-rs> <tei-rs ref="#rs-fr" data-origname="rs">laque platte</tei-rs>, the color will be more vivid, and stir everything in the <tei-rs ref="#rs-m" data-origname="rs">resin</tei-rs> melted over a <tei-rs ref="#rs-m" data-origname="rs">charcoal</tei-rs> fire and not of flame, for fear that it catches fire. Next dip in your branches while turning, &amp; if any filaments should remain on it, turn the branch over the heat of the <tei-rs ref="#rs-m" data-origname="rs">charcoal</tei-rs>.</tei-p>
+				<tei-p rend="left-top" style="tall" data-origname="p"><tei-rs ref="#rs-m" data-origname="rs">Colophony</tei-rs> is nothing other than recooked <tei-rs ref="#rs-m" data-origname="rs">resin</tei-rs>. To do it well, take a <tei-rs ref="#rs-m" data-origname="rs">leaded</tei-rs> pot &amp; melt the <tei-rs ref="#rs-m" data-origname="rs">resin</tei-rs>, &amp; boil it over the <tei-rs ref="#rs-tl" data-origname="rs">brazier</tei-rs> a good <tei-rs ref="#rs-tmp" data-origname="rs">hour</tei-rs>, &amp; until it appears not to be thick, but clear &amp; liquid like <tei-rs ref="#rs-m" data-origname="rs">water</tei-rs>, &amp; easily runs &amp; flows from the tip of a <tei-rs ref="#rs-tl" data-origname="rs">stick</tei-rs> with which you grind it, &amp; test it. Then pour it through a <tei-rs ref="#rs-m" data-origname="rs">coarse canvas</tei-rs> or a <tei-rs ref="#rs-m" data-origname="rs">very light tammy cloth</tei-rs>, such that when pouring it falls into the strongest <tei-rs ref="#rs-m" data-origname="rs">vinegar</tei-rs> that you can find, for the <tei-rs ref="#rs-m" data-origname="rs">vinegar</tei-rs> gives it strength &amp; prevents it from being so fragile. Reiterate this two or three times &amp; it will be beautiful &amp; well purified. For counterfeiting your <tei-rs ref="#rs-m" data-origname="rs">coral</tei-rs>, you can mix a <tei-rs ref="#rs-ms" data-origname="rs">quarter part</tei-rs> of <tei-rs ref="#rs-m" data-origname="rs">mastic</tei-rs> into your <tei-rs ref="#rs-m" data-origname="rs">purified resin</tei-rs> to render it more firm and more beautiful, &amp; if you were to take a single tear of <tei-rs ref="#rs-m" data-origname="rs">mastic</tei-rs>, it would be all the better, but it would be too long.</tei-p>
+				<tei-p rend="left-top" data-origname="p"><tei-rs ref="#rs-m" data-origname="rs">Sulfur</tei-rs> &amp; <tei-rs ref="#rs-m" data-origname="rs">vermilion</tei-rs> makes the same effect.</tei-p>
+				<tei-p rend="top" data-origname="p">The <tei-rs ref="#rs-m" data-origname="rs">coral</tei-rs> made of <tei-rs ref="#rs-m" data-origname="rs">gules red enamel</tei-rs> endures the <tei-rs ref="#rs-tl" data-origname="rs">file</tei-rs> and polishing.</tei-p>
+				<tei-p rend="right-top" data-origname="p">It is made like <tei-rs ref="#rs-m" data-origname="rs">cement</tei-rs> that is stronger mixed with <tei-rs ref="#rs-tl" data-origname="rs">pestled</tei-rs> <tei-del data-origname="del">than of</tei-del> glass rather than with <tei-rs ref="#rs-m" data-origname="rs">brick</tei-rs>. Thus, here one mixes well <tei-rs ref="#rs-tl" data-origname="rs">pestled</tei-rs> <tei-rs ref="#rs-m" data-origname="rs">gules red enamel</tei-rs>, which is red in body, with the <tei-rs ref="#rs-m" data-origname="rs">vermilion</tei-rs>. Thus with all colors of <tei-rs ref="#rs-m" data-origname="rs">enamels</tei-rs>.</tei-p>
+			</tei-div>
+			<tei-div ana="#cat-varnish" decls="#cat-varnish" data-origname="div">
+				<tei-head data-origname="head"><tei-rs ref="#rs-m" data-origname="rs">Varnish</tei-rs> for panels</tei-head>
+				<tei-p data-origname="p">Take a <tei-rs ref="#rs-ms" data-origname="rs">lb</tei-rs> of <tei-rs ref="#rs-pl" data-origname="rs">Venice</tei-rs> turpentine &amp; heat it in a <tei-rs ref="#rs-tl" data-origname="rs">pot</tei-rs> until it simmers, and put in half a <tei-rs ref="#rs-ms" data-origname="rs">lb</tei-rs> of the <tei-rs ref="#rs-m" data-origname="rs">turpentine oil</tei-rs> of the whitest you can find, and stir it together well on a <tei-rs ref="#rs-m" data-origname="rs">charcoal</tei-rs> fire and take it off immediately. And <tei-del data-origname="del"><tei-rs ref="#rs-fr" data-origname="rs">elle</tei-rs></tei-del> it is done. But if it seems too thick to you, add in a little more <tei-rs ref="#rs-m" data-origname="rs">oil</tei-rs>. Similarly if it is too clear, you can thicken it by putting in a little <tei-rs ref="#rs-m" data-origname="rs">turpentine</tei-rs>. Thus you will give it whatever body you want. It could be made well without fire, but, when heated, it is more desiccative. It is appropriate for panel paintings and other painted things without corrupting the colors or yellowing. And it dries both <tei-rs ref="#rs-env" data-origname="rs">in the shade</tei-rs> and <tei-rs ref="#rs-env" data-origname="rs">in the sun</tei-rs>, and <tei-rs ref="#rs-tmp" data-origname="rs">overnight</tei-rs>, and <tei-rs ref="#rs-tmp" data-origname="rs">during the winter</tei-rs> as well as <tei-rs ref="#rs-tmp" data-origname="rs">in the summer</tei-rs>. It is commonly sold 15 <tei-rs ref="#rs-cn" data-origname="rs">sous</tei-rs> a <tei-rs ref="#rs-ms" data-origname="rs">lb</tei-rs>.</tei-p>
+				<tei-p rend="left-bottom" style="tall" data-origname="p">A little more <tei-rs ref="#rs-m" data-origname="rs">turpentine</tei-rs> than <tei-rs ref="#rs-m" data-origname="rs">turpentine oil</tei-rs> is needed in order to give body to the <tei-rs ref="#rs-m" data-origname="rs">varnish</tei-rs>, which needs to be applied with the <tei-rs ref="#rs-bp" data-origname="rs">finger</tei-rs> in order to spread it thinner and less thick, for when it is thick, it turns yellow and sticks. One does not <tei-rs ref="#rs-m" data-origname="rs">varnish</tei-rs> to make paintings shine, for it just takes the light out of them.</tei-p>
+			</tei-div>
+			<tei-div ana="#cat-varnish" decls="#cat-varnish" data-origname="div">
+				<tei-p rend="left-middle" style="wide" data-origname="p">But it is used to heighten colors which have soaked in and to keep them from dust. <tei-rs ref="#rs-m" data-origname="rs">Mastic varnish</tei-rs> does not resist <tei-rs ref="#rs-env" data-origname="rs">rain</tei-rs>, whereas that of <tei-rs ref="#rs-m" data-origname="rs">oil</tei-rs> and <tei-rs ref="#rs-m" data-origname="rs">rosin</tei-rs> does.</tei-p>
+			</tei-div>
+			<tei-div ana="#cat-varnish" decls="#cat-varnish" data-origname="div">
+				<tei-head data-origname="head"><tei-rs ref="#rs-m" data-origname="rs">Thick varnish</tei-rs> for planks</tei-head>
+				<tei-p data-origname="p">There is a <tei-rs ref="#rs-m" data-origname="rs">varnish</tei-rs> that takes a long time to dry &amp; drips more than two <tei-rs ref="#rs-tmp" data-origname="rs">months</tei-rs> after it has been applied to the planks. But this one does not drip like that of <tei-rs ref="#rs-tmp" data-origname="rs">times past</tei-rs>, which was made of <tei-rs ref="#rs-m" data-origname="rs">linseed oil</tei-rs>, <tei-rs ref="#rs-m" data-origname="rs">garlic</tei-rs> boiled in it to extinguish it &amp; rid it of grease, &amp; with <tei-rs ref="#rs-m" data-origname="rs">wheat</tei-rs>. And this one yellowed &amp; rendered greenish the blue color of paintings. This one is made like the other one except that one puts <tei-rs ref="#rs-m" data-origname="rs">coarse common turpentine</tei-rs></tei-p>
+				<tei-pb facs="#f011" data-origname="pb" data-empty=""></tei-pb>
+				<tei-p data-origname="p">instead of <tei-rs ref="#rs-m" data-origname="rs">fine turpentine</tei-rs>. And you can put into two <tei-rs ref="#rs-ms" data-origname="rs">lb</tei-rs> of <tei-del data-origname="del"><tei-rs ref="#rs-fr" data-origname="rs">tou</tei-rs></tei-del> <tei-rs ref="#rs-m" data-origname="rs">common turpentine</tei-rs> one <tei-rs ref="#rs-ms" data-origname="rs">lb</tei-rs> of <tei-rs ref="#rs-m" data-origname="rs">fine turpentine oil</tei-rs> &amp; do everything as with the other one. This one will cost you no more than five or six <tei-rs ref="#rs-cn" data-origname="rs">sous</tei-rs> per <tei-rs ref="#rs-ms" data-origname="rs">lb</tei-rs> &amp; is sold for 40 <tei-rs ref="#rs-cn" data-origname="rs">sous</tei-rs> per <tei-rs ref="#rs-ms" data-origname="rs">lb</tei-rs>.</tei-p>
+				<tei-figure data-origname="figure">
+					<tei-graphic url="https://edition640.makingandknowing.org/bnf-ms-fr-640/prod050222-0/figures/p003v_1.png" data-origname="graphic">
+						<tei-desc data-origname="desc" data-empty=""></tei-desc>
+					</tei-graphic>
+				</tei-figure>
+				<tei-p data-origname="p">This <tei-rs ref="#rs-tl" data-origname="rs">vessel</tei-rs> is for making large quantities of <tei-rs ref="#rs-m" data-origname="rs">turpentine oil</tei-rs>, that is to say a <tei-rs ref="#rs-ms" data-origname="rs">bucket an </tei-rs><tei-rs ref="#rs-tmp" data-origname="rs">hour</tei-rs>, and no matter which <tei-rs ref="#rs-m" data-origname="rs">turpentine it may be, whether fine or crude</tei-rs>. One needs to give, as you know, a little fire at the beginning and always keep <tei-rs ref="#rs-m" data-origname="rs">cold water</tei-rs> in the cooler on the top. The <tei-rs ref="#rs-ms" data-origname="rs">lb</tei-rs> is sold at xii <tei-rs ref="#rs-cn" data-origname="rs">sous</tei-rs>, &amp; at the bottom of the <tei-rs ref="#rs-tl" data-origname="rs">vessel</tei-rs> remains the <tei-rs ref="#rs-m" data-origname="rs">colophony</tei-rs>, or <tei-rs ref="#rs-la" data-origname="rs">pix græca</tei-rs>.<tei-note n="c_003v_01" data-origname="note">Latin: "Greek pitch"</tei-note> In this <tei-rs ref="#rs-tl" data-origname="rs">vessel</tei-rs>, <tei-rs ref="#rs-m" data-origname="rs">eau-de-vie</tei-rs> is also made well, and there is no need to distill it again. You do not need a <tei-rs ref="#rs-tl" data-origname="rs">oven</tei-rs> for this <tei-rs ref="#rs-m" data-origname="rs">copper</tei-rs> vessel, but only <tei-rs ref="#rs-m" data-origname="rs">charcoal</tei-rs> around it if it has a flat bottom, but if it is round, you will place it on a <tei-rs ref="#rs-tl" data-origname="rs">trivet</tei-rs>.</tei-p>
+				<tei-p rend="left-middle" data-origname="p">It is better to heat the <tei-rs ref="#rs-m" data-origname="rs">varnish</tei-rs> a little bit, rather than to put it out <tei-rs ref="#rs-env" data-origname="rs">in the sun</tei-rs>, because this makes the panel <tei-rs ref="#rs-po" data-origname="rs">warp</tei-rs>.</tei-p>
+				<tei-p rend="left-middle" data-origname="p">Some say it is not good to distil in this <tei-rs ref="#rs-m" data-origname="rs">copper</tei-rs> vessel because it makes things green. However, when <tei-rs ref="#rs-m" data-origname="rs">tinned</tei-rs>, it is good.</tei-p>
+			</tei-div>
+			<tei-div ana="#cat-varnish" decls="#cat-varnish" data-origname="div">
+				<tei-head data-origname="head">For varnishing</tei-head>
+				<tei-p data-origname="p"><tei-rs ref="#rs-m" data-origname="rs">Turpentine varnish</tei-rs> does not need any <tei-rs ref="#rs-m" data-origname="rs">glue</tei-rs> because it is fatty &amp; viscous &amp; it is not absorbed in the <tei-rs ref="#rs-m" data-origname="rs">wood</tei-rs> like that of <tei-rs ref="#rs-m" data-origname="rs">spike lavender</tei-rs> &amp; <tei-rs ref="#rs-m" data-origname="rs">sandarac</tei-rs>. Also, that of <tei-rs ref="#rs-m" data-origname="rs">spike lavender</tei-rs> does not require any <tei-rs ref="#rs-m" data-origname="rs">glue</tei-rs> on <tei-rs ref="#rs-m" data-origname="rs">iron</tei-rs> &amp; similar things that do not absorb. But on <tei-rs ref="#rs-m" data-origname="rs">wood</tei-rs> &amp; on colors which <tei-del data-origname="del">have</tei-del> <tei-add data-origname="add">do not have</tei-add> <tei-rs ref="#rs-m" data-origname="rs">gum</tei-rs> or <tei-rs ref="#rs-m" data-origname="rs">distemper glue</tei-rs>, it is necessary to lay one coat of the said <tei-rs ref="#rs-m" data-origname="rs">hide glue</tei-rs> &amp; to let it dry &amp; to varnish.</tei-p>
+			</tei-div>
+		</tei-body>
+	</tei-text>
+	<tei-facsimile sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/manifest.json" xml:id="BnF.DépartementdesManuscrits.Français640" id="BnF.DépartementdesManuscrits.Français640" data-origname="facsimile">
+		<tei-surface xml:id="f000" id="f000" ulx="0" uly="0" lrx="3543" lry="5501" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f1" data-origname="surface">
+			<tei-label data-origname="label">plat sup.</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f1" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f001" id="f001" ulx="0" uly="0" lrx="3525" lry="5507" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f2" data-origname="surface">
+			<tei-label data-origname="label">contreplat sup.</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f2" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f002" id="f002" ulx="0" uly="0" lrx="3375" lry="5387" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f3" data-origname="surface">
+			<tei-label data-origname="label">page de garde recto</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f3" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f003" id="f003" ulx="0" uly="0" lrx="3438" lry="5381" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f4" data-origname="surface">
+			<tei-label data-origname="label">page de garde verso</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f4" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f004" id="f004" ulx="0" uly="0" lrx="3372" lry="5396" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f5" data-origname="surface">
+			<tei-label data-origname="label">NP</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f5" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f005" id="f005" ulx="0" uly="0" lrx="3426" lry="5420" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f6" data-origname="surface">
+			<tei-label data-origname="label">NP</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f6" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f006" id="f006" ulx="0" uly="0" lrx="3384" lry="5408" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f7" data-origname="surface">
+			<tei-label data-origname="label">1r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f7" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f007" id="f007" ulx="0" uly="0" lrx="3429" lry="5432" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f8" data-origname="surface">
+			<tei-label data-origname="label">1v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f8" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f008" id="f008" ulx="0" uly="0" lrx="3372" lry="5420" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f9" data-origname="surface">
+			<tei-label data-origname="label">2r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f9" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f009" id="f009" ulx="0" uly="0" lrx="3408" lry="5420" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f10" data-origname="surface">
+			<tei-label data-origname="label">2v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f10" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f010" id="f010" ulx="0" uly="0" lrx="3369" lry="5417" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f11" data-origname="surface">
+			<tei-label data-origname="label">3r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f11" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f011" id="f011" ulx="0" uly="0" lrx="3393" lry="5426" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f12" data-origname="surface">
+			<tei-label data-origname="label">3v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f12" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f012" id="f012" ulx="0" uly="0" lrx="3372" lry="5390" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f13" data-origname="surface">
+			<tei-label data-origname="label">4r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f13" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f013" id="f013" ulx="0" uly="0" lrx="3402" lry="5390" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f14" data-origname="surface">
+			<tei-label data-origname="label">4v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f14" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f014" id="f014" ulx="0" uly="0" lrx="3345" lry="5390" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f15" data-origname="surface">
+			<tei-label data-origname="label">5r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f15" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f015" id="f015" ulx="0" uly="0" lrx="3432" lry="5393" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f16" data-origname="surface">
+			<tei-label data-origname="label">5v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f16" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f016" id="f016" ulx="0" uly="0" lrx="3345" lry="5375" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f17" data-origname="surface">
+			<tei-label data-origname="label">6r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f17" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f017" id="f017" ulx="0" uly="0" lrx="3390" lry="5378" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f18" data-origname="surface">
+			<tei-label data-origname="label">6v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f18" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f018" id="f018" ulx="0" uly="0" lrx="3342" lry="5390" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f19" data-origname="surface">
+			<tei-label data-origname="label">7r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f19" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f019" id="f019" ulx="0" uly="0" lrx="3390" lry="5387" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f20" data-origname="surface">
+			<tei-label data-origname="label">7v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f20" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f020" id="f020" ulx="0" uly="0" lrx="3333" lry="5393" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f21" data-origname="surface">
+			<tei-label data-origname="label">8r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f21" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f021" id="f021" ulx="0" uly="0" lrx="3366" lry="5375" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f22" data-origname="surface">
+			<tei-label data-origname="label">8v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f22" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f022" id="f022" ulx="0" uly="0" lrx="3342" lry="5363" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f23" data-origname="surface">
+			<tei-label data-origname="label">9r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f23" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f023" id="f023" ulx="0" uly="0" lrx="3375" lry="5357" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f24" data-origname="surface">
+			<tei-label data-origname="label">9v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f24" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f024" id="f024" ulx="0" uly="0" lrx="3327" lry="5363" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f25" data-origname="surface">
+			<tei-label data-origname="label">10r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f25" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f025" id="f025" ulx="0" uly="0" lrx="3387" lry="5369" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f26" data-origname="surface">
+			<tei-label data-origname="label">10v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f26" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f026" id="f026" ulx="0" uly="0" lrx="3315" lry="5366" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f27" data-origname="surface">
+			<tei-label data-origname="label">11r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f27" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f027" id="f027" ulx="0" uly="0" lrx="3363" lry="5375" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f28" data-origname="surface">
+			<tei-label data-origname="label">11v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f28" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f028" id="f028" ulx="0" uly="0" lrx="3312" lry="5351" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f29" data-origname="surface">
+			<tei-label data-origname="label">12r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f29" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f029" id="f029" ulx="0" uly="0" lrx="3324" lry="5363" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f30" data-origname="surface">
+			<tei-label data-origname="label">12v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f30" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f030" id="f030" ulx="0" uly="0" lrx="3297" lry="5351" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f31" data-origname="surface">
+			<tei-label data-origname="label">13r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f31" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f031" id="f031" ulx="0" uly="0" lrx="3324" lry="5360" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f32" data-origname="surface">
+			<tei-label data-origname="label">13v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f32" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f032" id="f032" ulx="0" uly="0" lrx="3315" lry="5375" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f33" data-origname="surface">
+			<tei-label data-origname="label">14r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f33" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f033" id="f033" ulx="0" uly="0" lrx="3324" lry="5366" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f34" data-origname="surface">
+			<tei-label data-origname="label">NP</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f34" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f034" id="f034" ulx="0" uly="0" lrx="3339" lry="5372" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f35" data-origname="surface">
+			<tei-label data-origname="label">15r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f35" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f035" id="f035" ulx="0" uly="0" lrx="3360" lry="5354" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f36" data-origname="surface">
+			<tei-label data-origname="label">15v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f36" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f036" id="f036" ulx="0" uly="0" lrx="3297" lry="5363" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f37" data-origname="surface">
+			<tei-label data-origname="label">16r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f37" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f037" id="f037" ulx="0" uly="0" lrx="3351" lry="5366" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f38" data-origname="surface">
+			<tei-label data-origname="label">16v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f38" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f038" id="f038" ulx="0" uly="0" lrx="3309" lry="5360" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f39" data-origname="surface">
+			<tei-label data-origname="label">17r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f39" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f039" id="f039" ulx="0" uly="0" lrx="3357" lry="5363" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f40" data-origname="surface">
+			<tei-label data-origname="label">17v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f40" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f040" id="f040" ulx="0" uly="0" lrx="3297" lry="5384" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f41" data-origname="surface">
+			<tei-label data-origname="label">18r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f41" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f041" id="f041" ulx="0" uly="0" lrx="3309" lry="5357" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f42" data-origname="surface">
+			<tei-label data-origname="label">18v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f42" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f042" id="f042" ulx="0" uly="0" lrx="3285" lry="5354" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f43" data-origname="surface">
+			<tei-label data-origname="label">19r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f43" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f043" id="f043" ulx="0" uly="0" lrx="3306" lry="5363" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f44" data-origname="surface">
+			<tei-label data-origname="label">19v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f44" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f044" id="f044" ulx="0" uly="0" lrx="3291" lry="5348" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f45" data-origname="surface">
+			<tei-label data-origname="label">20r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f45" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f045" id="f045" ulx="0" uly="0" lrx="3303" lry="5348" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f46" data-origname="surface">
+			<tei-label data-origname="label">20v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f46" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f046" id="f046" ulx="0" uly="0" lrx="3306" lry="5384" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f47" data-origname="surface">
+			<tei-label data-origname="label">21r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f47" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f047" id="f047" ulx="0" uly="0" lrx="3306" lry="5357" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f48" data-origname="surface">
+			<tei-label data-origname="label">21v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f48" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f048" id="f048" ulx="0" uly="0" lrx="3294" lry="5366" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f49" data-origname="surface">
+			<tei-label data-origname="label">22r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f49" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f049" id="f049" ulx="0" uly="0" lrx="3330" lry="5360" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f50" data-origname="surface">
+			<tei-label data-origname="label">22v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f50" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f050" id="f050" ulx="0" uly="0" lrx="3279" lry="5372" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f51" data-origname="surface">
+			<tei-label data-origname="label">23r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f51" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f051" id="f051" ulx="0" uly="0" lrx="3300" lry="5375" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f52" data-origname="surface">
+			<tei-label data-origname="label">23v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f52" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f052" id="f052" ulx="0" uly="0" lrx="3279" lry="5375" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f53" data-origname="surface">
+			<tei-label data-origname="label">24r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f53" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f053" id="f053" ulx="0" uly="0" lrx="3309" lry="5354" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f54" data-origname="surface">
+			<tei-label data-origname="label">24v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f54" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f054" id="f054" ulx="0" uly="0" lrx="3282" lry="5363" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f55" data-origname="surface">
+			<tei-label data-origname="label">25r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f55" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f055" id="f055" ulx="0" uly="0" lrx="3294" lry="5348" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f56" data-origname="surface">
+			<tei-label data-origname="label">25v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f56" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f056" id="f056" ulx="0" uly="0" lrx="3288" lry="5372" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f57" data-origname="surface">
+			<tei-label data-origname="label">26r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f57" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f057" id="f057" ulx="0" uly="0" lrx="3303" lry="5378" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f58" data-origname="surface">
+			<tei-label data-origname="label">26v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f58" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f058" id="f058" ulx="0" uly="0" lrx="3270" lry="5363" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f59" data-origname="surface">
+			<tei-label data-origname="label">27r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f59" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f059" id="f059" ulx="0" uly="0" lrx="3330" lry="5351" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f60" data-origname="surface">
+			<tei-label data-origname="label">27v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f60" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f060" id="f060" ulx="0" uly="0" lrx="3267" lry="5357" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f61" data-origname="surface">
+			<tei-label data-origname="label">28r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f61" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f061" id="f061" ulx="0" uly="0" lrx="3255" lry="5351" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f62" data-origname="surface">
+			<tei-label data-origname="label">28v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f62" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f062" id="f062" ulx="0" uly="0" lrx="3261" lry="5357" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f63" data-origname="surface">
+			<tei-label data-origname="label">29r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f63" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f063" id="f063" ulx="0" uly="0" lrx="3288" lry="5351" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f64" data-origname="surface">
+			<tei-label data-origname="label">29v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f64" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f064" id="f064" ulx="0" uly="0" lrx="3246" lry="5372" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f65" data-origname="surface">
+			<tei-label data-origname="label">30r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f65" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f065" id="f065" ulx="0" uly="0" lrx="3264" lry="5363" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f66" data-origname="surface">
+			<tei-label data-origname="label">30v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f66" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f066" id="f066" ulx="0" uly="0" lrx="3255" lry="5357" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f67" data-origname="surface">
+			<tei-label data-origname="label">31r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f67" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f067" id="f067" ulx="0" uly="0" lrx="3267" lry="5360" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f68" data-origname="surface">
+			<tei-label data-origname="label">31v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f68" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f068" id="f068" ulx="0" uly="0" lrx="3258" lry="5366" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f69" data-origname="surface">
+			<tei-label data-origname="label">32r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f69" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f069" id="f069" ulx="0" uly="0" lrx="3291" lry="5363" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f70" data-origname="surface">
+			<tei-label data-origname="label">32v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f70" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f070" id="f070" ulx="0" uly="0" lrx="3249" lry="5354" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f71" data-origname="surface">
+			<tei-label data-origname="label">33r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f71" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f071" id="f071" ulx="0" uly="0" lrx="3312" lry="5363" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f72" data-origname="surface">
+			<tei-label data-origname="label">33v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f72" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f072" id="f072" ulx="0" uly="0" lrx="3255" lry="5366" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f73" data-origname="surface">
+			<tei-label data-origname="label">34r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f73" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f073" id="f073" ulx="0" uly="0" lrx="3309" lry="5354" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f74" data-origname="surface">
+			<tei-label data-origname="label">34v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f74" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f074" id="f074" ulx="0" uly="0" lrx="3252" lry="5375" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f75" data-origname="surface">
+			<tei-label data-origname="label">35r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f75" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f075" id="f075" ulx="0" uly="0" lrx="3291" lry="5351" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f76" data-origname="surface">
+			<tei-label data-origname="label">35v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f76" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f076" id="f076" ulx="0" uly="0" lrx="3240" lry="5351" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f77" data-origname="surface">
+			<tei-label data-origname="label">36r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f77" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f077" id="f077" ulx="0" uly="0" lrx="3300" lry="5360" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f78" data-origname="surface">
+			<tei-label data-origname="label">36v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f78" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f078" id="f078" ulx="0" uly="0" lrx="3243" lry="5366" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f79" data-origname="surface">
+			<tei-label data-origname="label">37r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f79" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f079" id="f079" ulx="0" uly="0" lrx="3315" lry="5360" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f80" data-origname="surface">
+			<tei-label data-origname="label">37v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f80" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f080" id="f080" ulx="0" uly="0" lrx="3240" lry="5369" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f81" data-origname="surface">
+			<tei-label data-origname="label">38r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f81" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f081" id="f081" ulx="0" uly="0" lrx="3336" lry="5357" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f82" data-origname="surface">
+			<tei-label data-origname="label">38v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f82" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f082" id="f082" ulx="0" uly="0" lrx="3285" lry="5381" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f83" data-origname="surface">
+			<tei-label data-origname="label">39r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f83" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f083" id="f083" ulx="0" uly="0" lrx="3300" lry="5366" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f84" data-origname="surface">
+			<tei-label data-origname="label">39v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f84" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f084" id="f084" ulx="0" uly="0" lrx="3249" lry="5363" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f85" data-origname="surface">
+			<tei-label data-origname="label">40r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f85" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f085" id="f085" ulx="0" uly="0" lrx="3318" lry="5357" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f86" data-origname="surface">
+			<tei-label data-origname="label">40v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f86" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f086" id="f086" ulx="0" uly="0" lrx="3249" lry="5396" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f87" data-origname="surface">
+			<tei-label data-origname="label">41r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f87" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f087" id="f087" ulx="0" uly="0" lrx="3270" lry="5372" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f88" data-origname="surface">
+			<tei-label data-origname="label">41v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f88" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f088" id="f088" ulx="0" uly="0" lrx="3237" lry="5366" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f89" data-origname="surface">
+			<tei-label data-origname="label">42r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f89" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f089" id="f089" ulx="0" uly="0" lrx="3270" lry="5378" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f90" data-origname="surface">
+			<tei-label data-origname="label">42v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f90" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f090" id="f090" ulx="0" uly="0" lrx="3222" lry="5387" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f91" data-origname="surface">
+			<tei-label data-origname="label">43r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f91" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f091" id="f091" ulx="0" uly="0" lrx="3255" lry="5363" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f92" data-origname="surface">
+			<tei-label data-origname="label">43v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f92" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f092" id="f092" ulx="0" uly="0" lrx="3225" lry="5381" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f93" data-origname="surface">
+			<tei-label data-origname="label">44r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f93" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f093" id="f093" ulx="0" uly="0" lrx="3294" lry="5360" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f94" data-origname="surface">
+			<tei-label data-origname="label">44v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f94" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f094" id="f094" ulx="0" uly="0" lrx="3231" lry="5375" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f95" data-origname="surface">
+			<tei-label data-origname="label">45r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f95" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f095" id="f095" ulx="0" uly="0" lrx="3300" lry="5360" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f96" data-origname="surface">
+			<tei-label data-origname="label">45v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f96" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f096" id="f096" ulx="0" uly="0" lrx="3225" lry="5375" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f97" data-origname="surface">
+			<tei-label data-origname="label">46r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f97" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f097" id="f097" ulx="0" uly="0" lrx="3303" lry="5360" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f98" data-origname="surface">
+			<tei-label data-origname="label">46v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f98" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f098" id="f098" ulx="0" uly="0" lrx="3237" lry="5384" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f99" data-origname="surface">
+			<tei-label data-origname="label">47r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f99" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f099" id="f099" ulx="0" uly="0" lrx="3276" lry="5369" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f100" data-origname="surface">
+			<tei-label data-origname="label">47v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f100" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f100" id="f100" ulx="0" uly="0" lrx="3213" lry="5369" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f101" data-origname="surface">
+			<tei-label data-origname="label">48r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f101" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f101" id="f101" ulx="0" uly="0" lrx="3258" lry="5366" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f102" data-origname="surface">
+			<tei-label data-origname="label">48v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f102" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f102" id="f102" ulx="0" uly="0" lrx="3225" lry="5399" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f103" data-origname="surface">
+			<tei-label data-origname="label">49r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f103" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f103" id="f103" ulx="0" uly="0" lrx="3261" lry="5390" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f104" data-origname="surface">
+			<tei-label data-origname="label">49v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f104" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f104" id="f104" ulx="0" uly="0" lrx="3204" lry="5375" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f105" data-origname="surface">
+			<tei-label data-origname="label">50r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f105" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f105" id="f105" ulx="0" uly="0" lrx="3252" lry="5348" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f106" data-origname="surface">
+			<tei-label data-origname="label">50v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f106" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f106" id="f106" ulx="0" uly="0" lrx="3198" lry="5369" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f107" data-origname="surface">
+			<tei-label data-origname="label">51r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f107" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f107" id="f107" ulx="0" uly="0" lrx="3261" lry="5357" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f108" data-origname="surface">
+			<tei-label data-origname="label">51v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f108" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f108" id="f108" ulx="0" uly="0" lrx="3201" lry="5378" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f109" data-origname="surface">
+			<tei-label data-origname="label">52r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f109" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f109" id="f109" ulx="0" uly="0" lrx="3267" lry="5363" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f110" data-origname="surface">
+			<tei-label data-origname="label">52v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f110" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f110" id="f110" ulx="0" uly="0" lrx="3219" lry="5363" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f111" data-origname="surface">
+			<tei-label data-origname="label">53r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f111" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f111" id="f111" ulx="0" uly="0" lrx="3261" lry="5357" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f112" data-origname="surface">
+			<tei-label data-origname="label">53v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f112" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f112" id="f112" ulx="0" uly="0" lrx="3189" lry="5336" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f113" data-origname="surface">
+			<tei-label data-origname="label">54r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f113" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f113" id="f113" ulx="0" uly="0" lrx="3240" lry="5381" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f114" data-origname="surface">
+			<tei-label data-origname="label">54v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f114" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f114" id="f114" ulx="0" uly="0" lrx="3210" lry="5396" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f115" data-origname="surface">
+			<tei-label data-origname="label">55r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f115" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f115" id="f115" ulx="0" uly="0" lrx="3285" lry="5381" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f116" data-origname="surface">
+			<tei-label data-origname="label">55v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f116" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f116" id="f116" ulx="0" uly="0" lrx="3228" lry="5381" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f117" data-origname="surface">
+			<tei-label data-origname="label">56r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f117" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f117" id="f117" ulx="0" uly="0" lrx="3252" lry="5378" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f118" data-origname="surface">
+			<tei-label data-origname="label">56v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f118" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f118" id="f118" ulx="0" uly="0" lrx="3207" lry="5399" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f119" data-origname="surface">
+			<tei-label data-origname="label">57r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f119" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f119" id="f119" ulx="0" uly="0" lrx="3246" lry="5378" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f120" data-origname="surface">
+			<tei-label data-origname="label">57v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f120" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f120" id="f120" ulx="0" uly="0" lrx="3186" lry="5360" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f121" data-origname="surface">
+			<tei-label data-origname="label">58r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f121" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f121" id="f121" ulx="0" uly="0" lrx="3252" lry="5369" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f122" data-origname="surface">
+			<tei-label data-origname="label">58v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f122" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f122" id="f122" ulx="0" uly="0" lrx="3162" lry="5366" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f123" data-origname="surface">
+			<tei-label data-origname="label">59r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f123" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f123" id="f123" ulx="0" uly="0" lrx="3240" lry="5393" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f124" data-origname="surface">
+			<tei-label data-origname="label">59v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f124" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f124" id="f124" ulx="0" uly="0" lrx="3237" lry="5357" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f125" data-origname="surface">
+			<tei-label data-origname="label">60r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f125" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f125" id="f125" ulx="0" uly="0" lrx="3255" lry="5339" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f126" data-origname="surface">
+			<tei-label data-origname="label">60v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f126" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f126" id="f126" ulx="0" uly="0" lrx="3237" lry="5348" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f127" data-origname="surface">
+			<tei-label data-origname="label">61r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f127" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f127" id="f127" ulx="0" uly="0" lrx="3258" lry="5348" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f128" data-origname="surface">
+			<tei-label data-origname="label">61v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f128" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f128" id="f128" ulx="0" uly="0" lrx="3198" lry="5357" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f129" data-origname="surface">
+			<tei-label data-origname="label">62r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f129" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f129" id="f129" ulx="0" uly="0" lrx="3273" lry="5342" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f130" data-origname="surface">
+			<tei-label data-origname="label">62v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f130" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f130" id="f130" ulx="0" uly="0" lrx="3228" lry="5369" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f131" data-origname="surface">
+			<tei-label data-origname="label">63r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f131" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f131" id="f131" ulx="0" uly="0" lrx="3249" lry="5351" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f132" data-origname="surface">
+			<tei-label data-origname="label">63v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f132" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f132" id="f132" ulx="0" uly="0" lrx="3186" lry="5351" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f133" data-origname="surface">
+			<tei-label data-origname="label">64r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f133" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f133" id="f133" ulx="0" uly="0" lrx="3234" lry="5333" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f134" data-origname="surface">
+			<tei-label data-origname="label">64v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f134" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f134" id="f134" ulx="0" uly="0" lrx="3198" lry="5339" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f135" data-origname="surface">
+			<tei-label data-origname="label">65r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f135" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f135" id="f135" ulx="0" uly="0" lrx="3231" lry="5342" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f136" data-origname="surface">
+			<tei-label data-origname="label">65v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f136" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f136" id="f136" ulx="0" uly="0" lrx="3198" lry="5306" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f137" data-origname="surface">
+			<tei-label data-origname="label">66r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f137" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f137" id="f137" ulx="0" uly="0" lrx="3246" lry="5336" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f138" data-origname="surface">
+			<tei-label data-origname="label">66v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f138" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f138" id="f138" ulx="0" uly="0" lrx="3183" lry="5315" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f139" data-origname="surface">
+			<tei-label data-origname="label">67r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f139" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f139" id="f139" ulx="0" uly="0" lrx="3243" lry="5336" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f140" data-origname="surface">
+			<tei-label data-origname="label">67v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f140" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f140" id="f140" ulx="0" uly="0" lrx="3174" lry="5333" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f141" data-origname="surface">
+			<tei-label data-origname="label">68r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f141" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f141" id="f141" ulx="0" uly="0" lrx="3252" lry="5342" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f142" data-origname="surface">
+			<tei-label data-origname="label">68v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f142" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f142" id="f142" ulx="0" uly="0" lrx="3168" lry="5312" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f143" data-origname="surface">
+			<tei-label data-origname="label">69r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f143" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f143" id="f143" ulx="0" uly="0" lrx="3216" lry="5348" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f144" data-origname="surface">
+			<tei-label data-origname="label">69v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f144" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f144" id="f144" ulx="0" uly="0" lrx="3156" lry="5309" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f145" data-origname="surface">
+			<tei-label data-origname="label">70r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f145" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f145" id="f145" ulx="0" uly="0" lrx="3246" lry="5351" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f146" data-origname="surface">
+			<tei-label data-origname="label">70v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f146" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f146" id="f146" ulx="0" uly="0" lrx="3201" lry="5345" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f147" data-origname="surface">
+			<tei-label data-origname="label">71r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f147" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f147" id="f147" ulx="0" uly="0" lrx="3270" lry="5381" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f148" data-origname="surface">
+			<tei-label data-origname="label">71v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f148" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f148" id="f148" ulx="0" uly="0" lrx="3183" lry="5387" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f149" data-origname="surface">
+			<tei-label data-origname="label">72r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f149" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f149" id="f149" ulx="0" uly="0" lrx="3246" lry="5357" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f150" data-origname="surface">
+			<tei-label data-origname="label">72v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f150" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f150" id="f150" ulx="0" uly="0" lrx="3192" lry="5384" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f151" data-origname="surface">
+			<tei-label data-origname="label">73r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f151" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f151" id="f151" ulx="0" uly="0" lrx="3264" lry="5363" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f152" data-origname="surface">
+			<tei-label data-origname="label">73v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f152" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f152" id="f152" ulx="0" uly="0" lrx="3156" lry="5369" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f153" data-origname="surface">
+			<tei-label data-origname="label">74r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f153" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f153" id="f153" ulx="0" uly="0" lrx="3270" lry="5369" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f154" data-origname="surface">
+			<tei-label data-origname="label">74v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f154" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f154" id="f154" ulx="0" uly="0" lrx="3189" lry="5363" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f155" data-origname="surface">
+			<tei-label data-origname="label">75r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f155" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f155" id="f155" ulx="0" uly="0" lrx="3342" lry="5450" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f156" data-origname="surface">
+			<tei-label data-origname="label">75v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f156" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f156" id="f156" ulx="0" uly="0" lrx="3285" lry="5444" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f157" data-origname="surface">
+			<tei-label data-origname="label">76r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f157" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f157" id="f157" ulx="0" uly="0" lrx="3324" lry="5462" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f158" data-origname="surface">
+			<tei-label data-origname="label">76v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f158" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f158" id="f158" ulx="0" uly="0" lrx="3228" lry="5480" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f159" data-origname="surface">
+			<tei-label data-origname="label">77r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f159" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f159" id="f159" ulx="0" uly="0" lrx="3291" lry="5462" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f160" data-origname="surface">
+			<tei-label data-origname="label">77v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f160" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f160" id="f160" ulx="0" uly="0" lrx="3228" lry="5471" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f161" data-origname="surface">
+			<tei-label data-origname="label">78r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f161" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f161" id="f161" ulx="0" uly="0" lrx="3291" lry="5462" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f162" data-origname="surface">
+			<tei-label data-origname="label">78v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f162" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f162" id="f162" ulx="0" uly="0" lrx="3210" lry="5471" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f163" data-origname="surface">
+			<tei-label data-origname="label">79r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f163" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f163" id="f163" ulx="0" uly="0" lrx="3270" lry="5456" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f164" data-origname="surface">
+			<tei-label data-origname="label">79v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f164" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f164" id="f164" ulx="0" uly="0" lrx="3195" lry="5468" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f165" data-origname="surface">
+			<tei-label data-origname="label">80r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f165" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f165" id="f165" ulx="0" uly="0" lrx="3249" lry="5456" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f166" data-origname="surface">
+			<tei-label data-origname="label">80v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f166" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f166" id="f166" ulx="0" uly="0" lrx="3234" lry="5474" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f167" data-origname="surface">
+			<tei-label data-origname="label">81r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f167" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f167" id="f167" ulx="0" uly="0" lrx="3279" lry="5453" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f168" data-origname="surface">
+			<tei-label data-origname="label">81v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f168" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f168" id="f168" ulx="0" uly="0" lrx="3189" lry="5453" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f169" data-origname="surface">
+			<tei-label data-origname="label">82r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f169" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f169" id="f169" ulx="0" uly="0" lrx="3264" lry="5459" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f170" data-origname="surface">
+			<tei-label data-origname="label">82v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f170" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f170" id="f170" ulx="0" uly="0" lrx="3279" lry="5498" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f171" data-origname="surface">
+			<tei-label data-origname="label">83r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f171" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f171" id="f171" ulx="0" uly="0" lrx="3288" lry="5456" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f172" data-origname="surface">
+			<tei-label data-origname="label">83v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f172" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f172" id="f172" ulx="0" uly="0" lrx="3282" lry="5483" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f173" data-origname="surface">
+			<tei-label data-origname="label">84r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f173" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f173" id="f173" ulx="0" uly="0" lrx="3318" lry="5456" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f174" data-origname="surface">
+			<tei-label data-origname="label">84v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f174" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f174" id="f174" ulx="0" uly="0" lrx="3270" lry="5477" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f175" data-origname="surface">
+			<tei-label data-origname="label">85r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f175" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f175" id="f175" ulx="0" uly="0" lrx="3348" lry="5444" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f176" data-origname="surface">
+			<tei-label data-origname="label">85v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f176" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f176" id="f176" ulx="0" uly="0" lrx="3273" lry="5468" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f177" data-origname="surface">
+			<tei-label data-origname="label">86r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f177" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f177" id="f177" ulx="0" uly="0" lrx="3297" lry="5444" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f178" data-origname="surface">
+			<tei-label data-origname="label">86v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f178" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f178" id="f178" ulx="0" uly="0" lrx="3267" lry="5459" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f179" data-origname="surface">
+			<tei-label data-origname="label">87r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f179" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f179" id="f179" ulx="0" uly="0" lrx="3303" lry="5456" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f180" data-origname="surface">
+			<tei-label data-origname="label">87v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f180" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f180" id="f180" ulx="0" uly="0" lrx="3234" lry="5459" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f181" data-origname="surface">
+			<tei-label data-origname="label">88r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f181" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f181" id="f181" ulx="0" uly="0" lrx="3228" lry="5441" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f182" data-origname="surface">
+			<tei-label data-origname="label">88v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f182" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f182" id="f182" ulx="0" uly="0" lrx="3189" lry="5399" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f183" data-origname="surface">
+			<tei-label data-origname="label">89r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f183" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f183" id="f183" ulx="0" uly="0" lrx="3252" lry="5348" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f184" data-origname="surface">
+			<tei-label data-origname="label">89v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f184" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f184" id="f184" ulx="0" uly="0" lrx="3174" lry="5360" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f185" data-origname="surface">
+			<tei-label data-origname="label">90r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f185" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f185" id="f185" ulx="0" uly="0" lrx="3243" lry="5342" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f186" data-origname="surface">
+			<tei-label data-origname="label">90v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f186" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f186" id="f186" ulx="0" uly="0" lrx="3183" lry="5351" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f187" data-origname="surface">
+			<tei-label data-origname="label">91r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f187" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f187" id="f187" ulx="0" uly="0" lrx="3258" lry="5354" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f188" data-origname="surface">
+			<tei-label data-origname="label">91v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f188" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f188" id="f188" ulx="0" uly="0" lrx="3177" lry="5351" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f189" data-origname="surface">
+			<tei-label data-origname="label">92r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f189" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f189" id="f189" ulx="0" uly="0" lrx="3237" lry="5348" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f190" data-origname="surface">
+			<tei-label data-origname="label">92v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f190" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f190" id="f190" ulx="0" uly="0" lrx="3183" lry="5360" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f191" data-origname="surface">
+			<tei-label data-origname="label">93r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f191" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f191" id="f191" ulx="0" uly="0" lrx="3264" lry="5372" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f192" data-origname="surface">
+			<tei-label data-origname="label">93v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f192" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f192" id="f192" ulx="0" uly="0" lrx="3180" lry="5381" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f193" data-origname="surface">
+			<tei-label data-origname="label">94r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f193" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f193" id="f193" ulx="0" uly="0" lrx="3279" lry="5369" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f194" data-origname="surface">
+			<tei-label data-origname="label">94v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f194" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f194" id="f194" ulx="0" uly="0" lrx="3168" lry="5351" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f195" data-origname="surface">
+			<tei-label data-origname="label">95r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f195" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f195" id="f195" ulx="0" uly="0" lrx="3237" lry="5381" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f196" data-origname="surface">
+			<tei-label data-origname="label">95v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f196" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f196" id="f196" ulx="0" uly="0" lrx="3246" lry="5369" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f197" data-origname="surface">
+			<tei-label data-origname="label">96r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f197" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f197" id="f197" ulx="0" uly="0" lrx="3258" lry="5360" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f198" data-origname="surface">
+			<tei-label data-origname="label">96v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f198" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f198" id="f198" ulx="0" uly="0" lrx="3231" lry="5378" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f199" data-origname="surface">
+			<tei-label data-origname="label">97r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f199" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f199" id="f199" ulx="0" uly="0" lrx="3249" lry="5360" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f200" data-origname="surface">
+			<tei-label data-origname="label">97v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f200" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f200" id="f200" ulx="0" uly="0" lrx="3213" lry="5375" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f201" data-origname="surface">
+			<tei-label data-origname="label">98r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f201" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f201" id="f201" ulx="0" uly="0" lrx="3267" lry="5354" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f202" data-origname="surface">
+			<tei-label data-origname="label">98v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f202" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f202" id="f202" ulx="0" uly="0" lrx="3183" lry="5378" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f203" data-origname="surface">
+			<tei-label data-origname="label">99r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f203" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f203" id="f203" ulx="0" uly="0" lrx="3234" lry="5354" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f204" data-origname="surface">
+			<tei-label data-origname="label">99v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f204" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f204" id="f204" ulx="0" uly="0" lrx="3192" lry="5390" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f205" data-origname="surface">
+			<tei-label data-origname="label">100r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f205" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f205" id="f205" ulx="0" uly="0" lrx="3240" lry="5336" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f206" data-origname="surface">
+			<tei-label data-origname="label">100v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f206" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f206" id="f206" ulx="0" uly="0" lrx="3198" lry="5354" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f207" data-origname="surface">
+			<tei-label data-origname="label">101r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f207" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f207" id="f207" ulx="0" uly="0" lrx="3219" lry="5348" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f208" data-origname="surface">
+			<tei-label data-origname="label">101v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f208" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f208" id="f208" ulx="0" uly="0" lrx="3195" lry="5360" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f209" data-origname="surface">
+			<tei-label data-origname="label">102r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f209" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f209" id="f209" ulx="0" uly="0" lrx="3237" lry="5351" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f210" data-origname="surface">
+			<tei-label data-origname="label">102v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f210" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f210" id="f210" ulx="0" uly="0" lrx="3189" lry="5372" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f211" data-origname="surface">
+			<tei-label data-origname="label">103r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f211" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f211" id="f211" ulx="0" uly="0" lrx="3249" lry="5357" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f212" data-origname="surface">
+			<tei-label data-origname="label">130v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f212" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f212" id="f212" ulx="0" uly="0" lrx="3198" lry="5375" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f213" data-origname="surface">
+			<tei-label data-origname="label">104r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f213" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f213" id="f213" ulx="0" uly="0" lrx="3246" lry="5363" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f214" data-origname="surface">
+			<tei-label data-origname="label">104v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f214" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f214" id="f214" ulx="0" uly="0" lrx="3189" lry="5369" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f215" data-origname="surface">
+			<tei-label data-origname="label">105r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f215" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f215" id="f215" ulx="0" uly="0" lrx="3234" lry="5360" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f216" data-origname="surface">
+			<tei-label data-origname="label">105v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f216" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f216" id="f216" ulx="0" uly="0" lrx="3180" lry="5366" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f217" data-origname="surface">
+			<tei-label data-origname="label">106r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f217" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f217" id="f217" ulx="0" uly="0" lrx="3231" lry="5366" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f218" data-origname="surface">
+			<tei-label data-origname="label">106v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f218" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f218" id="f218" ulx="0" uly="0" lrx="3165" lry="5369" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f219" data-origname="surface">
+			<tei-label data-origname="label">107r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f219" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f219" id="f219" ulx="0" uly="0" lrx="3228" lry="5348" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f220" data-origname="surface">
+			<tei-label data-origname="label">107v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f220" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f220" id="f220" ulx="0" uly="0" lrx="3177" lry="5366" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f221" data-origname="surface">
+			<tei-label data-origname="label">108r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f221" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f221" id="f221" ulx="0" uly="0" lrx="3234" lry="5384" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f222" data-origname="surface">
+			<tei-label data-origname="label">108v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f222" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f222" id="f222" ulx="0" uly="0" lrx="3201" lry="5381" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f223" data-origname="surface">
+			<tei-label data-origname="label">109r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f223" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f223" id="f223" ulx="0" uly="0" lrx="3264" lry="5381" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f224" data-origname="surface">
+			<tei-label data-origname="label">109v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f224" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f224" id="f224" ulx="0" uly="0" lrx="3207" lry="5381" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f225" data-origname="surface">
+			<tei-label data-origname="label">110r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f225" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f225" id="f225" ulx="0" uly="0" lrx="3279" lry="5378" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f226" data-origname="surface">
+			<tei-label data-origname="label">110v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f226" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f226" id="f226" ulx="0" uly="0" lrx="3210" lry="5393" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f227" data-origname="surface">
+			<tei-label data-origname="label">111r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f227" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f227" id="f227" ulx="0" uly="0" lrx="3240" lry="5360" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f228" data-origname="surface">
+			<tei-label data-origname="label">111v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f228" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f228" id="f228" ulx="0" uly="0" lrx="3195" lry="5405" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f229" data-origname="surface">
+			<tei-label data-origname="label">112r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f229" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f229" id="f229" ulx="0" uly="0" lrx="3276" lry="5351" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f230" data-origname="surface">
+			<tei-label data-origname="label">112v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f230" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f230" id="f230" ulx="0" uly="0" lrx="3213" lry="5381" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f231" data-origname="surface">
+			<tei-label data-origname="label">113r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f231" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f231" id="f231" ulx="0" uly="0" lrx="3243" lry="5357" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f232" data-origname="surface">
+			<tei-label data-origname="label">113v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f232" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f232" id="f232" ulx="0" uly="0" lrx="3255" lry="5375" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f233" data-origname="surface">
+			<tei-label data-origname="label">114r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f233" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f233" id="f233" ulx="0" uly="0" lrx="3243" lry="5351" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f234" data-origname="surface">
+			<tei-label data-origname="label">114v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f234" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f234" id="f234" ulx="0" uly="0" lrx="3240" lry="5369" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f235" data-origname="surface">
+			<tei-label data-origname="label">115r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f235" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f235" id="f235" ulx="0" uly="0" lrx="3264" lry="5357" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f236" data-origname="surface">
+			<tei-label data-origname="label">115v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f236" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f236" id="f236" ulx="0" uly="0" lrx="3240" lry="5372" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f237" data-origname="surface">
+			<tei-label data-origname="label">116r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f237" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f237" id="f237" ulx="0" uly="0" lrx="3252" lry="5345" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f238" data-origname="surface">
+			<tei-label data-origname="label">116v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f238" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f238" id="f238" ulx="0" uly="0" lrx="3246" lry="5387" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f239" data-origname="surface">
+			<tei-label data-origname="label">117r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f239" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f239" id="f239" ulx="0" uly="0" lrx="3252" lry="5345" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f240" data-origname="surface">
+			<tei-label data-origname="label">117v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f240" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f240" id="f240" ulx="0" uly="0" lrx="3258" lry="5381" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f241" data-origname="surface">
+			<tei-label data-origname="label">118r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f241" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f241" id="f241" ulx="0" uly="0" lrx="3258" lry="5357" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f242" data-origname="surface">
+			<tei-label data-origname="label">118v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f242" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f242" id="f242" ulx="0" uly="0" lrx="3240" lry="5369" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f243" data-origname="surface">
+			<tei-label data-origname="label">119r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f243" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f243" id="f243" ulx="0" uly="0" lrx="3237" lry="5354" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f244" data-origname="surface">
+			<tei-label data-origname="label">119v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f244" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f244" id="f244" ulx="0" uly="0" lrx="3222" lry="5372" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f245" data-origname="surface">
+			<tei-label data-origname="label">120r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f245" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f245" id="f245" ulx="0" uly="0" lrx="3249" lry="5360" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f246" data-origname="surface">
+			<tei-label data-origname="label">120v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f246" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f246" id="f246" ulx="0" uly="0" lrx="3228" lry="5354" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f247" data-origname="surface">
+			<tei-label data-origname="label">121r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f247" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f247" id="f247" ulx="0" uly="0" lrx="3240" lry="5351" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f248" data-origname="surface">
+			<tei-label data-origname="label">121v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f248" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f248" id="f248" ulx="0" uly="0" lrx="3243" lry="5357" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f249" data-origname="surface">
+			<tei-label data-origname="label">122r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f249" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f249" id="f249" ulx="0" uly="0" lrx="3255" lry="5375" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f250" data-origname="surface">
+			<tei-label data-origname="label">122v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f250" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f250" id="f250" ulx="0" uly="0" lrx="3258" lry="5378" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f251" data-origname="surface">
+			<tei-label data-origname="label">123r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f251" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f251" id="f251" ulx="0" uly="0" lrx="3258" lry="5363" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f252" data-origname="surface">
+			<tei-label data-origname="label">123v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f252" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f252" id="f252" ulx="0" uly="0" lrx="3261" lry="5372" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f253" data-origname="surface">
+			<tei-label data-origname="label">124r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f253" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f253" id="f253" ulx="0" uly="0" lrx="3252" lry="5357" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f254" data-origname="surface">
+			<tei-label data-origname="label">124v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f254" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f254" id="f254" ulx="0" uly="0" lrx="3237" lry="5378" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f255" data-origname="surface">
+			<tei-label data-origname="label">125r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f255" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f255" id="f255" ulx="0" uly="0" lrx="3234" lry="5348" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f256" data-origname="surface">
+			<tei-label data-origname="label">125v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f256" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f256" id="f256" ulx="0" uly="0" lrx="3240" lry="5366" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f257" data-origname="surface">
+			<tei-label data-origname="label">126r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f257" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f257" id="f257" ulx="0" uly="0" lrx="3246" lry="5363" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f258" data-origname="surface">
+			<tei-label data-origname="label">126v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f258" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f258" id="f258" ulx="0" uly="0" lrx="3273" lry="5360" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f259" data-origname="surface">
+			<tei-label data-origname="label">127r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f259" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f259" id="f259" ulx="0" uly="0" lrx="3252" lry="5345" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f260" data-origname="surface">
+			<tei-label data-origname="label">127v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f260" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f260" id="f260" ulx="0" uly="0" lrx="3267" lry="5369" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f261" data-origname="surface">
+			<tei-label data-origname="label">128r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f261" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f261" id="f261" ulx="0" uly="0" lrx="3264" lry="5348" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f262" data-origname="surface">
+			<tei-label data-origname="label">128v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f262" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f262" id="f262" ulx="0" uly="0" lrx="3258" lry="5369" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f263" data-origname="surface">
+			<tei-label data-origname="label">129r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f263" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f263" id="f263" ulx="0" uly="0" lrx="3264" lry="5342" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f264" data-origname="surface">
+			<tei-label data-origname="label">129v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f264" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f264" id="f264" ulx="0" uly="0" lrx="3264" lry="5360" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f265" data-origname="surface">
+			<tei-label data-origname="label">130r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f265" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f265" id="f265" ulx="0" uly="0" lrx="3267" lry="5339" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f266" data-origname="surface">
+			<tei-label data-origname="label">130v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f266" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f266" id="f266" ulx="0" uly="0" lrx="3294" lry="5357" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f267" data-origname="surface">
+			<tei-label data-origname="label">131r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f267" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f267" id="f267" ulx="0" uly="0" lrx="3267" lry="5339" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f268" data-origname="surface">
+			<tei-label data-origname="label">131v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f268" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f268" id="f268" ulx="0" uly="0" lrx="3264" lry="5354" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f269" data-origname="surface">
+			<tei-label data-origname="label">132r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f269" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f269" id="f269" ulx="0" uly="0" lrx="3258" lry="5318" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f270" data-origname="surface">
+			<tei-label data-origname="label">132v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f270" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f270" id="f270" ulx="0" uly="0" lrx="3264" lry="5354" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f271" data-origname="surface">
+			<tei-label data-origname="label">133r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f271" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f271" id="f271" ulx="0" uly="0" lrx="3279" lry="5342" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f272" data-origname="surface">
+			<tei-label data-origname="label">133v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f272" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f272" id="f272" ulx="0" uly="0" lrx="3300" lry="5342" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f273" data-origname="surface">
+			<tei-label data-origname="label">134r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f273" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f273" id="f273" ulx="0" uly="0" lrx="3261" lry="5345" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f274" data-origname="surface">
+			<tei-label data-origname="label">134v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f274" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f274" id="f274" ulx="0" uly="0" lrx="3288" lry="5336" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f275" data-origname="surface">
+			<tei-label data-origname="label">135r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f275" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f275" id="f275" ulx="0" uly="0" lrx="3270" lry="5333" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f276" data-origname="surface">
+			<tei-label data-origname="label">135v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f276" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f276" id="f276" ulx="0" uly="0" lrx="3312" lry="5330" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f277" data-origname="surface">
+			<tei-label data-origname="label">136r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f277" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f277" id="f277" ulx="0" uly="0" lrx="3276" lry="5327" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f278" data-origname="surface">
+			<tei-label data-origname="label">136v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f278" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f278" id="f278" ulx="0" uly="0" lrx="3282" lry="5330" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f279" data-origname="surface">
+			<tei-label data-origname="label">137r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f279" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f279" id="f279" ulx="0" uly="0" lrx="3252" lry="5330" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f280" data-origname="surface">
+			<tei-label data-origname="label">137v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f280" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f280" id="f280" ulx="0" uly="0" lrx="3276" lry="5336" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f281" data-origname="surface">
+			<tei-label data-origname="label">138r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f281" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f281" id="f281" ulx="0" uly="0" lrx="3252" lry="5324" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f282" data-origname="surface">
+			<tei-label data-origname="label">138v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f282" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f282" id="f282" ulx="0" uly="0" lrx="3252" lry="5327" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f283" data-origname="surface">
+			<tei-label data-origname="label">139r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f283" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f283" id="f283" ulx="0" uly="0" lrx="3255" lry="5360" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f284" data-origname="surface">
+			<tei-label data-origname="label">139v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f284" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f284" id="f284" ulx="0" uly="0" lrx="3243" lry="5360" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f285" data-origname="surface">
+			<tei-label data-origname="label">140r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f285" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f285" id="f285" ulx="0" uly="0" lrx="3255" lry="5336" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f286" data-origname="surface">
+			<tei-label data-origname="label">140v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f286" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f286" id="f286" ulx="0" uly="0" lrx="3312" lry="5333" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f287" data-origname="surface">
+			<tei-label data-origname="label">141r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f287" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f287" id="f287" ulx="0" uly="0" lrx="3264" lry="5333" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f288" data-origname="surface">
+			<tei-label data-origname="label">141v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f288" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f288" id="f288" ulx="0" uly="0" lrx="3318" lry="5384" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f289" data-origname="surface">
+			<tei-label data-origname="label">142r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f289" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f289" id="f289" ulx="0" uly="0" lrx="3294" lry="5390" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f290" data-origname="surface">
+			<tei-label data-origname="label">142v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f290" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f290" id="f290" ulx="0" uly="0" lrx="3324" lry="5390" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f291" data-origname="surface">
+			<tei-label data-origname="label">143r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f291" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f291" id="f291" ulx="0" uly="0" lrx="3288" lry="5363" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f292" data-origname="surface">
+			<tei-label data-origname="label">143v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f292" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f292" id="f292" ulx="0" uly="0" lrx="3312" lry="5381" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f293" data-origname="surface">
+			<tei-label data-origname="label">144r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f293" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f293" id="f293" ulx="0" uly="0" lrx="3294" lry="5369" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f294" data-origname="surface">
+			<tei-label data-origname="label">144v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f294" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f294" id="f294" ulx="0" uly="0" lrx="3318" lry="5360" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f295" data-origname="surface">
+			<tei-label data-origname="label">145r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f295" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f295" id="f295" ulx="0" uly="0" lrx="3279" lry="5378" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f296" data-origname="surface">
+			<tei-label data-origname="label">145v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f296" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f296" id="f296" ulx="0" uly="0" lrx="3294" lry="5357" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f297" data-origname="surface">
+			<tei-label data-origname="label">146r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f297" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f297" id="f297" ulx="0" uly="0" lrx="3291" lry="5363" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f298" data-origname="surface">
+			<tei-label data-origname="label">146v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f298" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f298" id="f298" ulx="0" uly="0" lrx="3345" lry="5369" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f299" data-origname="surface">
+			<tei-label data-origname="label">147r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f299" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f299" id="f299" ulx="0" uly="0" lrx="3279" lry="5369" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f300" data-origname="surface">
+			<tei-label data-origname="label">147v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f300" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f300" id="f300" ulx="0" uly="0" lrx="3315" lry="5363" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f301" data-origname="surface">
+			<tei-label data-origname="label">148r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f301" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f301" id="f301" ulx="0" uly="0" lrx="3276" lry="5378" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f302" data-origname="surface">
+			<tei-label data-origname="label">148v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f302" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f302" id="f302" ulx="0" uly="0" lrx="3321" lry="5372" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f303" data-origname="surface">
+			<tei-label data-origname="label">149r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f303" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f303" id="f303" ulx="0" uly="0" lrx="3285" lry="5354" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f304" data-origname="surface">
+			<tei-label data-origname="label">149v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f304" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f304" id="f304" ulx="0" uly="0" lrx="3321" lry="5357" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f305" data-origname="surface">
+			<tei-label data-origname="label">150r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f305" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f305" id="f305" ulx="0" uly="0" lrx="3297" lry="5360" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f306" data-origname="surface">
+			<tei-label data-origname="label">150v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f306" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f306" id="f306" ulx="0" uly="0" lrx="3303" lry="5345" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f307" data-origname="surface">
+			<tei-label data-origname="label">151r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f307" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f307" id="f307" ulx="0" uly="0" lrx="3297" lry="5357" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f308" data-origname="surface">
+			<tei-label data-origname="label">151v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f308" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f308" id="f308" ulx="0" uly="0" lrx="3297" lry="5351" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f309" data-origname="surface">
+			<tei-label data-origname="label">152r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f309" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f309" id="f309" ulx="0" uly="0" lrx="3294" lry="5348" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f310" data-origname="surface">
+			<tei-label data-origname="label">152v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f310" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f310" id="f310" ulx="0" uly="0" lrx="3336" lry="5357" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f311" data-origname="surface">
+			<tei-label data-origname="label">153r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f311" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f311" id="f311" ulx="0" uly="0" lrx="3291" lry="5363" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f312" data-origname="surface">
+			<tei-label data-origname="label">153v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f312" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f312" id="f312" ulx="0" uly="0" lrx="3306" lry="5351" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f313" data-origname="surface">
+			<tei-label data-origname="label">154r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f313" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f313" id="f313" ulx="0" uly="0" lrx="3300" lry="5351" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f314" data-origname="surface">
+			<tei-label data-origname="label">154v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f314" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f314" id="f314" ulx="0" uly="0" lrx="3324" lry="5369" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f315" data-origname="surface">
+			<tei-label data-origname="label">155r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f315" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f315" id="f315" ulx="0" uly="0" lrx="3282" lry="5354" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f316" data-origname="surface">
+			<tei-label data-origname="label">155v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f316" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f316" id="f316" ulx="0" uly="0" lrx="3309" lry="5345" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f317" data-origname="surface">
+			<tei-label data-origname="label">156r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f317" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f317" id="f317" ulx="0" uly="0" lrx="3315" lry="5339" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f318" data-origname="surface">
+			<tei-label data-origname="label">156v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f318" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f318" id="f318" ulx="0" uly="0" lrx="3327" lry="5336" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f319" data-origname="surface">
+			<tei-label data-origname="label">157r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f319" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f319" id="f319" ulx="0" uly="0" lrx="3288" lry="5342" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f320" data-origname="surface">
+			<tei-label data-origname="label">157v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f320" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f320" id="f320" ulx="0" uly="0" lrx="3333" lry="5366" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f321" data-origname="surface">
+			<tei-label data-origname="label">158r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f321" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f321" id="f321" ulx="0" uly="0" lrx="3312" lry="5354" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f322" data-origname="surface">
+			<tei-label data-origname="label">158v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f322" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f322" id="f322" ulx="0" uly="0" lrx="3336" lry="5357" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f323" data-origname="surface">
+			<tei-label data-origname="label">159r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f323" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f323" id="f323" ulx="0" uly="0" lrx="3306" lry="5351" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f324" data-origname="surface">
+			<tei-label data-origname="label">159v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f324" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f324" id="f324" ulx="0" uly="0" lrx="3336" lry="5351" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f325" data-origname="surface">
+			<tei-label data-origname="label">160r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f325" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f325" id="f325" ulx="0" uly="0" lrx="3315" lry="5342" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f326" data-origname="surface">
+			<tei-label data-origname="label">160v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f326" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f326" id="f326" ulx="0" uly="0" lrx="3324" lry="5348" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f327" data-origname="surface">
+			<tei-label data-origname="label">161r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f327" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f327" id="f327" ulx="0" uly="0" lrx="3324" lry="5342" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f328" data-origname="surface">
+			<tei-label data-origname="label">161v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f328" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f328" id="f328" ulx="0" uly="0" lrx="3324" lry="5354" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f329" data-origname="surface">
+			<tei-label data-origname="label">162r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f329" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f329" id="f329" ulx="0" uly="0" lrx="3309" lry="5348" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f330" data-origname="surface">
+			<tei-label data-origname="label">162v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f330" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f330" id="f330" ulx="0" uly="0" lrx="3294" lry="5354" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f331" data-origname="surface">
+			<tei-label data-origname="label">163r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f331" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f331" id="f331" ulx="0" uly="0" lrx="3318" lry="5354" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f332" data-origname="surface">
+			<tei-label data-origname="label">163v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f332" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f332" id="f332" ulx="0" uly="0" lrx="3348" lry="5342" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f333" data-origname="surface">
+			<tei-label data-origname="label">164r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f333" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f333" id="f333" ulx="0" uly="0" lrx="3315" lry="5333" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f334" data-origname="surface">
+			<tei-label data-origname="label">164v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f334" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f334" id="f334" ulx="0" uly="0" lrx="3375" lry="5351" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f335" data-origname="surface">
+			<tei-label data-origname="label">165r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f335" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f335" id="f335" ulx="0" uly="0" lrx="3324" lry="5345" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f336" data-origname="surface">
+			<tei-label data-origname="label">165v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f336" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f336" id="f336" ulx="0" uly="0" lrx="3381" lry="5348" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f337" data-origname="surface">
+			<tei-label data-origname="label">166r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f337" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f337" id="f337" ulx="0" uly="0" lrx="3339" lry="5351" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f338" data-origname="surface">
+			<tei-label data-origname="label">166v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f338" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f338" id="f338" ulx="0" uly="0" lrx="3363" lry="5351" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f339" data-origname="surface">
+			<tei-label data-origname="label">167r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f339" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f339" id="f339" ulx="0" uly="0" lrx="3339" lry="5360" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f340" data-origname="surface">
+			<tei-label data-origname="label">167v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f340" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f340" id="f340" ulx="0" uly="0" lrx="3357" lry="5345" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f341" data-origname="surface">
+			<tei-label data-origname="label">168r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f341" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f341" id="f341" ulx="0" uly="0" lrx="3321" lry="5345" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f342" data-origname="surface">
+			<tei-label data-origname="label">168v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f342" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f342" id="f342" ulx="0" uly="0" lrx="3360" lry="5336" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f343" data-origname="surface">
+			<tei-label data-origname="label">169r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f343" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f343" id="f343" ulx="0" uly="0" lrx="3333" lry="5348" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f344" data-origname="surface">
+			<tei-label data-origname="label">169v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f344" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f344" id="f344" ulx="0" uly="0" lrx="3417" lry="5348" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f345" data-origname="surface">
+			<tei-label data-origname="label">170r</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f345" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f345" id="f345" ulx="0" uly="0" lrx="3333" lry="5348" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f346" data-origname="surface">
+			<tei-label data-origname="label">170v</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f346" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f346" id="f346" ulx="0" uly="0" lrx="3408" lry="5351" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f347" data-origname="surface">
+			<tei-label data-origname="label">NP</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f347" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f347" id="f347" ulx="0" uly="0" lrx="3354" lry="5339" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f348" data-origname="surface">
+			<tei-label data-origname="label">NP</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f348" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f348" id="f348" ulx="0" uly="0" lrx="3414" lry="5327" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f349" data-origname="surface">
+			<tei-label data-origname="label">page de garde recto</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f349" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f349" id="f349" ulx="0" uly="0" lrx="3375" lry="5339" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f350" data-origname="surface">
+			<tei-label data-origname="label">page de garde verso</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f350" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f350" id="f350" ulx="0" uly="0" lrx="3483" lry="5465" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f351" data-origname="surface">
+			<tei-label data-origname="label">contreplat inf.</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f351" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f351" id="f351" ulx="0" uly="0" lrx="3612" lry="5543" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f352" data-origname="surface">
+			<tei-label data-origname="label">plat inf.</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f352" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f352" id="f352" ulx="0" uly="0" lrx="780" lry="5392" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f353" data-origname="surface">
+			<tei-label data-origname="label">dos</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f353" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f353" id="f353" ulx="0" uly="0" lrx="785" lry="3504" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f354" data-origname="surface">
+			<tei-label data-origname="label">tranche sup.</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f354" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f354" id="f354" ulx="0" uly="0" lrx="906" lry="5422" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f355" data-origname="surface">
+			<tei-label data-origname="label">gouttière</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f355" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+		<tei-surface xml:id="f355" id="f355" ulx="0" uly="0" lrx="818" lry="3483" sameas="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f356" data-origname="surface">
+			<tei-label data-origname="label">tranche inf.</tei-label>
+			<tei-graphic mimetype="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f356" data-origname="graphic" data-empty=""></tei-graphic>
+		</tei-surface>
+	</tei-facsimile>
+</tei-tei>
