@@ -251,7 +251,7 @@ function layoutMargin(html, emptyZoneFrame, layoutDecoder) {
 
   // set the grid-template-areas
   return {
-    content: gridContent,
+    html: gridContent,
     layout: gridLayout,
   };
 }

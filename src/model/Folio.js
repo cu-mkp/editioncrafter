@@ -1,5 +1,6 @@
 import OpenSeadragon from 'openseadragon';
 import axios from 'axios';
+import { layoutMargin3 } from './folioLayout';
 
 class Folio {
   constructor(props) {
@@ -11,16 +12,17 @@ class Folio {
     this.annotationURLs = props.annotationURLs;
     this.tileSource = null;
     this.transcription = {};
-    this.loaded = false;
+    this.loading = false;
   }
 
   load() {
-    if (this.loaded) {
+    if (this.loading) {
       // promise to resolve this immediately
       return new Promise((resolve) => {
         resolve(this);
       });
     }
+    this.loading = true;
     // promise to load all the data for this folio
     return new Promise((resolve, reject) => {
       if (this.annotationURLs) {
@@ -43,7 +45,7 @@ class Folio {
                 reject(new Error(`Unable to load transcription: ${htmlURL}`));
               } else {
                 this.transcription[transcriptionType] = transcription;
-                this.loaded = true;
+                console.log("loaded folio")
                 resolve(this);
               }
             }))
@@ -60,7 +62,6 @@ class Folio {
         axios.get(this.image_zoom_url)
           .then((imageServerResponse) => {
             this.tileSource = new OpenSeadragon.IIIFTileSource(imageServerResponse.data);
-            this.loaded = true;
             resolve(this);
           })
           .catch((error) => {
@@ -73,33 +74,10 @@ class Folio {
 
 // returns transcription or error message if unable to parse
 function parseTranscription(html, xml) {
-  // const folioTag = '<folio';
-  // const openDivIndex = html.indexOf(folioTag);
-  // if (openDivIndex === -1) return errorMessage('Folio element not found.');
-  // const start = html.indexOf('>', openDivIndex) + 1;
-  // const end = html.lastIndexOf('</folio>');
-  // if (end === -1) return errorMessage('Folio element closing tag not found.');
-  // if (start > end) return errorMessage('Unable to parse folio element.');
-
-  // // detect folio mode
-  // const folioAttribs = html.slice(openDivIndex + folioTag.length, start - 1);
-  // const layoutAttr = 'layout=';
-  // const layoutAttrIndex = folioAttribs.indexOf(layoutAttr);
-  // if (layoutAttrIndex === -1) return errorMessage('Unable to parse layout attribute in folio element.');
-  // const layoutAttrStart = layoutAttrIndex + layoutAttr.length + 1;
-  // const layoutType = folioAttribs.slice(layoutAttrStart, folioAttribs.indexOf('"', layoutAttrStart));
-  // const transcription = html.slice(start, end);
+  const transcriptionData = layoutMargin3(html);
   return {
-    layout: 'three-column',
-    html,
-    xml,
-  };
-}
-
-function errorMessage(message) {
-  return {
-    layout: 'margin',
-    html: `<div id="error"><div data-layout="middle">${message}</div></div>`,
+    ...transcriptionData,
+    xml
   };
 }
 

@@ -28,74 +28,48 @@ class TranscriptionView extends Component {
     } = this.props;
 
     if (folioID === '-1') {
-      return watermark();
+      return watermark(documentView, documentViewActions, side);
     }
 
     const folio = document.folioIndex[folioID];
-    const transcriptionData = getTranscriptionData(folio.transcription[transcriptionType]);
+    const transcriptionData = folio.transcription[transcriptionType];
+    console.log('rendering ', transcriptionData)
 
     if (!transcriptionData) {
-      console.log(`Undefined transcription for side: ${side}`);
-      return watermark();
+      return watermark(documentView, documentViewActions, side);
     }
 
-    // Determine class and id for this component
-    if (transcriptionData.content.length !== 0) {
-      let surfaceClass = 'surface';
-      const surfaceStyle = {};
-      // Handle grid mode
-      const { isGridMode } = documentView[side];
-      if (isGridMode) {
-        surfaceClass += ' grid-mode';
-        surfaceStyle.gridTemplateAreas = transcriptionData.layout;
-      }
+    // Configure parser to replace certain tags with components
+    const htmlToReactParserOptionsSide = htmlToReactParserOptions();
+    const { html, layout } = transcriptionData;
+    const surfaceStyle = { gridTemplateAreas: layout };
 
-      // Configure parser to replace certain tags with components
-      const htmlToReactParserOptionsSide = htmlToReactParserOptions();
-
-      const { content } = transcriptionData;
-
-      return (
-      // Render the transcription
-
-        <div>
-          <Navigation
-            side={side}
-            documentView={documentView}
-            documentViewActions={documentViewActions}
-          />
-          <Pagination side={side} documentView={documentView} documentViewActions={documentViewActions} />
-          <div className="transcriptionViewComponent">
-            <div className="transcriptContent">
-              <ErrorBoundary>
-                <div
-                  className={surfaceClass}
-                  style={surfaceStyle}
-                >
-
-                  {Parser(content, htmlToReactParserOptionsSide)}
-                </div>
-              </ErrorBoundary>
-            </div>
-          </div>
-
-          <Pagination
-            side={side}
-            documentView={documentView}
-            documentViewActions={documentViewActions}
-          />
-
-        </div>
-      );
-    }
-    // Empty content
     return (
       <div>
-        <Navigation side={side} documentView={documentView} documentViewActions={documentViewActions} />
-        <div className="transcriptContent">
-          <Pagination side={side} className="pagination_upper" documentView={documentView} documentViewActions={documentViewActions} />
-          { watermark() }
+        <Navigation
+          side={side}
+          documentView={documentView}
+          documentViewActions={documentViewActions}
+        />
+        <Pagination side={side} documentView={documentView} documentViewActions={documentViewActions} />
+        <div className="transcriptionViewComponent">
+          <div className="transcriptContent">
+            <ErrorBoundary>
+              <div
+                className='surface grid-mode'
+                style={surfaceStyle}
+              >
+                {Parser(html, htmlToReactParserOptionsSide)}
+              </div>
+            </ErrorBoundary>
+          </div>
         </div>
+
+        <Pagination
+          side={side}
+          documentView={documentView}
+          documentViewActions={documentViewActions}
+        />
       </div>
     );
   }
@@ -142,10 +116,16 @@ function htmlToReactParserOptions() {
   return parserOptions;
 }
 
-function watermark() {
+function watermark(documentView, documentViewActions, side) {
   return (
-    <div className="watermark">
-      <div className="watermark_contents" />
+    <div>
+        <Navigation side={side} documentView={documentView} documentViewActions={documentViewActions} />
+        <div className="transcriptContent">
+          <Pagination side={side} className="pagination_upper" documentView={documentView} documentViewActions={documentViewActions} />
+          <div className="watermark">
+            <div className="watermark_contents" />
+          </div>
+        </div>
     </div>
   );
 }
