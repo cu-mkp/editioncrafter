@@ -1,5 +1,3 @@
-import Folio from '../model/Folio';
-
 const DocumentActions = {};
 
 // Profile ID for EditionCrafter text partials
@@ -16,6 +14,17 @@ DocumentActions.loadDocument = function loadDocument(state, manifestData) {
     folioByName,
   };
 };
+
+DocumentActions.loadFolio = function loadFolio( state, folio ) {
+  const oldFolio = state.folioByIndex[folio.id];
+  const folioIdx = state.folios.indexOf(oldFolio);
+  state.folios[folioIdx] = folio;
+  state.folioIndex[folio.id] = folio;
+  state.folioByName[folio.name] = folio;
+  return {
+    ...state,
+  }
+}
 
 function createFolioIndex(folios) {
   // Store an ordered array of folio ids, used for next/prev navigation purposes later
@@ -118,14 +127,14 @@ function parseManifest(manifest, transcriptionTypes) {
     const { imageURL, thumbnailURL } = parseImageURLs(canvas);
     const annotationURLs = parseAnnotationURLs(canvas, transcriptionTypes);
 
-    const folio = new Folio({
+    const folio = {
       id: folioID,
       name: canvasLabel,
       pageNumber: i,
       image_zoom_url: imageURL,
       image_thumbnail_url: thumbnailURL,
       annotationURLs,
-    });
+    };
 
     folios.push(folio);
   }

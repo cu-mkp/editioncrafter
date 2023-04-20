@@ -5,7 +5,6 @@ import Navigation from './Navigation';
 import Pagination from './Pagination';
 import EditorComment from './EditorComment';
 import ErrorBoundary from './ErrorBoundary';
-import { layoutMargin3, layoutMargin4, layoutGrid } from '../model/folioLayout';
 
 class TranscriptionView extends Component {
   // Recursively unpack a node tree object and just return the text
@@ -33,7 +32,6 @@ class TranscriptionView extends Component {
 
     const folio = document.folioIndex[folioID];
     const transcriptionData = folio.transcription[transcriptionType];
-    console.log('rendering ', transcriptionData)
 
     if (!transcriptionData) {
       return watermark(documentView, documentViewActions, side);
@@ -73,27 +71,6 @@ class TranscriptionView extends Component {
       </div>
     );
   }
-}
-
-function getTranscriptionData(transcription) {
-  if (typeof transcription === 'undefined') return null;
-
-  // Grid layout
-  if (transcription.layout === 'grid') {
-    return layoutGrid(transcription.html);
-
-    // Margin layout
-  } if (transcription.layout === 'three-column') {
-    return layoutMargin3(transcription.html);
-  } if (transcription.layout === 'four-column') {
-    return layoutMargin4(transcription.html);
-
-    // None specified, pass on without any layout
-  }
-  return {
-    content: transcription.html,
-    layout: '',
-  };
 }
 
 function htmlToReactParserOptions() {
