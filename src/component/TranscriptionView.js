@@ -31,11 +31,10 @@ class TranscriptionView extends Component {
     }
 
     const folio = document.folioIndex[folioID];
-    const transcriptionData = folio.transcription[transcriptionType];
-
-    if (!transcriptionData) {
+    if (!folio.transcription) {
       return watermark(documentView, documentViewActions, side);
     }
+    const transcriptionData = folio.transcription[transcriptionType];
 
     // Configure parser to replace certain tags with components
     const htmlToReactParserOptionsSide = htmlToReactParserOptions();

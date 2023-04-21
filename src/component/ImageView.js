@@ -4,25 +4,31 @@ import React, { Component } from 'react';
 
 import Navigation from './Navigation';
 import ImageZoomControl from './ImageZoomControl';
+import { SeaDragonComponent } from './SeaDragonComponent';
 
 class ImageView extends Component {
-  constructor(props, context) {
-    this.elementID = `image-view-seadragon-${this.props.side}`;
-    this.onZoomFixed_1 = this.onZoomFixed_1.bind(this);
-    this.onZoomFixed_2 = this.onZoomFixed_2.bind(this);
-    this.onZoomFixed_3 = this.onZoomFixed_3.bind(this);
+  constructor(props) {
+    super(props);
+    // this.onZoomFixed_1 = this.onZoomFixed_1.bind(this);
+    // this.onZoomFixed_2 = this.onZoomFixed_2.bind(this);
+    // this.onZoomFixed_3 = this.onZoomFixed_3.bind(this);
+    this.viewer = null;
   }
 
-  loadFolio(folio) {
-    if( folio.loading ) {
-      window.loadingModal_start();
-      return 
+  initViewer = (el) => {
+    if( !el ) {
+        this.viewer = null;
+        return;
     }
-    if( !this.viewer ) {
+
+    const { document, folioID } = this.props;
+    const folio = document.folioIndex[folioID];
+
+    if( !this.viewer && folio.tileSource ) {
       const in_id = `os-zoom-in ${this.props.side}`;
       const out_id = `os-zoom-out ${this.props.side}`;
       this.viewer = OpenSeadragon({
-        id: this.elementID,
+        element: el,
         zoomInButton: in_id,
         zoomOutButton: out_id,
         prefixUrl: './img/openseadragon/',
@@ -31,11 +37,20 @@ class ImageView extends Component {
         tileSource: folio.tileSource,
       });  
     }
-    // if (typeof this.viewer !== 'undefined') {
-    //   this.viewer.destroy();
-    // }
-    window.loadingModal_stop();
   }
+
+  // loadFolio(folio) {
+  //   if( folio.loading ) {
+  //     window.loadingModal_start();
+  //     return 
+  //   }
+
+  //   }
+  //   // if (typeof this.viewer !== 'undefined') {
+  //   //   this.viewer.destroy();
+  //   // }
+  //   window.loadingModal_stop();
+  // }
 
   onZoomGrid = (e) => {
     this.props.documentViewActions.changeTranscriptionType(this.props.side, 'g');
@@ -54,7 +69,6 @@ class ImageView extends Component {
   };
 
   render() {
-    this.loadFolio();
     const thisClass = `image-view imageViewComponent ${this.props.side}`;
     return (
       <div>
@@ -68,7 +82,7 @@ class ImageView extends Component {
             onZoomFixed_3={this.onZoomFixed_3}
             onZoomGrid={this.onZoomGrid}
           />
-          <div id={this.elementID} />
+          <SeaDragonComponent initViewer={this.initViewer}></SeaDragonComponent>
         </div>
       </div>
     );

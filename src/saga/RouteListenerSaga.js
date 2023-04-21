@@ -38,7 +38,7 @@ function* resolveFolio(pathSegments) {
   if (document.loaded) {
     // TODO parse folioIDs from path segments
     const folioID = 'f010';
-    const folioData = document.folioByIndex[folioID];
+    const folioData = document.folioIndex[folioID];
     if( !folioData.loading ) {
       // wait for folio to load and then advance state
       const folio = yield loadFolio(folioData);

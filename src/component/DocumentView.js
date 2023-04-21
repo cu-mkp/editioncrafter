@@ -265,9 +265,11 @@ class DocumentView extends Component {
     const key = this.viewPaneKey(side);
 
     if (viewType === 'ImageView') {
+      const folioID = docView[side].iiifShortID;
       return (
         <ImageView
           key={key}
+          folioID={folioID}
           documentView={docView}
           documentViewActions={this.documentViewActions}
           side={side}

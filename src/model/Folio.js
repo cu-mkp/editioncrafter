@@ -17,11 +17,12 @@ export function loadFolio(folioData) {
     if (folio.annotationURLs) {
       axios.get(folio.image_zoom_url).then((imageServerResponse) => {
         // Handle the image server response
-        this.tileSource = new OpenSeadragon.IIIFTileSource(imageServerResponse.data);
+        folio.tileSource = new OpenSeadragon.IIIFTileSource(imageServerResponse.data);
 
         for (const transcriptionType of Object.keys(folio.annotationURLs)) {
           const { htmlURL, xmlURL } = folio.annotationURLs[transcriptionType];
-          this.transcription[transcriptionType] = {};
+          if( !folio.transcription ) folio.transcription = {};
+          folio.transcription[transcriptionType] = {};
           axios.all([
             axios.get(htmlURL),
             axios.get(xmlURL),
