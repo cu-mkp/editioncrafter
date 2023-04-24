@@ -36,16 +36,25 @@ function* resolveDocumentManifest() {
 function* resolveFolio(pathSegments) {
   const document = yield select(justDocument);
   if (document.loaded) {
-    const left = pathSegments[2];
-    const right = pathSegments[4];
-    // TODO parse folioIDs from path segments
-    const folioID = left;
-    const folioData = document.folioIndex[folioID];
-    if( !folioData.loading ) {
-      // wait for folio to load and then advance state
-      const folio = yield loadFolio(folioData);
-      yield putResolveAction('DocumentActions.loadFolio', folio);
+    let leftID, rightID;
+    if( pathSegments.length > 2 ) {
+      leftID = pathSegments[2];
+      if( pathSegments.length > 4 ) {
+        rightID = pathSegments[4];  
+      }
     } 
+    const folioIDs = [];
+    folioIDs.push(leftID);
+    if( rightID && rightID !== leftID ) folioIDs.push(rightID);
+
+    for( const folioID of folioIDs ) {
+      const folioData = document.folioIndex[folioID];
+      if( !folioData.loading ) {
+        // wait for folio to load and then advance state
+        const folio = yield loadFolio(folioData);
+        yield putResolveAction('DocumentActions.loadFolio', folio);
+      }   
+    }
   }
 }
 
