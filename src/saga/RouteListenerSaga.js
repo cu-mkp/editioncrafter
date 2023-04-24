@@ -2,8 +2,9 @@ import axios from 'axios';
 import { takeEvery, select } from 'redux-saga/effects';
 
 import { putResolveAction } from '../model/ReduxStore';
+import { loadFolio } from '../model/Folio';
 
-const juxtDocument = state => state.document;
+const justDocument = state => state.document;
 const justGlossary = state => state.glossary;
 const justComments = state => state.comments;
 
@@ -17,6 +18,7 @@ function* userNavigation(action) {
         yield resolveComments();
         yield resolveDocumentManifest();
         yield resolveGlossary();
+        yield resolveFolio(pathSegments);
         break;
       default:
     }
@@ -24,10 +26,35 @@ function* userNavigation(action) {
 }
 
 function* resolveDocumentManifest() {
-  const document = yield select(juxtDocument);
+  const document = yield select(justDocument);
   if (!document.loaded) {
     const response = yield axios.get(document.manifestURL);
     yield putResolveAction('DocumentActions.loadDocument', response.data);
+  }
+}
+
+function* resolveFolio(pathSegments) {
+  const document = yield select(justDocument);
+  if (document.loaded) {
+    let leftID, rightID;
+    if( pathSegments.length > 2 ) {
+      leftID = pathSegments[2];
+      if( pathSegments.length > 4 ) {
+        rightID = pathSegments[4];  
+      }
+    } 
+    const folioIDs = [];
+    folioIDs.push(leftID);
+    if( rightID && rightID !== leftID ) folioIDs.push(rightID);
+
+    for( const folioID of folioIDs ) {
+      const folioData = document.folioIndex[folioID];
+      if( !folioData.loading ) {
+        // wait for folio to load and then advance state
+        const folio = yield loadFolio(folioData);
+        yield putResolveAction('DocumentActions.loadFolio', folio);
+      }   
+    }
   }
 }
 

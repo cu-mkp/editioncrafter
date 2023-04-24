@@ -4,70 +4,39 @@ import React, { Component } from 'react';
 
 import Navigation from './Navigation';
 import ImageZoomControl from './ImageZoomControl';
+import { SeaDragonComponent } from './SeaDragonComponent';
 
 class ImageView extends Component {
-  constructor(props, context) {
-    super(props, context);
-    this.elementID = `image-view-seadragon-${this.props.side}`;
-    this.onZoomFixed_1 = this.onZoomFixed_1.bind(this);
-    this.onZoomFixed_2 = this.onZoomFixed_2.bind(this);
-    this.onZoomFixed_3 = this.onZoomFixed_3.bind(this);
 
-    this.state = {
-      isLoaded: false,
-      currentFolioID: '',
-    };
-  }
-
-  // Refresh the content only if there is an incoming change
-  UNSAFE_componentWillReceiveProps(nextProps) {
-    const { side, document } = this.props;
-    const folioID = nextProps.documentView[side].iiifShortID;
-    if (folioID) {
-      if (folioID !== this.state.currentFolioID) {
-        this.loadFolio(document.folioIndex[folioID]);
-      }
+  initViewer = (el, tileSource) => {
+    if( !el ) {
+        this.viewer = null;
+        return;
     }
-  }
 
-  componentDidMount() {
-    const { documentView, document } = this.props;
-
-    const folioID = documentView[this.props.side].iiifShortID;
-    if (folioID) {
-      if (folioID !== this.state.currentFolioID) {
-        this.loadFolio(document.folioIndex[folioID]);
-      }
-    }
-  }
-
-  loadFolio(thisFolio) {
-    // window.loadingModal_start();
-    this.setState({ ...this.state, currentFolioID: thisFolio.id });
-    if (typeof this.viewer !== 'undefined') {
-      this.viewer.destroy();
-    }
     const in_id = `os-zoom-in ${this.props.side}`;
     const out_id = `os-zoom-out ${this.props.side}`;
     this.viewer = OpenSeadragon({
-      id: this.elementID,
+      element: el,
       zoomInButton: in_id,
       zoomOutButton: out_id,
       prefixUrl: './img/openseadragon/',
     });
-    thisFolio.load().then(
-      (folio) => {
-        this.viewer.addTiledImage({
-          tileSource: folio.tileSource,
-        });
-        this.setState({ ...this.state, isLoaded: true });
-        // window.loadingModal_stop();
-      },
-      (error) => {
-        // TODO update UI
-        console.log(`Unable to load image: ${error}`);
-      },
-    );
+    this.viewer.addTiledImage({
+      tileSource,
+    });  
+  }
+
+  componentDidUpdate(prevProps) {
+    const { folioID: prevID } = prevProps
+    const { folioID } = this.props
+    if (prevID !== folioID) {
+      const { document, folioID } = this.props;
+      const folio = document.folioIndex[folioID];
+      if( folio.tileSource && this.viewer ) {
+        this.viewer.open(folio.tileSource);
+      }
+    }
   }
 
   onZoomGrid = (e) => {
@@ -87,21 +56,29 @@ class ImageView extends Component {
   };
 
   render() {
-    const thisClass = `image-view imageViewComponent ${this.props.side}`;
+    const { document, folioID, side } = this.props;
+    const folio = document.folioIndex[folioID];
+    // if( folio.loading ) {
+    //   window.loadingModal_start();
+    // } else {
+    //   window.loadingModal_stop();
+    // }
     return (
       <div>
-        <div className={thisClass}>
-          <Navigation side={this.props.side} documentView={this.props.documentView} documentViewActions={this.props.documentViewActions} />
-          <ImageZoomControl
-            side={this.props.side}
-            documentView={this.props.documentView}
-            onZoomFixed_1={this.onZoomFixed_1}
-            onZoomFixed_2={this.onZoomFixed_2}
-            onZoomFixed_3={this.onZoomFixed_3}
-            onZoomGrid={this.onZoomGrid}
-          />
-          <div id={this.elementID} />
-        </div>
+        { folio.tileSource && 
+          <div className={`image-view imageViewComponent ${this.props.side}`}>
+            <Navigation side={this.props.side} documentView={this.props.documentView} documentViewActions={this.props.documentViewActions} />
+            <ImageZoomControl
+              side={this.props.side}
+              documentView={this.props.documentView}
+              onZoomFixed_1={this.onZoomFixed_1}
+              onZoomFixed_2={this.onZoomFixed_2}
+              onZoomFixed_3={this.onZoomFixed_3}
+              onZoomGrid={this.onZoomGrid}
+            />
+            <SeaDragonComponent side={side} tileSource={folio.tileSource} initViewer={this.initViewer}></SeaDragonComponent> 
+          </div> 
+        }
       </div>
     );
   }
