@@ -14,33 +14,30 @@ class ImageView extends Component {
         return;
     }
 
-    if( !this.viewer ) {
-      const in_id = `os-zoom-in ${this.props.side}`;
-      const out_id = `os-zoom-out ${this.props.side}`;
-      this.viewer = OpenSeadragon({
-        element: el,
-        zoomInButton: in_id,
-        zoomOutButton: out_id,
-        prefixUrl: './img/openseadragon/',
-      });
-      this.viewer.addTiledImage({
-        tileSource,
-      });  
-    }
+    const in_id = `os-zoom-in ${this.props.side}`;
+    const out_id = `os-zoom-out ${this.props.side}`;
+    this.viewer = OpenSeadragon({
+      element: el,
+      zoomInButton: in_id,
+      zoomOutButton: out_id,
+      prefixUrl: './img/openseadragon/',
+    });
+    this.viewer.addTiledImage({
+      tileSource,
+    });  
   }
 
-  // loadFolio(folio) {
-  //   if( folio.loading ) {
-  //     window.loadingModal_start();
-  //     return 
-  //   }
-
-  //   }
-  //   // if (typeof this.viewer !== 'undefined') {
-  //   //   this.viewer.destroy();
-  //   // }
-  //   window.loadingModal_stop();
-  // }
+  componentDidUpdate(prevProps) {
+    const { folioID: prevID } = prevProps
+    const { folioID } = this.props
+    if (prevID !== folioID) {
+      const { document, folioID } = this.props;
+      const folio = document.folioIndex[folioID];
+      if( folio.tileSource && this.viewer ) {
+        this.viewer.open(folio.tileSource);
+      }
+    }
+  }
 
   onZoomGrid = (e) => {
     this.props.documentViewActions.changeTranscriptionType(this.props.side, 'g');
@@ -61,7 +58,11 @@ class ImageView extends Component {
   render() {
     const { document, folioID, side } = this.props;
     const folio = document.folioIndex[folioID];
-  
+    // if( folio.loading ) {
+    //   window.loadingModal_start();
+    // } else {
+    //   window.loadingModal_stop();
+    // }
     return (
       <div>
         { folio.tileSource && 

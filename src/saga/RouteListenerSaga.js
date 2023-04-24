@@ -36,8 +36,10 @@ function* resolveDocumentManifest() {
 function* resolveFolio(pathSegments) {
   const document = yield select(justDocument);
   if (document.loaded) {
+    const left = pathSegments[2];
+    const right = pathSegments[4];
     // TODO parse folioIDs from path segments
-    const folioID = 'f010';
+    const folioID = left;
     const folioData = document.folioIndex[folioID];
     if( !folioData.loading ) {
       // wait for folio to load and then advance state
