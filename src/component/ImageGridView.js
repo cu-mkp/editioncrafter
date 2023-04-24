@@ -1,7 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import InfiniteScroll from 'react-infinite-scroller';
-import DocumentHelper from '../model/DocumentHelper';
 
 class ImageGridView extends React.Component {
   constructor(props, context) {

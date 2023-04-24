@@ -28,6 +28,7 @@ class Pagination extends React.Component {
 
   render() {
     const { side, document, documentView } = this.props;
+    if( documentView[side].iiifShortID === '-1' ) return null;
     const folioName = document.folioIndex[documentView[side].iiifShortID].name;
     return (
       <div className="paginationComponent">
