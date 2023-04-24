@@ -1,9 +1,9 @@
-import withWidth, { isWidthUp } from '@material-ui/core/withWidth';
+import withWidth from '@material-ui/core/withWidth';
 import { createBrowserHistory } from 'history';
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { connect, Provider } from 'react-redux';
-import { HashRouter, Route, Switch } from 'react-router-dom';
+import { HashRouter, Route, Switch, Redirect } from 'react-router-dom';
 import DocumentView from './DocumentView';
 import RouteListener from './RouteListener';
 
@@ -75,6 +75,7 @@ class DiploMatic extends Component {
           <Route path="/ec/:folioID/:transcriptionType" render={this.renderDocumentView} exact />
           <Route path="/ec/:folioID" render={this.renderDocumentView} exact />
           <Route path="/ec" render={this.renderDocumentView} exact />
+          <Route path="/" render={() => <Redirect to="/ec" />} exact />
         </Switch>
       </div>
     );
