@@ -14,12 +14,13 @@ export function loadFolio(folioData) {
 
   // promise to load all the data for this folio
   return new Promise((resolve, reject) => {
-    if (folio.annotationURLs) {
+    const transcriptionTypes = Object.keys(folio.annotationURLs);
+    if (transcriptionTypes.length > 0) {
       axios.get(folio.image_zoom_url).then((imageServerResponse) => {
         // Handle the image server response
         folio.tileSource = new OpenSeadragon.IIIFTileSource(imageServerResponse.data);
 
-        for (const transcriptionType of Object.keys(folio.annotationURLs)) {
+        for (const transcriptionType of transcriptionTypes) {
           const { htmlURL, xmlURL } = folio.annotationURLs[transcriptionType];
           if( !folio.transcription ) folio.transcription = {};
           folio.transcription[transcriptionType] = {};
