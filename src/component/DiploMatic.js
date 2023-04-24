@@ -29,8 +29,8 @@ class DiploMatic extends Component {
           transcriptionType: 'g',
         },
         right: {
-          folioID: (isWidthUp('md', this.props.width)) ? '-1' : '1r',
-          transcriptionType: 'tc',
+          folioID: '-1',
+          transcriptionType: 'tl',
         },
       };
     } else {
@@ -41,13 +41,13 @@ class DiploMatic extends Component {
         // route /ec/:folioID/:transcriptionType/:folioID2/:transcriptionType2
         leftTranscriptionType = transcriptionType;
         rightFolioID = folioID2;
-        rightTranscriptionType = transcriptionType2 || 'tc';
+        rightTranscriptionType = transcriptionType2 || 'tl';
       } else {
         // route /ec/:folioID
         // route /ec/:folioID/:transcriptionType
         leftTranscriptionType = 'f';
         rightFolioID = folioID;
-        rightTranscriptionType = transcriptionType || 'tc';
+        rightTranscriptionType = transcriptionType || 'tl';
       }
 
       viewports = {

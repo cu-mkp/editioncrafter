@@ -49,7 +49,7 @@ function* resolveFolio(pathSegments) {
 
     for( const folioID of folioIDs ) {
       const folioData = document.folioIndex[folioID];
-      if( !folioData.loading ) {
+      if( folioData && !folioData.loading ) {
         // wait for folio to load and then advance state
         const folio = yield loadFolio(folioData);
         yield putResolveAction('DocumentActions.loadFolio', folio);
