@@ -16,7 +16,6 @@ class DocumentView extends Component {
 
     const paneDefaults = {
       isXMLMode: false,
-      isGridMode: true,
       width: 0,
     };
 
@@ -35,7 +34,6 @@ class DocumentView extends Component {
       setXMLMode: this.setXMLMode.bind(this),
       setLinkedMode: this.setLinkedMode.bind(this),
       setBookMode: this.setBookMode.bind(this),
-      setGridMode: this.setGridMode.bind(this),
       changeTranscriptionType: this.changeTranscriptionType.bind(this),
       changeCurrentFolio: this.changeCurrentFolio.bind(this),
       jumpToFolio: this.jumpToFolio.bind(this),
@@ -102,14 +100,6 @@ class DocumentView extends Component {
       return nextState;
     });
   };
-
-  setGridMode(side, newState) {
-    this.setState((state) => {
-      const nextState = { ...state };
-      nextState[side].isGridMode = newState;
-      return nextState;
-    });
-  }
 
   changeTranscriptionType(side, transcriptionType) {
     if (side === 'left') {
@@ -275,21 +265,27 @@ class DocumentView extends Component {
     const key = this.viewPaneKey(side);
 
     if (viewType === 'ImageView') {
+      const folioID = docView[side].iiifShortID;
       return (
         <ImageView
           key={key}
+          folioID={folioID}
           documentView={docView}
           documentViewActions={this.documentViewActions}
           side={side}
         />
       );
     } if (viewType === 'TranscriptionView') {
+      const folioID = docView[side].iiifShortID;
+      let transcriptionType = docView[side].transcriptionType;
       return (
         <TranscriptionView
           key={key}
           documentView={docView}
           documentViewActions={this.documentViewActions}
           side={side}
+          folioID={folioID}
+          transcriptionType={transcriptionType}
         />
       );
     } if (viewType === 'XMLView') {
@@ -348,7 +344,7 @@ class DocumentView extends Component {
     };
     const mobileDocView = {
       ...this.state,
-      right: { ...this.viewportState('right'), isGridMode: false },
+      right: { ...this.viewportState('right') },
     };
 
     if (isWidthUp('md', this.props.width)) {

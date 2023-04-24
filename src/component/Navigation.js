@@ -18,7 +18,6 @@ class Navigation extends React.Component {
     this.toggleLockmode = this.toggleLockmode.bind(this);
     this.toggleBookmode = this.toggleBookmode.bind(this);
     this.toggleXMLMode = this.toggleXMLMode.bind(this);
-    this.toggleColumns = this.toggleColumns.bind(this);
     this.changeCurrentFolio = this.changeCurrentFolio.bind(this);
     this.helpRef = null;
     this.state = {
@@ -72,14 +71,6 @@ class Navigation extends React.Component {
     this.props.documentViewActions.setXMLMode(
       this.props.side,
       !this.props.documentView[this.props.side].isXMLMode,
-    );
-  };
-
-  // aka gridMode
-  toggleColumns = function toggleColumns(event) {
-    this.props.documentViewActions.setGridMode(
-      this.props.side,
-      !this.props.documentView[this.props.side].isGridMode,
     );
   };
 
@@ -162,8 +153,6 @@ class Navigation extends React.Component {
     const imageViewActive = documentView[side].transcriptionType === 'f';
     const bookIconClass = (documentView.bookMode) ? 'fa fa-book active' : 'fa fa-book';
     const xmlIconClass = (documentView[side].isXMLMode) ? 'fa fa-code active' : 'fa fa-code';
-    // let columnIconClass = (documentView[side].isGridMode)?'fa fa-columns active':'fa fa-columns';
-    //       columnIconClass += (imageViewActive)?' hidden':'';
     const folioName = document.folioIndex[documentView[side].iiifShortID]?.name;
     const jumpToIconStyle = (imageViewActive) ? { color: 'white' } : { color: 'black' };
     // this is messy but faster for the moment then figuring out why the sides dont behave the same
