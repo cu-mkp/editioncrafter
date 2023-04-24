@@ -7,24 +7,14 @@ import ImageZoomControl from './ImageZoomControl';
 import { SeaDragonComponent } from './SeaDragonComponent';
 
 class ImageView extends Component {
-  constructor(props) {
-    super(props);
-    // this.onZoomFixed_1 = this.onZoomFixed_1.bind(this);
-    // this.onZoomFixed_2 = this.onZoomFixed_2.bind(this);
-    // this.onZoomFixed_3 = this.onZoomFixed_3.bind(this);
-    this.viewer = null;
-  }
 
-  initViewer = (el) => {
+  initViewer = (el, tileSource) => {
     if( !el ) {
         this.viewer = null;
         return;
     }
 
-    const { document, folioID } = this.props;
-    const folio = document.folioIndex[folioID];
-
-    if( !this.viewer && folio.tileSource ) {
+    if( !this.viewer ) {
       const in_id = `os-zoom-in ${this.props.side}`;
       const out_id = `os-zoom-out ${this.props.side}`;
       this.viewer = OpenSeadragon({
@@ -34,7 +24,7 @@ class ImageView extends Component {
         prefixUrl: './img/openseadragon/',
       });
       this.viewer.addTiledImage({
-        tileSource: folio.tileSource,
+        tileSource,
       });  
     }
   }
@@ -69,21 +59,25 @@ class ImageView extends Component {
   };
 
   render() {
-    const thisClass = `image-view imageViewComponent ${this.props.side}`;
+    const { document, folioID, side } = this.props;
+    const folio = document.folioIndex[folioID];
+  
     return (
       <div>
-        <div className={thisClass}>
-          <Navigation side={this.props.side} documentView={this.props.documentView} documentViewActions={this.props.documentViewActions} />
-          <ImageZoomControl
-            side={this.props.side}
-            documentView={this.props.documentView}
-            onZoomFixed_1={this.onZoomFixed_1}
-            onZoomFixed_2={this.onZoomFixed_2}
-            onZoomFixed_3={this.onZoomFixed_3}
-            onZoomGrid={this.onZoomGrid}
-          />
-          <SeaDragonComponent initViewer={this.initViewer}></SeaDragonComponent>
-        </div>
+        { folio.tileSource && 
+          <div className={`image-view imageViewComponent ${this.props.side}`}>
+            <Navigation side={this.props.side} documentView={this.props.documentView} documentViewActions={this.props.documentViewActions} />
+            <ImageZoomControl
+              side={this.props.side}
+              documentView={this.props.documentView}
+              onZoomFixed_1={this.onZoomFixed_1}
+              onZoomFixed_2={this.onZoomFixed_2}
+              onZoomFixed_3={this.onZoomFixed_3}
+              onZoomGrid={this.onZoomGrid}
+            />
+            <SeaDragonComponent side={side} tileSource={folio.tileSource} initViewer={this.initViewer}></SeaDragonComponent> 
+          </div> 
+        }
       </div>
     );
   }

@@ -6,7 +6,7 @@ export class SeaDragonComponent extends Component {
     }
 
     render() {
-        const { initViewer } = this.props
-        return <div className={`osd-viewer`} ref={(el)=> { initViewer(el) }}></div>
+        const { side, initViewer, tileSource } = this.props
+        return <div id={`image-view-seadragon-${side}`} ref={(el)=> { initViewer(el, tileSource) }}></div>
     }
 }
