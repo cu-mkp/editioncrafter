@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { withRouter } from 'react-router-dom';
+import { withRouter } from '../hocs';
 import { dispatchAction } from '../model/ReduxStore';
 
 class RouteListener extends React.Component {
@@ -9,18 +9,21 @@ class RouteListener extends React.Component {
     this.listening = false;
   }
 
+  componentDidUpdate(prevProps) {
+    if (this.props.router.location !== prevProps.router.location) {
+      this.userNavigated();
+    }
+  }
+
   componentDidMount() {
     if (!this.listening) {
       this.userNavigated();
-      this.props.history.listen((location, action) => {
-        this.userNavigated();
-      });
       this.listening = true;
     }
   }
 
   userNavigated() {
-    dispatchAction(this.props, 'RouteListenerSaga.userNavigatation', this.props.history.location);
+    dispatchAction(this.props, 'RouteListenerSaga.userNavigatation', this.props.router.location);
   }
 
   render() {
