@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import {
   FaArrowCircleLeft,
   FaArrowCircleRight,
-} from 'react-icons';
+} from 'react-icons/fa';
 
 class Pagination extends React.Component {
   constructor(props, context) {

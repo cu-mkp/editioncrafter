@@ -9,7 +9,7 @@ import ListItemText from '@material-ui/core/ListItemText';
 import {
   FaArrowCircleLeft,
   FaArrowCircleRight
-} from 'react-icons';
+} from 'react-icons/fa';
 
 const HelpPopper = (props) => (
   <Popper anchorEl={props.anchorEl} open={props.open} style={props.marginStyle}>

@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import {
   FaArrowCircleLeft,
   FaArrowCircleRight
-} from 'react-icons';
+} from 'react-icons/fa';
 import Select from '@material-ui/core/Select';
 import MenuItem from '@material-ui/core/MenuItem';
 import withWidth, { isWidthUp } from '@material-ui/core/withWidth';
