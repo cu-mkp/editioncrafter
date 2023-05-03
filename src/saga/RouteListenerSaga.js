@@ -40,9 +40,9 @@ function* resolveFolio(pathSegments) {
     if( pathSegments.length > 2 ) {
       leftID = pathSegments[2];
       if( pathSegments.length > 4 ) {
-        rightID = pathSegments[4];  
+        rightID = pathSegments[4];
       }
-    } 
+    }
     const folioIDs = [];
     folioIDs.push(leftID);
     if( rightID && rightID !== leftID ) folioIDs.push(rightID);
@@ -53,7 +53,7 @@ function* resolveFolio(pathSegments) {
         // wait for folio to load and then advance state
         const folio = yield loadFolio(folioData);
         yield putResolveAction('DocumentActions.loadFolio', folio);
-      }   
+      }
     }
   }
 }

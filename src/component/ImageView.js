@@ -7,11 +7,10 @@ import ImageZoomControl from './ImageZoomControl';
 import { SeaDragonComponent } from './SeaDragonComponent';
 
 class ImageView extends Component {
-
   initViewer = (el, tileSource) => {
-    if( !el ) {
-        this.viewer = null;
-        return;
+    if (!el) {
+      this.viewer = null;
+      return;
     }
 
     const in_id = `os-zoom-in ${this.props.side}`;
@@ -24,16 +23,16 @@ class ImageView extends Component {
     });
     this.viewer.addTiledImage({
       tileSource,
-    });  
-  }
+    });
+  };
 
   componentDidUpdate(prevProps) {
-    const { folioID: prevID } = prevProps
-    const { folioID } = this.props
+    const { folioID: prevID } = prevProps;
+    const { folioID } = this.props;
     if (prevID !== folioID) {
       const { document, folioID } = this.props;
       const folio = document.folioIndex[folioID];
-      if( folio.tileSource && this.viewer ) {
+      if (folio.tileSource && this.viewer) {
         this.viewer.open(folio.tileSource);
       }
     }
@@ -65,7 +64,8 @@ class ImageView extends Component {
     // }
     return (
       <div>
-        { folio.tileSource && 
+        { folio.tileSource
+          && (
           <div className={`image-view imageViewComponent ${this.props.side}`}>
             <Navigation side={this.props.side} documentView={this.props.documentView} documentViewActions={this.props.documentViewActions} />
             <ImageZoomControl
@@ -76,9 +76,9 @@ class ImageView extends Component {
               onZoomFixed_3={this.onZoomFixed_3}
               onZoomGrid={this.onZoomGrid}
             />
-            <SeaDragonComponent side={side} tileSource={folio.tileSource} initViewer={this.initViewer}></SeaDragonComponent> 
-          </div> 
-        }
+            <SeaDragonComponent side={side} tileSource={folio.tileSource} initViewer={this.initViewer} />
+          </div>
+          )}
       </div>
     );
   }

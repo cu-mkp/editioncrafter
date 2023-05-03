@@ -9,6 +9,7 @@ import TranscriptionView from './TranscriptionView';
 import XMLView from './XMLView';
 import GlossaryView from './GlossaryView';
 import SinglePaneView from './SinglePaneView';
+import { withRouter } from '../hocs';
 
 class DocumentView extends Component {
   constructor(props) {
@@ -28,6 +29,7 @@ class DocumentView extends Component {
       right: {
         ...paneDefaults,
       },
+      viewports: this.getViewports(),
     };
 
     this.documentViewActions = {
@@ -66,11 +68,11 @@ class DocumentView extends Component {
   }
 
   jumpToFolio(folioName, side) {
-    const { document, viewports } = this.props;
+    const { document } = this.props;
     // Convert folioName to ID (and confirm it exists)
     if (document.folioByName[folioName]) {
       const folioID = document.folioByName[folioName]?.id;
-      this.changeCurrentFolio(folioID, side, viewports[side].transcriptionType);
+      this.changeCurrentFolio(folioID, side, this.getViewports()[side].transcriptionType);
     }
   }
 
@@ -102,9 +104,10 @@ class DocumentView extends Component {
   };
 
   changeTranscriptionType(side, transcriptionType) {
+    const viewports = this.getViewports();
     if (side === 'left') {
-      const { folioID } = this.props.viewports.left;
-      const otherSide = this.props.viewports.right;
+      const { folioID } = viewports.left;
+      const otherSide = viewports.right;
       this.navigateFolios(
         folioID,
         transcriptionType,
@@ -112,8 +115,8 @@ class DocumentView extends Component {
         otherSide.transcriptionType,
       );
     } else {
-      const { folioID } = this.props.viewports.right;
-      const otherSide = this.props.viewports.left;
+      const { folioID } = viewports.right;
+      const otherSide = viewports.left;
       this.navigateFolios(
         otherSide.folioID,
         otherSide.transcriptionType,
@@ -123,33 +126,84 @@ class DocumentView extends Component {
     }
   }
 
+  getViewports = () => {
+    const {
+      folioID, transcriptionType, folioID2, transcriptionType2,
+    } = this.props.router.params;
+    let viewports;
+
+    if (!folioID) {
+      // route /folios
+      viewports = {
+        left: {
+          folioID: '-1',
+          transcriptionType: 'g',
+        },
+        right: {
+          folioID: '-1',
+          transcriptionType: 'tl',
+        },
+      };
+    } else {
+      const leftFolioID = folioID;
+      let leftTranscriptionType; let rightFolioID; let
+        rightTranscriptionType;
+      if (folioID2) {
+        // route /ec/:folioID/:transcriptionType/:folioID2/:transcriptionType2
+        leftTranscriptionType = transcriptionType;
+        rightFolioID = folioID2;
+        rightTranscriptionType = transcriptionType2 || 'tl';
+      } else {
+        // route /ec/:folioID
+        // route /ec/:folioID/:transcriptionType
+        leftTranscriptionType = 'f';
+        rightFolioID = folioID;
+        rightTranscriptionType = transcriptionType || 'tl';
+      }
+
+      viewports = {
+        left: {
+          folioID: leftFolioID,
+          transcriptionType: leftTranscriptionType,
+        },
+        right: {
+          folioID: rightFolioID,
+          transcriptionType: rightTranscriptionType,
+        },
+      };
+    }
+
+    return viewports;
+  };
+
   navigateFolios(folioID, transcriptionType, folioID2, transcriptionType2) {
     if (!folioID) {
       // goto grid view
-      this.props.history.push('/ec');
+      this.props.router.navigate('/ec');
       return;
     }
     if (!transcriptionType) {
       // goto folioID, tc
-      this.props.history.push(`/ec/${folioID}`);
+      this.props.router.navigate(`/ec/${folioID}`);
       return;
     }
     if (!folioID2) {
       // goto folioID, transcriptionType
-      this.props.history.push(`/ec/${folioID}/${transcriptionType}`);
+      this.props.router.navigate(`/ec/${folioID}/${transcriptionType}`);
       return;
     }
     if (!transcriptionType2) {
       // goto folioID, transcriptionType, folioID2, tc
-      this.props.history.push(`/ec/${folioID}/${transcriptionType}/${folioID2}/tc`);
+      this.props.router.navigate(`/ec/${folioID}/${transcriptionType}/${folioID2}/tc`);
       return;
     }
     // goto folioID, transcriptionType, folioID2, transcriptionType2
-    this.props.history.push(`/ec/${folioID}/${transcriptionType}/${folioID2}/${transcriptionType2}`);
+    this.props.router.navigate(`/ec/${folioID}/${transcriptionType}/${folioID2}/${transcriptionType2}`);
   }
 
   changeCurrentFolio(folioID, side, transcriptionType) {
     // Lookup prev/next
+    const viewports = this.getViewports();
 
     if (this.state.bookMode) {
       const [versoID, rectoID] = this.findBookFolios(folioID);
@@ -158,7 +212,7 @@ class DocumentView extends Component {
       }
     } else if (this.state.linkedMode) {
       if (side === 'left') {
-        const otherSide = this.props.viewports.right;
+        const otherSide = viewports.right;
         this.navigateFolios(
           folioID,
           transcriptionType,
@@ -166,7 +220,7 @@ class DocumentView extends Component {
           otherSide.transcriptionType,
         );
       } else {
-        const otherSide = this.props.viewports.left;
+        const otherSide = viewports.left;
         this.navigateFolios(
           folioID,
           otherSide.transcriptionType,
@@ -175,7 +229,7 @@ class DocumentView extends Component {
         );
       }
     } else if (side === 'left') {
-      const otherSide = this.props.viewports.right;
+      const otherSide = viewports.right;
       this.navigateFolios(
         folioID,
         transcriptionType,
@@ -183,7 +237,7 @@ class DocumentView extends Component {
         otherSide.transcriptionType,
       );
     } else {
-      const otherSide = this.props.viewports.left;
+      const otherSide = viewports.left;
       this.navigateFolios(
         otherSide.folioID,
         otherSide.transcriptionType,
@@ -194,7 +248,7 @@ class DocumentView extends Component {
   }
 
   determineViewType(side) {
-    const { transcriptionType } = this.props.viewports[side];
+    const { transcriptionType } = this.getViewports()[side];
     const xmlMode = this.state[side].isXMLMode;
 
     if (transcriptionType === 'g') {
@@ -210,8 +264,8 @@ class DocumentView extends Component {
   }
 
   viewportState(side) {
-    const { document: doc, viewports } = this.props;
-    const viewport = viewports[side];
+    const { document: doc } = this.props;
+    const viewport = this.getViewports()[side];
 
     // blank folio ID
     if (viewport.folioID === '-1') {
@@ -374,4 +428,4 @@ function mapStateToProps(state) {
   };
 }
 
-export default withWidth()(connect(mapStateToProps)(DocumentView));
+export default withWidth()(connect(mapStateToProps)(withRouter(DocumentView)));
