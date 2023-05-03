@@ -1,7 +1,6 @@
 dist/
 coverage/
 node_modules/
-package-lock.json
 *.log
 *.tgz
 __tests__/integration/editioncrafter/bnf-ms-fr-640/

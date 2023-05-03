@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "",
   "private": true,
-  "main": "dist/cjs/src/index.js",
+  "main": "dist/es/src/index.js",
   "module": "dist/es/src/index.js",
   "files": [
     "dist"
@@ -37,8 +37,6 @@
     "html-react-parser": "^3.0.9",
     "openseadragon": "^4.0.0",
     "prop-types": "^15.5.10",
-    "react": "^17.0.0",
-    "react-dom": "^17.0.0",
     "react-font-awesome-5": "^0.2.2",
     "react-infinite-scroller": "^1.1.3",
     "react-redux": "^8.0.5",
@@ -89,6 +87,8 @@
     "npm": "^6.14.2",
     "npm-run-all": "^4.1.5",
     "puppeteer": "^19.7.2",
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0",
     "redux-mock-store": "^1.5.1",
     "redux-saga-test-plan": "^4.0.6",
     "sass": "^1.61.0",
@@ -100,5 +100,13 @@
     "webpack": "^5.78.0",
     "webpack-cli": "^4.9.2",
     "webpack-dev-server": "^4.7.4"
+  },
+  "peerDependencies": {
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0"
+  },
+  "overrides": {
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0"
   }
 }

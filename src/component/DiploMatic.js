@@ -44,6 +44,7 @@ class DiploMatic extends Component {
 
 DiploMatic.propTypes = {
   store: PropTypes.object.isRequired,
+  config: PropTypes.object.isRequired
 };
 
 function mapStateToProps(state) {
