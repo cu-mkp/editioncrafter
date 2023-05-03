@@ -1,6 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Icon } from 'react-font-awesome-5';
+import {
+  FaArrowCircleLeft,
+  FaArrowCircleRight
+} from 'react-icons';
 import Select from '@material-ui/core/Select';
 import MenuItem from '@material-ui/core/MenuItem';
 import withWidth, { isWidthUp } from '@material-ui/core/withWidth';
@@ -193,7 +196,7 @@ class Navigation extends React.Component {
                 className={(documentView[side].hasPrevious) ? 'arrow' : 'arrow disabled'}
               >
                 {' '}
-                <Icon.ArrowCircleLeft />
+                <FaArrowCircleLeft />
                 {' '}
 
               </span>
@@ -205,7 +208,7 @@ class Navigation extends React.Component {
                 className={(documentView[side].hasNext) ? 'arrow' : 'arrow disabled'}
               >
                 {' '}
-                <Icon.ArrowCircleRight />
+                <FaArrowCircleRight />
               </span>
                                                 &nbsp;&nbsp;
               {document.documentName}

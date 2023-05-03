@@ -1,6 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Icon } from 'react-font-awesome-5';
+import {
+  FaArrowCircleLeft,
+  FaArrowCircleRight,
+} from 'react-icons';
 
 class Pagination extends React.Component {
   constructor(props, context) {
@@ -40,7 +43,7 @@ class Pagination extends React.Component {
             data-id={documentView[side].previousFolioShortID}
             className={(documentView[side].hasPrevious) ? 'arrow' : 'arrow disabled'}
           >
-            <Icon.ArrowCircleLeft />
+            <FaArrowCircleLeft />
           </span>
 
           <span className="folioName">
@@ -54,7 +57,7 @@ class Pagination extends React.Component {
             className={(documentView[side].hasNext) ? 'arrow' : 'arrow disabled'}
           >
             {' '}
-            <Icon.ArrowCircleRight />
+            <FaArrowCircleRight />
           </span>
         </div>
       </div>

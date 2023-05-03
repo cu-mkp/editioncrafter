@@ -6,7 +6,10 @@ import Paper from '@material-ui/core/Paper';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
-import { Icon } from 'react-font-awesome-5';
+import {
+  FaArrowCircleLeft,
+  FaArrowCircleRight
+} from 'react-icons';
 
 const HelpPopper = (props) => (
   <Popper anchorEl={props.anchorEl} open={props.open} style={props.marginStyle}>
@@ -32,8 +35,8 @@ const HelpPopper = (props) => (
             </ListItem>
             <ListItem>
               <span>
-                <Icon.ArrowCircleLeft />
-                <Icon.ArrowCircleRight />
+                <FaArrowCircleLeft />
+                <FaArrowCircleRight />
               </span>
               <ListItemText primary="Go Forward / Back" />
             </ListItem>
