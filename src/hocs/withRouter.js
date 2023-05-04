@@ -6,7 +6,7 @@ import {
 // react-router 6 dropped support for class components and requires hooks.
 // This component wraps the hooks into an HOC to be used like the old withRouter.
 // Inspired by a combination of several StackOverflow and GitHub posts.
-export function withRouter(Component) {
+function withRouter(Component) {
   const WithRouterComponent = (props) => {
     const location = useLocation();
     const navigate = useNavigate();
@@ -24,3 +24,5 @@ export function withRouter(Component) {
 
   return WithRouterComponent;
 }
+
+export default withRouter;

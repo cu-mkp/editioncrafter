@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { withRouter } from '../hocs';
+import withRouter from '../hocs/withRouter';
 import { dispatchAction } from '../model/ReduxStore';
 
 class RouteListener extends React.Component {

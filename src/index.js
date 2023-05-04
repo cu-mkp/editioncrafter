@@ -1,24 +1,30 @@
-import React, { Component } from 'react';
-import { ThemeProvider } from '@material-ui/core/styles';
+import React from 'react';
+import { createTheme, ThemeProvider } from '@material-ui/core/styles';
 import DiploMatic from './component/DiploMatic';
 import { createReduxStore } from './model/ReduxStore';
-import theme from './theme';
 
 /**
  * Default instantiation
  */
-class EditionCrafter extends Component {
-  componentDidMount() {
-    console.log('hello');
-  }
+const EditionCrafter = (props) => {
+  const theme = createTheme({
+    palette: {
+      primary: {
+        main: '#792421',
+      },
+      secondary: {
+        main: '#EBE3DD',
+      },
+    },
+  });
 
-  render() {
-    return (
+  return (
+    <div>
       <ThemeProvider theme={theme}>
-        <DiploMatic config={this.props.config} store={createReduxStore(this.props.config)} />
+        <DiploMatic config={props.config} store={createReduxStore(props.config)} />
       </ThemeProvider>
-    );
-  }
-}
+    </div>
+  );
+};
 
 export default EditionCrafter;

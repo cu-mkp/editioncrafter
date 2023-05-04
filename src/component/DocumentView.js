@@ -9,7 +9,7 @@ import TranscriptionView from './TranscriptionView';
 import XMLView from './XMLView';
 import GlossaryView from './GlossaryView';
 import SinglePaneView from './SinglePaneView';
-import { withRouter } from '../hocs';
+import withRouter from '../hocs/withRouter';
 
 class DocumentView extends Component {
   constructor(props) {
