@@ -1,7 +1,7 @@
 import React from 'react';
 import {
   useNavigate, useParams, useLocation,
-} from 'react-router';
+} from 'react-router-dom';
 
 // react-router 6 dropped support for class components and requires hooks.
 // This component wraps the hooks into an HOC to be used like the old withRouter.
