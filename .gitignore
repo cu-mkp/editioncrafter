@@ -1,4 +1,5 @@
 dist/
+.parcel-cache/
 coverage/
 node_modules/
 *.log

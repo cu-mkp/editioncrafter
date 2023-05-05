@@ -1,6 +1,10 @@
 # editioncrafter
 UNDER DEVELOPMENT: Software for the development of EditionCrafter, digital critical edition publication tool
 
+## Structure of this repository
+
+There are two apps in this repo. `editioncrafter` is a React component, while `editioncrafter-umd` wraps the React component into a UMD module for use on non-React pages.
+
 ## Storybook
 
 For local development, you can use the Storybook component.
