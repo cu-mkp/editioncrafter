@@ -1,5 +1,5 @@
 import React from 'react';
-import EditionCrafter from '../index';
+import EditionCrafter from '../src/index';
 
 import './assets/editioncrafter.css';
 
