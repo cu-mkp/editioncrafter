@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import EditionCrafter from '../../editioncrafter/dist/editioncrafter.min.js';
+import EditionCrafterComponent from '../../editioncrafter/dist/editioncrafter.min.js';
 
 /**
  * Default instantiation
@@ -14,7 +14,7 @@ class EditionCrafter {
     if (config.id) {
       this.container = document.getElementById(config.id);
       config.id && ReactDOM.render(
-        <EditionCrafter config={config} />,
+        <EditionCrafterComponent config={config} />,
         this.container,
       );
     }
