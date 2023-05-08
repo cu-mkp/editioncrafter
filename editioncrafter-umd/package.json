@@ -10,7 +10,7 @@
   ],
   "scripts": {
     "watch": "parcel watch",
-    "build": "parcel build src/index.js"
+    "build": "parcel build src/index.js --global EditionCrafter"
   },
   "license": "MIT",
   "repository": "https://github.com/cu-mkp/editioncrafter",

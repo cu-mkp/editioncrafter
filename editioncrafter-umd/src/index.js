@@ -1,5 +1,10 @@
-import init from './init';
+import EditionCrafter from './EditionCrafter';
 
-export default {
-  ...init,
-};
+/**
+ * Default Mirador instantiation
+ */
+function viewer(config) {
+  return new EditionCrafter(config);
+}
+
+export { viewer };
