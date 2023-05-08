@@ -1,0 +1,178 @@
+
+.transcriptionViewComponent {
+	overflow: scroll;
+    height:calc(100vh - 7rem);
+	.transcriptContent {
+		padding: 50px 16px;
+		@include md {
+			padding: 5px 16px;
+		}
+	   
+	  -webkit-user-select: text;
+	  -moz-user-select: text;
+	  -ms-user-select: text;
+	  user-select: text;
+	  margin-bottom:92px;
+  
+	  figure {
+		  display: inline;
+	  }
+	  	
+	.block[data-layout='right-middle'] {
+		max-width: 250px;
+	}
+	
+	.block[data-layout='right-top'] {
+		max-width: 250px;
+	}
+	
+	.block[data-layout='right-bottom'] {
+		max-width: 250px;
+	}
+	
+	// TODO refactor to appropriate TEI element
+	// .ups {
+	// 	background: lightgray;
+	// 	font-size: 14px;
+	// }
+	
+	.x-small-inline-figure {
+		margin: 5px;
+		border: 1px solid gray;
+		width: 30px;
+	}
+	
+	.small-inline-figure {
+		margin: 5px;
+		border: 1px solid gray;
+		width: 60px;
+	}
+	
+	.medium-inline-figure {
+		margin: 5px;
+		border: 1px solid gray;
+		width: 200px;
+	}
+	
+	.large-inline-figure {
+		margin: 5px;
+		border: 1px solid gray;
+		width: 350px;
+	}
+	
+	
+	.surface {
+		grid-area: transcription;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+	
+	.grid-mode {
+		display: grid;
+		grid-auto-rows: minmax(min-content, 0fr);
+		grid-gap: 2px;
+	}
+	
+	.surface > .small-font {
+		font-size: 11pt;
+	}
+	
+	.surface > div {
+		padding: 10px;
+	}
+	
+	.surface > #z0 {
+		grid-area: z0;
+	}
+	
+	.surface > #z1 {
+		grid-area: z1;
+	}
+	
+	.surface > #z2 {
+		grid-area: z2;
+	}
+	
+	.surface > #z3 {
+		grid-area: z3;
+	}
+	
+	.surface > #z4 {
+		grid-area: z4;
+	}
+	
+	.surface > #z5 {
+		grid-area: z5;
+	}
+	
+	.surface > #z6 {
+		grid-area: z6;
+	}
+	
+	.surface > #z7 {
+		grid-area: z7;
+	}
+	
+	.surface > #z8 {
+		grid-area: z8;
+	}
+	
+	.surface > #z9 {
+		grid-area: z9;
+	}
+	
+	.surface > #z10 {
+		grid-area: z10;
+	}
+	
+	.surface > #z11 {
+		grid-area: z11;
+	}
+	
+	.surface > #z12 {
+		grid-area: z12;
+	}
+	
+	.surface > #z13 {
+		grid-area: z13;
+	}
+	
+	.surface > #z14 {
+		grid-area: z14;
+	}
+	
+	.surface > #z15 {
+		grid-area: z15;
+	}
+	
+	.surface > #z16 {
+		grid-area: z16;
+	}
+	
+	.surface > #z17 {
+		grid-area: z17;
+	}
+	
+	.surface > #z18 {
+		grid-area: z18;
+	}
+	
+	.surface > #z19 {
+		grid-area: z19;
+	}
+	
+	.surface > #z20 {
+		grid-area: z20;
+	}
+	 .highlight {
+		 background-color: yellow;
+	 }
+  }
+}
+
+.editor-comment-content {
+	word-wrap:break-word;
+}
+
+

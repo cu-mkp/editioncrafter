@@ -1,0 +1,25 @@
+{
+  "name": "@performant-software/edition-crafter-umd",
+  "version": "0.0.2",
+  "description": "",
+  "private": false,
+  "source": "src/index.js",
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "watch": "parcel watch",
+    "build": "parcel build src/index.js"
+  },
+  "license": "MIT",
+  "repository": "https://github.com/cu-mkp/editioncrafter",
+  "dependencies": {
+    "editioncrafter": "file:../editioncrafter/dist/es",
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0"
+  },
+  "devDependencies": {
+    "parcel": "1.12.3"
+  }
+}

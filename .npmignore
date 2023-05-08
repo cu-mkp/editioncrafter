@@ -1,0 +1,13 @@
+__mocks__
+__tests__
+.github
+.storybook
+docs
+.gitignore
+.newtab.png
+**/stories
+dist/
+coverage/
+node_modules/
+*.log
+*.tgz

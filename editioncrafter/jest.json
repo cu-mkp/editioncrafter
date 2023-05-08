@@ -1,0 +1,21 @@
+{
+  "collectCoverage": true,
+  "collectCoverageFrom": [
+    "src/**/*.{js,jsx}",
+    "!src/**/index*.js",
+    "!src/containers/**/*.{js,jsx}"
+  ],
+  "coverageDirectory": "<rootDir>/coverage",
+  "coverageReporters": ["html", "lcov"],
+  "moduleNameMapper": {
+    "\\.s?css$": "<rootDir>/__mocks__/css.js"
+  },
+  "setupFiles": [
+    "<rootDir>/setupJest.js"
+  ],
+  "testMatch": [
+    "<rootDir>/**/__tests__/**/*.{js,jsx}",
+    "<rootDir>/src/**/?(*.)(spec|test|unit).{js,jsx}"
+  ],
+  "preset": "jest-puppeteer"
+}

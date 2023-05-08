@@ -1,0 +1,35 @@
+.split-pane-view {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-areas: "image_viewer divider transcription";
+}
+
+.split-pane-view > .divider {
+    z-index: 2;
+    grid-area: divider;
+    width: 1rem;
+    background: #BBB;
+    cursor:ew-resize;
+    display: flex;
+}
+
+.split-pane-view > .divider > .drawer-button {
+  align-self: center;
+  align: center;
+  cursor: auto;
+}
+
+.split-pane-view > .divider > .drawer-button:hover {
+  color: white;
+}
+
+.split-pane-view > .divider > .hidden {
+  display: none;
+}
+
+.split-pane-view {
+  #annotation-view{
+    font-size: 16px;
+  }
+}
