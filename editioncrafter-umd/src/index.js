@@ -1,4 +1,4 @@
-import EditionCrafter from './EditionCrafter.jsx';
+import EditionCrafter from './EditionCrafter';
 
 /**
  * Default Mirador instantiation

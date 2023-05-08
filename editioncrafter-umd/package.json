@@ -4,7 +4,7 @@
   "description": "",
   "private": false,
   "source": "src/index.js",
-  "main": "dist/index.js",
+  "main": "dist/editioncrafter.min.js",
   "files": [
     "dist"
   ],
@@ -14,7 +14,7 @@
   "license": "MIT",
   "repository": "https://github.com/cu-mkp/editioncrafter",
   "dependencies": {
-    "editioncrafter": "file:../editioncrafter/dist/es",
+    "@performant-software/editioncrafter": "^0.0.3",
     "react": "^17.0.0",
     "react-dom": "^17.0.0"
   },
