@@ -1,0 +1,51 @@
+.ImageZoomControl {
+  position: absolute;
+  z-index: 1;
+  top: 8rem;
+  color: white;
+  // width: 1rem;
+  list-style: none;
+  background: #4A4A4A;
+  opacity: 0.4;
+  margin:0;
+  padding:.4rem .5rem;
+  border-radius: 0.3rem;
+  @include md {
+      top:4rem;
+      left: 2rem;
+  }
+}
+
+.ImageZoomControl > li {
+  color: #E0E0E0;
+}
+
+.ImageZoomControl > li > .zoom-in {
+  margin-top: 8px;
+}
+
+.ImageZoomControl > li:hover {
+  color: white;
+}
+
+.ImageZoomControl > li > .zoom-3 {
+  margin-top: 8px;
+}
+
+.ImageZoomControl > li > .zoom-2 {
+  margin-top: 8px;
+  margin-left: 5px;
+}
+
+.ImageZoomControl > li > .zoom-1 {
+  margin-top: 8px;
+  margin-left: 7px;
+}
+
+.ImageZoomControl > li > .zoom-out {
+  margin-top: 8px;
+}
+
+.ImageZoomControl > li > .zoom-grid {
+  margin-top: 30px;
+}
