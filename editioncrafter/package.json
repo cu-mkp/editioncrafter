@@ -1,9 +1,9 @@
 {
   "name": "@performant-software/edition-crafter",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "",
   "private": false,
-  "main": "dist/es/src/index.js",
+  "main": "dist/cjs/src/index.js",
   "module": "dist/es/src/index.js",
   "files": [
     "dist"
