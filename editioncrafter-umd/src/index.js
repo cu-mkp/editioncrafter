@@ -1,4 +1,4 @@
-import EditionCrafter from './EditionCrafter';
+import EditionCrafter from './EditionCrafter.jsx';
 
 /**
  * Default Mirador instantiation
@@ -7,4 +7,6 @@ function viewer(config) {
   return new EditionCrafter(config);
 }
 
-export { viewer };
+export default {
+  viewer
+};
