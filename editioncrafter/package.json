@@ -1,6 +1,6 @@
 {
   "name": "@performant-software/editioncrafter",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "",
   "private": false,
   "main": "dist/cjs/src/index.js",

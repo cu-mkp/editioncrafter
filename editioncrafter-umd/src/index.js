@@ -7,4 +7,6 @@ function viewer(config) {
   return new EditionCrafter(config);
 }
 
-export { viewer };
+export default {
+  viewer
+};
