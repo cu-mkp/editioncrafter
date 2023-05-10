@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import EditionCrafterComponent from '@performant-software/editioncrafter';
+import EditionCrafterComponent from '@cu-mkp/editioncrafter';
 
 /**
  * Default instantiation
