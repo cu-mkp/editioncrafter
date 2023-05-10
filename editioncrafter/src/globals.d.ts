@@ -1,1 +1,1 @@
-declare module '@performant-software/editioncrafter'
+declare module '@cu-mkp/editioncrafter'

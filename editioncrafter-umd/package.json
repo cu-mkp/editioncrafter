@@ -1,5 +1,5 @@
 {
-  "name": "@performant-software/editioncrafter-umd",
+  "name": "@cu-mkp/editioncrafter-umd",
   "version": "0.0.4",
   "description": "",
   "private": false,
@@ -14,7 +14,7 @@
   "license": "MIT",
   "repository": "https://github.com/cu-mkp/editioncrafter",
   "dependencies": {
-    "@performant-software/editioncrafter": "^0.0.4",
+    "@cu-mkp/editioncrafter": "^0.0.4",
     "react": "^17.0.0",
     "react-dom": "^17.0.0"
   },

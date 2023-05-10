@@ -11,12 +11,12 @@ jobs:
         with:
           node-version: '20.x'
           registry-url: 'https://registry.npmjs.org'
-          scope: '@performant-software'
+          scope: '@cu-mkp'
       - name: Publish React component
-        run: cd editioncrafter && npm ci && npm publish --access public
+        run: cd editioncrafter && npm install && npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       - name: Publish UMD build
-        run: cd editioncrafter-umd && npm ci && npm run build && npm publish --access public
+        run: cd editioncrafter-umd && npm install && npm update @cu-mkp/editioncrafter && npm run build && npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
