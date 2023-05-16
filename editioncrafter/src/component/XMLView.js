@@ -17,7 +17,6 @@ class XMLView extends Component {
       return;
     }
     downloadFolio(folio).then((data) => {
-      console.log(data);
       const folioID = documentView[side].iiifShortID;
       this.setState({
         folio: data,
