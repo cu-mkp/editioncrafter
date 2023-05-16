@@ -21,6 +21,10 @@ const baseConfig = mode => ({
         },
         test: /\.(js|mjs|jsx)$/,
       },
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        type: 'asset/resource',
+      },
     ],
   },
   optimization: {
