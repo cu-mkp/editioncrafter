@@ -22,6 +22,7 @@ class Pagination extends React.Component {
     }
 
     const folioID = dataset.id;
+
     documentViewActions.changeCurrentFolio(
       folioID,
       side,

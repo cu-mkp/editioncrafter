@@ -76,22 +76,19 @@ class DocumentView extends Component {
     }
   }
 
-  findBookFolios(shortID) {
+  findBookFolios(folioID) {
     const { document } = this.props;
+    const versoFolio = document.folioIndex[folioID];
+    const { name, pageNumber } = versoFolio;
 
-    const versoFolio = document.folioNameByIDIndex[shortID];
-    let versoIndex = document.folioIndex.indexOf(shortID);
-
-    if (!versoFolio.endsWith('v')) {
-      if (versoFolio.endsWith('r')) {
-        versoIndex -= 1;
-      } else {
-        return [null, null];
+    if (!name.endsWith('v')) {
+      if (name.endsWith('r')) {
+        return [document.folios[pageNumber - 1].id, document.folios[pageNumber].id];
       }
+      return [null, null];
     }
 
-    const rectoIndex = versoIndex + 1;
-    return [document.folioIndex[versoIndex], document.folioIndex[rectoIndex]];
+    return [document.folios[pageNumber].id, document.folios[pageNumber + 1].id];
   }
 
   onWidth = (left, right) => {
@@ -286,6 +283,7 @@ class DocumentView extends Component {
     if (this.state.bookMode) {
       const [versoID] = this.findBookFolios(shortID);
       const current_idx = doc.folioIndex[versoID].pageNumber;
+
       if (current_idx > -1) {
         current_hasNext = (current_idx < (folioCount - 2));
         nextID = current_hasNext ? doc.folios[current_idx + 2].id : '';
