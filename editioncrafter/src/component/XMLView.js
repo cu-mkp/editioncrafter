@@ -2,13 +2,12 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Navigation from './Navigation';
 import Pagination from './Pagination';
-import DocumentHelper from '../model/DocumentHelper';
+import { loadFolio as downloadFolio } from '../model/Folio';
 
 class XMLView extends Component {
   constructor(props) {
     super(props);
     this.state = { folio: [], isLoaded: false, currentlyLoaded: '' };
-    this.contentChange = true;
   }
 
   loadFolio(folio) {
@@ -17,10 +16,11 @@ class XMLView extends Component {
       // console.log("TranscriptView: Folio is undefined when you called loadFolio()!");
       return;
     }
-    folio.load().then((folio) => {
+    downloadFolio(folio).then((data) => {
+      console.log(data);
       const folioID = documentView[side].iiifShortID;
       this.setState({
-        folio,
+        folio: data,
         isLoaded: true,
         currentlyLoaded: folioID,
       });
@@ -31,20 +31,18 @@ class XMLView extends Component {
     });
   }
 
-  // Refresh the content if there is an incoming change
-  UNSAFE_componentWillReceiveProps(nextProps) {
-    this.contentChange = false;
-    const nextFolioID = nextProps.documentView[this.props.side].iiifShortID;
+  componentDidUpdate() {
+    // Refresh the content if there is an incoming change
+    let contentChange = false;
+    const nextFolioID = this.props.documentView[this.props.side].iiifShortID;
     if (this.state.currentlyLoaded !== nextFolioID) {
-      this.contentChange = true;
+      contentChange = true;
+      console.log(nextFolioID);
       this.loadFolio(this.props.document.folioIndex[nextFolioID]);
     }
-  }
 
-  componentDidUpdate() {
     // TODO make this work for XML view
-
-    if (this.contentChange) {
+    if (contentChange) {
       // Scroll content to top
       const selector = `xmlViewComponent_${this.props.side}`;
       const el = document.getElementById(selector);
@@ -83,7 +81,10 @@ class XMLView extends Component {
 
     // get the xml for this transcription
     const { transcriptionType } = documentView[side];
-    const xmlContent = this.state.folio.transcription[`${transcriptionType}_xml`];
+    let xmlContent = '';
+    if (this.state.folio.transcription) {
+      xmlContent = this.state.folio.transcription[transcriptionType].html;
+    }
 
     return (
       <div id={thisID} className={thisClass}>
