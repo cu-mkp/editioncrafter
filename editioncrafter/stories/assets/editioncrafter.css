@@ -482,10 +482,18 @@ figure.current {
   cursor: pointer;
 }
 
+.helpContainer .MuiListItem-root {
+  display: flex;
+  gap: 10px;
+}
+
 .helpContainer {
   padding: 12px;
   width: 335px;
-  height: 740px;
+  height: min(600px, 100vh - 40px);
+  position: relative;
+  top: 40px;
+  overflow-x: auto;
 }
 .helpContainer .readingGuide td {
   padding: 8px;
@@ -1333,6 +1341,11 @@ figure.current {
   border-bottom-color: rgba(90, 98, 102, 0.53);
   border-width: 11px;
   margin-left: -11px;
+}
+
+.MuiListItem-root {
+  display: flex;
+  gap: 10px;
 }
 
 /* This is a sample stylesheet for use with CETEIcean. It is not intended    */
