@@ -31,7 +31,7 @@ const baseConfig = mode => ({
       },
       {
         test: /\.(png|jpe?g|gif)$/i,
-        type: 'asset/resource',
+        type: 'asset/inline',
       },
     ],
   },
