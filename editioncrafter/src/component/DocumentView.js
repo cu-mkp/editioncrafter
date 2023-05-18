@@ -317,9 +317,10 @@ class DocumentView extends Component {
   renderPane(side, docView) {
     const viewType = this.determineViewType(side);
     const key = this.viewPaneKey(side);
+    const folioID = docView[side].iiifShortID;
+    let transcriptionType = docView[side].transcriptionType;
 
     if (viewType === 'ImageView') {
-      const folioID = docView[side].iiifShortID;
       return (
         <ImageView
           key={key}
@@ -330,8 +331,6 @@ class DocumentView extends Component {
         />
       );
     } if (viewType === 'TranscriptionView') {
-      const folioID = docView[side].iiifShortID;
-      let transcriptionType = docView[side].transcriptionType;
       return (
         <TranscriptionView
           key={key}
@@ -346,6 +345,8 @@ class DocumentView extends Component {
       return (
         <XMLView
           key={key}
+          folioID={folioID}
+          transcriptionType={transcriptionType}
           documentView={docView}
           documentViewActions={this.documentViewActions}
           side={side}

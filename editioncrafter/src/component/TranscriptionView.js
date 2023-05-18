@@ -5,6 +5,7 @@ import Navigation from './Navigation';
 import Pagination from './Pagination';
 import EditorComment from './EditorComment';
 import ErrorBoundary from './ErrorBoundary';
+import Watermark from './Watermark';
 
 class TranscriptionView extends Component {
   // Recursively unpack a node tree object and just return the text
@@ -27,12 +28,24 @@ class TranscriptionView extends Component {
     } = this.props;
 
     if (folioID === '-1') {
-      return watermark(documentView, documentViewActions, side);
+      return (
+        <Watermark
+          documentView={documentView}
+          documentViewActions={documentViewActions}
+          side={side}
+        />
+      );
     }
 
     const folio = document.folioIndex[folioID];
     if (!folio.transcription) {
-      return watermark(documentView, documentViewActions, side);
+      return (
+        <Watermark
+          documentView={documentView}
+          documentViewActions={documentViewActions}
+          side={side}
+        />
+      );
     }
     const transcriptionData = folio.transcription[transcriptionType];
 
@@ -90,20 +103,6 @@ function htmlToReactParserOptions() {
     },
   };
   return parserOptions;
-}
-
-function watermark(documentView, documentViewActions, side) {
-  return (
-    <div>
-        <Navigation side={side} documentView={documentView} documentViewActions={documentViewActions} />
-        <div className="transcriptContent">
-          <Pagination side={side} className="pagination_upper" documentView={documentView} documentViewActions={documentViewActions} />
-          <div className="watermark">
-            <div className="watermark_contents" />
-          </div>
-        </div>
-    </div>
-  );
 }
 
 function mapStateToProps(state) {

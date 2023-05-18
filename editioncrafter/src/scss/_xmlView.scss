@@ -1,7 +1,7 @@
 .xmlViewComponent .navigationComponent {
   background-color: white;
   color: #000000; }
-  
+
 .xmlContent {
   padding: 0;
   margin: 4.5rem 0 0;
@@ -15,11 +15,15 @@
  }
 
 .xmlViewComponent {
-  overflow: scroll;
+  overflow: auto;
   margin: 0 0 0 1rem;
   height: calc(100vh - 7rem);
 }
 
 .xmlContentInner {
-  overflow-x: scroll;
+  max-height: 100%;
+}
+
+.xmlContentInner pre {
+  overflow-x: auto;
 }

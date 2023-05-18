@@ -14,14 +14,13 @@ class ImageGridView extends React.Component {
     };
   }
 
-  // TODO REFACTOR
-  UNSAFE_componentWillReceiveProps(nextProps) {
+  componentDidUpdate(prevProps) {
     const { documentView } = this.props;
     const folioID = documentView[this.props.side].iiifShortID;
-    const nextFolioID = nextProps.documentView[this.props.side].iiifShortID;
+    const nextFolioID = this.props.documentView[this.props.side].iiifShortID;
 
     if (folioID !== nextFolioID) {
-      const thumbs = this.generateThumbs(nextFolioID, nextProps.document.folios);
+      const thumbs = this.generateThumbs(nextFolioID, this.props.document.folios);
       const thumbCount = (thumbs.length > this.loadIncrement) ? this.loadIncrement : thumbs.length;
       const visibleThumbs = thumbs.slice(0, thumbCount);
       this.setState({ thumbs, visibleThumbs });
