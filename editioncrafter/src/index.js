@@ -2,6 +2,7 @@ import React from 'react';
 import { createTheme, ThemeProvider } from '@material-ui/core/styles';
 import DiploMatic from './component/DiploMatic';
 import { createReduxStore } from './model/ReduxStore';
+import './scss/editioncrafter.scss';
 
 /**
  * Default instantiation
