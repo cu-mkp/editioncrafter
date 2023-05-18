@@ -2,57 +2,9 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Navigation from './Navigation';
 import Pagination from './Pagination';
-import { loadFolio as downloadFolio } from '../model/Folio';
+import Watermark from './Watermark';
 
 class XMLView extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { folio: [], isLoaded: false, currentlyLoaded: '' };
-  }
-
-  loadFolio(folio) {
-    const { side, documentView } = this.props;
-    if (typeof folio === 'undefined') {
-      // console.log("TranscriptView: Folio is undefined when you called loadFolio()!");
-      return;
-    }
-    console.log('calling downloadFolio');
-    downloadFolio(folio).then((data) => {
-      const folioID = documentView[side].iiifShortID;
-      this.setState({
-        folio: data,
-        isLoaded: true,
-        currentlyLoaded: folioID,
-      });
-      // this.forceUpdate();
-    }, (error) => {
-      console.log(`Unable to load transcription: ${error}`);
-      // this.forceUpdate();
-    });
-  }
-
-  // componentDidUpdate(prevProps, prevState) {
-  //   // Refresh the content if there is an incoming change
-  //   let contentChange = false;
-  //   const newFolioID = this.props.documentView[this.props.side].iiifShortID;
-
-  //   if (prevState.currentlyLoaded !== newFolioID) {
-  //     contentChange = true;
-  //     this.loadFolio(this.props.document.folioIndex[newFolioID]);
-  //   }
-
-  //   // TODO make this work for XML view
-  //   if (contentChange) {
-  //     // Scroll content to top
-  //     const selector = `xmlViewComponent_${this.props.side}`;
-  //     const el = document.getElementById(selector);
-  //     if (el !== null) {
-  //       // console.log(selector + "scroll to top");
-  //       el.scrollTop = 0;
-  //     }
-  //   }
-  // }
-
   // RENDER
   render() {
     const {
@@ -70,11 +22,17 @@ class XMLView extends Component {
           <div className="watermark_contents" />
         </div>
       );
-    } 
+    }
 
     const folio = document.folioIndex[folioID];
     if (!folio.transcription) {
-      return watermark(documentView, documentViewActions, side);
+      return (
+        <Watermark
+          documentView={documentView}
+          documentViewActions={documentViewActions}
+          side={side}
+        />
+      );
     }
 
     const { transcriptionType } = documentView[side];
