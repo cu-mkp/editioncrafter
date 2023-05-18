@@ -1181,13 +1181,17 @@ figure.current {
 }
 
 .xmlViewComponent {
-  overflow: scroll;
+  overflow: auto;
   margin: 0 0 0 1rem;
   height: calc(100vh - 7rem);
 }
 
 .xmlContentInner {
-  overflow-x: scroll;
+  max-height: 100%;
+}
+
+.xmlContentInner pre {
+  overflow-x: auto;
 }
 
 #glossaryView #glossaryViewInner {

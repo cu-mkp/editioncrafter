@@ -16,6 +16,7 @@ class XMLView extends Component {
       // console.log("TranscriptView: Folio is undefined when you called loadFolio()!");
       return;
     }
+    console.log('calling downloadFolio');
     downloadFolio(folio).then((data) => {
       const folioID = documentView[side].iiifShortID;
       this.setState({
@@ -30,14 +31,14 @@ class XMLView extends Component {
     });
   }
 
-  componentDidUpdate() {
+  componentDidUpdate(prevProps, prevState) {
     // Refresh the content if there is an incoming change
     let contentChange = false;
-    const nextFolioID = this.props.documentView[this.props.side].iiifShortID;
-    if (this.state.currentlyLoaded !== nextFolioID) {
+    const newFolioID = this.props.documentView[this.props.side].iiifShortID;
+
+    if (prevState.currentlyLoaded !== newFolioID) {
       contentChange = true;
-      console.log(nextFolioID);
-      this.loadFolio(this.props.document.folioIndex[nextFolioID]);
+      this.loadFolio(this.props.document.folioIndex[newFolioID]);
     }
 
     // TODO make this work for XML view
@@ -80,22 +81,17 @@ class XMLView extends Component {
 
     // get the xml for this transcription
     const { transcriptionType } = documentView[side];
-    let xmlContent = '';
-    if (this.state.folio.transcription) {
-      xmlContent = this.state.folio.transcription[transcriptionType].html;
-    }
+    const xmlContent = this.state.folio.transcription ? this.state.folio.transcription[transcriptionType].xml : '';
 
     return (
       <div id={thisID} className={thisClass}>
         <Navigation side={side} documentView={documentView} documentViewActions={documentViewActions} />
-        <div className="xmlContent">
-          <Pagination side={side} className="pagination_upper" documentView={documentView} documentViewActions={documentViewActions} />
+        <Pagination side={side} className="pagination_upper" documentView={documentView} documentViewActions={documentViewActions} />
 
-          <div className="xmlContentInner">
-            <pre>{xmlContent}</pre>
-          </div>
-
+        <div className="xmlContentInner">
+          <pre>{xmlContent}</pre>
         </div>
+
       </div>
     );
   }

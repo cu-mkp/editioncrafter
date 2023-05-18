@@ -33,9 +33,12 @@ export function loadFolio(folioData) {
           ) => {
             const transcription = parseTranscription(htmlResponse.data, xmlResponse.data);
             if (!transcription) {
+              console.log('transcription not found');
               reject(new Error(`Unable to load transcription: ${htmlURL}`));
             } else {
+              console.log('transcription found');
               folio.transcription[transcriptionType] = transcription;
+              console.log(folio);
               folio.loading = false;
               resolve(folio);
             }
