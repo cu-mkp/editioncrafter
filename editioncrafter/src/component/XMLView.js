@@ -31,27 +31,27 @@ class XMLView extends Component {
     });
   }
 
-  componentDidUpdate(prevProps, prevState) {
-    // Refresh the content if there is an incoming change
-    let contentChange = false;
-    const newFolioID = this.props.documentView[this.props.side].iiifShortID;
+  // componentDidUpdate(prevProps, prevState) {
+  //   // Refresh the content if there is an incoming change
+  //   let contentChange = false;
+  //   const newFolioID = this.props.documentView[this.props.side].iiifShortID;
 
-    if (prevState.currentlyLoaded !== newFolioID) {
-      contentChange = true;
-      this.loadFolio(this.props.document.folioIndex[newFolioID]);
-    }
+  //   if (prevState.currentlyLoaded !== newFolioID) {
+  //     contentChange = true;
+  //     this.loadFolio(this.props.document.folioIndex[newFolioID]);
+  //   }
 
-    // TODO make this work for XML view
-    if (contentChange) {
-      // Scroll content to top
-      const selector = `xmlViewComponent_${this.props.side}`;
-      const el = document.getElementById(selector);
-      if (el !== null) {
-        // console.log(selector + "scroll to top");
-        el.scrollTop = 0;
-      }
-    }
-  }
+  //   // TODO make this work for XML view
+  //   if (contentChange) {
+  //     // Scroll content to top
+  //     const selector = `xmlViewComponent_${this.props.side}`;
+  //     const el = document.getElementById(selector);
+  //     if (el !== null) {
+  //       // console.log(selector + "scroll to top");
+  //       el.scrollTop = 0;
+  //     }
+  //   }
+  // }
 
   // RENDER
   render() {
@@ -70,18 +70,16 @@ class XMLView extends Component {
           <div className="watermark_contents" />
         </div>
       );
-    } if (!this.state.isLoaded) {
-      this.loadFolio(document.folioIndex[folioID]);
-      return (
-        <div className="watermark">
-          <div className="watermark_contents" />
-        </div>
-      );
+    } 
+
+    const folio = document.folioIndex[folioID];
+    if (!folio.transcription) {
+      return watermark(documentView, documentViewActions, side);
     }
 
-    // get the xml for this transcription
     const { transcriptionType } = documentView[side];
-    const xmlContent = this.state.folio.transcription ? this.state.folio.transcription[transcriptionType].xml : '';
+    const transcriptionData = folio.transcription[transcriptionType];
+    const { xml: xmlContent } = transcriptionData;
 
     return (
       <div id={thisID} className={thisClass}>
