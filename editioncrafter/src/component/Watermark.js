@@ -4,7 +4,9 @@ import Pagination from './Pagination';
 
 const Watermark = ({ side, documentView, documentViewActions }) => (
   <div>
-    <Navigation side={side} documentView={documentView} documentViewActions={documentViewActions} />
+    { documentView.left.iiifShortID !== '-1' && documentView.right.iiifShortID !== '-1'
+      ? <Navigation side={side} documentView={documentView} documentViewActions={documentViewActions} />
+      : null}
     <div className="transcriptContent">
       <Pagination side={side} className="pagination_upper" documentView={documentView} documentViewActions={documentViewActions} />
       <div className="watermark">

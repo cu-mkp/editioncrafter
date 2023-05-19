@@ -14,6 +14,7 @@ class XMLView extends Component {
     const thisClass = `xmlViewComponent ${side}`;
     const thisID = `xmlViewComponent_${side}`;
 
+    console.log(documentView);
     // Retrofit - the folios are loaded asynchronously
     const folioID = documentView[side].iiifShortID;
     if (folioID === '-1') {

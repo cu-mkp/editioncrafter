@@ -316,7 +316,7 @@ class DocumentView extends Component {
     const viewType = this.determineViewType(side);
     const key = this.viewPaneKey(side);
     const folioID = docView[side].iiifShortID;
-    let transcriptionType = docView[side].transcriptionType;
+    const { transcriptionType } = docView[side];
 
     if (viewType === 'ImageView') {
       return (
