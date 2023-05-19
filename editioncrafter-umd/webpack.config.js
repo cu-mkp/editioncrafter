@@ -59,7 +59,6 @@ module.exports = (env, options) => {
   if (isProduction) {
     return {
       ...config,
-      devtool: 'source-map',
       mode: 'production',
       plugins: [
         ...(config.plugins || []),
@@ -72,7 +71,7 @@ module.exports = (env, options) => {
 
   return {
     ...config,
-    devtool: 'eval-source-map',
+    devtool: 'source-map',
     mode: 'development',
     plugins: [
       ...(config.plugins || [])

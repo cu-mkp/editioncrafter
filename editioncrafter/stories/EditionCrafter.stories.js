@@ -1,8 +1,6 @@
 import React from 'react';
 import EditionCrafter from '../src/index';
 
-import './assets/editioncrafter.css';
-
 const config = {
   iiifManifest: 'http://localhost:8080/fr640_3r-3v-example/iiif/manifest.json',
   documentName: 'BnF Ms. Fr. 640',

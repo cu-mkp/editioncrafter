@@ -132,19 +132,6 @@ body {
 	background-image: linear-gradient(to bottom, hsl(43, 54%, 85%), hsl(50, 43%, 90%), hsl(30, 50%, 99%));
 }
 
-.text-bg-gradient-dark-bt{
-	background-image:
-	linear-gradient(to bottom, hsla(30, 50%, 90%, .9), hsla(50, 43%, 83%, .9), hsla(43, 54%, 77%, .9)),
-	url('../img/text-bg.png');
-	background-size: cover;
-}
-.text-bg-gradient-light-tb{
-	background-image:
-	linear-gradient(to bottom, hsla(43, 54%, 77%, .9), hsla(50, 43%, 83%, .9), hsla(30, 50%, 90%, .9)),
-	url('../img/text-bg.png');
-	background-size: cover;
-}
-
 .accent-bar{
 	height: 10px;
 	width: 100%;
