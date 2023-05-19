@@ -1,9 +1,9 @@
 {
   "name": "@cu-mkp/editioncrafter",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "",
   "private": false,
-  "main": "dist/cjs/src/index.js",
+  "main": "dist/editioncrafter.min.js",
   "module": "dist/es/src/index.js",
   "files": [
     "dist"
@@ -18,8 +18,7 @@
     "build": "NODE_ENV=production && webpack --mode=production",
     "build:dev": "webpack --mode=development",
     "build:es": "mkdir -p dist/es && cp -r src dist/es && NODE_ENV=production MODULE_FORMAT=es babel dist/es -d dist/es",
-    "build:cjs": "mkdir -p dist/cjs && cp -r src dist/cjs && NODE_ENV=production MODULE_FORMAT=cjs babel dist/cjs -d dist/cjs",
-    "prepublishOnly": "npm run clean && npm run build:es && npm run build:cjs && npm run build",
+    "prepublishOnly": "npm run clean && npm run build:es && npm run build",
     "size": "bundlewatch --config bundlewatch.config.json",
     "start": "NODE_ENV=production webpack serve --open --port 5000",
     "storybook": "storybook dev -p 6006",
