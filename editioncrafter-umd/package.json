@@ -10,7 +10,7 @@
   ],
   "scripts": {
     "build": "webpack build --mode=production",
-    "prepublishOnly": "npm update @cu-mkp/editioncrafter && npm run build"
+    "prepublishOnly": "npm install @cu-mkp/editioncrafter@latest && npm run build"
   },
   "license": "MIT",
   "repository": "https://github.com/cu-mkp/editioncrafter",
