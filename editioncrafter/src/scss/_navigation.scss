@@ -101,10 +101,18 @@
       }
 }
 
+.helpContainer .MuiListItem-root {
+      display: flex;
+      gap: 10px;
+    }
+
 .helpContainer {
       padding:12px;
       width:335px;
-      height:740px;
+      height: min(600px, calc(100vh - 40px));
+      position: relative;
+      top: 40px;
+      overflow-x: auto;
 
       .readingGuide {
             

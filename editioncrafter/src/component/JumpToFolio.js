@@ -23,9 +23,9 @@ class JumpToFolio extends React.Component {
     this.setState({ textInput: '' });
   }
 
-  componentWillReceiveProps(nextProps) {
+  componentDidUpdate(prevProps) {
     // FIXME: this is an over-clever hack, but how else do you force focus?
-    if (nextProps.isVisible) {
+    if (this.props.isVisible) {
       const script = document.createElement('script');
       const id = `${this.props.side}_jumpInput`;
       script.innerHTML = `setTimeout(function() { document.getElementById('${id}').focus(); }, 250);`;
@@ -40,7 +40,7 @@ class JumpToFolio extends React.Component {
 
   render() {
     const divStyle = {
-	  		position: 'fixed',
+      position: 'fixed',
       zIndex: 1,
       top: this.props.positionY,
       left: this.props.positionX,

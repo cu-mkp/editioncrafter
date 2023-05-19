@@ -2,13 +2,21 @@ const path = require('path');
 const fs = require('fs');
 const webpack = require('webpack');
 const TerserPlugin = require('terser-webpack-plugin');
-const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
 
 /** */
 const baseConfig = mode => ({
-  entry: ['./src/polyfills.js', './src/index.js'],
+  entry: ['./src/scss/editioncrafter.scss', './src/index.js'],
   module: {
     rules: [
+      {
+        include: path.resolve(fs.realpathSync(process.cwd()), '.'), // CRL
+        test: /\.s[ac]ss$/i,
+        use: [
+          require.resolve('style-loader'),
+          require.resolve('css-loader'),
+          require.resolve('sass-loader'),
+        ],
+      },
       {
         include: path.resolve(fs.realpathSync(process.cwd()), '.'), // CRL
         loader: require.resolve('babel-loader'),
@@ -20,6 +28,10 @@ const baseConfig = mode => ({
           envName: mode,
         },
         test: /\.(js|mjs|jsx)$/,
+      },
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        type: 'asset/inline',
       },
     ],
   },
@@ -74,7 +86,6 @@ module.exports = (env, options) => {
   if (isProduction) {
     return {
       ...config,
-      devtool: 'source-map',
       mode: 'production',
       plugins: [
         ...(config.plugins || []),
@@ -87,18 +98,10 @@ module.exports = (env, options) => {
 
   return {
     ...config,
-    devServer: {
-      hot: true,
-      port: 4000,
-      static: [
-        './__tests__/integration/editioncrafter',
-      ],
-    },
-    devtool: 'eval-source-map',
+    devtool: 'source-map',
     mode: 'development',
     plugins: [
       ...(config.plugins || []),
-      new ReactRefreshWebpackPlugin(),
     ],
   };
 };

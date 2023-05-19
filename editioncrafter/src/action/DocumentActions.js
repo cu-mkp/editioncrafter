@@ -6,6 +6,7 @@ const textPartialResourceProfileID = 'https://github.com/cu-mkp/editioncrafter-p
 DocumentActions.loadDocument = function loadDocument(state, manifestData) {
   const folios = parseManifest(manifestData, state.transcriptionTypes);
   const { folioIndex, folioByName } = createFolioIndex(folios);
+
   return {
     ...state,
     loaded: true,
@@ -15,7 +16,7 @@ DocumentActions.loadDocument = function loadDocument(state, manifestData) {
   };
 };
 
-DocumentActions.loadFolio = function loadFolio( state, folio ) {
+DocumentActions.loadFolio = function loadFolio(state, folio) {
   const oldFolio = state.folioIndex[folio.id];
   const folioIdx = state.folios.indexOf(oldFolio);
   state.folios[folioIdx] = folio;
@@ -23,8 +24,8 @@ DocumentActions.loadFolio = function loadFolio( state, folio ) {
   state.folioByName[folio.name] = folio;
   return {
     ...state,
-  }
-}
+  };
+};
 
 function createFolioIndex(folios) {
   // Store an ordered array of folio ids, used for next/prev navigation purposes later
