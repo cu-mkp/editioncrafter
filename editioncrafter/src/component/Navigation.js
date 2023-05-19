@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import {
   FaArrowCircleLeft,
-  FaArrowCircleRight
+  FaArrowCircleRight,
 } from 'react-icons/fa';
 import Select from '@material-ui/core/Select';
 import MenuItem from '@material-ui/core/MenuItem';
@@ -50,7 +50,7 @@ class Navigation extends React.Component {
   };
 
   toggleBookmode = function toggleBookmode(event) {
-    if (!this.props.documentView.bookMode === true) {
+    if (!this.props.documentView.bookMode) {
       this.props.documentViewActions.changeCurrentFolio(
         this.props.documentView.left.iiifShortID,
         'left',
@@ -131,7 +131,9 @@ class Navigation extends React.Component {
   };
 
   render() {
-    const { side, document, documentView, documentViewActions, onFilterChange } = this.props;
+    const {
+      side, document, documentView, documentViewActions, onFilterChange,
+    } = this.props;
 
     if (!documentView) {
       return (

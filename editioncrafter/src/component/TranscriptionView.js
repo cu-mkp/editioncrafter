@@ -66,7 +66,7 @@ class TranscriptionView extends Component {
           <div className="transcriptContent">
             <ErrorBoundary>
               <div
-                className='surface grid-mode'
+                className="surface grid-mode"
                 style={surfaceStyle}
               >
                 {Parser(html, htmlToReactParserOptionsSide)}

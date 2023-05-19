@@ -57,11 +57,7 @@ class ImageView extends Component {
   render() {
     const { document, folioID, side } = this.props;
     const folio = document.folioIndex[folioID];
-    // if( folio.loading ) {
-    //   window.loadingModal_start();
-    // } else {
-    //   window.loadingModal_stop();
-    // }
+
     return (
       <div>
         { folio.tileSource
