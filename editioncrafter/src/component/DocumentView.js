@@ -13,6 +13,7 @@ import withRouter from '../hocs/withRouter';
 
 class DocumentView extends Component {
   constructor(props) {
+    console.log(props.config);
     super(props);
 
     const paneDefaults = {

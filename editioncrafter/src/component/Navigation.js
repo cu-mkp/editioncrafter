@@ -163,6 +163,8 @@ class Navigation extends React.Component {
     // this is messy but faster for the moment then figuring out why the sides dont behave the same
     const helpMarginStyle = side === 'left' ? { marginRight: '55px' } : { marginRight: '15px' };
 
+    console.log(this.props.document.transcriptionTypes);
+
     return (
       <div className="navigationComponent" style={widthStyle}>
         <div id="navigation-row" className="navigationRow">
@@ -246,11 +248,10 @@ class Navigation extends React.Component {
               id="doc-type"
               onClick={this.changeType}
             >
-              <MenuItem value="tl">{DocumentHelper.transcriptionTypeLabels.tl}</MenuItem>
-              <MenuItem value="tc">{DocumentHelper.transcriptionTypeLabels.tc}</MenuItem>
-              <MenuItem value="tcn">{DocumentHelper.transcriptionTypeLabels.tcn}</MenuItem>
+              {Object.keys(this.props.document.transcriptionTypes).map(ttKey => (
+                <MenuItem value={ttKey}>{this.props.document.transcriptionTypes[ttKey]}</MenuItem>
+              ))}
               <MenuItem value="f">{DocumentHelper.transcriptionTypeLabels.f}</MenuItem>
-              <MenuItem value="glossary">{DocumentHelper.transcriptionTypeLabels.glossary}</MenuItem>
             </Select>
             <span
               title="Toggle folio help"

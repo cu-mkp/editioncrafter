@@ -47,6 +47,7 @@ class TranscriptionView extends Component {
         />
       );
     }
+    console.log(folio.transcription);
     const transcriptionData = folio.transcription[transcriptionType];
 
     // Configure parser to replace certain tags with components

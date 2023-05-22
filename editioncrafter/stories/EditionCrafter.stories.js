@@ -8,6 +8,7 @@ const config = {
     tc: 'Diplomatic (FR)',
     tcn: 'Normalized (FR)',
     tl: 'Translation (EN)',
+    test: 'Test Field (EN)',
   },
   commentsURL: '/fr640_3r-3v-example/comments.json',
   glossaryURL: '/fr640_3r-3v-example/glossary.json',
