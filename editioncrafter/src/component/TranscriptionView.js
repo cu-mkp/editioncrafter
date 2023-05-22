@@ -47,12 +47,32 @@ class TranscriptionView extends Component {
         />
       );
     }
-    console.log(folio.transcription);
     const transcriptionData = folio.transcription[transcriptionType];
+
+    if (!transcriptionData) {
+      return (
+        <Watermark
+          documentView={documentView}
+          documentViewActions={documentViewActions}
+          side={side}
+        />
+      );
+    }
 
     // Configure parser to replace certain tags with components
     const htmlToReactParserOptionsSide = htmlToReactParserOptions();
     const { html, layout } = transcriptionData;
+
+    if (!html) {
+      return (
+        <Watermark
+          documentView={documentView}
+          documentViewActions={documentViewActions}
+          side={side}
+        />
+      );
+    }
+
     const surfaceStyle = { gridTemplateAreas: layout };
 
     return (

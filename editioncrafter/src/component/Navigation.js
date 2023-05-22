@@ -163,8 +163,6 @@ class Navigation extends React.Component {
     // this is messy but faster for the moment then figuring out why the sides dont behave the same
     const helpMarginStyle = side === 'left' ? { marginRight: '55px' } : { marginRight: '15px' };
 
-    console.log(this.props.document.transcriptionTypes);
-
     return (
       <div className="navigationComponent" style={widthStyle}>
         <div id="navigation-row" className="navigationRow">

@@ -15,6 +15,7 @@ export function loadFolio(folioData) {
   // promise to load all the data for this folio
   return new Promise((resolve, reject) => {
     const transcriptionTypes = Object.keys(folio.annotationURLs);
+    const transcriptionTypeTracker = Object.fromEntries(transcriptionTypes.map((t) => [t, false]));
     if (transcriptionTypes.length > 0) {
       axios.get(folio.image_zoom_url).then((imageServerResponse) => {
         // Handle the image server response
@@ -37,12 +38,18 @@ export function loadFolio(folioData) {
             } else {
               folio.transcription[transcriptionType] = transcription;
               folio.loading = false;
-              resolve(folio);
+              transcriptionTypeTracker[transcriptionType] = true;
             }
           }))
             .catch((error) => {
               folioData.loading = false;
               reject(error);
+            })
+            .finally(() => {
+              // Only resolve once all transcription types have been fetched
+              if (Object.values(transcriptionTypeTracker).filter(v => !v).length === 0) {
+                resolve(folio);
+              }
             });
         }
       })
