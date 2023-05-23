@@ -6,7 +6,6 @@ import { loadFolio } from '../model/Folio';
 
 const justDocument = state => state.document;
 const justGlossary = state => state.glossary;
-const justComments = state => state.comments;
 
 function* userNavigation(action) {
   const { pathname } = action.payload.params[0];
@@ -15,7 +14,6 @@ function* userNavigation(action) {
   if (pathSegments.length > 1) {
     switch (pathSegments[1]) {
       case 'ec':
-        yield resolveComments();
         yield resolveDocumentManifest();
         yield resolveGlossary();
         yield resolveFolio(pathSegments);
@@ -63,14 +61,6 @@ function* resolveGlossary() {
   if (!glossary.loaded) {
     const response = yield axios.get(glossary.glossaryURL);
     yield putResolveAction('GlossaryActions.loadGlossary', response.data);
-  }
-}
-
-function* resolveComments() {
-  const comments = yield select(justComments);
-  if (!comments.loaded) {
-    const response = yield axios.get(comments.commentsURL);
-    yield putResolveAction('CommentActions.loadComments', response.data);
   }
 }
 

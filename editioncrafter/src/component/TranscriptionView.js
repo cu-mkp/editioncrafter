@@ -110,10 +110,17 @@ function htmlToReactParserOptions() {
   const parserOptions = {
     replace(domNode) {
       switch (domNode.name) {
-        case 'comment': {
-          const commentID = domNode.attribs.rid; // ( domNode.children && domNode.children[0] ) ? domNode.children[0].data : null
+        case 'tei-note': {
+          const text = domNode.children[0]?.data || '';
+          const id = domNode.attribs.n;
+
+          // Not sure what else to do if there's no ID
+          if (!id) {
+            return domNode;
+          }
+
           return (
-            <EditorComment commentID={commentID} />
+            <EditorComment commentID={id} text={text} />
           );
         }
         case 'tei-figure': {
