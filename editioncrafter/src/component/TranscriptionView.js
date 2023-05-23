@@ -116,6 +116,22 @@ function htmlToReactParserOptions() {
             <EditorComment commentID={commentID} />
           );
         }
+        case 'tei-figure': {
+          const graphicEl = domNode.children.find(ch => ch.name === 'tei-graphic');
+          const src = graphicEl?.attribs?.url;
+          if (!src) {
+            return domNode;
+          }
+
+          const descEl = domNode.children.find(ch => ch.name === 'tei-figdesc');
+          const desc = descEl?.children[0]?.data;
+          return (
+            <figure className="inline-figure">
+              <img src={src} alt={desc || ''} className="inline-image" />
+              { desc ? <figcaption>{desc}</figcaption> : null }
+            </figure>
+          );
+        }
 
         default:
           /* Otherwise, Just pass through */
