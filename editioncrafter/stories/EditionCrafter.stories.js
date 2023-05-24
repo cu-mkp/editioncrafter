@@ -10,7 +10,6 @@ const config = {
     tl: 'Translation (EN)',
     test: 'Test Field (EN)',
   },
-  glossaryURL: '/fr640_3r-3v-example/glossary.json',
 };
 
 export const Default = () => (

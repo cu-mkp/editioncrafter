@@ -7,7 +7,6 @@ import Parser from 'html-react-parser';
 
 class EditorComment extends Component {
   constructor(props) {
-    console.log(props);
     super(props);
     this.state = {
       anchorRef: null,

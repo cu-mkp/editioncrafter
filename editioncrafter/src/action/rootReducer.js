@@ -10,10 +10,12 @@ import glossaryInitialState from './initialState/glossaryInitialState';
 import documentInitialState from './initialState/documentInitialState';
 
 export default function rootReducer(config) {
-  const { iiifManifest, documentName, glossaryURL, transcriptionTypes } = config;
+  const {
+    iiifManifest, documentName, transcriptionTypes,
+  } = config;
   return combineReducers({
     diplomatic: createReducer('DiplomaticActions', DiplomaticActions, diplomaticInitialState),
     document: createReducer('DocumentActions', DocumentActions, documentInitialState(iiifManifest, documentName, transcriptionTypes)),
-    glossary: createReducer('GlossaryActions', GlossaryActions, glossaryInitialState(glossaryURL)),
+    glossary: createReducer('GlossaryActions', GlossaryActions, glossaryInitialState()),
   });
 }

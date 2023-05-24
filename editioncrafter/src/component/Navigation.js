@@ -250,6 +250,7 @@ class Navigation extends React.Component {
                 <MenuItem value={ttKey}>{this.props.document.transcriptionTypes[ttKey]}</MenuItem>
               ))}
               <MenuItem value="f">{DocumentHelper.transcriptionTypeLabels.f}</MenuItem>
+              <MenuItem value="glossary">{DocumentHelper.transcriptionTypeLabels.glossary}</MenuItem>
             </Select>
             <span
               title="Toggle folio help"
