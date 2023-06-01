@@ -3,7 +3,7 @@
   "description": "",
   "private": true,
   "scripts": {
-    "build": "cd editioncrafter && npm install && npm run prepublishOnly && cd ../editioncrafter-umd && npm install && npm run build",
+    "build": "cd editioncrafter && npm install && npm run prepublishOnly && cd ../editioncrafter-umd && npm upgrade editioncrafter && npm install && npm run build",
     "storybook": "cd editioncrafter && npm run storybook",
     "build-storybook": "cd editioncrafter && npm run build-storybook"
   },
