@@ -1,7 +1,7 @@
 name: Build and deploy to GitHub pages for testing
 
 on:
-  pull_request:
+  push:
     branches:
       - dev # Trigger the action only on PR merges into dev
 jobs:
