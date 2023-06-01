@@ -7,3 +7,4 @@ node_modules/
 __tests__/integration/editioncrafter/bnf-ms-fr-640/
 __tests__/integration/editioncrafter/css/
 .cache/
+storybook-static
