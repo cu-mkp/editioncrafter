@@ -63,18 +63,17 @@ function* resolveFolio(pathSegments) {
 }
 
 function* resolveGlossary(manifest) {
-  if (
-    !manifest?.seeAlso
-    || manifest.seeAlso.length === 0
-    || !manifest.seeAlso[0].id
-  ) {
-    throw new Error('Missing glossary link in seeAlso array.');
-  }
-
-  const glossaryURL = manifest.seeAlso[0].id;
   const glossary = yield select(justGlossary);
-
   if (!glossary.loaded) {
+    if (
+      !manifest?.seeAlso
+      || manifest.seeAlso.length === 0
+      || !manifest.seeAlso[0].id
+    ) {
+      throw new Error('Missing glossary link in seeAlso array.');
+    }
+
+    const glossaryURL = manifest.seeAlso[0].id;
     const response = yield axios.get(glossaryURL);
     yield putResolveAction('GlossaryActions.loadGlossary', response.data);
   }
