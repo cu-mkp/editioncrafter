@@ -12,7 +12,6 @@ import {
 } from 'react-icons/fa';
 import asterisk from '../icons/howtouse-asterisk.png';
 import curly from '../icons/howtouse-curly.png';
-import beaker from '../icons/howtouse-beaker.png';
 import square from '../icons/howtouse-square.png';
 import ups from '../icons/howtouse-ups.png';
 
@@ -70,10 +69,6 @@ const HelpPopper = (props) => (
                   <tr>
                     <td><img src={square} alt="howtouse-square" /></td>
                     <td><Typography>Editorial interventions and corrections</Typography></td>
-                  </tr>
-                  <tr>
-                    <td><img src={beaker} alt="howtouse-beaker" /></td>
-                    <td><Typography>Associated research essay</Typography></td>
                   </tr>
                   <tr>
                     <td><img src={asterisk} alt="howtouse-asterisk" /></td>

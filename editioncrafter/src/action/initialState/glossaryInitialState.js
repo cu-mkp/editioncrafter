@@ -1,6 +1,5 @@
-export default function glossaryInitialState(glossaryURL) {
+export default function glossaryInitialState() {
   return {
-    glossaryURL,
     glossary: {},
     loaded: false,
   };
