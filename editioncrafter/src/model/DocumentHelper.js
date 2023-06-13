@@ -1,12 +1,8 @@
 const DocumentHelper = {};
 
 DocumentHelper.transcriptionTypeLabels = {
-  tc: 'Diplomatic (FR)',
-  tcn: 'Normalized (FR)',
-  tl: 'Translation (EN)',
-  f: 'Facsimile',
-  anno: 'Research Esssay',
-  glossary: 'Glossary',
+  f: 'Facsimile', // keep
+  glossary: 'Glossary', // keep
 };
 
 export default DocumentHelper;

@@ -7,6 +7,7 @@ const baseConfig = {
     tc: 'Diplomatic (FR)',
     tcn: 'Normalized (FR)',
     tl: 'Translation (EN)',
+    test: 'Test Field (EN)',
   },
 };
 
