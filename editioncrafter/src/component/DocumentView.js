@@ -127,7 +127,9 @@ class DocumentView extends Component {
     const {
       folioID, transcriptionType, folioID2, transcriptionType2,
     } = this.props.router.params;
+    const { document } = this.props;
     let viewports;
+    const firstTranscriptionType = Object.keys(document.transcriptionTypes)[0];
 
     if (!folioID) {
       // route /folios
@@ -138,7 +140,7 @@ class DocumentView extends Component {
         },
         right: {
           folioID: '-1',
-          transcriptionType: 'tl',
+          transcriptionType: firstTranscriptionType,
         },
       };
     } else {
@@ -149,13 +151,13 @@ class DocumentView extends Component {
         // route /ec/:folioID/:transcriptionType/:folioID2/:transcriptionType2
         leftTranscriptionType = transcriptionType;
         rightFolioID = folioID2;
-        rightTranscriptionType = transcriptionType2 || 'tl';
+        rightTranscriptionType = transcriptionType2 || firstTranscriptionType;
       } else {
         // route /ec/:folioID
         // route /ec/:folioID/:transcriptionType
         leftTranscriptionType = 'f';
         rightFolioID = folioID;
-        rightTranscriptionType = transcriptionType || 'tl';
+        rightTranscriptionType = transcriptionType || firstTranscriptionType;
       }
 
       viewports = {

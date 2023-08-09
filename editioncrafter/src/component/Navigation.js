@@ -247,10 +247,14 @@ class Navigation extends React.Component {
               onClick={this.changeType}
             >
               {Object.keys(this.props.document.transcriptionTypes).map(ttKey => (
-                <MenuItem value={ttKey}>{this.props.document.transcriptionTypes[ttKey]}</MenuItem>
+                <MenuItem value={ttKey} key={ttKey}>{this.props.document.transcriptionTypes[ttKey]}</MenuItem>
               ))}
-              <MenuItem value="f">{DocumentHelper.transcriptionTypeLabels.f}</MenuItem>
-              <MenuItem value="glossary">{DocumentHelper.transcriptionTypeLabels.glossary}</MenuItem>
+              <MenuItem value="f" key="f">
+                {DocumentHelper.transcriptionTypeLabels.f}
+              </MenuItem>
+              <MenuItem value="glossary" key="glossary">
+                {DocumentHelper.transcriptionTypeLabels.glossary}
+              </MenuItem>
             </Select>
             <span
               title="Toggle folio help"

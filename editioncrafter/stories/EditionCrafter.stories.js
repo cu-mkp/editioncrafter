@@ -14,7 +14,7 @@ const baseConfig = {
 export const Development = () => (
   <EditionCrafter config={{
     ...baseConfig,
-    iiifManifest: 'http://localhost:8080/fr640_3r-3v-example/iiif/manifest.json'
+    iiifManifest: 'http://localhost:8080/fr640_3r-3v-example/iiif/manifest.json',
   }}
   />
 );
@@ -22,7 +22,7 @@ export const Development = () => (
 export const Testing = () => (
   <EditionCrafter config={{
     ...baseConfig,
-    iiifManifest: 'https://cu-mkp.github.io/editioncrafter-data/fr640_3r-3v-example/iiif/manifest.json'
+    iiifManifest: 'https://cu-mkp.github.io/editioncrafter-data/fr640_3r-3v-example/iiif/manifest.json',
   }}
   />
 );
