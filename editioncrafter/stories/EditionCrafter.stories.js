@@ -14,7 +14,7 @@ const baseConfig = {
 export const Development = () => (
   <EditionCrafter config={{
     ...baseConfig,
-    iiifManifest: 'http://localhost:8080/fr640_3r-3v-example/iiif/manifest.json',
+    iiifManifest: 'http://localhost:8080/FHL_007548705_ISLETA_BAPTISMS_1/iiif/manifest.json',
   }}
   />
 );
