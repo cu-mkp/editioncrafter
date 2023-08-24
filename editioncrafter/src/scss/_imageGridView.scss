@@ -31,6 +31,10 @@
 .imageGridComponent > ul > li > .thumbnail-caption {
 	text-align: center;
 	color: white;
+	margin: 0 10px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
 .hidden {
@@ -41,7 +45,7 @@
 	.imageGridToolbar {
 		padding: 5px;
 		color: white;
-		
+
 		.jump-to {
 			float: right;
 			display: 'inline';
@@ -56,5 +60,5 @@
 				cursor: pointer;
 			}
 		}
-	}	
+	}
 }
