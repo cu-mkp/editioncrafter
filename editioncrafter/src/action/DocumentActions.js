@@ -80,30 +80,32 @@ function parseAnnotationURLs(canvas, transcriptionTypes) {
 
   if (canvas.annotations) {
     for (const annotationPage of canvas.annotations) {
-      if (annotationPage.type !== 'AnnotationPage') throwError(`Expected AnnotationPage in annotations property of ${canvas.id}`);
-      if (!annotationPage.items) throwError(`Expected items property in AnnotationPage ${annotationPage.id}`);
-      for (const annotation of annotationPage.items) {
-        if (annotation.type !== 'Annotation') throwError(`Expected Annotation in items property of ${annotationPage.id}`);
-        if (annotation.motivation === 'supplementing') {
-          if (!annotation.body) throwError(`Expected body property in Annotation ${annotation.id}`);
-          const { body: annotationBody } = annotation;
-          if (annotationBody.profile === textPartialResourceProfileID && annotationBody.type === 'TextPartial') {
-            if (!annotationBody.id) throwError(`Expected id property in TextPartial in ${annotation.id}`);
-            if (!annotationBody.format) throwError(`Expected format property in TextPartial in ${annotation.id}`);
-            const { id, format } = annotationBody;
-            const idParts = id.split('/');
-            if (idParts.length < 5) throwError(`TextPartial id property is in the wrong format: ${id}`);
-            const transcriptionTypeID = idParts[idParts.length - 2];
-            if (transcriptionTypes[transcriptionTypeID]) {
-              if (!annos[transcriptionTypeID]) annos[transcriptionTypeID] = {};
-              if (format === 'text/html') annos[transcriptionTypeID].htmlURL = id;
-              if (format === 'text/xml') annos[transcriptionTypeID].xmlURL = id;
+      if (annotationPage.type === 'AnnotationPage') {
+        if (!annotationPage.items) throwError(`Expected items property in AnnotationPage ${annotationPage.id}`);
+        for (const annotation of annotationPage.items) {
+          if (annotation.type !== 'Annotation') throwError(`Expected Annotation in items property of ${annotationPage.id}`);
+          if (annotation.motivation === 'supplementing') {
+            if (!annotation.body) throwError(`Expected body property in Annotation ${annotation.id}`);
+            const { body: annotationBody } = annotation;
+            if (annotationBody.profile === textPartialResourceProfileID && annotationBody.type === 'TextPartial') {
+              if (!annotationBody.id) throwError(`Expected id property in TextPartial in ${annotation.id}`);
+              if (!annotationBody.format) throwError(`Expected format property in TextPartial in ${annotation.id}`);
+              const { id, format } = annotationBody;
+              const idParts = id.split('/');
+              if (idParts.length < 5) throwError(`TextPartial id property is in the wrong format: ${id}`);
+              const transcriptionTypeID = idParts[idParts.length - 2];
+              if (transcriptionTypes[transcriptionTypeID]) {
+                if (!annos[transcriptionTypeID]) annos[transcriptionTypeID] = {};
+                if (format === 'text/html') annos[transcriptionTypeID].htmlURL = id;
+                if (format === 'text/xml') annos[transcriptionTypeID].xmlURL = id;
+              }
             }
           }
         }
       }
     }
   }
+
   return annos;
 }
 
@@ -135,6 +137,7 @@ function parseManifest(manifest, transcriptionTypes) {
       image_zoom_url: imageURL,
       image_thumbnail_url: thumbnailURL,
       annotationURLs,
+      annotations: canvas.annotations.filter(a => a.motivation === 'tagging'),
     };
 
     folios.push(folio);
