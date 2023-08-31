@@ -137,7 +137,9 @@ function parseManifest(manifest, transcriptionTypes) {
       image_zoom_url: imageURL,
       image_thumbnail_url: thumbnailURL,
       annotationURLs,
-      annotations: canvas.annotations.filter(a => a.motivation === 'tagging'),
+      annotations: canvas.annotations
+        ? canvas.annotations.filter(a => a.motivation === 'tagging')
+        : [],
     };
 
     folios.push(folio);

@@ -12,13 +12,27 @@ export const Development = () => (
   />
 );
 
-export const Testing = () => (
+export const TestingTaos = () => (
   <EditionCrafter config={{
     documentName: 'FHL_007548733_TAOS_BAPTISMS_BATCH_2',
     transcriptionTypes: {
       translation: 'Translation',
     },
     iiifManifest: 'https://cu-mkp.github.io/editioncrafter-data/taos-baptisms-example/iiif/manifest.json',
+  }}
+  />
+);
+
+export const TestingFr640 = () => (
+  <EditionCrafter config={{
+    documentName: 'BnF Ms. Fr. 640',
+    transcriptionTypes: {
+      tc: 'Diplomatic (FR)',
+      tcn: 'Normalized (FR)',
+      tl: 'Translation (EN)',
+      test: 'Test Field (EN)',
+    },
+    iiifManifest: 'https://cu-mkp.github.io/editioncrafter-data/fr640_3r-3v-example/iiif/manifest.json',
   }}
   />
 );
