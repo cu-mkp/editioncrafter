@@ -13,8 +13,11 @@ const baseConfig = {
 
 export const Development = () => (
   <EditionCrafter config={{
-    ...baseConfig,
-    iiifManifest: 'http://localhost:8080/FHL_007548705_ISLETA_BAPTISMS_1/iiif/manifest.json',
+    documentName: 'FHL_007548733_TAOS_BAPTISMS_BATCH_2',
+    transcriptionTypes: {
+      translation: 'Translation',
+    },
+    iiifManifest: 'http://localhost:8080/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/manifest.json',
   }}
   />
 );

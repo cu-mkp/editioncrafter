@@ -83,7 +83,7 @@ class Navigation extends React.Component {
       return;
     }
 
-    // If we are transitioning from unlocked to locked, synch up the panes
+    // If we are transitioning from unlocked to locked, sync up the panes
     if (this.props.documentView.linkedMode === false) {
       if (this.props.side === 'left') {
         this.props.documentViewActions.changeCurrentFolio(
