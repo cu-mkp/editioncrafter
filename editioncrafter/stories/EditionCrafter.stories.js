@@ -1,16 +1,6 @@
 import React from 'react';
 import EditionCrafter from '../src/index';
 
-const baseConfig = {
-  documentName: 'BnF Ms. Fr. 640',
-  transcriptionTypes: {
-    tc: 'Diplomatic (FR)',
-    tcn: 'Normalized (FR)',
-    tl: 'Translation (EN)',
-    test: 'Test Field (EN)',
-  },
-};
-
 export const Development = () => (
   <EditionCrafter config={{
     documentName: 'FHL_007548733_TAOS_BAPTISMS_BATCH_2',
@@ -24,8 +14,11 @@ export const Development = () => (
 
 export const Testing = () => (
   <EditionCrafter config={{
-    ...baseConfig,
-    iiifManifest: 'https://cu-mkp.github.io/editioncrafter-data/fr640_3r-3v-example/iiif/manifest.json',
+    documentName: 'FHL_007548733_TAOS_BAPTISMS_BATCH_2',
+    transcriptionTypes: {
+      translation: 'Translation',
+    },
+    iiifManifest: 'https://cu-mkp.github.io/editioncrafter-data/taos-baptisms-example/iiif/manifest.json',
   }}
   />
 );
