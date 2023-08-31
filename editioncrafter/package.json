@@ -109,5 +109,10 @@
   "peerDependencies": {
     "react": "^17.0.0",
     "react-dom": "^17.0.0"
+  },
+  "overrides": {
+    "@recogito/annotorious-openseadragon": {
+      "openseadragon": "$openseadragon"
+    }
   }
 }
