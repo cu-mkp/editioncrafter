@@ -1,3 +1,9 @@
+/*!
+	autosize 4.0.4
+	license: MIT
+	http://www.jacklmoore.com/autosize
+*/
+
 /**
  * @license React
  * react-is.production.min.js
@@ -85,12 +91,18 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-//! Built on 2022-12-16
+//! Built on 2021-12-15
 
-//! Git commit: v4.0.0-0-8e6196a
+//! Built on 2023-05-25
+
+//! Git commit: v3.0.0-0-3eded36
+
+//! Git commit: v4.1.0-0-8849681
 
 //! License: http://openseadragon.github.io/license/
 
 //! http://openseadragon.github.io
 
-//! openseadragon 4.0.0
+//! openseadragon 3.0.0
+
+//! openseadragon 4.1.0
