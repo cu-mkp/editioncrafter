@@ -18,7 +18,7 @@ export const TestingTaos = () => (
     transcriptionTypes: {
       translation: 'Translation',
     },
-    iiifManifest: 'https://cu-mkp.github.io/editioncrafter-data/taos-baptisms-example/iiif/manifest.json',
+    iiifManifest: 'https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/manifest.json',
   }}
   />
 );
