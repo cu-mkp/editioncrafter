@@ -3,20 +3,20 @@
 		"http://www.w3.org/ns/anno.jsonld",
 		"http://iiif.io/api/presentation/3/context.json"
 	],
-	"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/manifest.json",
+	"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/manifest.json",
 	"type": "Manifest",
 	"items": [
 		{
-			"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_073",
+			"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_073",
 			"type": "Canvas",
 			"items": [
 				{
-					"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_073/annotationpage/0",
+					"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_073/annotationpage/0",
 					"type": "AnnotationPage",
 					"items": [
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_073/annotationpage/0/annotation/0",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_073/annotationpage/0/annotation/0",
 							"type": "Annotation",
 							"motivation": "painting",
 							"body": {
@@ -41,7 +41,7 @@
 									}
 								]
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_073"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_073"
 						}
 					]
 				}
@@ -78,76 +78,76 @@
 					}
 				},
 				{
-					"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_073/annotationPage/1",
+					"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_073/annotationPage/1",
 					"type": "AnnotationPage",
 					"items": [
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_073/annotationPage/1/annotation/0",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_073/annotationPage/1/annotation/0",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/tei/translation/FHL_007548733_IMG_073.xml",
+								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/tei/translation/FHL_007548733_IMG_073.xml",
 								"format": "text/xml",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_073"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_073"
 						},
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_073/annotationPage/1/annotation/1",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_073/annotationPage/1/annotation/1",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/tei/transcription/FHL_007548733_IMG_073.xml",
+								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/tei/transcription/FHL_007548733_IMG_073.xml",
 								"format": "text/xml",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_073"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_073"
 						},
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_073/annotationPage/1/annotation/2",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_073/annotationPage/1/annotation/2",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/html/translation/FHL_007548733_IMG_073.html",
+								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/html/translation/FHL_007548733_IMG_073.html",
 								"format": "text/html",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_073"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_073"
 						},
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_073/annotationPage/1/annotation/3",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_073/annotationPage/1/annotation/3",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/html/transcription/FHL_007548733_IMG_073.html",
+								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/html/transcription/FHL_007548733_IMG_073.html",
 								"format": "text/html",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_073"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_073"
 						}
 					]
 				}
 			]
 		},
 		{
-			"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_076",
+			"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_076",
 			"type": "Canvas",
 			"items": [
 				{
-					"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_076/annotationpage/0",
+					"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_076/annotationpage/0",
 					"type": "AnnotationPage",
 					"items": [
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_076/annotationpage/0/annotation/0",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_076/annotationpage/0/annotation/0",
 							"type": "Annotation",
 							"motivation": "painting",
 							"body": {
@@ -172,7 +172,7 @@
 									}
 								]
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_076"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_076"
 						}
 					]
 				}
@@ -209,76 +209,76 @@
 					}
 				},
 				{
-					"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_076/annotationPage/1",
+					"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_076/annotationPage/1",
 					"type": "AnnotationPage",
 					"items": [
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_076/annotationPage/1/annotation/0",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_076/annotationPage/1/annotation/0",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/tei/translation/FHL_007548733_IMG_076.xml",
+								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/tei/translation/FHL_007548733_IMG_076.xml",
 								"format": "text/xml",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_076"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_076"
 						},
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_076/annotationPage/1/annotation/1",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_076/annotationPage/1/annotation/1",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/tei/transcription/FHL_007548733_IMG_076.xml",
+								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/tei/transcription/FHL_007548733_IMG_076.xml",
 								"format": "text/xml",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_076"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_076"
 						},
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_076/annotationPage/1/annotation/2",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_076/annotationPage/1/annotation/2",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/html/translation/FHL_007548733_IMG_076.html",
+								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/html/translation/FHL_007548733_IMG_076.html",
 								"format": "text/html",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_076"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_076"
 						},
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_076/annotationPage/1/annotation/3",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_076/annotationPage/1/annotation/3",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/html/transcription/FHL_007548733_IMG_076.html",
+								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/html/transcription/FHL_007548733_IMG_076.html",
 								"format": "text/html",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_076"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_076"
 						}
 					]
 				}
 			]
 		},
 		{
-			"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_103",
+			"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_103",
 			"type": "Canvas",
 			"items": [
 				{
-					"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_103/annotationpage/0",
+					"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_103/annotationpage/0",
 					"type": "AnnotationPage",
 					"items": [
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_103/annotationpage/0/annotation/0",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_103/annotationpage/0/annotation/0",
 							"type": "Annotation",
 							"motivation": "painting",
 							"body": {
@@ -303,7 +303,7 @@
 									}
 								]
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_103"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_103"
 						}
 					]
 				}
@@ -340,76 +340,76 @@
 					}
 				},
 				{
-					"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_103/annotationPage/1",
+					"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_103/annotationPage/1",
 					"type": "AnnotationPage",
 					"items": [
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_103/annotationPage/1/annotation/0",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_103/annotationPage/1/annotation/0",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/tei/translation/FHL_007548733_IMG_103.xml",
+								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/tei/translation/FHL_007548733_IMG_103.xml",
 								"format": "text/xml",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_103"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_103"
 						},
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_103/annotationPage/1/annotation/1",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_103/annotationPage/1/annotation/1",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/tei/transcription/FHL_007548733_IMG_103.xml",
+								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/tei/transcription/FHL_007548733_IMG_103.xml",
 								"format": "text/xml",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_103"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_103"
 						},
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_103/annotationPage/1/annotation/2",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_103/annotationPage/1/annotation/2",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/html/translation/FHL_007548733_IMG_103.html",
+								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/html/translation/FHL_007548733_IMG_103.html",
 								"format": "text/html",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_103"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_103"
 						},
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_103/annotationPage/1/annotation/3",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_103/annotationPage/1/annotation/3",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/html/transcription/FHL_007548733_IMG_103.html",
+								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/html/transcription/FHL_007548733_IMG_103.html",
 								"format": "text/html",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_103"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_103"
 						}
 					]
 				}
 			]
 		},
 		{
-			"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_120",
+			"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_120",
 			"type": "Canvas",
 			"items": [
 				{
-					"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_120/annotationpage/0",
+					"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_120/annotationpage/0",
 					"type": "AnnotationPage",
 					"items": [
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_120/annotationpage/0/annotation/0",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_120/annotationpage/0/annotation/0",
 							"type": "Annotation",
 							"motivation": "painting",
 							"body": {
@@ -434,7 +434,7 @@
 									}
 								]
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_120"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_120"
 						}
 					]
 				}
@@ -471,76 +471,76 @@
 					}
 				},
 				{
-					"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_120/annotationPage/1",
+					"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_120/annotationPage/1",
 					"type": "AnnotationPage",
 					"items": [
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_120/annotationPage/1/annotation/0",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_120/annotationPage/1/annotation/0",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/tei/translation/FHL_007548733_IMG_120.xml",
+								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/tei/translation/FHL_007548733_IMG_120.xml",
 								"format": "text/xml",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_120"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_120"
 						},
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_120/annotationPage/1/annotation/1",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_120/annotationPage/1/annotation/1",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/tei/transcription/FHL_007548733_IMG_120.xml",
+								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/tei/transcription/FHL_007548733_IMG_120.xml",
 								"format": "text/xml",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_120"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_120"
 						},
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_120/annotationPage/1/annotation/2",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_120/annotationPage/1/annotation/2",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/html/translation/FHL_007548733_IMG_120.html",
+								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/html/translation/FHL_007548733_IMG_120.html",
 								"format": "text/html",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_120"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_120"
 						},
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_120/annotationPage/1/annotation/3",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_120/annotationPage/1/annotation/3",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/html/transcription/FHL_007548733_IMG_120.html",
+								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/html/transcription/FHL_007548733_IMG_120.html",
 								"format": "text/html",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_120"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_120"
 						}
 					]
 				}
 			]
 		},
 		{
-			"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_185",
+			"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_185",
 			"type": "Canvas",
 			"items": [
 				{
-					"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_185/annotationpage/0",
+					"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_185/annotationpage/0",
 					"type": "AnnotationPage",
 					"items": [
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_185/annotationpage/0/annotation/0",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_185/annotationpage/0/annotation/0",
 							"type": "Annotation",
 							"motivation": "painting",
 							"body": {
@@ -565,7 +565,7 @@
 									}
 								]
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_185"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_185"
 						}
 					]
 				}
@@ -602,76 +602,76 @@
 					}
 				},
 				{
-					"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_185/annotationPage/1",
+					"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_185/annotationPage/1",
 					"type": "AnnotationPage",
 					"items": [
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_185/annotationPage/1/annotation/0",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_185/annotationPage/1/annotation/0",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/tei/translation/FHL_007548733_IMG_185.xml",
+								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/tei/translation/FHL_007548733_IMG_185.xml",
 								"format": "text/xml",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_185"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_185"
 						},
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_185/annotationPage/1/annotation/1",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_185/annotationPage/1/annotation/1",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/tei/transcription/FHL_007548733_IMG_185.xml",
+								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/tei/transcription/FHL_007548733_IMG_185.xml",
 								"format": "text/xml",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_185"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_185"
 						},
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_185/annotationPage/1/annotation/2",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_185/annotationPage/1/annotation/2",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/html/translation/FHL_007548733_IMG_185.html",
+								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/html/translation/FHL_007548733_IMG_185.html",
 								"format": "text/html",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_185"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_185"
 						},
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_185/annotationPage/1/annotation/3",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_185/annotationPage/1/annotation/3",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/html/transcription/FHL_007548733_IMG_185.html",
+								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/html/transcription/FHL_007548733_IMG_185.html",
 								"format": "text/html",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_185"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_185"
 						}
 					]
 				}
 			]
 		},
 		{
-			"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_194",
+			"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_194",
 			"type": "Canvas",
 			"items": [
 				{
-					"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_194/annotationpage/0",
+					"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_194/annotationpage/0",
 					"type": "AnnotationPage",
 					"items": [
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_194/annotationpage/0/annotation/0",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_194/annotationpage/0/annotation/0",
 							"type": "Annotation",
 							"motivation": "painting",
 							"body": {
@@ -696,7 +696,7 @@
 									}
 								]
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_194"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_194"
 						}
 					]
 				}
@@ -733,76 +733,76 @@
 					}
 				},
 				{
-					"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_194/annotationPage/1",
+					"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_194/annotationPage/1",
 					"type": "AnnotationPage",
 					"items": [
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_194/annotationPage/1/annotation/0",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_194/annotationPage/1/annotation/0",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/tei/translation/FHL_007548733_IMG_194.xml",
+								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/tei/translation/FHL_007548733_IMG_194.xml",
 								"format": "text/xml",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_194"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_194"
 						},
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_194/annotationPage/1/annotation/1",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_194/annotationPage/1/annotation/1",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/tei/transcription/FHL_007548733_IMG_194.xml",
+								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/tei/transcription/FHL_007548733_IMG_194.xml",
 								"format": "text/xml",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_194"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_194"
 						},
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_194/annotationPage/1/annotation/2",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_194/annotationPage/1/annotation/2",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/html/translation/FHL_007548733_IMG_194.html",
+								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/html/translation/FHL_007548733_IMG_194.html",
 								"format": "text/html",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_194"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_194"
 						},
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_194/annotationPage/1/annotation/3",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_194/annotationPage/1/annotation/3",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/html/transcription/FHL_007548733_IMG_194.html",
+								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/html/transcription/FHL_007548733_IMG_194.html",
 								"format": "text/html",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_194"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_194"
 						}
 					]
 				}
 			]
 		},
 		{
-			"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_220",
+			"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_220",
 			"type": "Canvas",
 			"items": [
 				{
-					"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_220/annotationpage/0",
+					"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_220/annotationpage/0",
 					"type": "AnnotationPage",
 					"items": [
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_220/annotationpage/0/annotation/0",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_220/annotationpage/0/annotation/0",
 							"type": "Annotation",
 							"motivation": "painting",
 							"body": {
@@ -827,7 +827,7 @@
 									}
 								]
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_220"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_220"
 						}
 					]
 				}
@@ -956,76 +956,76 @@
 					}
 				},
 				{
-					"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_220/annotationPage/1",
+					"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_220/annotationPage/1",
 					"type": "AnnotationPage",
 					"items": [
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_220/annotationPage/1/annotation/0",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_220/annotationPage/1/annotation/0",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/tei/translation/FHL_007548733_IMG_220.xml",
+								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/tei/translation/FHL_007548733_IMG_220.xml",
 								"format": "text/xml",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_220"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_220"
 						},
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_220/annotationPage/1/annotation/1",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_220/annotationPage/1/annotation/1",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/tei/transcription/FHL_007548733_IMG_220.xml",
+								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/tei/transcription/FHL_007548733_IMG_220.xml",
 								"format": "text/xml",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_220"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_220"
 						},
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_220/annotationPage/1/annotation/2",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_220/annotationPage/1/annotation/2",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/html/translation/FHL_007548733_IMG_220.html",
+								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/html/translation/FHL_007548733_IMG_220.html",
 								"format": "text/html",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_220"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_220"
 						},
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_220/annotationPage/1/annotation/3",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_220/annotationPage/1/annotation/3",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/html/transcription/FHL_007548733_IMG_220.html",
+								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/html/transcription/FHL_007548733_IMG_220.html",
 								"format": "text/html",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_220"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_220"
 						}
 					]
 				}
 			]
 		},
 		{
-			"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_232",
+			"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_232",
 			"type": "Canvas",
 			"items": [
 				{
-					"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_232/annotationpage/0",
+					"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_232/annotationpage/0",
 					"type": "AnnotationPage",
 					"items": [
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_232/annotationpage/0/annotation/0",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_232/annotationpage/0/annotation/0",
 							"type": "Annotation",
 							"motivation": "painting",
 							"body": {
@@ -1050,7 +1050,7 @@
 									}
 								]
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_232"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_232"
 						}
 					]
 				}
@@ -1087,76 +1087,76 @@
 					}
 				},
 				{
-					"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_232/annotationPage/1",
+					"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_232/annotationPage/1",
 					"type": "AnnotationPage",
 					"items": [
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_232/annotationPage/1/annotation/0",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_232/annotationPage/1/annotation/0",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/tei/translation/FHL_007548733_IMG_232.xml",
+								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/tei/translation/FHL_007548733_IMG_232.xml",
 								"format": "text/xml",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_232"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_232"
 						},
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_232/annotationPage/1/annotation/1",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_232/annotationPage/1/annotation/1",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/tei/transcription/FHL_007548733_IMG_232.xml",
+								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/tei/transcription/FHL_007548733_IMG_232.xml",
 								"format": "text/xml",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_232"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_232"
 						},
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_232/annotationPage/1/annotation/2",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_232/annotationPage/1/annotation/2",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/html/translation/FHL_007548733_IMG_232.html",
+								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/html/translation/FHL_007548733_IMG_232.html",
 								"format": "text/html",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_232"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_232"
 						},
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_232/annotationPage/1/annotation/3",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_232/annotationPage/1/annotation/3",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/html/transcription/FHL_007548733_IMG_232.html",
+								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/html/transcription/FHL_007548733_IMG_232.html",
 								"format": "text/html",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_232"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_232"
 						}
 					]
 				}
 			]
 		},
 		{
-			"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_243",
+			"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_243",
 			"type": "Canvas",
 			"items": [
 				{
-					"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_243/annotationpage/0",
+					"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_243/annotationpage/0",
 					"type": "AnnotationPage",
 					"items": [
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_243/annotationpage/0/annotation/0",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_243/annotationpage/0/annotation/0",
 							"type": "Annotation",
 							"motivation": "painting",
 							"body": {
@@ -1181,7 +1181,7 @@
 									}
 								]
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_243"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_243"
 						}
 					]
 				}
@@ -1218,76 +1218,76 @@
 					}
 				},
 				{
-					"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_243/annotationPage/1",
+					"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_243/annotationPage/1",
 					"type": "AnnotationPage",
 					"items": [
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_243/annotationPage/1/annotation/0",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_243/annotationPage/1/annotation/0",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/tei/translation/FHL_007548733_IMG_243.xml",
+								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/tei/translation/FHL_007548733_IMG_243.xml",
 								"format": "text/xml",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_243"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_243"
 						},
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_243/annotationPage/1/annotation/1",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_243/annotationPage/1/annotation/1",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/tei/transcription/FHL_007548733_IMG_243.xml",
+								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/tei/transcription/FHL_007548733_IMG_243.xml",
 								"format": "text/xml",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_243"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_243"
 						},
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_243/annotationPage/1/annotation/2",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_243/annotationPage/1/annotation/2",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/html/translation/FHL_007548733_IMG_243.html",
+								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/html/translation/FHL_007548733_IMG_243.html",
 								"format": "text/html",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_243"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_243"
 						},
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_243/annotationPage/1/annotation/3",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_243/annotationPage/1/annotation/3",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/html/transcription/FHL_007548733_IMG_243.html",
+								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/html/transcription/FHL_007548733_IMG_243.html",
 								"format": "text/html",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_243"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_243"
 						}
 					]
 				}
 			]
 		},
 		{
-			"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_281",
+			"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_281",
 			"type": "Canvas",
 			"items": [
 				{
-					"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_281/annotationpage/0",
+					"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_281/annotationpage/0",
 					"type": "AnnotationPage",
 					"items": [
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_281/annotationpage/0/annotation/0",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_281/annotationpage/0/annotation/0",
 							"type": "Annotation",
 							"motivation": "painting",
 							"body": {
@@ -1312,7 +1312,7 @@
 									}
 								]
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_281"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_281"
 						}
 					]
 				}
@@ -1349,76 +1349,76 @@
 					}
 				},
 				{
-					"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_281/annotationPage/1",
+					"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_281/annotationPage/1",
 					"type": "AnnotationPage",
 					"items": [
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_281/annotationPage/1/annotation/0",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_281/annotationPage/1/annotation/0",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/tei/translation/FHL_007548733_IMG_281.xml",
+								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/tei/translation/FHL_007548733_IMG_281.xml",
 								"format": "text/xml",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_281"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_281"
 						},
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_281/annotationPage/1/annotation/1",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_281/annotationPage/1/annotation/1",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/tei/transcription/FHL_007548733_IMG_281.xml",
+								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/tei/transcription/FHL_007548733_IMG_281.xml",
 								"format": "text/xml",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_281"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_281"
 						},
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_281/annotationPage/1/annotation/2",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_281/annotationPage/1/annotation/2",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/html/translation/FHL_007548733_IMG_281.html",
+								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/html/translation/FHL_007548733_IMG_281.html",
 								"format": "text/html",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_281"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_281"
 						},
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_281/annotationPage/1/annotation/3",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_281/annotationPage/1/annotation/3",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/html/transcription/FHL_007548733_IMG_281.html",
+								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/html/transcription/FHL_007548733_IMG_281.html",
 								"format": "text/html",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_281"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_281"
 						}
 					]
 				}
 			]
 		},
 		{
-			"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_284",
+			"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_284",
 			"type": "Canvas",
 			"items": [
 				{
-					"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_284/annotationpage/0",
+					"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_284/annotationpage/0",
 					"type": "AnnotationPage",
 					"items": [
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_284/annotationpage/0/annotation/0",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_284/annotationpage/0/annotation/0",
 							"type": "Annotation",
 							"motivation": "painting",
 							"body": {
@@ -1443,7 +1443,7 @@
 									}
 								]
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_284"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_284"
 						}
 					]
 				}
@@ -1480,76 +1480,76 @@
 					}
 				},
 				{
-					"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_284/annotationPage/1",
+					"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_284/annotationPage/1",
 					"type": "AnnotationPage",
 					"items": [
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_284/annotationPage/1/annotation/0",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_284/annotationPage/1/annotation/0",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/tei/translation/FHL_007548733_IMG_284.xml",
+								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/tei/translation/FHL_007548733_IMG_284.xml",
 								"format": "text/xml",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_284"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_284"
 						},
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_284/annotationPage/1/annotation/1",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_284/annotationPage/1/annotation/1",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/tei/transcription/FHL_007548733_IMG_284.xml",
+								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/tei/transcription/FHL_007548733_IMG_284.xml",
 								"format": "text/xml",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_284"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_284"
 						},
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_284/annotationPage/1/annotation/2",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_284/annotationPage/1/annotation/2",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/html/translation/FHL_007548733_IMG_284.html",
+								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/html/translation/FHL_007548733_IMG_284.html",
 								"format": "text/html",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_284"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_284"
 						},
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_284/annotationPage/1/annotation/3",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_284/annotationPage/1/annotation/3",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/html/transcription/FHL_007548733_IMG_284.html",
+								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/html/transcription/FHL_007548733_IMG_284.html",
 								"format": "text/html",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_284"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_284"
 						}
 					]
 				}
 			]
 		},
 		{
-			"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_308",
+			"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_308",
 			"type": "Canvas",
 			"items": [
 				{
-					"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_308/annotationpage/0",
+					"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_308/annotationpage/0",
 					"type": "AnnotationPage",
 					"items": [
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_308/annotationpage/0/annotation/0",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_308/annotationpage/0/annotation/0",
 							"type": "Annotation",
 							"motivation": "painting",
 							"body": {
@@ -1574,7 +1574,7 @@
 									}
 								]
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_308"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_308"
 						}
 					]
 				}
@@ -1611,76 +1611,76 @@
 					}
 				},
 				{
-					"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_308/annotationPage/1",
+					"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_308/annotationPage/1",
 					"type": "AnnotationPage",
 					"items": [
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_308/annotationPage/1/annotation/0",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_308/annotationPage/1/annotation/0",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/tei/translation/FHL_007548733_IMG_308.xml",
+								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/tei/translation/FHL_007548733_IMG_308.xml",
 								"format": "text/xml",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_308"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_308"
 						},
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_308/annotationPage/1/annotation/1",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_308/annotationPage/1/annotation/1",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/tei/transcription/FHL_007548733_IMG_308.xml",
+								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/tei/transcription/FHL_007548733_IMG_308.xml",
 								"format": "text/xml",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_308"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_308"
 						},
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_308/annotationPage/1/annotation/2",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_308/annotationPage/1/annotation/2",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/html/translation/FHL_007548733_IMG_308.html",
+								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/html/translation/FHL_007548733_IMG_308.html",
 								"format": "text/html",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_308"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_308"
 						},
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_308/annotationPage/1/annotation/3",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_308/annotationPage/1/annotation/3",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/html/transcription/FHL_007548733_IMG_308.html",
+								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/html/transcription/FHL_007548733_IMG_308.html",
 								"format": "text/html",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_308"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_308"
 						}
 					]
 				}
 			]
 		},
 		{
-			"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_309",
+			"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_309",
 			"type": "Canvas",
 			"items": [
 				{
-					"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_309/annotationpage/0",
+					"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_309/annotationpage/0",
 					"type": "AnnotationPage",
 					"items": [
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_309/annotationpage/0/annotation/0",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_309/annotationpage/0/annotation/0",
 							"type": "Annotation",
 							"motivation": "painting",
 							"body": {
@@ -1705,7 +1705,7 @@
 									}
 								]
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_309"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_309"
 						}
 					]
 				}
@@ -1742,76 +1742,76 @@
 					}
 				},
 				{
-					"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_309/annotationPage/1",
+					"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_309/annotationPage/1",
 					"type": "AnnotationPage",
 					"items": [
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_309/annotationPage/1/annotation/0",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_309/annotationPage/1/annotation/0",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/tei/translation/FHL_007548733_IMG_309.xml",
+								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/tei/translation/FHL_007548733_IMG_309.xml",
 								"format": "text/xml",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_309"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_309"
 						},
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_309/annotationPage/1/annotation/1",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_309/annotationPage/1/annotation/1",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/tei/transcription/FHL_007548733_IMG_309.xml",
+								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/tei/transcription/FHL_007548733_IMG_309.xml",
 								"format": "text/xml",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_309"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_309"
 						},
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_309/annotationPage/1/annotation/2",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_309/annotationPage/1/annotation/2",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/html/translation/FHL_007548733_IMG_309.html",
+								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/html/translation/FHL_007548733_IMG_309.html",
 								"format": "text/html",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_309"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_309"
 						},
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_309/annotationPage/1/annotation/3",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_309/annotationPage/1/annotation/3",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/html/transcription/FHL_007548733_IMG_309.html",
+								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/html/transcription/FHL_007548733_IMG_309.html",
 								"format": "text/html",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_309"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_309"
 						}
 					]
 				}
 			]
 		},
 		{
-			"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_333",
+			"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_333",
 			"type": "Canvas",
 			"items": [
 				{
-					"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_333/annotationpage/0",
+					"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_333/annotationpage/0",
 					"type": "AnnotationPage",
 					"items": [
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_333/annotationpage/0/annotation/0",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_333/annotationpage/0/annotation/0",
 							"type": "Annotation",
 							"motivation": "painting",
 							"body": {
@@ -1836,7 +1836,7 @@
 									}
 								]
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_333"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_333"
 						}
 					]
 				}
@@ -1896,76 +1896,76 @@
 					}
 				},
 				{
-					"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_333/annotationPage/1",
+					"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_333/annotationPage/1",
 					"type": "AnnotationPage",
 					"items": [
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_333/annotationPage/1/annotation/0",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_333/annotationPage/1/annotation/0",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/tei/translation/FHL_007548733_IMG_333.xml",
+								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/tei/translation/FHL_007548733_IMG_333.xml",
 								"format": "text/xml",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_333"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_333"
 						},
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_333/annotationPage/1/annotation/1",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_333/annotationPage/1/annotation/1",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/tei/transcription/FHL_007548733_IMG_333.xml",
+								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/tei/transcription/FHL_007548733_IMG_333.xml",
 								"format": "text/xml",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_333"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_333"
 						},
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_333/annotationPage/1/annotation/2",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_333/annotationPage/1/annotation/2",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/html/translation/FHL_007548733_IMG_333.html",
+								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/html/translation/FHL_007548733_IMG_333.html",
 								"format": "text/html",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_333"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_333"
 						},
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_333/annotationPage/1/annotation/3",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_333/annotationPage/1/annotation/3",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/html/transcription/FHL_007548733_IMG_333.html",
+								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/html/transcription/FHL_007548733_IMG_333.html",
 								"format": "text/html",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_333"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_333"
 						}
 					]
 				}
 			]
 		},
 		{
-			"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_353",
+			"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_353",
 			"type": "Canvas",
 			"items": [
 				{
-					"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_353/annotationpage/0",
+					"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_353/annotationpage/0",
 					"type": "AnnotationPage",
 					"items": [
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_353/annotationpage/0/annotation/0",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_353/annotationpage/0/annotation/0",
 							"type": "Annotation",
 							"motivation": "painting",
 							"body": {
@@ -1990,7 +1990,7 @@
 									}
 								]
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_353"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_353"
 						}
 					]
 				}
@@ -2073,76 +2073,76 @@
 					}
 				},
 				{
-					"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_353/annotationPage/1",
+					"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_353/annotationPage/1",
 					"type": "AnnotationPage",
 					"items": [
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_353/annotationPage/1/annotation/0",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_353/annotationPage/1/annotation/0",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/tei/translation/FHL_007548733_IMG_353.xml",
+								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/tei/translation/FHL_007548733_IMG_353.xml",
 								"format": "text/xml",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_353"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_353"
 						},
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_353/annotationPage/1/annotation/1",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_353/annotationPage/1/annotation/1",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/tei/transcription/FHL_007548733_IMG_353.xml",
+								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/tei/transcription/FHL_007548733_IMG_353.xml",
 								"format": "text/xml",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_353"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_353"
 						},
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_353/annotationPage/1/annotation/2",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_353/annotationPage/1/annotation/2",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/html/translation/FHL_007548733_IMG_353.html",
+								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/html/translation/FHL_007548733_IMG_353.html",
 								"format": "text/html",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_353"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_353"
 						},
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_353/annotationPage/1/annotation/3",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_353/annotationPage/1/annotation/3",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/html/transcription/FHL_007548733_IMG_353.html",
+								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/html/transcription/FHL_007548733_IMG_353.html",
 								"format": "text/html",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_353"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_353"
 						}
 					]
 				}
 			]
 		},
 		{
-			"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_354",
+			"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_354",
 			"type": "Canvas",
 			"items": [
 				{
-					"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_354/annotationpage/0",
+					"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_354/annotationpage/0",
 					"type": "AnnotationPage",
 					"items": [
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_354/annotationpage/0/annotation/0",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_354/annotationpage/0/annotation/0",
 							"type": "Annotation",
 							"motivation": "painting",
 							"body": {
@@ -2167,7 +2167,7 @@
 									}
 								]
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_354"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_354"
 						}
 					]
 				}
@@ -2273,76 +2273,76 @@
 					}
 				},
 				{
-					"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_354/annotationPage/1",
+					"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_354/annotationPage/1",
 					"type": "AnnotationPage",
 					"items": [
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_354/annotationPage/1/annotation/0",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_354/annotationPage/1/annotation/0",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/tei/translation/FHL_007548733_IMG_354.xml",
+								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/tei/translation/FHL_007548733_IMG_354.xml",
 								"format": "text/xml",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_354"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_354"
 						},
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_354/annotationPage/1/annotation/1",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_354/annotationPage/1/annotation/1",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/tei/transcription/FHL_007548733_IMG_354.xml",
+								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/tei/transcription/FHL_007548733_IMG_354.xml",
 								"format": "text/xml",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_354"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_354"
 						},
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_354/annotationPage/1/annotation/2",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_354/annotationPage/1/annotation/2",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/html/translation/FHL_007548733_IMG_354.html",
+								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/html/translation/FHL_007548733_IMG_354.html",
 								"format": "text/html",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_354"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_354"
 						},
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_354/annotationPage/1/annotation/3",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_354/annotationPage/1/annotation/3",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/html/transcription/FHL_007548733_IMG_354.html",
+								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/html/transcription/FHL_007548733_IMG_354.html",
 								"format": "text/html",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_354"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_354"
 						}
 					]
 				}
 			]
 		},
 		{
-			"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_355",
+			"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_355",
 			"type": "Canvas",
 			"items": [
 				{
-					"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_355/annotationpage/0",
+					"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_355/annotationpage/0",
 					"type": "AnnotationPage",
 					"items": [
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_355/annotationpage/0/annotation/0",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_355/annotationpage/0/annotation/0",
 							"type": "Annotation",
 							"motivation": "painting",
 							"body": {
@@ -2367,7 +2367,7 @@
 									}
 								]
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_355"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_355"
 						}
 					]
 				}
@@ -2404,76 +2404,76 @@
 					}
 				},
 				{
-					"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_355/annotationPage/1",
+					"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_355/annotationPage/1",
 					"type": "AnnotationPage",
 					"items": [
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_355/annotationPage/1/annotation/0",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_355/annotationPage/1/annotation/0",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/tei/translation/FHL_007548733_IMG_355.xml",
+								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/tei/translation/FHL_007548733_IMG_355.xml",
 								"format": "text/xml",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_355"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_355"
 						},
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_355/annotationPage/1/annotation/1",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_355/annotationPage/1/annotation/1",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/tei/transcription/FHL_007548733_IMG_355.xml",
+								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/tei/transcription/FHL_007548733_IMG_355.xml",
 								"format": "text/xml",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_355"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_355"
 						},
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_355/annotationPage/1/annotation/2",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_355/annotationPage/1/annotation/2",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/html/translation/FHL_007548733_IMG_355.html",
+								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/html/translation/FHL_007548733_IMG_355.html",
 								"format": "text/html",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_355"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_355"
 						},
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_355/annotationPage/1/annotation/3",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_355/annotationPage/1/annotation/3",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/html/transcription/FHL_007548733_IMG_355.html",
+								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/html/transcription/FHL_007548733_IMG_355.html",
 								"format": "text/html",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_355"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_355"
 						}
 					]
 				}
 			]
 		},
 		{
-			"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_376",
+			"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_376",
 			"type": "Canvas",
 			"items": [
 				{
-					"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_376/annotationpage/0",
+					"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_376/annotationpage/0",
 					"type": "AnnotationPage",
 					"items": [
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_376/annotationpage/0/annotation/0",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_376/annotationpage/0/annotation/0",
 							"type": "Annotation",
 							"motivation": "painting",
 							"body": {
@@ -2498,7 +2498,7 @@
 									}
 								]
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_376"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_376"
 						}
 					]
 				}
@@ -2535,76 +2535,76 @@
 					}
 				},
 				{
-					"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_376/annotationPage/1",
+					"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_376/annotationPage/1",
 					"type": "AnnotationPage",
 					"items": [
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_376/annotationPage/1/annotation/0",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_376/annotationPage/1/annotation/0",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/tei/translation/FHL_007548733_IMG_376.xml",
+								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/tei/translation/FHL_007548733_IMG_376.xml",
 								"format": "text/xml",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_376"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_376"
 						},
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_376/annotationPage/1/annotation/1",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_376/annotationPage/1/annotation/1",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/tei/transcription/FHL_007548733_IMG_376.xml",
+								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/tei/transcription/FHL_007548733_IMG_376.xml",
 								"format": "text/xml",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_376"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_376"
 						},
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_376/annotationPage/1/annotation/2",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_376/annotationPage/1/annotation/2",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/html/translation/FHL_007548733_IMG_376.html",
+								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/html/translation/FHL_007548733_IMG_376.html",
 								"format": "text/html",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_376"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_376"
 						},
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_376/annotationPage/1/annotation/3",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_376/annotationPage/1/annotation/3",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/html/transcription/FHL_007548733_IMG_376.html",
+								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/html/transcription/FHL_007548733_IMG_376.html",
 								"format": "text/html",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_376"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_376"
 						}
 					]
 				}
 			]
 		},
 		{
-			"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_377",
+			"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_377",
 			"type": "Canvas",
 			"items": [
 				{
-					"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_377/annotationpage/0",
+					"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_377/annotationpage/0",
 					"type": "AnnotationPage",
 					"items": [
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_377/annotationpage/0/annotation/0",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_377/annotationpage/0/annotation/0",
 							"type": "Annotation",
 							"motivation": "painting",
 							"body": {
@@ -2629,7 +2629,7 @@
 									}
 								]
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_377"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_377"
 						}
 					]
 				}
@@ -2666,76 +2666,76 @@
 					}
 				},
 				{
-					"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_377/annotationPage/1",
+					"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_377/annotationPage/1",
 					"type": "AnnotationPage",
 					"items": [
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_377/annotationPage/1/annotation/0",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_377/annotationPage/1/annotation/0",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/tei/translation/FHL_007548733_IMG_377.xml",
+								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/tei/translation/FHL_007548733_IMG_377.xml",
 								"format": "text/xml",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_377"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_377"
 						},
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_377/annotationPage/1/annotation/1",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_377/annotationPage/1/annotation/1",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/tei/transcription/FHL_007548733_IMG_377.xml",
+								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/tei/transcription/FHL_007548733_IMG_377.xml",
 								"format": "text/xml",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_377"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_377"
 						},
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_377/annotationPage/1/annotation/2",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_377/annotationPage/1/annotation/2",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/html/translation/FHL_007548733_IMG_377.html",
+								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/html/translation/FHL_007548733_IMG_377.html",
 								"format": "text/html",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_377"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_377"
 						},
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_377/annotationPage/1/annotation/3",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_377/annotationPage/1/annotation/3",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/html/transcription/FHL_007548733_IMG_377.html",
+								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/html/transcription/FHL_007548733_IMG_377.html",
 								"format": "text/html",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_377"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_377"
 						}
 					]
 				}
 			]
 		},
 		{
-			"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_407",
+			"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_407",
 			"type": "Canvas",
 			"items": [
 				{
-					"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_407/annotationpage/0",
+					"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_407/annotationpage/0",
 					"type": "AnnotationPage",
 					"items": [
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_407/annotationpage/0/annotation/0",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_407/annotationpage/0/annotation/0",
 							"type": "Annotation",
 							"motivation": "painting",
 							"body": {
@@ -2760,7 +2760,7 @@
 									}
 								]
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_407"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_407"
 						}
 					]
 				}
@@ -2820,76 +2820,76 @@
 					}
 				},
 				{
-					"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_407/annotationPage/1",
+					"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_407/annotationPage/1",
 					"type": "AnnotationPage",
 					"items": [
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_407/annotationPage/1/annotation/0",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_407/annotationPage/1/annotation/0",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/tei/translation/FHL_007548733_IMG_407.xml",
+								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/tei/translation/FHL_007548733_IMG_407.xml",
 								"format": "text/xml",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_407"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_407"
 						},
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_407/annotationPage/1/annotation/1",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_407/annotationPage/1/annotation/1",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/tei/transcription/FHL_007548733_IMG_407.xml",
+								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/tei/transcription/FHL_007548733_IMG_407.xml",
 								"format": "text/xml",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_407"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_407"
 						},
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_407/annotationPage/1/annotation/2",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_407/annotationPage/1/annotation/2",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/html/translation/FHL_007548733_IMG_407.html",
+								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/html/translation/FHL_007548733_IMG_407.html",
 								"format": "text/html",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_407"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_407"
 						},
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_407/annotationPage/1/annotation/3",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_407/annotationPage/1/annotation/3",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/html/transcription/FHL_007548733_IMG_407.html",
+								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/html/transcription/FHL_007548733_IMG_407.html",
 								"format": "text/html",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_407"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_407"
 						}
 					]
 				}
 			]
 		},
 		{
-			"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_470",
+			"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_470",
 			"type": "Canvas",
 			"items": [
 				{
-					"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_470/annotationpage/0",
+					"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_470/annotationpage/0",
 					"type": "AnnotationPage",
 					"items": [
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_470/annotationpage/0/annotation/0",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_470/annotationpage/0/annotation/0",
 							"type": "Annotation",
 							"motivation": "painting",
 							"body": {
@@ -2914,7 +2914,7 @@
 									}
 								]
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_470"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_470"
 						}
 					]
 				}
@@ -2951,76 +2951,76 @@
 					}
 				},
 				{
-					"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_470/annotationPage/1",
+					"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_470/annotationPage/1",
 					"type": "AnnotationPage",
 					"items": [
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_470/annotationPage/1/annotation/0",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_470/annotationPage/1/annotation/0",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/tei/translation/FHL_007548733_IMG_470.xml",
+								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/tei/translation/FHL_007548733_IMG_470.xml",
 								"format": "text/xml",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_470"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_470"
 						},
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_470/annotationPage/1/annotation/1",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_470/annotationPage/1/annotation/1",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/tei/transcription/FHL_007548733_IMG_470.xml",
+								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/tei/transcription/FHL_007548733_IMG_470.xml",
 								"format": "text/xml",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_470"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_470"
 						},
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_470/annotationPage/1/annotation/2",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_470/annotationPage/1/annotation/2",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/html/translation/FHL_007548733_IMG_470.html",
+								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/html/translation/FHL_007548733_IMG_470.html",
 								"format": "text/html",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_470"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_470"
 						},
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_470/annotationPage/1/annotation/3",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_470/annotationPage/1/annotation/3",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/html/transcription/FHL_007548733_IMG_470.html",
+								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/html/transcription/FHL_007548733_IMG_470.html",
 								"format": "text/html",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_470"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_470"
 						}
 					]
 				}
 			]
 		},
 		{
-			"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_471",
+			"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_471",
 			"type": "Canvas",
 			"items": [
 				{
-					"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_471/annotationpage/0",
+					"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_471/annotationpage/0",
 					"type": "AnnotationPage",
 					"items": [
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_471/annotationpage/0/annotation/0",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_471/annotationpage/0/annotation/0",
 							"type": "Annotation",
 							"motivation": "painting",
 							"body": {
@@ -3045,7 +3045,7 @@
 									}
 								]
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_471"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_471"
 						}
 					]
 				}
@@ -3082,76 +3082,76 @@
 					}
 				},
 				{
-					"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_471/annotationPage/1",
+					"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_471/annotationPage/1",
 					"type": "AnnotationPage",
 					"items": [
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_471/annotationPage/1/annotation/0",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_471/annotationPage/1/annotation/0",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/tei/translation/FHL_007548733_IMG_471.xml",
+								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/tei/translation/FHL_007548733_IMG_471.xml",
 								"format": "text/xml",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_471"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_471"
 						},
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_471/annotationPage/1/annotation/1",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_471/annotationPage/1/annotation/1",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/tei/transcription/FHL_007548733_IMG_471.xml",
+								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/tei/transcription/FHL_007548733_IMG_471.xml",
 								"format": "text/xml",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_471"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_471"
 						},
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_471/annotationPage/1/annotation/2",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_471/annotationPage/1/annotation/2",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/html/translation/FHL_007548733_IMG_471.html",
+								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/html/translation/FHL_007548733_IMG_471.html",
 								"format": "text/html",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_471"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_471"
 						},
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_471/annotationPage/1/annotation/3",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_471/annotationPage/1/annotation/3",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/html/transcription/FHL_007548733_IMG_471.html",
+								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/html/transcription/FHL_007548733_IMG_471.html",
 								"format": "text/html",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_471"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_471"
 						}
 					]
 				}
 			]
 		},
 		{
-			"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_500",
+			"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_500",
 			"type": "Canvas",
 			"items": [
 				{
-					"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_500/annotationpage/0",
+					"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_500/annotationpage/0",
 					"type": "AnnotationPage",
 					"items": [
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_500/annotationpage/0/annotation/0",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_500/annotationpage/0/annotation/0",
 							"type": "Annotation",
 							"motivation": "painting",
 							"body": {
@@ -3176,7 +3176,7 @@
 									}
 								]
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_500"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_500"
 						}
 					]
 				}
@@ -3213,76 +3213,76 @@
 					}
 				},
 				{
-					"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_500/annotationPage/1",
+					"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_500/annotationPage/1",
 					"type": "AnnotationPage",
 					"items": [
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_500/annotationPage/1/annotation/0",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_500/annotationPage/1/annotation/0",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/tei/translation/FHL_007548733_IMG_500.xml",
+								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/tei/translation/FHL_007548733_IMG_500.xml",
 								"format": "text/xml",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_500"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_500"
 						},
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_500/annotationPage/1/annotation/1",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_500/annotationPage/1/annotation/1",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/tei/transcription/FHL_007548733_IMG_500.xml",
+								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/tei/transcription/FHL_007548733_IMG_500.xml",
 								"format": "text/xml",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_500"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_500"
 						},
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_500/annotationPage/1/annotation/2",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_500/annotationPage/1/annotation/2",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/html/translation/FHL_007548733_IMG_500.html",
+								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/html/translation/FHL_007548733_IMG_500.html",
 								"format": "text/html",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_500"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_500"
 						},
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_500/annotationPage/1/annotation/3",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_500/annotationPage/1/annotation/3",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/html/transcription/FHL_007548733_IMG_500.html",
+								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/html/transcription/FHL_007548733_IMG_500.html",
 								"format": "text/html",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_500"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_500"
 						}
 					]
 				}
 			]
 		},
 		{
-			"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_515",
+			"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_515",
 			"type": "Canvas",
 			"items": [
 				{
-					"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_515/annotationpage/0",
+					"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_515/annotationpage/0",
 					"type": "AnnotationPage",
 					"items": [
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_515/annotationpage/0/annotation/0",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_515/annotationpage/0/annotation/0",
 							"type": "Annotation",
 							"motivation": "painting",
 							"body": {
@@ -3307,7 +3307,7 @@
 									}
 								]
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_515"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_515"
 						}
 					]
 				}
@@ -3344,76 +3344,76 @@
 					}
 				},
 				{
-					"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_515/annotationPage/1",
+					"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_515/annotationPage/1",
 					"type": "AnnotationPage",
 					"items": [
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_515/annotationPage/1/annotation/0",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_515/annotationPage/1/annotation/0",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/tei/translation/FHL_007548733_IMG_515.xml",
+								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/tei/translation/FHL_007548733_IMG_515.xml",
 								"format": "text/xml",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_515"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_515"
 						},
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_515/annotationPage/1/annotation/1",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_515/annotationPage/1/annotation/1",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/tei/transcription/FHL_007548733_IMG_515.xml",
+								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/tei/transcription/FHL_007548733_IMG_515.xml",
 								"format": "text/xml",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_515"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_515"
 						},
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_515/annotationPage/1/annotation/2",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_515/annotationPage/1/annotation/2",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/html/translation/FHL_007548733_IMG_515.html",
+								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/html/translation/FHL_007548733_IMG_515.html",
 								"format": "text/html",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_515"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_515"
 						},
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_515/annotationPage/1/annotation/3",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_515/annotationPage/1/annotation/3",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/html/transcription/FHL_007548733_IMG_515.html",
+								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/html/transcription/FHL_007548733_IMG_515.html",
 								"format": "text/html",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_515"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_515"
 						}
 					]
 				}
 			]
 		},
 		{
-			"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_516",
+			"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_516",
 			"type": "Canvas",
 			"items": [
 				{
-					"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_516/annotationpage/0",
+					"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_516/annotationpage/0",
 					"type": "AnnotationPage",
 					"items": [
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_516/annotationpage/0/annotation/0",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_516/annotationpage/0/annotation/0",
 							"type": "Annotation",
 							"motivation": "painting",
 							"body": {
@@ -3438,7 +3438,7 @@
 									}
 								]
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_516"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_516"
 						}
 					]
 				}
@@ -3475,76 +3475,76 @@
 					}
 				},
 				{
-					"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_516/annotationPage/1",
+					"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_516/annotationPage/1",
 					"type": "AnnotationPage",
 					"items": [
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_516/annotationPage/1/annotation/0",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_516/annotationPage/1/annotation/0",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/tei/translation/FHL_007548733_IMG_516.xml",
+								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/tei/translation/FHL_007548733_IMG_516.xml",
 								"format": "text/xml",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_516"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_516"
 						},
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_516/annotationPage/1/annotation/1",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_516/annotationPage/1/annotation/1",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/tei/transcription/FHL_007548733_IMG_516.xml",
+								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/tei/transcription/FHL_007548733_IMG_516.xml",
 								"format": "text/xml",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_516"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_516"
 						},
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_516/annotationPage/1/annotation/2",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_516/annotationPage/1/annotation/2",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/html/translation/FHL_007548733_IMG_516.html",
+								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/html/translation/FHL_007548733_IMG_516.html",
 								"format": "text/html",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_516"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_516"
 						},
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_516/annotationPage/1/annotation/3",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_516/annotationPage/1/annotation/3",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/html/transcription/FHL_007548733_IMG_516.html",
+								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/html/transcription/FHL_007548733_IMG_516.html",
 								"format": "text/html",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_516"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_516"
 						}
 					]
 				}
 			]
 		},
 		{
-			"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_540",
+			"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_540",
 			"type": "Canvas",
 			"items": [
 				{
-					"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_540/annotationpage/0",
+					"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_540/annotationpage/0",
 					"type": "AnnotationPage",
 					"items": [
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_540/annotationpage/0/annotation/0",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_540/annotationpage/0/annotation/0",
 							"type": "Annotation",
 							"motivation": "painting",
 							"body": {
@@ -3569,7 +3569,7 @@
 									}
 								]
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_540"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_540"
 						}
 					]
 				}
@@ -3606,76 +3606,76 @@
 					}
 				},
 				{
-					"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_540/annotationPage/1",
+					"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_540/annotationPage/1",
 					"type": "AnnotationPage",
 					"items": [
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_540/annotationPage/1/annotation/0",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_540/annotationPage/1/annotation/0",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/tei/translation/FHL_007548733_IMG_540.xml",
+								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/tei/translation/FHL_007548733_IMG_540.xml",
 								"format": "text/xml",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_540"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_540"
 						},
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_540/annotationPage/1/annotation/1",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_540/annotationPage/1/annotation/1",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/tei/transcription/FHL_007548733_IMG_540.xml",
+								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/tei/transcription/FHL_007548733_IMG_540.xml",
 								"format": "text/xml",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_540"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_540"
 						},
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_540/annotationPage/1/annotation/2",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_540/annotationPage/1/annotation/2",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/html/translation/FHL_007548733_IMG_540.html",
+								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/html/translation/FHL_007548733_IMG_540.html",
 								"format": "text/html",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_540"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_540"
 						},
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_540/annotationPage/1/annotation/3",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_540/annotationPage/1/annotation/3",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/html/transcription/FHL_007548733_IMG_540.html",
+								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/html/transcription/FHL_007548733_IMG_540.html",
 								"format": "text/html",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_540"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_540"
 						}
 					]
 				}
 			]
 		},
 		{
-			"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_541",
+			"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_541",
 			"type": "Canvas",
 			"items": [
 				{
-					"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_541/annotationpage/0",
+					"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_541/annotationpage/0",
 					"type": "AnnotationPage",
 					"items": [
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_541/annotationpage/0/annotation/0",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_541/annotationpage/0/annotation/0",
 							"type": "Annotation",
 							"motivation": "painting",
 							"body": {
@@ -3700,7 +3700,7 @@
 									}
 								]
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_541"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_541"
 						}
 					]
 				}
@@ -3737,60 +3737,60 @@
 					}
 				},
 				{
-					"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_541/annotationPage/1",
+					"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_541/annotationPage/1",
 					"type": "AnnotationPage",
 					"items": [
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_541/annotationPage/1/annotation/0",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_541/annotationPage/1/annotation/0",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/tei/translation/FHL_007548733_IMG_541.xml",
+								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/tei/translation/FHL_007548733_IMG_541.xml",
 								"format": "text/xml",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_541"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_541"
 						},
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_541/annotationPage/1/annotation/1",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_541/annotationPage/1/annotation/1",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/tei/transcription/FHL_007548733_IMG_541.xml",
+								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/tei/transcription/FHL_007548733_IMG_541.xml",
 								"format": "text/xml",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_541"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_541"
 						},
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_541/annotationPage/1/annotation/2",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_541/annotationPage/1/annotation/2",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/html/translation/FHL_007548733_IMG_541.html",
+								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/html/translation/FHL_007548733_IMG_541.html",
 								"format": "text/html",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_541"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_541"
 						},
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_541/annotationPage/1/annotation/3",
+							"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_541/annotationPage/1/annotation/3",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/html/transcription/FHL_007548733_IMG_541.html",
+								"id": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/html/transcription/FHL_007548733_IMG_541.html",
 								"format": "text/html",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/canvas/FHL_007548733_IMG_541"
+							"target": "https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/canvas/FHL_007548733_IMG_541"
 						}
 					]
 				}
@@ -3799,7 +3799,7 @@
 	],
 	"label": {
 		"en": [
-			"FHL_007548733_TAOS_BAPTISMS_BATCH_2"
+			"taos-baptisms-example"
 		]
 	},
 	"seeAlso": [
