@@ -2,10 +2,7 @@
 		<body>
 			<pb facs="#f010"/>
 			<div ana="#cat-stones" decls="#cat-stones">
-				<head>
-					<rs ref="#rs-m">Counterfeit coral</rs>
-					<note n="c_003r_02">In this period, counterfeit does not necessarily connote a deceptive practice of imitation. See <ref target="https://edition640.makingandknowing.org/#/essays/ann_045_fa_16">Lores-Chavez, “Imitating Raw Nature.”</ref></note>
-				</head>
+				<head><rs ref="#rs-m">Counterfeit coral</rs> <note n="c_003r_02">In this period, counterfeit does not necessarily connote a deceptive practice of imitation. See <ref target="https://edition640.makingandknowing.org/#/essays/ann_045_fa_16">Lores-Chavez, “Imitating Raw Nature.”</ref></note></head>
 				<p>
 					<metamark>+</metamark>
 				</p>
@@ -21,15 +18,17 @@
 				<p rend="left-bottom" style="tall">A little more <rs ref="#rs-m">turpentine</rs> than <rs ref="#rs-m">turpentine oil</rs> is needed in order to give body to the <rs ref="#rs-m">varnish</rs>, which needs to be applied with the <rs ref="#rs-bp">finger</rs> in order to spread it thinner and less thick, for when it is thick, it turns yellow and sticks. One does not <rs ref="#rs-m">varnish</rs> to make paintings shine, for it just takes the light out of them.</p>
 			</div>
 			<div ana="#cat-varnish" decls="#cat-varnish">
-				<p rend="left-middle" style="wide">But it is used to heighten colors which have soaked in and to keep them from dust. <rs ref="#rs-m">Mastic varnish</rs> does not resist <rs ref="#rs-env">rain</rs>, whereas that of <rs ref="#rs-m">oil</rs> and <rs ref="#rs-m">rosin</rs> does.</p>
-			</div>
-			<div ana="#cat-varnish" decls="#cat-varnish">
 				<head><rs ref="#rs-m">Thick varnish</rs> for planks</head>
 				<p>There is a <rs ref="#rs-m">varnish</rs> that takes a long time to dry &amp; drips more than two <rs ref="#rs-tmp">months</rs> after it has been applied to the planks. But this one does not drip like that of <rs ref="#rs-tmp">times past</rs>, which was made of <rs ref="#rs-m">linseed oil</rs>, <rs ref="#rs-m">garlic</rs> boiled in it to extinguish it &amp; rid it of grease, &amp; with <rs ref="#rs-m">wheat</rs>. And this one yellowed &amp; rendered greenish the blue color of paintings. This one is made like the other one except that one puts <rs ref="#rs-m">coarse common turpentine</rs></p>
-				<pb facs="#f011"/>
+			</div>
+			<div ana="#cat-varnish" decls="#cat-varnish">
+				<p rend="left-bottom" style="wide">But it is used to heighten colors which have soaked in and to keep them from dust. <rs ref="#rs-m">Mastic varnish</rs> does not resist <rs ref="#rs-env">rain</rs>, whereas that of <rs ref="#rs-m">oil</rs> and <rs ref="#rs-m">rosin</rs> does.</p>
+			</div>
+			<pb facs="#f011"/>
+			<div>
 				<p>instead of <rs ref="#rs-m">fine turpentine</rs>. And you can put into two <rs ref="#rs-ms">lb</rs> of <del><rs ref="#rs-fr">tou</rs></del> <rs ref="#rs-m">common turpentine</rs> one <rs ref="#rs-ms">lb</rs> of <rs ref="#rs-m">fine turpentine oil</rs> &amp; do everything as with the other one. This one will cost you no more than five or six <rs ref="#rs-cn">sous</rs> per <rs ref="#rs-ms">lb</rs> &amp; is sold for 40 <rs ref="#rs-cn">sous</rs> per <rs ref="#rs-ms">lb</rs>.</p>
 				<figure>
-					<graphic url="https://edition640.makingandknowing.org/bnf-ms-fr-640/prod050222-0/figures/p003v_1.png">
+					<graphic url="https://cu-mkp.github.io/editioncrafter-data/fr640_3r-3v-example/figures/p003v_1.png">
 						<desc/>
 					</graphic>
 				</figure>
