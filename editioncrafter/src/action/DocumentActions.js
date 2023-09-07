@@ -139,7 +139,7 @@ function parseManifest(manifest, transcriptionTypes) {
     if (ratio > 1) {
       thumbnailDimensions = [MAX_THUMBNAIL_DIMENSION, Math.round(MAX_THUMBNAIL_DIMENSION / ratio)];
     } else {
-      thumbnailDimensions = [Math.round(MAX_THUMBNAIL_DIMENSION / ratio), MAX_THUMBNAIL_DIMENSION];
+      thumbnailDimensions = [Math.round(MAX_THUMBNAIL_DIMENSION * ratio), MAX_THUMBNAIL_DIMENSION];
     }
 
     const thumbnailURL = `${bodyId}/full/${thumbnailDimensions.join(',')}/0/default.jpg`;
