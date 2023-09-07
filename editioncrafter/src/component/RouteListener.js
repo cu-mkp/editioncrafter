@@ -1,39 +1,35 @@
-import React from 'react';
+/* eslint-disable react-hooks/exhaustive-deps */
+import { useEffect, useRef } from 'react';
 import { connect } from 'react-redux';
-import withRouter from '../hocs/withRouter';
+import { useLocation } from 'react-router';
 import { dispatchAction } from '../model/ReduxStore';
 
-class RouteListener extends React.Component {
-  constructor(props) {
-    super(props);
-    this.listening = false;
-  }
+const RouteListener = (props) => {
+  const listening = useRef(false);
 
-  componentDidUpdate(prevProps) {
-    if (this.props.router.location !== prevProps.router.location) {
-      this.userNavigated();
+  const location = useLocation();
+
+  const userNavigated = () => {
+    dispatchAction(props, 'RouteListenerSaga.userNavigatation', location);
+  };
+
+  useEffect(() => {
+    if (!listening.current) {
+      userNavigated();
+      listening.current = true;
     }
-  }
+  }, []);
 
-  componentDidMount() {
-    if (!this.listening) {
-      this.userNavigated();
-      this.listening = true;
-    }
-  }
+  useEffect(() => {
+    userNavigated();
+  }, [location]);
 
-  userNavigated() {
-    dispatchAction(this.props, 'RouteListenerSaga.userNavigatation', this.props.router.location);
-  }
-
-  render() {
-    return null;
-  }
-}
+  return null;
+};
 
 function mapStateToProps(state) {
   return {
   };
 }
 
-export default connect(mapStateToProps)(withRouter(RouteListener));
+export default connect(mapStateToProps)(RouteListener);

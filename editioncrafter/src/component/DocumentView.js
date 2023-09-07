@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
 import withWidth, { isWidthUp } from '@material-ui/core/withWidth';
+import {
+  useLocation, useNavigate, useParams,
+} from 'react-router-dom';
 import SplitPaneView from './SplitPaneView';
 import { dispatchAction } from '../model/ReduxStore';
 import ImageView from './ImageView';
@@ -9,7 +12,6 @@ import TranscriptionView from './TranscriptionView';
 import XMLView from './XMLView';
 import GlossaryView from './GlossaryView';
 import SinglePaneView from './SinglePaneView';
-import withRouter from '../hocs/withRouter';
 
 const paneDefaults = {
   isXMLMode: false,
@@ -22,10 +24,19 @@ const DocumentView = (props) => {
   const [left, setLeft] = useState(paneDefaults);
   const [right, setRight] = useState(paneDefaults);
 
+  const params = useParams();
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  // Navigate while keeping existing search params
+  const navigateWithParams = (pathname) => {
+    navigate(pathname + location.search);
+  };
+
   const getViewports = () => {
     const {
       folioID, transcriptionType, folioID2, transcriptionType2,
-    } = props.router.params;
+    } = params;
     const { document } = props;
     const firstTranscriptionType = Object.keys(document.transcriptionTypes)[0];
 
@@ -145,26 +156,26 @@ const DocumentView = (props) => {
   const navigateFolios = (folioID, transcriptionType, folioID2, transcriptionType2) => {
     if (!folioID) {
       // goto grid view
-      props.router.navigate('/ec');
+      navigateWithParams('/ec');
       return;
     }
     if (!transcriptionType) {
       // goto folioID, tc
-      props.router.navigate(`/ec/${folioID}`);
+      navigateWithParams(`/ec/${folioID}`);
       return;
     }
     if (!folioID2) {
       // goto folioID, transcriptionType
-      props.router.navigate(`/ec/${folioID}/${transcriptionType}`);
+      navigateWithParams(`/ec/${folioID}/${transcriptionType}`);
       return;
     }
     if (!transcriptionType2) {
       // goto folioID, transcriptionType, folioID2, tc
-      props.router.navigate(`/ec/${folioID}/${transcriptionType}/${folioID2}/tc`);
+      navigateWithParams(`/ec/${folioID}/${transcriptionType}/${folioID2}/tc`);
       return;
     }
     // goto folioID, transcriptionType, folioID2, transcriptionType2
-    props.router.navigate(`/ec/${folioID}/${transcriptionType}/${folioID2}/${transcriptionType2}`);
+    navigateWithParams(`/ec/${folioID}/${transcriptionType}/${folioID2}/${transcriptionType2}`);
   };
 
   const changeCurrentFolio = (folioID, side, transcriptionType) => {
@@ -411,4 +422,4 @@ function mapStateToProps(state) {
   };
 }
 
-export default withWidth()(connect(mapStateToProps)(withRouter(DocumentView)));
+export default withWidth()(connect(mapStateToProps)(DocumentView));

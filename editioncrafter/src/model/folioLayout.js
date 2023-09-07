@@ -181,7 +181,13 @@ function layoutMargin(html, emptyZoneFrame, layoutDecoder) {
   // load the surface into a DOM element to retrieve the grid data
   const folioDiv = document.createElement('div');
   folioDiv.innerHTML = html;
-  const zones = folioDiv.getElementsByTagName('tei-body')[0].children;
+
+  let zones;
+  if (folioDiv.getElementsByTagName('tei-surface').length > 0) {
+    zones = [folioDiv.getElementsByTagName('tei-surface')[0]];
+  } else {
+    zones = folioDiv.getElementsByTagName('tei-body')[0].children;
+  }
 
   const validLayoutCode = function validLayoutCode(block) {
     const layoutCode = block.getAttribute('rend');
