@@ -55,10 +55,10 @@ function parseImageURLs(canvas) {
       if (annotation.type !== 'Annotation') throwError(`Expected Annotation in items property of ${annotationPage.id}`);
       if (annotation.motivation === 'painting') {
         if (!annotation.body) throwError(`Expected body property in Annotation ${annotation.id}`);
-        if (!annotation.body.thumbnail) throwError(`Expected body.thumbnail property in Annotation ${annotation.id}`);
-        const thumbnailURL = annotation.body.thumbnail[0].id;
-        if (!thumbnailURL) throwError(`Unable to find thumbnail for resource: ${annotation.body.id}`);
-        return { imageURL: `${annotation.body.id}/info.json`, thumbnailURL };
+        return {
+          bodyId: annotation.body.id,
+          imageURL: `${annotation.body.id}/info.json`,
+        };
       }
     }
   }
@@ -109,6 +109,9 @@ function parseAnnotationURLs(canvas, transcriptionTypes) {
   return annos;
 }
 
+// The largest dimension for either width or height allowed in a thumbnail.
+const MAX_THUMBNAIL_DIMENSION = 130;
+
 function parseManifest(manifest, transcriptionTypes) {
   const folios = [];
 
@@ -127,8 +130,19 @@ function parseManifest(manifest, transcriptionTypes) {
     if (!canvas.id) throwError(`Expected items[${i}] to have an id property.`);
     const folioID = canvas.id.substr(canvas.id.lastIndexOf('/') + 1);
     const canvasLabel = parseLabel(canvas);
-    const { imageURL, thumbnailURL } = parseImageURLs(canvas);
+    const { bodyId, imageURL } = parseImageURLs(canvas);
     const annotationURLs = parseAnnotationURLs(canvas, transcriptionTypes);
+
+    const ratio = canvas.width / canvas.height;
+
+    let thumbnailDimensions = [];
+    if (ratio > 1) {
+      thumbnailDimensions = [MAX_THUMBNAIL_DIMENSION, Math.round(MAX_THUMBNAIL_DIMENSION / ratio)];
+    } else {
+      thumbnailDimensions = [Math.round(MAX_THUMBNAIL_DIMENSION / ratio), MAX_THUMBNAIL_DIMENSION];
+    }
+
+    const thumbnailURL = `${bodyId}/full/${thumbnailDimensions.join(',')}/0/default.jpg`;
 
     const folio = {
       id: folioID,
