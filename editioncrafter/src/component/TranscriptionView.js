@@ -1,9 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import Parser from 'html-react-parser';
 import { useSearchParams } from 'react-router-dom';
 import Navigation from './Navigation';
 import Pagination from './Pagination';
+import Parser from './Parser';
 import EditorComment from './EditorComment';
 import ErrorBoundary from './ErrorBoundary';
 import Watermark from './Watermark';
@@ -140,7 +140,10 @@ const TranscriptionView = (props) => {
               className="surface grid-mode"
               style={surfaceStyle}
             >
-              {Parser(html, htmlToReactParserOptionsSide)}
+              <Parser
+                html={html}
+                htmlToReactParserOptionsSide={htmlToReactParserOptionsSide}
+              />
             </div>
           </ErrorBoundary>
         </div>
