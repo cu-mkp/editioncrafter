@@ -53,7 +53,7 @@ const ImageView = (props) => {
         element: el,
         zoomInButton: in_id,
         zoomOutButton: out_id,
-        prefixUrl: './img/openseadragon/',
+        showNavigationControl: false,
         zoomPerClick: 1,
       });
 

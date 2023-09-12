@@ -13,6 +13,7 @@ const config = {
         },
       },
     },
+    "@storybook/addon-styling-webpack"
   ],
   framework: {
     name: "@storybook/react-webpack5",
