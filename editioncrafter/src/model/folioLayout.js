@@ -294,6 +294,10 @@ function renderBlockSet(blockSet, facs) {
   // other element types become children of the single div.
   let el = `<div id="${elementID}" className="${classStr}" data-entry-id="${entryID}" data-facs="${facs || ''}">`;
   for (const block of blockSet) {
+    if (block.getAttribute('facs')) {
+      block.setAttribute('data-facs', block.getAttribute('facs'));
+    }
+
     block.setAttribute('className', 'block');
     if (block.name === 'div') {
       el = el.concat(`${block.innerHTML} <br/>`);

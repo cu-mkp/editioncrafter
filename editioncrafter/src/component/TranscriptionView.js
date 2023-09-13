@@ -37,6 +37,13 @@ const htmlToReactParserOptions = (selectedZone) => {
   const parserOptions = {
     replace(domNode) {
       switch (domNode.name) {
+        case 'tei-line': {
+          console.log(domNode.attribs['data-facs']);
+          return setUpForZoneHighlighting(selectedZone, domNode);
+        }
+        case 'tei-surface': {
+          return setUpForZoneHighlighting(selectedZone, domNode);
+        }
         case 'tei-note': {
           const text = domNode.children[0]?.data || '';
           const id = domNode.attribs.n;
