@@ -15,14 +15,17 @@
 		height: 100vh;
 	}
 
-.a9s-annotation > polygon:hover {
-	stroke-opacity: 1 !important;
-	stroke-width: 2 !important;
+.a9s-annotation.a9s-annotation.selected > rect,
+.a9s-annotation.a9s-annotation.selected > polygon
+ {
+	stroke: #4385F6 !important;
+	stroke-linejoin: round;
+	fill: rgba(67, 133, 246, 0.1) !important;
 }
 
-.a9s-annotation.selected > polygon {
-	stroke-opacity: 1 !important;
-	stroke-width: 2 !important;
-	stroke-dasharray: initial !important;
-	stroke: #d4e817 !important;
+.a9s-annotation.a9s-annotation:hover > rect,
+.a9s-annotation.a9s-annotation:hover > polygon
+ {
+	stroke: #4385F6 !important;
+	stroke-linejoin: round;
 }

@@ -5,7 +5,7 @@
 	.transcriptContent {
 		padding: 50px 16px;
 		@include md {
-			padding: 5px 16px;
+			padding: 5px 0;
 		}
 
 	  -webkit-user-select: text;
@@ -183,6 +183,11 @@ tei-add {
 	color: blue;
   vertical-align: super;
   font-size: 10pt;
+}
+
+.selected-zone {
+	background: #EAF1FD;
+	border-radius: 5px;
 }
 
 .editor-comment-content {
