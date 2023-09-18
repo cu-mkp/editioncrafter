@@ -6,6 +6,7 @@ export const Development = () => (
     documentName: 'FHL_007548733_TAOS_BAPTISMS_BATCH_2',
     transcriptionTypes: {
       translation: 'Translation',
+      transcription: 'Transcription',
     },
     iiifManifest: 'http://localhost:8080/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/manifest.json',
   }}
@@ -17,6 +18,7 @@ export const TestingTaos = () => (
     documentName: 'FHL_007548733_TAOS_BAPTISMS_BATCH_2',
     transcriptionTypes: {
       translation: 'Translation',
+      transcription: 'Transcription',
     },
     iiifManifest: 'https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/manifest.json',
   }}

@@ -175,6 +175,16 @@
   }
 }
 
+tei-line {
+	display: block;
+}
+
+tei-add {
+	color: blue;
+  vertical-align: super;
+  font-size: 10pt;
+}
+
 .editor-comment-content {
 	word-wrap:break-word;
 }

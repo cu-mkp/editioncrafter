@@ -8,10 +8,42 @@ import EditorComment from './EditorComment';
 import ErrorBoundary from './ErrorBoundary';
 import Watermark from './Watermark';
 
+const addZoneStyle = (selectedZone, domNode, facses) => {
+  if (facses.includes(selectedZone)) {
+    // Keep any inline styles that might already be set
+    const style = 'outline:2px solid #9c9100;';
+    if (domNode.attribs.style) {
+      domNode.attribs.style += style;
+    } else {
+      domNode.attribs.style = style;
+    }
+  }
+
+  return domNode;
+};
+
+const setUpForZoneHighlighting = (selectedZone, domNode) => {
+  if (selectedZone && domNode.attribs['data-facs']) {
+    // The facs field can contain multiple values
+    const facses = domNode.attribs['data-facs'].split(' ');
+
+    return addZoneStyle(selectedZone, domNode, facses);
+  }
+
+  return domNode;
+};
+
 const htmlToReactParserOptions = (selectedZone) => {
   const parserOptions = {
     replace(domNode) {
       switch (domNode.name) {
+        case 'tei-line': {
+          console.log(domNode.attribs['data-facs']);
+          return setUpForZoneHighlighting(selectedZone, domNode);
+        }
+        case 'tei-surface': {
+          return setUpForZoneHighlighting(selectedZone, domNode);
+        }
         case 'tei-note': {
           const text = domNode.children[0]?.data || '';
           const id = domNode.attribs.n;
@@ -43,22 +75,7 @@ const htmlToReactParserOptions = (selectedZone) => {
         }
 
         case 'div': {
-          if (selectedZone && domNode.attribs['data-facs']) {
-            // The facs field can contain multiple values
-            const facses = domNode.attribs['data-facs'].split(' ');
-
-            if (facses.includes(selectedZone)) {
-              // Keep any inline styles that might already be set
-              const style = 'outline:2px solid #9c9100;';
-              if (domNode.attribs.style) {
-                domNode.attribs.style += style;
-              } else {
-                domNode.attribs.style = style;
-              }
-            }
-          }
-
-          return domNode;
+          return setUpForZoneHighlighting(selectedZone, domNode);
         }
 
         default:
