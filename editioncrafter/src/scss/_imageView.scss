@@ -23,8 +23,8 @@
 	fill: rgba(67, 133, 246, 0.1) !important;
 }
 
-.a9s-annotation.a9s-annotation:hover > rect,
-.a9s-annotation.a9s-annotation:hover > polygon
+.a9s-annotation.a9s-annotation.hover > rect,
+.a9s-annotation.a9s-annotation.hover > polygon
  {
 	stroke: #4385F6 !important;
 	stroke-linejoin: round;
