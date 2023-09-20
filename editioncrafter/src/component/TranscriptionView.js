@@ -10,12 +10,11 @@ import Watermark from './Watermark';
 
 const addZoneStyle = (selectedZone, domNode, facses) => {
   if (facses.includes(selectedZone)) {
-    // Keep any inline styles that might already be set
-    const style = 'outline:2px solid #9c9100;';
-    if (domNode.attribs.style) {
-      domNode.attribs.style += style;
+    // Keep any classes that might already be set
+    if (domNode.attribs.classname) {
+      domNode.attribs.classname += ' selected-zone';
     } else {
-      domNode.attribs.style = style;
+      domNode.attribs.classname = 'selected-zone';
     }
   }
 
