@@ -5,8 +5,7 @@ export const BowInTheCloud = () => (
   <EditionCrafter config={{
     documentName: 'eng-415-145a',
     transcriptionTypes: {
-      translation: 'Translation',
-      transcription: 'Transcription',
+      'eng-415-145a': 'Transcription'
     },
     iiifManifest: 'https://cu-mkp.github.io/bic-editioncrafter-data/eng-415-145a/iiif/manifest.json',
   }}
@@ -17,7 +16,7 @@ export const DyngleyFamily = () => (
   <EditionCrafter config={{
     documentName: 'O.8.35',
     transcriptionTypes: {
-     'transcription': 'Translation',
+      transcription: 'Translation',
     },
     iiifManifest: 'https://cu-mkp.github.io/dyngleyfamily-editioncrafter-data/O_8_35/iiif/manifest.json',
   }}
