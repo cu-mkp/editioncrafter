@@ -1,19 +1,29 @@
 import React from 'react';
 import EditionCrafter from '../src/index';
 
-export const Development = () => (
+export const BowInTheCloud = () => (
   <EditionCrafter config={{
-    documentName: 'FHL_007548733_TAOS_BAPTISMS_BATCH_2',
+    documentName: 'eng-415-145a',
     transcriptionTypes: {
-      translation: 'Translation',
-      transcription: 'Transcription',
+      'eng-415-145a': 'Transcription'
     },
-    iiifManifest: 'http://localhost:8080/FHL_007548733_TAOS_BAPTISMS_BATCH_2/iiif/manifest.json',
+    iiifManifest: 'https://cu-mkp.github.io/bic-editioncrafter-data/eng-415-145a/iiif/manifest.json',
   }}
   />
 );
 
-export const TestingTaos = () => (
+export const DyngleyFamily = () => (
+  <EditionCrafter config={{
+    documentName: 'O.8.35',
+    transcriptionTypes: {
+      transcription: 'Translation',
+    },
+    iiifManifest: 'https://cu-mkp.github.io/dyngleyfamily-editioncrafter-data/O_8_35/iiif/manifest.json',
+  }}
+  />
+);
+
+export const NativeBoundUnbound = () => (
   <EditionCrafter config={{
     documentName: 'FHL_007548733_TAOS_BAPTISMS_BATCH_2',
     transcriptionTypes: {
@@ -25,7 +35,7 @@ export const TestingTaos = () => (
   />
 );
 
-export const TestingFr640 = () => (
+export const BnFMsFr640 = () => (
   <EditionCrafter config={{
     documentName: 'BnF Ms. Fr. 640',
     transcriptionTypes: {
