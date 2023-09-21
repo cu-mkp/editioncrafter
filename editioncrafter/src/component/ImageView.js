@@ -46,6 +46,14 @@ const ImageView = (props) => {
     viewer.viewport.fitVertically();
   };
 
+  const onZoomIn = (e) => {
+    viewer.viewport.zoomBy(2)
+  }
+
+  const onZoomOut = (e) => {
+    viewer.viewport.zoomBy(0.5)
+  }
+
   useEffect(() => {
     if (anno) {
       // Note: The `on` method does NOT overwrite any previous handlers,
@@ -76,15 +84,13 @@ const ImageView = (props) => {
       setViewer(null);
       setAnno(null);
     } else {
-      const in_id = `os-zoom-in ${props.side}`;
-      const out_id = `os-zoom-out ${props.side}`;
-
       const newViewer = OpenSeadragon({
         element: el,
-        zoomInButton: in_id,
-        zoomOutButton: out_id,
         showNavigationControl: false,
-        zoomPerClick: 1,
+        zoomPerClick: 2,
+        gestureSettingsMouse: {
+          clickToZoom: false
+        },
       });
 
       setViewer(newViewer);
@@ -138,6 +144,8 @@ const ImageView = (props) => {
           onZoomFixed_2={onZoomFixed_2}
           onZoomFixed_3={onZoomFixed_3}
           onZoomGrid={onZoomGrid}
+          onZoomIn={onZoomIn}
+          onZoomOut={onZoomOut}
         />
         <SeaDragonComponent
           key={props.folioID}
