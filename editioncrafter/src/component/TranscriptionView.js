@@ -45,7 +45,7 @@ const htmlToReactParserOptions = (selectedZone) => {
         }
         case 'tei-note': {
           const text = domNode.children[0]?.data || '';
-          const id = domNode.attribs.n;
+          const id = domNode.attribs.n || domNode.attribs.id;
 
           // Not sure what else to do if there's no ID
           if (!id) {
