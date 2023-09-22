@@ -1,12 +1,13 @@
-import React, { Component } from 'react';
+import React, { useMemo } from 'react';
 
-export class SeaDragonComponent extends Component { 
-    shouldComponentUpdate() {
-        return false
-    }
+const SeaDragonComponent = (props) => {
+  const { side, initViewer, tileSource } = props;
 
-    render() {
-        const { side, initViewer, tileSource } = this.props
-        return <div id={`image-view-seadragon-${side}`} ref={(el)=> { initViewer(el, tileSource) }}></div>
-    }
-}
+  const viewer = useMemo(() => (
+    <div id={`image-view-seadragon-${side}`} ref={(el) => { initViewer(el, tileSource); }} />
+  ), []);
+
+  return viewer;
+};
+
+export default SeaDragonComponent;

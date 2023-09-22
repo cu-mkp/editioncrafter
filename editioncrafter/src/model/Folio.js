@@ -23,7 +23,7 @@ export function loadFolio(folioData) {
 
         for (const transcriptionType of transcriptionTypes) {
           const { htmlURL, xmlURL } = folio.annotationURLs[transcriptionType];
-          if( !folio.transcription ) folio.transcription = {};
+          if (!folio.transcription) folio.transcription = {};
           folio.transcription[transcriptionType] = {};
           axios.all([
             axios.get(htmlURL),
@@ -78,6 +78,6 @@ function parseTranscription(html, xml) {
   const transcriptionData = layoutMargin3(html);
   return {
     ...transcriptionData,
-    xml
+    xml,
   };
 }

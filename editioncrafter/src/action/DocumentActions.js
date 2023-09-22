@@ -55,10 +55,10 @@ function parseImageURLs(canvas) {
       if (annotation.type !== 'Annotation') throwError(`Expected Annotation in items property of ${annotationPage.id}`);
       if (annotation.motivation === 'painting') {
         if (!annotation.body) throwError(`Expected body property in Annotation ${annotation.id}`);
-        if (!annotation.body.thumbnail) throwError(`Expected body.thumbnail property in Annotation ${annotation.id}`);
-        const thumbnailURL = annotation.body.thumbnail[0].id;
-        if (!thumbnailURL) throwError(`Unable to find thumbnail for resource: ${annotation.body.id}`);
-        return { imageURL: `${annotation.body.id}/info.json`, thumbnailURL };
+        return {
+          bodyId: annotation.body.id,
+          imageURL: `${annotation.body.id}/info.json`,
+        };
       }
     }
   }
@@ -80,32 +80,37 @@ function parseAnnotationURLs(canvas, transcriptionTypes) {
 
   if (canvas.annotations) {
     for (const annotationPage of canvas.annotations) {
-      if (annotationPage.type !== 'AnnotationPage') throwError(`Expected AnnotationPage in annotations property of ${canvas.id}`);
-      if (!annotationPage.items) throwError(`Expected items property in AnnotationPage ${annotationPage.id}`);
-      for (const annotation of annotationPage.items) {
-        if (annotation.type !== 'Annotation') throwError(`Expected Annotation in items property of ${annotationPage.id}`);
-        if (annotation.motivation === 'supplementing') {
-          if (!annotation.body) throwError(`Expected body property in Annotation ${annotation.id}`);
-          const { body: annotationBody } = annotation;
-          if (annotationBody.profile === textPartialResourceProfileID && annotationBody.type === 'TextPartial') {
-            if (!annotationBody.id) throwError(`Expected id property in TextPartial in ${annotation.id}`);
-            if (!annotationBody.format) throwError(`Expected format property in TextPartial in ${annotation.id}`);
-            const { id, format } = annotationBody;
-            const idParts = id.split('/');
-            if (idParts.length < 5) throwError(`TextPartial id property is in the wrong format: ${id}`);
-            const transcriptionTypeID = idParts[idParts.length - 2];
-            if (transcriptionTypes[transcriptionTypeID]) {
-              if (!annos[transcriptionTypeID]) annos[transcriptionTypeID] = {};
-              if (format === 'text/html') annos[transcriptionTypeID].htmlURL = id;
-              if (format === 'text/xml') annos[transcriptionTypeID].xmlURL = id;
+      if (annotationPage.type === 'AnnotationPage') {
+        if (!annotationPage.items) throwError(`Expected items property in AnnotationPage ${annotationPage.id}`);
+        for (const annotation of annotationPage.items) {
+          if (annotation.type !== 'Annotation') throwError(`Expected Annotation in items property of ${annotationPage.id}`);
+          if (annotation.motivation === 'supplementing') {
+            if (!annotation.body) throwError(`Expected body property in Annotation ${annotation.id}`);
+            const { body: annotationBody } = annotation;
+            if (annotationBody.profile === textPartialResourceProfileID && annotationBody.type === 'TextPartial') {
+              if (!annotationBody.id) throwError(`Expected id property in TextPartial in ${annotation.id}`);
+              if (!annotationBody.format) throwError(`Expected format property in TextPartial in ${annotation.id}`);
+              const { id, format } = annotationBody;
+              const idParts = id.split('/');
+              if (idParts.length < 5) throwError(`TextPartial id property is in the wrong format: ${id}`);
+              const transcriptionTypeID = idParts[idParts.length - 2];
+              if (transcriptionTypes[transcriptionTypeID]) {
+                if (!annos[transcriptionTypeID]) annos[transcriptionTypeID] = {};
+                if (format === 'text/html') annos[transcriptionTypeID].htmlURL = id;
+                if (format === 'text/xml') annos[transcriptionTypeID].xmlURL = id;
+              }
             }
           }
         }
       }
     }
   }
+
   return annos;
 }
+
+// The largest dimension for either width or height allowed in a thumbnail.
+const MAX_THUMBNAIL_DIMENSION = 130;
 
 function parseManifest(manifest, transcriptionTypes) {
   const folios = [];
@@ -125,8 +130,19 @@ function parseManifest(manifest, transcriptionTypes) {
     if (!canvas.id) throwError(`Expected items[${i}] to have an id property.`);
     const folioID = canvas.id.substr(canvas.id.lastIndexOf('/') + 1);
     const canvasLabel = parseLabel(canvas);
-    const { imageURL, thumbnailURL } = parseImageURLs(canvas);
+    const { bodyId, imageURL } = parseImageURLs(canvas);
     const annotationURLs = parseAnnotationURLs(canvas, transcriptionTypes);
+
+    const ratio = canvas.width / canvas.height;
+
+    let thumbnailDimensions = [];
+    if (ratio > 1) {
+      thumbnailDimensions = [MAX_THUMBNAIL_DIMENSION, Math.round(MAX_THUMBNAIL_DIMENSION / ratio)];
+    } else {
+      thumbnailDimensions = [Math.round(MAX_THUMBNAIL_DIMENSION * ratio), MAX_THUMBNAIL_DIMENSION];
+    }
+
+    const thumbnailURL = `${bodyId}/full/${thumbnailDimensions.join(',')}/0/default.jpg`;
 
     const folio = {
       id: folioID,
@@ -135,6 +151,9 @@ function parseManifest(manifest, transcriptionTypes) {
       image_zoom_url: imageURL,
       image_thumbnail_url: thumbnailURL,
       annotationURLs,
+      annotations: canvas.annotations
+        ? canvas.annotations.filter(a => a.motivation === 'tagging')
+        : [],
     };
 
     folios.push(folio);

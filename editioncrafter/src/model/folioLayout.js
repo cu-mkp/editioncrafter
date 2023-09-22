@@ -181,10 +181,16 @@ function layoutMargin(html, emptyZoneFrame, layoutDecoder) {
   // load the surface into a DOM element to retrieve the grid data
   const folioDiv = document.createElement('div');
   folioDiv.innerHTML = html;
-  const zones = folioDiv.getElementsByTagName('tei-body')[0].children;
+
+  let zones;
+  if (folioDiv.getElementsByTagName('tei-surface').length > 0) {
+    zones = [folioDiv.getElementsByTagName('tei-surface')[0]];
+  } else {
+    zones = folioDiv.getElementsByTagName('tei-body')[0].children;
+  }
 
   const validLayoutCode = function validLayoutCode(block) {
-    const layoutCode = block.getAttribute("rend")
+    const layoutCode = block.getAttribute('rend');
     if (Object.keys(emptyMarginFrame).includes(layoutCode)) {
       return layoutCode;
     }
@@ -192,7 +198,7 @@ function layoutMargin(html, emptyZoneFrame, layoutDecoder) {
   };
 
   function validLayoutHint(block) {
-    const layoutHint = block.getAttribute('style')
+    const layoutHint = block.getAttribute('style');
     if (hintCodes.includes(layoutHint)) {
       return layoutHint;
     }
@@ -211,6 +217,7 @@ function layoutMargin(html, emptyZoneFrame, layoutDecoder) {
       const marginFrame = copyObject(emptyMarginFrame);
       const entryID = zone.id;
       const blocks = zone.children;
+      const facs = zone.getAttribute('facs');
 
       for (const block of blocks) {
         const layoutCode = validLayoutCode(block);
@@ -233,7 +240,7 @@ function layoutMargin(html, emptyZoneFrame, layoutDecoder) {
 
       for (const blockSet of Object.values(marginFrame)) {
         if (blockSet) {
-          gridContent = gridContent.concat(renderBlockSet(blockSet));
+          gridContent = gridContent.concat(renderBlockSet(blockSet, facs));
         }
       }
 
@@ -273,7 +280,7 @@ function zoneGridToLayout(zoneGrid) {
   return gridLayout;
 }
 
-function renderBlockSet(blockSet) {
+function renderBlockSet(blockSet, facs) {
   // use ID and class from the first block in the set
   const firstBlock = blockSet[0];
   const elementID = firstBlock.id;
@@ -285,8 +292,12 @@ function renderBlockSet(blockSet) {
 
   // combine the blocks in the block set. divs are all merged into a single div
   // other element types become children of the single div.
-  let el = `<div id="${elementID}" className="${classStr}" data-entry-id="${entryID}">`;
+  let el = `<div id="${elementID}" className="${classStr}" data-entry-id="${entryID}" data-facs="${facs || ''}">`;
   for (const block of blockSet) {
+    if (block.getAttribute('facs')) {
+      block.setAttribute('data-facs', block.getAttribute('facs'));
+    }
+
     block.setAttribute('className', 'block');
     if (block.name === 'div') {
       el = el.concat(`${block.innerHTML} <br/>`);

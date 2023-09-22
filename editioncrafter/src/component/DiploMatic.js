@@ -1,7 +1,7 @@
 import withWidth from '@material-ui/core/withWidth';
 import { createBrowserHistory } from 'history';
 import PropTypes from 'prop-types';
-import React, { Component } from 'react';
+import React, { useEffect } from 'react';
 import { connect, Provider } from 'react-redux';
 import {
   HashRouter, Route, Navigate, Routes,
@@ -9,42 +9,40 @@ import {
 import DocumentView from './DocumentView';
 import RouteListener from './RouteListener';
 
-class DiploMatic extends Component {
-  componentDidMount() {
+const DiploMatic = (props) => {
+  useEffect(() => {
     const history = createBrowserHistory();
     history.listen(() => {
       window.scrollTo(0, 0);
     });
-  }
+  });
 
-  render() {
-    const { fixedFrameMode } = this.props.diplomatic;
-    const fixedFrameModeClass = fixedFrameMode ? 'fixed' : 'sticky';
+  const { fixedFrameMode } = props.diplomatic;
+  const fixedFrameModeClass = fixedFrameMode ? 'fixed' : 'sticky';
 
-    return (
-      <Provider store={this.props.store}>
-        <HashRouter>
-          <div id="diplomatic" className={fixedFrameModeClass}>
-            <RouteListener />
-            <div id="content">
-              <Routes>
-                <Route path="/ec/:folioID/:transcriptionType/:folioID2/:transcriptionType2" element={<DocumentView {...this.props} />} exact />
-                <Route path="/ec/:folioID/:transcriptionType" element={<DocumentView {...this.props} />} exact />
-                <Route path="/ec/:folioID" element={<DocumentView {...this.props} />} exact />
-                <Route path="/ec" element={<DocumentView {...this.props} />} exact />
-                <Route path="/" element={<Navigate to="/ec" />} exact />
-              </Routes>
-            </div>
+  return (
+    <Provider store={props.store}>
+      <HashRouter>
+        <div id="diplomatic" className={fixedFrameModeClass}>
+          <RouteListener />
+          <div id="content">
+            <Routes>
+              <Route path="/ec/:folioID/:transcriptionType/:folioID2/:transcriptionType2" element={<DocumentView {...props} />} exact />
+              <Route path="/ec/:folioID/:transcriptionType" element={<DocumentView {...props} />} exact />
+              <Route path="/ec/:folioID" element={<DocumentView {...props} />} exact />
+              <Route path="/ec" element={<DocumentView {...props} />} exact />
+              <Route path="/" element={<Navigate to="/ec" />} exact />
+            </Routes>
           </div>
-        </HashRouter>
-      </Provider>
-    );
-  }
-}
+        </div>
+      </HashRouter>
+    </Provider>
+  );
+};
 
 DiploMatic.propTypes = {
-  store: PropTypes.object.isRequired,
-  config: PropTypes.object.isRequired
+  store: PropTypes.isRequired,
+  config: PropTypes.isRequired,
 };
 
 function mapStateToProps(state) {

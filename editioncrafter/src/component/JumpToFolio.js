@@ -1,13 +1,9 @@
-import React from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 
-class JumpToFolio extends React.Component {
-  constructor(props) {
-    super(props);
-    this.handleSubmit = this.handleSubmit.bind(this);
-    this.state = { textInput: '' };
-  }
+const JumpToFolio = (props) => {
+  const [textInput, setTextInput] = useState('');
 
-  handleSubmit(event) {
+  const handleSubmit = (event) => {
     // Consume the event
     event.preventDefault();
 
@@ -16,45 +12,51 @@ class JumpToFolio extends React.Component {
     const folioID = data.get('folioID');
 
     // Submit the request
-    this.props.submitHandler(folioID, this.props.side);
+    props.submitHandler(folioID, props.side);
 
     // Hide and clear
-    this.props.blurHandler();
-    this.setState({ textInput: '' });
-  }
+    props.blurHandler();
+    setTextInput('');
+  };
 
-  componentDidUpdate(prevProps) {
-    // FIXME: this is an over-clever hack, but how else do you force focus?
-    if (this.props.isVisible) {
-      const script = document.createElement('script');
-      const id = `${this.props.side}_jumpInput`;
-      script.innerHTML = `setTimeout(function() { document.getElementById('${id}').focus(); }, 250);`;
-      document.body.appendChild(script);
+  const handleChange = (event) => {
+    setTextInput(event.target.value);
+  };
+
+  const inputRef = useRef(null);
+
+  useEffect(() => {
+    if (inputRef.current) {
+      inputRef.current.focus();
     }
-  }
+  }, [inputRef, props.isVisible]);
 
-  // Onchange field
-  handleChange(event) {
-    this.setState({ textInput: event.target.value });
-  }
+  const divStyle = {
+    position: 'fixed',
+    zIndex: 1,
+    top: props.positionY,
+    left: props.positionX,
+    display: props.isVisible ? 'inline' : 'none',
+  };
 
-  render() {
-    const divStyle = {
-      position: 'fixed',
-      zIndex: 1,
-      top: this.props.positionY,
-      left: this.props.positionX,
-      display: this.props.isVisible ? 'inline' : 'none',
-    };
-    const id = `${this.props.side}_jumpInput`;
-    return (
-      <div className="jumpToFolio_component" style={divStyle}>
-        <form onSubmit={this.handleSubmit}>
-          <input placeholder="Page Name (e.g. '3r')" value={this.state.textInput} id={id} name="folioID" type="text" onChange={this.handleChange.bind(this)} onBlur={this.props.blurHandler} />
-        </form>
-      </div>
-    );
-  }
-}
+  const id = `${props.side}_jumpInput`;
 
-export default (JumpToFolio);
+  return (
+    <div className="jumpToFolio_component" style={divStyle}>
+      <form onSubmit={handleSubmit}>
+        <input
+          id={id}
+          name="folioID"
+          onBlur={props.blurHandler}
+          onChange={handleChange}
+          placeholder="Page Name (e.g. '3r')"
+          ref={inputRef}
+          type="text"
+          value={textInput}
+        />
+      </form>
+    </div>
+  );
+};
+
+export default JumpToFolio;

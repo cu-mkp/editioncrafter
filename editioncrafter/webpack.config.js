@@ -10,6 +10,14 @@ const baseConfig = mode => ({
     rules: [
       {
         include: path.resolve(fs.realpathSync(process.cwd()), '.'), // CRL
+        test: /\.css$/i,
+        use: [
+          require.resolve('style-loader'),
+          require.resolve('css-loader'),
+        ],
+      },
+      {
+        include: path.resolve(fs.realpathSync(process.cwd()), '.'), // CRL
         test: /\.s[ac]ss$/i,
         use: [
           require.resolve('style-loader'),

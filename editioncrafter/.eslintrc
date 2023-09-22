@@ -1,13 +1,9 @@
 {
-  "env": {
-    "jest/globals": true
-  },
   "extends": ["airbnb","react-app"],
   "globals": {
     "page": true,
     "document": true
   },
-  "plugins": ["jest"],
   "rules": {
     "import/prefer-default-export": "off",
     "no-console": "off",

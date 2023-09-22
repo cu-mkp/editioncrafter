@@ -1,7 +1,8 @@
-<text xmlns="http://www.tei-c.org/ns/1.0" xml:id="tl"><body><div ana="#cat-varnish" decls="#cat-varnish"><pb facs="#f011"/>
+<text xmlns="http://www.tei-c.org/ns/1.0" xml:id="tl"><body><pb facs="#f011"/>
+			<div>
 				<p>instead of <rs ref="#rs-m">fine turpentine</rs>. And you can put into two <rs ref="#rs-ms">lb</rs> of <del><rs ref="#rs-fr">tou</rs></del> <rs ref="#rs-m">common turpentine</rs> one <rs ref="#rs-ms">lb</rs> of <rs ref="#rs-m">fine turpentine oil</rs> &amp; do everything as with the other one. This one will cost you no more than five or six <rs ref="#rs-cn">sous</rs> per <rs ref="#rs-ms">lb</rs> &amp; is sold for 40 <rs ref="#rs-cn">sous</rs> per <rs ref="#rs-ms">lb</rs>.</p>
 				<figure>
-					<graphic url="https://edition640.makingandknowing.org/bnf-ms-fr-640/prod050222-0/figures/p003v_1.png">
+					<graphic url="https://cu-mkp.github.io/editioncrafter-data/fr640_3r-3v-example/figures/p003v_1.png">
 						<desc/>
 					</graphic>
 				</figure>
