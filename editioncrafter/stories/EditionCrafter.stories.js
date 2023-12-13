@@ -49,6 +49,17 @@ export const BnFMsFr640 = () => (
   />
 );
 
+export const IntervistePescatori = () => (
+  <EditionCrafter config={{
+    documentName: 'Interviste Pescatori 1r-35v',
+    transcriptionTypes: {
+      transcription: 'Transcription'
+    },
+    iiifManifest: 'https://cu-mkp.github.io/venice-editioncrafter-data/interviste-pescatori/iiif/manifest.json',
+  }}
+  />
+);
+
 export default {
   title: 'EditionCrafter',
 };
