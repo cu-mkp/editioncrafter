@@ -27,10 +27,27 @@ function* userNavigation(action) {
 
 function* resolveDocumentManifest() {
   const document = yield select(justDocument);
+  console.log(document);
   if (!document.loaded) {
-    const response = yield axios.get(document.manifestURL);
-    yield putResolveAction('DocumentActions.loadDocument', response.data);
-    return response.data;
+    // handle the case where we've passed in an array of manifest URLs, in which case the `variorum` parameter should be set to `true`
+    if (document.variorum) {
+      let variorumData = {};
+      for (var url of document.manifestURL) {
+        const response = yield axios.get(url);
+        variorumData[response.data.id] = response.data;
+      };
+      const variorumManifest = {
+        type: "variorum",
+        documentData: variorumData
+      };
+      yield putResolveAction('DocumentActions.loadDocument', variorumManifest);
+      return variorumManifest;
+    }
+    else {
+      const singleResponse = yield axios.get(document.manifestURL);
+      yield putResolveAction('DocumentActions.loadDocument', singleResponse.data);
+      return singleResponse.data;
+    }
   }
 
   return null;

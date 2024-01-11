@@ -113,6 +113,18 @@ function parseAnnotationURLs(canvas, transcriptionTypes) {
 const MAX_THUMBNAIL_DIMENSION = 130;
 
 function parseManifest(manifest, transcriptionTypes) {
+  if (manifest.type == 'variorum') {
+    let folios = [];
+    Object.keys(manifest.documentData).forEach((key) => {
+      folios = folios.concat(parseSingleManifest(manifest.documentData[key], transcriptionTypes, key));
+    });
+    return folios;
+  }
+  return parseSingleManifest(manifest, transcriptionTypes);
+}
+
+function parseSingleManifest(manifest, transcriptionTypes, document) {
+
   const folios = [];
 
   // make sure this is a IIIF Presentation API v3 Manifest
@@ -146,6 +158,7 @@ function parseManifest(manifest, transcriptionTypes) {
 
     const folio = {
       id: folioID,
+      doc_id: document || manifest.id,
       name: canvasLabel,
       pageNumber: i,
       image_zoom_url: imageURL,
@@ -158,7 +171,6 @@ function parseManifest(manifest, transcriptionTypes) {
 
     folios.push(folio);
   }
-
   return folios;
 }
 

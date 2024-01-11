@@ -11,11 +11,11 @@ import documentInitialState from './initialState/documentInitialState';
 
 export default function rootReducer(config) {
   const {
-    iiifManifest, documentName, transcriptionTypes,
+    iiifManifest, documentName, transcriptionTypes, variorum = false
   } = config;
   return combineReducers({
     diplomatic: createReducer('DiplomaticActions', DiplomaticActions, diplomaticInitialState),
-    document: createReducer('DocumentActions', DocumentActions, documentInitialState(iiifManifest, documentName, transcriptionTypes)),
+    document: createReducer('DocumentActions', DocumentActions, documentInitialState(iiifManifest, documentName, transcriptionTypes, variorum)),
     glossary: createReducer('GlossaryActions', GlossaryActions, glossaryInitialState()),
   });
 }

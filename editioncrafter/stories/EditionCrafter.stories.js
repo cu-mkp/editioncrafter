@@ -60,6 +60,20 @@ export const IntervistePescatori = () => (
   />
 );
 
+export const MultiDocument = () => (
+  <EditionCrafter config={{
+    documentName: 'FHL_007548733_TAOS_BAPTISMS_BATCH_2 and eng-415-145a',
+    variorum: true,
+    transcriptionTypes: {
+      translation: 'Translation',
+      transcription: 'Transcription',
+      'eng-415-145a': 'Transcription'
+    },
+    iiifManifest: ['https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/manifest.json', 'https://cu-mkp.github.io/bic-editioncrafter-data/eng-415-145a/iiif/manifest.json'],
+  }}
+  />
+);
+
 export default {
   title: 'EditionCrafter',
 };
