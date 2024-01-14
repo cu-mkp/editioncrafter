@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import InfiniteScroll from 'react-infinite-scroller';
+import { MenuItem, Select } from '@material-ui/core';
 
 class ImageGridView extends React.Component {
   constructor(props, context) {
@@ -11,6 +12,7 @@ class ImageGridView extends React.Component {
       jumpToBuffer: '',
       thumbs: '',
       visibleThumbs: [],
+      currentDoc: null,
     };
   }
 
@@ -20,7 +22,7 @@ class ImageGridView extends React.Component {
     const nextFolioID = this.props.documentView[this.props.side].iiifShortID;
 
     if (folioID !== nextFolioID) {
-      const thumbs = this.generateThumbs(nextFolioID, this.props.document.folios);
+      const thumbs = this.generateThumbs(nextFolioID, this.state.currentDoc ? this.props.document.folios.filter((folio) => (folio.doc_id === this.state.currentDoc)) : this.props.document.folios);
       const thumbCount = (thumbs.length > this.loadIncrement) ? this.loadIncrement : thumbs.length;
       const visibleThumbs = thumbs.slice(0, thumbCount);
       this.setState({ thumbs, visibleThumbs });
@@ -51,6 +53,7 @@ class ImageGridView extends React.Component {
   renderToolbar() {
     return (
       <div className="imageGridToolbar">
+        { this.props.document.variorum && this.renderDocSelect() }
         <div className="jump-to">
           <form onSubmit={this.onJumpTo}>
             <span>Jump to: </span>
@@ -69,10 +72,47 @@ class ImageGridView extends React.Component {
     );
   }
 
-  componentDidMount() {
+  // in the case of a variorum, allow for filtering by document
+  renderDocSelect() {
+    return (
+      <div>
+        <Select
+          id="doc-filter"
+          className="dark"
+          style={{ color: 'white' }}
+          value={this.state.currentDoc || 'none'}
+          onClick={this.onSelectDoc}
+        >
+          <MenuItem value="none" key="none">{this.state.currentDoc ? 'View All' : 'Select a Document'}</MenuItem>
+          { this.props.document.manifestURL.map((doc) => (
+            <MenuItem value={doc} key={doc}>{doc}</MenuItem>
+          ))}
+        </Select>
+      </div>
+    );
+  }
+
+  onSelectDoc = (event) => {
+    console.log('clicked on', event.target.value);
+    if (event.target.value !== 'none') {
+      this.setState({ ...this.state, currentDoc: event.target.value });
+      console.log('new state', this.state.currentDoc);
+    } else {
+      this.setState({ ...this.state, currentDoc: null });
+    }
     const { documentView } = this.props;
     const folioID = documentView[this.props.side].iiifShortID;
-    const thumbs = this.generateThumbs(folioID, this.props.document.folios);
+    const thumbs = this.generateThumbs(folioID, event.target.value !== 'none' ? this.props.document.folios.filter((folio) => (folio.doc_id === event.target.value)) : this.props.document.folios);
+    const thumbCount = (thumbs.length > this.loadIncrement) ? this.loadIncrement : thumbs.length;
+    const visibleThumbs = thumbs.slice(0, thumbCount);
+    this.setState({ thumbs, visibleThumbs });
+  };
+
+  componentDidMount() {
+    const { documentView } = this.props;
+    console.log(this.props);
+    const folioID = documentView[this.props.side].iiifShortID;
+    const thumbs = this.generateThumbs(folioID, this.state.currentDoc ? this.props.document.folios.filter((folio) => (folio.doc_id === this.state.currentDoc)) : this.props.document.folios);
     const thumbCount = (thumbs.length > this.loadIncrement) ? this.loadIncrement : thumbs.length;
     const visibleThumbs = thumbs.slice(0, thumbCount);
     this.setState({ thumbs, visibleThumbs });
@@ -88,6 +128,7 @@ class ImageGridView extends React.Component {
 
   generateThumbs(currentID, folios) {
     const thumbs = folios.map((folio, index) => (
+      // eslint-disable-next-line react/no-array-index-key
       <li key={`thumb-${index}`} className="thumbnail">
         <figure className={(folio.id === currentID) ? 'current' : ''}><a id={folio.id} onClick={this.onClickThumb.bind(this, folio.id)}><img src={folio.image_thumbnail_url} alt={folio.name} /></a></figure>
         <figcaption className={(folio.id === currentID) ? 'thumbnail-caption current' : 'thumbnail-caption'}>
