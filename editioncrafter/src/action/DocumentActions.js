@@ -113,7 +113,7 @@ function parseAnnotationURLs(canvas, transcriptionTypes) {
 const MAX_THUMBNAIL_DIMENSION = 130;
 
 function parseManifest(manifest, transcriptionTypes) {
-  if (manifest.type == 'variorum') {
+  if (manifest.type === 'variorum') {
     let folios = [];
     Object.keys(manifest.documentData).forEach((key) => {
       folios = folios.concat(parseSingleManifest(manifest.documentData[key], transcriptionTypes, key));
@@ -124,7 +124,6 @@ function parseManifest(manifest, transcriptionTypes) {
 }
 
 function parseSingleManifest(manifest, transcriptionTypes, document) {
-
   const folios = [];
 
   // make sure this is a IIIF Presentation API v3 Manifest
