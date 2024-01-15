@@ -19,6 +19,7 @@ const initialPopoverObj = {
 };
 
 const Navigation = (props) => {
+  console.log(props);
   const [popover, setPopover] = useState({ ...initialPopoverObj });
   const [openHelp, setOpenHelp] = useState(false);
 
@@ -248,8 +249,8 @@ const Navigation = (props) => {
             id="doc-type"
             onClick={changeType}
           >
-            {Object.keys(props.document.transcriptionTypes).map(ttKey => (
-              <MenuItem value={ttKey} key={ttKey}>{props.document.transcriptionTypes[ttKey]}</MenuItem>
+            {Object.keys(props.document.folios.find((fol) => (fol.id == props.documentView[props.side].iiifShortID)).annotationURLs).map(ttKey => (
+              <MenuItem value={ttKey} key={ttKey}>{props.document.variorum ? props.document.transcriptionTypes[props.document.folios.find((fol) => (fol.id == props.documentView[props.side].iiifShortID)).doc_id][ttKey] : props.document.transcriptionTypes[ttKey]}</MenuItem>
             ))}
             <MenuItem value="f" key="f">
               {DocumentHelper.transcriptionTypeLabels.f}

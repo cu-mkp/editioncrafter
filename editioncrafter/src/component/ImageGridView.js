@@ -84,8 +84,8 @@ class ImageGridView extends React.Component {
           onClick={this.onSelectDoc}
         >
           <MenuItem value="none" key="none">{this.state.currentDoc ? 'View All' : 'Select a Document'}</MenuItem>
-          { this.props.document.manifestURL.map((doc) => (
-            <MenuItem value={doc} key={doc}>{doc}</MenuItem>
+          { Object.keys(this.props.document.derivativeNames).map((key) => (
+            <MenuItem value={key} key={key}>{this.props.document.derivativeNames[key]}</MenuItem>
           ))}
         </Select>
       </div>
@@ -93,10 +93,8 @@ class ImageGridView extends React.Component {
   }
 
   onSelectDoc = (event) => {
-    console.log('clicked on', event.target.value);
     if (event.target.value !== 'none') {
       this.setState({ ...this.state, currentDoc: event.target.value });
-      console.log('new state', this.state.currentDoc);
     } else {
       this.setState({ ...this.state, currentDoc: null });
     }
@@ -110,7 +108,6 @@ class ImageGridView extends React.Component {
 
   componentDidMount() {
     const { documentView } = this.props;
-    console.log(this.props);
     const folioID = documentView[this.props.side].iiifShortID;
     const thumbs = this.generateThumbs(folioID, this.state.currentDoc ? this.props.document.folios.filter((folio) => (folio.doc_id === this.state.currentDoc)) : this.props.document.folios);
     const thumbCount = (thumbs.length > this.loadIncrement) ? this.loadIncrement : thumbs.length;

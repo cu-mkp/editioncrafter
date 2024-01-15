@@ -64,12 +64,23 @@ export const MultiDocument = () => (
   <EditionCrafter config={{
     documentName: 'FHL_007548733_TAOS_BAPTISMS_BATCH_2 and eng-415-145a',
     variorum: true,
-    transcriptionTypes: {
-      translation: 'Translation',
-      transcription: 'Transcription',
-      'eng-415-145a': 'Transcription'
+    documentInfo: {
+      FHL_007548733_TAOS_BAPTISMS_BATCH_2: {
+        documentName: 'Taos Baptisms Batch 2',
+        transcriptionTypes: {
+          translation: 'Translation',
+          transcription: 'Transcription',
+        },
+        iiifManifest: 'https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/manifest.json',
+      },
+      eng_415_145a: {
+        documentName: 'Eng 415-145a',
+        transcriptionTypes: {
+          'eng-415-145a': 'Transcription',
+        },
+        iiifManifest: 'https://cu-mkp.github.io/bic-editioncrafter-data/eng-415-145a/iiif/manifest.json',
+      },
     },
-    iiifManifest: ['https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/manifest.json', 'https://cu-mkp.github.io/bic-editioncrafter-data/eng-415-145a/iiif/manifest.json'],
   }}
   />
 );

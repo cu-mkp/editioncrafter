@@ -33,9 +33,9 @@ function* resolveDocumentManifest() {
     // handle the case where we've passed in an array of manifest URLs, in which case the `variorum` parameter should be set to `true`
     if (document.variorum) {
       const variorumData = {};
-      for (const url of document.manifestURL) {
-        const response = yield axios.get(url);
-        variorumData[response.data.id] = response.data;
+      for (const key of Object.keys(document.manifestURL)) {
+        const response = yield axios.get(document.manifestURL[key]);
+        variorumData[key] = response.data;
       }
       const variorumManifest = {
         type: 'variorum',

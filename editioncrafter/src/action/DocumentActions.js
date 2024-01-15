@@ -116,7 +116,7 @@ function parseManifest(manifest, transcriptionTypes) {
   if (manifest.type === 'variorum') {
     let folios = [];
     Object.keys(manifest.documentData).forEach((key) => {
-      folios = folios.concat(parseSingleManifest(manifest.documentData[key], transcriptionTypes, key));
+      folios = folios.concat(parseSingleManifest(manifest.documentData[key], transcriptionTypes[key], key));
     });
     return folios;
   }
