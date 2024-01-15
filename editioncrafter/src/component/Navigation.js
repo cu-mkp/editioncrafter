@@ -19,7 +19,6 @@ const initialPopoverObj = {
 };
 
 const Navigation = (props) => {
-  console.log(props);
   const [popover, setPopover] = useState({ ...initialPopoverObj });
   const [openHelp, setOpenHelp] = useState(false);
 
