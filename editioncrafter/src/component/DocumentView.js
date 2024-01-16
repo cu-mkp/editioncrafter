@@ -39,7 +39,7 @@ const DocumentView = (props) => {
       folioID, transcriptionType, folioID2, transcriptionType2, folioID3, transcriptionType3
     } = params;
     const { document } = props;
-    const firstTranscriptionType = document.variorum ? Object.keys(document.transcriptionTypes[Object.keys(document.transcriptionTypes)[0]])[0] : Object.keys(document.transcriptionTypes)[0]; //need to change this in the variorum case when there's more than one set of types
+    const firstTranscriptionType = document.variorum ? Object.keys(document.transcriptionTypes[Object.keys(document.transcriptionTypes)[0]])[0] : Object.keys(document.transcriptionTypes)[0];
     if (!folioID) {
       // route /folios
       return {
