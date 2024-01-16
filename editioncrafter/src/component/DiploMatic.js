@@ -27,6 +27,7 @@ const DiploMatic = (props) => {
           <RouteListener />
           <div id="content">
             <Routes>
+              <Route path="/ec/:folioID/:transcriptionType/:folioID2/:transcriptionType2/:folioID3/:transcriptionType3" element={<DocumentView {...props} />} exact />
               <Route path="/ec/:folioID/:transcriptionType/:folioID2/:transcriptionType2" element={<DocumentView {...props} />} exact />
               <Route path="/ec/:folioID/:transcriptionType" element={<DocumentView {...props} />} exact />
               <Route path="/ec/:folioID" element={<DocumentView {...props} />} exact />
