@@ -23,6 +23,7 @@ const DocumentView = (props) => {
   const [bookMode, setBookMode] = useState(false);
   const [left, setLeft] = useState(paneDefaults);
   const [right, setRight] = useState(paneDefaults);
+  const [third, setThird] = useState(paneDefaults);
 
   const params = useParams();
   const navigate = useNavigate();
@@ -35,10 +36,10 @@ const DocumentView = (props) => {
 
   const getViewports = () => {
     const {
-      folioID, transcriptionType, folioID2, transcriptionType2,
+      folioID, transcriptionType, folioID2, transcriptionType2, folioID3, transcriptionType3
     } = params;
     const { document } = props;
-    const firstTranscriptionType = Object.keys(document.transcriptionTypes)[0];
+    const firstTranscriptionType = Object.keys(document.transcriptionTypes)[0]; //need to change this in the variorum case when there's more than one set of types
 
     if (!folioID) {
       // route /folios
@@ -51,23 +52,34 @@ const DocumentView = (props) => {
           folioID: '-1',
           transcriptionType: document.variorum ? 'g' : firstTranscriptionType,
         },
+        third: {
+          folioID: '-1',
+          transcriptionType: undefined,
+        }
       };
     }
 
     const leftFolioID = folioID;
     let leftTranscriptionType; let rightFolioID; let
-      rightTranscriptionType;
+      rightTranscriptionType; let thirdFolioID; let thirdTranscriptionType;
     if (folioID2) {
       // route /ec/:folioID/:transcriptionType/:folioID2/:transcriptionType2
       leftTranscriptionType = transcriptionType;
       rightFolioID = folioID2;
       rightTranscriptionType = transcriptionType2 || firstTranscriptionType;
+      if (folioID3) {
+        // route /ec/:folioID/:transcriptionType/:folioID2/:transcriptionType2/:folioID3/:transcriptionType3
+        thirdFolioID = folioID3;
+        thirdTranscriptionType = transcriptionType3 || firstTranscriptionType;
+      }
     } else {
       // route /ec/:folioID
       // route /ec/:folioID/:transcriptionType
       leftTranscriptionType = 'f';
       rightFolioID = folioID;
       rightTranscriptionType = transcriptionType || firstTranscriptionType;
+      thirdFolioID = folioID;
+      thirdTranscriptionType = transcriptionType || firstTranscriptionType;
     }
 
     return {
@@ -79,6 +91,10 @@ const DocumentView = (props) => {
         folioID: rightFolioID,
         transcriptionType: rightTranscriptionType,
       },
+      third: {
+        folioID: thirdFolioID,
+        transcriptionType: thirdTranscriptionType,
+      }
     };
   };
 
@@ -90,8 +106,10 @@ const DocumentView = (props) => {
   const setXMLMode = (side, xmlMode) => {
     if (side === 'left') {
       setLeft({ ...left, isXMLMode: xmlMode });
-    } else {
+    } else if (side === 'right') {
       setRight({ ...right, isXMLMode: xmlMode });
+    } else {
+      setThird({ ...third, isXMLMode: xmlMode });
     }
   };
 
@@ -127,9 +145,10 @@ const DocumentView = (props) => {
     return [documentFolios[pageNumber].id, documentFolios[pageNumber + 1].id];
   };
 
-  const onWidth = (leftWidth, rightWidth) => {
+  const onWidth = (leftWidth, rightWidth, thirdWidth) => {
     setLeft({ ...left, width: leftWidth });
     setRight({ ...right, width: rightWidth });
+    setThird({ ...third, width: thirdWidth });
   };
 
   const changeTranscriptionType = (side, transcriptionType) => {
@@ -143,7 +162,7 @@ const DocumentView = (props) => {
         otherSide.folioID,
         otherSide.transcriptionType,
       );
-    } else {
+    } else if (side === 'right') {
       const { folioID } = currentViewports.right;
       const otherSide = currentViewports.left;
       navigateFolios(
@@ -155,8 +174,7 @@ const DocumentView = (props) => {
     }
   };
 
-  const navigateFolios = (folioID, transcriptionType, folioID2, transcriptionType2) => {
-    console.log(folioID, transcriptionType, folioID2, transcriptionType2);
+  const navigateFolios = (folioID, transcriptionType, folioID2, transcriptionType2, folioID3, transcriptionType3) => {
     if (!folioID) {
       // goto grid view
       navigateWithParams('/ec');
@@ -177,8 +195,18 @@ const DocumentView = (props) => {
       navigateWithParams(`/ec/${folioID}/${transcriptionType}/${folioID2}/tc`);
       return;
     }
-    // goto folioID, transcriptionType, folioID2, transcriptionType2
-    navigateWithParams(`/ec/${folioID}/${transcriptionType}/${folioID2}/${transcriptionType2}`);
+    if (!folioID3) {
+      // goto folioID, transcriptionType, folioID2, transcriptionType2
+      navigateWithParams(`/ec/${folioID}/${transcriptionType}/${folioID2}/${transcriptionType2}`);
+      return;
+    }
+    if (!transcriptionType3) {
+      // goto folioID, transcriptionType, folioID2, transcriptionType2, folioID3, tc
+      navigateWithParams(`/ec/${folioID}/${transcriptionType}/${folioID2}/${transcriptionType2}/${folioID3}/tc`);
+      return;
+    }
+    // goto folioID, transcrptionType, folioID2, transcriptionType2, folioID3, transcriptionType3
+    navigateWithParams(`/ec/${folioID}/${transcriptionType}/${folioID2}/${transcriptionType2}/${folioID3}/${transcriptionType3}`);
   };
 
   const changeCurrentFolio = (folioID, side, transcriptionType) => {
@@ -210,19 +238,25 @@ const DocumentView = (props) => {
       }
     } else if (side === 'left') {
       const otherSide = currentViewports.right;
+      const thirdPane = currentViewports.third;
       navigateFolios(
         folioID,
         transcriptionType,
         otherSide.folioID,
         otherSide.transcriptionType,
+        thirdPane.folioID,
+        thirdPane.transcriptionType,
       );
     } else {
       const otherSide = currentViewports.left;
+      const thirdPane = currentViewports.third;
       navigateFolios(
         otherSide.folioID,
         otherSide.transcriptionType,
         folioID,
         transcriptionType,
+        thirdPane.folioID,
+        thirdPane.transcriptionType,
       );
     }
   };
@@ -231,7 +265,7 @@ const DocumentView = (props) => {
     const { transcriptionType } = getViewports()[side];
     const xmlMode = side === 'left'
       ? left.isXMLMode
-      : right.isXMLMode;
+      : side === 'right' ? right.isXMLMode : third.isXMLMode;
 
     if (transcriptionType === 'g') {
       return 'ImageGridView';
@@ -252,7 +286,7 @@ const DocumentView = (props) => {
     // blank folio ID
     if (viewport.folioID === '-1') {
       return {
-        ...side === 'left' ? left : right,
+        ...side === 'left' ? left : side === 'right' ? right : third,
         iiifShortID: viewport.folioID,
         transcriptionType: viewport.transcriptionType,
       };
@@ -288,7 +322,7 @@ const DocumentView = (props) => {
     }
 
     return {
-      ...side === 'left' ? left : right,
+      ...side === 'left' ? left : side === 'right' ? right : third,
       iiifShortID: shortID,
       transcriptionType: viewport.transcriptionType,
       hasPrevious: current_hasPrev,
@@ -373,7 +407,9 @@ const DocumentView = (props) => {
   const viewPaneKey = (side) => {
     const pane = side === 'left'
       ? left
-      : right;
+      : side === 'right'
+      ? right
+      : third;
 
     if (pane.viewType === 'ImageGridView') {
       return `${side}-${pane.viewType}`;
@@ -392,6 +428,7 @@ const DocumentView = (props) => {
     bookMode,
     left: viewportState('left'),
     right: viewportState('right'),
+    third: viewportState('third'),
   };
 
   const mobileDocView = {
@@ -407,6 +444,7 @@ const DocumentView = (props) => {
         <SplitPaneView
           leftPane={renderPane('left', docView)}
           rightPane={renderPane('right', docView)}
+          thirdPane={renderPane('third', docView)}
           onWidth={onWidth}
         />
       </div>
