@@ -56,16 +56,20 @@ function* resolveFolio(pathSegments) {
   const document = yield select(justDocument);
   if (document.loaded) {
     let leftID; let
-      rightID;
+      rightID; let thirdID;
     if (pathSegments.length > 2) {
       leftID = pathSegments[2];
       if (pathSegments.length > 4) {
         rightID = pathSegments[4];
+        if (pathSegments.length > 6) {
+          thirdID = pathSegments[6];
+        }
       }
     }
     const folioIDs = [];
     folioIDs.push(leftID);
     if (rightID && rightID !== leftID) folioIDs.push(rightID);
+    if (thirdID && thirdID !== leftID && thirdID !== rightID) folioIDs.push(thirdID);
 
     for (const folioID of folioIDs) {
       const folioData = document.folioIndex[folioID];
