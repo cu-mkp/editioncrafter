@@ -10,8 +10,8 @@ class SplitPaneView extends Component {
     this.rightPaneMinWidth = 200;
     this.leftPaneMinWidth = 200;
     this.thirdPaneMinWidth = 0;
-    this.splitFraction = 0.5;
-    this.splitFractionRight = 0.0;
+    this.splitFraction = 0.49;
+    this.splitFractionRight = 0.01;
     this.dividerWidth = 16;
     const whole = window.innerWidth;
     const leftW = whole / 3;

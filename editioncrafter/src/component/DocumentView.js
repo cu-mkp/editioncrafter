@@ -39,8 +39,7 @@ const DocumentView = (props) => {
       folioID, transcriptionType, folioID2, transcriptionType2, folioID3, transcriptionType3
     } = params;
     const { document } = props;
-    const firstTranscriptionType = Object.keys(document.transcriptionTypes)[0]; //need to change this in the variorum case when there's more than one set of types
-
+    const firstTranscriptionType = document.variorum ? Object.keys(document.transcriptionTypes[Object.keys(document.transcriptionTypes)[0]])[0] : Object.keys(document.transcriptionTypes)[0]; //need to change this in the variorum case when there's more than one set of types
     if (!folioID) {
       // route /folios
       return {
@@ -54,7 +53,7 @@ const DocumentView = (props) => {
         },
         third: {
           folioID: '-1',
-          transcriptionType: undefined,
+          transcriptionType: 'g',
         }
       };
     }
@@ -71,6 +70,9 @@ const DocumentView = (props) => {
         // route /ec/:folioID/:transcriptionType/:folioID2/:transcriptionType2/:folioID3/:transcriptionType3
         thirdFolioID = folioID3;
         thirdTranscriptionType = transcriptionType3 || firstTranscriptionType;
+      } else {
+        thirdFolioID = '-1';
+        thirdTranscriptionType = 'g';
       }
     } else {
       // route /ec/:folioID
@@ -78,8 +80,8 @@ const DocumentView = (props) => {
       leftTranscriptionType = 'f';
       rightFolioID = folioID;
       rightTranscriptionType = transcriptionType || firstTranscriptionType;
-      thirdFolioID = folioID;
-      thirdTranscriptionType = transcriptionType || firstTranscriptionType;
+      thirdFolioID = '-1';
+      thirdTranscriptionType = 'g';
     }
 
     return {
@@ -159,6 +161,8 @@ const DocumentView = (props) => {
         transcriptionType,
         otherSide.folioID,
         otherSide.transcriptionType,
+        currentViewports.third.folioID,
+        currentViewports.third.transcriptionType,
       );
     } else if (side === 'right') {
       const { folioID } = currentViewports.right;
@@ -169,6 +173,16 @@ const DocumentView = (props) => {
         folioID,
         transcriptionType,
       );
+    } else {
+      const { folioID } = currentViewports.third;
+      navigateFolios(
+        currentViewports.left.folioID,
+        currentViewports.left.transcriptionType,
+        currentViewports.right.folioID,
+        currentViewports.right.transcriptionType,
+        folioID,
+        transcriptionType,
+      )
     }
   };
 
@@ -200,7 +214,7 @@ const DocumentView = (props) => {
     }
     if (!transcriptionType3) {
       // goto folioID, transcriptionType, folioID2, transcriptionType2, folioID3, tc
-      navigateWithParams(`/ec/${folioID}/${transcriptionType}/${folioID2}/${transcriptionType2}/${folioID3}/tc`);
+      navigateWithParams(`/ec/${folioID}/${transcriptionType}/${folioID2}/${transcriptionType2}/${folioID3}/f`);
       return;
     }
     // goto folioID, transcrptionType, folioID2, transcriptionType2, folioID3, transcriptionType3
@@ -226,7 +240,7 @@ const DocumentView = (props) => {
           folioID,
           otherSide.transcriptionType,
         );
-      } else {
+      } else if (side === 'right') {
         const otherSide = currentViewports.left;
         navigateFolios(
           folioID,
@@ -234,6 +248,15 @@ const DocumentView = (props) => {
           folioID,
           transcriptionType,
         );
+      } else {
+        navigateFolios(
+          currentViewports.left.folioID,
+          currentViewports.left.transcriptionType,
+          currentViewports.right.folioID,
+          currentViewports.right.transcriptionType,
+          folioID,
+          transcriptionType
+        )
       }
     } else if (side === 'left') {
       const otherSide = currentViewports.right;
@@ -246,7 +269,7 @@ const DocumentView = (props) => {
         thirdPane.folioID,
         thirdPane.transcriptionType,
       );
-    } else {
+    } else if (side === 'right') {
       const otherSide = currentViewports.left;
       const thirdPane = currentViewports.third;
       navigateFolios(
@@ -257,6 +280,15 @@ const DocumentView = (props) => {
         thirdPane.folioID,
         thirdPane.transcriptionType,
       );
+    } else {
+      navigateFolios(
+        currentViewports.left.folioID,
+        currentViewports.left.transcriptionType,
+        currentViewports.right.folioID,
+        currentViewports.right.transcriptionType,
+        folioID,
+        transcriptionType
+      )
     }
   };
 
