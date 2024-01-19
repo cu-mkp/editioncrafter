@@ -224,7 +224,6 @@ const DocumentView = (props) => {
   const changeCurrentFolio = (folioID, side, transcriptionType) => {
     // Lookup prev/next
     const currentViewports = getViewports();
-    console.log(currentViewports);
 
     if (bookMode) {
       const [versoID, rectoID] = findBookFolios(folioID);
@@ -416,7 +415,7 @@ const DocumentView = (props) => {
           documentView={docView}
           documentViewActions={documentViewActions}
           side={side}
-          selectedDoc={props.document.variorum && Object.keys(props.document.derivativeNames)[side === 'left' ? 0 : 1]}
+          selectedDoc={props.document.variorum && Object.keys(props.document.derivativeNames)[side === 'left' ? 0 : side === 'right' ? 1 : Object.keys(props.document.derivativeNames).length > 2 ? 2 : 1]}
         />
       );
     } if (viewType === 'GlossaryView') {

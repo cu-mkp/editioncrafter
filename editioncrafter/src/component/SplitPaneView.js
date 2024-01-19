@@ -101,7 +101,7 @@ class SplitPaneView extends Component {
     // Record state change
     const left_px = Math.floor(Math.abs(window.innerWidth * this.splitFraction));
     const third_px = Math.floor(Math.abs(window.innerWidth * this.splitFractionRight));
-    const right_px = Math.floor(window.innerWidth * (1.0 - left_px - third_px));
+    const right_px = Math.floor(window.innerWidth * (1.0 - this.splitFraction - this.splitFractionRight));
     if (this.props.onWidth && left_px >= this.leftPaneMinWidth) {
       this.props.onWidth(left_px, right_px, third_px);
     }

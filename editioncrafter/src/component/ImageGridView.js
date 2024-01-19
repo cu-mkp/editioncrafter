@@ -53,7 +53,7 @@ class ImageGridView extends React.Component {
   renderToolbar() {
     return (
       <div className="imageGridToolbar">
-        <span class="fas fa-th" style={{ paddingLeft: '15px' }} />
+        <span className="fas fa-th" style={{ paddingLeft: '15px' }} />
         { this.props.document.variorum && this.renderDocSelect() }
         <div className="jump-to">
           <form onSubmit={this.onJumpTo}>

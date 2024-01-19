@@ -141,7 +141,7 @@ const Navigation = (props) => {
 
   const getSelectContainerStyle = () => {
     if (isWidthUp) {
-      if (documentView[side].width < 500) {
+      if (documentView[side].width < 500 && !document.variorum) {
         return { display: 'none' };
       }
 
@@ -178,7 +178,7 @@ const Navigation = (props) => {
           <div id="tool-bar-buttons" className="breadcrumbs" style={showButtonsStyle}>
               
             <span 
-              class="fas fa-th" 
+              className="fas fa-th" 
               style={{ cursor: documentView[side].transcriptionType !== 'g' ? 'pointer' : 'default', padding: '0 15px' }} 
               title={documentView[side].transcriptionType !== 'g' && "Return to Grid View"} 
               onClick={documentView[side].transcriptionType !== 'g' && onGoToGrid} 
