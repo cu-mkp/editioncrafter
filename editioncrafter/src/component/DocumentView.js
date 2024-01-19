@@ -154,6 +154,7 @@ const DocumentView = (props) => {
   };
 
   const navigateFolios = (folioID, transcriptionType, folioID2, transcriptionType2) => {
+    console.log(folioID, transcriptionType, folioID2, transcriptionType2);
     if (!folioID) {
       // goto grid view
       navigateWithParams('/ec');
@@ -181,6 +182,7 @@ const DocumentView = (props) => {
   const changeCurrentFolio = (folioID, side, transcriptionType) => {
     // Lookup prev/next
     const currentViewports = getViewports();
+    console.log(currentViewports);
 
     if (bookMode) {
       const [versoID, rectoID] = findBookFolios(folioID);
@@ -342,7 +344,6 @@ const DocumentView = (props) => {
         />
       );
     } if (viewType === 'ImageGridView') {
-      console.log(props.document);
       return (
         <ImageGridView
           key={key}

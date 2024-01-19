@@ -176,6 +176,14 @@ const Navigation = (props) => {
         { documentView[side].transcriptionType !== 'glossary' ? (
 
           <div id="tool-bar-buttons" className="breadcrumbs" style={showButtonsStyle}>
+              
+            <span 
+              class="fas fa-th" 
+              style={{ cursor: documentView[side].transcriptionType !== 'g' ? 'pointer' : 'default', padding: '0 15px' }} 
+              title={documentView[side].transcriptionType !== 'g' && "Return to Grid View"} 
+              onClick={documentView[side].transcriptionType !== 'g' && onGoToGrid} 
+            />
+
             <span
               title="Toggle coordination of views"
               onClick={toggleLockmode}
@@ -197,9 +205,6 @@ const Navigation = (props) => {
             {/* <span title="Toggle single column mode"  onClick={this.toggleColumns}
                                                     className={columnIconClass}></span> */}
                                               &nbsp;
-            { documentView[side].transcriptionType !== 'g' && (
-              <span class="fas fa-th" style={{ cursor: 'pointer', paddingRight: '15px' }} title="Return to Grid View" onClick={onGoToGrid} />
-            )}
             
             <span
               title="Go back"
