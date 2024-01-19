@@ -143,7 +143,7 @@ const Navigation = (props) => {
 
   const getSelectContainerStyle = () => {
     if (isWidthUp) {
-      if (documentView[side].width < 500) {
+      if (documentView[side].width < 500 && !document.variorum) {
         return { display: 'none' };
       }
 
