@@ -36,6 +36,10 @@ const Navigation = (props) => {
     );
   };
 
+  const onGoToGrid = (event) => {
+    props.documentViewActions.changeTranscriptionType(props.side, 'g');
+  }
+
   const toggleHelp = (event) => {
     setOpenHelp(!openHelp);
   };
@@ -193,6 +197,10 @@ const Navigation = (props) => {
             {/* <span title="Toggle single column mode"  onClick={this.toggleColumns}
                                                     className={columnIconClass}></span> */}
                                               &nbsp;
+            { documentView[side].transcriptionType !== 'g' && (
+              <span class="fas fa-th" style={{ cursor: 'pointer', paddingRight: '15px' }} title="Return to Grid View" onClick={onGoToGrid} />
+            )}
+            
             <span
               title="Go back"
               onClick={changeCurrentFolio}

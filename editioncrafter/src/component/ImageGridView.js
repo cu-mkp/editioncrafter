@@ -12,7 +12,7 @@ class ImageGridView extends React.Component {
       jumpToBuffer: '',
       thumbs: '',
       visibleThumbs: [],
-      currentDoc: null,
+      currentDoc: props.selectedDoc || null,
     };
   }
 
@@ -75,7 +75,7 @@ class ImageGridView extends React.Component {
   // in the case of a variorum, allow for filtering by document
   renderDocSelect() {
     return (
-      <div>
+      <div className='doc-select'>
         <Select
           id="doc-filter"
           className="dark"

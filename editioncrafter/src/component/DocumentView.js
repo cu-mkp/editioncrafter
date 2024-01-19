@@ -19,7 +19,7 @@ const paneDefaults = {
 };
 
 const DocumentView = (props) => {
-  const [linkedMode, setLinkedMode] = useState(true);
+  const [linkedMode, setLinkedMode] = useState(!props.document.variorum);
   const [bookMode, setBookMode] = useState(false);
   const [left, setLeft] = useState(paneDefaults);
   const [right, setRight] = useState(paneDefaults);
@@ -49,7 +49,7 @@ const DocumentView = (props) => {
         },
         right: {
           folioID: '-1',
-          transcriptionType: firstTranscriptionType,
+          transcriptionType: document.variorum ? 'g' : firstTranscriptionType,
         },
       };
     }
@@ -342,12 +342,14 @@ const DocumentView = (props) => {
         />
       );
     } if (viewType === 'ImageGridView') {
+      console.log(props.document);
       return (
         <ImageGridView
           key={key}
           documentView={docView}
           documentViewActions={documentViewActions}
           side={side}
+          selectedDoc={props.document.variorum && Object.keys(props.document.derivativeNames)[side === 'left' ? 0 : 1]}
         />
       );
     } if (viewType === 'GlossaryView') {
