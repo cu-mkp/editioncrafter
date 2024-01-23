@@ -5,11 +5,10 @@ class SplitPaneView extends Component {
   constructor(props) {
     super();
     this.firstFolio = props.document.folios[0];
-
     // Initialize the splitter
-    this.rightPaneMinWidth = 200;
-    this.leftPaneMinWidth = 200;
-    this.thirdPaneMinWidth = 0;
+    this.rightPaneMinWidth = props.rightPane.props.documentView.right.transcriptionType === "glossary" ? 450 : 200;
+    this.leftPaneMinWidth = props.leftPane.props.documentView.left.transcriptionType === "glossary" ? 450 : 200;
+    this.thirdPaneMinWidth = props.thirdPane.props.documentView.third.transcriptionType === "glossary" ? 450 : props.thirdPane.props.documentView.third.transcriptionType === "g" ? 0 : 200;
     this.splitFraction = 0.49;
     this.splitFractionRight = 0.01;
     this.dividerWidth = 16;
@@ -102,7 +101,7 @@ class SplitPaneView extends Component {
     const left_px = Math.floor(Math.abs(window.innerWidth * this.splitFraction));
     const third_px = Math.floor(Math.abs(window.innerWidth * this.splitFractionRight));
     const right_px = Math.floor(window.innerWidth * (1.0 - this.splitFraction - this.splitFractionRight));
-    if (this.props.onWidth && left_px >= this.leftPaneMinWidth) {
+    if (this.props.onWidth && left_px >= this.leftPaneMinWidth && right_px >= this.rightPaneMinWidth && third_px >= this.thirdPaneMinWidth) {
       this.props.onWidth(left_px, right_px, third_px);
     }
   }
@@ -112,7 +111,7 @@ class SplitPaneView extends Component {
     window.addEventListener('mousemove', this.onDrag);
     window.addEventListener('mouseup', this.onEndDrag);
     window.addEventListener('resize', this.onResize);
-
+    console.log(this.props);
     // Set the default width on mount
     if (this.props.onWidth) {
       const left_px = Math.floor(Math.abs(window.innerWidth * this.splitFraction));
@@ -120,6 +119,12 @@ class SplitPaneView extends Component {
       const third_px = Math.floor(window.innerWidth * (1.0 - this.splitFraction));
       this.props.onWidth(left_px, right_px, third_px);
     }
+  }
+
+  componentDidUpdate(prevProps) {
+    this.rightPaneMinWidth = this.props.rightPane.props.documentView.right.transcriptionType === "glossary" ? 450 : 200;
+    this.leftPaneMinWidth = this.props.leftPane.props.documentView.left.transcriptionType === "glossary" ? 450 : 200;
+    this.thirdPaneMinWidth = this.props.thirdPane.props.documentView.third.transcriptionType === "glossary" ? 450 : this.props.thirdPane.props.documentView.third.transcriptionType === "g" ? 0 : 200;
   }
 
   componentWillUnmount() {

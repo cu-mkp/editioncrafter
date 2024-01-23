@@ -174,6 +174,8 @@ const DocumentView = (props) => {
         otherSide.transcriptionType,
         folioID,
         transcriptionType,
+        currentViewports.third.folioID,
+        currentViewports.third.transcriptionType,
       );
     } else {
       const { folioID } = currentViewports.third;
