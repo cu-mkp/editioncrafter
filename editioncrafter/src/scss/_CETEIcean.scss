@@ -425,7 +425,7 @@ tei-cell item {
 /* l */
 tei-l {
   display: block;
-  width: 35em;
+  //width: 35em;
 }
 tei-l[data-lineno]:before {
   content: attr(data-lineno);
