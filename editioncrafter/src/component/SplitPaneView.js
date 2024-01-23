@@ -44,13 +44,13 @@ class SplitPaneView extends Component {
       let third_viewWidth;
       if (this.activeDivider === 1) {
         left_viewWidth = e.clientX - this.dividerWidth / 2;
-        right_viewWidth = (whole - left_viewWidth) / 2;
-        third_viewWidth = whole - left_viewWidth - right_viewWidth;
+        third_viewWidth = whole*this.splitFractionRight;
+        right_viewWidth = whole - left_viewWidth - third_viewWidth;
       }
       else {
         third_viewWidth = whole - e.clientX - this.dividerWidth / 2;
-        right_viewWidth = (whole - third_viewWidth) / 2;
-        left_viewWidth = whole - third_viewWidth - right_viewWidth;
+        left_viewWidth = whole*this.splitFraction;
+        right_viewWidth = whole - left_viewWidth - third_viewWidth;
       }
       // Update as long as we're within limits
       if (left_viewWidth > this.leftPaneMinWidth
