@@ -19,7 +19,7 @@ const paneDefaults = {
 };
 
 const DocumentView = (props) => {
-  const [linkedMode, setLinkedMode] = useState(true);
+  const [linkedMode, setLinkedMode] = useState(!props.document.variorum);
   const [bookMode, setBookMode] = useState(false);
   const [left, setLeft] = useState(paneDefaults);
   const [right, setRight] = useState(paneDefaults);
@@ -49,7 +49,7 @@ const DocumentView = (props) => {
         },
         right: {
           folioID: '-1',
-          transcriptionType: firstTranscriptionType,
+          transcriptionType: document.variorum ? 'g' : firstTranscriptionType,
         },
       };
     }
@@ -118,11 +118,13 @@ const DocumentView = (props) => {
     const versoFolio = document.folioIndex[folioID];
     const { name, pageNumber } = versoFolio;
 
+    const documentFolios = document.variorum ? document.folios.filter((f) => f.doc_id === versoFolio.doc_id) : document.folios;
+
     if (!name.endsWith('v') && name.endsWith('r')) {
-      return [document.folios[pageNumber - 1].id, document.folios[pageNumber].id];
+      return [documentFolios[pageNumber - 1].id, documentFolios[pageNumber].id];
     }
 
-    return [document.folios[pageNumber].id, document.folios[pageNumber + 1].id];
+    return [documentFolios[pageNumber].id, documentFolios[pageNumber + 1].id];
   };
 
   const onWidth = (leftWidth, rightWidth) => {
@@ -154,6 +156,7 @@ const DocumentView = (props) => {
   };
 
   const navigateFolios = (folioID, transcriptionType, folioID2, transcriptionType2) => {
+    console.log(folioID, transcriptionType, folioID2, transcriptionType2);
     if (!folioID) {
       // goto grid view
       navigateWithParams('/ec');
@@ -256,7 +259,8 @@ const DocumentView = (props) => {
     }
 
     const shortID = viewport.folioID;
-    const folioCount = doc.folios.length;
+    const documentFolios = doc.variorum ? doc.folios.filter((f) => f.doc_id === doc.folioIndex[shortID].doc_id) : doc.folios;
+    const folioCount = documentFolios.length;
     let nextID = '';
     let prevID = '';
     let current_hasPrev = false;
@@ -268,18 +272,18 @@ const DocumentView = (props) => {
 
       if (current_idx > -1) {
         current_hasNext = (current_idx < (folioCount - 2));
-        nextID = current_hasNext ? doc.folios[current_idx + 2].id : '';
+        nextID = current_hasNext ? documentFolios[current_idx + 2].id : '';
         current_hasPrev = (current_idx > 1 && folioCount > 1);
-        prevID = current_hasPrev ? doc.folios[current_idx - 2].id : '';
+        prevID = current_hasPrev ? documentFolios[current_idx - 2].id : '';
       }
     } else {
       const current_idx = doc.folioIndex[shortID].pageNumber;
       if (current_idx > -1) {
         current_hasNext = (current_idx < (folioCount - 1));
-        nextID = current_hasNext ? doc.folios[current_idx + 1].id : '';
+        nextID = current_hasNext ? documentFolios[current_idx + 1].id : '';
 
         current_hasPrev = (current_idx > 0 && folioCount > 1);
-        prevID = current_hasPrev ? doc.folios[current_idx - 1].id : '';
+        prevID = current_hasPrev ? documentFolios[current_idx - 1].id : '';
       }
     }
 
@@ -348,6 +352,7 @@ const DocumentView = (props) => {
           documentView={docView}
           documentViewActions={documentViewActions}
           side={side}
+          selectedDoc={props.document.variorum && Object.keys(props.document.derivativeNames)[side === 'left' ? 0 : 1]}
         />
       );
     } if (viewType === 'GlossaryView') {

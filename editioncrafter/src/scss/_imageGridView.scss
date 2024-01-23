@@ -59,5 +59,15 @@
 				cursor: pointer;
 			}
 		}
+
+		.doc-select {
+			display: inline;
+			margin-left: 30px;
+			font-size: 0.8rem;
+
+			.MuiInputBase-root {
+				font-size: 0.8rem;
+			}
+		}
 	}
 }
