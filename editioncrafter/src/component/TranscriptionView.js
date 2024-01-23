@@ -147,6 +147,7 @@ const TranscriptionView = (props) => {
         side={side}
         documentView={documentView}
         documentViewActions={documentViewActions}
+        documentName={document.variorum && folio.doc_id}
       />
       <Pagination side={side} documentView={documentView} documentViewActions={documentViewActions} />
       <div className="transcriptionViewComponent">

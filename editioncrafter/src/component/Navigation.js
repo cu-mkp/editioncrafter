@@ -22,6 +22,8 @@ const Navigation = (props) => {
   const [popover, setPopover] = useState({ ...initialPopoverObj });
   const [openHelp, setOpenHelp] = useState(false);
 
+  console.log(props.documentName);
+
   const helpRef = useRef(null);
 
   const onJumpBoxBlur = (event) => {
@@ -228,7 +230,7 @@ const Navigation = (props) => {
               <FaArrowCircleRight />
             </span>
                                               &nbsp;&nbsp;
-            {document.documentName}
+            {props.documentName || document.documentName}
             {' / '}
             <div
               onClick={revealJumpBox}

@@ -85,10 +85,10 @@ class ImageGridView extends React.Component {
           id="doc-filter"
           className="dark"
           style={{ color: 'white' }}
-          value={this.state.currentDoc || 'none'}
+          value={this.state.currentDoc || Object.keys(this.props.document.derivativeNames)[0]}
           onClick={this.onSelectDoc}
         >
-          <MenuItem value="none" key="none">{this.state.currentDoc ? 'View All' : 'Select a Document'}</MenuItem>
+          {/* <MenuItem value="none" key="none">{this.state.currentDoc ? 'View All' : 'Select a Document'}</MenuItem> */}
           { Object.keys(this.props.document.derivativeNames).map((key) => (
             <MenuItem value={key} key={key}>{this.props.document.derivativeNames[key]}</MenuItem>
           ))}
