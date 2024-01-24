@@ -22,8 +22,6 @@ const Navigation = (props) => {
   const [popover, setPopover] = useState({ ...initialPopoverObj });
   const [openHelp, setOpenHelp] = useState(false);
 
-  console.log(props.documentName);
-
   const helpRef = useRef(null);
 
   const onJumpBoxBlur = (event) => {
@@ -143,7 +141,7 @@ const Navigation = (props) => {
 
   const getSelectContainerStyle = () => {
     if (isWidthUp) {
-      if (documentView[side].width < 500) {
+      if (documentView[side].width < 500 && !document.variorum) {
         return { display: 'none' };
       }
 
