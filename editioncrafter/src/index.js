@@ -21,7 +21,7 @@ const EditionCrafter = (props) => {
 
   return (
     <ThemeProvider theme={theme}>
-      <DiploMatic config={props.config} store={createReduxStore(props.config)} />
+      <DiploMatic config={props} store={createReduxStore(props)} />
     </ThemeProvider>
   );
 };
