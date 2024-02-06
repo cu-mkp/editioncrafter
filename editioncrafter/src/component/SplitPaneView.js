@@ -9,8 +9,8 @@ class SplitPaneView extends Component {
     this.rightPaneMinWidth = props.rightPane.props.documentView.right.transcriptionType === "glossary" ? 450 : 200;
     this.leftPaneMinWidth = props.leftPane.props.documentView.left.transcriptionType === "glossary" ? 450 : 200;
     this.thirdPaneMinWidth = props.thirdPane.props.documentView.third.transcriptionType === "glossary" ? 450 : props.thirdPane.props.documentView.third.transcriptionType === "g" ? 0 : 200;
-    this.splitFraction = 0.49;
-    this.splitFractionRight = 0.01;
+    this.splitFraction = props.threePanel ? 0.49 : 0.5;
+    this.splitFractionRight = props.threePanel ? 0.01 : 0;
     this.dividerWidth = 16;
     const whole = window.innerWidth;
     const leftW = whole / 3;
@@ -52,9 +52,9 @@ class SplitPaneView extends Component {
         right_viewWidth = whole - left_viewWidth - third_viewWidth;
       }
       // Update as long as we're within limits
-      if (left_viewWidth > this.leftPaneMinWidth
-        && right_viewWidth > this.rightPaneMinWidth
-        && third_viewWidth > this.thirdPaneMinWidth) {
+      if (left_viewWidth >= this.leftPaneMinWidth
+        && right_viewWidth >= this.rightPaneMinWidth
+        && third_viewWidth >= this.thirdPaneMinWidth) {
         this.splitFraction = (whole === 0) ? 0.0 : left_viewWidth / whole;
         this.splitFractionRight = (whole === 0) ? 0.0 : third_viewWidth / whole;
         this.updateUI();
@@ -151,8 +151,8 @@ class SplitPaneView extends Component {
         { this.props.leftPane }
         { this.renderDivider('first') }
         { this.props.rightPane }
-        { this.renderDivider('second') }
-        { this.props.thirdPane }
+        { this.props.threePanel && this.renderDivider('second') }
+        { this.props.threePanel && this.props.thirdPane }
       </div>
     );
   }

@@ -480,6 +480,7 @@ const DocumentView = (props) => {
           rightPane={renderPane('right', docView)}
           thirdPane={renderPane('third', docView)}
           onWidth={onWidth}
+          threePanel={props.document.threePanel}
         />
       </div>
     );

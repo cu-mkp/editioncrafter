@@ -1,56 +1,53 @@
 import React from 'react';
 import EditionCrafter from '../src/index';
 
-// export const BowInTheCloud = () => (
-//   <EditionCrafter config={{
-//     documentName: 'eng-415-145a',
-//     transcriptionTypes: {
-//       'eng-415-145a': 'Transcription'
-//     },
-//     iiifManifest: 'https://cu-mkp.github.io/bic-editioncrafter-data/eng-415-145a/iiif/manifest.json',
-//   }}
-//   />
-// );
+export const BowInTheCloud = () => (
+  <EditionCrafter
+    documentName='eng-415-145a'
+    transcriptionTypes={{
+      'eng-415-145a': 'Transcription'
+    }}
+    iiifManifest='https://cu-mkp.github.io/bic-editioncrafter-data/eng-415-145a/iiif/manifest.json'
+  />
+);
 
-// export const DyngleyFamily = () => (
-//   <EditionCrafter config={{
-//     documentName: 'O.8.35',
-//     transcriptionTypes: {
-//       transcription: 'Translation',
-//     },
-//     iiifManifest: 'https://cu-mkp.github.io/dyngleyfamily-editioncrafter-data/O_8_35/iiif/manifest.json',
-//   }}
-//   />
-// );
+export const DyngleyFamily = () => (
+  <EditionCrafter
+    documentName='O.8.35'
+    transcriptionTypes={{
+      transcription: 'Translation',
+    }}
+    iiifManifest='https://cu-mkp.github.io/dyngleyfamily-editioncrafter-data/O_8_35/iiif/manifest.json'
+  />
+);
 
-// export const NativeBoundUnbound = () => (
-//   <EditionCrafter config={{
-//     documentName: 'FHL_007548733_TAOS_BAPTISMS_BATCH_2',
-//     transcriptionTypes: {
-//       translation: 'Translation',
-//       transcription: 'Transcription',
-//     },
-//     iiifManifest: 'https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/manifest.json',
-//   }}
-//   />
-// );
+export const NativeBoundUnbound = () => (
+  <EditionCrafter
+    documentName='FHL_007548733_TAOS_BAPTISMS_BATCH_2'
+    transcriptionTypes={{
+      translation: 'Translation',
+      transcription: 'Transcription',
+    }}
+    iiifManifest='https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/manifest.json'
+  />
+);
 
-// export const BnFMsFr640 = () => (
-//   <EditionCrafter config={{
-//     documentName: 'BnF Ms. Fr. 640',
-//     transcriptionTypes: {
-//       tc: 'Diplomatic (FR)',
-//       tcn: 'Normalized (FR)',
-//       tl: 'Translation (EN)',
-//       test: 'Test Field (EN)',
-//     },
-//     iiifManifest: 'https://cu-mkp.github.io/editioncrafter-data/fr640_3r-3v-example/iiif/manifest.json',
-//   }}
-//   />
-// );
+export const BnFMsFr640 = () => (
+  <EditionCrafter
+    documentName='BnF Ms. Fr. 640'
+    transcriptionTypes={{
+      tc: 'Diplomatic (FR)',
+      tcn: 'Normalized (FR)',
+      tl: 'Translation (EN)',
+      test: 'Test Field (EN)',
+    }}
+    iiifManifest='https://cu-mkp.github.io/editioncrafter-data/fr640_3r-3v-example/iiif/manifest.json'
+  />
+);
 
 export const IntervistePescatori = () => (
   <EditionCrafter
+    threePanel
     documentName='Interviste Pescatori 1r-35v'
     transcriptionTypes={{
       transcription: 'Transcription'
@@ -62,7 +59,7 @@ export const IntervistePescatori = () => (
 export const MultiDocument = () => (
   <EditionCrafter
     documentName='FHL_007548733_TAOS_BAPTISMS_BATCH_2 and eng-415-145a'
-    variorum
+    threePanel
     documentInfo={{
       FHL_007548733_TAOS_BAPTISMS_BATCH_2: {
         documentName: 'Taos Baptisms Batch 2',

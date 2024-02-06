@@ -15,7 +15,6 @@ class EditionCrafter {
       this.container = document.getElementById(config.id);
       config.id && ReactDOM.render(
         <EditionCrafterComponent 
-          config={config} //not needed once react component is updated to have destructured props
           {...config}  
         />,
         this.container,

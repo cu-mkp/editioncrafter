@@ -12,8 +12,9 @@ import documentInitialState from './initialState/documentInitialState';
 
 export default function rootReducer(config) {
   const {
-    documentName, variorum = false,
+    documentName, documentInfo, threePanel = false
   } = config;
+  const variorum = documentInfo && Object.keys(documentInfo).length > 1;
   const transcriptionTypesInfo = {};
   const manifestInfo = {};
   const derivativesInfo = {};
@@ -29,7 +30,7 @@ export default function rootReducer(config) {
   const derivativeNames = variorum && derivativesInfo;
   return combineReducers({
     diplomatic: createReducer('DiplomaticActions', DiplomaticActions, diplomaticInitialState),
-    document: createReducer('DocumentActions', DocumentActions, documentInitialState(iiifManifest, documentName, transcriptionTypes, variorum, derivativeNames)),
+    document: createReducer('DocumentActions', DocumentActions, documentInitialState(iiifManifest, documentName, transcriptionTypes, variorum, derivativeNames, threePanel)),
     glossary: createReducer('GlossaryActions', GlossaryActions, glossaryInitialState()),
   });
 }
