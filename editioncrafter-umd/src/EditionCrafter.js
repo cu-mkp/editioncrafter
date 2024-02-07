@@ -14,10 +14,13 @@ class EditionCrafter {
     if (config.id) {
       this.container = document.getElementById(config.id);
       config.id && ReactDOM.render(
-        <EditionCrafterComponent config={config} />,
+        <EditionCrafterComponent 
+          {...config}  
+        />,
         this.container,
       );
     }
+    // note: once the EC react component is updated, 
   }
 
   /**

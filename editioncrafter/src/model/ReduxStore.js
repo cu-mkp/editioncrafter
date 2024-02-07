@@ -1,3 +1,4 @@
+/* eslint-disable import/no-cycle */
 import { createStore, applyMiddleware } from 'redux';
 import createSagaMiddleware from 'redux-saga';
 import { put } from 'redux-saga/effects';

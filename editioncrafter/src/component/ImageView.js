@@ -136,6 +136,7 @@ const ImageView = (props) => {
           side={props.side}
           documentView={props.documentView}
           documentViewActions={props.documentViewActions}
+          documentName={props.document.variorum && props.document.folioIndex[props.folioID].doc_id}
         />
         <ImageZoomControl
           side={props.side}

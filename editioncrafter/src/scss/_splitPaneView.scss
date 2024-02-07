@@ -2,16 +2,30 @@
   height: 100%;
   width: 100%;
   display: grid;
+}
+
+.split-pane-view.two-pane {
   grid-template-areas: "image_viewer divider transcription";
+}
+
+.split-pane-view.three-pane {
+  grid-template-areas: "image_viewer divider transcription divider_two third_pane";
 }
 
 .split-pane-view > .divider {
     z-index: 2;
-    grid-area: divider;
     width: 1rem;
     background: #BBB;
     cursor:ew-resize;
     display: flex;
+}
+
+.split-pane-view > .divider.first_divider {
+  grid-area: divider;
+}
+
+.split-pane-view > .divider.second_divider {
+  grid-area: divider_two;
 }
 
 .split-pane-view > .divider > .drawer-button {
