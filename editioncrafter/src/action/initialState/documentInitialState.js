@@ -1,4 +1,4 @@
-export default function documentInitalState(iiifManifest, documentName, transcriptionTypes, variorum = false, derivativeNames = null, threePanel = false, thumbnails = true) {
+export default function documentInitalState(iiifManifest, documentName, transcriptionTypes, variorum = false, derivativeNames = null, threePanel = false) {
   return {
     documentName,
     derivativeNames,
@@ -6,7 +6,6 @@ export default function documentInitalState(iiifManifest, documentName, transcri
     transcriptionTypes,
     variorum,
     threePanel,
-    thumbnails,
     folios: [],
     loaded: false,
     folioIndex: {},

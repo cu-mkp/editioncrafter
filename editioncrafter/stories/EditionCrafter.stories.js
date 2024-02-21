@@ -53,7 +53,6 @@ export const IntervistePescatori = () => (
       transcription: 'Transcription'
     }}
     iiifManifest='https://cu-mkp.github.io/venice-editioncrafter-data/data/interviste-pescatori_1r-35v/iiif/manifest.json'
-    thumbnails={false}
   />
 );
 
