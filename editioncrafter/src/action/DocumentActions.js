@@ -147,7 +147,6 @@ function parseSingleManifest(manifest, transcriptionTypes, document) {
     const ratio = canvas.width / canvas.height;
 
     let thumbnailDimensions = [];
-    
     if (ratio > 1) {
       thumbnailDimensions = [MAX_THUMBNAIL_DIMENSION, Math.round(MAX_THUMBNAIL_DIMENSION / ratio)];
     } else {
