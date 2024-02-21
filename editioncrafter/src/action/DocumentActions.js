@@ -4,7 +4,8 @@ const DocumentActions = {};
 const textPartialResourceProfileID = 'https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md';
 
 DocumentActions.loadDocument = function loadDocument(state, manifestData) {
-  const folios = parseManifest(manifestData, state.transcriptionTypes);
+  console.log(state);
+  const folios = parseManifest(manifestData, state.transcriptionTypes, state.thumbnails);
   const { folioIndex, folioByName } = createFolioIndex(folios);
 
   return {
@@ -112,18 +113,19 @@ function parseAnnotationURLs(canvas, transcriptionTypes) {
 // The largest dimension for either width or height allowed in a thumbnail.
 const MAX_THUMBNAIL_DIMENSION = 130;
 
-function parseManifest(manifest, transcriptionTypes) {
+function parseManifest(manifest, transcriptionTypes, thumbnails) {
   if (manifest.type === 'variorum') {
     let folios = [];
     Object.keys(manifest.documentData).forEach((key) => {
-      folios = folios.concat(parseSingleManifest(manifest.documentData[key], transcriptionTypes[key], key));
+      folios = folios.concat(parseSingleManifest(manifest.documentData[key], transcriptionTypes[key], thumbnails, key));
     });
     return folios;
   }
-  return parseSingleManifest(manifest, transcriptionTypes);
+  return parseSingleManifest(manifest, transcriptionTypes, thumbnails);
 }
 
-function parseSingleManifest(manifest, transcriptionTypes, document) {
+function parseSingleManifest(manifest, transcriptionTypes, thumbnails, document) {
+  console.log('thumbnails', thumbnails)
   const folios = [];
 
   // make sure this is a IIIF Presentation API v3 Manifest
@@ -147,13 +149,26 @@ function parseSingleManifest(manifest, transcriptionTypes, document) {
     const ratio = canvas.width / canvas.height;
 
     let thumbnailDimensions = [];
+    
+    //check whether sizes are restricted
+
+    // if (imageInfo.sizes) {
+    //   if (ratio > 1) {
+    //     imageInfo.sizes.sort((a,b) => Math.abs(MAX_THUMBNAIL_DIMENSION - a.width) - Math.abs(MAX_THUMBNAIL_DIMENSION - b.width));
+    //   }
+    //   else {
+    //     imageInfo.sizes.sort((a,b) => Math.abs(MAX_THUMBNAIL_DIMENSION - a.height) - Math.abs(MAX_THUMBNAIL_DIMENSION - b.height))
+    //   }
+    //   thumbnailDimensions = [imageInfo.sizes[0].width, imageInfo.sizes[0].height];
+    // }
+    
     if (ratio > 1) {
       thumbnailDimensions = [MAX_THUMBNAIL_DIMENSION, Math.round(MAX_THUMBNAIL_DIMENSION / ratio)];
     } else {
       thumbnailDimensions = [Math.round(MAX_THUMBNAIL_DIMENSION * ratio), MAX_THUMBNAIL_DIMENSION];
     }
 
-    const thumbnailURL = `${bodyId}/full/${thumbnailDimensions.join(',')}/0/default.jpg`;
+    const thumbnailURL = thumbnails ? `${bodyId}/full/${thumbnailDimensions.join(',')}/0/default.jpg` : `${bodyId}/full/full/0/default.jpg`;
 
     const folio = {
       id: folioID,
@@ -169,6 +184,7 @@ function parseSingleManifest(manifest, transcriptionTypes, document) {
     };
 
     folios.push(folio);
+    console.log(folio.image_thumbnail_url);
   }
   return folios;
 }

@@ -133,7 +133,7 @@ class ImageGridView extends React.Component {
     const thumbs = folios.map((folio, index) => (
       // eslint-disable-next-line react/no-array-index-key
       <li key={`thumb-${index}`} className="thumbnail">
-        <figure className={(folio.id === currentID) ? 'current' : ''}><a id={folio.id} onClick={this.onClickThumb.bind(this, folio.id)}><img src={folio.image_thumbnail_url} alt={folio.name} /></a></figure>
+        <figure className={(folio.id === currentID) ? 'current' : ''}><a id={folio.id} onClick={this.onClickThumb.bind(this, folio.id)}><img src={folio.image_thumbnail_url} alt={folio.name} style={{maxWidth: "130px", maxHeight: "130px"}} /></a></figure>
         <figcaption className={(folio.id === currentID) ? 'thumbnail-caption current' : 'thumbnail-caption'}>
           {(folio.id === currentID) ? (`*${folio.name}`) : folio.name}
         </figcaption>
