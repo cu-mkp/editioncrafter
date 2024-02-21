@@ -4,7 +4,6 @@ const DocumentActions = {};
 const textPartialResourceProfileID = 'https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md';
 
 DocumentActions.loadDocument = function loadDocument(state, manifestData) {
-  console.log(state);
   const folios = parseManifest(manifestData, state.transcriptionTypes);
   const { folioIndex, folioByName } = createFolioIndex(folios);
 
@@ -171,7 +170,6 @@ function parseSingleManifest(manifest, transcriptionTypes, document) {
     };
 
     folios.push(folio);
-    console.log(folio.image_thumbnail_url);
   }
   return folios;
 }
