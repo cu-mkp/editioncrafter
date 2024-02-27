@@ -301,7 +301,6 @@ const DocumentView = (props) => {
   };
 
   const determineViewType = (side) => {
-    console.log(side, getViewports());
     const { transcriptionType } = getViewports()[side];
     const xmlMode = side === 'left'
       ? left.isXMLMode
@@ -477,9 +476,6 @@ const DocumentView = (props) => {
     left,
     right: { ...viewportState('right') },
   };
-
-  console.log('left', viewportState('left'));
-  console.log('right', viewportState('right'));
 
   if (isWidthUp('md', props.width) && !singlePaneMode) {
     return (
