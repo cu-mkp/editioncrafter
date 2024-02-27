@@ -156,7 +156,7 @@ const Navigation = (props) => {
   const selectColorStyle = documentView[side].transcriptionType === 'f' ? { color: 'white' } : { color: 'black' };
   const selectClass = documentView[side].transcriptionType === 'f' ? 'dark' : 'light';
   const showButtonsStyle = documentView[side].transcriptionType === 'glossary' ? { visibility: 'hidden' } : { visibility: 'visible' };
-  const selectContainerStyle = getSelectContainerStyle();
+  const selectContainerStyle = { display: 'flex' }; //what's the reason we want this to be hidden sometimes?
   let lockIconClass = (documentView.linkedMode) ? 'fa fa-lock' : 'fa fa-lock-open';
   if (!documentView.bookMode) {
     lockIconClass += ' active';
