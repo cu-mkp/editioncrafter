@@ -12,6 +12,7 @@ import ImageZoomControl from './ImageZoomControl';
 import SeaDragonComponent from './SeaDragonComponent';
 
 import '@recogito/annotorious-openseadragon/dist/annotorious.min.css';
+import { BigRingSpinner } from './RingSpinner';
 
 const ImageView = (props) => {
   const [viewer, setViewer] = useState(null);
@@ -21,6 +22,7 @@ const ImageView = (props) => {
   const navigate = useNavigate();
 
   const [searchParams] = useSearchParams();
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     if (anno && searchParams.get('zone')) {
@@ -119,18 +121,24 @@ const ImageView = (props) => {
 
   useEffect(() => {
     const folio = props.document.folioIndex[props.folioID];
+    if (folio.loading) {
+      setLoading(true);
+    }
     if (folio.tileSource && viewer) {
       viewer.open(folio.tileSource);
       if (folio.annotations && anno) {
         anno.setAnnotations(folio.annotations);
       }
     }
+    if (!folio.loading) {
+      setLoading(false);
+    }
   }, [anno, viewer, props.folioID, props.document.folioIndex]);
 
   return (
     <div>
       { tileSource
-      && (
+      ? (
       <div className={`image-view imageViewComponent ${props.side}`}>
         <Navigation
           side={props.side}
@@ -153,8 +161,11 @@ const ImageView = (props) => {
           side={props.side}
           tileSource={tileSource}
           initViewer={initViewer}
+          loading={loading}
         />
       </div>
+      ) : (
+        <BigRingSpinner color="dark" delay={300} />
       )}
     </div>
   );
