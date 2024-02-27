@@ -24,10 +24,15 @@ const DocumentView = (props) => {
   const [left, setLeft] = useState(paneDefaults);
   const [right, setRight] = useState(paneDefaults);
   const [third, setThird] = useState(paneDefaults);
+  const [singlePaneMode, setSinglePaneMode] = useState(props.containerWidth < 960);
 
   const params = useParams();
   const navigate = useNavigate();
   const location = useLocation();
+
+  useEffect(() => {
+    setSinglePaneMode(props.containerWidth < 960);
+  }, [props.containerWidth]);
 
   // Navigate while keeping existing search params
   const navigateWithParams = (pathname) => {
@@ -296,6 +301,7 @@ const DocumentView = (props) => {
   };
 
   const determineViewType = (side) => {
+    console.log(side, getViewports());
     const { transcriptionType } = getViewports()[side];
     const xmlMode = side === 'left'
       ? left.isXMLMode
@@ -472,7 +478,10 @@ const DocumentView = (props) => {
     right: { ...viewportState('right') },
   };
 
-  if (isWidthUp('md', props.width)) {
+  console.log('left', viewportState('left'));
+  console.log('right', viewportState('right'));
+
+  if (isWidthUp('md', props.width) && !singlePaneMode) {
     return (
       <div>
         <SplitPaneView
@@ -488,7 +497,7 @@ const DocumentView = (props) => {
   return (
     <div>
       <SinglePaneView
-        singlePane={renderPane('right', mobileDocView)}
+        singlePane={renderPane(viewportState('left').iiifShortID === "-1" ? 'left' : 'right', docView)}
       />
     </div>
   );

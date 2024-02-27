@@ -56,27 +56,27 @@ animation: #{$str};
 
 // BREAKPOINT MIXINS
 @mixin xs {
-   @media (min-width: #{$screen-xs-min}) {
+   @container diplomatic (min-width: #{$screen-xs-min}) {
        @content;
    }
 }
 @mixin sm {
-   @media (min-width: #{$screen-sm-min}) {
+   @container diplomatic (min-width: #{$screen-sm-min}) {
        @content;
    }
 }
 @mixin md {
-   @media (min-width: #{$screen-md-min}) {
+   @container diplomatic (min-width: #{$screen-md-min}) {
        @content;
    }
 }
 @mixin lg {
-   @media (min-width: #{$screen-lg-min}) {
+   @container diplomatic (min-width: #{$screen-lg-min}) {
        @content;
    }
 }
 @mixin xl {
-   @media (min-width: #{$screen-xl-min}) {
+   @container diplomatic (min-width: #{$screen-xl-min}) {
        @content;
    }
 }
