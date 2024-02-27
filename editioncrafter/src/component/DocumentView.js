@@ -301,6 +301,7 @@ const DocumentView = (props) => {
   };
 
   const determineViewType = (side) => {
+    console.log(side, getViewports());
     const { transcriptionType } = getViewports()[side];
     const xmlMode = side === 'left'
       ? left.isXMLMode
