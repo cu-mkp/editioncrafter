@@ -7,5 +7,5 @@ import react from "@astrojs/react";
 export default defineConfig({
   integrations: [tailwind(), react()],
   site: 'https://performant-software.github.io',
-  base: '/editioncrafter/astro-web'
+  base: '/editioncrafter'
 });
