@@ -5,7 +5,9 @@
   "scripts": {
     "build": "cd editioncrafter && npm install && npm run prepublishOnly && cd ../editioncrafter-umd && npm upgrade editioncrafter && npm install && npm run build",
     "storybook": "cd editioncrafter && npm run storybook",
-    "build-storybook": "cd editioncrafter && npm run build-storybook"
+    "build-storybook": "cd editioncrafter && npm run build-storybook",
+    "dev": "cd astro-web && npm run dev",
+    "build-astro": "cd astro-web && npm run build"
   },
   "license": "MIT",
   "repository": "https://github.com/cu-mkp/editioncrafter"

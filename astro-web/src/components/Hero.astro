@@ -1,0 +1,16 @@
+---
+import { Image } from 'astro:assets';
+import heroImg from '../assets/hero.png';
+import Container from './Container.astro';
+
+---
+
+
+<div class="w-full max-w-screen-3xl relative 3xl:mx-auto bg-white">
+    <Image src={heroImg} alt="" class="absolute top-0 right-0" />
+    <Container>
+        <div class="max-w-[520px] py-32">
+            <slot />
+        </div>
+    </Container>
+</div>

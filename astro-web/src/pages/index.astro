@@ -1,0 +1,143 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/Hero.astro";
+import Container from "../components/Container.astro";
+import FeatureTabs from "../components/FeatureTabs";
+import ProjectCard from "../components/ProjectCard.astro";
+import Button from "../components/Button.astro";
+import lizard from "../assets/footer/MKLizard.png";
+import nsf from "../assets/footer/NSF.png";
+import pss from "../assets/footer/Performant_Logo.svg";
+import { Image } from "astro:assets";
+
+---
+
+<Layout title="Edition Crafter">
+	<Hero>
+		<div class="flex flex-col gap-y-6">
+			<h1 class="font-serif text-5xl">
+				A simple digital edition publication tool
+			</h1>
+			<p class="text-neutral-gray">
+				EditionCrafter is an easy-to-use tool for scholars, educators, and research institutions to publish digital critical editions in a low-cost and sustainable manner.
+			</p>
+			<Button>
+				Get Started &rarr;
+			</Button>
+		</div>
+	</Hero>
+
+	<div class="bg-neutral w-full">
+		<Container className="flex flex-col gap-y-8 py-28 pb-[600px]">
+
+			<h2 class="text-4xl font-serif">
+				About EditionCrafter
+			</h2>
+			<p class="text-2xl">
+				An open source and customizable publishing tool, EditionCrafter allows users to easily publish digital critical editions as feature-rich and sustainable static sites.
+			</p>
+			<div class="md:flex gap-12 text-neutral-gray">
+				<div class="w-1/2 flex flex-col gap-y-6">
+					<p>
+						EditionCrafter was developed as a collaboration between the Making and Knowing Project and Performant Software Solutions to address the need for a scholarly publication tool that integrates primary sources, commentary, and textual analysis.
+					</p>
+					<p>
+						As a publication tool, EditionCrafter facilitates the dissemination of original research through the creation of a digital critical edition of a text. Researchers, students, and institutions such as libraries, historical societies, archives, and community groups can grant public access to valuable textual sources across disciplines.
+					</p>
+				</div>
+				<div class="w-1/2 flex flex-col gap-y-6">
+					<p>
+						A platform for collaborative research and for pedagogy, EditionCrafter provides space for critical engagement with texts. Scholars and students alike can use digital tools to share not only data and finished products, but also documentation of the process of textual engagement and analysis.
+					</p>
+					<p>
+						Editions are published through well-established technologies and workflows and can be maintained with minimal costs and resources, helping to address issues of sustainability and longevity.
+					</p>
+				</div>
+			</div>	
+		</Container>
+	</div>
+	<div class="bg-white w-full">
+		<Container>
+			<div class="-mt-[600px]">
+				<h3 class="text-3xl font-serif py-12">
+					Why use EditionCrafter?
+				</h3>
+				<FeatureTabs client:only />
+			</div>
+			<div class="bg-neutral-dark h-[2px] rounded-full w-full my-20" />
+	
+			<h2 class="text-4xl font-serif">
+				Explore Projects
+			</h2>
+			<div class="grid gap-12 grid-cols-3 py-12 mx-auto">
+				<ProjectCard title="A project" />
+				<ProjectCard title="A project" />
+				<ProjectCard title="A project" />
+				<ProjectCard title="A project" />
+				<ProjectCard title="A project" />
+				<ProjectCard title="A project" />
+			</div>
+		</Container>
+	</div>
+	<div class="bg-neutral w-full">
+		<Container className="py-20 md:flex flex-row gap-16 justify-between">
+			<div class="flex flex-col gap-6 md:w-1/2">
+				<h2 class="text-4xl font-serif">
+					Try it out now
+				</h2>
+				<p class="text-2xl">
+					Lorem ipsum dolor sit amet consectetur. 
+				</p>
+				<p class="text-neutral-gray">
+					Lorem ipsum dolor sit amet consectetur. Auctor quam arcu magna curabitur pulvinar. Volutpat mauris faucibus nunc leo nullam nulla. Ultrices orci nulla elementum tincidunt non odio volutpat. Tincidunt mauris justo nam.
+				</p>
+				<Button>
+					Get Started &rarr;
+				</Button>
+			</div>
+			<div class="flex flex-col gap-6 md:w-1/2">
+				<div class="w-full">
+					<p>
+						1. Clone the <a href="#" class="underline">edition-crafter-cli</a> repository and then run:
+					</p>
+					<p class="bg-white font-code p-6">
+						npm install
+					</p>
+				</div>
+				<div class="w-full">
+					<p>
+						2. Then run:
+					</p>
+					<p class="bg-white font-code p-6">
+						npm start
+					</p>
+				</div>
+				<div class="w-full">
+					<p>
+						3. Then in <a href="#" class="underline">editioncrafter</a>, launch Storybook by running: 
+					</p>
+					<p class="bg-white font-code p-6">
+						npm run storybook
+					</p>
+				</div>
+				<div class="w-full">
+					<p>
+						You'll see a component called EditionCrafter in the sidebar, and it should be all set to try.
+					</p>
+				</div>
+			</div>
+		</Container>
+	</div>
+	<div class="bg-white w-full">
+		<Container className="py-20 flex flex-col gap-16 text-center items-center">
+			<h1 class="text-5xl font-bold font-serif">
+				Brought to you by
+			</h1>
+			<div class="flex flex-row flex-wrap gap-20 justify-center">
+				<Image src={lizard} alt="Making and Knowing" />
+				<Image src={nsf} alt="National Science Foundation" />
+				<Image src={pss} alt="Performant Software Solutions" />
+			</div>
+		</Container>
+	</div>
+</Layout>
