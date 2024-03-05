@@ -3,7 +3,7 @@ import { useState } from "react";
 
 const FeatureTabs = () => {
     const [active, setActive] = useState(0)
-    const images = ['/editioncrafter/astro-web/editioncrafter_browser 1.png', '/editioncrafter/astro-web/editioncrafter_browser 2.png', '/editioncrafter/astro-web/editioncrafter_browser 3.png', '/editioncrafter/astro-web/editioncrafter_browser 4.png'];
+    const images = ['/editioncrafter/editioncrafter_browser 1.png', '/editioncrafter/editioncrafter_browser 2.png', '/editioncrafter/editioncrafter_browser 3.png', '/editioncrafter/editioncrafter_browser 4.png'];
     return (
         <div className="max-w-[1072px] mx-auto">
             <img src={images[active]} width={1072} height={710} alt="EditionCrafter screenshot" className="transition" />
