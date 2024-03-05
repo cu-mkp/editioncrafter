@@ -1,0 +1,28 @@
+---
+import Container from "./Container.astro";
+import logo from "../assets/footer/editioncrafterlogo.svg";
+import gh from "../assets/footer/github.svg";
+import twitter from "../assets/footer/twitter.svg";
+import { Image } from "astro:assets";
+
+---
+
+<div class="bg-neutral w-full">
+    <Container className="flex flex-col gap-8 py-12 items-center">
+        <div class="md:flex flex-row gap-6 align-middle">
+            <Image src={logo} alt="Edition Crafter" />
+            <p class="text-5xl font-serif self-center">EditionCrafter</p>
+        </div>
+        <p>
+            Lorem ipsum dolor sit amet consectetur. Nulla auctor a lectus iaculis. Enim pellentesque.
+        </p>
+        <div class="flex flex-row justify-center gap-6">
+            <Image src={gh} alt="GitHub" />
+            <Image src={twitter} alt="Twitter" />
+        </div>
+        <div class="h-[2px] bg-neutral-dark rounded-full w-full" />
+        <p>
+            Lorem ipsum dolor sit amet consectetur. Tellus ultricies purus nibh.
+        </p>
+    </Container>
+</div>
