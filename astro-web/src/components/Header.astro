@@ -2,6 +2,7 @@
 import { Image } from 'astro:assets';
 import Container from './Container.astro';
 import logo from '../assets/footer/editioncrafterlogo.svg';
+import Button from './Button.astro';
 
 export interface Props {
     tab?: string;
@@ -17,12 +18,12 @@ const { tab } = Astro.props;
             <p class="text-2xl font-serif max-w-28 self-center">Edition Crafter</p>
         </div>
         <div class="flex flex-row gap-8 align-middle">
-            <p class="text-neutral-gray">
-                Getting Started
-            </p>
-            <p>
-                View on GitHub
-            </p>
+			<Button light>
+				Getting Started
+			</Button>
+            <Button>
+                View on GitHub &rarr;
+            </Button>
         </div>
     </Container>
 </div>
