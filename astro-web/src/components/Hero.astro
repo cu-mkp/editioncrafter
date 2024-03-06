@@ -7,9 +7,9 @@ import Container from './Container.astro';
 
 
 <div class="w-full max-w-screen-3xl relative 3xl:mx-auto bg-white">
-    <Image src={heroImg} alt="" class="absolute top-0 right-0" />
+    <Image src={heroImg} alt="" class="opacity-30 md:opacity-60 xl:opacity-100 absolute top-0 right-0" />
     <Container>
-        <div class="max-w-[520px] py-32">
+        <div class="max-w-[520px] py-32 relative z-10">
             <slot />
         </div>
     </Container>
