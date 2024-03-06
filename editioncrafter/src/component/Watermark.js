@@ -10,7 +10,7 @@ const Watermark = ({ side, documentView, documentViewActions }) => (
     <div className="transcriptContent">
       <Pagination side={side} className="pagination_upper" documentView={documentView} documentViewActions={documentViewActions} />
       <div className="watermark">
-        <div className="watermark_contents" />
+        <div className={ side !== 'third' ? "watermark_contents" : "third_pane_blank"} />
       </div>
     </div>
   </div>

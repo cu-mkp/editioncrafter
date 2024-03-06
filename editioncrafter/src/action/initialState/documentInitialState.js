@@ -1,8 +1,11 @@
-export default function documentInitalState(iiifManifest, documentName, transcriptionTypes) {
+export default function documentInitalState(iiifManifest, documentName, transcriptionTypes, variorum = false, derivativeNames = null, threePanel = false) {
   return {
-    documentName: documentName,
+    documentName,
+    derivativeNames,
     manifestURL: iiifManifest,
     transcriptionTypes,
+    variorum,
+    threePanel,
     folios: [],
     loaded: false,
     folioIndex: {},

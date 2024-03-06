@@ -41,7 +41,7 @@ class XMLView extends Component {
 
     return (
       <div id={thisID} className={thisClass}>
-        <Navigation side={side} documentView={documentView} documentViewActions={documentViewActions} />
+        <Navigation side={side} documentView={documentView} documentViewActions={documentViewActions} documentName={document.variorum && folio.doc_id}/>
         <Pagination side={side} className="pagination_upper" documentView={documentView} documentViewActions={documentViewActions} />
 
         <div className="xmlContentInner">

@@ -1,6 +1,8 @@
+/* eslint-disable prefer-destructuring */
 import axios from 'axios';
 import { takeEvery, select } from 'redux-saga/effects';
 
+// eslint-disable-next-line import/no-cycle
 import { putResolveAction } from '../model/ReduxStore';
 import { loadFolio } from '../model/Folio';
 
@@ -28,9 +30,23 @@ function* userNavigation(action) {
 function* resolveDocumentManifest() {
   const document = yield select(justDocument);
   if (!document.loaded) {
-    const response = yield axios.get(document.manifestURL);
-    yield putResolveAction('DocumentActions.loadDocument', response.data);
-    return response.data;
+    // handle the case where we've passed in an array of manifest URLs, in which case the `variorum` parameter should be set to `true`
+    if (document.variorum) {
+      const variorumData = {};
+      for (const key of Object.keys(document.manifestURL)) {
+        const response = yield axios.get(document.manifestURL[key]);
+        variorumData[key] = response.data;
+      }
+      const variorumManifest = {
+        type: 'variorum',
+        documentData: variorumData,
+      };
+      yield putResolveAction('DocumentActions.loadDocument', variorumManifest);
+      return variorumManifest;
+    }
+    const singleResponse = yield axios.get(document.manifestURL);
+    yield putResolveAction('DocumentActions.loadDocument', singleResponse.data);
+    return singleResponse.data;
   }
 
   return null;
@@ -40,16 +56,20 @@ function* resolveFolio(pathSegments) {
   const document = yield select(justDocument);
   if (document.loaded) {
     let leftID; let
-      rightID;
+      rightID; let thirdID;
     if (pathSegments.length > 2) {
       leftID = pathSegments[2];
       if (pathSegments.length > 4) {
         rightID = pathSegments[4];
+        if (pathSegments.length > 6) {
+          thirdID = pathSegments[6];
+        }
       }
     }
     const folioIDs = [];
     folioIDs.push(leftID);
     if (rightID && rightID !== leftID) folioIDs.push(rightID);
+    if (thirdID && thirdID !== leftID && thirdID !== rightID) folioIDs.push(thirdID);
 
     for (const folioID of folioIDs) {
       const folioData = document.folioIndex[folioID];
@@ -64,18 +84,23 @@ function* resolveFolio(pathSegments) {
 
 function* resolveGlossary(manifest) {
   const glossary = yield select(justGlossary);
+  // NOTE: need to figure out how to deal with glossary for multidocument manifests
   if (!glossary.loaded) {
     if (
       !manifest?.seeAlso
       || manifest.seeAlso.length === 0
       || !manifest.seeAlso[0].id
     ) {
-      throw new Error('Missing glossary link in seeAlso array.');
+      if (manifest.type !== 'variorum') {
+        throw new Error('Missing glossary link in seeAlso array.');
+      }
+      yield putResolveAction('GlossaryActions.loadGlossary', {});
     }
-
-    const glossaryURL = manifest.seeAlso[0].id;
-    const response = yield axios.get(glossaryURL);
-    yield putResolveAction('GlossaryActions.loadGlossary', response.data);
+    if (manifest.type !== 'variorum') {
+      const glossaryURL = manifest.seeAlso[0].id;
+      const response = yield axios.get(glossaryURL);
+      yield putResolveAction('GlossaryActions.loadGlossary', response.data);
+    }
   }
 }
 
