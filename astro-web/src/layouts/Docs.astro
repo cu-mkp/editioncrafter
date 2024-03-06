@@ -1,0 +1,29 @@
+---
+import Container from "../components/Container.astro";
+import Layout from "./Layout.astro";
+
+
+const { frontmatter } = Astro.props;
+
+---
+
+<Layout title="Getting Started" tab="getting-started">
+    <!-- sidebar goes here -->
+    <div class="bg-neutral w-full">
+        <Container>
+            <h1 class="font-serif text-5xl py-16">
+                Getting Started
+            </h1>
+        </Container>
+    </div>
+    <div class="bg-white w-full">
+        <Container className="flex flex-row py-12">
+            <div class="hidden md:flex flex-col pr-12 border-r border-r-neutral-gray/50 w-1/4">
+                sidebar stuff goes here!
+            </div>
+            <div class="px-12 w-3/4">
+                <slot />
+            </div>
+        </Container>
+    </div>
+</Layout>
