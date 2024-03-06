@@ -13,11 +13,11 @@ const { tab } = Astro.props;
 
 <div class="w-full max-w-screen-3xl 3xl:mx-auto bg-white">
     <Container className="flex flex-row justify-between py-8 align-middle">
-        <div class="flex flex-row align-middle gap-6">
+        <a class="flex flex-row align-middle gap-6" href="/editioncrafter/">
             <Image src={logo} alt="EditionCrafter" />
             <p class="text-2xl font-serif max-w-28 self-center">Edition Crafter</p>
-        </div>
-        <div class="flex flex-row gap-8 align-middle">
+        </a>
+        <div class="hidden md:flex flex-row gap-8 align-middle">
 			<Button light href='/editioncrafter/getting-started'>
 				Getting Started
 			</Button>
