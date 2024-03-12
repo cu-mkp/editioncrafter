@@ -309,6 +309,32 @@ const Navigation = (props) => {
                 className={imageViewActive ? 'invisible' : xmlIconClass}
               />
 
+              { imageViewActive && (
+                <>
+                  <span
+                  title="Go back"
+                  onClick={changeCurrentFolio}
+                  data-id={documentView[side].previousFolioShortID}
+                  className={(documentView[side].hasPrevious) ? 'arrow' : 'arrow disabled'}
+                >
+                  {' '}
+                  <FaArrowCircleLeft />
+                  {' '}
+  
+                </span>
+  
+                <span
+                  title="Go forward"
+                  onClick={changeCurrentFolio}
+                  data-id={documentView[side].nextFolioShortID}
+                  className={(documentView[side].hasNext) ? 'arrow' : 'arrow disabled'}
+                >
+                  {' '}
+                  <FaArrowCircleRight />
+                </span>
+                </>
+              )}
+
             </div>
           )
             : (<AlphabetLinks onFilterChange={onFilterChange} value={props.value} />)}

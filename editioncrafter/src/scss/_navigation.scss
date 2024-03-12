@@ -61,6 +61,7 @@
 .navigationRowNarrow {
       display:flex;
       justify-content:space-between;
+      align-items: baseline;
       padding:6px 5px 6px 5px;
       @include md {
             display:none;
@@ -93,6 +94,14 @@
       }
 
 }
+
+.imageViewComponent .navigationComponentNarrow {
+      background-color: rgba(0,0,0,1);
+      color: #ffffff;
+      border-radius: 0;
+      opacity: 1;
+}
+
 .transcriptionViewComponent .navigationComponent {
 	background-color: rgba(255,255,255,1);;
 	color: #000000;
