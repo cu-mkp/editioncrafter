@@ -3,6 +3,7 @@
             font-size: 15px;
       }
       position: fixed;
+      display: none;
       z-index: 2;
       height:48px;
 	white-space: nowrap;
@@ -11,7 +12,6 @@
 	-ms-user-select: none;
       user-select: none;
       padding:4px;
-      top: 75px;
       background-color: white;
       border-radius: 0.3rem;
       @include sm {
@@ -19,6 +19,30 @@
       }
       @include md {
             top: initial;
+            display: block;
+      }
+      button{
+            cursor: pointer;
+      }
+}
+
+.navigationComponentNarrow {
+      #tool-bar-buttons{
+            font-size: 15px;
+      }
+      display: block;
+      width: auto;
+      z-index: 2;
+	white-space: nowrap;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+      user-select: none;
+      padding:4px;
+      background-color: white;
+      @include md {
+            top: initial;
+            display: none;
       }
       button{
             cursor: pointer;
@@ -26,15 +50,26 @@
 }
 
 .navigationRow{
-      display:flex;
+      display:none;
       justify-content:space-between;
       padding:12px 10px 12px 10px;
-      
-      
+      @include md {
+            display:flex;
+      }     
+}
+
+.navigationRowNarrow {
+      display:flex;
+      justify-content:space-between;
+      align-items: baseline;
+      padding:6px 5px 6px 5px;
+      @include md {
+            display:none;
+      } 
 }
 
 .helpIcon {
-      display: none;
+      display: inline-block;
       margin-top:6px;
       margin-right:16px;
       @include md {
@@ -59,6 +94,14 @@
       }
 
 }
+
+.imageViewComponent .navigationComponentNarrow {
+      background-color: rgba(0,0,0,1);
+      color: #ffffff;
+      border-radius: 0;
+      opacity: 1;
+}
+
 .transcriptionViewComponent .navigationComponent {
 	background-color: rgba(255,255,255,1);;
 	color: #000000;
@@ -77,9 +120,17 @@
 
 .breadcrumbs {
       overflow:hidden;
-      display: none;
+      display: hidden;
       @include md {
             display: block;
+      }
+}
+
+.breadcrumbsNarrow {
+      overflow:hidden;
+      display: block;
+      @include md {
+            display: none;
       }
 }
 
