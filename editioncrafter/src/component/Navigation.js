@@ -183,9 +183,21 @@ const Navigation = (props) => {
     <>
       <div className="navigationComponent" style={widthStyle}>
         <div id="navigation-row" className="navigationRow">
+    <>
+      <div className="navigationComponent" style={widthStyle}>
+        <div id="navigation-row" className="navigationRow">
 
           { documentView[side].transcriptionType !== 'glossary' ? (
+          { documentView[side].transcriptionType !== 'glossary' ? (
 
+            <div id="tool-bar-buttons" className="breadcrumbs" style={showButtonsStyle}>
+                
+              <span 
+                className="fas fa-th" 
+                style={{ cursor: documentView[side].transcriptionType !== 'g' ? 'pointer' : 'default', padding: '0 15px' }} 
+                title={documentView[side].transcriptionType !== 'g' && "Return to Grid View"} 
+                onClick={documentView[side].transcriptionType !== 'g' && onGoToGrid} 
+              />
             <div id="tool-bar-buttons" className="breadcrumbs" style={showButtonsStyle}>
                 
               <span 
@@ -226,9 +238,62 @@ const Navigation = (props) => {
                 {' '}
                 <FaArrowCircleLeft />
                 {' '}
+              <span
+                title="Toggle coordination of views"
+                onClick={toggleLockmode}
+                className={lockIconClass}
+              />
+                                                &nbsp;
+              <span
+                title="Toggle book mode"
+                onClick={toggleBookmode}
+                className={bookIconClass}
+              />
+                                                &nbsp;
+              <span
+                title="Toggle XML mode"
+                onClick={toggleXMLMode}
+                className={imageViewActive ? 'invisible' : xmlIconClass}
+              />
+                                                &nbsp;
+              {/* <span title="Toggle single column mode"  onClick={this.toggleColumns}
+                                                      className={columnIconClass}></span> */}
+                                                &nbsp;
+              
+              <span
+                title="Go back"
+                onClick={changeCurrentFolio}
+                data-id={documentView[side].previousFolioShortID}
+                className={(documentView[side].hasPrevious) ? 'arrow' : 'arrow disabled'}
+              >
+                {' '}
+                <FaArrowCircleLeft />
+                {' '}
 
               </span>
+              </span>
 
+              <span
+                title="Go forward"
+                onClick={changeCurrentFolio}
+                data-id={documentView[side].nextFolioShortID}
+                className={(documentView[side].hasNext) ? 'arrow' : 'arrow disabled'}
+              >
+                {' '}
+                <FaArrowCircleRight />
+              </span>
+                                                &nbsp;&nbsp;
+              {props.documentName || document.documentName}
+              {' / '}
+              <div
+                onClick={revealJumpBox}
+                className="folioName"
+              >
+                {' '}
+                {folioName}
+                {' '}
+                <span style={jumpToIconStyle} className="fa fa-hand-point-right" />
+              </div>
               <span
                 title="Go forward"
                 onClick={changeCurrentFolio}
@@ -259,7 +324,18 @@ const Navigation = (props) => {
                 submitHandler={documentViewActions.jumpToFolio}
                 blurHandler={onJumpBoxBlur}
               />
+              <JumpToFolio
+                side={side}
+                isVisible={popover.show}
+                positionX={popover.x}
+                positionY={popover.y}
+                submitHandler={documentViewActions.jumpToFolio}
+                blurHandler={onJumpBoxBlur}
+              />
 
+            </div>
+          )
+            : (<AlphabetLinks onFilterChange={onFilterChange} value={props.value} />)}
             </div>
           )
             : (<AlphabetLinks onFilterChange={onFilterChange} value={props.value} />)}
