@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { connect } from 'react-redux';
 import {
   FaArrowCircleLeft,
@@ -21,8 +21,14 @@ const initialPopoverObj = {
 const Navigation = (props) => {
   const [popover, setPopover] = useState({ ...initialPopoverObj });
   const [openHelp, setOpenHelp] = useState(false);
+  const [openHelpNarrow, setOpenHelpNarrow] = useState(false);
 
   const helpRef = useRef(null);
+  const helpRefNarrow = useRef(null);
+
+  useEffect(() => {
+    console.log(helpRef.current);
+  }, []);
 
   const onJumpBoxBlur = (event) => {
     setPopover({ ...popover, show: false });
@@ -42,6 +48,10 @@ const Navigation = (props) => {
 
   const toggleHelp = (event) => {
     setOpenHelp(!openHelp);
+  };
+
+  const toggleHelpNarrow = (event) => {
+    setOpenHelpNarrow(!openHelpNarrow);
   };
 
   const toggleBookmode = (event) => {
@@ -216,7 +226,7 @@ const Navigation = (props) => {
                 {' '}
                 <FaArrowCircleLeft />
                 {' '}
-
+              
               </span>
 
               <span
@@ -254,7 +264,7 @@ const Navigation = (props) => {
           )
             : (<AlphabetLinks onFilterChange={onFilterChange} value={props.value} />)}
 
-          <div id="doc-type-help" style={selectContainerStyle} ref={e => { helpRef.current = e; }}>
+          <div id="doc-type-help" style={selectContainerStyle} ref={helpRef}>
             <Select
               className={selectClass}
               style={{ ...selectColorStyle, marginRight: 15 }}
@@ -339,7 +349,7 @@ const Navigation = (props) => {
           )
             : (<AlphabetLinks onFilterChange={onFilterChange} value={props.value} />)}
 
-          <div id="doc-type-help" style={selectContainerStyle} ref={e => { helpRef.current = e; }}>
+          <div id="doc-type-help" style={selectContainerStyle} ref={helpRefNarrow}>
             <Select
               className={selectClass}
               style={{ ...selectColorStyle, marginRight: 15 }}
@@ -359,16 +369,16 @@ const Navigation = (props) => {
             </Select>
             <span
               title="Toggle folio help"
-              onClick={toggleHelp}
+              onClick={toggleHelpNarrow}
               className="helpIcon"
             >
               <i className="fas fa-question-circle" />
             </span>
             <HelpPopper
               marginStyle={helpMarginStyle}
-              anchorEl={helpRef.current}
-              open={openHelp}
-              onClose={toggleHelp}
+              anchorEl={helpRefNarrow.current}
+              open={openHelpNarrow}
+              onClose={toggleHelpNarrow}
             />
           </div>
 
