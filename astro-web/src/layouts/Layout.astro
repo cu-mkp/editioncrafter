@@ -9,9 +9,10 @@ import '@fontsource/source-code-pro'
 interface Props {
 	title: string;
 	tab?: string;
+	transitions?: boolean
 }
 
-const { title, tab } = Astro.props;
+const { title, tab, transitions = true } = Astro.props;
 ---
 
 <!doctype html>
@@ -23,7 +24,7 @@ const { title, tab } = Astro.props;
 		<link rel="icon" type="image/svg+xml" href="/editioncrafter/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
-		<ViewTransitions />
+		{ transitions && <ViewTransitions /> }
 	</head>
 	<body class='flex h-full flex-col bg-white 3xl:bg-neutral-dark text-neutral-dark 3xl:max-w-screen-3xl mx-auto' transition:animate="initial">
 		<Header tab={tab} transition:persist />
