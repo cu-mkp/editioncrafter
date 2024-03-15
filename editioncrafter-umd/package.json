@@ -1,6 +1,6 @@
 {
   "name": "@cu-mkp/editioncrafter-umd",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "",
   "private": false,
   "source": "src/index.js",
