@@ -2,10 +2,11 @@
       #tool-bar-buttons{
             font-size: 15px;
       }
-      position: fixed;
+      position: absolute;
       display: none;
       z-index: 2;
       height:48px;
+      width: 100%;
 	white-space: nowrap;
 	-webkit-user-select: none;
 	-moz-user-select: none;
@@ -18,8 +19,9 @@
             top: 80px;
       }
       @include md {
-            top: initial;
-            display: block;
+            top: 0;
+            left: 0;
+            display: flex;
       }
       button{
             cursor: pointer;
@@ -52,6 +54,9 @@
 .navigationRow{
       display:none;
       justify-content:space-between;
+      align-items:center;
+      gap: 10px;
+      width: 100%;
       padding:12px 10px 12px 10px;
       @include md {
             display:flex;
@@ -61,7 +66,9 @@
 .navigationRowNarrow {
       display:flex;
       justify-content:space-between;
-      align-items: baseline;
+      align-items: center;
+      gap: 10px;
+      width: 100%;
       padding:6px 5px 6px 5px;
       @include md {
             display:none;
@@ -119,16 +126,20 @@
 }
 
 .breadcrumbs {
-      overflow:hidden;
+      overflow-x:hidden;
       display: hidden;
+      align-items: baseline;
+      max-width: 68%;
       @include md {
-            display: block;
+            display: flex;
       }
 }
 
 .breadcrumbsNarrow {
-      overflow:hidden;
-      display: block;
+      overflow-x:hidden;
+      display: flex;
+      align-items: baseline;
+      max-width: 68%;
       @include md {
             display: none;
       }

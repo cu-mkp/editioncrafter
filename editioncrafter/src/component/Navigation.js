@@ -161,6 +161,8 @@ const Navigation = (props) => {
     return null;
   };
 
+  console.log(side, documentView[side]);
+
   const recommendedWidth = (documentView[side].width - 8);// the divder is 16 px wide so each side is minus 8
   const widthStyle = { width: recommendedWidth, maxWidth: recommendedWidth };
   const selectColorStyle = documentView[side].transcriptionType === 'f' ? { color: 'white' } : { color: 'black' };
@@ -181,7 +183,7 @@ const Navigation = (props) => {
 
   return (
     <>
-      <div className="navigationComponent" style={widthStyle}>
+      <div className="navigationComponent">
         <div id="navigation-row" className="navigationRow">
 
           { documentView[side].transcriptionType !== 'glossary' ? (

@@ -148,7 +148,7 @@ const ImageView = (props) => {
     <div>
       { tileSource
       ? (
-      <div className={`image-view imageViewComponent ${props.side}`}>
+      <div className={`image-view imageViewComponent ${props.side}`} style={{ position: "relative" }}>
         <Navigation
           side={props.side}
           documentView={props.documentView}
