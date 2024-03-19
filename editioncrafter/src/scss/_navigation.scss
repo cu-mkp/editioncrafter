@@ -32,9 +32,11 @@
       #tool-bar-buttons{
             font-size: 15px;
       }
-      display: block;
+      display: flex;
       width: auto;
       z-index: 2;
+      height:48px;
+      width: 100%;
 	white-space: nowrap;
 	-webkit-user-select: none;
 	-moz-user-select: none;
@@ -43,7 +45,6 @@
       padding:4px;
       background-color: white;
       @include md {
-            top: initial;
             display: none;
       }
       button{
@@ -129,7 +130,7 @@
       overflow-x:hidden;
       display: hidden;
       align-items: baseline;
-      max-width: 68%;
+      max-width: 70%;
       @include md {
             display: flex;
       }
@@ -139,13 +140,13 @@
       overflow-x:hidden;
       display: flex;
       align-items: baseline;
-      max-width: 68%;
+      max-width: 70%;
       @include md {
             display: none;
       }
 }
 
-.breadcrumbs .folioName {
+.breadcrumbs .folioName, .breadcrumbsNarrow .folioName {
   display:inline;
   white-space: nowrap;
   overflow: hidden;
