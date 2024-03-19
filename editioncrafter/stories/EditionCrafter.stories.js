@@ -81,7 +81,7 @@ export const MultiDocument = () => (
 );
 
 export const embeddedDiv = () => (
-  <div style={{ width: '700px', margin: '0 auto' }}>
+  <div style={{ width: '1200px', margin: '0 auto' }}>
     <EditionCrafter
       documentName='FHL_007548733_TAOS_BAPTISMS_BATCH_2'
       transcriptionTypes={{
