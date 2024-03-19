@@ -189,68 +189,72 @@ const Navigation = (props) => {
           { documentView[side].transcriptionType !== 'glossary' ? (
 
             <div id="tool-bar-buttons" className="breadcrumbs" style={showButtonsStyle}>
+              <div style={{ display: 'flex', alignItems: 'baseline', gap: '2px' }}> 
+                <span 
+                  className="fas fa-th" 
+                  style={{ cursor: documentView[side].transcriptionType !== 'g' ? 'pointer' : 'default', padding: '0 15px' }} 
+                  title={documentView[side].transcriptionType !== 'g' && "Return to Grid View"} 
+                  onClick={documentView[side].transcriptionType !== 'g' && onGoToGrid} 
+                />
+
+                <span
+                  title="Toggle coordination of views"
+                  onClick={toggleLockmode}
+                  className={lockIconClass}
+                />
+                                          
+                <span
+                  title="Toggle book mode"
+                  onClick={toggleBookmode}
+                  className={bookIconClass}
+                />
+                                      
+                <span
+                  title="Toggle XML mode"
+                  onClick={toggleXMLMode}
+                  className={imageViewActive ? 'invisible' : xmlIconClass}
+                />
+                                              
+                {/* <span title="Toggle single column mode"  onClick={this.toggleColumns}
+                                                        className={columnIconClass}></span> */}
+                                              
                 
-              <span 
-                className="fas fa-th" 
-                style={{ cursor: documentView[side].transcriptionType !== 'g' ? 'pointer' : 'default', padding: '0 15px' }} 
-                title={documentView[side].transcriptionType !== 'g' && "Return to Grid View"} 
-                onClick={documentView[side].transcriptionType !== 'g' && onGoToGrid} 
-              />
+                <span
+                  title="Go back"
+                  onClick={changeCurrentFolio}
+                  data-id={documentView[side].previousFolioShortID}
+                  className={(documentView[side].hasPrevious) ? 'arrow' : 'arrow disabled'}
+                >
 
-              <span
-                title="Toggle coordination of views"
-                onClick={toggleLockmode}
-                className={lockIconClass}
-              />
-                                                &nbsp;
-              <span
-                title="Toggle book mode"
-                onClick={toggleBookmode}
-                className={bookIconClass}
-              />
-                                                &nbsp;
-              <span
-                title="Toggle XML mode"
-                onClick={toggleXMLMode}
-                className={imageViewActive ? 'invisible' : xmlIconClass}
-              />
-                                                &nbsp;
-              {/* <span title="Toggle single column mode"  onClick={this.toggleColumns}
-                                                      className={columnIconClass}></span> */}
-                                                &nbsp;
-              
-              <span
-                title="Go back"
-                onClick={changeCurrentFolio}
-                data-id={documentView[side].previousFolioShortID}
-                className={(documentView[side].hasPrevious) ? 'arrow' : 'arrow disabled'}
-              >
-                {' '}
-                <FaArrowCircleLeft />
-                {' '}
-              
-              </span>
+                  <FaArrowCircleLeft />
 
-              <span
-                title="Go forward"
-                onClick={changeCurrentFolio}
-                data-id={documentView[side].nextFolioShortID}
-                className={(documentView[side].hasNext) ? 'arrow' : 'arrow disabled'}
-              >
-                {' '}
-                <FaArrowCircleRight />
-              </span>
+                
+                </span>
+
+                <span
+                  title="Go forward"
+                  onClick={changeCurrentFolio}
+                  data-id={documentView[side].nextFolioShortID}
+                  className={(documentView[side].hasNext) ? 'arrow' : 'arrow disabled'}
+                >
+
+                  <FaArrowCircleRight />
+                </span>
+              </div>
                                                 &nbsp;&nbsp;
-              {props.documentName || document.documentName}
-              {' / '}
-              <div
-                onClick={revealJumpBox}
-                className="folioName"
-              >
-                {' '}
-                {folioName}
-                {' '}
-                <span style={jumpToIconStyle} className="fa fa-hand-point-right" />
+              <div title={`${props.documentName || document.documentName}/${folioName}`} style={{ display: 'flex', overflowX: 'hidden', justifyContent: 'flex-end' }}>
+                <span>{props.documentName || document.documentName}</span>
+                <span>{' / '}</span>
+                <div
+                  onClick={revealJumpBox}
+                  className="folioName"
+                  style={{ flexShrink: '0' }}
+                >
+
+                  {folioName}
+
+                  <span style={jumpToIconStyle} className="fa fa-hand-point-right" />
+                </div>
               </div>
 
               <JumpToFolio
