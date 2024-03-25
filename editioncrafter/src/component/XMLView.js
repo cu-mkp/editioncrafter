@@ -40,7 +40,7 @@ class XMLView extends Component {
     const { xml: xmlContent } = transcriptionData;
 
     return (
-      <div id={thisID} className={thisClass}>
+      <div id={thisID} className={thisClass} style={{ position: "relative" }}>
         <Navigation side={side} documentView={documentView} documentViewActions={documentViewActions} documentName={document.variorum && folio.doc_id}/>
         <Pagination side={side} className="pagination_upper" documentView={documentView} documentViewActions={documentViewActions} />
 
