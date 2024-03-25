@@ -7,6 +7,7 @@ import Parser from './Parser';
 import EditorComment from './EditorComment';
 import ErrorBoundary from './ErrorBoundary';
 import Watermark from './Watermark';
+import { BigRingSpinner } from './RingSpinner';
 
 const addZoneStyle = (selectedZone, domNode, facses) => {
   if (facses.includes(selectedZone)) {
@@ -94,6 +95,7 @@ const TranscriptionView = (props) => {
   } = props;
 
   if (folioID === '-1') {
+    console.log('no folio');
     return (
       <Watermark
         documentView={documentView}
@@ -104,7 +106,8 @@ const TranscriptionView = (props) => {
   }
 
   const folio = document.folioIndex[folioID];
-  if (!folio.transcription) {
+
+  if (folio && !folio.loading && !folio.transcription) {
     return (
       <Watermark
         documentView={documentView}
@@ -113,9 +116,10 @@ const TranscriptionView = (props) => {
       />
     );
   }
-  const transcriptionData = folio.transcription[transcriptionType];
+  const transcriptionData = folio && folio.transcription && folio.transcription[transcriptionType];
 
-  if (!transcriptionData) {
+  if (folio && !folio.loading && !transcriptionData) {
+    console.log('no transcription data');
     return (
       <Watermark
         documentView={documentView}
@@ -127,9 +131,11 @@ const TranscriptionView = (props) => {
 
   // Configure parser to replace certain tags with components
   const htmlToReactParserOptionsSide = htmlToReactParserOptions(searchParams.get('zone'));
-  const { html, layout } = transcriptionData;
+  const html = transcriptionData && transcriptionData.html;
+  const layout = transcriptionData && transcriptionData.layout;
 
-  if (!html) {
+  if (folio && !folio.loading && !html) {
+    console.log('no html');
     return (
       <Watermark
         documentView={documentView}
@@ -139,10 +145,35 @@ const TranscriptionView = (props) => {
     );
   }
 
-  const surfaceStyle = { gridTemplateAreas: layout };
+  if (folio && folio.loading) {
+    return (
+      <div style={{ position: "relative" }}>
+      <Navigation
+        side={side}
+        documentView={documentView}
+        documentViewActions={documentViewActions}
+        documentName={document.variorum && folio.doc_id}
+      />
+      <Pagination side={side} documentView={documentView} documentViewActions={documentViewActions} />
+      <div className="transcriptionViewComponent">
+        <div className="transcriptContent">
+          <ErrorBoundary>
+            <BigRingSpinner delay={3000} color="dark" />
+          </ErrorBoundary>
+        </div>
+      </div>
+
+      <Pagination
+        side={side}
+        documentView={documentView}
+        documentViewActions={documentViewActions}
+      />
+    </div>
+    )
+  }
 
   return (
-    <div>
+    <div style={{ position: "relative" }}>
       <Navigation
         side={side}
         documentView={documentView}
@@ -155,7 +186,7 @@ const TranscriptionView = (props) => {
           <ErrorBoundary>
             <div
               className="surface grid-mode"
-              style={surfaceStyle}
+              style={{gridTemplateAreas: layout}}
             >
               <Parser
                 html={html}

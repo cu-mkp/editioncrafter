@@ -1,4 +1,6 @@
 #diplomatic {
+	container-type: size;
+	container-name: diplomatic;
 	#content-view, .header-wrapper, #entry-list-view, #annotation-list-view {
 		h1,
 		h2,
@@ -299,15 +301,16 @@
 
 #diplomatic.fixed {
 	background: white;
-	position: fixed;
-	width: 100vw;
-	height: calc(100vh - $chrome-height);
-	@include sm {
-		height: calc(100vh - $sm-chrome-height);
-	}
-	@include md {
-		height: calc(100vh - $md-chrome-height);
-	}
+	// position: fixed;
+	width: auto;
+	height: auto;
+	// height: calc(100% - $chrome-height);
+	// @include sm {
+	// 	height: calc(100% - $sm-chrome-height);
+	// }
+	// @include md {
+	// 	height: calc(100% - $md-chrome-height);
+	// }
 	font-size: 0.7rem;
 
 	-webkit-user-select: none;

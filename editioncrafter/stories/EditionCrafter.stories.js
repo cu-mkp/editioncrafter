@@ -80,6 +80,19 @@ export const MultiDocument = () => (
   />
 );
 
+export const embeddedDiv = () => (
+  <div style={{ width: '1200px', margin: '0 auto' }}>
+    <EditionCrafter
+      documentName='FHL_007548733_TAOS_BAPTISMS_BATCH_2'
+      transcriptionTypes={{
+        translation: 'Translation',
+        transcription: 'Transcription',
+      }}
+      iiifManifest='https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/manifest.json'
+    />
+  </div>
+)
+
 export default {
   title: 'EditionCrafter',
 };

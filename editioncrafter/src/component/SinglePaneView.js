@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-class SplitPaneView extends Component {
+class SinglePaneView extends Component {
   render() {
     return (
       <div className="single-pane-view">
@@ -16,4 +16,4 @@ function mapStateToProps(state) {
     document: state.document,
   };
 }
-export default connect(mapStateToProps)(SplitPaneView);
+export default connect(mapStateToProps)(SinglePaneView);

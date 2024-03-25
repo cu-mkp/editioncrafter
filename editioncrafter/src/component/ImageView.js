@@ -12,15 +12,25 @@ import ImageZoomControl from './ImageZoomControl';
 import SeaDragonComponent from './SeaDragonComponent';
 
 import '@recogito/annotorious-openseadragon/dist/annotorious.min.css';
+import { BigRingSpinner } from './RingSpinner';
 
 const ImageView = (props) => {
   const [viewer, setViewer] = useState(null);
   const [anno, setAnno] = useState(null);
 
+  // const [onZoomFixed_1, setOnZoomFixed_1] = useState(() => null);
+  // const [onZoomFixed_2, setOnZoomFixed_2] = useState(() => null);
+  // const [onZoomFixed_3, setOnZoomFixed_3] = useState(() => null);
+  // const [onZoomOut, setOnZoomOut] = useState(() => null);
+  // const [onZoomIn, setOnZoomIn] = useState(() => null);
+
+
+
   const location = useLocation();
   const navigate = useNavigate();
 
   const [searchParams] = useSearchParams();
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     if (anno && searchParams.get('zone')) {
@@ -38,7 +48,7 @@ const ImageView = (props) => {
     viewer.viewport.zoomTo(viewer.viewport.getMaxZoom());
   };
 
-  const onZoomFixed_2 = (e) => {
+  const onZoomFixed_2= (e) => {
     viewer.viewport.zoomTo((viewer.viewport.getMaxZoom() / 2));
   };
 
@@ -47,12 +57,13 @@ const ImageView = (props) => {
   };
 
   const onZoomIn = (e) => {
+    console.log(viewer.viewport.fitVertically());
     viewer.viewport.zoomBy(2)
-  }
+  };
 
   const onZoomOut = (e) => {
     viewer.viewport.zoomBy(0.5)
-  }
+  };
 
   useEffect(() => {
     if (anno) {
@@ -119,19 +130,25 @@ const ImageView = (props) => {
 
   useEffect(() => {
     const folio = props.document.folioIndex[props.folioID];
+    if (folio.loading) {
+      setLoading(true);
+    }
     if (folio.tileSource && viewer) {
       viewer.open(folio.tileSource);
       if (folio.annotations && anno) {
         anno.setAnnotations(folio.annotations);
       }
     }
+    if (!folio.loading) {
+      setLoading(false);
+    }
   }, [anno, viewer, props.folioID, props.document.folioIndex]);
 
   return (
     <div>
       { tileSource
-      && (
-      <div className={`image-view imageViewComponent ${props.side}`}>
+      ? (
+      <div className={`image-view imageViewComponent ${props.side}`} style={{ position: "relative" }}>
         <Navigation
           side={props.side}
           documentView={props.documentView}
@@ -147,14 +164,18 @@ const ImageView = (props) => {
           onZoomGrid={onZoomGrid}
           onZoomIn={onZoomIn}
           onZoomOut={onZoomOut}
+          viewer={viewer}
         />
         <SeaDragonComponent
           key={props.folioID}
           side={props.side}
           tileSource={tileSource}
           initViewer={initViewer}
+          loading={loading}
         />
       </div>
+      ) : (
+        <BigRingSpinner color="dark" delay={300} />
       )}
     </div>
   );
