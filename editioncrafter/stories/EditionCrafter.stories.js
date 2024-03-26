@@ -93,6 +93,19 @@ export const embeddedDiv = () => (
   </div>
 )
 
+export const fullScreen = () => (
+  <div style={{ width: '100dvw', height: '100dvh' }}>
+    <EditionCrafter
+      documentName='FHL_007548733_TAOS_BAPTISMS_BATCH_2'
+      transcriptionTypes={{
+        translation: 'Translation',
+        transcription: 'Transcription',
+      }}
+      iiifManifest='https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/manifest.json'
+    />
+  </div>
+)
+
 export default {
   title: 'EditionCrafter',
 };
