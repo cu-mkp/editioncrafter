@@ -6,10 +6,14 @@ const SeaDragonComponent = (props) => {
   const [loading, setLoading] = useState(true);
   const viewerRef = useRef(null);
 
-  useEffect(async () => {
-    if (viewerRef.current) {
-      await initViewer(viewerRef.current, tileSource).then(() => setLoading(false));
-    }
+  useEffect(() => {
+    const loader = async () => {
+      if (viewerRef.current) {
+        await initViewer(viewerRef.current, tileSource).then(() => setLoading(false));
+      }
+    };
+
+    loader();
   }, []);
 
   const viewer = useMemo(() => (
