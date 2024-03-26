@@ -17,6 +17,10 @@
 //   padding:1rem 0 0 0;
 // }
 
+.paginationComponent.bottom {
+	margin-top: 0;
+}
+
 .paginationControl {
 	padding: 16px;
 	
@@ -27,6 +31,7 @@
 	color: #4A4A4A;
 	margin: 1rem 1rem 0;
 	cursor: pointer;
+	display: inline-block;
 }
 
 .paginationControl .folioName {

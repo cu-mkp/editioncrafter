@@ -8,7 +8,6 @@ const { frontmatter } = Astro.props;
 ---
 
 <Layout title="Getting Started" tab="getting-started">
-    <!-- sidebar goes here -->
     <div class="bg-neutral w-full">
         <Container>
             <h1 class="font-serif text-5xl py-16">
@@ -17,41 +16,54 @@ const { frontmatter } = Astro.props;
         </Container>
     </div>
     <div class="bg-white w-full">
-        <Container className="flex flex-row py-4 xl:py-12">
-            <div class="hidden md:flex flex-col pr-4 xl:pr-12 border-r border-r-neutral-gray/50 w-1/4">
+        <Container className="flex flex-row py-4 xl:py-12 h-[78dvh] overflow-y-scroll">
+            <div class="hidden md:flex flex-col pr-4 xl:pr-12 border-r border-r-neutral-gray/50 w-[20%]">
                 <div class="flex flex-col gap-4 p-4 rounded-sm hover:bg-neutral">
                     <a href="#" class="font-semibold text-lg">
-                        Introduction
+                        Getting Started
                     </a>
                     <div class="flex flex-col pl-2 xl:pl-4">                   
-                        <a href="#item-1" class="w-full p-3 hover:bg-neutral-gray/20">
-                            Item 1
+                        <a href="#installing-the-editioncrafter-cli" class="w-full p-3 hover:bg-neutral-gray/20">
+                            Installing the CLI
                         </a>
-                        <div class="flex flex-col pl-2 xl:pl-4">
-                            <a href="#subitem-1" class="w-full p-3 hover:bg-neutral-gray/20">
-                                Subitem 1
-                            </a>
-                        </div>
-                        <a href="#item-2" class="w-full p-3 hover:bg-neutral-gray/20">
-                            Item 2
+                        <a href="#creating-a-tei-document-from-your-iiif-manifest" class="w-full p-3 hover:bg-neutral-gray/20">
+                            Creating a TEI Document
                         </a>
                     </div>
                 </div>
                 <div class="flex flex-col gap-4 p-4 rounded-sm hover:bg-neutral">
-                    <a href="#how-to-install" class="font-semibold text-lg">
-                        How to Install
+                    <a href="#publishing-a-document" class="font-semibold text-lg">
+                        Publishing A Document
                     </a>
                     <div class="flex flex-col pl-2 xl:pl-4">                   
-                        <a href="#item-1-1" class="w-full p-3 hover:bg-neutral-gray/20">
-                            Item 1
+                        <a href="#editioncrafter-in-a-react-app" class="w-full p-3 hover:bg-neutral-gray/20">
+                            In a React App
                         </a>
-                        <a href="#item-2" class="w-full p-3 hover:bg-neutral-gray/20">
-                            Item 2
+                        <a href="#editioncrafter-in-an-html-website" class="w-full p-3 hover:bg-neutral-gray/20">
+                            In an HTML Website
+                        </a>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-4 p-4 rounded-sm hover:bg-neutral">
+                    <a href="#editing-a-document" class="font-semibold text-lg">
+                            Editing A Document
+                    </a>
+                </div>
+                <div class="flex flex-col gap-4 p-4 rounded-sm hover:bg-neutral">
+                    <a href="#reference" class="font-semibold text-lg">
+                        Reference
+                    </a>
+                    <div class="flex flex-col pl-2 xl:pl-4">                   
+                        <a href="#editioncrafter-cli-reference" class="w-full p-3 hover:bg-neutral-gray/20">
+                            CLI Reference
+                        </a>
+                        <a href="#editioncrafter-viewer-reference" class="w-full p-3 hover:bg-neutral-gray/20">
+                            Viewer Reference
                         </a>
                     </div>
                 </div>
             </div>
-            <div class="px-12 w-3/4 prose h-full max-w-none">
+            <div class="px-12 w-[80%] prose h-full max-w-none overflow-y-scroll">
                 <slot />
             </div>
         </Container>

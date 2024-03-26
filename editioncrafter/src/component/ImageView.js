@@ -18,6 +18,14 @@ const ImageView = (props) => {
   const [viewer, setViewer] = useState(null);
   const [anno, setAnno] = useState(null);
 
+  // const [onZoomFixed_1, setOnZoomFixed_1] = useState(() => null);
+  // const [onZoomFixed_2, setOnZoomFixed_2] = useState(() => null);
+  // const [onZoomFixed_3, setOnZoomFixed_3] = useState(() => null);
+  // const [onZoomOut, setOnZoomOut] = useState(() => null);
+  // const [onZoomIn, setOnZoomIn] = useState(() => null);
+
+
+
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -40,7 +48,7 @@ const ImageView = (props) => {
     viewer.viewport.zoomTo(viewer.viewport.getMaxZoom());
   };
 
-  const onZoomFixed_2 = (e) => {
+  const onZoomFixed_2= (e) => {
     viewer.viewport.zoomTo((viewer.viewport.getMaxZoom() / 2));
   };
 
@@ -49,12 +57,13 @@ const ImageView = (props) => {
   };
 
   const onZoomIn = (e) => {
+    console.log(viewer.viewport.fitVertically());
     viewer.viewport.zoomBy(2)
-  }
+  };
 
   const onZoomOut = (e) => {
     viewer.viewport.zoomBy(0.5)
-  }
+  };
 
   useEffect(() => {
     if (anno) {
@@ -139,7 +148,7 @@ const ImageView = (props) => {
     <div>
       { tileSource
       ? (
-      <div className={`image-view imageViewComponent ${props.side}`}>
+      <div className={`image-view imageViewComponent ${props.side}`} style={{ position: "relative" }}>
         <Navigation
           side={props.side}
           documentView={props.documentView}
@@ -155,6 +164,7 @@ const ImageView = (props) => {
           onZoomGrid={onZoomGrid}
           onZoomIn={onZoomIn}
           onZoomOut={onZoomOut}
+          viewer={viewer}
         />
         <SeaDragonComponent
           key={props.folioID}

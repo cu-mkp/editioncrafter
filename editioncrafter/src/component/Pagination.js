@@ -31,11 +31,11 @@ class Pagination extends React.Component {
   };
 
   render() {
-    const { side, document, documentView } = this.props;
+    const { side, document, documentView, bottom = false } = this.props;
     if( documentView[side].iiifShortID === '-1' ) return null;
     const folioName = document.folioIndex[documentView[side].iiifShortID].name;
     return (
-      <div className="paginationComponent">
+      <div className={ bottom ? "paginationComponent bottom" : "paginationComponent"}>
         <div className="paginationControl">
 
           <span

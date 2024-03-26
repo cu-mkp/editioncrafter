@@ -7,7 +7,7 @@
 			margin: 52px 0 0 0;
 		}
 		width: calc(100% - 1.2rem);
-            height: calc(100vh - 170px);
+            max-height: calc(100vh - 170px);
             padding: 5px 16px;
 	}
 
@@ -29,6 +29,11 @@
 			position: fixed;
 			top: initial;
 		}
+	}
+
+	.navigationComponentNarrow {
+		position: sticky;
+		top: 0;
 	}
 	
 	.glossaryNav {
@@ -89,7 +94,7 @@
 
 	#glossaryContent {
 		padding: 5rem 0 0;
-		min-height: 100vh;
+		max-height: 100vh;
 		-webkit-user-select: text;
 		-moz-user-select: text;
 		-ms-user-select: text;

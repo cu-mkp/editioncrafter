@@ -3,7 +3,7 @@ import Navigation from './Navigation';
 import Pagination from './Pagination';
 
 const Watermark = ({ side, documentView, documentViewActions }) => (
-  <div>
+  <div style={{ position: "relative" }}>
     { documentView.left.iiifShortID !== '-1' && documentView.right.iiifShortID !== '-1'
       ? <Navigation side={side} documentView={documentView} documentViewActions={documentViewActions} />
       : null}
