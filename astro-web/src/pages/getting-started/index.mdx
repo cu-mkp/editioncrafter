@@ -1,36 +1,236 @@
 ---
 layout: ../../layouts/Docs.astro
 ---
-## Item 1
+# Getting Started Guide
 
-Lorem ipsum dolor sit amet consectetur. Malesuada nunc sociis curabitur odio vitae sagittis varius. Sed aliquet venenatis eu quisque dictum. Aliquam eget at feugiat id aenean viverra. Sit sed viverra aliquet sed sed aliquam nec a consequat. A id morbi ornare et et integer proin elementum lectus. Neque morbi proin rhoncus imperdiet at interdum nunc eget. Ut porta ut integer massa iaculis aliquam. Nisi aliquet id diam at lectus potenti.
+Welcome to the "Getting Started Guide" for EditionCrafter. This guide describes how to include EditionCrafter in your website. In order to do so, you must first create the artifacts EditionCrafter needs to work. These artifacts are a set of JSON, HTML, and XML files generated from a [TEI Document](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/index.html) that you supply. You can use the [EditionCrafter CLI](https://www.npmjs.com/package/@cu-mkp/editioncrafter-cli) to create all of these artifacts and a starting TEI Document in the correct format, based on a [IIIF Manifest](https://iiif.io/guides/using_iiif_resources/).
 
-Leo nisl neque dolor lacinia egestas sem nisl. Neque ullamcorper viverra accumsan lacus nibh euismod duis at convallis. Pharetra morbi tincidunt nunc amet ullamcorper. Tempor ut turpis ut auctor vitae elit. Id ornare eleifend commodo hendrerit netus nunc. Interdum in amet enim eu arcu quam in commodo ultricies. Cras tortor imperdiet tortor sed at aliquam in amet.
+In order to use EditionCrafter, you will also need to publish the EditionCrafter artifacts online, either on your edition website or on a separate data site. GitHub Pages is a no-cost way to accomplish this. However, documenting the use of git and GitHub Pages is beyond the scope of this guide. You can see examples of this pattern [here](https://github.com/cu-mkp/editioncrafter-data). 
 
-#### Subitem 1
+You will also need a website where EditionCrafter will display your edition. We provide instructions for how to install EditionCrafter in a React app and in a HTML website. Lastly, the page images of your text need to be available online on a IIIF Image server. You can often obtain a link to your page images from the institution that is holding the originals. Here’s a good place to [start](https://iiif.io/guides/finding_resources/). 
 
-Lorem ipsum dolor sit amet consectetur. Malesuada nunc sociis curabitur odio vitae sagittis varius. Sed aliquet venenatis eu quisque dictum. Aliquam eget at feugiat id aenean viverra. Sit sed viverra aliquet sed sed aliquam nec a consequat. A id morbi ornare et et integer proin elementum lectus. Neque morbi proin rhoncus imperdiet at interdum nunc eget. Ut porta ut integer massa iaculis aliquam. Nisi aliquet id diam at lectus potenti.
+## Installing the EditionCrafter CLI
 
-Leo nisl neque dolor lacinia egestas sem nisl. Neque ullamcorper viverra accumsan lacus nibh euismod duis at convallis. Pharetra morbi tincidunt nunc amet ullamcorper. Tempor ut turpis ut auctor vitae elit. Id ornare eleifend commodo hendrerit netus nunc. Interdum in amet enim eu arcu quam in commodo ultricies. Cras tortor imperdiet tortor sed at aliquam in amet.
+EditionCrafter has an accompanying command line interface (CLI) that is used to generate the artifacts it displays. This software is written in Javascript, so you will need to have [Node.js](https://nodejs.org) installed on your computer. Once Node.js is installed, run the following command to install the tool:
 
-#### Subitem 2
+```
+npm install -g @cu-mkp/editioncrafter-cli
+```
 
-Lorem ipsum dolor sit amet consectetur. Malesuada nunc sociis curabitur odio vitae sagittis varius. Sed aliquet venenatis eu quisque dictum. Aliquam eget at feugiat id aenean viverra. Sit sed viverra aliquet sed sed aliquam nec a consequat. A id morbi ornare et et integer proin elementum lectus. Neque morbi proin rhoncus imperdiet at interdum nunc eget. Ut porta ut integer massa iaculis aliquam. Nisi aliquet id diam at lectus potenti.
+To test it out, try the command below, which displays the CLI documentation in the console. Note that you may need to restart your terminal window to get EditionCrafter CLI on your path.
 
-## How to Install
+```
+editioncrafter help
+```
 
-#### Item 1
+## Creating a TEI Document from your IIIF Manifest
 
-Lorem ipsum dolor sit amet consectetur. Malesuada nunc sociis curabitur odio vitae sagittis varius. Sed aliquet venenatis eu quisque dictum. Aliquam eget at feugiat id aenean viverra. Sit sed viverra aliquet sed sed aliquam nec a consequat. A id morbi ornare et et integer proin elementum lectus. Neque morbi proin rhoncus imperdiet at interdum nunc eget. Ut porta ut integer massa iaculis aliquam. Nisi aliquet id diam at lectus potenti.
+To prepare a TEI Document to use with EditionCrafter, you should first add all of the images to a `<facsimile>` element in the document. To aid in this process, you can use the CLI to generate one for you based on your IIIF Manifest:
 
-#### Item 2
+```
+editioncrafter iiif <iiif_url> <output_path>
+```
 
-- a list
-- list
-- list
+This creates an XML file on your computer at the output file path based on the IIIF Manifest that you point to in the `<iiif_url>`. In a separate section below, we will describe how to edit this structure to fill in the textual content of your edition. Before we do that, let's finish setting things up. 
 
-`install editioncrafter`
+The next step is to generate the EditionCrafter artifacts needed to display the document on the web. We do that with this command:
 
-#### Item 3
+```
+editioncrafter process <tei_file> <output_path> <base_url>
+```
 
-Lorem ipsum dolor sit amet consectetur. Malesuada nunc sociis curabitur odio vitae sagittis varius. Sed aliquet venenatis eu quisque dictum. Aliquam eget at feugiat id aenean viverra. Sit sed viverra aliquet sed sed aliquam nec a consequat. A id morbi ornare et et integer proin elementum lectus. Neque morbi proin rhoncus imperdiet at interdum nunc eget. Ut porta ut integer massa iaculis aliquam. Nisi aliquet id diam at lectus potenti.
+This creates the necessary artifacts at the `<output_path>`. These artifacts include a new IIIF Manifest that is now annotated with web annotations that link each page of the text with the corresponding HTML and XML renderings of that page. You will want to point to this manifest from the EditionCrafter viewer component. Once you have published these files online at the `<base_url>`, you are ready for the next step.
+
+# Publishing a Document
+
+EditionCrafter can be included in a React app or a HTML website. EditionCrafter should work on any content management system (CMS) where you can edit the HTML of your page. We have tested it on Hugo CMS, Astro Framework, and Scalar CMS. We also have an example Hugo website that you can fork. Please see that website's [README](https://github.com/cu-mkp/editioncrafter-project) for more information.
+
+## EditionCrafter in a React App
+
+If you are including EditionCrafter in a React app, add this module to your project:
+
+```
+npm add @cu-mkp/editioncrafter
+```
+
+The reference section below details all of the props of the EditionCrafter component. Here is an example of use:
+
+```jsx
+import EditionCrafter from '@cu-mkp/editioncrafter'
+
+<EditionCrafter
+  documentName='BnF Ms. Fr. 640'
+  transcriptionTypes={{
+    tc: 'Diplomatic (FR)',
+    tcn: 'Normalized (FR)',
+    tl: 'Translation (EN)'
+  }}
+  iiifManifest='https://cu-mkp.github.io/editioncrafter-data/fr640_3r-3v-example/iiif/manifest.json'
+/>
+```
+
+## EditionCrafter in an HTML Website
+
+To include EditionCrafter in your HTML website, you need to create a `div` somewhere on your page, assign it an ID and then pass that ID to EditionCrafter. The reference section details the options for EditionCrafter, which are otherwise the same as the React component. Here is an example of use:
+
+```html
+ <div id="ec"></div>
+
+ <script type="text/javascript" src="https://www.unpkg.com/@cu-mkp/editioncrafter-umd" ></script>
+
+ <script type="text/javascript">
+
+     EditionCrafter.viewer({
+         id: 'ec',
+         documentName: 'BnF Ms. Fr. 640',
+         iiifManifest='https://cu-mkp.github.io/editioncrafter-data/fr640_3r-3v-example/iiif/manifest.json',
+         transcriptionTypes: {
+           tc: 'Diplomatic (FR)',
+           tcn: 'Normalized (FR)',
+           tl: 'Translation (EN)'
+         }
+     });
+
+ </script>
+```
+
+# Editing a Document
+
+Once you have generated a TEI Document with the EditionCrafter CLI, you can start to edit it and add material. Whenever you want to see your changes on your website, simply run the `editioncrafter process` command again and upload the new artifacts. If you are using a GitHub-based workflow like the one described in the example Hugo site, at this point you would simply commit your changes to GitHub and push them.
+
+While editing a document, there are two things to consider related to display in EditionCrafter. First, the text can be provided in one or more layers. Each layer is found in a top level `<text>` element. The `<text>` element must have an `xml:id`. This `xml:id` is used to identify this layer. For example, to create two layers, one for the transcription and another for a translation, the code would look like this:
+
+```xml
+<text xml:id="transcription">
+
+  ... my transcription ...
+
+</text>
+
+<text xml:id="translation">
+
+  ... my translation ...
+
+</text>
+```
+
+The other thing to consider is how the text is paired with the page images. In each layer, add a `<pb/>` element whenever a new page begins. This element should have a `@facs` attribute that references the `@xml:id` of the corresponding `<surface>` element. The surfaces are found in the `<facsimile>` element that was automatically generated by the EditionCrafter CLI. So for example, if you have a `<facsimile>` that looks like this:
+
+```xml
+<facsimile
+  sameAs="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/manifest.json" 
+  xml:id="BnF.DépartementdesManuscrits.Français640" 
+>
+
+  <surface
+    xml:id="f010" 
+    ulx="0" 
+    uly="0" 
+    lrx="3369" 
+    lry="5417" 
+    sameAs="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f11"
+  >
+
+    <label>
+      3r
+    </label>
+
+    <graphic 
+      mimeType="application/json" 
+      url="https:/gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f11"
+    />
+
+  </surface>
+
+</facsimile>
+```
+
+You could begin page 3r in your text like this:
+
+```xml
+<pb facs="#f010"/>
+```
+
+Additional functionality can be triggered by specific elements and attributes. See the TEI reference section for more information.
+
+# Reference 
+
+This section provides further details on the commands available to the EditionCrafter CLI and the configuration options available to the EditionCrafter viewer. 
+
+## EditionCrafter CLI Reference 
+
+## EditionCrafter Viewer Reference 
+
+The following props are available to the `<EditionCrafter>` viewer component:
+
+### documentInfo
+
+Optional; used **only** in the case that you wish to load multiple documents in the same viewer for easy comparison. 
+
+An *object* whose keys are unique document IDs for each document you wish to include, and whose values are *objects* specifying the `documentName`, `transcriptionTypes`, and `iiifManifest` for each document as described below. For example:
+```js
+documentInfo={{
+    FHL_007548733_TAOS_BAPTISMS_BATCH_2: {
+        documentName: 'Taos Baptisms Batch 2',
+        transcriptionTypes: {
+            translation: 'Translation',
+            transcription: 'Transcription',
+        },
+        iiifManifest: 'https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/manifest.json',
+    },
+    eng_415_145a: {
+        documentName: 'Eng 415-145a',
+        transcriptionTypes: {
+            'eng-415-145a': 'Transcription',
+        },
+        iiifManifest: 'https://cu-mkp.github.io/bic-editioncrafter-data/eng-415-145a/iiif/manifest.json',
+    }
+}}
+```
+
+### documentName
+
+Required. (Note: This is required even in the case that you have also included a `documentInfo` prop.)
+
+A *string* giving the name of the document(s). 
+
+### iiifManifest
+
+Required if no `documentInfo` prop specified.
+
+The URL of the IIIF manifest for your document.
+
+### threePanel
+
+Optional. (Defaults to `false`.)
+
+A *boolean* flag, which when set to `true` adds a third pane to the viewer. The third pane starts collapsed on the righthand side of the viewer and can be expanded by clicking and dragging the divider. This pane operates independently from the other throw; for example Book Mode is disabled in the third pane.
+
+### transcriptionTypes
+
+Required if no `documentInfo` prop specified.
+
+An *object* providing a dictionary of the different transciption types provided in your TEI document. The keys of this object should correspond to the `xml:id` values of the different `<text>` layers of your document. For example, suppose you have the following text layers in your document:
+
+```xml
+<text xml:id="transcription">
+
+  ... my transcription ...
+
+</text>
+
+<text xml:id="translation">
+
+  ... my translation ...
+
+</text>
+```
+In this case the `transcriptionTypes` object might have the form:
+
+```js
+transcriptionTypes = {
+    transcription: 'Transcription',
+    translation: 'Translation'
+}
+```
+The value for each transcription type should be a string that will be displayed in the selection menu within the viewer. These need not correspond precisely to the keys. For instance in the example above, you could add more information to the display strings, e.g. `'Transcription (FR)'` and `Translation (EN)`.
