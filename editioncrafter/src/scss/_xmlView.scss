@@ -6,7 +6,8 @@
   padding: 0;
   margin: 4.5rem 0 0;
   width: calc(100% - 1.2rem);
-  min-height: 100vh;
+  max-height: 100vh;
+  min-height: 100%;
   -webkit-user-select: text;
   -moz-user-select: text;
   -ms-user-select: text;
@@ -17,7 +18,7 @@
 .xmlViewComponent {
   overflow: auto;
   margin: 0 0 0 1rem;
-  height: calc(100vh - 7rem);
+  max-height: calc(100vh - 7rem);
 }
 
 .xmlContentInner {
