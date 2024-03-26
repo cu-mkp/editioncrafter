@@ -1,6 +1,6 @@
 {
   "name": "@cu-mkp/editioncrafter",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "",
   "private": false,
   "main": "dist/editioncrafter.min.js",
