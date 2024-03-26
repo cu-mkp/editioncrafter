@@ -2,23 +2,50 @@
       #tool-bar-buttons{
             font-size: 15px;
       }
-      position: fixed;
+      position: absolute;
+      display: none;
       z-index: 2;
       height:48px;
+      width: 100%;
 	white-space: nowrap;
 	-webkit-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;
       user-select: none;
       padding:4px;
-      top: 75px;
       background-color: white;
       border-radius: 0.3rem;
       @include sm {
             top: 80px;
       }
       @include md {
-            top: initial;
+            top: 0;
+            left: 0;
+            display: flex;
+      }
+      button{
+            cursor: pointer;
+      }
+}
+
+.navigationComponentNarrow {
+      #tool-bar-buttons{
+            font-size: 15px;
+      }
+      display: flex;
+      width: auto;
+      z-index: 2;
+      height:48px;
+      width: 100%;
+	white-space: nowrap;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+      user-select: none;
+      padding:4px;
+      background-color: white;
+      @include md {
+            display: none;
       }
       button{
             cursor: pointer;
@@ -26,11 +53,27 @@
 }
 
 .navigationRow{
+      display:none;
+      justify-content:space-between;
+      align-items:center;
+      gap: 10px;
+      width: 100%;
+      padding:12px 10px 12px 10px;
+      @include md {
+            display:flex;
+      }     
+}
+
+.navigationRowNarrow {
       display:flex;
       justify-content:space-between;
-      padding:12px 10px 12px 10px;
-      
-      
+      align-items: center;
+      gap: 10px;
+      width: 100%;
+      padding:6px 5px 6px 5px;
+      @include md {
+            display:none;
+      } 
 }
 
 .helpIcon {
@@ -59,6 +102,14 @@
       }
 
 }
+
+.imageViewComponent .navigationComponentNarrow {
+      background-color: rgba(0,0,0,1);
+      color: #ffffff;
+      border-radius: 0;
+      opacity: 1;
+}
+
 .transcriptionViewComponent .navigationComponent {
 	background-color: rgba(255,255,255,1);;
 	color: #000000;
@@ -76,14 +127,26 @@
 }
 
 .breadcrumbs {
-      overflow:hidden;
-      display: none;
+      overflow-x:hidden;
+      display: hidden;
+      align-items: baseline;
+      max-width: 70%;
       @include md {
-            display: block;
+            display: flex;
       }
 }
 
-.breadcrumbs .folioName {
+.breadcrumbsNarrow {
+      overflow-x:hidden;
+      display: flex;
+      align-items: baseline;
+      max-width: 70%;
+      @include md {
+            display: none;
+      }
+}
+
+.breadcrumbs .folioName, .breadcrumbsNarrow .folioName {
   display:inline;
   white-space: nowrap;
   overflow: hidden;

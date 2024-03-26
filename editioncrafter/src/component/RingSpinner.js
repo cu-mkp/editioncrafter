@@ -12,9 +12,10 @@ export function BigRingSpinner(props) {
 
     useEffect(() => {
         if (delay > 0) {
-            setTimeout(() => {
+            const timer = setTimeout(() => {
                 setShow(true)
             }, delay);
+            return () => clearTimeout(timer);
         }
     }, []);
 
