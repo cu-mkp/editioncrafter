@@ -167,6 +167,7 @@ const TranscriptionView = (props) => {
         side={side}
         documentView={documentView}
         documentViewActions={documentViewActions}
+        bottom
       />
     </div>
     )
@@ -201,6 +202,7 @@ const TranscriptionView = (props) => {
         side={side}
         documentView={documentView}
         documentViewActions={documentViewActions}
+        bottom
       />
     </div>
   );

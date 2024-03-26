@@ -33,7 +33,7 @@ const DiploMatic = (props) => {
       <HashRouter>
         <div id="diplomatic" className={fixedFrameModeClass} ref={containerRef}>
           <RouteListener />
-          <div id="content">
+          <div id="content" style={{ height: '100%' }}>
             <Routes>
               <Route path="/ec/:folioID/:transcriptionType/:folioID2/:transcriptionType2/:folioID3/:transcriptionType3" element={<DocumentView {...props} containerWidth={containerWidth} />} exact />
               <Route path="/ec/:folioID/:transcriptionType/:folioID2/:transcriptionType2" element={<DocumentView {...props} containerWidth={containerWidth} />} exact />

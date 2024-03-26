@@ -1,7 +1,7 @@
 
 .transcriptionViewComponent {
 	overflow: scroll;
-    height:calc(100vh - 7rem);
+    max-height:calc(100vh - 7rem);
 	.transcriptContent {
 		padding: 50px 16px;
 		@include md {
@@ -12,7 +12,7 @@
 	  -moz-user-select: text;
 	  -ms-user-select: text;
 	  user-select: text;
-	  margin-bottom:92px;
+	  //margin-bottom:92px;
 
 	  figure {
 		  display: inline-flex;

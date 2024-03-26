@@ -479,7 +479,7 @@ const DocumentView = (props) => {
 
   if (isWidthUp('md', props.width) && !singlePaneMode) {
     return (
-      <div>
+      <div style={{ height: '100%' }}>
         <SplitPaneView
           leftPane={renderPane('left', docView)}
           rightPane={renderPane('right', docView)}
@@ -491,7 +491,7 @@ const DocumentView = (props) => {
     );
   }
   return (
-    <div>
+    <div style={{ height: '100%' }}>
       <SinglePaneView
         singlePane={renderPane(viewportState('left').iiifShortID === "-1" ? 'left' : 'right', docView)}
       />
