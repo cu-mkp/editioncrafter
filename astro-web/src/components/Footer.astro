@@ -9,11 +9,11 @@ import { Image } from "astro:assets";
 
 <div class="bg-neutral w-full">
     <Container className="flex flex-col gap-8 py-12 items-center">
-        <div class="md:flex flex-row gap-6 align-middle">
-            <Image src={logo} alt="Edition Crafter" />
+        <div class="flex flex-col md:flex-row gap-6 align-middle justify-center items-center">
+            <Image src={logo} alt="Edition Crafter"/>
             <p class="text-5xl font-serif self-center">EditionCrafter</p>
         </div>
-        <p>
+        <p class="text-center">
             Lorem ipsum dolor sit amet consectetur. Nulla auctor a lectus iaculis. Enim pellentesque.
         </p>
         <div class="flex flex-row justify-center gap-6">
@@ -21,7 +21,7 @@ import { Image } from "astro:assets";
             <Image src={twitter} alt="Twitter" />
         </div>
         <div class="h-[2px] bg-neutral-dark rounded-full w-full" />
-        <p>
+        <p class="text-center">
             Lorem ipsum dolor sit amet consectetur. Tellus ultricies purus nibh.
         </p>
     </Container>
