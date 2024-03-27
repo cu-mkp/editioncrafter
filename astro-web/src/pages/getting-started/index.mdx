@@ -159,6 +159,32 @@ This section provides further details on the commands available to the EditionCr
 
 ## EditionCrafter CLI Reference 
 
+The following commands are available to the EditionCrafter CLI:
+
+### help
+
+Usage:
+```
+editioncrafter help
+```
+This will display information on the syntax for passing commands to the CLI as well as a list of available commands.
+
+### iiif 
+
+Usage:
+```
+editioncrafter iiif <iiif_url> <output_path>
+```
+This will create an XML file at the location of the provided `<output_path>` based on the information in the IIIF manifest supplied. Note that in this case the `<output_path>` should be a single XML File, e.g. `/MyFiles/TEI/index.xml`.
+
+### process
+
+Usage:
+```
+editioncrafter process <tei_file> <output_path> <base_url>
+```
+This will create all of the artifacts that EditionCrafter needs in order to display your document on the web, and place them in the specified `<output_path>` folder. The `<base_url>` parameter should be the URL at which you intend to host these artifacts.
+
 ## EditionCrafter Viewer Reference 
 
 The following props are available to the `<EditionCrafter>` viewer component:

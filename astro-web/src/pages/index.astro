@@ -9,6 +9,10 @@ import lizard from "../assets/footer/MKLizard.png";
 import nsf from "../assets/footer/NSF.png";
 import pss from "../assets/footer/Performant_Logo.svg";
 import { Image } from "astro:assets";
+import bitc from '../assets/projects/thumbnails/bitc.png';
+import bnf from '../assets/projects/thumbnails/bnfmsfr640.png';
+import dyngley from '../assets/projects/thumbnails/dyngley.png';
+import nbu from '../assets/projects/thumbnails/nbu.png';
 
 ---
 
@@ -77,12 +81,12 @@ import { Image } from "astro:assets";
 				Explore Projects
 			</h2>
 			<div class="grid gap-12 grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 py-12 mx-auto">
-				<ProjectCard title="A project" />
-				<ProjectCard title="A project" />
-				<ProjectCard title="A project" />
-				<ProjectCard title="A project" />
-				<ProjectCard title="A project" />
-				<ProjectCard title="A project" />
+				<ProjectCard title="BnF Ms. Fr. 640" href="/editioncrafter/projects/bnf-ms-fr-640" img={bnf} />
+				<ProjectCard title="Native Bound Unbound" href="/editioncrafter/projects/native-bound-unbound" img={nbu} />
+				<ProjectCard title="Dyngley Family" href="/editioncrafter/projects/dyngley-family" img={dyngley} />
+				<ProjectCard title="Bow in the Cloud" href="/editioncrafter/projects/bow-in-the-cloud" img={bitc} />
+				<ProjectCard title="Interviste Pescatori" href="/editioncrafter/projects/interviste-pescatori" />
+				<ProjectCard title="Ely Green Variorum" active={false} />
 			</div>
 		</Container>
 	</div>

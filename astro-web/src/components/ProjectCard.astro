@@ -1,16 +1,26 @@
 ---
+import { Image } from 'astro:assets';
+
 
 export interface Props {
-    title: string
+    title: string;
+    img?: ImageMetadata;
+    href?: string;
+    active?: boolean;
 }
 
-const { title } = Astro.props;
+const { title, img, href = '#', active = true } = Astro.props;
 
 ---
-
-<div class="bg-neutral flex flex-col w-[336px]">
-    <div class="bg-neutral-gray w-[336px] h-[282px]" /> 
-    <p class="p-8">
-        {title}
-    </p>
-</div>
+<a href={href}>
+    <div class={`bg-neutral flex flex-col w-[336px] ${active ? 'hover:scale-105 transition cursor-pointer' : 'cursor-default'}`}>
+        { img ? ( 
+            <Image src={img} alt={title} height={282} width={336} />
+        ) : (
+            <div class="bg-neutral-gray/30 w-[336px] h-[282px]" /> 
+        ) }
+        <p class="p-8 font-serif">
+            {title}
+        </p>
+    </div>
+</a>
