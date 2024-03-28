@@ -19,7 +19,6 @@ const { title, img, href = '#', active = true } = Astro.props;
         ) : (
             <div class="bg-neutral-gray/20 w-[336px] h-[282px] flex items-center justify-center">
                 { !active && <p class="text-3xl">(Coming Soon)</p> }
-            </div>
         ) }
         <p class="p-8 font-serif">
             {title}
