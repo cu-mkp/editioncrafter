@@ -9,21 +9,43 @@ import '@fontsource/source-code-pro'
 interface Props {
 	title: string;
 	tab?: string;
-	transitions?: boolean
+	transitions?: boolean;
+	cardText?: string;
 }
 
-const { title, tab, transitions = true } = Astro.props;
+const { title, tab, transitions = true, cardText = "A simple digital edition publication tool." } = Astro.props;
+const siteURL = "https://performant-software.github.io/editioncrafter";
+const siteDomain = "performant-software.github.io";
+const socialImgURL = `${siteURL}/social.png`;
+
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/editioncrafter/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
+			<!-- HTML Meta Tags -->
 		<title>{title}</title>
+		<meta name="description" content={cardText}>
+
+		<!-- Facebook Meta Tags -->
+		<meta property="og:url" content={siteURL}>
+		<meta property="og:type" content="website">
+		<meta property="og:title" content={title}>
+		<meta property="og:description" content={cardText}>
+		<meta property="og:image" content={socialImgURL}>
+
+		<!-- Twitter Meta Tags -->
+		<meta name="twitter:card" content="summary_large_image">
+		<meta property="twitter:domain" content={siteDomain}>
+		<meta property="twitter:url" content={siteURL}>
+		<meta name="twitter:title" content={title}>
+		<meta name="twitter:description" content={cardText}>
+		<meta name="twitter:image" content={socialImgURL}>
+
+		<link rel="icon" type="image/svg+xml" href="/editioncrafter/favicon.jpg" />
 		{ transitions && <ViewTransitions /> }
 	</head>
 	<body class='flex h-full flex-col bg-white 3xl:bg-neutral-dark text-neutral-dark 3xl:max-w-screen-3xl mx-auto' transition:animate="initial">

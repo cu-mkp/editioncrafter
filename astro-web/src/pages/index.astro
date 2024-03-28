@@ -5,14 +5,11 @@ import Container from "../components/Container.astro";
 import FeatureTabs from "../components/FeatureTabs";
 import ProjectCard from "../components/ProjectCard.astro";
 import Button from "../components/Button.astro";
-import lizard from "../assets/footer/MKLizard.png";
-import nsf from "../assets/footer/NSF.png";
-import pss from "../assets/footer/Performant_Logo.svg";
-import { Image } from "astro:assets";
 import bitc from '../assets/projects/thumbnails/bitc.png';
 import bnf from '../assets/projects/thumbnails/bnfmsfr640.png';
 import dyngley from '../assets/projects/thumbnails/dyngley.png';
 import nbu from '../assets/projects/thumbnails/nbu.png';
+import interviste from '../assets/projects/thumbnails/interviste.png';
 
 ---
 
@@ -81,16 +78,16 @@ import nbu from '../assets/projects/thumbnails/nbu.png';
 				Explore Projects
 			</h2>
 			<div class="grid gap-12 grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 py-12 mx-auto">
-				<ProjectCard title="BnF Ms. Fr. 640" href="/editioncrafter/projects/bnf-ms-fr-640" img={bnf} />
-				<ProjectCard title="Native Bound Unbound" href="/editioncrafter/projects/native-bound-unbound" img={nbu} />
-				<ProjectCard title="Dyngley Family" href="/editioncrafter/projects/dyngley-family" img={dyngley} />
-				<ProjectCard title="Bow in the Cloud" href="/editioncrafter/projects/bow-in-the-cloud" img={bitc} />
-				<ProjectCard title="Interviste Pescatori" href="/editioncrafter/projects/interviste-pescatori" />
+				<ProjectCard title="BnF Ms. Fr. 640" href="/editioncrafter/projects/bnf-ms-fr-640/#/ec/f010/f/f010/tl/-1/g" img={bnf} />
+				<ProjectCard title="Native Bound Unbound" href="/editioncrafter/projects/native-bound-unbound/#/ec/FHL_007548733_IMG_220/f/FHL_007548733_IMG_220/translation" img={nbu} />
+				<ProjectCard title="Dyngley Family" href="/editioncrafter/projects/dyngley-family/#/ec/f016/f/f016/transcription" img={dyngley} />
+				<ProjectCard title="Bow in the Cloud" href="/editioncrafter/projects/bow-in-the-cloud/#/ec/f000/f/f000/eng-415-145a" img={bitc} />
+				<ProjectCard title="Interviste Pescatori" href="/editioncrafter/projects/interviste-pescatori/#/ec/f002/f/f002/transcription" img={interviste} />
 				<ProjectCard title="Ely Green Variorum" active={false} />
 			</div>
 		</Container>
 	</div>
-	<div class="bg-neutral w-full">
+	<!-- <div class="bg-neutral w-full">
 		<Container className="py-20 md:flex flex-row gap-16 justify-between">
 			<div class="flex flex-col gap-6 md:w-1/2 pb-6 md:pb-0">
 				<h2 class="text-4xl font-serif">
@@ -138,8 +135,8 @@ import nbu from '../assets/projects/thumbnails/nbu.png';
 				</div>
 			</div>
 		</Container>
-	</div>
-	<div class="bg-white w-full">
+	</div> -->
+	<!-- <div class="bg-white w-full">
 		<Container className="py-20 flex flex-col gap-16 text-center items-center">
 			<h1 class="text-5xl font-bold font-serif">
 				Brought to you by
@@ -150,5 +147,5 @@ import nbu from '../assets/projects/thumbnails/nbu.png';
 				<Image src={pss} alt="Performant Software Solutions" />
 			</div>
 		</Container>
-	</div>
+	</div> -->
 </Layout>
