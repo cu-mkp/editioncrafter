@@ -25,13 +25,13 @@ editioncrafter help
 
 ## Creating a TEI Document from your IIIF Manifest
 
-To prepare a TEI Document to use with EditionCrafter, you should first add all of the images to a <code>\<facsimile\></code> element in the document. To aid in this process, you can use the CLI to generate one for you based on your IIIF Manifest:
+To prepare a TEI Document to use with EditionCrafter, you should first add all of the images to a `<facsimile>` element in the document. To aid in this process, you can use the CLI to generate one for you based on your IIIF Manifest:
 
 ```
 editioncrafter iiif <iiif_url> <output_path>
 ```
 
-This creates an XML file on your computer at the output file path based on the IIIF Manifest that you point to in the <code>\<iiif_url\></code>. In a separate section below, we will describe how to edit this structure to fill in the textual content of your edition. Before we do that, let's finish setting things up. 
+This creates an XML file on your computer at the output file path based on the IIIF Manifest that you point to in the `<iiif_url>`. In a separate section below, we will describe how to edit this structure to fill in the textual content of your edition. Before we do that, let's finish setting things up. 
 
 The next step is to generate the EditionCrafter artifacts needed to display the document on the web. We do that with this command:
 
@@ -39,7 +39,7 @@ The next step is to generate the EditionCrafter artifacts needed to display the 
 editioncrafter process <tei_file> <output_path> <base_url>
 ```
 
-This creates the necessary artifacts at the <code>\<output_path\></code>. These artifacts include a new IIIF Manifest that is now annotated with web annotations that link each page of the text with the corresponding HTML and XML renderings of that page. You will want to point to this manifest from the EditionCrafter viewer component. Once you have published these files online at the <code>\<base_url\></code>, you are ready for the next step.
+This creates the necessary artifacts at the `<output_path>`. These artifacts include a new IIIF Manifest that is now annotated with web annotations that link each page of the text with the corresponding HTML and XML renderings of that page. You will want to point to this manifest from the EditionCrafter viewer component. Once you have published these files online at the `<base_url>`, you are ready for the next step.
 
 # Publishing a Document
 
@@ -71,7 +71,7 @@ import EditionCrafter from '@cu-mkp/editioncrafter'
 
 ## EditionCrafter in an HTML Website
 
-To include EditionCrafter in your HTML website, you need to create a <code>div</code> somewhere on your page, assign it an ID and then pass that ID to EditionCrafter. The reference section details the options for EditionCrafter, which are otherwise the same as the React component. Here is an example of use:
+To include EditionCrafter in your HTML website, you need to create a `div` somewhere on your page, assign it an ID and then pass that ID to EditionCrafter. The reference section details the options for EditionCrafter, which are otherwise the same as the React component. Here is an example of use:
 
 ```html
  <div id="ec"></div>
@@ -96,9 +96,9 @@ To include EditionCrafter in your HTML website, you need to create a <code>div</
 
 # Editing a Document
 
-Once you have generated a TEI Document with the EditionCrafter CLI, you can start to edit it and add material. Whenever you want to see your changes on your website, simply run the <code>editioncrafter process</code> command again and upload the new artifacts. If you are using a GitHub-based workflow like the one described in the example Hugo site, at this point you would simply commit your changes to GitHub and push them.
+Once you have generated a TEI Document with the EditionCrafter CLI, you can start to edit it and add material. Whenever you want to see your changes on your website, simply run the `editioncrafter process` command again and upload the new artifacts. If you are using a GitHub-based workflow like the one described in the example Hugo site, at this point you would simply commit your changes to GitHub and push them.
 
-While editing a document, there are two things to consider related to display in EditionCrafter. First, the text can be provided in one or more layers. Each layer is found in a top level <code>\<text\></code> element. The <code>\<text\></code> element must have an <code>xml:id</code>. This <code>xml:id</code> is used to identify this layer. For example, to create two layers, one for the transcription and another for a translation, the code would look like this:
+While editing a document, there are two things to consider related to display in EditionCrafter. First, the text can be provided in one or more layers. Each layer is found in a top level `<text>` element. The `<text>` element must have an `xml:id`. This `xml:id` is used to identify this layer. For example, to create two layers, one for the transcription and another for a translation, the code would look like this:
 
 ```xml
 <text xml:id="transcription">
@@ -114,7 +114,7 @@ While editing a document, there are two things to consider related to display in
 </text>
 ```
 
-The other thing to consider is how the text is paired with the page images. In each layer, add a <code><pb/></code> element whenever a new page begins. This element should have a <code>@facs</code> attribute that references the <code>@xml:id</code> of the corresponding <code>\<surface\></code> element. The surfaces are found in the <code>\<facsimile\></code> element that was automatically generated by the EditionCrafter CLI. So for example, if you have a <code>\<facsimile\></code> that looks like this:
+The other thing to consider is how the text is paired with the page images. In each layer, add a `<pb/>` element whenever a new page begins. This element should have a `@facs` attribute that references the `@xml:id` of the corresponding `<surface>` element. The surfaces are found in the `<facsimile>` element that was automatically generated by the EditionCrafter CLI. So for example, if you have a `<facsimile>` that looks like this:
 
 ```xml
 <facsimile
@@ -175,7 +175,7 @@ Usage:
 ```
 editioncrafter iiif <iiif_url> <output_path>
 ```
-This will create an XML file at the location of the provided <code>\<output_path\></code> based on the information in the IIIF manifest supplied. Note that in this case the <code>\<output_path\></code> should be a single XML File, e.g. <code>/MyFiles/TEI/index.xml</code>.
+This will create an XML file at the location of the provided `<output_path>` based on the information in the IIIF manifest supplied. Note that in this case the `<output_path>` should be a single XML File, e.g. `/MyFiles/TEI/index.xml`.
 
 ### process
 
@@ -183,17 +183,17 @@ Usage:
 ```
 editioncrafter process <tei_file> <output_path> <base_url>
 ```
-This will create all of the artifacts that EditionCrafter needs in order to display your document on the web, and place them in the specified <code>\<output_path\></code> folder. The <code>\<base_url\></code> parameter should be the URL at which you intend to host these artifacts.
+This will create all of the artifacts that EditionCrafter needs in order to display your document on the web, and place them in the specified `<output_path>` folder. The `<base_url>` parameter should be the URL at which you intend to host these artifacts.
 
 ## EditionCrafter Viewer Reference 
 
-The following props are available to the <code>\<EditionCrafter\></code> viewer component:
+The following props are available to the `<EditionCrafter>` viewer component:
 
 ### documentInfo
 
 Optional; used **only** in the case that you wish to load multiple documents in the same viewer for easy comparison. 
 
-An *object* whose keys are unique document IDs for each document you wish to include, and whose values are *objects* specifying the <code>documentName</code>, <code>transcriptionTypes</code>, and <code>iiifManifest</code> for each document as described below. For example:
+An *object* whose keys are unique document IDs for each document you wish to include, and whose values are *objects* specifying the `documentName`, `transcriptionTypes`, and `iiifManifest` for each document as described below. For example:
 ```js
 documentInfo={{
     FHL_007548733_TAOS_BAPTISMS_BATCH_2: {
@@ -216,27 +216,27 @@ documentInfo={{
 
 ### documentName
 
-Required. (Note: This is required even in the case that you have also included a <code>documentInfo</code> prop.)
+Required. (Note: This is required even in the case that you have also included a `documentInfo` prop.)
 
 A *string* giving the name of the document(s). 
 
 ### iiifManifest
 
-Required if no <code>documentInfo</code> prop specified.
+Required if no `documentInfo` prop specified.
 
 The URL of the IIIF manifest for your document.
 
 ### threePanel
 
-Optional. (Defaults to <code>false</code>.)
+Optional. (Defaults to `false`.)
 
-A *boolean* flag, which when set to <code>true</code> adds a third pane to the viewer. The third pane starts collapsed on the righthand side of the viewer and can be expanded by clicking and dragging the divider. This pane operates independently from the other throw; for example Book Mode is disabled in the third pane.
+A *boolean* flag, which when set to `true` adds a third pane to the viewer. The third pane starts collapsed on the righthand side of the viewer and can be expanded by clicking and dragging the divider. This pane operates independently from the other throw; for example Book Mode is disabled in the third pane.
 
 ### transcriptionTypes
 
-Required if no <code>documentInfo</code> prop specified.
+Required if no `documentInfo` prop specified.
 
-An *object* providing a dictionary of the different transciption types provided in your TEI document. The keys of this object should correspond to the <code>xml:id</code> values of the different <code>\<text\></code> layers of your document. For example, suppose you have the following text layers in your document:
+An *object* providing a dictionary of the different transciption types provided in your TEI document. The keys of this object should correspond to the `xml:id` values of the different `<text>` layers of your document. For example, suppose you have the following text layers in your document:
 
 ```xml
 <text xml:id="transcription">
@@ -251,7 +251,7 @@ An *object* providing a dictionary of the different transciption types provided 
 
 </text>
 ```
-In this case the <code>transcriptionTypes</code> object might have the form:
+In this case the `transcriptionTypes` object might have the form:
 
 ```js
 transcriptionTypes = {
@@ -259,4 +259,4 @@ transcriptionTypes = {
     translation: 'Translation'
 }
 ```
-The value for each transcription type should be a string that will be displayed in the selection menu within the viewer. These need not correspond precisely to the keys. For instance in the example above, you could add more information to the display strings, e.g. <code>'Transcription (FR)'</code> and <code>Translation (EN)</code>.
+The value for each transcription type should be a string that will be displayed in the selection menu within the viewer. These need not correspond precisely to the keys. For instance in the example above, you could add more information to the display strings, e.g. `'Transcription (FR)'` and `Translation (EN)`.
