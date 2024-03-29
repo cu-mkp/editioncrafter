@@ -1,0 +1,883 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+	<teiHeader xml:id="header">
+		<fileDesc>
+			<titleStmt>
+				<title>FHL_007548733_TAOS_BAPTISMS_BATCH_2</title>
+			</titleStmt>
+			<publicationStmt>
+				<p/>
+			</publicationStmt>
+			<sourceDesc>
+				<p/>
+			</sourceDesc>
+		</fileDesc>
+	</teiHeader>
+	<facsimile sameAs="https://fromthepage.com/iiif/32026524/manifest" xml:id="images">
+		<surface xml:id="FHL_007548733_IMG_073" ulx="0" uly="0" lrx="4023" lry="3361" sameAs="https://fromthepage.com/iiif/32026524/canvas/32492372">
+			<label>073</label>
+			<graphic mimeType="application/json" url="https://fromthepage.com/image-service/32492372"/>
+			<zone xml:id="FHL_007548733_IMG_073_L1" ulx="343.05523681640625" uly="544.8966674804688" lrx="2069.364990234375" lry="1229.6341552734375"/>
+		</surface>
+		<surface xml:id="FHL_007548733_IMG_076" ulx="0" uly="0" lrx="4102" lry="3137" sameAs="https://fromthepage.com/iiif/32026524/canvas/32492373">
+			<label>076</label>
+			<graphic mimeType="application/json" url="https://fromthepage.com/image-service/32492373"/>
+			<zone xml:id="FHL_007548733_IMG_076_L3" ulx="378.0083312988281" uly="2110.28076171875" lrx="2104.65283203125" lry="2895.5625"/>
+		</surface>
+		<surface xml:id="FHL_007548733_IMG_103" ulx="0" uly="0" lrx="4085" lry="3306" sameAs="https://fromthepage.com/iiif/32026524/canvas/32492347">
+			<label>103</label>
+			<graphic mimeType="application/json" url="https://fromthepage.com/image-service/32492347"/>
+			<zone xml:id="FHL_007548733_IMG_103_R3" ulx="2075.347412109375" uly="2118.797607421875" lrx="3758.541015625" lry="3012.677734375"/>
+		</surface>
+		<surface xml:id="FHL_007548733_IMG_120" ulx="0" uly="0" lrx="4102" lry="3377" sameAs="https://fromthepage.com/iiif/32026524/canvas/32492348">
+			<label>120</label>
+			<graphic mimeType="application/json" url="https://fromthepage.com/image-service/32492348"/>
+			<zone xml:id="FHL_007548733_IMG_120_L1" ulx="386.12078857421875" uly="596.6634521484375" lrx="2060.73828125" lry="1202.2896728515625"/>
+		</surface>
+		<surface xml:id="FHL_007548733_IMG_185" ulx="0" uly="0" lrx="3946" lry="3249" sameAs="https://fromthepage.com/iiif/32026524/canvas/32492349">
+			<label>185</label>
+			<graphic mimeType="application/json" url="https://fromthepage.com/image-service/32492349"/>
+			<zone xml:id="FHL_007548733_IMG_185_R2" ulx="1977.6920166015625" uly="1049.725830078125" lrx="3694.97607421875" lry="1997.5166015625"/>
+		</surface>
+		<surface xml:id="FHL_007548733_IMG_194" ulx="0" uly="0" lrx="4072" lry="3308" sameAs="https://fromthepage.com/iiif/32026524/canvas/32492350">
+			<label>194</label>
+			<graphic mimeType="application/json" url="https://fromthepage.com/image-service/32492350"/>
+			<zone xml:id="FHL_007548733_IMG_194_L1" ulx="371.69775390625" uly="796.7952880859375" lrx="2027.6123046875" lry="2699.644287109375"/>
+		</surface>
+		<surface xml:id="FHL_007548733_IMG_220" ulx="0" uly="0" lrx="4130" lry="3313" sameAs="https://fromthepage.com/iiif/32026524/canvas/32492351">
+			<label>220</label>
+			<graphic mimeType="application/json" url="https://fromthepage.com/image-service/32492351"/>
+			<zone xml:id="FHL_007548733_IMG_220_L1" ulx="410.42108154296875" uly="899.52978515625" lrx="2054.181640625" lry="1544.0748291015625"/>
+			<zone xml:id="FHL_007548733_IMG_220_L3" ulx="416.726806640625" uly="2259.718017578125" lrx="2057.0771484375" lry="2890.6220703125"/>
+			<zone xml:id="FHL_007548733_IMG_220_L4" ulx="413.3165283203125" uly="2866.75" lrx="2040.025634765625" lry="3033.854248046875"/>
+			<zone xml:id="FHL_007548733_IMG_220_L4CONT" ulx="2094.59033203125" uly="264.6974182128906" lrx="3728.1201171875" lry="963.8071899414062"/>
+			<zone xml:id="FHL_007548733_IMG_220_R1" ulx="2057.0771484375" uly="950.166015625" lrx="3751.991943359375" lry="1963.0225830078125"/>
+		</surface>
+		<surface xml:id="FHL_007548733_IMG_232" ulx="0" uly="0" lrx="4033" lry="3256" sameAs="https://fromthepage.com/iiif/32026524/canvas/32492354">
+			<label>232</label>
+			<graphic mimeType="application/json" url="https://fromthepage.com/image-service/32492354"/>
+			<zone xml:id="FHL_007548733_IMG_232_R2" ulx="2000.01416015625" uly="972.3744506835938" lrx="3714.398681640625" lry="1663.722900390625"/>
+		</surface>
+		<surface xml:id="FHL_007548733_IMG_243" ulx="0" uly="0" lrx="4115" lry="3326" sameAs="https://fromthepage.com/iiif/32026524/canvas/32492355">
+			<label>243</label>
+			<graphic mimeType="application/json" url="https://fromthepage.com/image-service/32492355"/>
+			<zone xml:id="FHL_007548733_IMG_243_L2" ulx="386.96124267578125" uly="2026.049072265625" lrx="2058.73095703125" lry="3048.818603515625"/>
+		</surface>
+		<surface xml:id="FHL_007548733_IMG_281" ulx="0" uly="0" lrx="4109" lry="3393" sameAs="https://fromthepage.com/iiif/32026524/canvas/32492356">
+			<label>281</label>
+			<graphic mimeType="application/json" url="https://fromthepage.com/image-service/32492356"/>
+			<zone xml:id="FHL_007548733_IMG_281_L4" ulx="441.4915466308594" uly="2633.828857421875" lrx="2076.894287109375" lry="3085.09130859375"/>
+		</surface>
+		<surface xml:id="FHL_007548733_IMG_284" ulx="0" uly="0" lrx="4018" lry="3268" sameAs="https://fromthepage.com/iiif/32026524/canvas/32492357">
+			<label>284</label>
+			<graphic mimeType="application/json" url="https://fromthepage.com/image-service/32492357"/>
+			<zone xml:id="FHL_007548733_IMG_284_R1" ulx="2065.263916015625" uly="600.149169921875" lrx="3710.9853515625" lry="1312.8262939453125"/>
+		</surface>
+		<surface xml:id="FHL_007548733_IMG_308" ulx="0" uly="0" lrx="4048" lry="3317" sameAs="https://fromthepage.com/iiif/32026524/canvas/32492358">
+			<label>308</label>
+			<graphic mimeType="application/json" url="https://fromthepage.com/image-service/32492358"/>
+			<zone xml:id="FHL_007548733_IMG_308_R3" ulx="2024" uly="2527.011474609375" lrx="3703.915283203125" lry="3045.739013671875"/>
+		</surface>
+		<surface xml:id="FHL_007548733_IMG_309" ulx="0" uly="0" lrx="4029" lry="3288" sameAs="https://fromthepage.com/iiif/32026524/canvas/32492359">
+			<label>309</label>
+			<graphic mimeType="application/json" url="https://fromthepage.com/image-service/32492359"/>
+			<zone xml:id="FHL_007548733_IMG_309_CONT" ulx="415.31488037109375" uly="283.0415954589844" lrx="2085.26025390625" lry="867.9942016601562"/>
+		</surface>
+		<surface xml:id="FHL_007548733_IMG_333" ulx="0" uly="0" lrx="4091" lry="3334" sameAs="https://fromthepage.com/iiif/32026524/canvas/32492360">
+			<label>333</label>
+			<graphic mimeType="application/json" url="https://fromthepage.com/image-service/32492360"/>
+			<zone xml:id="FHL_007548733_IMG_333_L3" ulx="415.9102478027344" uly="2292.08154296875" lrx="2084.415771484375" lry="3050.935302734375"/>
+			<zone xml:id="FHL_007548733_IMG_333_R1" ulx="2094.14453125" uly="331.70928955078125" lrx="3757.78564453125" lry="1494.3121337890625"/>
+		</surface>
+		<surface xml:id="FHL_007548733_IMG_353" ulx="0" uly="0" lrx="3608" lry="2876" sameAs="https://fromthepage.com/iiif/32026524/canvas/32492361">
+			<label>353</label>
+			<graphic mimeType="application/json" url="https://fromthepage.com/image-service/32492361"/>
+			<zone xml:id="FHL_007548733_IMG_353_L1" ulx="479.4720153808594" uly="358.9842224121094" lrx="1874.1463623046875" lry="1951.71875"/>
+			<zone xml:id="FHL_007548733_IMG_353_L2" ulx="483.5982666015625" uly="1931.0875244140625" lrx="1894.777587890625" lry="2558.2783203125"/>
+			<zone xml:id="FHL_007548733_IMG_353_L2CONT" ulx="1927.78759765625" uly="284.71160888671875" lrx="3305.956787109375" lry="1010.9325561523438"/>
+		</surface>
+		<surface xml:id="FHL_007548733_IMG_354" ulx="0" uly="0" lrx="3402" lry="2758" sameAs="https://fromthepage.com/iiif/32026524/canvas/32492362">
+			<label>354</label>
+			<graphic mimeType="application/json" url="https://fromthepage.com/image-service/32492362"/>
+			<zone xml:id="FHL_007548733_IMG_354_L2" ulx="422.72174072265625" uly="1866.0367431640625" lrx="1834.490966796875" lry="2452.58837890625"/>
+			<zone xml:id="FHL_007548733_IMG_354_L2CONT" ulx="1874.94287109375" uly="134.69796752929688" lrx="3262.44091796875" lry="672.7074584960938"/>
+			<zone xml:id="FHL_007548733_IMG_354_R1" ulx="1878.988037109375" uly="636.30078125" lrx="3258.395751953125" lry="1659.732421875"/>
+			<zone xml:id="FHL_007548733_IMG_354_R2" ulx="1887.078369140625" uly="1546.4671630859375" lrx="3250.305419921875" lry="2448.543212890625"/>
+		</surface>
+		<surface xml:id="FHL_007548733_IMG_355" ulx="0" uly="0" lrx="3663" lry="2844" sameAs="https://fromthepage.com/iiif/32026524/canvas/32952554">
+			<label>355</label>
+			<graphic mimeType="application/json" url="https://fromthepage.com/image-service/32952554"/>
+			<zone xml:id="FHL_007548733_IMG_355_CONT" ulx="546.1915283203125" uly="383.5523681640625" lrx="1949.8299560546875" lry="962.9612426757812"/>
+		</surface>
+		<surface xml:id="FHL_007548733_IMG_376" ulx="0" uly="0" lrx="4169" lry="2999" sameAs="https://fromthepage.com/iiif/32026524/canvas/32492364">
+			<label>376</label>
+			<graphic mimeType="application/json" url="https://fromthepage.com/image-service/32492364"/>
+			<zone xml:id="FHL_007548733_IMG_376_R1" ulx="1988.8837890625" uly="952.0975952148438" lrx="3341.85205078125" lry="2692.31103515625"/>
+		</surface>
+		<surface xml:id="FHL_007548733_IMG_377" ulx="0" uly="0" lrx="4192" lry="2959" sameAs="https://fromthepage.com/iiif/32026524/canvas/32547417">
+			<label>377</label>
+			<graphic mimeType="application/json" url="https://fromthepage.com/image-service/32547417"/>
+			<zone xml:id="FHL_007548733_IMG_377_CONT" ulx="652.5853881835938" uly="365.0990295410156" lrx="2028.07470703125" lry="789.6327514648438"/>
+		</surface>
+		<surface xml:id="FHL_007548733_IMG_407" ulx="0" uly="0" lrx="4131" lry="2868" sameAs="https://fromthepage.com/iiif/32026524/canvas/32492365">
+			<label>407</label>
+			<graphic mimeType="application/json" url="https://fromthepage.com/image-service/32492365"/>
+			<zone xml:id="FHL_007548733_IMG_407_L2" ulx="676.4628295898438" uly="1585.560791015625" lrx="2006.907470703125" lry="2623.399169921875"/>
+			<zone xml:id="FHL_007548733_IMG_407_L2CONT" ulx="2016.0513916015625" uly="319.12384033203125" lrx="3360.2119140625" lry="762.6054077148438"/>
+		</surface>
+		<surface xml:id="FHL_007548733_IMG_470" ulx="0" uly="0" lrx="3727" lry="2853" sameAs="https://fromthepage.com/iiif/32026524/canvas/32492366">
+			<label>470</label>
+			<graphic mimeType="application/json" url="https://fromthepage.com/image-service/32492366"/>
+			<zone xml:id="FHL_007548733_IMG_470_R2" ulx="1938.8380126953125" uly="1371.1048583984375" lrx="3277.190185546875" lry="2558.781494140625"/>
+		</surface>
+		<surface xml:id="FHL_007548733_IMG_471" ulx="0" uly="0" lrx="4268" lry="2845" sameAs="https://fromthepage.com/iiif/32026524/canvas/32575561">
+			<label>471</label>
+			<graphic mimeType="application/json" url="https://fromthepage.com/image-service/32575561"/>
+			<zone xml:id="FHL_007548733_IMG_471_R2CONT" ulx="501.2883605957031" uly="216.33428955078125" lrx="1950.3199462890625" lry="604.103271484375"/>
+		</surface>
+		<surface xml:id="FHL_007548733_IMG_500" ulx="0" uly="0" lrx="3597" lry="2598" sameAs="https://fromthepage.com/iiif/32026524/canvas/32492367">
+			<label>500</label>
+			<graphic mimeType="application/json" url="https://fromthepage.com/image-service/32492367"/>
+			<zone xml:id="FHL_007548733_IMG_500_L1" ulx="609.4584350585938" uly="1215.133544921875" lrx="1943.868896484375" lry="2314.717529296875"/>
+		</surface>
+		<surface xml:id="FHL_007548733_IMG_515" ulx="0" uly="0" lrx="4239" lry="2857" sameAs="https://fromthepage.com/iiif/32026524/canvas/32492368">
+			<label>515</label>
+			<graphic mimeType="application/json" url="https://fromthepage.com/image-service/32492368"/>
+			<zone xml:id="FHL_007548733_IMG_515_R2" ulx="1926.846923828125" uly="1455.143310546875" lrx="3283.6142578125" lry="2578.26806640625"/>
+		</surface>
+		<surface xml:id="FHL_007548733_IMG_516" ulx="0" uly="0" lrx="4259" lry="2850" sameAs="https://fromthepage.com/iiif/32026524/canvas/32492369">
+			<label>516</label>
+			<graphic mimeType="application/json" url="https://fromthepage.com/image-service/32492369"/>
+			<zone xml:id="FHL_007548733_IMG_516_CONT" ulx="665.652587890625" uly="335.29412841796875" lrx="1961.8529052734375" lry="1153.0845947265625"/>
+		</surface>
+		<surface xml:id="FHL_007548733_IMG_540" ulx="0" uly="0" lrx="4085" lry="2897" sameAs="https://fromthepage.com/iiif/32026524/canvas/32492370">
+			<label>540</label>
+			<graphic mimeType="application/json" url="https://fromthepage.com/image-service/32492370"/>
+			<zone xml:id="FHL_007548733_IMG_540_L1" ulx="458.4557189941406" uly="1233.7535400390625" lrx="1779.262451171875" lry="2323.64990234375"/>
+		</surface>
+		<surface xml:id="FHL_007548733_IMG_541" ulx="0" uly="0" lrx="4254" lry="2928" sameAs="https://fromthepage.com/iiif/32026524/canvas/32492371">
+			<label>541</label>
+			<graphic mimeType="application/json" url="https://fromthepage.com/image-service/32492371"/>
+			<zone xml:id="FHL_007548733_IMG_541_L1" ulx="631.5642700195312" uly="322.0913391113281" lrx="1943.576904296875" lry="2362.575927734375"/>
+		</surface>
+	</facsimile>
+	<sourceDoc xml:id="transcription">
+		<surface facs="#FHL_007548733_IMG_073">
+			<line>{left margin} Jose Rafael</line>
+			<line>En este curato de Taos a los sinco dias del mes de agosto</line>
+			<line>del año de 1839 yo el cura don Antonio Jose Martines bautise</line>
+			<line>solemnemente puse santos oleos y sagrado crisma a un parvulo</line>
+			<line>de seis dias de nacido y le puse por nombre Jose Rafael hijo</line>
+			<line>natural de Guadalupe Vigil yndia famula del difunto Jose</line>
+			<line>Vigil vecino de la plaza de Santisima Trinidad de Arroyo Seco fue-</line>
+			<line>ron padrinos Francisco Tomas Bentos y Maria Soledad Vigil</line>
+			<line>vecinos del mismo lugar a quienes adverti su obligacion y paren-</line>
+			<line>tesco espiritual y para que conste firme.</line>
+			<line>Antonio Jose Martinez {rubric}</line>
+		</surface>
+		<surface facs="#FHL_007548733_IMG_076">
+			<line>{left margin} Juan Manuel</line>
+			<line>En este curato de Taos a los siete dias del mes de septiembre de mil</line>
+			<line>ochocientos trienta y nueve yo el cura don Antonio Jose Martines bautize solemnemente</line>
+			<line>puse santos oleos y crisma a un indito resca[ta]do de la tribu yuta como de edad</line>
+			<line>siete a ocho años el cual aunque hace un año que ha sido rescatado aun</line>
+			<line>no esta suficientement instruido pero hallandose enfermo y en lo poco que a</line>
+			<line>aprendido haberse explicado con eficacion que desea enco(^m)[r]porarse en la religion</line>
+			<line>de Jesucristo lo verefique es famulo de Don Carlos Beubien vecino de San</line>
+			<line>Fernandes y fueron sus padrinos Eugenio Letendosen? y Maria Rufina Vigil</line>
+			<line>tambien de San Fernandes a quienes adverti su obligasion y parentesco espiritual</line>
+			<line>y para que conste lo firme. [^ el nombre del bautisada fue Juan Manuel]</line>
+			<line>Antonio Jose Martinez {rubric}</line>
+		</surface>
+		<surface facs="#FHL_007548733_IMG_103">
+			<line>{left margin} Maria Soledad</line>
+			<line>En este curato de Taos a los viente y tres dias del mes de</line>
+			<line>marzo del año de mil ochocientos cuarenta yo el cura don</line>
+			<line>Antonio Jose Martines bautise solemnemente puse santos oleos</line>
+			<line>y sagrado crisma en urgente necidad de enfermedad a una adulta co-</line>
+			<line>mo a edad de veinte años lo que hise segun el rito de nuestra Santa</line>
+			<line>Madre Iglesia acerca del bautismo de adulto previos catequismos que</line>
+			<line>le habia comensado a hacer y que se hallaba medianamente instruida en</line>
+			<line>los principios medios y fin de nuestra santa religion todo suficiente para</line>
+			<line>que ella en el caso que se hallaba fuere atendida a la solisitud de cris-</line>
+			<line>tianane le puse por nombre Maria Soledad es desendiente de la</line>
+			<line>tribu nabajo famula de la señora Maria Teodora Romero quien</line>
+			<line>la rescato y ella misma fue madrina y su hijo George Antonio</line>
+			<line>es de la Plaza de San Fernando a quienes adverti la obligacion y espi-</line>
+			<line>ritual y parentesco y firme y por constancia.</line>
+			<line>Antonio Jose Martines {rubric}</line>
+		</surface>
+		<surface facs="#FHL_007548733_IMG_120">
+			<line>{left margin} Maria Gabriela</line>
+			<line>En este curato de Taos a los trese dias del mes de agosto de mil ocho-</line>
+			<line>cientos cuarenta yo el cura don Antonio Jose Martinez bautize solemnemente a</line>
+			<line>una parvula de dos años [^a quien puse por nombre Maria Gabriela] rescatada en la nacion palluche y famula de</line>
+			<line>Jose Gabriel Gallegos fueron padrinos Jose Nasario Gallegos y Maria</line>
+			<line>Antonia Gallegos vecinos del Arroyo Seco a quienes adberti su obli-</line>
+			<line>gacion y parentesco espiritual y para que conste firme.</line>
+			<line>Antonio Jose Martinez {rubric}</line>
+		</surface>
+		<surface facs="#FHL_007548733_IMG_185">
+			<line>{left margin}</line>
+			<line>Jose Miguel</line>
+			<line>En este curato de Taos a los tres dias del mes</line>
+			<line>de noviembre de mil ochocientos cuarenta y uno</line>
+			<line>yo el parroco don Antonio Jose Martines bautise solemnente</line>
+			<line>y puse santos oleos y sagrado crisma a una parvulo</line>
+			<line>de cinco años de edad y lo puse por nombre Jose</line>
+			<line>Miguel indio rescatado</line>
+			<line>de la tribu yuta es famulo</line>
+			<line>de Juan Antonio Abeyta, y fue padrino Pablo</line>
+			<line>Garduño vecinos son de la Plaza de Nuestra</line>
+			<line>Señora de Guadalupe y para que conste firme.</line>
+			<line>Antonio Jose Martinez {rubric}</line>
+		</surface>
+		<surface facs="#FHL_007548733_IMG_194">
+			<line>{left margin} Jose de la Cruz</line>
+			<line>En este curato de Taos a los dos dias del mes de febrero el año de</line>
+			<line>mil ochocientos cuarenta y dos yo el parroco don Antonio Jose Martinez</line>
+			<line>habiendo tenido solicitud desde el anterior año para cris-</line>
+			<line>tianarse de un adulto edad de 30 años decendiente de la trivu Gi-</line>
+			<line>carilla y desde entonces lo previne que devia instruirse en</line>
+			<line>conocimiento de los misterios principales de nuestra santa</line>
+			<line>fe y religion y en los mandamientos o preseptos que toman</line>
+			<line>los cristianos a su obligacion y el motivo por que se determi-</line>
+			<line>naba a cristianarse advirtiendole desde entonces que el fin</line>
+			<line>principal era servir a Dios en esta vida y despues verle y</line>
+			<line>gozarle en la bienaventuranza que tiene a sus escojidos en</line>
+			<line>la otra mas a esta fecha habidos los correspondientes cate-</line>
+			<line>quimos lo halle instruido en aquello que toca al princi-</line>
+			<line>pio medio y fin de nuestra santa religion y que se determi-</line>
+			<line>naba a cristianarse para que Dios le perdonara todos los pe-</line>
+			<line>cados incurridos hasta la presente estar habil para reci-</line>
+			<line>bir los otros sacramentos y sirviendole con fidelidad de</line>
+			<line>aqui en lo de adelante conseguir la gloria eterna al ultimo</line>
+			<line>de sus dias que nunca ira cresido en cosas del gentilismo</line>
+			<line>de sus errores e idolatrias sino solo en el Dios verdadero</line>
+			<line>que ahora por medio del bautismo trata de reconocer</line>
+			<line>y adorar con mas eficacia en tal virtud y con facultad</line>
+			<line>que para esto tengo comedida especialmente mi superior eccle-</line>
+			<line>ciastico lo ecsorcise puse santos oleos bautice y ungi con</line>
+			<line>el sagrado crisma todo solemnemente segun rito de Nuestra</line>
+			<line>Madre la Santa Yglecia para los bautismos de adultos</line>
+			<line>fureron su padrinos Francisco Esteban Vigil y Maria Rosalia</line>
+			<line>Gallegos vecinos de la plasa de Nuestra Señora de los Dolores a quienes</line>
+			<line>adverti su obligacion y parentesco espiritual y para que</line>
+			<line>conste firme.</line>
+			<line>Antonio Jose Martinez {rubric}</line>
+		</surface>
+		<surface facs="#FHL_007548733_IMG_220">
+			<line>{left margin} Maria Catarina</line>
+			<line>En este curato de Taos a los viente y cuatro dias del mes de mayo de</line>
+			<line>mil ochocientos cuarenta y dos yo el parroco don Antonio Jose Martinez</line>
+			<line>bautise solemnemente puse santos oleos y sagrado a una parbula de seis</line>
+			<line>años de edad descendiente de la tribu lluta de donde la rescato</line>
+			<line>el ciudadano Jose Mondragon vecino de la plaza de San Francisco del Rancho</line>
+			<line>fueron padrino Felipe Nerio Maes y Maria del Refugio Pacheco vecinos</line>
+			<line>del mismo lugar a quienes adverti su obligacion y paren-</line>
+			<line>tesco espiritual y para que conste lo firme.</line>
+			<line>Antonio Jose Martinez {rubric}</line>
+			<line>{left margin} Maria de la Luz</line>
+			<line>En este curato de Taos a los veinte y seis dias del mes de junio de mil ochocientos</line>
+			<line>cuarenta y dos yo el presbitero don Jose de la Cruz Vigil como coadjutor bautize so-</line>
+			<line>lemnemente puso santos oleos y sagrado crisma a una parbula de cuatro años</line>
+			<line>edad y le puse por nombre Maria de la Luz es descendiente de la tribu</line>
+			<line>lluta famula de don Juan Bolem quien la rescato vecino de San Francisco</line>
+			<line>del Rancho fueron padrinos Juan Bautista Bolem y Maria Luisa Ar-</line>
+			<line>chuleta vecinos del mismo lugar a quienes adverti su obligaciones y paren-</line>
+			<line>tesco espirituales y para que conste lo firme.</line>
+			<line>Antonio Jose Martinez {rubric}</line>
+			<line>{left margin} Maria Serafina</line>
+			<line>En esta curato de Taos a los veinte y seis dias del mes de junio</line>
+			<line>del año de mil ochosientos cuarenta y dos yo el presbitero don Antonio Jose de la Cruz</line>
+			<line>Vigil como coadjutor bautize solemnemente puse santos oleos y</line>
+			<line>sagrado crisma a una parabula de cinco años de edad y le puse</line>
+			<line>por nombre Maria Serafina es descendiente de la tribu lluta famu-</line>
+			<line>la de don Juan Bolem? quien la rescato vecino de San Fransisco del</line>
+			<line>Rancho fueron padrinos Buenaventura Lovato y Maria Dolores Cordova vecinos del</line>
+			<line>mismo lugar a quienes adverti sus obligaciones y parentesco es-</line>
+			<line>piritual y para que conste lo firme</line>
+			<line>Antonio Jose Martinez {rubric}</line>
+			<line>Jose Vigil {rubic}</line>
+			<line>{left margin} Jose Santiago</line>
+			<line>En este cuarato de Taos a los viente y seis del mes de junio de</line>
+			<line>mil ochocientos curanta y dos yo el parroco don Antonio Jose Martines previos</line>
+			<line>catequismos segun lo pre[ve]nida para el bautismo de adultos y obtenida la com-</line>
+			<line>petente instruccion y conforme las especiales ritualidades exorcise bautise</line>
+			<line>solemnemente poniendo santos oleos y sagrado crisma a un adulto como de</line>
+			<line>edad de trece años descendiente del tribu yuta famulo de don Juan Ro-</line>
+			<line>les quien lo rescato corren algunos años en cuya casa el vario de San Francis-</line>
+			<line>co del Rancho ha sido educado y lo halle suficientemente instruido en el</line>
+			<line>principio medio y fin de la religion cristiana muy afecto deseoso y pre-</line>
+			<line>tendiente de ser recibido en ella en la fe y esperansa de conseguir la vida eterna</line>
+			<line>le puse por nombre Jose Santiago fueron padrinos Manuel Antonio Sando-</line>
+			<line>bal y Margarita Martines todos vecinos de San Francisco del Ran-</line>
+			<line>cho aquienes adverti su obligacion y parentesco espiritual y para que</line>
+			<line>conste firme.</line>
+			<line>Antonio Jose Martines {rubric}</line>
+		</surface>
+		<surface facs="#FHL_007548733_IMG_232">
+			<line>{left margin} Maria Florentina</line>
+			<line>En este curato de Taos a los dies y seis dias del mes de octobre de mil ocho-</line>
+			<line>cientos cuarenta y dos yo el parroco don Antonio Jose Martines bautise solem-</line>
+			<line>nemente puse santos oleos y sagrado crisma a una parbula de un dia</line>
+			<line>de nacida y le puse por nombre Maria Florentina hija natural de una india</line>
+			<line>famula de la señora Ygnacia Xaramillo vecina desta plaza de Nuestra Se-</line>
+			<line>ñora de Guadalupe fueron padrinos Francisco Xaramillo y Maria Rumal-</line>
+			<line>da de Luna vecinos del mismo lugar a quienes adverti su obligacion</line>
+			<line>y parentesco espiritual y para que conste firme.</line>
+			<line>Antonio Jose Martinez {rubric}</line>
+		</surface>
+		<surface facs="#FHL_007548733_IMG_243">
+			<line>{left margin} Catarina</line>
+			<line>En este curato de Taos a los once dias del mes de enero de mil</line>
+			<line>ochocientos cuarenta y dos yo el parroco don Antonio Jose Martines por extre-</line>
+			<line>ma nesecidad y estar certificado en virtud de catequismos y pulsada</line>
+			<line>la intencion y deseos de ser cristiana una adulta de dies y seis años</line>
+			<line>de edad la exorsice bautice solemnemente puse santos oleos y</line>
+			<line>sagrado crisma a la misma y le puse por nombre Catarina es</line>
+			<line>yndia sirviente de don Juan Manuel Lucero vecino de la plas[^a]</line>
+			<line>de San Francisco de Pauda el mismo fue padrino y su esposa Juana</line>
+			<line>Maria Martinez les adverti la obligacion que como amos de</line>
+			<line>dicha famula y tambien como padrinos tenian sobre darle</line>
+			<line>y cuidar de su educacion sobre ensenarle los debe(a)[re]s de cristian[os]</line>
+			<line>y el parentesco espiritual que contrajeron y para que conste</line>
+			<line>firme.</line>
+			<line>Antonio Jose Martinez {rubric}</line>
+		</surface>
+		<surface facs="#FHL_007548733_IMG_281">
+			<line>{lefft margin} Jose Manuel</line>
+			<line>En este curato de Taos a los doce dias del mes de noviembre</line>
+			<line>de mil ochocientos cuarenta y tres yo el parroco don Antonio Jose</line>
+			<line>Martines bautise solemnemente puse santos oleos y sagrado crisma</line>
+			<line>segun el rito de nuestra Santa Madre Yglesia para adultos</line>
+			<line>a un indito de diez años de edad el cual fue rescatado de</line>
+			<line>la tribu del norte y le puse por nombre Jose Manuel</line>
+			<line>es famulo de don Gabriel Abeyta el mismo fue padrino y su</line>
+			<line>esposa Maria de la Encarnacion de la Encarnacion Romero vecinos de</line>
+			<line>la Plaza de San Francsicso del Rancho a quienes adverti su obligacion</line>
+			<line>y parentesco espiritual y para que conste firme.</line>
+			<line>Antonio Jose Martinez {rubric}</line>
+		</surface>
+		<surface facs="#FHL_007548733_IMG_284">
+			<line>{left margin} Juan Francisco</line>
+			<line>En este curato de Taos a los diez dias del mes de diciembre de mil</line>
+			<line>ochocientos cuarenta y tres yo el parraco don Antonio Jose Martinez bautice</line>
+			<line>solemnemente puse santos oleos y sagrado crisma a un parvulo de</line>
+			<line>un mes de nacido y le puse por nombre Juan Francisco desendien-</line>
+			<line>te de la tribu yuta de que fue rescatado es famulo de Antonio</line>
+			<line>dias Armenta y de Maria Ysabel Sanches fueron padrinos Juan</line>
+			<line>Antonio Madrid y Maria Manuela Romero vecinos todos de la po-</line>
+			<line>blacion del Rio Colorado a quienes adverti su obligacion y paren-</line>
+			<line>tesco espiritual y para que conste firme.</line>
+			<line>Antonio Jose Martinez {rubric}</line>
+		</surface>
+		<surface facs="#FHL_007548733_IMG_308">
+			<line>{left margin} Maria Antonia</line>
+			<line>En este curato de Taos a los catorce dias del mes de</line>
+			<line>abril de mil ochocientos cuarenta y cuatro yo el parro-</line>
+			<line>co don Antonio Jose Martines bautise solemnemente</line>
+			<line>puse santos oleos y sagrado crismo a una (^parvula) [^adulta] de</line>
+			<line>trece años de edad de la tribu nabajo y le puse</line>
+			<line>por nombre Maria Antonia famula de Miguel</line>
+			<line>Mascareñas vecinos de la plaza de Santa Gertrudis</line>
+		</surface>
+		<surface facs="#FHL_007548733_IMG_309">
+			<line>este bautismo fue segun rito de Nuestra</line>
+			<line>Santa Madre Yglesia para adultos previos cate-</line>
+			<line>quismos y aprobacion fueron padrinos Nasario</line>
+			<line>Aguilar y Maria de las Cruz Mascareñas vecinos</line>
+			<line>del mismo lugar a quienes adverti su obligacion</line>
+			<line>y parentesco espiritual y para que conste firme.</line>
+			<line>Antonio Jose Martinez {rubric}</line>
+		</surface>
+		<surface facs="#FHL_007548733_IMG_333">
+			<line>{left margin} Maria Josefa</line>
+			<line>En este curato de Taos a los veinte y cicno dias del mes de agosto de mil</line>
+			<line>ochocientos cuarenta y cuatro yo el parroco don Antonio Jose Martinez bau-</line>
+			<line>tise solemnemente puse santos oleos y sagrado crisma a una parvula de</line>
+			<line>siete años de edad es de la tribu yuta de donde fue rescatada es fa-</line>
+			<line>mula de don Juan Manuel Lucero y de doña Juana Maria Marti-</line>
+			<line>nez ellos mismos fueron padrinos son vecinos de la Plaza de San</line>
+			<line>Francisco de Paula les adverti su obligacion y parentesco espiritual y</line>
+			<line>para que conste firme su nombre Maria Josefa.</line>
+			<line>Antonio Jose Martinez {rubric}</line>
+			<line>{left margin} Maria Dolores</line>
+			<line>En este curato de Taos a los veinte y cinco dias del mes de agosto de mil</line>
+			<line>ochocientos cuarenta y cuatro yo el parroco don Antonio Jose Martinez bau-</line>
+			<line>tise solemnemente segun el rito de Nuestra Madre la Santa Yglesia</line>
+			<line>para el bautismos de adultos exorsize puse santos oleos y sagrado cris-</line>
+			<line>ma a una adulta de doce años de edad y le puse por nombre</line>
+			<line>Maria Dolores es india de la tribu nabajo de donde fue rescatada para</line>
+			<line>todo fueron previos los pasos de catequismos y fue hallada bien ins-</line>
+			<line>truida en los principios medios y fin de nuestra santa religion y deseo-</line>
+			<line>sa de ser admitida a su profesion por medio de santo sacramento del</line>
+			<line>bautismo abjuro los errores y principios que habia adquirido en</line>
+			<line>su secta gentilica quedando en toda y la mas fuerte resolucion de</line>
+			<line>vivir en la observacion desta religion cristiana que se le confiere</line>
+			<line>en el bautismo es famula de Jose del Espiritu Santo Cordova y</line>
+			<line>fueron sus padrinos Jose Dolores Duran y Juana Maria de Grazia San-</line>
+			<line>ches toosr vecinos de San Francisco del Rancho a quienes adverti su obliga-</line>
+			<line>cion y parentesco espiritual y para que conste firme.</line>
+			<line>Antonio Jose Martinez {rubric}</line>
+		</surface>
+		<surface facs="#FHL_007548733_IMG_353">
+			<line>{left margin} Jose Matias</line>
+			<line>En este curato de Taos a los tres dias del</line>
+			<line>mes de octubre de mil ochocientos cuarenta</line>
+			<line>y cuatro yo el parroco don Antonio Jose Mar-</line>
+			<line>tinez previos los catequismos correspon-</line>
+			<line>dientes hasta haber hallado bien ins-</line>
+			<line>struido en los principios medios y fin de</line>
+			<line>nuestra santa religion exorsise bautise so-</line>
+			<line>lemnemente puse santos oleos y sagrado cris-</line>
+			<line>ma a un adulto de ocho años de edad</line>
+			<line>segun el rito de nuestra Santa Madre Yglesia</line>
+			<line>para el bautismo de adultos y le puse</line>
+			<line>por nombre Jose Matias famulo de Fer-</line>
+			<line>nando Trugillo y de Juana Maria Trugillo ve-</line>
+			<line>cinos de la Plaza de Nuestra Señora de Gua-</line>
+			<line>dalupe ellos mismos fueron padrinos</line>
+			<line>dicho adulto es descendiente de la tri-</line>
+			<line>bu yuta de donde fue rescatado adver-</line>
+			<line>ti a dichos padrinos y amos su obligacion</line>
+			<line>y parentesco espiritual y para que conste</line>
+			<line>firme.</line>
+			<line>Antonio Jose Martinez {rubric}</line>
+			<line>{left margin} Maria Antonia</line>
+			<line>En este curato de Taos a los tres dias del</line>
+			<line>mes de octubre de mil ochocientos cuaren-</line>
+			<line>ta y cuatro yo el parroco don Antonio Jose</line>
+			<line>Martinez bautise solemnemente puse</line>
+			<line>santos oleos y sagrado crisma a una par-</line>
+			<line>vula de cuatro años de edad y le puse</line>
+			<line>por nombre Maria Antonia es yndia des-</line>
+			<line>cendiente de la tribu yuta de la cual</line>
+			<line>fue rescatada es famula de doña Maria</line>
+			<line>Rafaela Varela vecina de la plasa de Nu-</line>
+			<line>estra Señora de Guadalupe fueron padri-</line>
+			<line>nos Pablo Valdez y Maria Magdalena Gal-</line>
+			<line>legos vecinos del mismo lugar a quienes</line>
+			<line>adverti su obligacion y parentesco espiri-</line>
+			<line>tual y para que conste firme.</line>
+			<line>Antonio Jose Martinez {rubric}</line>
+		</surface>
+		<surface facs="#FHL_007548733_IMG_354">
+			<line>{left margin} Juan Lorenso</line>
+			<line>En este curato de Taos a los cuatro dias del</line>
+			<line>mes de octubre de mil ochocientos cuarenta y</line>
+			<line>cuatro yo el parroco don Antonio Jose Martinez</line>
+			<line>bautise solemnemente puse santo oleos y sagra-</line>
+			<line>do crisma a un parvulo de edad seis años des-</line>
+			<line>cendiente de la tribu yuta de la que fue resca-</line>
+			<line>tado es famulo de Juan Ygnacio Martinez</line>
+			<line>vecinos de la plaza de San Francisco del</line>
+			<line>Rancho y le puse por nombre Juan Lo-</line>
+			<line>renso fueron padrinos Benito Martinez y</line>
+			<line>Maria Rosalia Mascareñas vecinos del mismo</line>
+			<line>lugar a quienes adverti su obligacion y paren-</line>
+			<line>tesco espiritual y para que conste firme.</line>
+			<line>Antonio Jose Martinez {rubric}</line>
+			<line>{left margin} Maria Soledad</line>
+			<line>En este curato de Taos a los cuatro dias</line>
+			<line>del mes de octubre de mil ochocientos cua-</line>
+			<line>renta y cuatro yo el parraco don Antonio</line>
+			<line>Jose Martinez bautise solemnemente puse</line>
+			<line>santos oleos y sagrado crisma a una parvula</line>
+			<line>de cinco años de edad y puse por nombre</line>
+			<line>Maria Soledad es descendiente de la tribu yuta</line>
+			<line>famula de Juan Ygnacio Martinez vecino</line>
+			<line>de San Francisco del Rancho fueron padrinos</line>
+			<line>Jose Rafael Martinez y Maria Rosa Martinez</line>
+			<line>vecinos del mismo lugar a quienes adverti</line>
+			<line>su obligacion y parentesco espiritual y para</line>
+			<line>que conste firme.</line>
+			<line>Antonio Jose Martinez {rubric}</line>
+			<line>{left margin} Juan Francisco</line>
+			<line>En este curato de Taos a los cinco dias del</line>
+			<line>mes de octubre de mil ochocientos cua-</line>
+			<line>renta y cuatro yo el parroco don Antonio Jose</line>
+			<line>Martinez bautise solemnemente puse san-</line>
+			<line>tos oleos y sagrado crisma a un parvulo esposi-</line>
+			<line>to que el dia de ayer en la mañana amanecio</line>
+			<line>en la poblacion de la Sangre de Cristo junto a la</line>
+			<line>casa de Felipe Nerio Maes el que lo levanto</line>
+			<line>y trato de ampararlo no tenia signo algu-</line>
+			<line>no de que se le hubiese hechado la agua envuel-t</line>
+			<line>o en un pedaso de sarape viejo total abri-</line>
+			<line>go no pudo adquirir noticia de quien fuese</line>
+			<line>su madre el lo tomo por suyo [ILL] de dicho</line>
+		</surface>
+		<surface facs="#FHL_007548733_IMG_355">
+			<line>lugar y su esposa Maria del Refugio Pache-</line>
+			<line>co y le puse por nombre Jose Francisco</line>
+			<line>fueron padrinos Antonio Cruz Vigil y Juana</line>
+			<line>Maria Vigil vecinos de la Plaza de Nuestra</line>
+			<line>Señora de Guadalupe a quienes adverti su obli-</line>
+			<line>gacion y parentesco espiritual y para que conste</line>
+			<line>firme.</line>
+			<line>Antonio Jose Martinez {rubric}</line>
+		</surface>
+		<surface facs="#FHL_007548733_IMG_376">
+			<line>{left margin} Maria Luisa</line>
+			<line>En este curato de Taos a los dos</line>
+			<line>dias del mes de enero deste año de mil</line>
+			<line>ochocientos cuarenta y cinco yo el parro-</line>
+			<line>co don Antonio Jose Martines bautise</line>
+			<line>solemnemente puse santos oleos y sa-</line>
+			<line>grado crisma segun rito de Nuestra Ma-</line>
+			<line>dre la Santa Yglesia para bautismo de a-</line>
+			<line>dultos a una adulta como de edad</line>
+			<line>de treinta años y le puse por nom-</line>
+			<line>bre Maria Luisa yndia rescatada de la</line>
+			<line>tribu yuta y para cuyo bautismo</line>
+			<line>precedieron los catequismos corres-</line>
+			<line>pondientes hasta que la haya bien ins-</line>
+			<line>truida en los principios medios y fin</line>
+			<line>de nuestra santa religion cristiana</line>
+			<line>la que abraso muy afectuosa y fer-</line>
+			<line>vorosamente y abjuro y renuncio cu-</line>
+			<line>alesquiera error de los gentiles barba-</line>
+			<line>ros en que habia instruida dicha</line>
+			<line>yndia es famula de don Carlos Beau-</line>
+			<line>bien y de la señora Maria Paula Lobato ve-</line>
+			<line>cinos de San Fernando fueron padrinos</line>
+			<line>Felis Nontin y Luz Trugillo vecinos</line>
+			<line>de la misma plasa a quienes ad-</line>
+		</surface>
+		<surface facs="#FHL_007548733_IMG_377">
+			<line>verti su obligacion y parentesco</line>
+			<line>espiritual y para que conste fir-</line>
+			<line>me.</line>
+			<line>Antonio Jose Martinez {rubric}</line>
+		</surface>
+		<surface facs="#FHL_007548733_IMG_407">
+			<line>{left margin} Maria Soledad</line>
+			<line>En este curato de Taos a los veinte y</line>
+			<line>cuatro dias del mes de marzo de mil</line>
+			<line>ochocientos cuarenta y cinco yo el pa[*r]-</line>
+			<line>roco don Antonio Jose Martines ba[*u]-</line>
+			<line>tise solemnemente puse santos oleo[*s]</line>
+			<line>y sagrado crisma a una parvula</line>
+			<line>de dos dias de nacida y le puse por</line>
+			<line>nombre Maria Soledad hija natur[*al]</line>
+			<line>de Maria Guadalupe Bente yndia</line>
+			<line>servienta de Carlos Bente y la cual</line>
+			<line>es yndia rescatada de las nacion[*es]</line>
+			<line>del norte fueron padrinos Elfego</line>
+			<line>Bente y Maria Romualda Luna v[*e]-</line>
+			<line>cinos de la plaza de Nuestra [*Se]-</line>
+			<line>ñora de Guadalupe a quienes adverti</line>
+			<line>su obligacion y parenetesco espiritu-</line>
+			<line>al y para que conste firme.</line>
+			<line>Antonio Jose Martinez {rubric}</line>
+		</surface>
+		<surface facs="#FHL_007548733_IMG_470">
+			<line>{left margin} Maria Soledad</line>
+			<line>En este curato de San Geronimo de Taos a</line>
+			<line>los cinco dias del mes de noviembre del año de mil</line>
+			<line>ochocientos cuarenta y cinco yo el parroco don Antonio</line>
+			<line>Jose Martinez habiendo presedido los catiquisanos</line>
+			<line>que fueron nescesarios sobre la instrucion de una</line>
+			<line>adulta como de edad de veinte años de descendiente</line>
+			<line>del tribo yuta de donde fue rescatada famu-</line>
+			<line>la de don Carlos Beaubien y de Doña Maria Paula</line>
+			<line>Lovato vecinos de la plasa de Nuestra Señora de</line>
+			<line>Guadalupe y habiendola hallado suficientamen-</line>
+			<line>te instruida en el principio medio y fin de</line>
+			<line>nuestra religion asi como determinada a bauti-</line>
+			<line>sare por los motivos propios y onestos que deben</line>
+			<line>nulitos[?] a esto la exorsice puse santos oleos</line>
+			<line>bautise solemnenamente y ungi el sagrado cris-</line>
+			<line>ma segun el rito de nuestra Santa Madre</line>
+			<line>Yglesia prevenido para el bautismo de</line>
+			<line>adultos fueron sus padrinos Jose Anto-</line>
+			<line>nio Lopez y Maria de Luz Beaubien</line>
+			<line>y la puse por nombre Maria Soledad y a los</line>
+		</surface>
+		<surface facs="#FHL_007548733_IMG_471">
+			<line>padrinos adverti su obligacion y parentesco</line>
+			<line>espiritual y para que conste firme.</line>
+			<line>Antonio Jose Martinez {rubric}</line>
+		</surface>
+		<surface facs="#FHL_007548733_IMG_500">
+			<line>{left margin} Maria Margarita</line>
+			<line>En este curato de Taos a los primer dia</line>
+			<line>del mes de marzo de mil ochocientos cua-</line>
+			<line>renta y seis yo el parroco don Antonio Jose Mar-</line>
+			<line>tines bautise solemnemente puse santos oleos</line>
+			<line>y sagrado crisma a una parvula de dos</line>
+			<line>años de edad y le puse por nombre</line>
+			<line>Maria Margarita desendiente de la tribu na-</line>
+			<line>bajo de donde fue rescatada es famula de</line>
+			<line>Jose Dolores Cordova y de Maria Ramona Mar-</line>
+			<line>tines vecinos de la [ILL] Sangre de</line>
+			<line>Cristo fueron padrinos Jose Felipe Nerio</line>
+			<line>Maes y Maria del Refugio Pacheco vesinos</line>
+			<line>del mismo lugar a quienes adverti su obli-</line>
+			<line>gacion y parentesco espiritual y para que</line>
+			<line>conste firme.</line>
+			<line>Antonio Jose Martinez {rubric}</line>
+		</surface>
+		<surface facs="#FHL_007548733_IMG_515">
+			<line>{left margin} Maria Rosalia</line>
+			<line>En este curato de Taos a los doce dia del mes de abril</line>
+			<line>del año de mil ochocientos cuarenta y seis yo el par-</line>
+			<line>roco don Antonio Jose Martines previos los cate-</line>
+			<line>quismos correspondientes hasta haberme certifica-</line>
+			<line>do de hallarse instruida una adulta en los prin-</line>
+			<line>cipios medios y fin de nuestra santa religion</line>
+			<line>y la piadosa afecion de cristianarse observar</line>
+			<line>los preceptos la exorcise puse santos oleos</line>
+			<line>bautise solemnemente y un ungi el sagrado</line>
+			<line>crisma segun los ritos de nuestra madre la</line>
+			<line>Santa Yglesia para bautismos de adultos y le</line>
+			<line>puse por nombre Maria Rosalia es famula</line>
+			<line>de don Juan de Jesus Mares vecino de la abo-</line>
+			<line>gacion de San Fransico de Paula</line>
+		</surface>
+		<surface facs="#FHL_007548733_IMG_516">
+			<line>dicha adulta es descendiente de la tribu yuta de</line>
+			<line>donde fue rescatada fueron padrinos Juan</line>
+			<line>de los Reyes Mares y Maria de la Lus Trugillo</line>
+			<line>vecinos del mismo lugar a quienes adver-</line>
+			<line>ti su obligacion y parentesco espiritual y</line>
+			<line>ella misma quedo en inteligencia de obser-</line>
+			<line>var y guardar la doctrina de nuestra santa</line>
+			<line>religion y para que conste firme.</line>
+			<line>Antonio Jose Martinez {rubric}</line>
+		</surface>
+		<surface facs="#FHL_007548733_IMG_540">
+			<line>{left margin} Maria Rosalia</line>
+			<line>En este curato de Taos a los veinte dias</line>
+			<line>del mes de junio de mil ochocientos cuarenta</line>
+			<line>y seis yo el parroco don Antonio Jose Martinez bau-</line>
+			<line>tise solemnemente puse santos oleos y sagra-</line>
+			<line>do crisma a una parvula de cinco años</line>
+			<line>de edad [^ y le puse por nombre Maria Rosalia]</line>
+			<line>descendiente de la tribu nabajo de</line>
+			<line>donde fue rescatada famula de Francisco</line>
+			<line>Salasar y de Maria Manuela Vigil vecinos</line>
+			<line>de la plaza de Santisima Trinidad fueron</line>
+			<line>padrinos Lusiano Salasar y Maria de la</line>
+			<line>Concepcion Salasar vecinos del mismo lu-</line>
+			<line>gar a quienes adverti su obligacion y pa-</line>
+			<line>rentesco espiritual y para que conste fir-</line>
+			<line>me.</line>
+			<line>Antonio Jose Martinez {rubric}</line>
+		</surface>
+		<surface facs="#FHL_007548733_IMG_541">
+			<line>{left margin} Juana Maria</line>
+			<line>En este curato de Taos a los veinte y</line>
+			<line>un dias del mes de junio de mil ochoci-</line>
+			<line>entos cuarenta y seis yo el presbitero</line>
+			<line>don Eulogio Valdes venia parrochi previos</line>
+			<line>los catequismos correspondientes hasta</line>
+			<line>haberme certificado de hallarse ins-</line>
+			<line>truida una adulta en los principios</line>
+			<line>medio y fin de nuestra santa religion</line>
+			<line>y la piadora afecion de cristianarse</line>
+			<line>y observar los preceptos la exorcise</line>
+			<line>puse santos oleos bautise solemnemen-</line>
+			<line>te y ungi el sagrado crisma segun los</line>
+			<line>ritos de nuestra madre la Santa</line>
+			<line>Yglesia para bautismos de adultos y le</line>
+			<line>puse por nombre Juana Maria famula</line>
+			<line>de doña Maria Rafaela Barela vecina des-</line>
+			<line>ta plaza de Nuestra Señora de Guadalu-</line>
+			<line>pe dicha adulta es descendiente de</line>
+			<line>la tribu yuta de donde fue rescatada</line>
+			<line>fueron padrinos don Juan de Jesus Valdes</line>
+			<line>y Maria Juliana Trugillo vecinos del mis-</line>
+			<line>mo lugar a quienes adverti su obligacion</line>
+			<line>y parentesco espiritual y ella misma</line>
+			<line>quedo en inteligencia de observar y</line>
+			<line>quedar la doctrina de nuestra santa</line>
+			<line>religion y para que conste firme.</line>
+			<line>Eulogio Valdez {rubric}</line>
+			<line>Antonio Jose Martinez {rubric}</line>
+		</surface>
+	</sourceDoc>
+	<text xml:id="translation">
+		<body>
+			<pb facs="#FHL_007548733_IMG_073"/>
+			<div facs="#FHL_007548733_IMG_073_L1" type="Baptism">
+				<head>{left margin} José Rafael</head>
+				<p>In this parish of <placeName>Taos</placeName> on the <date>fifth day of the month of August of the year 1839</date>: I, parish priest <persName>Don Antonio José Martínez</persName>, solemnly baptized and placed holy oils and sacred chrism on a six-day-old child. I named him <persName>José Rafael</persName>, natural son of <persName>Guadalupe Vigil</persName>, an Indian servant of the late <persName>José Vigil</persName>, resident of the town of <placeName>La Santísima Trinidad de Arroyo Seco</placeName>. His godparents were <persName>Francisco Tomás [Bentos?]</persName> and <persName>María Soledad Vigil</persName>, residents of the same place. I advised them of their obligation and spiritual kinship, and I signed it for the record.</p>
+				<signed>Antonio José Martínez {rubric}</signed>
+			</div>
+			<pb facs="#FHL_007548733_IMG_076"/>
+			<div facs="#FHL_007548733_IMG_076_L3" type="Baptism">
+				<head>{left margin} Juan Manuel</head>
+				<p>In this parish of <placeName>Taos</placeName> on the <date>seventh day of the month of September of one thousand eight hundred and thirty-nine</date>: I, parish priest <persName>Don Antonio José Martínez</persName>, solemnly baptized and placed holy oils and chrism on an Indian child, seven or eight years old, who was rescued from the Ute tribe. Although it has been one year since he was rescued, he is still not sufficiently instructed, but being ill, and with the little that he has learned, he has effectively explained that he desires to join the religion of Jesus Christ. I verified that he is a servant of <persName>Don Charles Beaubien</persName>, resident of <placeName>San Fernández</placeName>. His godparents were <persName>Eugenio [Letendosen?]</persName> and <persName>María Rufina Vigil</persName>, also from San Fernández. I advised them of their obligation and spiritual kinship. I signed it for the record. [^The name of the baptized child was <persName>Juan Manuel</persName>]</p>
+				<signed>Antonio José Martínez {rubric}</signed>
+			</div>
+			<pb facs="#FHL_007548733_IMG_103"/>
+			<div facs="#FHL_007548733_IMG_103_R3" type="Baptism">
+				<head>{left margin} María Soledad</head>
+				<p>In this parish of <placeName>Taos</placeName> on the <date>twenty-third day of the month of March of the year one thousand eight hundred and forty</date>: I, parish priest <persName>Don Antonio José Martínez</persName>, in urgent need due to illness, solemnly baptized and placed holy oils and sacred chrism on an adult woman, about twenty years of age, which I did according to the rite of our Holy Mother Church regarding the baptism of adults. Having previously started catechism, she was found moderately instructed in the principles, means, and ends of our holy religion, enough for her to be granted her request to become a Christian, in the condition that she was in. I named her <persName>María Soledad</persName>. She is a descendant of the Navajo tribe and a servant of Señora <persName>María Teodora Romero</persName>, who rescued her. The same Señora María Teodora Romero was her godmother, along with her son, <persName>Jorge Antonio</persName>, of the town of <placeName>San Fernando</placeName>. I advised them of their obligation and spiritual kinship. I signed it for the record.</p>
+				<signed>Antonio José Martínez {rubric}</signed>
+			</div>
+			<pb facs="#FHL_007548733_IMG_120"/>
+			<div facs="#FHL_007548733_IMG_120_L1" type="Baptism">
+				<head>{left margin} María Gabriela</head>
+				<p>In this parish of <placeName>Taos</placeName> on the <date>thirteenth day of the month of August of one thousand eight hundred and forty</date>: I, parish priest <persName>Don Antonio José Martínez</persName>, solemnly baptized a child, two years old, whom I named <persName>María Gabriela</persName>, rescued from the Paiute nation and servant of <persName>José Gabriel Gallegos</persName>. Her godparents were <persName>José Nazario Gallegos</persName> and <persName>María Antonia Gallegos</persName>, residents of <placeName>Arroyo Seco</placeName>. I advised them of their obligation and spiritual kinship. I signed it for the record.</p>
+				<signed>Antonio José Martínez {rubric}</signed>
+			</div>
+			<pb facs="#FHL_007548733_IMG_185"/>
+			<div facs="#FHL_007548733_IMG_185_R2" type="Baptism">
+				<head>{left margin} José Miguel</head>
+				<p>In this parish of <placeName>Taos</placeName> on the <date>third day of the month of November of one thousand eight hundred and forty-one</date>: I, parish priest <persName>Don Antonio José Martínez</persName>, solemnly baptized and placed holy oils and sacred chrism on a child, five years old. I gave him the name <persName>José Miguel</persName>, an Indian rescued from the Ute tribe. He is a servant of <persName>Juan Antonio Abeyta</persName>, and his godfather was <persName>Pablo Garduño</persName>, both residents of the town of <placeName>Nuestra Señora de Guadalupe</placeName>. I signed it for the record.</p>
+				<signed>Antonio José Martínez {rubric}</signed>
+			</div>
+			<pb facs="#FHL_007548733_IMG_194"/>
+			<div facs="#FHL_007548733_IMG_194_L1" type="Baptism">
+				<head>{left margin} <persName>José de la Cruz</persName></head>
+				<p>In this parish of <placeName>Taos</placeName> on the <date>second day of the month of February of the year one thousand eight hundred and forty-two</date>: I, parish priest <persName>Don Antonio José Martínez</persName>, received a request from the previous year to become a Christian from an adult male, 30 years old, descendant of the Jicarilla tribe. I had advised him that he should be instructed in the knowledge of the principal mysteries of our holy faith and religion, and in the commandments or precepts that Christians accept as their obligation, and the motives for wanting to become a Christian, warning him that the main purpose was to serve God in this life and afterward, to see Him, and to enjoy in the blessedness that He has for his chosen ones in the hereafter. As of this date, he had completed the corresponding catechisms. I found him to be instructed in the principles, means, and ends of our holy religion, and that he was determined to become a Christian so that God would forgive all of his sins incurred up to the present time. [I found him] to be able to receive the other sacraments, ready to serve him faithfully from here on out in order to achieve eternal glory until the end of his days; that he will no longer believe in things of gentilism, of its errors and idolatries, but only in the true God. Now, by means of baptism, he tries to acknowledge and adore him with greater efficiency. By virtue of the authority that I have been granted by my ecclesiastic superior, I exorcized, placed holy oils, baptized him, and anointed him with chrism, all solemnly, according to the rite for the baptism of adults of our Holy Mother Church. His godparents were <persName>Francisco Esteban Vigil</persName> and <persName>María Rosalía Gallegos</persName>, residents of the town of <placeName>Nuestra Señora de los Dolores</placeName>. I advised them of their obligation and spiritual kinship, and I signed it for the record.</p>
+				<signed>Antonio José Martínez {rubric}</signed>
+			</div>
+			<pb facs="#FHL_007548733_IMG_220"/>
+			<div facs="#FHL_007548733_IMG_220_L1" type="Baptism">
+				<head>{left margin} <persName>María Catarina</persName></head>
+				<p>In this parish of <placeName>Taos</placeName> on the <date>twenty-fourth day of the month of May of one thousand eight hundred and forty-two</date>: I, parish priest <persName>Don Antonio José Martínez</persName>, solemnly baptized and placed holy oils and sacred chrism on a child, six years old, a descendant of the Ute tribe from which the citizen <persName>José Mondragón</persName>, resident of the town of <placeName>San Francisco del Rancho</placeName>, rescued her. Her godparents were <persName>Felipe Nerio Maes</persName> and <persName>María del Refugio Pacheco</persName>, residents of the same place. I advised them of their obligation and spiritual kinship, and I signed it for the record.</p>
+				<signed>Antonio José Martínez {rubric}</signed>
+			</div>
+			<div facs="#FHL_007548733_IMG_220_L3" type="Baptism">
+				<head>{left margin} María de la Luz</head>
+				<p>In this parish of <placeName>Taos</placeName> on the <date>twenty-sixth day of the month of June of one thousand eight hundred and forty-two</date>: I, priest <persName>Don José de la Cruz Vigil</persName>, as curate, solemnly baptized and placed holy oils and sacred chrism on a four-year-old child, and I named her <persName>María de la Luz</persName>. She is a descendant of the Ute tribe, servant of <persName>Don Juan Bolem</persName>, who rescued her, resident of <placeName>San Francisco del Rancho</placeName>. The godparents were <persName>Juan Bautista Bolem</persName> and <persName>María Luisa Archuleta</persName>, residents of the same place. I advised them of their obligation and spiritual kinship, and I signed it for the record.</p>
+				<signed><persName>Antonio José Martínez</persName> {rubric}</signed>
+			</div>
+			<div facs="#FHL_007548733_IMG_220_L4 #FHL_007548733_IMG_220_L4CONT" type="Baptism">
+				<head>{left margin} María Serafina</head>
+				<p>In this parish of <placeName>Taos</placeName> on the <date>twenty-sixth day of the month of June of the year one thousand eight hundred and forty-two</date>: I, priest <persName>Don Antonio José de la Cruz Vigil</persName>, as curate, solemnly baptized and placed holy oils and sacred chrism on a child, five years old, and I named her <persName>María Serafina</persName>. She is a descendant of the Ute tribe, servant of <persName>Don Juan Bolem</persName>, who rescued her, resident of <placeName>San Francisco del Rancho</placeName>. The godparents were <persName>Buenaventura Lobato</persName> and <persName>María Dolores Córdoba</persName>, residents of the same place. I advised them of their obligations and spiritual kinship, and I signed it for the record.</p>
+				<signed>Antonio José Martínez {rubric}</signed>
+				<signed>José Vigil {rubric}</signed>
+			</div>
+			<div facs="#FHL_007548733_IMG_220_R1" type="Baptism">
+				<head>{left margin} José Santiago</head>
+				<p>In this parish of <placeName>Taos</placeName>, on the <date>twenty-sixth of the month of June of one thousand eight hundred and forty-two</date>: Having been catechized according to what is prescribed for the baptism of adults, and having obtained competent instruction, I, parish priest <persName>Don Antonio José Martínez</persName>, according to the special rituals, solemnly exorcized, baptized, placed holy oils and sacred chrism on an adult, about thirteen years of age, a descendant of the Ute tribe. He is a servant of <persName>Don Juan Roles</persName>, who rescued him a few years ago. He has been educated in his house in the neighborhood of <placeName>San Francisco del Rancho</placeName>. I found him to be sufficiently instructed in the principles, means, and end of the Christian religion (and very enthusiastic, desirous, and aspiring to be received in her, with the faith and hope of obtaining eternal life). I named him <persName>José Santiago</persName>. His godparents were <persName>Manuel Antonio Sandoval</persName> and <persName>Margarita Martínez</persName>, all residents of <placeName>San Francisco del Rancho</placeName>. I advised them of their obligation and spiritual kinship, and I signed it for the record.</p>
+				<signed>Antonio José Martínez {rubric}</signed>
+			</div>
+			<pb facs="#FHL_007548733_IMG_232"/>
+			<div facs="#FHL_007548733_IMG_232_R2" type="Baptism">
+				<head>{left margin} María Florentina</head>
+				<p>In this parish of <placeName>Taos</placeName> on the <date>sixteenth day of the month of October of one thousand eight hundred and forty-two</date>: I, parish priest <persName>Don Antonio José Martínez</persName>, solemnly baptized and placed holy oils and sacred chrism on a one-day-old infant. I named her <persName>María Florentina</persName>, natural daughter of an Indian servant of Señora <persName>Ignacia Jaramillo</persName>, resident of the town of <placeName>Nuestra Señora de Guadalupe</placeName>. The godparents were <persName>Francisco Jaramillo</persName> and <persName>María Romualda de Luna</persName>, residents of the same place. I advised them of their obligation and spiritual kinship, and I signed it for the record.</p>
+				<signed>Antonio José Martínez {rubric}</signed>
+			</div>
+			<pb facs="#FHL_007548733_IMG_243"/>
+			<div facs="#FHL_007548733_IMG_243_L2" type="Baptism">
+				<head>{left margin} Catarina</head>
+				<p>In this parish of <placeName>Taos</placeName>, on the <date>eleventh day of the month of January of one thousand eight hundred and forty-two</date>: I, parish priest <persName>Don Antonio José Martínez</persName>, out of extreme necessity, having certified her by virtue of catechisms and assessed her intention and desire of becoming a Christian, solemnly exorcised, baptized, and placed holy oils and sacred chrism on an adult, sixteen years old. I named her <persName>Catarina</persName>. She is an Indian servant of <persName>Don Juan Manuel Lucero</persName>, resident of the town of <placeName>San Francisco de Paula</placeName>. He himself was the godparent, along with his wife <persName>Juana María Martínez</persName>. I advised them of their obligation that, as masters of said servant, and also as godparents, they had to give and take care of her education, to teach her Christian duties, and the spiritual kinship that they contracted. I signed it for the record.</p>
+				<signed>Antonio José Martínez {rubric}</signed>
+			</div>
+			<pb facs="#FHL_007548733_IMG_281"/>
+			<div facs="#FHL_007548733_IMG_281_L4" type="Baptism">
+				<head>{left margin} José Manuel</head>
+				<p>In this parish of <placeName>Taos</placeName> on the <date>twelfth day of the month of November of one thousand eight hundred and forty-three</date>: I, parish priest <placeName>Don Antonio José Martínez</placeName>, according to the rite of our Holy Mother Church for baptizing adults, solemnly baptized and placed holy oils and sacred chrism on an Indian child, ten years old, who was rescued from the tribe of the north. I named him <persName>José Manuel</persName>. He is a servant of <persName>Don Gabriel Abeyta</persName>, who himself was the godparent, along with his wife, <persName>María de la Encarnación Romero</persName>, residents of the town of <placeName>San Francisco del Rancho</placeName>. I advised them of their obligation and spiritual kinship, and I signed it for the record.</p>
+				<signed>Antonio José Martínez {rubric}</signed>
+			</div>
+			<pb facs="#FHL_007548733_IMG_284"/>
+			<div facs="#FHL_007548733_IMG_284_R1" type="Baptism">
+				<head>{left margin} Juan Francisco</head>
+				<p>In this parish of <placeName>Taos</placeName> on the <date>tenth day of the month of December of one thousand eight hundred and forty-three</date>: I, parish priest <persName>Don Antonio José Martínez</persName>, solemnly baptized and placed holy oils and sacred chrism on a child, one month old. I named him <persName>Juan Francisco</persName>, descendant of the Ute tribe from which he was rescued. He is a servant of <persName>Antonio Díaz Armenta</persName> and <persName>María Isabel Sánchez</persName>. His godparents were <persName>Juan Antonio Madrid</persName> and <persName>María Manuela Romero</persName>, all residents of the town of <placeName>Río Colorado</placeName>. I advised them of their obligation and spiritual kinship, and I signed it for the record.</p>
+				<signed>Antonio José Martínez {rubric}</signed>
+			</div>
+			<pb facs="#FHL_007548733_IMG_308"/>
+			<div facs="#FHL_007548733_IMG_308_R3 #FHL_007548733_IMG_309_CONT" type="Baptism">
+				<head>{left margin} María Antonia</head>
+				<p>In this parish of <placeName>Taos</placeName> on the <date>fourteenth day of the month of April of one thousand eight hundred and forty-four</date>: I, parish priest <persName>Don Antonio José Martínez</persName>, solemnly baptized and placed holy oils and sacred chrism on an adult, thirteen years old, of the Navajo tribe. I named her <persName>María Antonia</persName>, servant of <persName>Miguel Mascareñas</persName>, both residents of the town of <placeName>Santa Gertrudis</placeName>.</p>
+				<pb facs="#FHL_007548733_IMG_309"/>
+				<p>This baptism was according to the rite of our Holy Mother Church with the catechism and approval already having taken place. The godparents were <persName>Nazario Aguilar</persName> and <persName>María de la Cruz Mascareñas</persName>, residents of the same place. I advised them of their obligation and spiritual kinship, and I signed it for the record.</p>
+				<signed> Antonio José Martínez {rubric}</signed>
+			</div>
+			<pb facs="#FHL_007548733_IMG_333"/>
+			<div facs="#FHL_007548733_IMG_333_L3" type="Baptism">
+				<head>{left margin} María Josefa</head>
+				<p>In this parish of <placeName>Taos</placeName> on the <date>twenty-fifth day of the month of August of one thousand eight hundred and forty-four</date>: I, parish priest <persName>Don Antonio José Martínez</persName>, solemnly baptized and placed holy oils and sacred chrism on a child, seven years old. She is of the Ute tribe, from whom she was rescued. She is a servant of <persName>Don Juan Manuel Lucero</persName> and <persName>Doña Juana María Martínez</persName>, the same were her godparents. They are residents of the town of <placeName>San Francisco de Paula</placeName>. I advised them of their obligation and spiritual kinship, and I signed it for the record. Her name is <persName>María Josefa</persName>.</p>
+				<signed>Antonio José Martínez {rubric}</signed>
+			</div>
+			<div facs="#FHL_007548733_IMG_333_R1" type="Baptism">
+				<head>{left margin} María Dolores</head>
+				<p>In this parish of <placeName>Taos</placeName> on the <date>twenty-fifth day of the month of August of one thousand eight hundred and forty-four</date>: I, parish priest <persName>Don Antonio José Martínez</persName>, according to the rite for the baptism of adults of our Holy Mother Church, solemnly baptized, exorcised, placed holy oils and sacred chrism on an adult, twelve years old. I named her <persName>María Dolores</persName>. She is an Indian of the Navajo tribe from which she was rescued. The steps of catechism were carried out and she was found well instructed in the principles, means, and ends of our holy religion. Desiring to be admitted to this practice through the holy sacrament of baptism, she recanted the errors and principles that she had acquired in her gentile sect, being completely willing and with the strongest resolution to live in observance of this Christian religion, which is conferred upon her in baptism. She is a servant of <persName>José del Espiritu Santo Córdoba</persName>. Her godparents were <persName>José Dolores Durán</persName> and <persName>Juana María de Gracia Sánchez</persName>, all residents of <placeName>San Francisco del Rancho</placeName>. I advised them of their obligation and spiritual kinship, and I signed it for the record.</p>
+				<signed>Antonio José Martínez {rubric}</signed>
+			</div>
+			<pb facs="#FHL_007548733_IMG_353"/>
+			<div facs="#FHL_007548733_IMG_353_L1" type="Baptism">
+				<head>{left margin} José Matías</head>
+				<p>In this parish of <placeName>Taos</placeName> on the <date>third day of the month of October of one thousand eight hundred and forty-four</date>: Having carried out the corresponding catechisms until found to be well-instructed in the principles, means, and ends of our holy religion, I, parish priest <persName>Don Antonio José Martínez</persName>, solemnly exorcised, baptized, placed holy oils and sacred chrism on an adult, eight years old, according to the rite of our Holy Mother Church for the baptism of adults. I named him <persName>José Matías</persName>. He is a servant of <persName>Fernando Trujillo</persName> and <persName>Juana María Trujillo</persName>, residents of the town of <placeName>Nuestra Señora de Guadalupe</placeName>. The same were also his godparents. The said adult is a descendant of the Ute tribe from which he was rescued. I advised the said godparents and masters of their obligation and spiritual kinship, and I signed it for the record.</p>
+				<signed>Antonio José Martínez {rubric}</signed>
+			</div>
+			<div facs="#FHL_007548733_IMG_353_L2 #FHL_007548733_IMG_353_L2CONT" type="Baptism">
+				<head>{left margin} María Antonia</head>
+				<p>In this parish of <placeName>Taos</placeName> on the <date>third day of the month of October of one thousand eight hundred and forty-four</date>: I, parish priest <persName>Don Antonio José Martínez</persName>, solemnly baptized and placed holy oils and sacred chrism on a child, four years old. I named her <persName>María Antonia</persName>. She is Indian, descendant of the Ute tribe from which she was rescued. She is a servant of <persName>Doña María Rafaela Varela</persName>, resident of the town of <placeName>Nuestra Señora de Guadalupe</placeName>. The godparents were <persName>Pablo Valdez</persName> and <persName>María Magdalena Gallegos</persName>, residents of the same place. I advised them of their obligation and spiritual kinship, and I signed it for the record.</p>
+				<signed>Antonio José Martínez {rubric}</signed>
+			</div>
+			<pb facs="#FHL_007548733_IMG_354"/>
+			<div facs="#FHL_007548733_IMG_354_L2 #FHL_007548733_IMG_354_L2CONT" type="Baptism">
+				<head>{left margin} Juan Lorenzo</head>
+				<p>In this parish of <placeName>Taos</placeName> on the <date>fourth day of the month of October of one thousand eight hundred and forty-four</date>: I, parish priest <persName>Don Antonio José Martínez</persName>, solemnly baptized and placed holy oils and sacred chrism on a six-year-old child of the Ute tribe from which he was rescued. I named him <persName>Juan Lorenzo</persName>. He is a servant of <persName>Juan Ignacio Martínez</persName>, both residents of the town of <placeName>San Francisco del Rancho</placeName>. The godparents were <persName>Benito Martínez</persName> and <persName>María Rosalía Mascareñas</persName>, residents of the same place. I advised them of their obligation and spiritual kinship, and I signed it for the record.</p>
+				<signed>Antonio José Martínez {rubric}</signed>
+			</div>
+			<div facs="#FHL_007548733_IMG_354_R1" type="Baptism">
+				<head>{left margin} María Soledad</head>
+				<p>In this parish of <placeName>Taos</placeName> on the <date>fourth day of the month of October of one thousand eight hundred and forty-four</date>: I, parish priest <persName>Don Antonio José Martínez</persName>, solemnly baptized and placed holy oils and sacred chrism on a child, five years old. I named her <persName>María Soledad</persName>. She is a descendant of the Ute tribe, servant of <persName>Juan Ignacio Martínez</persName>, resident of <placeName>San Francisco del Rancho</placeName>. The godparents were <persName>José Rafael Martínez</persName> and <persName>María Rosa Martínez</persName>, residents of the same place. I advised them of their obligation and spiritual kinship, and I signed it for the record.</p>
+				<signed>Antonio José Martínez {rubric}</signed>
+			</div>
+			<div facs="#FHL_007548733_IMG_354_R2 #FHL_007548733_IMG_355_CONT" type="Baptism">
+				<head>{left margin} Juan Francisco</head>
+				<p>In this parish of <placeName>Taos</placeName> on the <date>fifth day of the month of October of one thousand eight hundred and forty-four</date>: I, parish priest <persName>Don Antonio José Martínez</persName>, solemnly baptized and placed holy oils and sacred chrism on a foundling child who yesterday morning appeared in the town of <placeName>Sangre de Cristo</placeName> next to the house of <persName>Felipe Nerio Maes</persName> who picked him up and sheltered him. There was no sign that he had been baptized. [He was] wrapped and completely bundled in a piece of an old sarape. As he was unable to learn who the mother was, he and his wife, <persName>María del Refugio Pacheco</persName>, took the child from said</p>
+				<pb facs="#FHL_007548733_IMG_355"/>
+				<p>place as their own. I named him <persName>José Francisco</persName>. The godparents were <persName>Antonio Cruz Vigil</persName> and <persName>Juana María Vigil</persName>, residents of the town of <placeName>Nuestra Señora de Guadalupe</placeName>. I advised them of their obligation and spiritual kinship, and I signed it for the record.</p>
+				<signed>Antonio José Martínez {rubric}</signed>
+			</div>
+			<pb facs="#FHL_007548733_IMG_376"/>
+			<div facs="#FHL_007548733_IMG_376_R1 #FHL_007548733_IMG_377_CONT" type="Baptism">
+				<head>{left margin} María Luisa</head>
+				<p>In this parish of <placeName>Taos</placeName> on the <date>second day of the month of January of the year one thousand eight hundred and forty-four</date>: I, parish priest <persName>Don Antonio José Martínez</persName> solemnly baptized, placed holy oils and sacred chrism on an adult, about thirty years old, according to the rite of our Holy Mother Church for the baptism of adults. I named her <persName>María Luisa</persName>. She is an Indian rescued from the Ute tribe whose baptism was preceded by the corresponding catechisms until she was well instructed in the principles, means, and ends of our holy Christian religion. She embraced it affectionately and fervently, and she abjured and renounced any errors of the barbarian gentiles in which she had been instructed. The said Indian is a servant of <persName>Don Charles Beaubien</persName> and Señora <persName>María Paula Lobato</persName>, residents of <placeName>San Fernando</placeName>. The godparents were <persName>Feliz [Nontin]</persName> and <persName>Luz Trujillo</persName>, residents of the same place. I advised them of</p>
+				<pb facs="#FHL_007548733_IMG_377"/>
+				<p>their obligation and spiritual kinship, and I signed it for the record.</p>
+				<signed>Antonio José Martínez {rubric}</signed>
+			</div>
+			<pb facs="#FHL_007548733_IMG_407"/>
+			<div facs="#FHL_007548733_IMG_407_L2 #FHL_007548733_IMG_407_L2CONT" type="Baptism">
+				<head>{left margin} María Soledad</head>
+				<p>In this parish of <placeName>Taos</placeName> on the <date>twenty-fourth day of the month of March of one thousand eight hundred and forty-five</date>: I, parish priest <persName>Don Antonio José Martínez</persName>, solemnly baptized and placed holy oils and sacred chrism on a two-day-old child. I named her <persName>María Soledad</persName>. She is the natural daughter of <persName>María Guadalupe Bent</persName>, an Indian servant of <persName>Charles Bent</persName>, who had been rescued from the nations of the north. The godparents were <persName>Elfego Bent</persName> and <persName>María Romualda Luna</persName>, residents of the town of <placeName>Nuestra Señora de Guadalupe</placeName>. I advised them of their obligation and spiritual kinship, and I signed it for the record.</p>
+				<signed>Antonio José Martínez {rubric}</signed>
+			</div>
+			<pb facs="#FHL_007548733_IMG_470"/>
+			<div facs="#FHL_007548733_IMG_470_R2 #FHL_007548733_IMG_471_R2CONT" type="Baptism">
+				<head>{left margin} María Soledad</head>
+				<p>In this parish of <placeName>San Jerónimo de Taos</placeName> on the <date>fifth day of the month of November of the year one thousand eight hundred and forty-five</date>: Having already carried out the necessary catechisms for the instruction of an adult, and having found her sufficiently instructed in the principles, means, and ends of our religion, as well as determined to be baptized for her own honest motives that should [ILL], I, parish priest <persName>Don Antonio José Martínez</persName>, solemnly exorcised, placed holy oils, baptized, and anointed with sacred chrism an adult, about twenty years old, according to the rite that Our Holy Mother Church prescribes for the baptism of adults. She is a descendant of the Ute tribe from which she was rescued, servant of <persName>Don Charles Beaubien</persName> and <persName>Doña María Paula Lobato</persName>, residents of the town of <placeName>Nuestra Señora de Guadalupe</placeName>. The godparents were <persName>José Antonio López</persName> and <persName>María de Luz Beaubien</persName>. I named her <persName>María Soledad</persName>, and I</p>
+				<pb facs="#FHL_007548733_IMG_471"/>
+				<p>advised the godparents of their obligation and spiritual kinship, and I signed it for the record.</p>
+				<signed>Antonio José Martínez {rubric}</signed>
+			</div>
+			<pb facs="#FHL_007548733_IMG_500"/>
+			<div facs="#FHL_007548733_IMG_500_L1" type="Baptism">
+				<head>{left margin} María Margarita</head>
+				<p>In this parish of <placeName>Taos</placeName> on the <date>first day of the month of March of one thousand eight hundred and forty-six</date>: I, parish priest <persName>Don Antonio José Martínez</persName> solemnly baptized and placed holy oils and sacred chrism on a child, two years old. I named her <persName>María Margarita</persName>. A descendant of the Navajo tribe from which she was rescued. She is a servant of <persName>José Dolores Córdoba</persName> and <persName>María Ramona Martínez</persName>, residents of the town of <placeName>Sangre de Cristo</placeName>. The godparents were <persName>José Felipe Nerio Maes</persName> and <persName>María del Refugio Pacheco</persName>, residents of the same place. I advised them of their obligation and spiritual kinship, and I signed it for the record.</p>
+				<signed>Antonio José Martínez {rubric}</signed>
+			</div>
+			<pb facs="#FHL_007548733_IMG_515"/>
+			<div facs="#FHL_007548733_IMG_515_R2 #FHL_007548733_IMG_516_CONT" type="Baptism">
+				<head>{left margin} María Rosalía</head>
+				<p>In this parish of <placeName>Taos</placeName> on the <date>twelfth day of the month of April of the year one thousand eight hundred and forty-six</date>: Having already carried out the corresponding catechisms until I certified her to be instructed in the principles, means, and ends of our holy religion, and having the pious affection of becoming a Christian and observing the precepts, I, parish priest <persName>Don Antonio José Martínez</persName>, solemnly exorcised, placed holy oils, baptized and anointed with sacred chrism an adult, according to the rites of our Holy Church for the baptism of adults. I named her <persName>María Rosalía</persName>. She is a servant of <persName>Don Juan de Jesús Mares</persName>, resident of the town of <placeName>San Francisco de Paula</placeName>.</p>
+				<pb facs="#FHL_007548733_IMG_516"/>
+				<p>The said adult is a descendant of the Ute tribe, from which she was rescued. The godparents were <persName>Juan de los Reyes Mares</persName> and <persName>María de la Luz Trujillo</persName>, residents of the same place. I advised them of their obligation and spiritual kinship. She herself understands that she is to observe and keep the doctrine of our holy religion. I signed it for the record.</p>
+				<signed>Antonio José Martínez {rubric}</signed>
+			</div>
+			<pb facs="#FHL_007548733_IMG_540"/>
+			<div facs="#FHL_007548733_IMG_540_L1" type="Baptism">
+				<head>{left margin} María Rosalía</head>
+				<p>In this parish of <placeName>Taos</placeName> on the <date>twentieth day of the month of June of one thousand eight hundred and forty-six</date>: I, parish priest <persName>Don Antonio José Martínez</persName>, solemnly baptized and placed holy oils and sacred chrism on a child, five years old. I named her <persName>María Rosalía</persName>, descendant of the Navajo tribe from which she was rescued. She is a servant of <persName>Francisco Salazar</persName> and <persName>María Manuela Vigil</persName>, residents of the town of <placeName>La Santísima Trinidad</placeName>. The godparents were <persName>Luciano Salazar</persName> and <persName>María de la Concepción Salazar</persName>, residents of the same place. I advised them of their obligation and spiritual kinship, and I signed it for the record.</p>
+				<signed>Antonio José Martínez {rubric}</signed>
+			</div>
+			<pb facs="#FHL_007548733_IMG_541"/>
+			<div facs="#FHL_007548733_IMG_541_L1" type="Baptism">
+				<head>{left margin} Juana María</head>
+				<p>In this parish of <placeName>Taos</placeName> on the <date>twenty-first day of the month of June of one thousand eight-hundred and forty-six</date>: Having already carried out the corresponding catechisms until I certified her to be instructed in the principles, means, and ends of our holy religion, and having the pious affection of becoming a Christian and observing the precepts, I, priest <persName>Don Eulogio Valdez</persName>, with permission from the parish priest, solemnly exorcised, placed holy oils, baptized and anointed [her] with sacred chrism according to the rites of our Holy Church for the baptism of adults. I named her <persName>Juana María</persName>, a servant of <persName>Doña María Rafaela Varela</persName>, resident of this town of <placeName>Nuestra Señora de Guadalupe</placeName>. The said adult is a descendant of the Ute tribe from which she was rescued. The godparents were <persName>Don Juan de Jesús Valdez</persName> and <persName>María Juliana Trujillo</persName>, residents of the same place. I advised them of their obligations and spiritual kinship, and I signed it for the record.</p>
+				<signed>Eulogio Valdez {rubric}</signed>
+				<signed><persName>Antonio José Martínez</persName> {rubric}</signed>
+			</div>
+		</body>
+	</text>
+</TEI>
