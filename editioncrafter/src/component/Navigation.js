@@ -13,9 +13,7 @@ import AlphabetLinks from './AlphabetLinks';
 import useIsWidthUp from '../hooks/useIsWidthUp';
 
 const initialPopoverObj = {
-  show: false,
-  x: -1,
-  y: -1,
+  anchorEl: null
 };
 
 const Navigation = (props) => {
@@ -31,7 +29,7 @@ const Navigation = (props) => {
   }, []);
 
   const onJumpBoxBlur = (event) => {
-    setPopover({ ...popover, show: false });
+    setPopover({ anchorEl: null });
   };
 
   const changeType = (event) => {
@@ -129,9 +127,7 @@ const Navigation = (props) => {
 
   const revealJumpBox = (event) => {
     setPopover({
-      show: true,
-      x: event.clientX,
-      y: event.clientY,
+      anchorEl: event.currentTarget
     });
   };
 
@@ -259,9 +255,7 @@ const Navigation = (props) => {
 
               <JumpToFolio
                 side={side}
-                isVisible={popover.show}
-                positionX={popover.x}
-                positionY={popover.y}
+                anchorEl={popover.anchorEl}                                        
                 submitHandler={documentViewActions.jumpToFolio}
                 blurHandler={onJumpBoxBlur}
               />
