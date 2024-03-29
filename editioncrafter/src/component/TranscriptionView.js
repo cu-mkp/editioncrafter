@@ -147,7 +147,7 @@ const TranscriptionView = (props) => {
 
   if (folio && folio.loading) {
     return (
-      <div style={{ position: "relative" }}>
+      <div>
       <Navigation
         side={side}
         documentView={documentView}
