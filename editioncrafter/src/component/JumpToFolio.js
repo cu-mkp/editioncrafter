@@ -1,7 +1,11 @@
+import { Popover } from '@material-ui/core';
 import React, { useEffect, useState, useRef } from 'react';
 
 const JumpToFolio = (props) => {
   const [textInput, setTextInput] = useState('');
+
+  const open = Boolean(props.anchorEl);
+  const id = open ? `${props.side}_jumpInput` : undefined;
 
   const handleSubmit = (event) => {
     // Consume the event
@@ -29,20 +33,27 @@ const JumpToFolio = (props) => {
     if (inputRef.current) {
       inputRef.current.focus();
     }
-  }, [inputRef, props.isVisible]);
+  }, [inputRef, open]);
 
   const divStyle = {
     position: 'fixed',
     zIndex: 1,
     top: props.positionY,
     left: props.positionX,
-    display: props.isVisible ? 'inline' : 'none',
+    display: open ? 'inline' : 'none',
   };
 
-  const id = `${props.side}_jumpInput`;
-
   return (
-    <div className="jumpToFolio_component" style={divStyle}>
+    <Popover
+      id={id}
+      open={open}
+      anchorEl={props.anchorEl}
+      onClose={props.blurHandler}
+      anchorOrigin={{
+        vertical: 'bottom',
+        horizontal: 'right',
+      }}
+    >
       <form onSubmit={handleSubmit}>
         <input
           id={id}
@@ -55,7 +66,7 @@ const JumpToFolio = (props) => {
           value={textInput}
         />
       </form>
-    </div>
+    </Popover>
   );
 };
 
