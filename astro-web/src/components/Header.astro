@@ -1,0 +1,29 @@
+---
+import { Image } from 'astro:assets';
+import Container from './Container.astro';
+import logo from '../assets/footer/editioncrafterlogo.svg';
+import Button from './Button.astro';
+
+export interface Props {
+    tab?: string;
+}
+
+const { tab } = Astro.props;
+---
+
+<div class="w-full max-w-screen-3xl 3xl:mx-auto bg-white">
+    <Container className="flex flex-row justify-between py-8 align-middle">
+        <a class="flex flex-row align-middle gap-6" href="/editioncrafter/">
+            <Image src={logo} alt="EditionCrafter" />
+            <p class="text-2xl font-serif max-w-28 self-center">Edition Crafter</p>
+        </a>
+        <div class="flex flex-row gap-8 align-middle">
+			<Button light href='/editioncrafter/getting-started'>
+				Getting Started
+			</Button>
+            <Button href="https://github.com/cu-mkp/editioncrafter">
+                View on GitHub &rarr;
+            </Button>
+        </div>
+    </Container>
+</div>

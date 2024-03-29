@@ -1,0 +1,28 @@
+---
+import { Image } from 'astro:assets';
+
+
+export interface Props {
+    title: string;
+    img?: ImageMetadata;
+    href?: string;
+    active?: boolean;
+}
+
+const { title, img, href = '#', active = true } = Astro.props;
+
+---
+<a href={href}>
+    <div class={`bg-neutral flex flex-col w-[336px] ${active ? 'hover:scale-105 transition cursor-pointer' : 'cursor-default'}`}>
+        { img ? ( 
+            <Image src={img} alt={title} height={282} width={336} />
+        ) : (
+            <div class="bg-neutral-gray/20 w-[336px] h-[282px] flex items-center justify-center">
+                { !active && <p class="text-3xl">(Coming Soon)</p> }
+            </div>
+        ) }
+        <p class="p-8 font-serif">
+            {title}
+        </p>
+    </div>
+</a>

@@ -1,0 +1,16 @@
+---
+export interface Props {
+    light?: boolean
+    href?: string
+}
+
+const { light, href } = Astro.props
+
+const className = `inline-flex center items-center justify-center rounded-full pr-4 pl-4 lg:pl-6 lg:pr-6 py-3 text-sm font-semibold transition ${ light ? 'bg-white text-neutral-dark hover:bg-neutral' : 'bg-neutral-dark text-white hover:bg-neutral-gray'}`;
+
+---
+<a href={ href || '#' }>
+    <button class={className}>
+        <slot />    
+    </button>
+</a>

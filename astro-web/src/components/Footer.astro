@@ -1,0 +1,38 @@
+---
+import Container from "./Container.astro";
+import logo from "../assets/footer/editioncrafterlogo.svg";
+import gh from "../assets/footer/github.svg";
+import twitter from "../assets/footer/twitter.svg";
+import lizard from "../assets/footer/MKLizard.png";
+import nsf from "../assets/footer/NSF.png";
+import pss from "../assets/footer/Performant_Logo.svg";
+import { Image } from "astro:assets";
+
+---
+
+<div class="bg-neutral w-full">
+    <Container className="flex flex-col gap-8 py-12 items-center">
+        <div class="flex flex-col md:flex-row gap-6 align-middle justify-center items-center">
+            <Image src={logo} alt="Edition Crafter"/>
+            <p class="text-5xl font-serif self-center">EditionCrafter</p>
+        </div>
+        <p class="text-center">
+            Developed by the Making and Knowing Project at the Center for Science and Society at Columbia University and Performant Software Solutions LLC. Funded by a grant from the National Science Foundation.
+        </p>
+        <div class="flex flex-row justify-center gap-4 object-contain">
+            <a href="https://www.makingandknowing.org/">              
+                <Image src={lizard} alt="Making and Knowing" class="h-16 object-scale-down" />
+            </a>
+            <a href="https://www.nsf.gov/">
+                <Image src={nsf} alt="National Science Foundation" class="h-16 object-scale-down" />
+            </a>
+            <a href="https://www.performantsoftware.com/">
+                <Image src={pss} alt="Performant Software Solutions" class="h-16 object-scale-down" />
+            </a>
+        </div>
+        <div class="h-[2px] bg-neutral-dark rounded-full w-full" />
+        <p class="text-center text-sm">
+            &copy; 2022 The Making and Knowing Project. This is an open source project licensed under the <a href="https://opensource.org/license/mit" class="underline">MIT License</a>.
+        </p>
+    </Container>
+</div>

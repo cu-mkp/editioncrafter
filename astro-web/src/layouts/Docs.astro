@@ -1,0 +1,73 @@
+---
+import Container from "../components/Container.astro";
+import Layout from "./Layout.astro";
+
+
+const { frontmatter } = Astro.props;
+
+---
+
+<Layout title="Getting Started" tab="getting-started">
+    <div class="bg-neutral w-full">
+        <Container>
+            <h1 class="font-serif text-5xl py-16">
+                Getting Started
+            </h1>
+        </Container>
+    </div>
+    <div class="bg-white w-full relative">
+        <div class="inline-block lg:float-end py-4 lg:py-8 xl:py-12 lg:w-[66%] xl:w-[70%] 2xl:w-[78%] mx-auto px-6 md:px-16 lg:ps-4 lg:pe-16 2xl:pe-40 3xl:pe-64">
+            <div class="w-full prose h-full max-w-none lg:float-end">
+                <slot />
+            </div>
+        </div>
+        <div class="hidden lg:inline-block flex-col px-4 xl:px-8 border-r border-r-neutral-gray/50 sticky top-0 h-screen">
+            <div class="flex flex-col py-4 xl:py-12">
+                <div class="flex flex-col gap-4 p-4 rounded-sm hover:bg-neutral">
+                    <a href="#" class="font-semibold text-lg">
+                        Getting Started
+                    </a>
+                    <div class="flex flex-col pl-2 xl:pl-4">                   
+                        <a href="#installing-the-editioncrafter-cli" class="w-full p-3 hover:bg-neutral-gray/20">
+                            Installing the CLI
+                        </a>
+                        <a href="#creating-a-tei-document-from-your-iiif-manifest" class="w-full p-3 hover:bg-neutral-gray/20">
+                            Creating a TEI Document
+                        </a>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-4 p-4 rounded-sm hover:bg-neutral">
+                    <a href="#publishing-a-document" class="font-semibold text-lg">
+                        Publishing A Document
+                    </a>
+                    <div class="flex flex-col pl-2 xl:pl-4">                   
+                        <a href="#editioncrafter-in-a-react-app" class="w-full p-3 hover:bg-neutral-gray/20">
+                            In a React App
+                        </a>
+                        <a href="#editioncrafter-in-an-html-website" class="w-full p-3 hover:bg-neutral-gray/20">
+                            In an HTML Website
+                        </a>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-4 p-4 rounded-sm hover:bg-neutral">
+                    <a href="#editing-a-document" class="font-semibold text-lg">
+                            Editing A Document
+                    </a>
+                </div>
+                <div class="flex flex-col gap-4 p-4 rounded-sm hover:bg-neutral">
+                    <a href="#reference" class="font-semibold text-lg">
+                        Reference
+                    </a>
+                    <div class="flex flex-col pl-2 xl:pl-4">                   
+                        <a href="#editioncrafter-cli-reference" class="w-full p-3 hover:bg-neutral-gray/20">
+                            CLI Reference
+                        </a>
+                        <a href="#editioncrafter-viewer-reference" class="w-full p-3 hover:bg-neutral-gray/20">
+                            Viewer Reference
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</Layout>
