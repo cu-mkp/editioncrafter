@@ -7,7 +7,7 @@ EditionCrafter can be included in a React app or a HTML website. EditionCrafter 
 
 ## EditionCrafter in a React App
 
-If you are including EditionCrafter in a React app, add this module to your project:
+If you are including EditionCrafter in a React app, add the [`@cu-mkp/editioncrafter`](https://www.npmjs.com/package/@cu-mkp/editioncrafter) module to your project:
 
 ```
 npm add @cu-mkp/editioncrafter
@@ -132,7 +132,7 @@ The value for each transcription type should be a string that will be displayed 
 
 ## Structure of this repository
 
-There are two apps in this repo. `editioncrafter` is a React component, while `editioncrafter-umd` wraps the React component into a UMD module for use on non-React pages.
+There are two apps in this repo. `editioncrafter` is a [React component](https://www.npmjs.com/package/@cu-mkp/editioncrafter), while `editioncrafter-umd` wraps the React component into a UMD module for use on non-React pages.
 
 ## Storybook
 
