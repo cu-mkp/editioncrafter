@@ -11,6 +11,7 @@ import RouteListener from './RouteListener';
 
 const DiploMatic = (props) => {
   const [containerWidth, setContainerWidth] = useState(0);
+  const [containerHeight, setContainerHeight] = useState('min(100%, 100dvh');
   const containerRef = useRef(null)
   useEffect(() => {
     const history = createBrowserHistory();
@@ -22,6 +23,9 @@ const DiploMatic = (props) => {
   useEffect(() => {
     if(containerRef.current){ 
       setContainerWidth(containerRef.current.offsetWidth);  
+      if (containerRef.current.clientHeight == 0) {
+        setContainerHeight('100dvh');
+      }
     }
   }, [containerRef]);
 
@@ -31,7 +35,7 @@ const DiploMatic = (props) => {
   return (
     <Provider store={props.store}>
       <HashRouter>
-        <div id="diplomatic" className={fixedFrameModeClass} ref={containerRef}>
+        <div id="diplomatic" className={fixedFrameModeClass} ref={containerRef} style={{ height: containerHeight }}>
           <RouteListener />
           <div id="content" style={{ height: '100%' }}>
             <Routes>

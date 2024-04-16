@@ -4,6 +4,7 @@
     max-height:calc(100vh - 7rem);
 	.transcriptContent {
 		padding: 50px 16px;
+		font-size: 14.4px;
 		@include md {
 			padding: 5px 16px;
 		}

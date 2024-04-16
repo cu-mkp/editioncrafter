@@ -187,7 +187,7 @@ const Navigation = (props) => {
           { documentView[side].transcriptionType !== 'glossary' ? (
 
             <div id="tool-bar-buttons" className="breadcrumbs" style={showButtonsStyle}>
-              <div style={{ display: 'flex', alignItems: 'baseline', gap: '2px' }}> 
+              <div style={{ display: 'flex', alignItems: 'baseline', gap: '4px' }}> 
                 <span 
                   className="fas fa-th" 
                   style={{ cursor: documentView[side].transcriptionType !== 'g' ? 'pointer' : 'default', padding: '0 15px' }} 
@@ -210,6 +210,7 @@ const Navigation = (props) => {
                 <span
                   title="Toggle XML mode"
                   onClick={toggleXMLMode}
+                  style={{ paddingRight: '15px' }}
                   className={imageViewActive ? 'invisible' : xmlIconClass}
                 />
                                               
@@ -246,7 +247,7 @@ const Navigation = (props) => {
                 <div
                   onClick={revealJumpBox}
                   className="folioName"
-                  style={{ flexShrink: '0' }}
+                  style={{ flexShrink: '0', minWidth: '40px' }}
                 >
 
                   {folioName}
