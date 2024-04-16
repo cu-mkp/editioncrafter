@@ -21,6 +21,8 @@ const Navigation = (props) => {
   const [openHelp, setOpenHelp] = useState(false);
   const [openHelpNarrow, setOpenHelpNarrow] = useState(false);
 
+  console.log(props);
+
   const helpRef = useRef(null);
   const helpRefNarrow = useRef(null);
 
@@ -278,9 +280,9 @@ const Navigation = (props) => {
               <MenuItem value="f" key="f">
                 {DocumentHelper.transcriptionTypeLabels.f}
               </MenuItem>
-              <MenuItem value="glossary" key="glossary">
+              { props.glossary && <MenuItem value="glossary" key="glossary">
                 {DocumentHelper.transcriptionTypeLabels.glossary}
-              </MenuItem>
+              </MenuItem> }
             </Select>
             <span
               title="Toggle folio help"
@@ -391,6 +393,7 @@ const Navigation = (props) => {
 function mapStateToProps(state) {
   return {
     document: state.document,
+    glossary: !!state.glossary.URL
   };
 }
 

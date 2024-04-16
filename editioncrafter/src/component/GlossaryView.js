@@ -106,20 +106,36 @@ class GlossaryView extends Component {
         <div id="glossaryViewInner">
           <div id="glossaryContent">
             <Typography variant="h2" className="title">Glossary</Typography>
+            {
+              this.props.glossary.glossary_metadata && this.props.glossary.glossary_metadata.subtitle ? (
+                <Typography>
+                  { this.props.glossary.gossary_metadata.subtitle }
+                </Typography>
+            ) : (
             <Typography className="subtitle">
               For short titles, e.g., [COT1611], see
               <a href="#/content/resources/bibliography">Bibliography</a>
               .
             </Typography>
+            )
+          }
             <div className="cite-instructions">
               <Typography className="cite-header">How to Cite</Typography>
-              <Typography>
-                “Glossary.” In
-                <i>Secrets of Craft and Nature in Renaissance France. A Digital Critical Edition and English Translation of BnF Ms. Fr. 640</i>
-                , edited by Making and Knowing Project, Pamela H. Smith, Naomi Rosenkranz, Tianna Helena Uchacz, Tillmann Taape, Clément Godbarge, Sophie Pitman, Jenny Boulboullé, Joel Klein, Donna Bilak, Marc Smith, and Terry Catapano. New York: Making and Knowing Project, 2020.
-                <a href="https://edition640.makingandknowing.org/#/folios/1r/f/1r/glossary">https://edition640.makingandknowing.org/#/folios/1r/f/1r/glossary</a>
-                .
-              </Typography>
+              {
+                this.props.glossary.glossary_metadata && this.props.glossary.glossary_metadata.citation ? (
+                  <Typography>
+                    { this.props.glossary.glossary_metadata.citation }
+                  </Typography>
+                ) : (
+                  <Typography>
+                    “Glossary.” In
+                    <i>Secrets of Craft and Nature in Renaissance France. A Digital Critical Edition and English Translation of BnF Ms. Fr. 640</i>
+                    , edited by Making and Knowing Project, Pamela H. Smith, Naomi Rosenkranz, Tianna Helena Uchacz, Tillmann Taape, Clément Godbarge, Sophie Pitman, Jenny Boulboullé, Joel Klein, Donna Bilak, Marc Smith, and Terry Catapano. New York: Making and Knowing Project, 2020.
+                    <a href="https://edition640.makingandknowing.org/#/folios/1r/f/1r/glossary">https://edition640.makingandknowing.org/#/folios/1r/f/1r/glossary</a>
+                    .
+                  </Typography>
+                )
+              }
             </div>
             { this.renderGlossary() }
           </div>

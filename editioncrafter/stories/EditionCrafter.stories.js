@@ -42,6 +42,7 @@ export const BnFMsFr640 = () => (
       test: 'Test Field (EN)',
     }}
     iiifManifest='https://cu-mkp.github.io/editioncrafter-data/fr640_3r-3v-example/iiif/manifest.json'
+    glossaryURL='https://cu-mkp.github.io/editioncrafter-data/fr640_3r-3v-example/glossary.json'
   />
 );
 
