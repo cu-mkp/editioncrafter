@@ -108,21 +108,21 @@ class GlossaryView extends Component {
           <div id="glossaryContent">
             <Typography variant="h2" className="title">Glossary</Typography>
             {
-              this.props.glossary.title && 
+              this.props.glossary.glossary.title && 
                 <Typography className="subtitle">
                   <Markdown>
-                    { this.props.glossary.title }
+                    { this.props.glossary.glossary.title }
                   </Markdown>
                 </Typography>
           }
             <div className="cite-instructions">
               {
-                this.props.glossary.citation &&
+                this.props.glossary.glossary.citation &&
                 <>
                   <Typography className="cite-header">How to Cite</Typography>
                   <Typography>
                     <Markdown>
-                      { this.props.glossary.citation }
+                      { this.props.glossary.glossary.citation }
                     </Markdown>
                   </Typography>
                 </>

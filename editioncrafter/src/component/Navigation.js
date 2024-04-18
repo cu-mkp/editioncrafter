@@ -21,14 +21,8 @@ const Navigation = (props) => {
   const [openHelp, setOpenHelp] = useState(false);
   const [openHelpNarrow, setOpenHelpNarrow] = useState(false);
 
-  console.log(props);
-
   const helpRef = useRef(null);
   const helpRefNarrow = useRef(null);
-
-  useEffect(() => {
-    console.log(helpRef.current);
-  }, []);
 
   const onJumpBoxBlur = (event) => {
     setPopover({ anchorEl: null });
@@ -158,8 +152,6 @@ const Navigation = (props) => {
 
     return null;
   };
-
-  console.log(side, documentView[side]);
 
   const recommendedWidth = (documentView[side].width - 8);// the divder is 16 px wide so each side is minus 8
   const widthStyle = { width: recommendedWidth, maxWidth: recommendedWidth };
