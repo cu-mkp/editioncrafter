@@ -23,9 +23,11 @@ import EditionCrafter from '@cu-mkp/editioncrafter'
   transcriptionTypes={{
     tc: 'Diplomatic (FR)',
     tcn: 'Normalized (FR)',
-    tl: 'Translation (EN)'
+    tl: 'Translation (EN)',
+    test: 'Test Field (EN)',
   }}
   iiifManifest='https://cu-mkp.github.io/editioncrafter-data/fr640_3r-3v-example/iiif/manifest.json'
+  glossaryURL='https://cu-mkp.github.io/editioncrafter-data/fr640_3r-3v-example/glossary.json'
 />
 ```
 
@@ -43,7 +45,8 @@ To include EditionCrafter in your HTML website, you need to create a `div` somew
      EditionCrafter.viewer({
          id: 'ec',
          documentName: 'BnF Ms. Fr. 640',
-         iiifManifest='https://cu-mkp.github.io/editioncrafter-data/fr640_3r-3v-example/iiif/manifest.json',
+         iiifManifest: 'https://cu-mkp.github.io/editioncrafter-data/fr640_3r-3v-example/iiif/manifest.json',
+         glossaryURL: 'https://cu-mkp.github.io/editioncrafter-data/fr640_3r-3v-example/glossary.json',
          transcriptionTypes: {
            tc: 'Diplomatic (FR)',
            tcn: 'Normalized (FR)',
@@ -88,6 +91,35 @@ documentInfo={{
 Required. (Note: This is required even in the case that you have also included a `documentInfo` prop.)
 
 A *string* giving the name of the document(s). 
+
+### glossaryURL
+
+Optional. A URL pointing to a JSON file containing glossary information. The glossary should have the following format:
+```
+{
+  "title": "[a subheader, written in markdown]",
+  "citation": "[information on how to cite the glossary, written in markdown]",
+  "entries": {
+    "[Term]": {
+      "headword": "...",
+      "alternateSpellings": "...",
+      "meanings": [
+        {
+          "partOfSpeech": "...",
+          "meaning": "...",
+          "references": "..."
+        }
+        ...
+      ],
+      "modernSpelling: "...",
+      "antonym": "...",
+      "synonym": "...",
+      "seeAlso": "..."
+    },
+    ...
+  }
+}
+```
 
 ### iiifManifest
 
