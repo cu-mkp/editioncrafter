@@ -18,7 +18,7 @@ function* userNavigation(action) {
       case 'ec':
       {
         const manifest = yield resolveDocumentManifest();
-        yield resolveGlossary(manifest);
+        yield resolveGlossary();
         yield resolveFolio(pathSegments);
         break;
       }
@@ -82,25 +82,12 @@ function* resolveFolio(pathSegments) {
   }
 }
 
-function* resolveGlossary(manifest) {
+function* resolveGlossary() {
   const glossary = yield select(justGlossary);
   // NOTE: need to figure out how to deal with glossary for multidocument manifests
-  if (!glossary.loaded) {
-    if (
-      !manifest?.seeAlso
-      || manifest.seeAlso.length === 0
-      || !manifest.seeAlso[0].id
-    ) {
-      if (manifest.type !== 'variorum') {
-        throw new Error('Missing glossary link in seeAlso array.');
-      }
-      yield putResolveAction('GlossaryActions.loadGlossary', {});
-    }
-    if (manifest.type !== 'variorum') {
-      const glossaryURL = manifest.seeAlso[0].id;
-      const response = yield axios.get(glossaryURL);
-      yield putResolveAction('GlossaryActions.loadGlossary', response.data);
-    }
+  if (!glossary.loaded && glossary.URL) {
+    const response = yield axios.get(glossary.URL);
+    yield putResolveAction('GlossaryActions.loadGlossary', response.data);
   }
 }
 

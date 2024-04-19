@@ -4,6 +4,7 @@ import { Typography } from '@material-ui/core';
 import Parser from 'html-react-parser';
 import Navigation from './Navigation';
 import { alpha } from './AlphabetLinks';
+import Markdown from 'react-markdown';
 
 class GlossaryView extends Component {
   constructor() {
@@ -14,7 +15,7 @@ class GlossaryView extends Component {
   renderGlossary() {
     const { glossary } = this.props.glossary;
     const filterTerm = this.state.filterTerm.toLowerCase();
-    const entryList = Object.values(glossary);
+    const entryList = Object.values(glossary.entries);
 
     const checkHeadwords = (headword, term, delimiter) => {
       const words = headword.split(delimiter);
@@ -106,20 +107,26 @@ class GlossaryView extends Component {
         <div id="glossaryViewInner">
           <div id="glossaryContent">
             <Typography variant="h2" className="title">Glossary</Typography>
-            <Typography className="subtitle">
-              For short titles, e.g., [COT1611], see
-              <a href="#/content/resources/bibliography">Bibliography</a>
-              .
-            </Typography>
+            {
+              this.props.glossary.glossary.title && 
+                <div className="subtitle MuiTypography-root MuiTypography-body1">
+                  <Markdown>
+                    { this.props.glossary.glossary.title }
+                  </Markdown>
+                </div>
+          }
             <div className="cite-instructions">
-              <Typography className="cite-header">How to Cite</Typography>
-              <Typography>
-                “Glossary.” In
-                <i>Secrets of Craft and Nature in Renaissance France. A Digital Critical Edition and English Translation of BnF Ms. Fr. 640</i>
-                , edited by Making and Knowing Project, Pamela H. Smith, Naomi Rosenkranz, Tianna Helena Uchacz, Tillmann Taape, Clément Godbarge, Sophie Pitman, Jenny Boulboullé, Joel Klein, Donna Bilak, Marc Smith, and Terry Catapano. New York: Making and Knowing Project, 2020.
-                <a href="https://edition640.makingandknowing.org/#/folios/1r/f/1r/glossary">https://edition640.makingandknowing.org/#/folios/1r/f/1r/glossary</a>
-                .
-              </Typography>
+              {
+                this.props.glossary.glossary.citation &&
+                <>
+                  <Typography className="cite-header">How to Cite</Typography>
+                  <div className="MuiTypography-root MuiTypography-body1">
+                    <Markdown>
+                      { this.props.glossary.glossary.citation }
+                    </Markdown>
+                  </div>
+                </>
+              }
             </div>
             { this.renderGlossary() }
           </div>

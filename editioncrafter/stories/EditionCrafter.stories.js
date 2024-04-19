@@ -42,6 +42,7 @@ export const BnFMsFr640 = () => (
       test: 'Test Field (EN)',
     }}
     iiifManifest='https://cu-mkp.github.io/editioncrafter-data/fr640_3r-3v-example/iiif/manifest.json'
+    glossaryURL='https://cu-mkp.github.io/editioncrafter-data/fr640_3r-3v-example/glossary.json'
   />
 );
 
@@ -81,7 +82,7 @@ export const MultiDocument = () => (
 );
 
 export const embeddedDiv = () => (
-  <div style={{ width: '1200px', height: '600px', margin: '0 auto' }}>
+  <div style={{ width: '1200px', height: '600px', margin: '0 auto', fontSize: '9px' }}>
     <EditionCrafter
       documentName='FHL_007548733_TAOS_BAPTISMS_BATCH_2'
       transcriptionTypes={{
