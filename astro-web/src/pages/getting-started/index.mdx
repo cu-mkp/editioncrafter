@@ -220,6 +220,35 @@ Required. (Note: This is required even in the case that you have also included a
 
 A *string* giving the name of the document(s). 
 
+### glossaryURL
+
+Optional. A URL pointing to a JSON file containing glossary information. The glossary should have the following format:
+```json
+{
+  "title": "[a subheader, written in markdown]",
+  "citation": "[information on how to cite the glossary, written in markdown]",
+  "entries": {
+    "[Term]": {
+      "headword": "...",
+      "alternateSpellings": "...",
+      "meanings": [
+        {
+          "partOfSpeech": "...",
+          "meaning": "...",
+          "references": "..."
+        }
+        ...
+      ],
+      "modernSpelling": "...",
+      "antonym": "...",
+      "synonym": "...",
+      "seeAlso": "..."
+    },
+    ...
+  }
+}
+```
+
 ### iiifManifest
 
 Required if no `documentInfo` prop specified.
