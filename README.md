@@ -23,8 +23,7 @@ import EditionCrafter from '@cu-mkp/editioncrafter'
   transcriptionTypes={{
     tc: 'Diplomatic (FR)',
     tcn: 'Normalized (FR)',
-    tl: 'Translation (EN)',
-    test: 'Test Field (EN)',
+    tl: 'Translation (EN)'
   }}
   iiifManifest='https://cu-mkp.github.io/editioncrafter-data/fr640_3r-3v-example/iiif/manifest.json'
   glossaryURL='https://cu-mkp.github.io/editioncrafter-data/fr640_3r-3v-example/glossary.json'

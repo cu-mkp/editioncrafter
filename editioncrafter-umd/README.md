@@ -44,7 +44,7 @@ To include EditionCrafter in your HTML website, you need to create a `div` somew
      EditionCrafter.viewer({
          id: 'ec',
          documentName: 'BnF Ms. Fr. 640',
-         iiifManifest='https://cu-mkp.github.io/editioncrafter-data/fr640_3r-3v-example/iiif/manifest.json',
+         iiifManifest: 'https://cu-mkp.github.io/editioncrafter-data/fr640_3r-3v-example/iiif/manifest.json',
          glossaryURL: 'https://cu-mkp.github.io/editioncrafter-data/fr640_3r-3v-example/glossary.json',
          transcriptionTypes: {
            tc: 'Diplomatic (FR)',
