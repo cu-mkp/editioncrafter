@@ -22,19 +22,18 @@
 		margin-right: 15%;
 	}
 
-	.navigationComponent {
-		position: sticky;
-		top: 0;
-		@include md {
-			position: fixed;
-			top: initial;
-		}
-	}
+	// .navigationComponent {
+	// 	position: sticky;
+	// 	top: 0;
+	// 	@include md {
+	// 		top: initial;
+	// 	}
+	// }
 
-	.navigationComponentNarrow {
-		position: sticky;
-		top: 0;
-	}
+	// .navigationComponentNarrow {
+	// 	position: sticky;
+	// 	top: 0;
+	// }
 	
 	.glossaryNav {
 
