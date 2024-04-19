@@ -10,11 +10,12 @@ export interface Props {
     documentName: string,
     transcriptionTypes: any,
     iiifManifest: string,
+    glossaryURL?: string,
     documentInfo?: any,
     threePanel?: boolean
 }
 
-const { title, documentName, transcriptionTypes, iiifManifest, documentInfo, threePanel } = Astro.props;
+const { title, documentName, transcriptionTypes, iiifManifest, documentInfo, threePanel, glossaryURL } = Astro.props;
 
 ---
 
@@ -37,6 +38,7 @@ const { title, documentName, transcriptionTypes, iiifManifest, documentInfo, thr
             documentInfo={documentInfo}
             transcriptionTypes={transcriptionTypes}
             iiifManifest={iiifManifest}
+            glossaryURL={glossaryURL}
             threePanel={threePanel}
             client:only
             transition:persist
