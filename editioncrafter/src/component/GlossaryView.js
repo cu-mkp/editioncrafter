@@ -95,7 +95,7 @@ class GlossaryView extends Component {
     if (!this.props.glossary.loaded) return null;
 
     return (
-      <div id="glossaryView" style={{ position: "relative" }}>
+      <div id="glossaryView" style={{ position: "relative", overflow: "auto" }}>
         <Navigation
           side={this.props.side}
           onFilterChange={this.onFilterChange}
