@@ -262,7 +262,7 @@ const Navigation = (props) => {
           <div id="doc-type-help" style={selectContainerStyle} ref={helpRef}>
             <Select
               className={selectClass}
-              style={{ ...selectColorStyle, marginRight: 15 }}
+              style={{ ...selectColorStyle, marginRight: 15, fontSize: 'max(16px, 1rem)' }}
               value={documentView[side].transcriptionType}
               id="doc-type"
               onClick={changeType}
@@ -347,7 +347,7 @@ const Navigation = (props) => {
           <div id="doc-type-help" style={selectContainerStyle} ref={helpRefNarrow}>
             <Select
               className={selectClass}
-              style={{ ...selectColorStyle, marginRight: 15 }}
+              style={{ ...selectColorStyle, marginRight: 15, fontSize: 'max(16px, 1rem)' }}
               value={documentView[side].transcriptionType}
               id="doc-type"
               onClick={changeType}
