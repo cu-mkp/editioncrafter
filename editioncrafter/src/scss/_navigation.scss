@@ -14,7 +14,7 @@
       user-select: none;
       padding:4px;
       background-color: white;
-      border-radius: 0.3rem;
+      border-radius: max(0.3rem, 4.8px);
       @include sm {
             top: 80px;
       }
@@ -92,7 +92,7 @@
 
 .imageViewComponent .navigationComponent {
       background-color: #4A4A4A;
-      border-radius: 0.3rem;
+      border-radius: max(0.3rem, 4.8px);
       opacity: 0.8;
       @include md {
             background-color: rgba(0,0,0,1);

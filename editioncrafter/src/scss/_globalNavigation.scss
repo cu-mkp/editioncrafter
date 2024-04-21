@@ -2,10 +2,10 @@
 	display: flex;
 	align-items: center;
 	flex-direction: row-reverse;
-	font-size: 0.9rem;
+	font-size: max(0.9rem, 14.4px);
 	position: relative;
-	top: -4rem;
-	right: 2rem;
+	top: min(-4rem, -64px);
+	right: max(2rem, 32px);
 	float: right;
 	@include md {
 		display: block;
@@ -15,7 +15,7 @@
 #globalNavigation .expandedViewOnly {
 	span, a {
 		color: white;
-		margin-left: 1rem;
+		margin-left: max(1rem, 16px);
 		cursor: pointer;
 	}
 }
@@ -25,8 +25,8 @@
 }
 
 #globalNavigation input {
-	height: 1.5rem;
-	padding: 0 0 0 0.5rem;
+	height: max(1.5rem, 24px);
+	padding: 0 0 0 max(0.5rem, 8px);
 	font-style: italic;
 	border: 1px solid #00000063;
 	color: #756c6c;

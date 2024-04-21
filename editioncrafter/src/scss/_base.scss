@@ -1,7 +1,7 @@
-$header-height: 4.5rem;
-$sm-header-height: 5.5rem;
-$md-header-height: 6.5rem;
-$footer-height: 7.5rem;
+$header-height: 72px;
+$sm-header-height: 88px;
+$md-header-height: 104px;
+$footer-height: 120px;
 $chrome-height: $header-height + $footer-height;
 $sm-chrome-height: $sm-header-height + $footer-height;
 $md-chrome-height: $md-header-height + $footer-height;
@@ -32,18 +32,18 @@ body {
 }
 
 .fa {
-	width: 1.5rem;
-	padding: 0.2rem 0.1rem 0.1rem;
+	width: max(1.5rem, 24px);
+	padding: max(0.2rem, 3.2px) max(0.1rem, 1.6px) max(0.1rem, 1.6px);
 	text-align: center;
 }
 
 .fa.active {
 	background-color: #9e9e9e0a;
-	border: 0.2rem solid #FF9800;
+	border: max(0.2rem, 3.2px) solid #FF9800;
 }
 
 .fa-book.active {
-	border-radius: 0 2rem 2rem 0;
+	border-radius: 0 max(2rem, 32px) max(2rem, 32px) 0;
 }
 
 .fa:not(.active) {
@@ -52,7 +52,7 @@ body {
 
 .fa.fa-lock,
 .fa.fa-lock-open {
-	border-radius: 2rem 0 0 2rem;
+	border-radius: max(2rem, 32px) 0 0 max(2rem, 32px);
 }
 
 .line-clamp {

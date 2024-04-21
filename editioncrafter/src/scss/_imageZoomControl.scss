@@ -1,23 +1,24 @@
 .ImageZoomControl {
   position: absolute;
   z-index: 1;
-  top: 8rem;
+  top: max(8rem, 128px);
   color: white;
   // width: 1rem;
   list-style: none;
   background: #4A4A4A;
   opacity: 0.4;
   margin:0;
-  padding:.4rem .5rem;
-  border-radius: 0.3rem;
+  padding: max(.4rem, 6.4px) max(.5rem, 8px);
+  border-radius: max(0.3rem, 4.8px);
   @include md {
-      top:4rem;
-      left: 2rem;
+      top: max(4rem, 64px);
+      left: max(2rem, 32px);
   }
 }
 
 .ImageZoomControl > li {
   color: #E0E0E0;
+  margin: 0;
 }
 
 .ImageZoomControl > li > .zoom-in {
