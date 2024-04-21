@@ -2,7 +2,7 @@
 .transcriptionViewComponent {
 	.transcriptContent {
 		padding: 50px 16px;
-		font-size: 14.4px;
+		font-size: max(0.9rem, 14.4px);
 		@include md {
 			padding: 5px 16px;
 		}

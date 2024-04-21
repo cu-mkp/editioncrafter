@@ -1,11 +1,11 @@
 .jumpToFolio_component {
-	margin: 1rem 0 0 -4.5rem;
-	padding: 0.6rem;
-	height: 1.2rem;
-	width: 9.5rem;
+	margin: max(1rem, 16px) 0 0 min(-4.5rem, -72px);
+	padding: max(0.6rem, 9.6px);
+	height: max(1.2rem, 19.2px);
+	width: max(9.5rem, 152px);
 	background: #e7e7e7;
 	border: 1px solid rgba(90, 98, 102, 0.53);
-	border-radius: 0.3rem;
+	border-radius: max(0.3rem, 4.8px);
 	-webkit-box-shadow: 6px 6px 5px 0 rgba(0, 0, 0, 0.211765);
 	-moz-box-shadow: 6px 6px 5px 0 rgba(0, 0, 0, 0.211765);
 	box-shadow: 6px 6px 5px 0 rgba(0, 0, 0, 0.211765);

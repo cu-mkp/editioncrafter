@@ -348,7 +348,7 @@ tei-head {
   font-family: 'OpenSans', sans-serif;
   font-weight: 700;
   font-size: 1.5em;
-  line-height: 1.5rem;
+  line-height: max(1.5rem, 24px);
 }
 tei-body > tei-head {
   font-size: 180%;

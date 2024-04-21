@@ -312,16 +312,14 @@
 	// @include md {
 	// 	height: calc(100% - $md-chrome-height);
 	// }
-	font-size: 0.7rem;
-
 	-webkit-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
 	font-family: 'OpenSans', sans-serif;
-	font-size: 0.9rem;
+	font-size: max(0.9rem, 14.4px);
 	#content {
-		line-height: 1.2rem;
+		line-height: max(1.2rem, 19.2px);
 	}
 	h1,
 	h2,
@@ -331,6 +329,6 @@
 		font-family: 'OpenSans', sans-serif;
 		font-weight: 700;
 		padding: 0;
-		line-height: 1.5rem;
+		line-height: max(1.5rem, 24px);
 	}
 }

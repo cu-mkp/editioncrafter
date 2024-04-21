@@ -1,6 +1,6 @@
 .imageGridComponent {
 	background-color: #000000;
-	font-size: 0.8rem;
+	font-size: max(0.8rem, 12.8px);
 	overflow: scroll;
 	height: 100%;
 	max-height: 100dvh;
@@ -11,7 +11,7 @@
 	flex-wrap: wrap;
 	list-style: none;
 	padding-left: 0;
-	margin: 1.5rem 0 8rem 2rem;
+	margin: max(1.5rem, 24px) 0 max(8rem, 128px) max(2rem, 32px);
 }
 
 .imageGridComponent > ul > li {
@@ -64,10 +64,10 @@
 		.doc-select {
 			display: inline;
 			margin-left: 30px;
-			font-size: 0.8rem;
+			font-size: max(0.8rem, 12.8px);
 
 			.MuiInputBase-root {
-				font-size: 0.8rem;
+				font-size: max(0.8rem, 12.8px);
 			}
 		}
 	}

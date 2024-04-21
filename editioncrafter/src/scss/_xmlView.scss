@@ -12,13 +12,13 @@
   -moz-user-select: text;
   -ms-user-select: text;
   user-select: text;
-  min-width: 10rem;
+  min-width: max(10rem, 160px);
  }
 
 .xmlViewComponent {
   overflow: auto;
-  margin: 0 0 0 1rem;
-  max-height: calc(100vh - 7rem);
+  margin: 0 0 0 max(1rem, 16px);
+  max-height: calc(100vh - max(7rem, 112px));
 }
 
 .xmlContentInner {

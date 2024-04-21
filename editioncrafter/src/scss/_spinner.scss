@@ -1,4 +1,4 @@
-$spinner-size: 1rem;
+$spinner-size: max(1rem, 16px);
 
 #loadingStateModal {
 	position: fixed;
