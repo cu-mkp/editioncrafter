@@ -84,7 +84,7 @@ class ImageGridView extends React.Component {
         <Select
           id="doc-filter"
           className="dark"
-          style={{ color: 'white' }}
+          style={{ color: 'white', fontSize: 'max(16px, 1rem)' }}
           value={this.state.currentDoc || Object.keys(this.props.document.derivativeNames)[0]}
           onClick={this.onSelectDoc}
         >

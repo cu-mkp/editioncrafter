@@ -34,6 +34,10 @@
 	display: inline-block;
 }
 
+.arrow svg {
+	font-size: inherit !important;
+}
+
 .paginationControl .folioName {
 	position: relative;
 	top: min(-.2rem, -3.2px);
