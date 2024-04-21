@@ -174,7 +174,7 @@ const TranscriptionView = (props) => {
   }
 
   return (
-    <div style={{ position: "relative" }}>
+    <div style={{ position: "relative", overflow: "auto" }}>
       <Navigation
         side={side}
         documentView={documentView}

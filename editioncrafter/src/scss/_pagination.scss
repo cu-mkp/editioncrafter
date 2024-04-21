@@ -2,7 +2,7 @@
 	white-space: nowrap;
 	
 	text-align: center;
-	font-size: 1.2rem;
+	font-size: max(1.2rem, 19.2px);
 	font-weight: 700;
 	-webkit-user-select: none;
 	-moz-user-select: none;
@@ -27,15 +27,15 @@
 }
 
 .paginationControl .arrow {
-	font-size: 1.8rem;
+	font-size: max(1.8rem, 28.8px);
 	color: #4A4A4A;
-	margin: 1rem 1rem 0;
+	margin: max(1rem, 16px) max(1rem, 16px) 0;
 	cursor: pointer;
 	display: inline-block;
 }
 
 .paginationControl .folioName {
 	position: relative;
-	top: -.2rem;
+	top: min(-.2rem, -3.2px);
 	color: #4A4A4A;
 }

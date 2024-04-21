@@ -60,10 +60,10 @@
 	.title {
 		white-space: nowrap;
 		position: relative;
-		width: calc(100% - 1.7rem);
+		width: calc(100% - max(1.7rem, 27.2px));
 		text-align: center;
 		top: -2em;
-		font-size: 1.8rem;
+		font-size: max(1.8rem, 28.8px);
 		font-weight: 700;
 		-webkit-user-select: none;
 		-moz-user-select: none;
@@ -78,7 +78,7 @@
 	.subtitle {
 		white-space: nowrap;
 		position: relative;
-		width: calc(100% - 1.7rem);
+		width: calc(100% - max(1.7rem, 27.2px));
 		text-align: center;
 		top: -2em;
 		font-style: italic;
@@ -92,15 +92,15 @@
 	}
 
 	#glossaryContent {
-		padding: 5rem 0 0;
+		padding: max(80px, 5rem) 0 0;
 		max-height: 100vh;
 		-webkit-user-select: text;
 		-moz-user-select: text;
 		-ms-user-select: text;
 		user-select: text;
-		min-width: 10rem;
+		min-width: max(10rem, 160px);
 		@include md {
-			padding: 3.5rem 0 0;
+			padding: max(3.5rem, 56px) 0 0;
 		}
 	}
 
