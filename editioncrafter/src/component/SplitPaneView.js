@@ -20,7 +20,7 @@ class SplitPaneView extends Component {
     const split_third = 1 - split_left - split_right;
     this.state = {
       style: {
-        gridTemplateColumns: `${split_left}fr ${this.dividerWidth}px ${split_right}fr ${this.dividerWidth}px ${split_third}fr`,
+        gridTemplateColumns: `${this.splitFraction}fr ${this.dividerWidth}px ${1 - this.splitFraction - this.splitFractionRight}fr ${this.dividerWidth}px ${this.splitFractionRight}fr`,
       },
     };
 
@@ -55,6 +55,7 @@ class SplitPaneView extends Component {
       if (left_viewWidth >= this.leftPaneMinWidth
         && right_viewWidth >= this.rightPaneMinWidth
         && third_viewWidth >= this.thirdPaneMinWidth) {
+        console.log(whole, left_viewWidth, third_viewWidth);
         this.splitFraction = (whole === 0) ? 0.0 : left_viewWidth / whole;
         this.splitFractionRight = (whole === 0) ? 0.0 : third_viewWidth / whole;
         this.updateUI();
