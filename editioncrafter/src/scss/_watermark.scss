@@ -1,12 +1,16 @@
 $watermark-size: max(10rem, 160px);
 
+.watermarkContainer .navigationComponent {
+	position: absolute;
+}
+
 .watermark{
 	width:100%;
 	height:100%;
-	margin: calc(50vh - (#{$watermark-size}/2)) auto 0 auto;
+	margin: calc(50% - (#{$watermark-size}/2)) auto 0 auto;
 }
 .transcriptContent .watermark{
-   margin: calc(50vh - (25rem/2)) auto 0 auto;
+   margin: calc(50% - (25rem/2)) auto 0 auto;
 }
 
 .watermark_contents{
