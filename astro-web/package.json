@@ -14,7 +14,7 @@
     "@astrojs/mdx": "^2.1.1",
     "@astrojs/react": "^3.0.10",
     "@astrojs/tailwind": "^5.1.0",
-    "@cu-mkp/editioncrafter": "^0.2.9",
+    "@cu-mkp/editioncrafter": "^0.2.10",
     "@fontsource/dm-sans": "^5.0.19",
     "@fontsource/martel": "^5.0.12",
     "@fontsource/source-code-pro": "^5.0.17",
