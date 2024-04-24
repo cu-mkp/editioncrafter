@@ -98,7 +98,10 @@ class ImageGridView extends React.Component {
   }
 
   onSelectDoc = (event) => {
-    if (event.target.value !== 'none') {
+    if (!event.target.value || event.target.value == 0) {
+      return;
+    }
+    if (event.target.value && event.target.value !== 'none') {
       this.setState({ ...this.state, currentDoc: event.target.value });
     } else {
       this.setState({ ...this.state, currentDoc: null });
