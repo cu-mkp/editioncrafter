@@ -1,0 +1,9 @@
+.single-pane-view {
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+}
+
+.single-pane-view > div {
+    height: 100%;
+}

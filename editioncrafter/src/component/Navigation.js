@@ -29,7 +29,7 @@ const Navigation = (props) => {
   };
 
   const changeType = (event) => {
-    if (event.target.value === undefined) return;
+    if (event.target.value === undefined || event.target.value === 0) return;
     props.documentViewActions.changeTranscriptionType(
       props.side,
       event.target.value,
@@ -353,7 +353,7 @@ const Navigation = (props) => {
               onClick={changeType}
             >
               {Object.keys(props.document.folios.find((fol) => (fol.id == props.documentView[props.side].iiifShortID)).annotationURLs).map(ttKey => (
-                <MenuItem value={ttKey} key={ttKey}>{props.document.variorum ? props.document.transcriptionTypes[props.document.folios.find((fol) => (fol.id == props.documentView[props.side].iiifShortID)).doc_id][ttKey] : props.document.transcriptionTypes[ttKey]}</MenuItem>
+                <MenuItem value={ttKey} key={ttKey} title={ttKey}>{props.document.variorum ? props.document.transcriptionTypes[props.document.folios.find((fol) => (fol.id == props.documentView[props.side].iiifShortID)).doc_id][ttKey] : props.document.transcriptionTypes[ttKey]}</MenuItem>
               ))}
               <MenuItem value="f" key="f">
                 {DocumentHelper.transcriptionTypeLabels.f}
