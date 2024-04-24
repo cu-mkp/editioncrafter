@@ -358,9 +358,9 @@ const Navigation = (props) => {
               <MenuItem value="f" key="f">
                 {DocumentHelper.transcriptionTypeLabels.f}
               </MenuItem>
-              <MenuItem value="glossary" key="glossary">
+              { props.glossary && <MenuItem value="glossary" key="glossary">
                 {DocumentHelper.transcriptionTypeLabels.glossary}
-              </MenuItem>
+              </MenuItem> }
             </Select>
             <span
               title="Toggle folio help"
