@@ -6,6 +6,11 @@
 	max-height: 100dvh;
 }
 
+.imageGridComponent .thumbnail {
+	background-color: inherit;
+	border: none;
+}
+
 .imageGridComponent > ul {
 	display: flex;
 	flex-wrap: wrap;
