@@ -6,7 +6,7 @@ export interface Props {
 
 const { light, href } = Astro.props
 
-const className = `inline-flex center items-center justify-center rounded-full pr-4 pl-4 lg:pl-6 lg:pr-6 py-3 text-sm font-semibold transition ${ light ? 'bg-white text-neutral-dark hover:bg-neutral' : 'bg-neutral-dark text-white hover:bg-neutral-gray'}`;
+const className = `inline-flex center items-center justify-center rounded-full pr-3 pl-3 md:pr-4 md:pl-4 lg:pl-6 lg:pr-6 py-3 text-sm font-semibold transition ${ light ? 'bg-white text-neutral-dark hover:bg-neutral' : 'bg-neutral-dark text-white hover:bg-neutral-gray'}`;
 
 ---
 <a href={ href || '#' }>

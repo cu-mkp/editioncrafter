@@ -1,7 +1,7 @@
 [![DOI](https://zenodo.org/badge/574677398.svg)](https://zenodo.org/badge/latestdoi/574677398)
 
 # editioncrafter
-NOW IN BETA: Software for the development of EditionCrafter, digital critical edition publication tool
+Software for the development of EditionCrafter, digital critical edition publication tool
 
 EditionCrafter can be included in a React app or a HTML website. EditionCrafter should work on any content management system (CMS) where you can edit the HTML of your page. We have tested it on Hugo CMS, Astro Framework, and Scalar CMS. We also have an example Hugo website that you can fork. Please see that website's [README](https://github.com/cu-mkp/editioncrafter-project) for more information.
 
