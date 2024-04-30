@@ -1,6 +1,6 @@
 {
   "name": "@cu-mkp/editioncrafter",
-  "version": "1.0",
+  "version": "1.0.0",
   "description": "A simple digital critical edition publication tool",
   "homepage": "https://cu-mkp.github.io/editioncrafter/",
   "private": false,
