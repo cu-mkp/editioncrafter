@@ -55,6 +55,9 @@ function parseImageURLs(canvas) {
       if (annotation.type !== 'Annotation') throwError(`Expected Annotation in items property of ${annotationPage.id}`);
       if (annotation.motivation === 'painting') {
         if (!annotation.body) throwError(`Expected body property in Annotation ${annotation.id}`);
+        if (!annotation.body.id) {
+          return null;
+        }
         return {
           bodyId: annotation.body.id,
           imageURL: `${annotation.body.id}/info.json`,
@@ -139,36 +142,38 @@ function parseSingleManifest(manifest, transcriptionTypes, document) {
     const canvas = canvases[i];
     if (canvas.type !== 'Canvas') throwError(`Expected items[${i}] to be of type 'Canvas'.`);
     if (!canvas.id) throwError(`Expected items[${i}] to have an id property.`);
-    const folioID = canvas.id.substr(canvas.id.lastIndexOf('/') + 1);
-    const canvasLabel = parseLabel(canvas);
-    const { bodyId, imageURL } = parseImageURLs(canvas);
-    const annotationURLs = parseAnnotationURLs(canvas, transcriptionTypes);
-
-    const ratio = canvas.width / canvas.height;
-
-    let thumbnailDimensions = [];
-    if (ratio > 1) {
-      thumbnailDimensions = [MAX_THUMBNAIL_DIMENSION, Math.round(MAX_THUMBNAIL_DIMENSION / ratio)];
-    } else {
-      thumbnailDimensions = [Math.round(MAX_THUMBNAIL_DIMENSION * ratio), MAX_THUMBNAIL_DIMENSION];
+    if (parseImageURLs(canvas)) {
+      const folioID = canvas.id.substr(canvas.id.lastIndexOf('/') + 1);
+      const canvasLabel = parseLabel(canvas);
+      const { bodyId, imageURL } = parseImageURLs(canvas);
+      const annotationURLs = parseAnnotationURLs(canvas, transcriptionTypes);
+  
+      const ratio = canvas.width / canvas.height;
+  
+      let thumbnailDimensions = [];
+      if (ratio > 1) {
+        thumbnailDimensions = [MAX_THUMBNAIL_DIMENSION, Math.round(MAX_THUMBNAIL_DIMENSION / ratio)];
+      } else {
+        thumbnailDimensions = [Math.round(MAX_THUMBNAIL_DIMENSION * ratio), MAX_THUMBNAIL_DIMENSION];
+      }
+  
+      const thumbnailURL = `${bodyId}/full/${thumbnailDimensions.join(',')}/0/default.jpg`;
+  
+      const folio = {
+        id: folioID,
+        doc_id: document || manifest.id,
+        name: canvasLabel,
+        pageNumber: i,
+        image_zoom_url: imageURL,
+        image_thumbnail_url: thumbnailURL,
+        annotationURLs,
+        annotations: canvas.annotations
+          ? canvas.annotations.filter(a => a.motivation === 'tagging')
+          : [],
+      };
+  
+      folios.push(folio);
     }
-
-    const thumbnailURL = `${bodyId}/full/${thumbnailDimensions.join(',')}/0/default.jpg`;
-
-    const folio = {
-      id: folioID,
-      doc_id: document || manifest.id,
-      name: canvasLabel,
-      pageNumber: i,
-      image_zoom_url: imageURL,
-      image_thumbnail_url: thumbnailURL,
-      annotationURLs,
-      annotations: canvas.annotations
-        ? canvas.annotations.filter(a => a.motivation === 'tagging')
-        : [],
-    };
-
-    folios.push(folio);
   }
   return folios;
 }
