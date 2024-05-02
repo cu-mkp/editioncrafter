@@ -1,78 +1,81 @@
-.imageGridComponent {
-	background-color: #000000;
-	font-size: max(0.8rem, 12.8px);
-	overflow: scroll;
-	height: 100%;
-	max-height: 100dvh;
-}
+.editioncrafter {
 
-.imageGridComponent .thumbnail {
-	background-color: inherit;
-	border: none;
-}
-
-.imageGridComponent > ul {
-	display: flex;
-	flex-wrap: wrap;
-	list-style: none;
-	padding-left: 0;
-	margin: max(1.5rem, 24px) 0 max(8rem, 128px) max(2rem, 32px);
-}
-
-.imageGridComponent > ul > li {
-	margin-bottom: 20px;
-	width: 150px;
-}
-
-.imageGridComponent > ul > li > figure {
-	margin: 8px;
-}
-
-.imageGridComponent > ul > li > figure:hover {
-	border: 2px #eee solid;
-	margin: 6px;
-}
-
-.imageGridComponent > ul > li > .thumbnail-caption {
-	text-align: center;
-	color: white;
-	margin: 0 10px;
-	white-space: nowrap;
-	overflow: hidden;
-	text-overflow: ellipsis;
-}
-
-.hidden {
-	display: none;
-}
-
-.imageGridComponent  {
-	.imageGridToolbar {
-		padding: 5px;
+	.imageGridComponent {
+		background-color: #000000;
+		font-size: max(0.8rem, 12.8px);
+		overflow: scroll;
+		height: 100%;
+		max-height: 100dvh;
+	}
+	
+	.imageGridComponent .thumbnail {
+		background-color: inherit;
+		border: none;
+	}
+	
+	.imageGridComponent > ul {
+		display: flex;
+		flex-wrap: wrap;
+		list-style: none;
+		padding-left: 0;
+		margin: max(1.5rem, 24px) 0 max(8rem, 128px) max(2rem, 32px);
+	}
+	
+	.imageGridComponent > ul > li {
+		margin-bottom: 20px;
+		width: 150px;
+	}
+	
+	.imageGridComponent > ul > li > figure {
+		margin: 8px;
+	}
+	
+	.imageGridComponent > ul > li > figure:hover {
+		border: 2px #eee solid;
+		margin: 6px;
+	}
+	
+	.imageGridComponent > ul > li > .thumbnail-caption {
+		text-align: center;
 		color: white;
-
-		.jump-to {
-			float: right;
-			display: 'inline';
-			margin-right: 30px;
-
-			#jump-to-input {
-				margin-left: 5px;
+		margin: 0 10px;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+	
+	.hidden {
+		display: none;
+	}
+	
+	.imageGridComponent  {
+		.imageGridToolbar {
+			padding: 5px;
+			color: white;
+	
+			.jump-to {
+				float: right;
+				display: 'inline';
+				margin-right: 30px;
+	
+				#jump-to-input {
+					margin-left: 5px;
+				}
+	
+				#jump-to-button {
+					margin-left: 5px;
+					cursor: pointer;
+				}
 			}
-
-			#jump-to-button {
-				margin-left: 5px;
-				cursor: pointer;
-			}
-		}
-
-		.doc-select {
-			display: inline;
-			margin-left: 30px;
-			font-size: max(0.8rem, 12.8px);
-
-			.MuiInputBase-root {
+	
+			.doc-select {
+				display: inline;
+				margin-left: 30px;
 				font-size: max(0.8rem, 12.8px);
+	
+				.MuiInputBase-root {
+					font-size: max(0.8rem, 12.8px);
+				}
 			}
 		}
 	}

@@ -1,108 +1,112 @@
-#glossaryView {
+.editioncrafter {
 
-	#glossaryViewInner {
-		margin: 5px 0 0 0;
-		@include md {
-			margin: 52px 0 0 0;
-		}
-		width: calc(100% - 1.2rem);
-            max-height: calc(100vh - 170px);
-            padding: 5px 16px;
-	}
-
-	.cite-header {
-		text-align: center; 
-		margin-bottom: 5px;
-	}
-
-	.cite-instructions {
-		margin: 20px;
-		margin-left: 15%;
-		margin-right: 15%;
-	}
-
-	// .navigationComponent {
-	// 	position: sticky;
-	// 	top: 0;
-	// 	@include md {
-	// 		top: initial;
-	// 	}
-	// }
-
-	// .navigationComponentNarrow {
-	// 	position: sticky;
-	// 	top: 0;
-	// }
+	#glossaryView {
 	
-	.glossaryNav {
-
-		background: white;
-		padding: 5px;
-		position:relative;
-	
-		#glossary-filter {
-			margin-right: 10px;
-		}
-		.alphaNav {
-			display: none;
+		#glossaryViewInner {
+			margin: 5px 0 0 0;
 			@include md {
-				display: block;
+				margin: 52px 0 0 0;
+			}
+			width: calc(100% - 1.2rem);
+				max-height: calc(100vh - 170px);
+				padding: 5px 16px;
+		}
+	
+		.cite-header {
+			text-align: center; 
+			margin-bottom: 5px;
+		}
+	
+		.cite-instructions {
+			margin: 20px;
+			margin-left: 15%;
+			margin-right: 15%;
+		}
+	
+		// .navigationComponent {
+		// 	position: sticky;
+		// 	top: 0;
+		// 	@include md {
+		// 		top: initial;
+		// 	}
+		// }
+	
+		// .navigationComponentNarrow {
+		// 	position: sticky;
+		// 	top: 0;
+		// }
+		
+		.glossaryNav {
+	
+			background: white;
+			padding: 5px;
+			position:relative;
+		
+			#glossary-filter {
+				margin-right: 10px;
+			}
+			.alphaNav {
+				display: none;
+				@include md {
+					display: block;
+				}
 			}
 		}
-	}
-
-	.alphaNav {
-		color: blue;
-		display: inline;
-	}
-
-	.title {
-		white-space: nowrap;
-		position: relative;
-		width: calc(100% - max(1.7rem, 27.2px));
-		text-align: center;
-		top: -2em;
-		font-size: max(1.8rem, 28.8px);
-		font-weight: 700;
-		-webkit-user-select: none;
-		-moz-user-select: none;
-		-ms-user-select: none;
-		user-select: none;
-		@include md {
-			top: -1em;
+	
+		.alphaNav {
+			color: blue;
+			display: inline;
 		}
-	}
-
-
-	.subtitle {
-		white-space: nowrap;
-		position: relative;
-		width: calc(100% - max(1.7rem, 27.2px));
-		text-align: center;
-		top: -2em;
-		font-style: italic;
-		-webkit-user-select: none;
-		-moz-user-select: none;
-		-ms-user-select: none;
-		user-select: none;
-		@include md {
-			top: -1em;
+	
+		.title {
+			white-space: nowrap;
+			position: relative;
+			width: calc(100% - max(1.7rem, 27.2px));
+			text-align: center;
+			top: -2em;
+			font-size: max(1.8rem, 28.8px);
+			font-weight: 700;
+			-webkit-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			user-select: none;
+			@include md {
+				top: -1em;
+			}
 		}
-	}
-
-	#glossaryContent {
-		padding: max(80px, 5rem) 0 0;
-		max-height: 100vh;
-		-webkit-user-select: text;
-		-moz-user-select: text;
-		-ms-user-select: text;
-		user-select: text;
-		min-width: max(10rem, 160px);
-		@include md {
-			padding: max(3.5rem, 56px) 0 0;
+	
+	
+		.subtitle {
+			white-space: nowrap;
+			position: relative;
+			width: calc(100% - max(1.7rem, 27.2px));
+			text-align: center;
+			top: -2em;
+			font-style: italic;
+			-webkit-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			user-select: none;
+			@include md {
+				top: -1em;
+			}
 		}
+	
+		#glossaryContent {
+			padding: max(80px, 5rem) 0 0;
+			max-height: 100vh;
+			-webkit-user-select: text;
+			-moz-user-select: text;
+			-ms-user-select: text;
+			user-select: text;
+			min-width: max(10rem, 160px);
+			@include md {
+				padding: max(3.5rem, 56px) 0 0;
+			}
+		}
+	
 	}
-
 }
+
 
 

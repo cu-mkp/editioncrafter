@@ -1,27 +1,30 @@
 $watermark-size: max(10rem, 160px);
 
-.watermarkContainer .navigationComponent {
-	position: absolute;
-}
+.editioncrafter {
 
-.watermark{
-	width:100%;
-	height:100%;
-	margin: calc(50% - (#{$watermark-size}/2)) auto 0 auto;
-}
-.transcriptContent .watermark{
-   margin: calc(50% - (25rem/2)) auto 0 auto;
-}
-
-.watermark_contents{
-	width:$watermark-size;
-	height:$watermark-size;
-	background-image: url("../img/editioncrafterlogo.png");
-	background-size: 100%;
-	background-repeat: no-repeat;
-	margin: auto auto auto auto;
-}
-
-.third_pane_blank {
-	min-width: 8px;
+	.watermarkContainer .navigationComponent {
+		position: absolute;
+	}
+	
+	.watermark{
+		width:100%;
+		height:100%;
+		margin: calc(50% - (#{$watermark-size}/2)) auto 0 auto;
+	}
+	.transcriptContent .watermark{
+	   margin: calc(50% - (25rem/2)) auto 0 auto;
+	}
+	
+	.watermark_contents{
+		width:$watermark-size;
+		height:$watermark-size;
+		background-image: url("../img/editioncrafterlogo.png");
+		background-size: 100%;
+		background-repeat: no-repeat;
+		margin: auto auto auto auto;
+	}
+	
+	.third_pane_blank {
+		min-width: 8px;
+	}
 }

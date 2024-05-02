@@ -1,17 +1,21 @@
 $color-selected: rgba(7,122,255,0.831);
 
-figure {
-	padding: max(0.3rem, 4.8px) 0 0;
-	border-radius: max(0.2rem, 3.2px);
-	margin: 0;
-	text-align: center;
+.editioncrafter {
+
+	figure {
+		padding: max(0.3rem, 4.8px) 0 0;
+		border-radius: max(0.2rem, 3.2px);
+		margin: 0;
+		text-align: center;
+	}
+	
+	figure.current {
+		background-color: $color-selected;
+	}
+	
+	.thumbnail-caption.current {
+		color: $color-selected !important;
+		font-weight: 900;
+	}
 }
 
-figure.current {
-	background-color: $color-selected;
-}
-
-.thumbnail-caption.current {
-	color: $color-selected !important;
-	font-weight: 900;
-}
