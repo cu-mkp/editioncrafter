@@ -1,52 +1,56 @@
-.ImageZoomControl {
-  position: absolute;
-  z-index: 1;
-  top: max(8rem, 128px);
-  color: white;
-  // width: 1rem;
-  list-style: none;
-  background: #4A4A4A;
-  opacity: 0.4;
-  margin:0;
-  padding: max(.4rem, 6.4px) max(.5rem, 8px);
-  border-radius: max(0.3rem, 4.8px);
-  @include md {
-      top: max(4rem, 64px);
-      left: max(2rem, 32px);
+.editioncrafter {
+
+  .ImageZoomControl {
+    position: absolute;
+    z-index: 1;
+    top: max(8rem, 128px);
+    color: white;
+    // width: 1rem;
+    list-style: none;
+    background: #4A4A4A;
+    opacity: 0.4;
+    margin:0;
+    padding: max(.4rem, 6.4px) max(.5rem, 8px);
+    border-radius: max(0.3rem, 4.8px);
+    @include md {
+        top: max(4rem, 64px);
+        left: max(2rem, 32px);
+    }
+  }
+  
+  .ImageZoomControl > li {
+    color: #E0E0E0;
+    margin: 0 !important;
+  }
+  
+  .ImageZoomControl > li > .zoom-in {
+    margin-top: 8px;
+  }
+  
+  .ImageZoomControl > li:hover {
+    color: white;
+  }
+  
+  .ImageZoomControl > li > .zoom-3 {
+    margin-top: 8px;
+  }
+  
+  .ImageZoomControl > li > .zoom-2 {
+    margin-top: 8px;
+    margin-left: 5px;
+  }
+  
+  .ImageZoomControl > li > .zoom-1 {
+    margin-top: 8px;
+    margin-left: 7px;
+  }
+  
+  .ImageZoomControl > li > .zoom-out {
+    margin-top: 8px;
+  }
+  
+  .ImageZoomControl > li > .zoom-grid {
+    margin-top: 30px;
   }
 }
 
-.ImageZoomControl > li {
-  color: #E0E0E0;
-  margin: 0 !important;
-}
-
-.ImageZoomControl > li > .zoom-in {
-  margin-top: 8px;
-}
-
-.ImageZoomControl > li:hover {
-  color: white;
-}
-
-.ImageZoomControl > li > .zoom-3 {
-  margin-top: 8px;
-}
-
-.ImageZoomControl > li > .zoom-2 {
-  margin-top: 8px;
-  margin-left: 5px;
-}
-
-.ImageZoomControl > li > .zoom-1 {
-  margin-top: 8px;
-  margin-left: 7px;
-}
-
-.ImageZoomControl > li > .zoom-out {
-  margin-top: 8px;
-}
-
-.ImageZoomControl > li > .zoom-grid {
-  margin-top: 30px;
-}

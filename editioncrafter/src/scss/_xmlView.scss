@@ -1,30 +1,33 @@
-.xmlViewComponent .navigationComponent {
-  background-color: white;
-  color: #000000; }
+.editioncrafter {
 
-.xmlContent {
-  padding: 0;
-  margin: 4.5rem 0 0;
-  width: calc(100% - 1.2rem);
-  max-height: 100vh;
-  min-height: 100%;
-  -webkit-user-select: text;
-  -moz-user-select: text;
-  -ms-user-select: text;
-  user-select: text;
-  min-width: max(10rem, 160px);
- }
-
-.xmlViewComponent {
-  overflow: auto;
-  margin: 0 0 0 max(1rem, 16px);
-  max-height: calc(100vh - max(7rem, 112px));
-}
-
-.xmlContentInner {
-  max-height: 100%;
-}
-
-.xmlContentInner pre {
-  overflow-x: auto;
+  .xmlViewComponent .navigationComponent {
+    background-color: white;
+    color: #000000; }
+  
+  .xmlContent {
+    padding: 0;
+    margin: 4.5rem 0 0;
+    width: calc(100% - 1.2rem);
+    max-height: 100vh;
+    min-height: 100%;
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+    min-width: max(10rem, 160px);
+   }
+  
+  .xmlViewComponent {
+    overflow: auto;
+    margin: 0 0 0 max(1rem, 16px);
+    max-height: calc(100vh - max(7rem, 112px));
+  }
+  
+  .xmlContentInner {
+    max-height: 100%;
+  }
+  
+  .xmlContentInner pre {
+    overflow-x: auto;
+  }
 }

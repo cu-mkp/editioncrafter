@@ -30,7 +30,7 @@ const DiploMatic = (props) => {
   }, [containerRef]);
 
   const { fixedFrameMode } = props.diplomatic;
-  const fixedFrameModeClass = fixedFrameMode ? 'fixed' : 'sticky';
+  const fixedFrameModeClass = fixedFrameMode ? 'editioncrafter' : 'editioncrafter sticky';
 
   return (
     <Provider store={props.store}>

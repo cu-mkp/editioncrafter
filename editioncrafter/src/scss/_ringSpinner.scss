@@ -1,88 +1,91 @@
 /* Small inline spinner */
-.inline-ring-spinner {
-    display: inline-block;
-    margin-left: 10px;
-    margin-right: 10px;
+.editioncrafter {
+
+  .inline-ring-spinner {
+      display: inline-block;
+      margin-left: 10px;
+      margin-right: 10px;
+      width: 16px;
+      height: 16px;
+    }
+  
+  .inline-ring-spinner .light {
+    border: 3px solid #fff;
+    border-color: #fff transparent transparent transparent;
+  }
+  
+  .inline-ring-spinner .dark {
+    border: 3px solid #000;
+    border-color: #000 transparent transparent transparent;
+  }
+  
+  .inline-ring-spinner div {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
     width: 16px;
     height: 16px;
+    border-radius: 50%;
+    animation: inline-ring-spinner 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
   }
-
-.inline-ring-spinner .light {
-  border: 3px solid #fff;
-  border-color: #fff transparent transparent transparent;
-}
-
-.inline-ring-spinner .dark {
-  border: 3px solid #000;
-  border-color: #000 transparent transparent transparent;
-}
-
-.inline-ring-spinner div {
-  box-sizing: border-box;
-  display: block;
-  position: absolute;
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  animation: inline-ring-spinner 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-}
-.inline-ring-spinner div:nth-child(1) {
-  animation-delay: -0.45s;
-}
-.inline-ring-spinner div:nth-child(2) {
-  animation-delay: -0.3s;
-}
-.inline-ring-spinner div:nth-child(3) {
-  animation-delay: -0.15s;
-}
-@keyframes inline-ring-spinner {
-  0% {
-    transform: rotate(0deg);
+  .inline-ring-spinner div:nth-child(1) {
+    animation-delay: -0.45s;
   }
-  100% {
-    transform: rotate(360deg);
+  .inline-ring-spinner div:nth-child(2) {
+    animation-delay: -0.3s;
   }
-}
-
-/* Big spinner */
-.big-ring-spinner {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-}
-.big-ring-spinner div {
-  box-sizing: border-box;
-  display: block;
-  position: absolute;
-  width: 128px;
-  height: 128px;
-  margin-top: 30vh;
-  border-radius: 50%;
-  animation: big-ring-spinner 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-}
-.big-ring-spinner.dark div {
-    border: 16px solid #000;
-    border-color: #000 transparent transparent transparent;
-}
-.big-ring-spinner.light div {
-    border: 16px solid #fff;
-    border-color: #fff transparent transparent transparent;
-}
-.big-ring-spinner div:nth-child(1) {
-  animation-delay: -0.45s;
-}
-.big-ring-spinner div:nth-child(2) {
-  animation-delay: -0.3s;
-}
-.big-ring-spinner div:nth-child(3) {
-  animation-delay: -0.15s;
-}
-@keyframes big-ring-spinner {
-  0% {
-    transform: rotate(0deg);
+  .inline-ring-spinner div:nth-child(3) {
+    animation-delay: -0.15s;
   }
-  100% {
-    transform: rotate(360deg);
+  @keyframes inline-ring-spinner {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /* Big spinner */
+  .big-ring-spinner {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+  }
+  .big-ring-spinner div {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 128px;
+    height: 128px;
+    margin-top: 30vh;
+    border-radius: 50%;
+    animation: big-ring-spinner 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  }
+  .big-ring-spinner.dark div {
+      border: 16px solid #000;
+      border-color: #000 transparent transparent transparent;
+  }
+  .big-ring-spinner.light div {
+      border: 16px solid #fff;
+      border-color: #fff transparent transparent transparent;
+  }
+  .big-ring-spinner div:nth-child(1) {
+    animation-delay: -0.45s;
+  }
+  .big-ring-spinner div:nth-child(2) {
+    animation-delay: -0.3s;
+  }
+  .big-ring-spinner div:nth-child(3) {
+    animation-delay: -0.15s;
+  }
+  @keyframes big-ring-spinner {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
   }
 }

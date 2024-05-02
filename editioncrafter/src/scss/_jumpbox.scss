@@ -1,42 +1,45 @@
-.jumpToFolio_component {
-	margin: max(1rem, 16px) 0 0 min(-4.5rem, -72px);
-	padding: max(0.6rem, 9.6px);
-	height: max(1.2rem, 19.2px);
-	width: max(9.5rem, 152px);
-	background: #e7e7e7;
-	border: 1px solid rgba(90, 98, 102, 0.53);
-	border-radius: max(0.3rem, 4.8px);
-	-webkit-box-shadow: 6px 6px 5px 0 rgba(0, 0, 0, 0.211765);
-	-moz-box-shadow: 6px 6px 5px 0 rgba(0, 0, 0, 0.211765);
-	box-shadow: 6px 6px 5px 0 rgba(0, 0, 0, 0.211765);
-	font-family: sans-serif;
-}
-.jumpToFolio_component input:focus{
-    outline: none;
-}
+.editioncrafter {
 
-.jumpToFolio_component:after,
-.jumpToFolio_component:before {
-	bottom: 100%;
-	left: 50%;
-	border: solid transparent;
-	content: " ";
-	height: 0;
-	width: 0;
-	position: absolute;
-	pointer-events: none;
-}
-
-.jumpToFolio_component:after {
-	border-color: rgba(255, 255, 255, 0);
-	border-bottom-color: #e7e7e7;
-	border-width: 9px;
-	margin-left: -9px;
-}
-
-.jumpToFolio_component:before {
-	border-color: rgba(194, 225, 245, 0);
-	border-bottom-color: rgba(90, 98, 102, 0.53);
-	border-width: 11px;
-	margin-left: -11px;
+	.jumpToFolio_component {
+		margin: max(1rem, 16px) 0 0 min(-4.5rem, -72px);
+		padding: max(0.6rem, 9.6px);
+		height: max(1.2rem, 19.2px);
+		width: max(9.5rem, 152px);
+		background: #e7e7e7;
+		border: 1px solid rgba(90, 98, 102, 0.53);
+		border-radius: max(0.3rem, 4.8px);
+		-webkit-box-shadow: 6px 6px 5px 0 rgba(0, 0, 0, 0.211765);
+		-moz-box-shadow: 6px 6px 5px 0 rgba(0, 0, 0, 0.211765);
+		box-shadow: 6px 6px 5px 0 rgba(0, 0, 0, 0.211765);
+		font-family: sans-serif;
+	}
+	.jumpToFolio_component input:focus{
+		outline: none;
+	}
+	
+	.jumpToFolio_component:after,
+	.jumpToFolio_component:before {
+		bottom: 100%;
+		left: 50%;
+		border: solid transparent;
+		content: " ";
+		height: 0;
+		width: 0;
+		position: absolute;
+		pointer-events: none;
+	}
+	
+	.jumpToFolio_component:after {
+		border-color: rgba(255, 255, 255, 0);
+		border-bottom-color: #e7e7e7;
+		border-width: 9px;
+		margin-left: -9px;
+	}
+	
+	.jumpToFolio_component:before {
+		border-color: rgba(194, 225, 245, 0);
+		border-bottom-color: rgba(90, 98, 102, 0.53);
+		border-width: 11px;
+		margin-left: -11px;
+	}
 }

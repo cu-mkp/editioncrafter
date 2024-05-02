@@ -1,34 +1,37 @@
-#globalNavigation {
-	display: flex;
-	align-items: center;
-	flex-direction: row-reverse;
-	font-size: max(0.9rem, 14.4px);
-	position: relative;
-	top: min(-4rem, -64px);
-	right: max(2rem, 32px);
-	float: right;
-	@include md {
-		display: block;
+.editioncrafter {
+
+	#globalNavigation {
+		display: flex;
+		align-items: center;
+		flex-direction: row-reverse;
+		font-size: max(0.9rem, 14.4px);
+		position: relative;
+		top: min(-4rem, -64px);
+		right: max(2rem, 32px);
+		float: right;
+		@include md {
+			display: block;
+		}
 	}
-}
-
-#globalNavigation .expandedViewOnly {
-	span, a {
-		color: white;
-		margin-left: max(1rem, 16px);
-		cursor: pointer;
+	
+	#globalNavigation .expandedViewOnly {
+		span, a {
+			color: white;
+			margin-left: max(1rem, 16px);
+			cursor: pointer;
+		}
 	}
-}
-
-#globalNavigation span .francais {
-	font-weight: 100;
-}
-
-#globalNavigation input {
-	height: max(1.5rem, 24px);
-	padding: 0 0 0 max(0.5rem, 8px);
-	font-style: italic;
-	border: 1px solid #00000063;
-	color: #756c6c;
-	background-color: #D8D8D8;
+	
+	#globalNavigation span .francais {
+		font-weight: 100;
+	}
+	
+	#globalNavigation input {
+		height: max(1.5rem, 24px);
+		padding: 0 0 0 max(0.5rem, 8px);
+		font-style: italic;
+		border: 1px solid #00000063;
+		color: #756c6c;
+		background-color: #D8D8D8;
+	}
 }

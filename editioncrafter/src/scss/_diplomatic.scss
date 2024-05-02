@@ -1,4 +1,4 @@
-#diplomatic {
+#diplomatic.editioncrafter {
 	container-type: inline-size;
 	container-name: diplomatic;
 	#content-view, .header-wrapper, #entry-list-view, #annotation-list-view {
@@ -225,7 +225,7 @@
 	}
 }
 
-#diplomatic.sticky {
+#diplomatic.editioncrafter.sticky {
 	.header-wrapper.sticky {
 		position: sticky;
 		top: 0;
@@ -233,7 +233,7 @@
 	}
 }
 
-#diplomatic {
+#diplomatic.editioncrafter {
 	#footer {
 		color: white;
 		background-color: $dark-maroon;
@@ -299,7 +299,7 @@
 	}
 }
 
-#diplomatic.fixed {
+#diplomatic.editioncrafter {
 	background: white;
 	// position: fixed;
 	width: auto;
