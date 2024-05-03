@@ -136,6 +136,8 @@ const ImageView = (props) => {
     if (folio.tileSource && viewer) {
       viewer.open(folio.tileSource);
       if (folio.annotations && anno) {
+        console.log(tileSource);
+        console.log(folio.annotations.filter((an) => an.target.selector[0].type == 'SvgSelector'));
         anno.setAnnotations(folio.annotations);
       }
     }

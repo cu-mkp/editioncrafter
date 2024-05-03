@@ -107,6 +107,17 @@ export const fullScreen = () => (
   </div>
 )
 
+export const odt = () => (
+  <EditionCrafter
+    documentName='caryatidum'
+    transcriptionTypes={{
+      'text-1': 'Text 1',
+      'text-2': 'Text 2'
+    }}
+    iiifManifest='http://localhost:6006/caryatidum/iiif/manifest.json'
+  />
+)
+
 export default {
   title: 'EditionCrafter',
 };
