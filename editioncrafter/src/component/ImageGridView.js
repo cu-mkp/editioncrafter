@@ -117,7 +117,9 @@ class ImageGridView extends React.Component {
   componentDidMount() {
     const { documentView } = this.props;
     const folioID = documentView[this.props.side].iiifShortID;
-    const thumbs = this.generateThumbs(folioID, this.state.currentDoc ? this.props.document.folios.filter((folio) => (folio.doc_id === this.state.currentDoc)) : this.props.document.folios);
+    const thumbs = this.generateThumbs(folioID, this.props.document.variorum && this.state.currentDoc ? this.props.document.folios.filter((folio) => (folio.doc_id === this.state.currentDoc)) : this.props.document.folios);
+    console.log(thumbs);
+    console.log(this.props.document.folios);
     const thumbCount = (thumbs.length > this.loadIncrement) ? this.loadIncrement : thumbs.length;
     const visibleThumbs = thumbs.slice(0, thumbCount);
     this.setState({ thumbs, visibleThumbs });
