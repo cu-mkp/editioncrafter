@@ -9,4 +9,3 @@ __tests__/integration/editioncrafter/css/
 .cache/
 storybook-static
 .DS_Store
-.github
