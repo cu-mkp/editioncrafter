@@ -61,12 +61,24 @@ const DocumentView = (props) => {
     
       return null;
     };
+
+    const reloadGlossary = async (glossary) => {
+      if (!glossary.loaded && glossary.URL) {
+        const glossaryData = fetch(glossary.URL).then((res) => (res.json()));
+        return glossaryData;
+      }
+    }
     // if the top-level component props have been updated such that the document initial state has been reinitialized, dispatch the loadDocument action with the new data
     if (!props.document.loaded) {
       reloadDocument(props.document).then((res) => {
-        console.log('reload', res);
         dispatchAction(props, 'DocumentActions.loadDocument', res);
       });
+    }
+    // update the glossary as well if necessary
+    if (!props.glossary.loaded && props.glossary.URL) {
+      reloadGlossary(props.glossary).then((res) => {
+        dispatchAction(props, 'GlossaryActions.loadGlossary', res);
+      })
     }
   }, [props.config]);
 
@@ -535,6 +547,7 @@ const DocumentView = (props) => {
 function mapStateToProps(state) {
   return {
     document: state.document,
+    glossary: state.glossary
   };
 }
 
