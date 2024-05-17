@@ -44,49 +44,6 @@ const DocumentView = (props) => {
     navigate(pathname + location.search);
   };
 
-  useEffect(() => {
-    const reloadDocument = async (document) => {
-      if (!document.loaded) {
-        // handle the case where we've passed in an array of manifest URLs, in which case the `variorum` parameter should be set to `true`
-        if (document.variorum) {
-          const variorumData = {};
-          for (const key of Object.keys(document.manifestURL)) {
-            const response = await fetch(document.manifestURL[key]).then((res) => (res.json()));
-            variorumData[key] = response.data;
-          }
-          const variorumManifest = {
-            type: 'variorum',
-            documentData: variorumData,
-          };
-          return variorumManifest;
-        }
-        const singleResponse = await fetch(document.manifestURL).then((res) => (res.json()));
-        return singleResponse;
-      }
-    
-      return null;
-    };
-
-    const reloadGlossary = async (glossary) => {
-      if (!glossary.loaded && glossary.URL) {
-        const glossaryData = fetch(glossary.URL).then((res) => (res.json()));
-        return glossaryData;
-      }
-    }
-    // if the top-level component props have been updated such that the document initial state has been reinitialized, dispatch the loadDocument action with the new data
-    if (!props.document.loaded) {
-      reloadDocument(props.document).then((res) => {
-        dispatchAction(props, 'DocumentActions.loadDocument', res);
-      });
-    }
-    // update the glossary as well if necessary
-    if (!props.glossary.loaded && props.glossary.URL) {
-      reloadGlossary(props.glossary).then((res) => {
-        dispatchAction(props, 'GlossaryActions.loadGlossary', res);
-      })
-    }
-  }, [props.config]);
-
   const getViewports = () => {
     const {
       folioID, transcriptionType, folioID2, transcriptionType2, folioID3, transcriptionType3
