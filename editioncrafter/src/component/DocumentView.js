@@ -30,6 +30,11 @@ const DocumentView = (props) => {
   const navigate = useNavigate();
   const location = useLocation();
 
+  //"reload" the page if the config props change
+  useEffect(() => {
+    dispatchAction(props, 'RouteListenerSaga.userNavigatation', location);
+  }, [props.config]);
+
   useEffect(() => {
     setSinglePaneMode(props.containerWidth < 960);
   }, [props.containerWidth]);
