@@ -375,6 +375,7 @@ const DocumentView = (props) => {
       hasNext: current_hasNext,
       previousFolioShortID: prevID,
       nextFolioShortID: nextID,
+      documentID: doc.variorum ? doc.folioIndex[shortID].doc_id : doc.documentName,
     };
   };
 
@@ -391,6 +392,7 @@ const DocumentView = (props) => {
     const viewType = determineViewType(side);
     const key = viewPaneKey(side);
     const folioID = docView[side].iiifShortID;
+    const document = docView[side].documentID;
     const { transcriptionType } = docView[side];
 
     if (viewType === 'ImageView') {
@@ -432,7 +434,7 @@ const DocumentView = (props) => {
           documentView={docView}
           documentViewActions={documentViewActions}
           side={side}
-          selectedDoc={props.document.variorum && Object.keys(props.document.derivativeNames)[side === 'left' ? 0 : side === 'right' ? 1 : Object.keys(props.document.derivativeNames).length > 2 ? 2 : 1]}
+          selectedDoc={document ? document : props.document.variorum && Object.keys(props.document.derivativeNames)[side === 'left' ? 0 : side === 'right' ? 1 : Object.keys(props.document.derivativeNames).length > 2 ? 2 : 1]}
         />
       );
     } if (viewType === 'GlossaryView') {

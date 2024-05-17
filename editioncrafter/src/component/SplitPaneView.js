@@ -109,8 +109,8 @@ class SplitPaneView extends Component {
 
   componentDidMount() {
     this.updateUI();
-    window.addEventListener('mousemove', this.onDrag);
-    window.addEventListener('mouseup', this.onEndDrag);
+    window.addEventListener('pointermove', this.onDrag);
+    window.addEventListener('pointerup', this.onEndDrag);
     window.addEventListener('resize', this.onResize);
     console.log(this.props);
     // Set the default width on mount
@@ -129,8 +129,8 @@ class SplitPaneView extends Component {
   }
 
   componentWillUnmount() {
-    window.removeEventListener('mousemove', this.onDrag);
-    window.removeEventListener('mouseup', this.onEndDrag);
+    window.removeEventListener('pointermove', this.onDrag);
+    window.removeEventListener('pointerup', this.onEndDrag);
     window.removeEventListener('resize', this.onResize);
   }
 
@@ -138,7 +138,7 @@ class SplitPaneView extends Component {
     const drawerIconClass = 'drawer-icon fas fa-caret-left fa-2x';
 
     return (
-      <div className={`divider ${position}_divider`} onMouseDown={() => this.onStartDrag(position)}>
+      <div className={`divider ${position}_divider`} onPointerDown={() => this.onStartDrag(position)}>
         <div className="drawer-button hidden" onClick={this.onDrawerButton}>
           <i className={drawerIconClass}> </i>
         </div>

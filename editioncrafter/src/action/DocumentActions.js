@@ -160,7 +160,7 @@ function parseSingleManifest(manifest, transcriptionTypes, document) {
       const thumbnailURL = `${bodyId}/full/${thumbnailDimensions.join(',')}/0/default.jpg`;
   
       const folio = {
-        id: folioID,
+        id: document ? `${document}_${folioID}` : folioID,
         doc_id: document || manifest.id,
         name: canvasLabel,
         pageNumber: i,
