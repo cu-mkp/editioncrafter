@@ -39,6 +39,37 @@ const DocumentView = (props) => {
     navigate(pathname + location.search);
   };
 
+  useEffect(() => {
+    const reloadDocument = async (document) => {
+      if (!document.loaded) {
+        // handle the case where we've passed in an array of manifest URLs, in which case the `variorum` parameter should be set to `true`
+        if (document.variorum) {
+          const variorumData = {};
+          for (const key of Object.keys(document.manifestURL)) {
+            const response = await fetch(document.manifestURL[key]).then((res) => (res.json()));
+            variorumData[key] = response.data;
+          }
+          const variorumManifest = {
+            type: 'variorum',
+            documentData: variorumData,
+          };
+          return variorumManifest;
+        }
+        const singleResponse = await fetch(document.manifestURL).then((res) => (res.json()));
+        return singleResponse;
+      }
+    
+      return null;
+    };
+    // if the top-level component props have been updated such that the document initial state has been reinitialized, dispatch the loadDocument action with the new data
+    if (!props.document.loaded) {
+      reloadDocument(props.document).then((res) => {
+        console.log('reload', res);
+        dispatchAction(props, 'DocumentActions.loadDocument', res);
+      });
+    }
+  }, [props.config]);
+
   const getViewports = () => {
     const {
       folioID, transcriptionType, folioID2, transcriptionType2, folioID3, transcriptionType3
@@ -62,19 +93,21 @@ const DocumentView = (props) => {
         }
       };
     }
-
-    const leftFolioID = folioID;
+    const leftFolioValid = Object.keys(document.folioIndex).includes(folioID);
+    const leftFolioID = leftFolioValid ? folioID : '-1';
     let leftTranscriptionType; let rightFolioID; let
       rightTranscriptionType; let thirdFolioID; let thirdTranscriptionType;
     if (folioID2) {
       // route /ec/:folioID/:transcriptionType/:folioID2/:transcriptionType2
-      leftTranscriptionType = transcriptionType;
-      rightFolioID = folioID2;
-      rightTranscriptionType = transcriptionType2 || firstTranscriptionType;
+      const rightFolioValid = Object.keys(document.folioIndex).includes(folioID2);
+      leftTranscriptionType = leftFolioValid ? transcriptionType : 'g';
+      rightFolioID = rightFolioValid ? folioID2 : '-1';
+      rightTranscriptionType = rightFolioValid ? transcriptionType2 ? transcriptionType2 : firstTranscriptionType : 'g';
       if (folioID3) {
         // route /ec/:folioID/:transcriptionType/:folioID2/:transcriptionType2/:folioID3/:transcriptionType3
-        thirdFolioID = folioID3;
-        thirdTranscriptionType = transcriptionType3 || firstTranscriptionType;
+        const thirdFolioValid = Object.keys(document.folioIndex).includes(folioID3);
+        thirdFolioID = thirdFolioValid ? folioID3 : '-1';
+        thirdTranscriptionType = thirdFolioValid ? transcriptionType3 ? transcriptionType3 : firstTranscriptionType : 'g';
       } else {
         thirdFolioID = '-1';
         thirdTranscriptionType = 'g';
@@ -83,8 +116,8 @@ const DocumentView = (props) => {
       // route /ec/:folioID
       // route /ec/:folioID/:transcriptionType
       leftTranscriptionType = 'f';
-      rightFolioID = folioID;
-      rightTranscriptionType = transcriptionType || firstTranscriptionType;
+      rightFolioID = leftFolioValid ? folioID : '-1';
+      rightTranscriptionType = leftFolioValid ? transcriptionType ? transcriptionType : firstTranscriptionType : 'g';
       thirdFolioID = '-1';
       thirdTranscriptionType = 'g';
     }
