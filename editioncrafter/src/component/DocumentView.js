@@ -30,6 +30,11 @@ const DocumentView = (props) => {
   const navigate = useNavigate();
   const location = useLocation();
 
+  //"reload" the page if the config props change
+  useEffect(() => {
+    dispatchAction(props, 'RouteListenerSaga.userNavigatation', location);
+  }, [props.config]);
+
   useEffect(() => {
     setSinglePaneMode(props.containerWidth < 960);
   }, [props.containerWidth]);
@@ -62,19 +67,21 @@ const DocumentView = (props) => {
         }
       };
     }
-
-    const leftFolioID = folioID;
+    const leftFolioValid = Object.keys(document.folioIndex).includes(folioID);
+    const leftFolioID = leftFolioValid ? folioID : '-1';
     let leftTranscriptionType; let rightFolioID; let
       rightTranscriptionType; let thirdFolioID; let thirdTranscriptionType;
     if (folioID2) {
       // route /ec/:folioID/:transcriptionType/:folioID2/:transcriptionType2
-      leftTranscriptionType = transcriptionType;
-      rightFolioID = folioID2;
-      rightTranscriptionType = transcriptionType2 || firstTranscriptionType;
+      const rightFolioValid = Object.keys(document.folioIndex).includes(folioID2);
+      leftTranscriptionType = leftFolioValid ? transcriptionType : 'g';
+      rightFolioID = rightFolioValid ? folioID2 : '-1';
+      rightTranscriptionType = rightFolioValid ? transcriptionType2 ? transcriptionType2 : firstTranscriptionType : 'g';
       if (folioID3) {
         // route /ec/:folioID/:transcriptionType/:folioID2/:transcriptionType2/:folioID3/:transcriptionType3
-        thirdFolioID = folioID3;
-        thirdTranscriptionType = transcriptionType3 || firstTranscriptionType;
+        const thirdFolioValid = Object.keys(document.folioIndex).includes(folioID3);
+        thirdFolioID = thirdFolioValid ? folioID3 : '-1';
+        thirdTranscriptionType = thirdFolioValid ? transcriptionType3 ? transcriptionType3 : firstTranscriptionType : 'g';
       } else {
         thirdFolioID = '-1';
         thirdTranscriptionType = 'g';
@@ -83,8 +90,8 @@ const DocumentView = (props) => {
       // route /ec/:folioID
       // route /ec/:folioID/:transcriptionType
       leftTranscriptionType = 'f';
-      rightFolioID = folioID;
-      rightTranscriptionType = transcriptionType || firstTranscriptionType;
+      rightFolioID = leftFolioValid ? folioID : '-1';
+      rightTranscriptionType = leftFolioValid ? transcriptionType ? transcriptionType : firstTranscriptionType : 'g';
       thirdFolioID = '-1';
       thirdTranscriptionType = 'g';
     }
@@ -368,6 +375,7 @@ const DocumentView = (props) => {
       hasNext: current_hasNext,
       previousFolioShortID: prevID,
       nextFolioShortID: nextID,
+      documentID: doc.variorum ? doc.folioIndex[shortID].doc_id : doc.documentName,
     };
   };
 
@@ -384,6 +392,7 @@ const DocumentView = (props) => {
     const viewType = determineViewType(side);
     const key = viewPaneKey(side);
     const folioID = docView[side].iiifShortID;
+    const document = docView[side].documentID;
     const { transcriptionType } = docView[side];
 
     if (viewType === 'ImageView') {
@@ -425,7 +434,7 @@ const DocumentView = (props) => {
           documentView={docView}
           documentViewActions={documentViewActions}
           side={side}
-          selectedDoc={props.document.variorum && Object.keys(props.document.derivativeNames)[side === 'left' ? 0 : side === 'right' ? 1 : Object.keys(props.document.derivativeNames).length > 2 ? 2 : 1]}
+          selectedDoc={document ? document : props.document.variorum && Object.keys(props.document.derivativeNames)[side === 'left' ? 0 : side === 'right' ? 1 : Object.keys(props.document.derivativeNames).length > 2 ? 2 : 1]}
         />
       );
     } if (viewType === 'GlossaryView') {
@@ -502,6 +511,7 @@ const DocumentView = (props) => {
 function mapStateToProps(state) {
   return {
     document: state.document,
+    glossary: state.glossary
   };
 }
 

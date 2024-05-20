@@ -117,7 +117,9 @@ class ImageGridView extends React.Component {
   componentDidMount() {
     const { documentView } = this.props;
     const folioID = documentView[this.props.side].iiifShortID;
-    const thumbs = this.generateThumbs(folioID, this.state.currentDoc ? this.props.document.folios.filter((folio) => (folio.doc_id === this.state.currentDoc)) : this.props.document.folios);
+    const thumbs = this.generateThumbs(folioID, this.props.document.variorum && this.state.currentDoc ? this.props.document.folios.filter((folio) => (folio.doc_id === this.state.currentDoc)) : this.props.document.folios);
+    console.log(thumbs);
+    console.log(this.props.document.folios);
     const thumbCount = (thumbs.length > this.loadIncrement) ? this.loadIncrement : thumbs.length;
     const visibleThumbs = thumbs.slice(0, thumbCount);
     this.setState({ thumbs, visibleThumbs });
@@ -136,9 +138,9 @@ class ImageGridView extends React.Component {
     const thumbs = folios.map((folio, index) => (
       // eslint-disable-next-line react/no-array-index-key
       <li key={`thumb-${index}`} className="thumbnail">
-        <figure className={(folio.id === currentID) ? 'current' : ''}><a id={folio.id} onClick={this.onClickThumb.bind(this, folio.id)}><img src={folio.image_thumbnail_url} alt={folio.name} style={{maxWidth: "130px", maxHeight: "130px"}} onError={({ currentTarget }) => {currentTarget.onerror = null; if (folio.image_zoom_url && currentTarget.src !== `${folio.image_zoom_url.slice(0, -9)}full/full/0/default.jpg`) {currentTarget.src=`${folio.image_zoom_url.slice(0, -9)}full/full/0/default.jpg`;} }} /></a></figure>
-        <figcaption className={(folio.id === currentID) ? 'thumbnail-caption current' : 'thumbnail-caption'}>
-          {(folio.id === currentID) ? (`*${folio.name}`) : folio.name}
+        <figure><a id={folio.id} onClick={this.onClickThumb.bind(this, folio.id)}><img src={folio.image_thumbnail_url} alt={folio.name} style={{maxWidth: "130px", maxHeight: "130px"}} onError={({ currentTarget }) => {currentTarget.onerror = null; if (folio.image_zoom_url && currentTarget.src !== `${folio.image_zoom_url.slice(0, -9)}full/full/0/default.jpg`) {currentTarget.src=`${folio.image_zoom_url.slice(0, -9)}full/full/0/default.jpg`;} }} /></a></figure>
+        <figcaption className='thumbnail-caption'>
+          {folio.name}
         </figcaption>
 
       </li>

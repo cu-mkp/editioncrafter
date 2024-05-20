@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import EditionCrafter from '../src/index';
 
 export const BowInTheCloud = () => (
@@ -57,25 +57,49 @@ export const IntervistePescatori = () => (
   />
 );
 
-export const MultiDocument = () => (
+export const OrnamentDesignTranslation = () => (
   <EditionCrafter
-    documentName='FHL_007548733_TAOS_BAPTISMS_BATCH_2 and eng-415-145a'
-    threePanel
+    documentName='Ornament : Design : Translation'
     documentInfo={{
-      FHL_007548733_TAOS_BAPTISMS_BATCH_2: {
-        documentName: 'Taos Baptisms Batch 2',
+      caryatidum: {
+        documentName: 'caryatidum',
         transcriptionTypes: {
-          translation: 'Translation',
-          transcription: 'Transcription',
+          'text-1': 'Text 1',
+          'text-2': 'Text 2',
         },
-        iiifManifest: 'https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/manifest.json',
+        iiifManifest: 'https://cu-mkp.github.io/odt-editioncrafter-data/texts/caryatidum/iiif/manifest.json',
       },
-      eng_415_145a: {
-        documentName: 'Eng 415-145a',
+      grotisch_fur_alle_kunstler: {
+        documentName: 'grotisch_fur_alle_kunstler',
         transcriptionTypes: {
-          'eng-415-145a': 'Transcription',
+          'text-1': 'Text 1',
+          'text-2': 'Text 2',
         },
-        iiifManifest: 'https://cu-mkp.github.io/bic-editioncrafter-data/eng-415-145a/iiif/manifest.json',
+        iiifManifest: 'https://cu-mkp.github.io/odt-editioncrafter-data/texts/grotisch_fur_alle_kunstler/iiif/manifest.json',
+      },
+      mansches_de_coutiaus: {
+        documentName: 'mansches_de_coutiaus',
+        transcriptionTypes: {
+          'text-1': 'Text 1',
+          'text-2': 'Text 2',
+        },
+        iiifManifest: 'https://cu-mkp.github.io/odt-editioncrafter-data/texts/mansches_de_coutiaus/iiif/manifest.json',
+      },
+      passio_verbigenae: {
+        documentName: 'passio_verbigenae',
+        transcriptionTypes: {
+          'text-1': 'Text 1',
+          'text-2': 'Text 2',
+        },
+        iiifManifest: 'https://cu-mkp.github.io/odt-editioncrafter-data/texts/passio_verbigenae/iiif/manifest.json',
+      },
+      veelderley_veranderinghe_van_grotissen: {
+        documentName: 'veelderley_veranderinghe_van_grotissen',
+        transcriptionTypes: {
+          'text-1': 'Text 1',
+          'text-2': 'Text 2',
+        },
+        iiifManifest: 'https://cu-mkp.github.io/odt-editioncrafter-data/texts/veelderley_veranderinghe_van_grotissen/iiif/manifest.json',
       },
     }}
   />
@@ -106,6 +130,31 @@ export const fullScreen = () => (
     />
   </div>
 )
+
+export const stateChange = () => {
+  const [manifest, setManifest] = useState('https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/manifest.json');
+  const [glossary, setGlossary] = useState(undefined);
+  const [title, setTitle] = useState('FHL_007548733_TAOS_BAPTISMS_BATCH_2')
+
+  useEffect(() => {
+    setTimeout(() => {
+      //setManifest('https://cu-mkp.github.io/dyngleyfamily-editioncrafter-data/O_8_35/iiif/manifest.json');
+      setGlossary('https://cu-mkp.github.io/editioncrafter-data/fr640_3r-3v-example/glossary.json');
+      setTitle('Taos Baptisms Batch 2');
+    }, 10000);
+  }, [])
+  
+  return (<EditionCrafter
+  documentName={title}
+  transcriptionTypes={{
+    translation: 'Translation',
+    transcription: 'Transcription',
+  }}
+  iiifManifest={manifest}
+  glossaryURL={glossary}
+/>)
+
+}
 
 export default {
   title: 'EditionCrafter',
