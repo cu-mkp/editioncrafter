@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import EditionCrafter from '../src/index';
 
 export const BowInTheCloud = () => (
@@ -130,6 +130,31 @@ export const fullScreen = () => (
     />
   </div>
 )
+
+export const stateChange = () => {
+  const [manifest, setManifest] = useState('https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/manifest.json');
+  const [glossary, setGlossary] = useState(undefined);
+  const [title, setTitle] = useState('FHL_007548733_TAOS_BAPTISMS_BATCH_2')
+
+  useEffect(() => {
+    setTimeout(() => {
+      //setManifest('https://cu-mkp.github.io/dyngleyfamily-editioncrafter-data/O_8_35/iiif/manifest.json');
+      setGlossary('https://cu-mkp.github.io/editioncrafter-data/fr640_3r-3v-example/glossary.json');
+      setTitle('Taos Baptisms Batch 2');
+    }, 10000);
+  }, [])
+  
+  return (<EditionCrafter
+  documentName={title}
+  transcriptionTypes={{
+    translation: 'Translation',
+    transcription: 'Transcription',
+  }}
+  iiifManifest={manifest}
+  glossaryURL={glossary}
+/>)
+
+}
 
 export default {
   title: 'EditionCrafter',

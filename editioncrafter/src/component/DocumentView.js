@@ -30,6 +30,11 @@ const DocumentView = (props) => {
   const navigate = useNavigate();
   const location = useLocation();
 
+  //"reload" the page if the config props change
+  useEffect(() => {
+    dispatchAction(props, 'RouteListenerSaga.userNavigatation', location);
+  }, [props.config]);
+
   useEffect(() => {
     setSinglePaneMode(props.containerWidth < 960);
   }, [props.containerWidth]);
@@ -62,19 +67,21 @@ const DocumentView = (props) => {
         }
       };
     }
-
-    const leftFolioID = folioID;
+    const leftFolioValid = Object.keys(document.folioIndex).includes(folioID);
+    const leftFolioID = leftFolioValid ? folioID : '-1';
     let leftTranscriptionType; let rightFolioID; let
       rightTranscriptionType; let thirdFolioID; let thirdTranscriptionType;
     if (folioID2) {
       // route /ec/:folioID/:transcriptionType/:folioID2/:transcriptionType2
-      leftTranscriptionType = transcriptionType;
-      rightFolioID = folioID2;
-      rightTranscriptionType = transcriptionType2 || firstTranscriptionType;
+      const rightFolioValid = Object.keys(document.folioIndex).includes(folioID2);
+      leftTranscriptionType = leftFolioValid ? transcriptionType : 'g';
+      rightFolioID = rightFolioValid ? folioID2 : '-1';
+      rightTranscriptionType = rightFolioValid ? transcriptionType2 ? transcriptionType2 : firstTranscriptionType : 'g';
       if (folioID3) {
         // route /ec/:folioID/:transcriptionType/:folioID2/:transcriptionType2/:folioID3/:transcriptionType3
-        thirdFolioID = folioID3;
-        thirdTranscriptionType = transcriptionType3 || firstTranscriptionType;
+        const thirdFolioValid = Object.keys(document.folioIndex).includes(folioID3);
+        thirdFolioID = thirdFolioValid ? folioID3 : '-1';
+        thirdTranscriptionType = thirdFolioValid ? transcriptionType3 ? transcriptionType3 : firstTranscriptionType : 'g';
       } else {
         thirdFolioID = '-1';
         thirdTranscriptionType = 'g';
@@ -83,8 +90,8 @@ const DocumentView = (props) => {
       // route /ec/:folioID
       // route /ec/:folioID/:transcriptionType
       leftTranscriptionType = 'f';
-      rightFolioID = folioID;
-      rightTranscriptionType = transcriptionType || firstTranscriptionType;
+      rightFolioID = leftFolioValid ? folioID : '-1';
+      rightTranscriptionType = leftFolioValid ? transcriptionType ? transcriptionType : firstTranscriptionType : 'g';
       thirdFolioID = '-1';
       thirdTranscriptionType = 'g';
     }
@@ -504,6 +511,7 @@ const DocumentView = (props) => {
 function mapStateToProps(state) {
   return {
     document: state.document,
+    glossary: state.glossary
   };
 }
 
