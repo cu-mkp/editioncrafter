@@ -25,7 +25,9 @@ export async function loadFolio(folioData) {
       try {
         const htmlURLResponse = await fetch(htmlURL)
         const xmlURLResponse = await fetch(xmlURL)
-        const transcription = parseTranscription(htmlURLResponse.body, xmlURLResponse.body);
+        const html = await htmlURLResponse.text()
+        const xml = await xmlURLResponse.text()
+        const transcription = parseTranscription(html, xml);
         if (!transcription) {
           throw new Error(`Unable to load transcription: ${htmlURL}`)
         } else {
