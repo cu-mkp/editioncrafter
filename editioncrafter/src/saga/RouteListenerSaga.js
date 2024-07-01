@@ -1,5 +1,4 @@
 /* eslint-disable prefer-destructuring */
-import axios from 'axios';
 import { takeEvery, select } from 'redux-saga/effects';
 
 // eslint-disable-next-line import/no-cycle
@@ -34,8 +33,8 @@ function* resolveDocumentManifest() {
     if (document.variorum) {
       const variorumData = {};
       for (const key of Object.keys(document.manifestURL)) {
-        const response = yield axios.get(document.manifestURL[key]);
-        variorumData[key] = response.data;
+        const response = yield fetch(document.manifestURL[key]);
+        variorumData[key] = yield response.json();
       }
       const variorumManifest = {
         type: 'variorum',
@@ -44,9 +43,10 @@ function* resolveDocumentManifest() {
       yield putResolveAction('DocumentActions.loadDocument', variorumManifest);
       return variorumManifest;
     }
-    const singleResponse = yield axios.get(document.manifestURL);
-    yield putResolveAction('DocumentActions.loadDocument', singleResponse.data);
-    return singleResponse.data;
+    const singleResponse = yield fetch(document.manifestURL);
+    const json = yield singleResponse.json()
+    yield putResolveAction('DocumentActions.loadDocument', json);
+    return json;
   }
 
   return null;
@@ -86,8 +86,9 @@ function* resolveGlossary() {
   const glossary = yield select(justGlossary);
   // NOTE: need to figure out how to deal with glossary for multidocument manifests
   if (!glossary.loaded && glossary.URL) {
-    const response = yield axios.get(glossary.URL);
-    yield putResolveAction('GlossaryActions.loadGlossary', response.data);
+    const response = yield fetch(glossary.URL);
+    const json = yield response.json()
+    yield putResolveAction('GlossaryActions.loadGlossary', json);
   }
 }
 
