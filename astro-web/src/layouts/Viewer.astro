@@ -52,15 +52,27 @@ const { title, documentName, transcriptionTypes, iiifManifest, documentInfo, thr
                 </Container>
             ) : null
         }
-        <EditionCrafter
-            documentName={documentName}
-            documentInfo={documentInfo}
-            transcriptionTypes={transcriptionTypes}
-            iiifManifest={iiifManifest}
-            glossaryURL={glossaryURL}
-            threePanel={threePanel}
-            client:only
-            transition:persist
-        />
+        {
+            documentInfo ? ( 
+                <EditionCrafter
+                    documentInfo={documentInfo}
+                    documentName={documentName}
+                    glossaryURL={glossaryURL}
+                    threePanel={threePanel}
+                    client:only
+                    transition:persist
+                />
+            ) : ( 
+                <EditionCrafter
+                    documentName={documentName}
+                    transcriptionTypes={transcriptionTypes}
+                    iiifManifest={iiifManifest}
+                    glossaryURL={glossaryURL}
+                    threePanel={threePanel}
+                    client:only
+                    transition:persist
+                />
+            )
+        }
     </div>
 </Layout>

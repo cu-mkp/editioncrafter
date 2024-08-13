@@ -4,10 +4,29 @@ import Viewer from "../../layouts/Viewer.astro";
 
 <Viewer
     threePanel
-    documentName='ElyGreenMS'
-    transcriptionTypes={{
-    transcription: 'Transcription'
-    }}
-    iiifManifest='https://performant-software.github.io/elygreen-variorum-data/ElyGreenMS/iiif/manifest.json'
-    title="Ely Green Manuscript"
+    documentName='Ely Green Variorum',
+            documentInfo={{
+                egA: {
+                  documentName: 'EG A',
+                  transcriptionTypes: {
+                    'text': 'Transcription'
+                  },
+                  iiifManifest: 'https://faircopy.cloud/documents/eg-a/iiif/manifest.json'
+                },
+                egB: {
+                  documentName: 'EG B',
+                  transcriptionTypes: {
+                    'DerivativeB': 'Transcription'
+                  },
+                  iiifManifest: 'https://faircopy.cloud/documents/eg-b/iiif/manifest.json'
+                },
+                ElyGreenMS: {
+                  documentName: 'ElyGreen MS',
+                  transcriptionTypes: {
+                    'transcription': 'Transcription'
+                  },
+                  iiifManifest: 'https://faircopy.cloud/documents/ElyGreenMS/iiif/manifest.json'
+                },
+            }}
+    title="Ely Green Variorum"
 />
