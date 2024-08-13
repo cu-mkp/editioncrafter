@@ -1,0 +1,57 @@
+---
+import Viewer from "../../layouts/Viewer.astro";
+const blurb = [`Ornament : Design : Translation (O:D:T) explores how European ornament prints were—in their own words—useful. The project examines a corpus of ornament print series featuring title pages (ca. 1550–1620), and it analyzes their shared features, rhetorical strategies, and claims. Notably, the title pages include claims that the designs are useful for specific yet very different artisans, from painters and carvers to goldsmiths and embroiderers. The frequent appearance of these claims has led scholars to overlook them as merely rhetorical—that is, empty of meaning for the practice of art. After all, how could a design on paper be useful for artisans brushing on paint, carving in wood, casting in silver, or embroidering with threads, other than in the most vague and general way?`,
+`A means to test these claims is available through the reconstruction of historical making techniques. Reconstruction opens a window onto issues surrounding early modern artisanal skill, tacit knowledge, and material imaginaries. The compilation of artisanal recipes and their scholarly interpretation has inaugurated a reappraisal of non-textual knowledge and ways to access it.`,
+`O:D:T builds on this direction in scholarship to ask three questions: 1) how readily could printed designs be adapted, scaled, and translated into various 2D and 3D media, and 2) what kind of considerations and constraints influenced the design of these prints, and 3) how has cultural attitudes toward ornament affected the practical use and afterlife of these prints. To address these questions, the project brings together art and material culture ca. 1500–1700, documentary evidence from period artists’ contracts and commissions, and modern laboratory reconstructions of Renaissance artisanal recipes and techniques for various types of ornamental work, including papier-mâché, stucco, imitation stonework, metal casting, wood carving, textile work, and surface treatments.`,
+`The project's core output will be an open-access corpus of engravings presented as a digital collection, augmented with translations, standardized vocabularies, multimedia field/lab notes documenting the reconstruction processes, and interpretive essays.`]
+const url = 'https://pvfa.tamu.edu/news/2024/04/01/research-spotlight-dr-tianna-uchacz-studying-ornament-print-title-pages-through-arts-and-humanities-fellowship/'
+---
+
+<Viewer
+    documentName='Ornament : Design : Translation'
+    documentInfo={{
+    caryatidum: {
+        documentName: 'caryatidum',
+        transcriptionTypes: {
+        'text-1': 'Text 1',
+        'text-2': 'Text 2',
+        },
+        iiifManifest: 'https://cu-mkp.github.io/odt-editioncrafter-data/texts/caryatidum/iiif/manifest.json',
+    },
+    grotisch_fur_alle_kunstler: {
+        documentName: 'grotisch_fur_alle_kunstler',
+        transcriptionTypes: {
+        'text-1': 'Text 1',
+        'text-2': 'Text 2',
+        },
+        iiifManifest: 'https://cu-mkp.github.io/odt-editioncrafter-data/texts/grotisch_fur_alle_kunstler/iiif/manifest.json',
+    },
+    mansches_de_coutiaus: {
+        documentName: 'mansches_de_coutiaus',
+        transcriptionTypes: {
+        'text-1': 'Text 1',
+        'text-2': 'Text 2',
+        },
+        iiifManifest: 'https://cu-mkp.github.io/odt-editioncrafter-data/texts/mansches_de_coutiaus/iiif/manifest.json',
+    },
+    passio_verbigenae: {
+        documentName: 'passio_verbigenae',
+        transcriptionTypes: {
+        'text-1': 'Text 1',
+        'text-2': 'Text 2',
+        },
+        iiifManifest: 'https://cu-mkp.github.io/odt-editioncrafter-data/texts/passio_verbigenae/iiif/manifest.json',
+    },
+    veelderley_veranderinghe_van_grotissen: {
+        documentName: 'veelderley_veranderinghe_van_grotissen',
+        transcriptionTypes: {
+        'text-1': 'Text 1',
+        'text-2': 'Text 2',
+        },
+        iiifManifest: 'https://cu-mkp.github.io/odt-editioncrafter-data/texts/veelderley_veranderinghe_van_grotissen/iiif/manifest.json',
+    },
+    }}
+    title="Ornament : Design : Translation"
+    blurb={blurb}
+    url={url}
+/>

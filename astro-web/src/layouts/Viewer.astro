@@ -4,35 +4,54 @@ import Container from '../components/Container.astro';
 import { Image } from 'astro:assets';
 import leftArrow from '../assets/arrow-left.svg';
 import EditionCrafter from "@cu-mkp/editioncrafter";
+import Button from '../components/Button.astro';
 
 export interface Props {
     title: string,
     documentName: string,
-    transcriptionTypes: any,
-    iiifManifest: string,
+    transcriptionTypes?: any,
+    iiifManifest?: string,
     glossaryURL?: string,
     documentInfo?: any,
-    threePanel?: boolean
+    threePanel?: boolean,
+    blurb?: string[],
+    url?: string
 }
 
-const { title, documentName, transcriptionTypes, iiifManifest, documentInfo, threePanel, glossaryURL } = Astro.props;
+const { title, documentName, transcriptionTypes, iiifManifest, documentInfo, threePanel, glossaryURL, blurb, url } = Astro.props;
 
 ---
 
 <Layout title={title} transitions={false}>
     <div class="bg-neutral w-full">
         <Container className="flex flex-row gap-16 items-center">
-            <a href="/editioncrafter">
-                <div class="border-neutral-dark border-2 rounded-full p-4 hover:scale-105">
-                    <Image src={leftArrow} alt="Go Back" />
-                </div>
-            </a>
-            <h1 class="font-serif text-5xl py-16">
-                { title }
-            </h1>
+                <a href="/editioncrafter">
+                    <div class="border-neutral-dark border-2 rounded-full p-4 hover:scale-105">
+                        <Image src={leftArrow} alt="Go Back" />
+                    </div>
+                </a>
+                <h1 class="font-serif text-5xl py-16">
+                    { title }
+                </h1>
         </Container>
     </div>  
     <div class="w-full h-[80dvh] bg-white">
+        {
+            (blurb && blurb.length || url) ? ( 
+                <Container className="flex flex-col gap-8 py-12">
+                    {
+                        blurb && blurb.length && blurb.map((para) => 
+                            <p class="leading-loose font-light">{ para }</p>
+                        )
+                    }
+                    {
+                        url && <Button href={url}>
+                            Learn More
+                        </Button>
+                    }
+                </Container>
+            ) : null
+        }
         <EditionCrafter
             documentName={documentName}
             documentInfo={documentInfo}
