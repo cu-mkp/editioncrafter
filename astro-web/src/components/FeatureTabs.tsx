@@ -22,7 +22,7 @@ const FeatureTabs = () => {
                             Supports multiple transcriptions and translations
                         </h3>
                         <p className="text-neutral-gray">
-                            An edition can comprise multiple renditions of a source text, including transcriptions, normalized transcriptions, and translations. Through styling, it supports discontinuous text, inline figures, and special characters, EditionCrafter provides tools for precise transcription and translation.                        
+                            An edition can comprise multiple renditions of a source text, including transcriptions, normalized transcriptions, and translations. Through styling, it supports discontinuous text, inline figures, and special characters. EditionCrafter provides tools for precise transcription and translation.                        
                         </p>
                     </div>
                 </div>
