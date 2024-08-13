@@ -1,76 +1,64 @@
 import OpenSeadragon from 'openseadragon';
-import axios from 'axios';
 import { layoutMargin3 } from './folioLayout';
 
-export function loadFolio(folioData) {
+export async function loadFolio(folioData) {
   if (folioData.loading) {
-    // promise to resolve this immediately
-    return new Promise((resolve) => {
-      resolve(folioData);
-    });
+    return folioData
   }
+
   folioData.loading = true;
   const folio = { ...folioData };
+  const transcriptionTypes = Object.keys(folio.annotationURLs);
+  const transcriptionTypeTracker = Object.fromEntries(transcriptionTypes.map((t) => [t, false]));
 
-  // promise to load all the data for this folio
-  return new Promise((resolve, reject) => {
-    const transcriptionTypes = Object.keys(folio.annotationURLs);
-    const transcriptionTypeTracker = Object.fromEntries(transcriptionTypes.map((t) => [t, false]));
-    if (transcriptionTypes.length > 0) {
-      axios.get(folio.image_zoom_url).then((imageServerResponse) => {
-        // Handle the image server response
-        folio.tileSource = new OpenSeadragon.IIIFTileSource(imageServerResponse.data);
+  if (transcriptionTypes.length > 0) {
+    const response = await fetch(folio.image_zoom_url)
+    const imageServerResponse = await response.json()
+    // Handle the image server response
+    folio.tileSource = new OpenSeadragon.IIIFTileSource(imageServerResponse);
 
-        for (const transcriptionType of transcriptionTypes) {
-          const { htmlURL, xmlURL } = folio.annotationURLs[transcriptionType];
-          if (!folio.transcription) folio.transcription = {};
-          folio.transcription[transcriptionType] = {};
-          axios.all([
-            axios.get(htmlURL),
-            axios.get(xmlURL),
-          ]).then(axios.spread((
-            htmlResponse,
-            xmlResponse,
-          ) => {
-            const transcription = parseTranscription(htmlResponse.data, xmlResponse.data);
-            if (!transcription) {
-              reject(new Error(`Unable to load transcription: ${htmlURL}`));
-            } else {
-              folio.transcription[transcriptionType] = transcription;
-              folio.loading = false;
-              transcriptionTypeTracker[transcriptionType] = true;
-            }
-          }))
-            .catch((error) => {
-              folioData.loading = false;
-              reject(error);
-            })
-            .finally(() => {
-              // Only resolve once all transcription types have been fetched
-              if (Object.values(transcriptionTypeTracker).filter(v => !v).length === 0) {
-                resolve(folio);
-              }
-            });
-        }
-      })
-        .catch((error) => {
-          folioData.loading = false;
-          reject(error);
-        });
-    } else {
-      // if there is no annotatation list, just load the image and provide a blank transcription
-      axios.get(folio.image_zoom_url)
-        .then((imageServerResponse) => {
-          folio.tileSource = new OpenSeadragon.IIIFTileSource(imageServerResponse.data);
+    for (const transcriptionType of transcriptionTypes) {
+      const { htmlURL, xmlURL } = folio.annotationURLs[transcriptionType];
+      if (!folio.transcription) folio.transcription = {};
+      folio.transcription[transcriptionType] = {};
+
+      try {
+        const htmlURLResponse = await fetch(htmlURL)
+        const xmlURLResponse = await fetch(xmlURL)
+        const html = await htmlURLResponse.text()
+        const xml = await xmlURLResponse.text()
+        const transcription = parseTranscription(html, xml);
+        if (!transcription) {
+          throw new Error(`Unable to load transcription: ${htmlURL}`)
+        } else {
+          folio.transcription[transcriptionType] = transcription;
           folio.loading = false;
-          resolve(folio);
-        })
-        .catch((error) => {
+          transcriptionTypeTracker[transcriptionType] = true;
+        }  
+      } catch(error) {
           folioData.loading = false;
-          reject(error);
-        });
+          throw error;
+      }
     }
-  });
+
+    // Once all transcription types have been fetched
+    if (Object.values(transcriptionTypeTracker).filter(v => !v).length === 0) {
+      return folio;
+    }
+  } else {
+    // if there is no annotatation list, just load the image and provide a blank transcription
+    try {
+      const response = await fetch(folio.image_zoom_url)
+      const imageServerResponse = await response.json()
+      folio.tileSource = new OpenSeadragon.IIIFTileSource(imageServerResponse);
+      folio.loading = false;
+      return folio
+    } 
+    catch(error) {
+        folioData.loading = false;
+        throw error;
+    }
+  }
 }
 
 // returns transcription or error message if unable to parse
