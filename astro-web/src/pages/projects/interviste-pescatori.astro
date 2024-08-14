@@ -1,5 +1,7 @@
 ---
 import Viewer from "../../layouts/Viewer.astro";
+const blurb = [`Around 1641 Galileo Galilei’s beloved pupil, Benedetto Castelli (ca. 1577–1643), presented to the Venetian Senate his expert advice on the most pressing hydrogeological problems impacting the Lagoon of Venice. The text, entitled Considerazione intorno alla laguna di Venezia [Consideration on the Venetian Lagoon], was printed for the first time posthumously, in the 1660 edition of Castelli’s renowned work, Della misura dell’acque correnti [On the Measurement of Running Waters] (Bologna, 1660). It offered an unexpected (for the Venetians) diagnosis of the reasons for the reduction of the water depth of the lagoon and a controversial solution to the problem. A manuscript copy of his Consideration on the Venetian Lagoon, preserved in the State Archives of Venice, and is linked to the activities of the water officers who were in charge of controlling all activities concerning water. Castelli’s text is part of a documentation folder entitled “Scritture sulle condizioni e stato della Laguna” [Writings on the conditions and state of the Lagoon], which is preserved in the acts of the Savi ed esecutori alle acque, pezzo 123 [the water magistrate’s acts].`,
+`The research on these sources has been conducted at Ca' Foscari University of Venice, Italy, in the framework of the EarlyGeoPraxis EarlyGeoPraxis (FARE project funded by the Italian Ministry of University and Research, cod. R184WNSTWH).`]
 ---
 
 <Viewer
@@ -10,4 +12,5 @@ import Viewer from "../../layouts/Viewer.astro";
     }}
     iiifManifest='https://cu-mkp.github.io/venice-editioncrafter-data/data/interviste-pescatori_1r-35v/iiif/manifest.json'
     title="Interviste Pescatori"
+    blurb={blurb}
 />

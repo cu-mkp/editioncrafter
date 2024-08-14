@@ -1,5 +1,7 @@
 ---
 import Viewer from "../../layouts/Viewer.astro";
+const blurb = [`An edition of the anti-slavery literary anthology of The Bow in the Cloud, edited by the British abolitionist Mary Anne Rawson. This 400-page anthology, published in 1834, featured a mix of professional and non-professional writers who worked for anti-slavery societies across Great Britain. It also has a massive manuscript archive of over 600 items which shows Rawson’s solicitation letters, the cover letters sent to Rawson by contributors, original submissions, and revised fair copies of those submissions edited by Rawson and her colleagues. The aspiration of this edition is to show the genesis of the anthology, but also to demonstrate the networks involved in the making of it.`]
+const url = 'https://antislavery-anthologies.org/books/bow-in-the-cloud/index'
 ---
 
 <Viewer
@@ -9,4 +11,6 @@ import Viewer from "../../layouts/Viewer.astro";
     }}
     iiifManifest='https://cu-mkp.github.io/bic-editioncrafter-data/eng-415-145a/iiif/manifest.json'
     title="Bow In The Cloud"
+    blurb={blurb}
+    url={url}
 />

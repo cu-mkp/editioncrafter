@@ -1,5 +1,9 @@
 ---
 import Viewer from "../../layouts/Viewer.astro";
+const blurb = [`Sometime after 1579, an anonymous individual began recording many different processes and techniques we would now classify as belonging to the fine arts, crafts, and various technologies.`,
+`Over the course of an unknown span of time (probably until 1588), this person filled 170 folios (or 340 single pages) with closely-written text and some hand-drawn figures containing recipes, instructions, fragmentary notes, firsthand accounts of trials with many materials and techniques, and observations on myriad subjects, including drawing instruction, pigment application, dyeing, coloring of metal, wax, and wood, imitation gem production, making molds and metal casts, arms and armor, plant and tree cultivation, preservation of animals, plants, and foodstuffs, distillation of turpentine, and much else.`,
+`The resulting manuscript, now housed in the Bibliothèque nationale de France (BnF) as Ms. Fr. 640, has been preserved since the early seventeenth century in the binding of Philippe de Béthune, count of Selles and Charost, apparently the manuscript’s first owner. Entitled Choses diverses (diverse things) on its spine, it entered the King’s Library (the core of the later BnF) as part of the donation of the Béthune family’s library in 1662 by Philippe’s son, Hippolyte de Béthune. Ms. Fr. 640 is a unique record giving insight into many subjects, but is focused especially on processes and practices of making things from natural materials. Thus, it is an especially valuable source for the history of craft and material culture, and for the history of art and science in the late sixteenth and early seventeenth centuries. Many things about this manuscript are, however, extraordinarily intriguing and puzzling.`]
+const url = 'https://edition640.makingandknowing.org/'
 ---
 
 <Viewer
@@ -13,4 +17,6 @@ import Viewer from "../../layouts/Viewer.astro";
     iiifManifest='https://cu-mkp.github.io/editioncrafter-data/fr640_3r-3v-example/iiif/manifest.json'
     glossaryURL='https://cu-mkp.github.io/editioncrafter-data/fr640_3r-3v-example/glossary.json'
     title="BnF Ms. Fr. 640"
+    blurb={blurb}
+    url={url}
 />

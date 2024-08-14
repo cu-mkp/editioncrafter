@@ -1,5 +1,7 @@
 ---
 import Viewer from "../../layouts/Viewer.astro";
+const blurb = [`Early modern English people were avid collectors of medieval manuscripts filled with centuries-old texts related to medicine, astrology, agriculture, or craft manufacture. Having tracked and compiled data on early modern reader marks in over 115 later medieval manuscripts, the project “Old Books, New Science” seeks to understand why early modern readers valued this medieval knowledge, how generations of readers engaged with these manuscripts over time, and what role these older books played in the development of the new science. The first stage of the project focuses on Trinity College Cambridge MS O.8.35, a later fifteenth-century guide to medical practice.`]
+const url = 'https://github.com/cu-mkp/dyngleyfamily-editioncrafter-data'
 ---
 
 <Viewer
@@ -9,4 +11,6 @@ import Viewer from "../../layouts/Viewer.astro";
     }}
     iiifManifest='https://cu-mkp.github.io/dyngleyfamily-editioncrafter-data/O_8_35/iiif/manifest.json'
     title="Dyngley Family"
+    blurb={blurb}
+    url={url}
 />

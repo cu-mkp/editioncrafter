@@ -10,5 +10,8 @@
     "build-astro": "cd astro-web && npm run build"
   },
   "license": "MIT",
-  "repository": "https://github.com/cu-mkp/editioncrafter"
+  "repository": "https://github.com/cu-mkp/editioncrafter",
+  "dependencies": {
+    "@cu-mkp/editioncrafter": "^1.0.3"
+  }
 }
