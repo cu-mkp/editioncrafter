@@ -1,4 +1,6 @@
-import React, { useEffect, useMemo, useRef, useState } from 'react';
+import React, {
+  useEffect, useMemo, useRef, useState,
+} from 'react';
 import { BigRingSpinner } from './RingSpinner';
 
 const SeaDragonComponent = (props) => {

@@ -80,7 +80,7 @@ class ImageGridView extends React.Component {
   // in the case of a variorum, allow for filtering by document
   renderDocSelect() {
     return (
-      <div className='doc-select'>
+      <div className="doc-select">
         <Select
           id="doc-filter"
           className="dark"
@@ -138,8 +138,8 @@ class ImageGridView extends React.Component {
     const thumbs = folios.map((folio, index) => (
       // eslint-disable-next-line react/no-array-index-key
       <li key={`thumb-${index}`} className="thumbnail">
-        <figure><a id={folio.id} onClick={this.onClickThumb.bind(this, folio.id)}><img src={folio.image_thumbnail_url} alt={folio.name} style={{maxWidth: "130px", maxHeight: "130px"}} onError={({ currentTarget }) => {currentTarget.onerror = null; if (folio.image_zoom_url && currentTarget.src !== `${folio.image_zoom_url.slice(0, -9)}full/full/0/default.jpg`) {currentTarget.src=`${folio.image_zoom_url.slice(0, -9)}full/full/0/default.jpg`;} }} /></a></figure>
-        <figcaption className='thumbnail-caption'>
+        <figure><a id={folio.id} onClick={this.onClickThumb.bind(this, folio.id)}><img src={folio.image_thumbnail_url} alt={folio.name} style={{ maxWidth: '130px', maxHeight: '130px' }} onError={({ currentTarget }) => { currentTarget.onerror = null; if (folio.image_zoom_url && currentTarget.src !== `${folio.image_zoom_url.slice(0, -9)}full/full/0/default.jpg`) { currentTarget.src = `${folio.image_zoom_url.slice(0, -9)}full/full/0/default.jpg`; } }} /></a></figure>
+        <figcaption className="thumbnail-caption">
           {folio.name}
         </figcaption>
 

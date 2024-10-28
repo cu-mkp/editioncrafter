@@ -30,7 +30,7 @@ const DocumentView = (props) => {
   const navigate = useNavigate();
   const location = useLocation();
 
-  //"reload" the page if the config props change
+  // "reload" the page if the config props change
   useEffect(() => {
     dispatchAction(props, 'RouteListenerSaga.userNavigatation', location);
   }, [props.config]);
@@ -46,7 +46,7 @@ const DocumentView = (props) => {
 
   const getViewports = () => {
     const {
-      folioID, transcriptionType, folioID2, transcriptionType2, folioID3, transcriptionType3
+      folioID, transcriptionType, folioID2, transcriptionType2, folioID3, transcriptionType3,
     } = params;
     const { document } = props;
     const firstTranscriptionType = document.variorum ? Object.keys(document.transcriptionTypes[Object.keys(document.transcriptionTypes)[0]])[0] : Object.keys(document.transcriptionTypes)[0];
@@ -64,7 +64,7 @@ const DocumentView = (props) => {
         third: {
           folioID: '-1',
           transcriptionType: 'g',
-        }
+        },
       };
     }
     const leftFolioValid = Object.keys(document.folioIndex).includes(folioID);
@@ -76,12 +76,12 @@ const DocumentView = (props) => {
       const rightFolioValid = Object.keys(document.folioIndex).includes(folioID2);
       leftTranscriptionType = leftFolioValid ? transcriptionType : 'g';
       rightFolioID = rightFolioValid ? folioID2 : '-1';
-      rightTranscriptionType = rightFolioValid ? transcriptionType2 ? transcriptionType2 : firstTranscriptionType : 'g';
+      rightTranscriptionType = rightFolioValid ? transcriptionType2 || firstTranscriptionType : 'g';
       if (folioID3) {
         // route /ec/:folioID/:transcriptionType/:folioID2/:transcriptionType2/:folioID3/:transcriptionType3
         const thirdFolioValid = Object.keys(document.folioIndex).includes(folioID3);
         thirdFolioID = thirdFolioValid ? folioID3 : '-1';
-        thirdTranscriptionType = thirdFolioValid ? transcriptionType3 ? transcriptionType3 : firstTranscriptionType : 'g';
+        thirdTranscriptionType = thirdFolioValid ? transcriptionType3 || firstTranscriptionType : 'g';
       } else {
         thirdFolioID = '-1';
         thirdTranscriptionType = 'g';
@@ -91,7 +91,7 @@ const DocumentView = (props) => {
       // route /ec/:folioID/:transcriptionType
       leftTranscriptionType = 'f';
       rightFolioID = leftFolioValid ? folioID : '-1';
-      rightTranscriptionType = leftFolioValid ? transcriptionType ? transcriptionType : firstTranscriptionType : 'g';
+      rightTranscriptionType = leftFolioValid ? transcriptionType || firstTranscriptionType : 'g';
       thirdFolioID = '-1';
       thirdTranscriptionType = 'g';
     }
@@ -108,7 +108,7 @@ const DocumentView = (props) => {
       third: {
         folioID: thirdFolioID,
         transcriptionType: thirdTranscriptionType,
-      }
+      },
     };
   };
 
@@ -156,7 +156,11 @@ const DocumentView = (props) => {
       return [documentFolios[pageNumber - 1].id, documentFolios[pageNumber].id];
     }
 
-    return [documentFolios[pageNumber].id, documentFolios[pageNumber + 1].id];
+    if (documentFolios[pageNumber + 1]) {
+      return [documentFolios[pageNumber].id, documentFolios[pageNumber + 1].id];
+    }
+
+    return [documentFolios[pageNumber].id, null];
   };
 
   const onWidth = (leftWidth, rightWidth, thirdWidth) => {
@@ -198,7 +202,7 @@ const DocumentView = (props) => {
         currentViewports.right.transcriptionType,
         folioID,
         transcriptionType,
-      )
+      );
     }
   };
 
@@ -270,8 +274,8 @@ const DocumentView = (props) => {
           currentViewports.right.folioID,
           currentViewports.right.transcriptionType,
           folioID,
-          transcriptionType
-        )
+          transcriptionType,
+        );
       }
     } else if (side === 'left') {
       const otherSide = currentViewports.right;
@@ -302,8 +306,8 @@ const DocumentView = (props) => {
         currentViewports.right.folioID,
         currentViewports.right.transcriptionType,
         folioID,
-        transcriptionType
-      )
+        transcriptionType,
+      );
     }
   };
 
@@ -434,7 +438,7 @@ const DocumentView = (props) => {
           documentView={docView}
           documentViewActions={documentViewActions}
           side={side}
-          selectedDoc={document ? document : props.document.variorum && Object.keys(props.document.derivativeNames)[side === 'left' ? 0 : side === 'right' ? 1 : Object.keys(props.document.derivativeNames).length > 2 ? 2 : 1]}
+          selectedDoc={document || props.document.variorum && Object.keys(props.document.derivativeNames)[side === 'left' ? 0 : side === 'right' ? 1 : Object.keys(props.document.derivativeNames).length > 2 ? 2 : 1]}
         />
       );
     } if (viewType === 'GlossaryView') {
@@ -456,8 +460,8 @@ const DocumentView = (props) => {
     const pane = side === 'left'
       ? left
       : side === 'right'
-      ? right
-      : third;
+        ? right
+        : third;
 
     if (pane.viewType === 'ImageGridView') {
       return `${side}-${pane.viewType}`;
@@ -502,7 +506,7 @@ const DocumentView = (props) => {
   return (
     <div style={{ height: '100%' }}>
       <SinglePaneView
-        singlePane={renderPane(viewportState('left').iiifShortID === "-1" ? 'left' : 'right', docView)}
+        singlePane={renderPane(viewportState('left').iiifShortID === '-1' ? 'left' : 'right', docView)}
       />
     </div>
   );
@@ -511,7 +515,7 @@ const DocumentView = (props) => {
 function mapStateToProps(state) {
   return {
     document: state.document,
-    glossary: state.glossary
+    glossary: state.glossary,
   };
 }
 
