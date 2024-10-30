@@ -92,7 +92,8 @@
             margin-right:10px;
       }
       
-      .iiifViewComponent .navigationComponent {
+      .iiifViewComponent .navigationComponent,
+      .imageViewComponent .navigationComponent {
             background-color: #4A4A4A;
             border-radius: max(0.3rem, 4.8px);
             opacity: 0.8;
@@ -105,7 +106,8 @@
       
       }
       
-      .iiifViewComponent .navigationComponentNarrow {
+      .iiifViewComponent .navigationComponentNarrow,
+       .imageViewComponent .navigationComponentNarrow{
             background-color: rgba(0,0,0,1);
             color: #ffffff;
             border-radius: 0;

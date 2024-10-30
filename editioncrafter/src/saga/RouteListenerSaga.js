@@ -44,7 +44,7 @@ function* resolveDocumentManifest() {
       return variorumManifest;
     }
     const singleResponse = yield fetch(document.manifestURL);
-    const json = yield singleResponse.json()
+    const json = yield singleResponse.json();
     yield putResolveAction('DocumentActions.loadDocument', json);
     return json;
   }
@@ -87,7 +87,7 @@ function* resolveGlossary() {
   // NOTE: need to figure out how to deal with glossary for multidocument manifests
   if (!glossary.loaded && glossary.URL) {
     const response = yield fetch(glossary.URL);
-    const json = yield response.json()
+    const json = yield response.json();
     yield putResolveAction('GlossaryActions.loadGlossary', json);
   }
 }

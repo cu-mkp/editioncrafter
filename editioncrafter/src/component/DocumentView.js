@@ -12,6 +12,7 @@ import TranscriptionView from './TranscriptionView';
 import XMLView from './XMLView';
 import GlossaryView from './GlossaryView';
 import SinglePaneView from './SinglePaneView';
+import ImageView from './ImageView';
 
 const paneDefaults = {
   isXMLMode: false,
@@ -156,7 +157,11 @@ const DocumentView = (props) => {
       return [documentFolios[pageNumber - 1].id, documentFolios[pageNumber].id];
     }
 
-    return [documentFolios[pageNumber].id, documentFolios[pageNumber + 1].id];
+    if (documentFolios[pageNumber + 1]) {
+      return [documentFolios[pageNumber].id, documentFolios[pageNumber + 1].id];
+    }
+
+    return [documentFolios[pageNumber].id, null];
   };
 
   const onWidth = (leftWidth, rightWidth, thirdWidth) => {
@@ -394,6 +399,18 @@ const DocumentView = (props) => {
     const folioID = docView[side].iiifShortID;
     const document = docView[side].documentID;
     const { transcriptionType } = docView[side];
+
+    if (props.document.folioIndex[folioID] && !props.document.folioIndex[folioID].tileSource) {
+      return (
+        <ImageView
+          key={key}
+          folioID={folioID}
+          documentView={docView}
+          documentViewActions={documentViewActions}
+          side={side}
+        />
+      );
+    }
 
     if (viewType === 'IIIFView') {
       return (
