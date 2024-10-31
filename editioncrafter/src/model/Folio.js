@@ -52,7 +52,10 @@ export async function loadFolio(folioData) {
     try {
       const response = await fetch(folio.image_zoom_url);
       const imageServerResponse = await response.json();
+      console.log('hi');
+      console.log(imageServerResponse);
       folio.tileSource = new OpenSeadragon.IIIFTileSource(imageServerResponse);
+      console.log(folio.tileSource);
       folio.loading = false;
       return folio;
     } catch (error) {
@@ -60,6 +63,14 @@ export async function loadFolio(folioData) {
       throw error;
     }
   } else {
+    console.log('not IIIF');
+    folio.tileSource = new OpenSeadragon.IIIFTileSource({
+      type: 'image',
+      url: folio.image_zoom_url,
+      width: folio.width,
+      height: folio.height,
+      '@id': folio.image_zoom_url,
+    });
     folio.loading = false;
     return folio;
   }

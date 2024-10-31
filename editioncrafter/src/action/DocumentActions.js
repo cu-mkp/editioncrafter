@@ -72,6 +72,8 @@ function parseImageURLs(canvas) {
           bodyId: annotation.body.id,
           imageURL: annotation.body.id,
           imageType: 'image',
+          height: annotation.body.height,
+          width: annotation.body.width,
         });
       }
     }
@@ -154,10 +156,14 @@ function parseSingleManifest(manifest, transcriptionTypes, document) {
     if (canvas.type !== 'Canvas') throwError(`Expected items[${i}] to be of type 'Canvas'.`);
     if (!canvas.id) throwError(`Expected items[${i}] to have an id property.`);
 
-    if (parseImageURLs(canvas)) {
+    const imageUrls = parseImageURLs(canvas);
+
+    if (imageUrls) {
       const folioID = canvas.id.substr(canvas.id.lastIndexOf('/') + 1);
       const canvasLabel = parseLabel(canvas);
-      const { bodyId, imageURL, imageType } = parseImageURLs(canvas);
+      const {
+        bodyId, imageURL, imageType, height, width,
+      } = imageUrls;
       const annotationURLs = parseAnnotationURLs(canvas, transcriptionTypes);
 
       const ratio = canvas.width / canvas.height;
@@ -184,6 +190,8 @@ function parseSingleManifest(manifest, transcriptionTypes, document) {
         annotations: canvas.annotations
           ? canvas.annotations.filter(a => a.motivation === 'tagging')
           : [],
+        height,
+        width,
       };
 
       folios.push(folio);

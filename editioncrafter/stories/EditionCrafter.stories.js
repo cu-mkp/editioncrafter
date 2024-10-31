@@ -36,7 +36,6 @@ export const Cats = () => (
   <EditionCrafter
     documentName="cats"
     transcriptionTypes={{
-      translation: 'Translation',
       transcription: 'Transcription',
     }}
     iiifManifest="/cats-example/iiif/manifest.json"

@@ -402,7 +402,7 @@ const DocumentView = (props) => {
 
     if (props.document.folioIndex[folioID] && !props.document.folioIndex[folioID].tileSource) {
       return (
-        <ImageView
+        <IIIFView
           key={key}
           folioID={folioID}
           documentView={docView}
