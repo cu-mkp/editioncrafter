@@ -6,13 +6,12 @@ import {
 } from 'react-router-dom';
 import SplitPaneView from './SplitPaneView';
 import { dispatchAction } from '../model/ReduxStore';
-import IIIFView from './IIIFView';
+import ImageView from './ImageView';
 import ImageGridView from './ImageGridView';
 import TranscriptionView from './TranscriptionView';
 import XMLView from './XMLView';
 import GlossaryView from './GlossaryView';
 import SinglePaneView from './SinglePaneView';
-import ImageView from './ImageView';
 
 const paneDefaults = {
   isXMLMode: false,
@@ -322,7 +321,7 @@ const DocumentView = (props) => {
       return 'ImageGridView';
     }
     if (transcriptionType === 'f') {
-      return 'IIIFView';
+      return 'ImageView';
     }
     if (transcriptionType === 'glossary') {
       return 'GlossaryView';
@@ -400,21 +399,9 @@ const DocumentView = (props) => {
     const document = docView[side].documentID;
     const { transcriptionType } = docView[side];
 
-    if (props.document.folioIndex[folioID] && !props.document.folioIndex[folioID].tileSource) {
+    if (viewType === 'ImageView') {
       return (
-        <IIIFView
-          key={key}
-          folioID={folioID}
-          documentView={docView}
-          documentViewActions={documentViewActions}
-          side={side}
-        />
-      );
-    }
-
-    if (viewType === 'IIIFView') {
-      return (
-        <IIIFView
+        <ImageView
           key={key}
           folioID={folioID}
           documentView={docView}

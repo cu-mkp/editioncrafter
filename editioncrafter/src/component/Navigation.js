@@ -163,11 +163,11 @@ const Navigation = (props) => {
   if (!documentView.bookMode) {
     lockIconClass += ' active';
   }
-  const iiifViewActive = documentView[side].transcriptionType === 'f';
+  const imageViewActive = documentView[side].transcriptionType === 'f';
   const bookIconClass = (documentView.bookMode) ? 'fa fa-book active' : 'fa fa-book';
   const xmlIconClass = (documentView[side].isXMLMode) ? 'fa fa-code active' : 'fa fa-code';
   const folioName = document.folioIndex[documentView[side].iiifShortID]?.name;
-  const jumpToIconStyle = (iiifViewActive) ? { color: 'white' } : { color: 'black' };
+  const jumpToIconStyle = (imageViewActive) ? { color: 'white' } : { color: 'black' };
   // this is messy but faster for the moment then figuring out why the sides dont behave the same
   const helpMarginStyle = side === 'left' ? { marginRight: '55px' } : { marginRight: '15px' };
 
@@ -203,7 +203,7 @@ const Navigation = (props) => {
                   title="Toggle XML mode"
                   onClick={toggleXMLMode}
                   style={{ paddingRight: '15px' }}
-                  className={iiifViewActive ? 'invisible' : xmlIconClass}
+                  className={imageViewActive ? 'invisible' : xmlIconClass}
                 />
 
                 {/* <span title="Toggle single column mode"  onClick={this.toggleColumns}
@@ -311,10 +311,10 @@ const Navigation = (props) => {
               <span
                 title="Toggle XML mode"
                 onClick={toggleXMLMode}
-                className={iiifViewActive ? 'invisible' : xmlIconClass}
+                className={imageViewActive ? 'invisible' : xmlIconClass}
               />
 
-              { iiifViewActive && (
+              { imageViewActive && (
                 <>
                   <span
                     title="Go back"
