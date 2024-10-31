@@ -12,7 +12,7 @@ import RouteListener from './RouteListener';
 const DiploMatic = (props) => {
   const [containerWidth, setContainerWidth] = useState(0);
   const [containerHeight, setContainerHeight] = useState('min(100%, 100dvh');
-  const containerRef = useRef(null)
+  const containerRef = useRef(null);
   useEffect(() => {
     const history = createBrowserHistory();
     history.listen(() => {
@@ -21,9 +21,9 @@ const DiploMatic = (props) => {
   }, []);
 
   useEffect(() => {
-    if(containerRef.current){ 
-      setContainerWidth(containerRef.current.offsetWidth);  
-      if (containerRef.current.clientHeight == 0) {
+    if (containerRef.current) {
+      setContainerWidth(containerRef.current.offsetWidth);
+      if (containerRef.current.clientHeight === 0) {
         setContainerHeight('100dvh');
       }
     }
