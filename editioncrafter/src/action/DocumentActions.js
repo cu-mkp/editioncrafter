@@ -72,8 +72,6 @@ function parseImageURLs(canvas) {
           bodyId: annotation.body.id,
           imageURL: annotation.body.id,
           imageType: 'image',
-          height: annotation.body.height,
-          width: annotation.body.width,
         });
       }
     }
@@ -162,7 +160,7 @@ function parseSingleManifest(manifest, transcriptionTypes, document) {
       const folioID = canvas.id.substr(canvas.id.lastIndexOf('/') + 1);
       const canvasLabel = parseLabel(canvas);
       const {
-        bodyId, imageURL, imageType, height, width,
+        bodyId, imageURL, imageType,
       } = imageUrls;
       const annotationURLs = parseAnnotationURLs(canvas, transcriptionTypes);
 
@@ -190,8 +188,6 @@ function parseSingleManifest(manifest, transcriptionTypes, document) {
         annotations: canvas.annotations
           ? canvas.annotations.filter(a => a.motivation === 'tagging')
           : [],
-        height,
-        width,
       };
 
       folios.push(folio);
