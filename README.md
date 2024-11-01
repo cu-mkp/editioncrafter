@@ -25,8 +25,8 @@ import EditionCrafter from '@cu-mkp/editioncrafter'
     tcn: 'Normalized (FR)',
     tl: 'Translation (EN)'
   }}
-  iiifManifest='https://cu-mkp.github.io/editioncrafter-data/fr640_3r-3v-example/iiif/manifest.json'
-  glossaryURL='https://cu-mkp.github.io/editioncrafter-data/fr640_3r-3v-example/glossary.json'
+  iiifManifest='https://editioncrafter.org-data/fr640_3r-3v-example/iiif/manifest.json'
+  glossaryURL='https://editioncrafter.org-data/fr640_3r-3v-example/glossary.json'
 />
 ```
 
@@ -44,8 +44,8 @@ To include EditionCrafter in your HTML website, you need to create a `div` somew
      EditionCrafter.viewer({
          id: 'ec',
          documentName: 'BnF Ms. Fr. 640',
-         iiifManifest: 'https://cu-mkp.github.io/editioncrafter-data/fr640_3r-3v-example/iiif/manifest.json',
-         glossaryURL: 'https://cu-mkp.github.io/editioncrafter-data/fr640_3r-3v-example/glossary.json',
+         iiifManifest: 'https://editioncrafter.org-data/fr640_3r-3v-example/iiif/manifest.json',
+         glossaryURL: 'https://editioncrafter.org-data/fr640_3r-3v-example/glossary.json',
          transcriptionTypes: {
            tc: 'Diplomatic (FR)',
            tcn: 'Normalized (FR)',
@@ -73,7 +73,7 @@ documentInfo={{
             translation: 'Translation',
             transcription: 'Transcription',
         },
-        iiifManifest: 'https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/manifest.json',
+        iiifManifest: 'https://editioncrafter.org/taos-baptisms-example/iiif/manifest.json',
     },
     eng_415_145a: {
         documentName: 'Eng 415-145a',
