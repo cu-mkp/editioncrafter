@@ -1,19 +1,21 @@
 ---
 import Viewer from "../../layouts/Viewer.astro";
-const blurb = [`Driven by a singular vision to recover the complex histories of Indigenous slavery across the Americas, we have organized into a collective of individuals made up of researchers, paleographers, translators, designers, and technical programmers. The work has also been or is anticipated to be supported by collaborations with repositories (archives, libraries, and museums), universities, genealogical and historical societies and organizations, such as StoryCorps.`,
-`Thanks to the support of the Andrew W. Mellon Foundation, the team has created a framework that has evolved into both a database and repository of digital content organized around people, places, stories, and archives. We are inspired by a decolonial and restorative methodology, defined in greater detail below in our values and methods. Part of this work has involved the creation of processes to decipher this material through transcription, translation, and a formula to identify the interconnections between people, places and events, charting points of intersection within and across documents.`, 
-`Our vision for the project is that as it develops, the initiative will also serve as a platform for activating these collections. Inspiring new forms of creative expression and advancing new scholarship, the initiative will serve as a major source for educators, scholars, storytellers, and artists. Scroll down to read about our values, methodologies and to meet the team and our partners.`]
-const url = 'https://nativeboundunbound.org'
+const blurb = [
+  `Driven by a singular vision to recover the complex histories of Indigenous slavery across the Americas, we have organized into a collective of individuals made up of researchers, paleographers, translators, designers, and technical programmers. The work has also been or is anticipated to be supported by collaborations with repositories (archives, libraries, and museums), universities, genealogical and historical societies and organizations, such as StoryCorps.`,
+  `Thanks to the support of the Andrew W. Mellon Foundation, the team has created a framework that has evolved into both a database and repository of digital content organized around people, places, stories, and archives. We are inspired by a decolonial and restorative methodology, defined in greater detail below in our values and methods. Part of this work has involved the creation of processes to decipher this material through transcription, translation, and a formula to identify the interconnections between people, places and events, charting points of intersection within and across documents.`,
+  `Our vision for the project is that as it develops, the initiative will also serve as a platform for activating these collections. Inspiring new forms of creative expression and advancing new scholarship, the initiative will serve as a major source for educators, scholars, storytellers, and artists. Scroll down to read about our values, methodologies and to meet the team and our partners.`,
+];
+const url = "https://nativeboundunbound.org";
 ---
 
 <Viewer
-    documentName='FHL_007548733_TAOS_BAPTISMS_BATCH_2'
-    transcriptionTypes={{
-    translation: 'Translation',
-    transcription: 'Transcription',
-    }}
-    iiifManifest='https://cu-mkp.github.io/editioncrafter/taos-baptisms-example/iiif/manifest.json'
-    title="Native Bound Unbound"
-    blurb={blurb}
-    url={url}
+  documentName="FHL_007548733_TAOS_BAPTISMS_BATCH_2"
+  transcriptionTypes={{
+    translation: "Translation",
+    transcription: "Transcription",
+  }}
+  iiifManifest="https://editioncrafter.org/taos-baptisms-example/iiif/manifest.json"
+  title="Native Bound Unbound"
+  blurb={blurb}
+  url={url}
 />

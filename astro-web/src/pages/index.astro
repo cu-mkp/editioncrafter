@@ -5,92 +5,125 @@ import Container from "../components/Container.astro";
 import FeatureTabs from "../components/FeatureTabs";
 import ProjectCard from "../components/ProjectCard.astro";
 import Button from "../components/Button.astro";
-import bitc from '../assets/projects/thumbnails/bitc.png';
-import bnf from '../assets/projects/thumbnails/bnfmsfr640.png';
-import dyngley from '../assets/projects/thumbnails/dyngley.png';
-import nbu from '../assets/projects/thumbnails/nbu.png';
-import interviste from '../assets/projects/thumbnails/interviste.png';
-import elygreen from '../assets/projects/thumbnails/elygreen.png';
-import odt from '../assets/projects/thumbnails/odt.png';
-
+import bitc from "../assets/projects/thumbnails/bitc.png";
+import bnf from "../assets/projects/thumbnails/bnfmsfr640.png";
+import dyngley from "../assets/projects/thumbnails/dyngley.png";
+import nbu from "../assets/projects/thumbnails/nbu.png";
+import interviste from "../assets/projects/thumbnails/interviste.png";
+import elygreen from "../assets/projects/thumbnails/elygreen.png";
+import odt from "../assets/projects/thumbnails/odt.png";
 ---
 
 <Layout title="Edition Crafter">
-	<Hero>
-		<div class="flex flex-col gap-y-6">
-			<h1 class="font-serif text-5xl">
-				A simple digital edition publication tool
-			</h1>
-			<p class="text-neutral-gray">
-				EditionCrafter is an easy-to-use tool for scholars, educators, and research institutions to publish digital editions in a low-cost and sustainable manner.
-			</p>
-			<div class="flex flex-row w-full justify-between">
-				<Button href="/editioncrafter/getting-started">
-					Get Started &rarr;
-				</Button>
-				<div class="flex md:hidden">
-					<Button href="#" light>
-						View on GitHub &rarr;
-					</Button>
-				</div> 
-			</div>
-		</div>
-	</Hero>
+  <Hero>
+    <div class="flex flex-col gap-y-6">
+      <h1 class="font-serif text-5xl">
+        A simple digital edition publication tool
+      </h1>
+      <p class="text-neutral-gray">
+        EditionCrafter is an easy-to-use tool for scholars, educators, and
+        research institutions to publish digital editions in a low-cost and
+        sustainable manner.
+      </p>
+      <div class="flex flex-row w-full justify-between">
+        <Button href="/getting-started"> Get Started &rarr; </Button>
+        <div class="flex md:hidden">
+          <Button href="#" light> View on GitHub &rarr; </Button>
+        </div>
+      </div>
+    </div>
+  </Hero>
 
-	<div class="bg-neutral w-full">
-		<Container className="flex flex-col gap-y-8 py-28 pb-[600px]">
+  <div class="bg-neutral w-full">
+    <Container className="flex flex-col gap-y-8 py-28 pb-[600px]">
+      <h2 class="text-4xl font-serif">About EditionCrafter</h2>
+      <p class="text-2xl">
+        An open source and customizable publishing tool, EditionCrafter allows
+        users to easily publish digital editions as feature-rich and sustainable
+        static sites.
+      </p>
+      <div class="md:flex gap-12 text-neutral-gray">
+        <div class="md:w-1/2 flex flex-col gap-y-6">
+          <p>
+            EditionCrafter was developed as a collaboration between the Making
+            and Knowing Project and Performant Software Solutions to address the
+            need for a scholarly publication tool that integrates primary
+            sources, commentary, and textual analysis.
+          </p>
+          <p>
+            As a publication tool, EditionCrafter facilitates the dissemination
+            of original research through the creation of a digital edition of a
+            text. Researchers, students, and institutions such as libraries,
+            historical societies, archives, and community groups can grant
+            public access to valuable textual sources across disciplines.
+          </p>
+        </div>
+        <div class="md:w-1/2 flex flex-col gap-y-6">
+          <p>
+            A platform for collaborative research and for pedagogy,
+            EditionCrafter provides space for critical engagement with texts.
+            Scholars and students alike can use digital tools to share not only
+            data and finished products, but also documentation of the process of
+            textual engagement and analysis.
+          </p>
+          <p>
+            Editions are published through well-established technologies and
+            workflows and can be maintained with minimal costs and resources,
+            helping to address issues of sustainability and longevity.
+          </p>
+        </div>
+      </div>
+    </Container>
+  </div>
+  <div class="bg-white w-full">
+    <Container>
+      <div class="-mt-[600px]">
+        <h3 class="text-3xl font-serif py-12">Why use EditionCrafter?</h3>
+        <FeatureTabs client:only />
+      </div>
+      <div class="bg-neutral-dark h-[2px] rounded-full w-full my-20"></div>
 
-			<h2 class="text-4xl font-serif">
-				About EditionCrafter
-			</h2>
-			<p class="text-2xl">
-				An open source and customizable publishing tool, EditionCrafter allows users to easily publish digital editions as feature-rich and sustainable static sites.
-			</p>
-			<div class="md:flex gap-12 text-neutral-gray">
-				<div class="md:w-1/2 flex flex-col gap-y-6">
-					<p>
-						EditionCrafter was developed as a collaboration between the Making and Knowing Project and Performant Software Solutions to address the need for a scholarly publication tool that integrates primary sources, commentary, and textual analysis.
-					</p>
-					<p>
-						As a publication tool, EditionCrafter facilitates the dissemination of original research through the creation of a digital edition of a text. Researchers, students, and institutions such as libraries, historical societies, archives, and community groups can grant public access to valuable textual sources across disciplines.
-					</p>
-				</div>
-				<div class="md:w-1/2 flex flex-col gap-y-6">
-					<p>
-						A platform for collaborative research and for pedagogy, EditionCrafter provides space for critical engagement with texts. Scholars and students alike can use digital tools to share not only data and finished products, but also documentation of the process of textual engagement and analysis.
-					</p>
-					<p>
-						Editions are published through well-established technologies and workflows and can be maintained with minimal costs and resources, helping to address issues of sustainability and longevity.
-					</p>
-				</div>
-			</div>	
-		</Container>
-	</div>
-	<div class="bg-white w-full">
-		<Container>
-			<div class="-mt-[600px]">
-				<h3 class="text-3xl font-serif py-12">
-					Why use EditionCrafter?
-				</h3>
-				<FeatureTabs client:only />
-			</div>
-			<div class="bg-neutral-dark h-[2px] rounded-full w-full my-20" />
-	
-			<h2 class="text-4xl font-serif">
-				Explore Projects
-			</h2>
-			<div class="flex flex-row flex-wrap justify-center gap-12 py-12 mx-auto">
-				<ProjectCard title="BnF Ms. Fr. 640" href="/editioncrafter/projects/bnf-ms-fr-640/#/ec/f010/f/f010/tl/-1/g" img={bnf} />
-				<ProjectCard title="Native Bound Unbound" href="/editioncrafter/projects/native-bound-unbound/#/ec/FHL_007548733_IMG_220/f/FHL_007548733_IMG_220/translation" img={nbu} />
-				<ProjectCard title="Dyngley Family" href="/editioncrafter/projects/dyngley-family/#/ec/f016/f/f016/transcription" img={dyngley} />
-				<ProjectCard title="Bow in the Cloud" href="/editioncrafter/projects/bow-in-the-cloud/#/ec/f000/f/f000/eng-415-145a" img={bitc} />
-				<ProjectCard title="Interviste Pescatori" href="/editioncrafter/projects/interviste-pescatori/#/ec/f002/f/f002/transcription" img={interviste} />
-				<ProjectCard title="Ely Green Manuscript" href="/editioncrafter/projects/ely-green#/ec/f000/f/f000/transcription" img={elygreen} />
-				<ProjectCard title="Ornament:Design:Translation" href="/editioncrafter/projects/odt#/ec/f000/f/f001/f/-1/g" img={odt} />
-			</div>
-		</Container>
-	</div>
-	<!-- <div class="bg-neutral w-full">
+      <h2 class="text-4xl font-serif">Explore Projects</h2>
+      <div class="flex flex-row flex-wrap justify-center gap-12 py-12 mx-auto">
+        <ProjectCard
+          title="BnF Ms. Fr. 640"
+          href="/projects/bnf-ms-fr-640/#/ec/f010/f/f010/tl/-1/g"
+          img={bnf}
+        />
+        <ProjectCard
+          title="Native Bound Unbound"
+          href="/projects/native-bound-unbound/#/ec/FHL_007548733_IMG_220/f/FHL_007548733_IMG_220/translation"
+          img={nbu}
+        />
+        <ProjectCard
+          title="Dyngley Family"
+          href="/projects/dyngley-family/#/ec/f016/f/f016/transcription"
+          img={dyngley}
+        />
+        <ProjectCard
+          title="Bow in the Cloud"
+          href="/projects/bow-in-the-cloud/#/ec/f000/f/f000/eng-415-145a"
+          img={bitc}
+        />
+        <ProjectCard
+          title="Interviste Pescatori"
+          href="/projects/interviste-pescatori/#/ec/f002/f/f002/transcription"
+          img={interviste}
+        />
+        <ProjectCard
+          title="Ely Green Manuscript"
+          href="/projects/ely-green#/ec/f000/f/f000/transcription"
+          img={elygreen}
+        />
+        <ProjectCard
+          title="Ornament:Design:Translation"
+          href="/projects/odt#/ec/f000/f/f001/f/-1/g"
+          img={odt}
+        />
+      </div>
+    </Container>
+  </div>
+  <!-- <div class="bg-neutral w-full">
 		<Container className="py-20 md:flex flex-row gap-16 justify-between">
 			<div class="flex flex-col gap-6 md:w-1/2 pb-6 md:pb-0">
 				<h2 class="text-4xl font-serif">
@@ -102,7 +135,7 @@ import odt from '../assets/projects/thumbnails/odt.png';
 				<p class="text-neutral-gray">
 					Lorem ipsum dolor sit amet consectetur. Auctor quam arcu magna curabitur pulvinar. Volutpat mauris faucibus nunc leo nullam nulla. Ultrices orci nulla elementum tincidunt non odio volutpat. Tincidunt mauris justo nam.
 				</p>
-				<Button href="/editioncrafter/getting-started">
+				<Button href="/getting-started">
 					Get Started &rarr;
 				</Button>
 			</div>
@@ -139,7 +172,7 @@ import odt from '../assets/projects/thumbnails/odt.png';
 			</div>
 		</Container>
 	</div> -->
-	<!-- <div class="bg-white w-full">
+  <!-- <div class="bg-white w-full">
 		<Container className="py-20 flex flex-col gap-16 text-center items-center">
 			<h1 class="text-5xl font-bold font-serif">
 				Brought to you by
