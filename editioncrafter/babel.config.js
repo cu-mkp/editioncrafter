@@ -3,16 +3,17 @@
  * compatible with IE11 and Edge.
  */
 
+const process = require('node:process')
+
 const moduleFormatMap = {
   cjs: 'commonjs',
   es: false,
-};
+}
 
-// eslint-disable-next-line func-names
 module.exports = function (api) {
-  const isDevelopmentEnv = api.env('development');
-  const isProductionEnv = api.env('production');
-  const isTestEnv = api.env('test');
+  const isDevelopmentEnv = api.env('development')
+  const isProductionEnv = api.env('production')
+  const isTestEnv = api.env('test')
 
   const presets = [
     isTestEnv && [
@@ -42,7 +43,7 @@ module.exports = function (api) {
         useBuiltIns: true,
       },
     ],
-  ].filter(Boolean);
+  ].filter(Boolean)
 
   const plugins = [
     'babel-plugin-macros',
@@ -75,22 +76,19 @@ module.exports = function (api) {
         async: false,
       },
     ],
-    ['transform-react-remove-prop-types',
-      {
-        ignoreFilenames: ['node_modules'],
-        removeImport: true,
-      },
-    ],
+    ['transform-react-remove-prop-types', {
+      ignoreFilenames: ['node_modules'],
+      removeImport: true,
+    }],
     ['lodash', {
       id: [
         'lodash',
       ],
-    },
-    ],
-  ].filter(Boolean);
+    }],
+  ].filter(Boolean)
 
   return {
     plugins,
     presets,
-  };
-};
+  }
+}

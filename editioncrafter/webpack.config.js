@@ -1,5 +1,6 @@
 const fs = require('node:fs')
 const path = require('node:path')
+const process = require('node:process')
 const TerserPlugin = require('terser-webpack-plugin')
 const webpack = require('webpack')
 

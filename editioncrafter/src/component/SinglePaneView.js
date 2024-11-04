@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
 
 class SinglePaneView extends Component {
   render() {
@@ -7,13 +7,13 @@ class SinglePaneView extends Component {
       <div className="single-pane-view">
         {this.props.singlePane}
       </div>
-    );
+    )
   }
 }
 
 function mapStateToProps(state) {
   return {
     document: state.document,
-  };
+  }
 }
-export default connect(mapStateToProps)(SinglePaneView);
+export default connect(mapStateToProps)(SinglePaneView)

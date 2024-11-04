@@ -172,7 +172,7 @@ export function fullScreen() {
 }
 
 export function stateChange() {
-  const [manifest, setManifest] = useState(
+  const [manifest] = useState(
     'https://editioncrafter.org/taos-baptisms-example/iiif/manifest.json',
   )
   const [glossary, setGlossary] = useState(undefined)

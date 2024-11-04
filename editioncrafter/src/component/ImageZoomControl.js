@@ -1,9 +1,9 @@
-import React from 'react';
+import React from 'react'
 
-const ImageZoomControl = (props) => {
-  const in_id = `os-zoom-in ${props.side}`;
-  const out_id = `os-zoom-out ${props.side}`;
-  const onZoomGrid = (props.documentView.bookMode ? null : props.onZoomGrid);
+function ImageZoomControl(props) {
+  const in_id = `os-zoom-in ${props.side}`
+  const out_id = `os-zoom-out ${props.side}`
+  const onZoomGrid = (props.documentView.bookMode ? null : props.onZoomGrid)
   return (
     <ul className="ImageZoomControl">
       <li><i title="Zoom In" id={in_id} onClick={props.onZoomIn} className="zoom-in fas fa-plus-circle fa-2x" /></li>
@@ -13,7 +13,7 @@ const ImageZoomControl = (props) => {
       <li><i title="Zoom Out" id={out_id} onClick={props.onZoomOut} className="zoom-out fas fa-minus-circle fa-2x" /></li>
       <li className={props.documentView.bookMode ? 'disabled' : ''}><i title="Return to grid mode (not available in book mode)" onClick={onZoomGrid} className="zoom-grid fas fa-th fa-2x" /></li>
     </ul>
-  );
+  )
 }
 
-export default ImageZoomControl;
+export default ImageZoomControl

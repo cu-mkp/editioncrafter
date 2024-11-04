@@ -1,397 +1,397 @@
 {
-	"@context": [
-		"http://www.w3.org/ns/anno.jsonld",
-		"http://iiif.io/api/presentation/3/context.json"
-	],
-	"id": "http://localhost:8080/out/iiif/manifest.json",
-	"type": "Manifest",
-	"items": [
-		{
-			"id": "http://localhost:8080/out/iiif/canvas/f000",
-			"type": "Canvas",
-			"items": [
-				{
-					"id": "http://localhost:8080/out/iiif/canvas/f000/annotationpage/0",
-					"type": "AnnotationPage",
-					"items": [
-						{
-							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "http://localhost:8080/out/iiif/canvas/f000/annotationpage/0/annotation/0",
-							"type": "Annotation",
-							"motivation": "painting",
-							"body": {
-								"id": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Kot_Leon.JPG/2560px-Kot_Leon.JPG",
-								"format": "image/jpeg",
-								"type": "Image",
-								"height": 1920,
-								"width": 2560
-							},
-							"target": "http://localhost:8080/out/iiif/canvas/f000"
-						}
-					]
-				}
-			],
-			"height": 1920,
-			"width": 2560,
-			"label": {
-				"none": [
-					"Page 0"
-				]
-			},
-			"annotations": []
-		},
-		{
-			"id": "http://localhost:8080/out/iiif/canvas/f001",
-			"type": "Canvas",
-			"items": [
-				{
-					"id": "http://localhost:8080/out/iiif/canvas/f001/annotationpage/0",
-					"type": "AnnotationPage",
-					"items": [
-						{
-							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "http://localhost:8080/out/iiif/canvas/f001/annotationpage/0/annotation/0",
-							"type": "Annotation",
-							"motivation": "painting",
-							"body": {
-								"id": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Black_white_cat_on_fence.jpg",
-								"format": "image/jpeg",
-								"type": "Image",
-								"height": 567,
-								"width": 554
-							},
-							"target": "http://localhost:8080/out/iiif/canvas/f001"
-						}
-					]
-				}
-			],
-			"height": 567,
-			"width": 554,
-			"label": {
-				"none": [
-					"Page 1"
-				]
-			},
-			"annotations": []
-		},
-		{
-			"id": "http://localhost:8080/out/iiif/canvas/f002",
-			"type": "Canvas",
-			"items": [
-				{
-					"id": "http://localhost:8080/out/iiif/canvas/f002/annotationpage/0",
-					"type": "AnnotationPage",
-					"items": [
-						{
-							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "http://localhost:8080/out/iiif/canvas/f002/annotationpage/0/annotation/0",
-							"type": "Annotation",
-							"motivation": "painting",
-							"body": {
-								"id": "https://upload.wikimedia.org/wikipedia/commons/8/82/Cat_Eyes.jpg",
-								"format": "image/jpeg",
-								"type": "Image",
-								"height": 1220,
-								"width": 1627
-							},
-							"target": "http://localhost:8080/out/iiif/canvas/f002"
-						}
-					]
-				}
-			],
-			"height": 1220,
-			"width": 1627,
-			"label": {
-				"none": [
-					"Page 2"
-				]
-			},
-			"annotations": []
-		},
-		{
-			"id": "http://localhost:8080/out/iiif/canvas/f003",
-			"type": "Canvas",
-			"items": [
-				{
-					"id": "http://localhost:8080/out/iiif/canvas/f003/annotationpage/0",
-					"type": "AnnotationPage",
-					"items": [
-						{
-							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "http://localhost:8080/out/iiif/canvas/f003/annotationpage/0/annotation/0",
-							"type": "Annotation",
-							"motivation": "painting",
-							"body": {
-								"id": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Cat_domestic_%28undated_photo%3B_2013_upload%3B_cropped_2022%29.jpg",
-								"format": "image/jpeg",
-								"type": "Image",
-								"height": 768,
-								"width": 768
-							},
-							"target": "http://localhost:8080/out/iiif/canvas/f003"
-						}
-					]
-				}
-			],
-			"height": 768,
-			"width": 768,
-			"label": {
-				"none": [
-					"Page 3"
-				]
-			},
-			"annotations": []
-		},
-		{
-			"id": "http://localhost:8080/out/iiif/canvas/f004",
-			"type": "Canvas",
-			"items": [
-				{
-					"id": "http://localhost:8080/out/iiif/canvas/f004/annotationpage/0",
-					"type": "AnnotationPage",
-					"items": [
-						{
-							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "http://localhost:8080/out/iiif/canvas/f004/annotationpage/0/annotation/0",
-							"type": "Annotation",
-							"motivation": "painting",
-							"body": {
-								"id": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Gr%C3%BCne_Augen_einer_Katze.JPG/1280px-Gr%C3%BCne_Augen_einer_Katze.JPG",
-								"format": "image/jpeg",
-								"type": "Image",
-								"height": 1707,
-								"width": 1280
-							},
-							"target": "http://localhost:8080/out/iiif/canvas/f004"
-						}
-					]
-				}
-			],
-			"height": 1707,
-			"width": 1280,
-			"label": {
-				"none": [
-					"Page 4"
-				]
-			},
-			"annotations": []
-		},
-		{
-			"id": "http://localhost:8080/out/iiif/canvas/f005",
-			"type": "Canvas",
-			"items": [
-				{
-					"id": "http://localhost:8080/out/iiif/canvas/f005/annotationpage/0",
-					"type": "AnnotationPage",
-					"items": [
-						{
-							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "http://localhost:8080/out/iiif/canvas/f005/annotationpage/0/annotation/0",
-							"type": "Annotation",
-							"motivation": "painting",
-							"body": {
-								"id": "https://upload.wikimedia.org/wikipedia/commons/e/ef/Female-cat-named-Liebe.jpg",
-								"format": "image/jpeg",
-								"type": "Image",
-								"height": 1727,
-								"width": 1612
-							},
-							"target": "http://localhost:8080/out/iiif/canvas/f005"
-						}
-					]
-				}
-			],
-			"height": 1727,
-			"width": 1612,
-			"label": {
-				"none": [
-					"Page 5"
-				]
-			},
-			"annotations": []
-		},
-		{
-			"id": "http://localhost:8080/out/iiif/canvas/f006",
-			"type": "Canvas",
-			"items": [
-				{
-					"id": "http://localhost:8080/out/iiif/canvas/f006/annotationpage/0",
-					"type": "AnnotationPage",
-					"items": [
-						{
-							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "http://localhost:8080/out/iiif/canvas/f006/annotationpage/0/annotation/0",
-							"type": "Annotation",
-							"motivation": "painting",
-							"body": {
-								"id": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Abessijn_kijkt_uit_het_raam..jpg/1024px-Abessijn_kijkt_uit_het_raam..jpg",
-								"format": "image/jpeg",
-								"type": "Image",
-								"height": 1820,
-								"width": 1024
-							},
-							"target": "http://localhost:8080/out/iiif/canvas/f006"
-						}
-					]
-				}
-			],
-			"height": 1820,
-			"width": 1024,
-			"label": {
-				"none": [
-					"Page 6"
-				]
-			},
-			"annotations": []
-		},
-		{
-			"id": "http://localhost:8080/out/iiif/canvas/f007",
-			"type": "Canvas",
-			"items": [
-				{
-					"id": "http://localhost:8080/out/iiif/canvas/f007/annotationpage/0",
-					"type": "AnnotationPage",
-					"items": [
-						{
-							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "http://localhost:8080/out/iiif/canvas/f007/annotationpage/0/annotation/0",
-							"type": "Annotation",
-							"motivation": "painting",
-							"body": {
-								"id": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Animals_%2816969925571%29.jpg/2560px-Animals_%2816969925571%29.jpg",
-								"format": "image/jpeg",
-								"type": "Image",
-								"height": 1707,
-								"width": 2560
-							},
-							"target": "http://localhost:8080/out/iiif/canvas/f007"
-						}
-					]
-				}
-			],
-			"height": 1707,
-			"width": 2560,
-			"label": {
-				"none": [
-					"Page 7"
-				]
-			},
-			"annotations": []
-		},
-		{
-			"id": "http://localhost:8080/out/iiif/canvas/f008",
-			"type": "Canvas",
-			"items": [
-				{
-					"id": "http://localhost:8080/out/iiif/canvas/f008/annotationpage/0",
-					"type": "AnnotationPage",
-					"items": [
-						{
-							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "http://localhost:8080/out/iiif/canvas/f008/annotationpage/0/annotation/0",
-							"type": "Annotation",
-							"motivation": "painting",
-							"body": {
-								"id": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Attentive_grey_stray_cat.jpg/2560px-Attentive_grey_stray_cat.jpg",
-								"format": "image/jpeg",
-								"type": "Image",
-								"height": 1829,
-								"width": 2560
-							},
-							"target": "http://localhost:8080/out/iiif/canvas/f008"
-						}
-					]
-				}
-			],
-			"height": 1829,
-			"width": 2560,
-			"label": {
-				"none": [
-					"Page 8"
-				]
-			},
-			"annotations": []
-		},
-		{
-			"id": "http://localhost:8080/out/iiif/canvas/f009",
-			"type": "Canvas",
-			"items": [
-				{
-					"id": "http://localhost:8080/out/iiif/canvas/f009/annotationpage/0",
-					"type": "AnnotationPage",
-					"items": [
-						{
-							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "http://localhost:8080/out/iiif/canvas/f009/annotationpage/0/annotation/0",
-							"type": "Annotation",
-							"motivation": "painting",
-							"body": {
-								"id": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Barbeque_cat_%289382542117%29.jpg/1280px-Barbeque_cat_%289382542117%29.jpg",
-								"format": "image/jpeg",
-								"type": "Image",
-								"height": 1707,
-								"width": 1280
-							},
-							"target": "http://localhost:8080/out/iiif/canvas/f009"
-						}
-					]
-				}
-			],
-			"height": 1707,
-			"width": 1280,
-			"label": {
-				"none": [
-					"Page 9"
-				]
-			},
-			"annotations": []
-		},
-		{
-			"id": "http://localhost:8080/out/iiif/canvas/f010",
-			"type": "Canvas",
-			"items": [
-				{
-					"id": "http://localhost:8080/out/iiif/canvas/f010/annotationpage/0",
-					"type": "AnnotationPage",
-					"items": [
-						{
-							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "http://localhost:8080/out/iiif/canvas/f010/annotationpage/0/annotation/0",
-							"type": "Annotation",
-							"motivation": "painting",
-							"body": {
-								"id": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Black_Cat_%288030060974%29.jpg/1920px-Black_Cat_%288030060974%29.jpg",
-								"format": "image/jpeg",
-								"type": "Image",
-								"height": 1556,
-								"width": 1920
-							},
-							"target": "http://localhost:8080/out/iiif/canvas/f010"
-						}
-					]
-				}
-			],
-			"height": 1556,
-			"width": 1920,
-			"label": {
-				"none": [
-					"Page 10"
-				]
-			},
-			"annotations": []
-		}
-	],
-	"label": {
-		"en": [
-			"out"
-		]
-	},
-	"seeAlso": [
-		{
-			"id": "https://cu-mkp.github.io/editioncrafter-data/fr640_3r-3v-example/glossary.json",
-			"type": "Dataset",
-			"label": "Glossary",
-			"format": "text/json"
-		}
-	]
+  "@context": [
+    "http://www.w3.org/ns/anno.jsonld",
+    "http://iiif.io/api/presentation/3/context.json"
+  ],
+  "id": "http://localhost:8080/out/iiif/manifest.json",
+  "type": "Manifest",
+  "items": [
+    {
+      "id": "http://localhost:8080/out/iiif/canvas/f000",
+      "type": "Canvas",
+      "items": [
+        {
+          "id": "http://localhost:8080/out/iiif/canvas/f000/annotationpage/0",
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "@context": "https://www.w3.org/ns/anno.jsonld",
+              "id": "http://localhost:8080/out/iiif/canvas/f000/annotationpage/0/annotation/0",
+              "type": "Annotation",
+              "motivation": "painting",
+              "body": {
+                "id": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Kot_Leon.JPG/2560px-Kot_Leon.JPG",
+                "format": "image/jpeg",
+                "type": "Image",
+                "height": 1920,
+                "width": 2560
+              },
+              "target": "http://localhost:8080/out/iiif/canvas/f000"
+            }
+          ]
+        }
+      ],
+      "height": 1920,
+      "width": 2560,
+      "label": {
+        "none": [
+          "Page 0"
+        ]
+      },
+      "annotations": []
+    },
+    {
+      "id": "http://localhost:8080/out/iiif/canvas/f001",
+      "type": "Canvas",
+      "items": [
+        {
+          "id": "http://localhost:8080/out/iiif/canvas/f001/annotationpage/0",
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "@context": "https://www.w3.org/ns/anno.jsonld",
+              "id": "http://localhost:8080/out/iiif/canvas/f001/annotationpage/0/annotation/0",
+              "type": "Annotation",
+              "motivation": "painting",
+              "body": {
+                "id": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Black_white_cat_on_fence.jpg",
+                "format": "image/jpeg",
+                "type": "Image",
+                "height": 567,
+                "width": 554
+              },
+              "target": "http://localhost:8080/out/iiif/canvas/f001"
+            }
+          ]
+        }
+      ],
+      "height": 567,
+      "width": 554,
+      "label": {
+        "none": [
+          "Page 1"
+        ]
+      },
+      "annotations": []
+    },
+    {
+      "id": "http://localhost:8080/out/iiif/canvas/f002",
+      "type": "Canvas",
+      "items": [
+        {
+          "id": "http://localhost:8080/out/iiif/canvas/f002/annotationpage/0",
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "@context": "https://www.w3.org/ns/anno.jsonld",
+              "id": "http://localhost:8080/out/iiif/canvas/f002/annotationpage/0/annotation/0",
+              "type": "Annotation",
+              "motivation": "painting",
+              "body": {
+                "id": "https://upload.wikimedia.org/wikipedia/commons/8/82/Cat_Eyes.jpg",
+                "format": "image/jpeg",
+                "type": "Image",
+                "height": 1220,
+                "width": 1627
+              },
+              "target": "http://localhost:8080/out/iiif/canvas/f002"
+            }
+          ]
+        }
+      ],
+      "height": 1220,
+      "width": 1627,
+      "label": {
+        "none": [
+          "Page 2"
+        ]
+      },
+      "annotations": []
+    },
+    {
+      "id": "http://localhost:8080/out/iiif/canvas/f003",
+      "type": "Canvas",
+      "items": [
+        {
+          "id": "http://localhost:8080/out/iiif/canvas/f003/annotationpage/0",
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "@context": "https://www.w3.org/ns/anno.jsonld",
+              "id": "http://localhost:8080/out/iiif/canvas/f003/annotationpage/0/annotation/0",
+              "type": "Annotation",
+              "motivation": "painting",
+              "body": {
+                "id": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Cat_domestic_%28undated_photo%3B_2013_upload%3B_cropped_2022%29.jpg",
+                "format": "image/jpeg",
+                "type": "Image",
+                "height": 768,
+                "width": 768
+              },
+              "target": "http://localhost:8080/out/iiif/canvas/f003"
+            }
+          ]
+        }
+      ],
+      "height": 768,
+      "width": 768,
+      "label": {
+        "none": [
+          "Page 3"
+        ]
+      },
+      "annotations": []
+    },
+    {
+      "id": "http://localhost:8080/out/iiif/canvas/f004",
+      "type": "Canvas",
+      "items": [
+        {
+          "id": "http://localhost:8080/out/iiif/canvas/f004/annotationpage/0",
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "@context": "https://www.w3.org/ns/anno.jsonld",
+              "id": "http://localhost:8080/out/iiif/canvas/f004/annotationpage/0/annotation/0",
+              "type": "Annotation",
+              "motivation": "painting",
+              "body": {
+                "id": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Gr%C3%BCne_Augen_einer_Katze.JPG/1280px-Gr%C3%BCne_Augen_einer_Katze.JPG",
+                "format": "image/jpeg",
+                "type": "Image",
+                "height": 1707,
+                "width": 1280
+              },
+              "target": "http://localhost:8080/out/iiif/canvas/f004"
+            }
+          ]
+        }
+      ],
+      "height": 1707,
+      "width": 1280,
+      "label": {
+        "none": [
+          "Page 4"
+        ]
+      },
+      "annotations": []
+    },
+    {
+      "id": "http://localhost:8080/out/iiif/canvas/f005",
+      "type": "Canvas",
+      "items": [
+        {
+          "id": "http://localhost:8080/out/iiif/canvas/f005/annotationpage/0",
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "@context": "https://www.w3.org/ns/anno.jsonld",
+              "id": "http://localhost:8080/out/iiif/canvas/f005/annotationpage/0/annotation/0",
+              "type": "Annotation",
+              "motivation": "painting",
+              "body": {
+                "id": "https://upload.wikimedia.org/wikipedia/commons/e/ef/Female-cat-named-Liebe.jpg",
+                "format": "image/jpeg",
+                "type": "Image",
+                "height": 1727,
+                "width": 1612
+              },
+              "target": "http://localhost:8080/out/iiif/canvas/f005"
+            }
+          ]
+        }
+      ],
+      "height": 1727,
+      "width": 1612,
+      "label": {
+        "none": [
+          "Page 5"
+        ]
+      },
+      "annotations": []
+    },
+    {
+      "id": "http://localhost:8080/out/iiif/canvas/f006",
+      "type": "Canvas",
+      "items": [
+        {
+          "id": "http://localhost:8080/out/iiif/canvas/f006/annotationpage/0",
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "@context": "https://www.w3.org/ns/anno.jsonld",
+              "id": "http://localhost:8080/out/iiif/canvas/f006/annotationpage/0/annotation/0",
+              "type": "Annotation",
+              "motivation": "painting",
+              "body": {
+                "id": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Abessijn_kijkt_uit_het_raam..jpg/1024px-Abessijn_kijkt_uit_het_raam..jpg",
+                "format": "image/jpeg",
+                "type": "Image",
+                "height": 1820,
+                "width": 1024
+              },
+              "target": "http://localhost:8080/out/iiif/canvas/f006"
+            }
+          ]
+        }
+      ],
+      "height": 1820,
+      "width": 1024,
+      "label": {
+        "none": [
+          "Page 6"
+        ]
+      },
+      "annotations": []
+    },
+    {
+      "id": "http://localhost:8080/out/iiif/canvas/f007",
+      "type": "Canvas",
+      "items": [
+        {
+          "id": "http://localhost:8080/out/iiif/canvas/f007/annotationpage/0",
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "@context": "https://www.w3.org/ns/anno.jsonld",
+              "id": "http://localhost:8080/out/iiif/canvas/f007/annotationpage/0/annotation/0",
+              "type": "Annotation",
+              "motivation": "painting",
+              "body": {
+                "id": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Animals_%2816969925571%29.jpg/2560px-Animals_%2816969925571%29.jpg",
+                "format": "image/jpeg",
+                "type": "Image",
+                "height": 1707,
+                "width": 2560
+              },
+              "target": "http://localhost:8080/out/iiif/canvas/f007"
+            }
+          ]
+        }
+      ],
+      "height": 1707,
+      "width": 2560,
+      "label": {
+        "none": [
+          "Page 7"
+        ]
+      },
+      "annotations": []
+    },
+    {
+      "id": "http://localhost:8080/out/iiif/canvas/f008",
+      "type": "Canvas",
+      "items": [
+        {
+          "id": "http://localhost:8080/out/iiif/canvas/f008/annotationpage/0",
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "@context": "https://www.w3.org/ns/anno.jsonld",
+              "id": "http://localhost:8080/out/iiif/canvas/f008/annotationpage/0/annotation/0",
+              "type": "Annotation",
+              "motivation": "painting",
+              "body": {
+                "id": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Attentive_grey_stray_cat.jpg/2560px-Attentive_grey_stray_cat.jpg",
+                "format": "image/jpeg",
+                "type": "Image",
+                "height": 1829,
+                "width": 2560
+              },
+              "target": "http://localhost:8080/out/iiif/canvas/f008"
+            }
+          ]
+        }
+      ],
+      "height": 1829,
+      "width": 2560,
+      "label": {
+        "none": [
+          "Page 8"
+        ]
+      },
+      "annotations": []
+    },
+    {
+      "id": "http://localhost:8080/out/iiif/canvas/f009",
+      "type": "Canvas",
+      "items": [
+        {
+          "id": "http://localhost:8080/out/iiif/canvas/f009/annotationpage/0",
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "@context": "https://www.w3.org/ns/anno.jsonld",
+              "id": "http://localhost:8080/out/iiif/canvas/f009/annotationpage/0/annotation/0",
+              "type": "Annotation",
+              "motivation": "painting",
+              "body": {
+                "id": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Barbeque_cat_%289382542117%29.jpg/1280px-Barbeque_cat_%289382542117%29.jpg",
+                "format": "image/jpeg",
+                "type": "Image",
+                "height": 1707,
+                "width": 1280
+              },
+              "target": "http://localhost:8080/out/iiif/canvas/f009"
+            }
+          ]
+        }
+      ],
+      "height": 1707,
+      "width": 1280,
+      "label": {
+        "none": [
+          "Page 9"
+        ]
+      },
+      "annotations": []
+    },
+    {
+      "id": "http://localhost:8080/out/iiif/canvas/f010",
+      "type": "Canvas",
+      "items": [
+        {
+          "id": "http://localhost:8080/out/iiif/canvas/f010/annotationpage/0",
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "@context": "https://www.w3.org/ns/anno.jsonld",
+              "id": "http://localhost:8080/out/iiif/canvas/f010/annotationpage/0/annotation/0",
+              "type": "Annotation",
+              "motivation": "painting",
+              "body": {
+                "id": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Black_Cat_%288030060974%29.jpg/1920px-Black_Cat_%288030060974%29.jpg",
+                "format": "image/jpeg",
+                "type": "Image",
+                "height": 1556,
+                "width": 1920
+              },
+              "target": "http://localhost:8080/out/iiif/canvas/f010"
+            }
+          ]
+        }
+      ],
+      "height": 1556,
+      "width": 1920,
+      "label": {
+        "none": [
+          "Page 10"
+        ]
+      },
+      "annotations": []
+    }
+  ],
+  "label": {
+    "en": [
+      "out"
+    ]
+  },
+  "seeAlso": [
+    {
+      "id": "https://cu-mkp.github.io/editioncrafter-data/fr640_3r-3v-example/glossary.json",
+      "type": "Dataset",
+      "label": "Glossary",
+      "format": "text/json"
+    }
+  ]
 }

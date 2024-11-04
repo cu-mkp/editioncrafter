@@ -1,10 +1,10 @@
-const DiplomaticActions = {};
+const DiplomaticActions = {}
 
 DiplomaticActions.setFixedFrameMode = function setFixedFrameMode(state, mode) {
   return {
     ...state,
     fixedFrameMode: mode,
-  };
-};
+  }
+}
 
-export default DiplomaticActions;
+export default DiplomaticActions
