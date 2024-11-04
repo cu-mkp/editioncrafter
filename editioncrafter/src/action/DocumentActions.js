@@ -58,10 +58,21 @@ function parseImageURLs(canvas) {
         if (!annotation.body.id) {
           return null;
         }
-        return {
+
+        // if the service property exists, it's a IIIF image
+        if (annotation.body.service) {
+          return ({
+            bodyId: annotation.body.id,
+            imageURL: `${annotation.body.id}/info.json`,
+            imageType: 'iiif',
+          });
+        }
+
+        return ({
           bodyId: annotation.body.id,
-          imageURL: `${annotation.body.id}/info.json`,
-        };
+          imageURL: annotation.body.id,
+          imageType: 'image',
+        });
       }
     }
   }
@@ -142,23 +153,30 @@ function parseSingleManifest(manifest, transcriptionTypes, document) {
     const canvas = canvases[i];
     if (canvas.type !== 'Canvas') throwError(`Expected items[${i}] to be of type 'Canvas'.`);
     if (!canvas.id) throwError(`Expected items[${i}] to have an id property.`);
-    if (parseImageURLs(canvas)) {
+
+    const imageUrls = parseImageURLs(canvas);
+
+    if (imageUrls) {
       const folioID = canvas.id.substr(canvas.id.lastIndexOf('/') + 1);
       const canvasLabel = parseLabel(canvas);
-      const { bodyId, imageURL } = parseImageURLs(canvas);
+      const {
+        bodyId, imageURL, imageType,
+      } = imageUrls;
       const annotationURLs = parseAnnotationURLs(canvas, transcriptionTypes);
-  
+
       const ratio = canvas.width / canvas.height;
-  
+
       let thumbnailDimensions = [];
       if (ratio > 1) {
         thumbnailDimensions = [MAX_THUMBNAIL_DIMENSION, Math.round(MAX_THUMBNAIL_DIMENSION / ratio)];
       } else {
         thumbnailDimensions = [Math.round(MAX_THUMBNAIL_DIMENSION * ratio), MAX_THUMBNAIL_DIMENSION];
       }
-  
-      const thumbnailURL = `${bodyId}/full/${thumbnailDimensions.join(',')}/0/default.jpg`;
-  
+
+      const thumbnailURL = imageType === 'iiif'
+        ? `${bodyId}/full/${thumbnailDimensions.join(',')}/0/default.jpg`
+        : imageURL;
+
       const folio = {
         id: document ? `${document}_${folioID}` : folioID,
         doc_id: document || manifest.id,
@@ -171,7 +189,7 @@ function parseSingleManifest(manifest, transcriptionTypes, document) {
           ? canvas.annotations.filter(a => a.motivation === 'tagging')
           : [],
       };
-  
+
       folios.push(folio);
     }
   }

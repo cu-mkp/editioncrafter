@@ -13,7 +13,7 @@ import AlphabetLinks from './AlphabetLinks';
 import useIsWidthUp from '../hooks/useIsWidthUp';
 
 const initialPopoverObj = {
-  anchorEl: null
+  anchorEl: null,
 };
 
 const Navigation = (props) => {
@@ -38,7 +38,7 @@ const Navigation = (props) => {
 
   const onGoToGrid = (event) => {
     props.documentViewActions.changeTranscriptionType(props.side, 'g');
-  }
+  };
 
   const toggleHelp = (event) => {
     setOpenHelp(!openHelp);
@@ -123,7 +123,7 @@ const Navigation = (props) => {
 
   const revealJumpBox = (event) => {
     setPopover({
-      anchorEl: event.currentTarget
+      anchorEl: event.currentTarget,
     });
   };
 
@@ -158,7 +158,7 @@ const Navigation = (props) => {
   const selectColorStyle = documentView[side].transcriptionType === 'f' ? { color: 'white' } : { color: 'black' };
   const selectClass = documentView[side].transcriptionType === 'f' ? 'dark' : 'light';
   const showButtonsStyle = documentView[side].transcriptionType === 'glossary' ? { visibility: 'hidden' } : { visibility: 'visible' };
-  const selectContainerStyle = { display: 'flex' }; //what's the reason we want this to be hidden sometimes?
+  const selectContainerStyle = { display: 'flex' }; // what's the reason we want this to be hidden sometimes?
   let lockIconClass = (documentView.linkedMode) ? 'fa fa-lock' : 'fa fa-lock-open';
   if (!documentView.bookMode) {
     lockIconClass += ' active';
@@ -179,12 +179,12 @@ const Navigation = (props) => {
           { documentView[side].transcriptionType !== 'glossary' ? (
 
             <div id="tool-bar-buttons" className="breadcrumbs" style={showButtonsStyle}>
-              <div style={{ display: 'flex', alignItems: 'baseline', gap: '4px' }}> 
-                <span 
-                  className="fas fa-th" 
-                  style={{ cursor: documentView[side].transcriptionType !== 'g' ? 'pointer' : 'default', padding: '0 15px' }} 
-                  title={documentView[side].transcriptionType !== 'g' && "Return to Grid View"} 
-                  onClick={documentView[side].transcriptionType !== 'g' && onGoToGrid} 
+              <div style={{ display: 'flex', alignItems: 'baseline', gap: '4px' }}>
+                <span
+                  className="fas fa-th"
+                  style={{ cursor: documentView[side].transcriptionType !== 'g' ? 'pointer' : 'default', padding: '0 15px' }}
+                  title={documentView[side].transcriptionType !== 'g' && 'Return to Grid View'}
+                  onClick={documentView[side].transcriptionType !== 'g' && onGoToGrid}
                 />
 
                 <span
@@ -192,24 +192,23 @@ const Navigation = (props) => {
                   onClick={toggleLockmode}
                   className={lockIconClass}
                 />
-                                          
+
                 <span
                   title="Toggle book mode"
                   onClick={toggleBookmode}
                   className={bookIconClass}
                 />
-                                      
+
                 <span
                   title="Toggle XML mode"
                   onClick={toggleXMLMode}
                   style={{ paddingRight: '15px' }}
                   className={imageViewActive ? 'invisible' : xmlIconClass}
                 />
-                                              
+
                 {/* <span title="Toggle single column mode"  onClick={this.toggleColumns}
                                                         className={columnIconClass}></span> */}
-                                              
-                
+
                 <span
                   title="Go back"
                   onClick={changeCurrentFolio}
@@ -219,7 +218,6 @@ const Navigation = (props) => {
 
                   <FaArrowCircleLeft />
 
-                
                 </span>
 
                 <span
@@ -250,7 +248,7 @@ const Navigation = (props) => {
 
               <JumpToFolio
                 side={side}
-                anchorEl={popover.anchorEl}                                        
+                anchorEl={popover.anchorEl}
                 submitHandler={documentViewActions.jumpToFolio}
                 blurHandler={onJumpBoxBlur}
               />
@@ -273,9 +271,11 @@ const Navigation = (props) => {
               <MenuItem value="f" key="f">
                 {DocumentHelper.transcriptionTypeLabels.f}
               </MenuItem>
-              { props.glossary && <MenuItem value="glossary" key="glossary">
+              { props.glossary && (
+              <MenuItem value="glossary" key="glossary">
                 {DocumentHelper.transcriptionTypeLabels.glossary}
-              </MenuItem> }
+              </MenuItem>
+              ) }
             </Select>
             <span
               title="Toggle folio help"
@@ -300,12 +300,12 @@ const Navigation = (props) => {
           { documentView[side].transcriptionType !== 'glossary' ? (
 
             <div id="tool-bar-buttons" className="breadcrumbsNarrow" style={showButtonsStyle}>
-                
-              <span 
-                className="fas fa-th" 
-                style={{ cursor: documentView[side].transcriptionType !== 'g' ? 'pointer' : 'default', padding: '0 15px' }} 
-                title={documentView[side].transcriptionType !== 'g' && "Return to Grid View"} 
-                onClick={documentView[side].transcriptionType !== 'g' && onGoToGrid} 
+
+              <span
+                className="fas fa-th"
+                style={{ cursor: documentView[side].transcriptionType !== 'g' ? 'pointer' : 'default', padding: '0 15px' }}
+                title={documentView[side].transcriptionType !== 'g' && 'Return to Grid View'}
+                onClick={documentView[side].transcriptionType !== 'g' && onGoToGrid}
               />
                                                 &nbsp;
               <span
@@ -317,26 +317,26 @@ const Navigation = (props) => {
               { imageViewActive && (
                 <>
                   <span
-                  title="Go back"
-                  onClick={changeCurrentFolio}
-                  data-id={documentView[side].previousFolioShortID}
-                  className={(documentView[side].hasPrevious) ? 'arrow' : 'arrow disabled'}
-                >
-                  {' '}
-                  <FaArrowCircleLeft />
-                  {' '}
-  
-                </span>
-  
-                <span
-                  title="Go forward"
-                  onClick={changeCurrentFolio}
-                  data-id={documentView[side].nextFolioShortID}
-                  className={(documentView[side].hasNext) ? 'arrow' : 'arrow disabled'}
-                >
-                  {' '}
-                  <FaArrowCircleRight />
-                </span>
+                    title="Go back"
+                    onClick={changeCurrentFolio}
+                    data-id={documentView[side].previousFolioShortID}
+                    className={(documentView[side].hasPrevious) ? 'arrow' : 'arrow disabled'}
+                  >
+                    {' '}
+                    <FaArrowCircleLeft />
+                    {' '}
+
+                  </span>
+
+                  <span
+                    title="Go forward"
+                    onClick={changeCurrentFolio}
+                    data-id={documentView[side].nextFolioShortID}
+                    className={(documentView[side].hasNext) ? 'arrow' : 'arrow disabled'}
+                  >
+                    {' '}
+                    <FaArrowCircleRight />
+                  </span>
                 </>
               )}
 
@@ -358,9 +358,11 @@ const Navigation = (props) => {
               <MenuItem value="f" key="f">
                 {DocumentHelper.transcriptionTypeLabels.f}
               </MenuItem>
-              { props.glossary && <MenuItem value="glossary" key="glossary">
+              { props.glossary && (
+              <MenuItem value="glossary" key="glossary">
                 {DocumentHelper.transcriptionTypeLabels.glossary}
-              </MenuItem> }
+              </MenuItem>
+              ) }
             </Select>
             <span
               title="Toggle folio help"
@@ -386,7 +388,7 @@ const Navigation = (props) => {
 function mapStateToProps(state) {
   return {
     document: state.document,
-    glossary: !!state.glossary.URL
+    glossary: !!state.glossary.URL,
   };
 }
 

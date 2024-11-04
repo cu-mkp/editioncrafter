@@ -24,8 +24,6 @@ const ImageView = (props) => {
   // const [onZoomOut, setOnZoomOut] = useState(() => null);
   // const [onZoomIn, setOnZoomIn] = useState(() => null);
 
-
-
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -48,7 +46,7 @@ const ImageView = (props) => {
     viewer.viewport.zoomTo(viewer.viewport.getMaxZoom());
   };
 
-  const onZoomFixed_2= (e) => {
+  const onZoomFixed_2 = (e) => {
     viewer.viewport.zoomTo((viewer.viewport.getMaxZoom() / 2));
   };
 
@@ -58,11 +56,11 @@ const ImageView = (props) => {
 
   const onZoomIn = (e) => {
     console.log(viewer.viewport.fitVertically());
-    viewer.viewport.zoomBy(2)
+    viewer.viewport.zoomBy(2);
   };
 
   const onZoomOut = (e) => {
-    viewer.viewport.zoomBy(0.5)
+    viewer.viewport.zoomBy(0.5);
   };
 
   useEffect(() => {
@@ -100,7 +98,7 @@ const ImageView = (props) => {
         showNavigationControl: false,
         zoomPerClick: 2,
         gestureSettingsMouse: {
-          clickToZoom: false
+          clickToZoom: false,
         },
       });
 
@@ -147,36 +145,36 @@ const ImageView = (props) => {
   return (
     <div>
       { tileSource
-      ? (
-      <div className={`image-view imageViewComponent ${props.side}`} style={{ position: "relative" }}>
-        <Navigation
-          side={props.side}
-          documentView={props.documentView}
-          documentViewActions={props.documentViewActions}
-          documentName={props.document.variorum && props.document.folioIndex[props.folioID].doc_id}
-        />
-        <ImageZoomControl
-          side={props.side}
-          documentView={props.documentView}
-          onZoomFixed_1={onZoomFixed_1}
-          onZoomFixed_2={onZoomFixed_2}
-          onZoomFixed_3={onZoomFixed_3}
-          onZoomGrid={onZoomGrid}
-          onZoomIn={onZoomIn}
-          onZoomOut={onZoomOut}
-          viewer={viewer}
-        />
-        <SeaDragonComponent
-          key={props.folioID}
-          side={props.side}
-          tileSource={tileSource}
-          initViewer={initViewer}
-          loading={loading}
-        />
-      </div>
-      ) : (
-        <BigRingSpinner color="dark" delay={300} />
-      )}
+        ? (
+          <div className={`image-view imageViewComponent ${props.side}`} style={{ position: 'relative' }}>
+            <Navigation
+              side={props.side}
+              documentView={props.documentView}
+              documentViewActions={props.documentViewActions}
+              documentName={props.document.variorum && props.document.folioIndex[props.folioID].doc_id}
+            />
+            <ImageZoomControl
+              side={props.side}
+              documentView={props.documentView}
+              onZoomFixed_1={onZoomFixed_1}
+              onZoomFixed_2={onZoomFixed_2}
+              onZoomFixed_3={onZoomFixed_3}
+              onZoomGrid={onZoomGrid}
+              onZoomIn={onZoomIn}
+              onZoomOut={onZoomOut}
+              viewer={viewer}
+            />
+            <SeaDragonComponent
+              key={props.folioID}
+              side={props.side}
+              tileSource={tileSource}
+              initViewer={initViewer}
+              loading={loading}
+            />
+          </div>
+        ) : (
+          <BigRingSpinner color="dark" delay={300} />
+        )}
     </div>
   );
 };
