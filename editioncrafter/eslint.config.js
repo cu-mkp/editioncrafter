@@ -10,4 +10,7 @@ export default antfu({
     'coverage/',
     'styles/',
   ],
+  rules: {
+    'react/prefer-destructuring-assignment': ['off'],
+  },
 })
