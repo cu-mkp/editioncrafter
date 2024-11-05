@@ -1,21 +1,21 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
 export default class CommentErrorBoundary extends Component {
   constructor(props) {
-    super(props);
-    this.state = { error: null, errorInfo: null };
+    super(props)
+    this.state = { error: null, errorInfo: null }
   }
 
   static getDerivedStateFromError(error) {
     // Update state so the next render will show the fallback UI.
-    return { error: true };
+    return { error: true }
   }
 
   componentDidCatch(error, errorInfo) {
     this.setState({
       error,
       errorInfo,
-    });
+    })
   }
 
   render() {
@@ -32,8 +32,8 @@ export default class CommentErrorBoundary extends Component {
             {this.state.errorInfo.componentStack}
           </details>
         </div>
-      );
+      )
     }
-    return this.props.children;
+    return this.props.children
   }
 }

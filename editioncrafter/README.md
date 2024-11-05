@@ -19,13 +19,13 @@ The reference section below details all of the props of the EditionCrafter compo
 import EditionCrafter from '@cu-mkp/editioncrafter'
 
 <EditionCrafter
-  documentName='BnF Ms. Fr. 640'
+  documentName="BnF Ms. Fr. 640"
   transcriptionTypes={{
     tc: 'Diplomatic (FR)',
     tcn: 'Normalized (FR)',
     tl: 'Translation (EN)'
   }}
-  iiifManifest='https://editioncrafter.org-data/fr640_3r-3v-example/iiif/manifest.json'
+  iiifManifest="https://editioncrafter.org-data/fr640_3r-3v-example/iiif/manifest.json"
 />
 ```
 
@@ -60,7 +60,7 @@ The following props are available to the `<EditionCrafter>` viewer component:
 
 ### documentInfo
 
-Optional; used **only** in the case that you wish to load multiple documents in the same viewer for easy comparison. 
+Optional; used **only** in the case that you wish to load multiple documents in the same viewer for easy comparison.
 
 An *object* whose keys are unique document IDs for each document you wish to include, and whose values are *objects* specifying the `documentName`, `transcriptionTypes`, and `iiifManifest` for each document as described below. For example:
 ```js
@@ -87,7 +87,7 @@ documentInfo={{
 
 Required. (Note: This is required even in the case that you have also included a `documentInfo` prop.)
 
-A *string* giving the name of the document(s). 
+A *string* giving the name of the document(s).
 
 ### iiifManifest
 
@@ -124,8 +124,8 @@ In this case the `transcriptionTypes` object might have the form:
 
 ```js
 transcriptionTypes = {
-    transcription: 'Transcription',
-    translation: 'Translation'
+  transcription: 'Transcription',
+  translation: 'Translation'
 }
 ```
 The value for each transcription type should be a string that will be displayed in the selection menu within the viewer. These need not correspond precisely to the keys. For instance in the example above, you could add more information to the display strings, e.g. `'Transcription (FR)'` and `Translation (EN)`.

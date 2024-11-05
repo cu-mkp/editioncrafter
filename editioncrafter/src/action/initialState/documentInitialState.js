@@ -10,5 +10,5 @@ export default function documentInitalState(iiifManifest, documentName, transcri
     loaded: false,
     folioIndex: {},
     folioByName: {},
-  };
+  }
 }

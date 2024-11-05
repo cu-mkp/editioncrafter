@@ -1,6 +1,8 @@
-import * as React from 'react';
+import * as React from 'react'
 
 function SideMenuIconRight(props) {
+  const { color } = props
+
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -12,7 +14,7 @@ function SideMenuIconRight(props) {
       <g
         data-name="Component 13 \u2013 1"
         fill="none"
-        stroke={props.color ? props.color : '#000'}
+        stroke={color || '#000'}
         strokeLinecap="round"
         strokeWidth={18}
       >
@@ -26,7 +28,7 @@ function SideMenuIconRight(props) {
         <path data-name="Line 139" d="M132 112l32-30" />
       </g>
     </svg>
-  );
+  )
 }
 
-export default SideMenuIconRight;
+export default SideMenuIconRight

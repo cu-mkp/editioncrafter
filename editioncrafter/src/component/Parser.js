@@ -1,5 +1,5 @@
-import React from 'react';
-import HtmlReactParser from 'html-react-parser';
+import HtmlReactParser from 'html-react-parser'
+import React from 'react'
 
 // This component addresses a conflict between React and
 // documents whose elements contain `ref` attributes.
@@ -12,10 +12,10 @@ import HtmlReactParser from 'html-react-parser';
 
 class Parser extends React.Component {
   render() {
-    const { html, htmlToReactParserOptionsSide } = this.props;
+    const { html, htmlToReactParserOptionsSide } = this.props
 
-    return HtmlReactParser(html, htmlToReactParserOptionsSide);
+    return HtmlReactParser(html, htmlToReactParserOptionsSide)
   }
 }
 
-export default Parser;
+export default Parser
