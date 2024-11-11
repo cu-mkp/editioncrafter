@@ -38,14 +38,14 @@ export function NativeBoundUnbound() {
   )
 }
 
-export function Cats() {
+export function SimpleImages() {
   return (
     <EditionCrafter
-      documentName="cats"
+      documentName="Simple Images"
       transcriptionTypes={{
         transcription: 'Transcription',
       }}
-      iiifManifest="/cats-example/iiif/manifest.json"
+      iiifManifest="/images-example/iiif/manifest.json"
     />
   )
 }

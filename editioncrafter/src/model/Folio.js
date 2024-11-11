@@ -12,13 +12,21 @@ export async function loadFolio(folioData) {
   const transcriptionTypeTracker = Object.fromEntries(transcriptionTypes.map(t => [t, false]))
 
   const isIIIF = folio.image_zoom_url.endsWith('.json')
+  console.log(isIIIF)
 
-  if (transcriptionTypes.length > 0) {
+  if (isIIIF) {
     const response = await fetch(folio.image_zoom_url)
     const imageServerResponse = await response.json()
     // Handle the image server response
     folio.tileSource = new OpenSeadragon.IIIFTileSource(imageServerResponse)
+  } else {
+    folio.tileSource = new OpenSeadragon.ImageTileSource({
+      type: 'image',
+      url: folio.image_zoom_url,
+    })
+  }
 
+  if (transcriptionTypes.length > 0) {
     for await (const transcriptionType of transcriptionTypes) {
       const { htmlURL, xmlURL } = folio.annotationURLs[transcriptionType]
       if (!folio.transcription)
@@ -51,28 +59,9 @@ export async function loadFolio(folioData) {
       return folio
     }
   }
-  else if (isIIIF) {
-    // if there is no annotatation list, just load the image and provide a blank transcription
-    try {
-      const response = await fetch(folio.image_zoom_url)
-      const imageServerResponse = await response.json()
-      folio.tileSource = new OpenSeadragon.IIIFTileSource(imageServerResponse)
-      folio.loading = false
-      return folio
-    }
-    catch (error) {
-      folioData.loading = false
-      throw error
-    }
-  }
-  else {
-    folio.tileSource = new OpenSeadragon.ImageTileSource({
-      type: 'image',
-      url: folio.image_zoom_url,
-    })
-    folio.loading = false
-    return folio
-  }
+
+  folio.loading = false
+  return folio
 }
 
 // returns transcription or error message if unable to parse
