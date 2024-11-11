@@ -43,7 +43,7 @@ export function SimpleImages() {
     <EditionCrafter
       documentName="Simple Images"
       transcriptionTypes={{
-        transcription: 'Transcription',
+        text: 'Translation',
       }}
       iiifManifest="/images-example/iiif/manifest.json"
     />

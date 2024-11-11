@@ -17,50 +17,42 @@
       </teiHeader>
 
       <facsimile >
-                    <surface xml:id="f004" ulx="0" uly="0" lrx="3372" lry="5396">
-            <label>NP</label>
-            <graphic mimeType="image/jpeg" url="http://localhost:6006/images-example/img/f000.jpg" />
-          </surface>
-          <surface xml:id="f005" ulx="0" uly="0" lrx="3426" lry="5420">
-            <label>NP</label>
-            <graphic mimeType="image/jpeg" url="http://localhost:6006/images-example/img/f001.jpg" />
-          </surface>
-          <surface xml:id="f006" ulx="0" uly="0" lrx="3384" lry="5408">
+                    <surface xml:id="f004" ulx="0" uly="0" lrx="3384" lry="5408">
             <label>1r</label>
-            <graphic mimeType="image/jpeg" url="http://localhost:6006/images-example/img/f002.jpg" />
-          </surface>
-          <surface xml:id="f007" ulx="0" uly="0" lrx="3429" lry="5432">
-            <label>1v</label>
-            <graphic mimeType="image/jpeg" url="http://localhost:6006/images-example/img/f003.jpg" />
-          </surface>
-          <surface xml:id="f008" ulx="0" uly="0" lrx="3372" lry="5420">
-            <label>2r</label>
             <graphic mimeType="image/jpeg" url="http://localhost:6006/images-example/img/f004.jpg" />
           </surface>
-          <surface xml:id="f009" ulx="0" uly="0" lrx="3408" lry="5420">
-            <label>2v</label>
+          <surface xml:id="f005" ulx="0" uly="0" lrx="3429" lry="5432">
+            <label>1v</label>
             <graphic mimeType="image/jpeg" url="http://localhost:6006/images-example/img/f005.jpg" />
           </surface>
-          <surface xml:id="f010" ulx="0" uly="0" lrx="3369" lry="5417">
-            <label>3r</label>
+          <surface xml:id="f006" ulx="0" uly="0" lrx="3372" lry="5420">
+            <label>2r</label>
             <graphic mimeType="image/jpeg" url="http://localhost:6006/images-example/img/f006.jpg" />
           </surface>
-          <surface xml:id="f011" ulx="0" uly="0" lrx="3393" lry="5426">
-            <label>3v</label>
+          <surface xml:id="f007" ulx="0" uly="0" lrx="3408" lry="5420">
+            <label>2v</label>
             <graphic mimeType="image/jpeg" url="http://localhost:6006/images-example/img/f007.jpg" />
           </surface>
-          <surface xml:id="f012" ulx="0" uly="0" lrx="3372" lry="5390">
-            <label>4r</label>
+          <surface xml:id="f008" ulx="0" uly="0" lrx="3369" lry="5417">
+            <label>3r</label>
             <graphic mimeType="image/jpeg" url="http://localhost:6006/images-example/img/f008.jpg" />
           </surface>
-          <surface xml:id="f013" ulx="0" uly="0" lrx="3402" lry="5390">
-            <label>4v</label>
+          <surface xml:id="f009" ulx="0" uly="0" lrx="3393" lry="5426">
+            <label>3v</label>
             <graphic mimeType="image/jpeg" url="http://localhost:6006/images-example/img/f009.jpg" />
+          </surface>
+          <surface xml:id="f010" ulx="0" uly="0" lrx="3372" lry="5390">
+            <label>4r</label>
+            <graphic mimeType="image/jpeg" url="http://localhost:6006/images-example/img/f010.jpg" />
+          </surface>
+          <surface xml:id="f011" ulx="0" uly="0" lrx="3402" lry="5390">
+            <label>4v</label>
+            <graphic mimeType="image/jpeg" url="http://localhost:6006/images-example/img/f011.jpg" />
           </surface>
 
       </facsimile>
 
-      <text xml:id="transcription">
+      <text xml:id="text">
 <body>
     <pb facs="#f004" />
 <div facs="#f004"><ab>
@@ -733,125 +725,6 @@
 <lb />liquor or sauce on the engraved object with a sponge
 </ab></div>
 <div facs="#f011"><ab>
-<lb />
-</ab></div>
-
-<pb facs="#f012" />
-<div facs="#f012"><ab>
-<lb />
-</ab></div>
-<div facs="#f012"><ab>
-<lb />or linen &amp; leave it thus for xx4
-<lb />hours &amp; it will be engraved. But if you should
-<lb />want to engrave promptly, varnish all your work &amp; boil it in the
-<lb />said liquor, &amp; it will promptly engrave.
-</ab></div>
-<div facs="#f012"><ab>
-<lb />Steel mirrors
-</ab></div>
-<div facs="#f012"><ab>
-<lb />X They are called of steel because in times
-<lb />past they were commonly made of steel polished with
-<lb />emery putty. But more easily, various kinds are made
-<lb />with cuivre franc, which is rosette &amp;
-<lb />tin, because it is cast in a mold &amp; made
-<lb />round, concave, convex &amp; however one likes, to represent various
-<lb />forms.
-<lb />    
-</ab></div>
-<div facs="#f012"><ab>
-<lb />So take half rosette copper &amp; half
-<lb />soft tin, that is to say fine, which has not yet been used.
-<lb />Put them in a crucible, &amp; first melt the copper
-<lb />well. And once it is well melted, put in the tin and mix
-<lb />together. Then cast in the mold, of white stone with no
-<lb />eyelets, &amp; anoint the mold with oil, &amp; let
-<lb />it be moderately warm. Then, having
-<lb />molded your mirror, you can polish it in this way.
-</ab></div>
-<div facs="#f012"><ab>
-<lb />Set one of these in plaster in order that it holds firmly,
-<lb />&amp; then put the other one over it with thin sand in between,
-<lb />&amp; rub one against the other, whether it be concave or flat, &amp; thus you
-<lb />will polish two at once. And if you want to polish them on both sides,
-<lb />you only need to switch them, that is to say put the one that was
-<lb />polishing into the plaster &amp; the one that was in the
-<lb />plaster to polish. After having polished them with the
-<lb />arene you can smooth them with Venice tripoli, 
-<lb />which should not be sandy, &amp; next with
-<lb />putty. You polish with
-<lb />arene using water, but polishing with
-<lb />tripoli &amp; putty is done
-<lb />dry. Once polished, you can set it.
-</ab></div>
-<div facs="#f012"><ab>
-<lb />Concave mirrors
-</ab></div>
-<div facs="#f012"><ab>
-<lb />The concave mirror composed in the aforesaid form produces an
-<lb />endless number of pretty conceits which seem magic. If someone wants to see
-<lb />oneself from behind, it is necessary to place the concave
-<lb />mirror on the ground on its foot, &amp; let it be at a slant;
-<lb />next, look at it from one pace away. But if you
-<lb />look at it close up, it will represent you the right way up but
-<lb />with your face quite large &amp; the hairs of your
-<lb />beard as thick as
-</ab></div>
-<div facs="#f012"><ab>
-<lb />
-</ab></div>
-
-<pb facs="#f013" />
-<div facs="#f013"><ab>
-<lb />
-</ab></div>
-<div facs="#f013"><ab>
-<lb />string &amp; will represent a nipple as large as a plate, and
-<lb />women can see the secret places that they do not
-<lb />want to show to surgeons. It casts the representation out of
-<lb />itself, and if you touch &lt;-the place-&gt; the eye of
-<lb />the representation with your finger, another finger
-<lb />will come against yours.
-</ab></div>
-<div facs="#f013"><ab>
-<lb />You will make a light at night for someone quite far
-<lb />away, if you place the concave mirror behind a candle
-<lb />placed on the window. You will be able to read and write quite
-<lb />far from the candle if you place it behind the candle
-<lb />&amp; place &amp; turn the concavity toward you. If you put
-<lb />the mirror at the end of a table &amp; a
-<lb />candle on it, it will represent two lights on the
-<lb />table for you. To see what is happening on a street,
-<lb />shutter the window, whereby the more of it you can shut the
-<lb />better it will be. Make a hole at the lower one, as wide as your little
-<lb />finger, perfectly round, from one side to the other. Then
-<lb />place a sheet of paper on the window
-<lb />&amp; let the middle of the sheet be over the hole.
-<lb />Pierce the sheet in the same place as the hole &amp; the same
-<lb />size. After, place the concave face of the mirror toward the
-<lb />hole, &amp; it will represent to you all those who pass by in the
-<lb />street on the sheet of paper. Similarly with
-<lb />the pierced door of a closed room. You can make wavy ones
-<lb />&amp; triangular ones, in the fashion that Ptolemy describes, &amp;
-<lb />Archimedes. The concave one also sets fire to straw from
-<lb />quite far away, and lights a candle with the sun. Also, 
-<lb />it heats through the reverberation of fire.
-</ab></div>
-<div facs="#f013"><ab>
-<lb />For bronzing in yellow and white
-</ab></div>
-<div facs="#f013"><ab>
-<lb />Take looking-glass tin and melt it. On half a lb of
-<lb />this, put half an ounce of quicksilver, and remove it
-<lb />all at once from the fire &amp; grind it, and it will be like
-<lb />ash. &lt;-Grind-&gt; Wash it quite well in clean water.
-<lb />Next, grind it on marble &amp; temper it with water of
-<lb />&lt;-ret-&gt; hide glue. Next, apply to
-<lb />your wooden candlesticks &amp; any other work you like,
-<lb />&amp; burnish with the tooth. You can grind pin filings
-<lb />&amp; apply them with the said glue. 
-</ab></div>
-<div facs="#f013"><ab>
 <lb />
 </ab></div>
 
