@@ -3748,7 +3748,7 @@
   },
   "seeAlso": [
     {
-      "id": "https://editioncrafter.org-data/fr640_3r-3v-example/glossary.json",
+      "id": "https://cu-mkp.github.io/editioncrafter-data/fr640_3r-3v-example/glossary.json",
       "type": "Dataset",
       "label": "Glossary",
       "format": "text/json"

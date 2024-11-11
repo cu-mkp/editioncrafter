@@ -41,8 +41,8 @@ export const BnFMsFr640 = () => (
       tl: "Translation (EN)",
       test: "Test Field (EN)",
     }}
-    iiifManifest="https://editioncrafter.org-data/fr640_3r-3v-example/iiif/manifest.json"
-    glossaryURL="https://editioncrafter.org-data/fr640_3r-3v-example/glossary.json"
+    iiifManifest="https://cu-mkp.github.io/editioncrafter-data/fr640_3r-3v-example/iiif/manifest.json"
+    glossaryURL="https://cu-mkp.github.io/editioncrafter-data/fr640_3r-3v-example/glossary.json"
   />
 );
 
@@ -154,7 +154,7 @@ export const stateChange = () => {
     setTimeout(() => {
       //setManifest('https://cu-mkp.github.io/dyngleyfamily-editioncrafter-data/O_8_35/iiif/manifest.json');
       setGlossary(
-        "https://editioncrafter.org-data/fr640_3r-3v-example/glossary.json"
+        "https://cu-mkp.github.io/editioncrafter-data/fr640_3r-3v-example/glossary.json"
       );
       setTitle("Taos Baptisms Batch 2");
     }, 10000);
