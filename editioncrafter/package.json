@@ -1,6 +1,5 @@
 {
   "name": "@cu-mkp/editioncrafter",
-  "type": "module",
   "version": "1.0.3",
   "private": false,
   "description": "A simple digital critical edition publication tool",
