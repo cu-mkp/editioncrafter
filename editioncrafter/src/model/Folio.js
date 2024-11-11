@@ -12,7 +12,6 @@ export async function loadFolio(folioData) {
   const transcriptionTypeTracker = Object.fromEntries(transcriptionTypes.map(t => [t, false]))
 
   const isIIIF = folio.image_zoom_url.endsWith('.json')
-  console.log(isIIIF)
 
   if (isIIIF) {
     const response = await fetch(folio.image_zoom_url)
