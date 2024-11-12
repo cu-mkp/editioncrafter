@@ -20,7 +20,7 @@
 							"type": "Annotation",
 							"motivation": "painting",
 							"body": {
-								"id": "http://localhost:6006/images-example/img/f004.jpg",
+								"id": "https://raw.githubusercontent.com/cu-mkp/editioncrafter/refs/heads/dev/editioncrafter/static/images-example/img/f004.jpg",
 								"format": "image/jpeg",
 								"type": "Image",
 								"height": 5408,
@@ -87,7 +87,7 @@
 							"type": "Annotation",
 							"motivation": "painting",
 							"body": {
-								"id": "http://localhost:6006/images-example/img/f005.jpg",
+								"id": "https://raw.githubusercontent.com/cu-mkp/editioncrafter/refs/heads/dev/editioncrafter/static/images-example/img/f005.jpg",
 								"format": "image/jpeg",
 								"type": "Image",
 								"height": 5432,
@@ -154,7 +154,7 @@
 							"type": "Annotation",
 							"motivation": "painting",
 							"body": {
-								"id": "http://localhost:6006/images-example/img/f006.jpg",
+								"id": "https://raw.githubusercontent.com/cu-mkp/editioncrafter/refs/heads/dev/editioncrafter/static/images-example/img/f006.jpg",
 								"format": "image/jpeg",
 								"type": "Image",
 								"height": 5420,
@@ -221,7 +221,7 @@
 							"type": "Annotation",
 							"motivation": "painting",
 							"body": {
-								"id": "http://localhost:6006/images-example/img/f007.jpg",
+								"id": "https://raw.githubusercontent.com/cu-mkp/editioncrafter/refs/heads/dev/editioncrafter/static/images-example/img/f007.jpg",
 								"format": "image/jpeg",
 								"type": "Image",
 								"height": 5420,
@@ -288,7 +288,7 @@
 							"type": "Annotation",
 							"motivation": "painting",
 							"body": {
-								"id": "http://localhost:6006/images-example/img/f008.jpg",
+								"id": "https://raw.githubusercontent.com/cu-mkp/editioncrafter/refs/heads/dev/editioncrafter/static/images-example/img/f008.jpg",
 								"format": "image/jpeg",
 								"type": "Image",
 								"height": 5417,
@@ -355,7 +355,7 @@
 							"type": "Annotation",
 							"motivation": "painting",
 							"body": {
-								"id": "http://localhost:6006/images-example/img/f009.jpg",
+								"id": "https://raw.githubusercontent.com/cu-mkp/editioncrafter/refs/heads/dev/editioncrafter/static/images-example/img/f009.jpg",
 								"format": "image/jpeg",
 								"type": "Image",
 								"height": 5426,
@@ -422,7 +422,7 @@
 							"type": "Annotation",
 							"motivation": "painting",
 							"body": {
-								"id": "http://localhost:6006/images-example/img/f010.jpg",
+								"id": "https://raw.githubusercontent.com/cu-mkp/editioncrafter/refs/heads/dev/editioncrafter/static/images-example/img/f010.jpg",
 								"format": "image/jpeg",
 								"type": "Image",
 								"height": 5390,
@@ -489,7 +489,7 @@
 							"type": "Annotation",
 							"motivation": "painting",
 							"body": {
-								"id": "http://localhost:6006/images-example/img/f011.jpg",
+								"id": "https://raw.githubusercontent.com/cu-mkp/editioncrafter/refs/heads/dev/editioncrafter/static/images-example/img/f011.jpg",
 								"format": "image/jpeg",
 								"type": "Image",
 								"height": 5390,
