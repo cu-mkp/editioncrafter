@@ -1,3 +1,5 @@
+import { transformWithEsbuild } from 'vite'
+
 /** @type { import('@storybook/react-webpack5').StorybookConfig } */
 const config = {
   stories: ['../stories/**/*.mdx', '../stories/**/*.stories.@(js|jsx|ts|tsx)'],
@@ -6,64 +8,43 @@ const config = {
     '@storybook/addon-links',
     '@storybook/addon-essentials',
     '@storybook/addon-interactions',
-    '@storybook/addon-styling-webpack',
-    ({
-      name: '@storybook/addon-styling-webpack',
-
-      options: {
-        rules: [{
-          test: /\.css$/,
-          sideEffects: true,
-          use: [
-            require.resolve('style-loader'),
-            {
-              loader: require.resolve('css-loader'),
-              options: {
-
-              },
-            },
-          ],
-        }, {
-          test: /\.s[ac]ss$/,
-          sideEffects: true,
-          use: [
-            require.resolve('style-loader'),
-            {
-              loader: require.resolve('css-loader'),
-              options: {
-
-                importLoaders: 2,
-              },
-            },
-            require.resolve('resolve-url-loader'),
-            {
-              loader: require.resolve('sass-loader'),
-              options: {
-                // Want to add more Sass options? Read more here: https://webpack.js.org/loaders/sass-loader/#options
-                implementation: require.resolve('sass'),
-                sourceMap: true,
-                sassOptions: {},
-              },
-            },
-          ],
-        }],
-      }
-    }),
-    '@storybook/addon-webpack5-compiler-babel',
-    '@chromatic-com/storybook'
+    '@chromatic-com/storybook',
   ],
-
-  framework: {
-    name: '@storybook/react-webpack5',
-    options: {},
-  },
-
   docs: {},
+  core: {
+    builder: '@storybook/builder-vite',
+  },
+  framework: {
+    name: '@storybook/react-vite',
+  },
 
   staticDirs: ['../static'],
 
   typescript: {
-    reactDocgen: 'react-docgen-typescript'
-  }
+    reactDocgen: 'react-docgen-typescript',
+  },
+  async viteFinal(config) {
+    // Merge custom configuration into the default config
+    const { mergeConfig } = await import('vite')
+
+    return mergeConfig(config, {
+      plugins: [
+        {
+          name: 'treat-js-files-as-jsx',
+          async transform(code, id) {
+            if (!id.match(/src\/.*\.js$/))
+              return null
+
+            // Use the exposed transform from vite, instead of directly
+            // transforming with esbuild
+            return transformWithEsbuild(code, id, {
+              loader: 'jsx',
+              jsx: 'automatic',
+            })
+          },
+        },
+      ],
+    })
+  },
 }
 export default config
