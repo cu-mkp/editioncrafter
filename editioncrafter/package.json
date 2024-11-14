@@ -18,8 +18,9 @@
     "lint:fix": "eslint . --fix",
     "build": "vite build",
     "build:dev": "vite serve",
+    "build:es": "mkdir -p dist/es && cp -r src dist/es",
     "preview": "vite preview",
-    "prepublishOnly": "npm run clean && npm run build",
+    "prepublishOnly": "npm run clean && npm run build && npm run build:es",
     "size": "bundlewatch --config bundlewatch.config.json",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
