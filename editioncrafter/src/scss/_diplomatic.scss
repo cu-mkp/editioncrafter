@@ -301,17 +301,9 @@
 
 #diplomatic.editioncrafter {
 	background: white;
-	// position: fixed;
 	width: auto;
 	height: min(100%, 100dvh);
 	overflow-y: hidden;
-	// height: calc(100% - $chrome-height);
-	// @include sm {
-	// 	height: calc(100% - $sm-chrome-height);
-	// }
-	// @include md {
-	// 	height: calc(100% - $md-chrome-height);
-	// }
 	-webkit-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;
