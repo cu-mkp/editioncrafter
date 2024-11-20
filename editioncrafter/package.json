@@ -1,7 +1,7 @@
 {
   "name": "@cu-mkp/editioncrafter",
   "type": "module",
-  "version": "1.0.4-beta.4",
+  "version": "1.0.3",
   "private": false,
   "description": "A simple digital critical edition publication tool",
   "license": "MIT",
@@ -83,7 +83,8 @@
     "style-loader": "^3.3.2",
     "unfetch": "^4.1.0",
     "url-polyfill": "^1.1.7",
-    "vite": "^5.4.11"
+    "vite": "^5.4.11",
+    "vite-plugin-css-injected-by-js": "^3.5.2"
   },
   "overrides": {
     "@recogito/annotorious-openseadragon": {
