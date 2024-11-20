@@ -177,3 +177,12 @@ Setup for Storybook was kind of rushed and the process could still be made simpl
 By default, Storybook doesn't display the hash routing params used by `react-router`. You can use the "Open canvas in new tab" button on the top right to open the component in its own tab:
 
 ![screenshot of new tab button](newtab.png)
+
+## Releasing a new version
+
+1. `cd` into the `editioncrafter` directory, where the package for the React component is stored.
+2. Bump the version number in its `package.json` and run `npm i` to update `package-lock.json` with the new version number.
+3. Use `npm publish` to publish `@cu-mkp/editioncrafter`.
+4. Run `cd ../editioncrafter-umd` to go to the directory for the UMD version.
+5. Update `editioncrafter-umd`'s `package.json` file to the new version number **and update the version of `@cu-mkp/editioncrafter` in the `dependencies` list to the version you published in step 3**.
+6. Run `npm i` to update `package-lock.json` and then publish with `npm publish`.

@@ -5,36 +5,24 @@
   "description": "A simple digital critical edition publication tool",
   "private": false,
   "source": "src/index.js",
-  "main": "dist/editioncrafter.min.js",
+  "main": "dist/editioncrafter.umd.js",
   "files": [
     "dist"
   ],
   "scripts": {
-    "build": "webpack build --mode=production",
+    "build": "vite build",
     "prepublishOnly": "npm install @cu-mkp/editioncrafter@latest && npm run build"
   },
   "license": "MIT",
   "repository": "https://github.com/cu-mkp/editioncrafter",
   "dependencies": {
-    "@cu-mkp/editioncrafter": "*",
+    "@cu-mkp/editioncrafter": "^1.0.3",
     "react": "^17.0.0",
     "react-dom": "^17.0.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.21.8",
-    "babel-loader": "^9.1.2",
-    "terser-webpack-plugin": "^5.3.8",
-    "webpack": "^5.82.0",
-    "webpack-cli": "^5.1.0",
-    "@babel/cli": "^7.17.6",
-    "@babel/plugin-proposal-class-properties": "^7.16.7",
-    "@babel/plugin-proposal-object-rest-spread": "^7.17.3",
-    "@babel/plugin-transform-regenerator": "^7.16.7",
-    "@babel/plugin-transform-runtime": "^7.17.0",
-    "@babel/preset-env": "^7.16.11",
-    "@babel/preset-react": "^7.16.7",
-    "babel-plugin-lodash": "^3.3.4",
-    "babel-plugin-macros": "^3.0.1",
-    "babel-plugin-transform-react-remove-prop-types": "^0.4.24"
+    "@rollup/plugin-replace": "^6.0.1",
+    "@vitejs/plugin-react": "^4.3.3",
+    "vite": "^5.4.11"
   }
 }

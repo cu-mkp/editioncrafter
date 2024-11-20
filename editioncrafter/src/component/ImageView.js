@@ -1,5 +1,4 @@
-import * as Annotorious from '@recogito/annotorious-openseadragon'
-/* eslint-disable react-hooks/exhaustive-deps */
+import Annotorious from '@recogito/annotorious-openseadragon'
 import OpenSeadragon from 'openseadragon'
 import React, { useEffect, useState } from 'react'
 import { connect } from 'react-redux'
@@ -20,12 +19,6 @@ import '@recogito/annotorious-openseadragon/dist/annotorious.min.css'
 function ImageView(props) {
   const [viewer, setViewer] = useState(null)
   const [anno, setAnno] = useState(null)
-
-  // const [onZoomFixed_1, setOnZoomFixed_1] = useState(() => null);
-  // const [onZoomFixed_2, setOnZoomFixed_2] = useState(() => null);
-  // const [onZoomFixed_3, setOnZoomFixed_3] = useState(() => null);
-  // const [onZoomOut, setOnZoomOut] = useState(() => null);
-  // const [onZoomIn, setOnZoomIn] = useState(() => null);
 
   const location = useLocation()
   const navigate = useNavigate()
