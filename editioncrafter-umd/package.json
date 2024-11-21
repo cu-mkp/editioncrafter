@@ -16,7 +16,7 @@
   "license": "MIT",
   "repository": "https://github.com/cu-mkp/editioncrafter",
   "dependencies": {
-    "@cu-mkp/editioncrafter": "^1.0.3",
+    "@cu-mkp/editioncrafter": "*",
     "react": "^17.0.0",
     "react-dom": "^17.0.0"
   },

@@ -62,7 +62,7 @@ The following props are available to the `<EditionCrafter>` viewer component:
 
 ### documentInfo
 
-Optional; used **only** in the case that you wish to load multiple documents in the same viewer for easy comparison. 
+Optional; used **only** in the case that you wish to load multiple documents in the same viewer for easy comparison.
 
 An *object* whose keys are unique document IDs for each document you wish to include, and whose values are *objects* specifying the `documentName`, `transcriptionTypes`, and `iiifManifest` for each document as described below. For example:
 ```js
@@ -89,7 +89,7 @@ documentInfo={{
 
 Required. (Note: This is required even in the case that you have also included a `documentInfo` prop.)
 
-A *string* giving the name of the document(s). 
+A *string* giving the name of the document(s).
 
 ### glossaryURL
 
@@ -180,9 +180,8 @@ By default, Storybook doesn't display the hash routing params used by `react-rou
 
 ## Releasing a new version
 
-1. `cd` into the `editioncrafter` directory, where the package for the React component is stored.
-2. Bump the version number in its `package.json` and run `npm i` to update `package-lock.json` with the new version number.
-3. Use `npm publish` to publish `@cu-mkp/editioncrafter`.
-4. Run `cd ../editioncrafter-umd` to go to the directory for the UMD version.
-5. Update `editioncrafter-umd`'s `package.json` file to the new version number **and update the version of `@cu-mkp/editioncrafter` in the `dependencies` list to the version you published in step 3**.
-6. Run `npm i` to update `package-lock.json` and then publish with `npm publish`.
+1. Bump the package numbers in `editioncrafter/package.json` and `editioncrafter-umd/package.json`.
+2. In the root level of the repo, run `npm run build` to make sure all changes are reflected in the `package-lock.json` files.
+3. Deploy these changes to `dev`, then merge `dev` into `main`.
+4. Create a new GitHub [release](https://github.com/cu-mkp/editioncrafter/releases) pointing to `main` with a version tag matching what you chose in step 1. Make sure to include a list of changes.
+5. The GitHub workflow will run automatically to publish the packages. Make sure that [editioncrafter](https://www.npmjs.com/package/@cu-mkp/editioncrafter) and [editioncrafter-umd](https://www.npmjs.com/package/@cu-mkp/editioncrafter-umd) have been successfully published.
