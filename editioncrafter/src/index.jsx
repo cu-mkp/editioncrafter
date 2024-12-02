@@ -1,8 +1,9 @@
 import { createTheme, ThemeProvider } from '@material-ui/core/styles'
 import React from 'react'
-import DiploMatic from './component/DiploMatic'
-import { createReduxStore } from './model/ReduxStore'
-import './scss/editioncrafter.scss'
+import DiploMatic from './EditionCrafter/component/DiploMatic'
+import { createReduxStore } from './EditionCrafter/model/ReduxStore'
+import _EntryList from './EntryList'
+import './EditionCrafter/scss/editioncrafter.scss'
 
 /**
  * Default instantiation
@@ -25,5 +26,7 @@ function EditionCrafter(props) {
     </ThemeProvider>
   )
 }
+
+export { _EntryList as EntryList }
 
 export default EditionCrafter
