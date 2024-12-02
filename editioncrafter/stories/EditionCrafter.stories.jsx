@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import EditionCrafter from '../src/index'
+import EditionCrafter, { EntryList } from '../src/index'
 
 export function BowInTheCloud() {
   return (
@@ -131,6 +131,12 @@ export function OrnamentDesignTranslation() {
         },
       }}
     />
+  )
+}
+
+export function SearchExample() {
+  return (
+    <EntryList />
   )
 }
 
