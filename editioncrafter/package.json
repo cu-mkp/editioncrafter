@@ -45,7 +45,8 @@
     "react-router-dom": "^6.11.0",
     "react-scroll": "^1.7.10",
     "redux": "^4.2.1",
-    "redux-saga": "^1.2.2"
+    "redux-saga": "^1.2.2",
+    "sql.js": "^1.12.0"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^3.8.0",

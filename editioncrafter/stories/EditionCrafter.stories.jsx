@@ -134,9 +134,9 @@ export function OrnamentDesignTranslation() {
   )
 }
 
-export function SearchExample() {
+export function EntryListExample() {
   return (
-    <EntryList />
+    <EntryList dbPath="/database-example/example.sqlite" />
   )
 }
 
