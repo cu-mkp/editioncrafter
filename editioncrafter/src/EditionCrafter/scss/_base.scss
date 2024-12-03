@@ -45,6 +45,13 @@ $dark-maroon: #460C0A;
 	.fa.fa-lock-open {
 		border-radius: max(2rem, 32px) 0 0 max(2rem, 32px);
 	}
+
+	.vertical-separator {
+		height: auto;
+		border-left: 2px #6F747C;
+		margin: 10px 0;
+		width: 1px;
+	}
 	
 	.line-clamp {
 		display: -webkit-box;

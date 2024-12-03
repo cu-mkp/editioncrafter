@@ -156,7 +156,33 @@
         font-weight: 900;
         text-decoration:underline;
       }
+
+      .book-mode-toggles {
+            cursor: pointer;
+      }
       
+      .book-mode-toggles button {
+            appearance: none;
+            background-color: #242629;
+            border: none;
+            height: 32px;
+            width: 32px;
+            color: #6F747C;
+      }
+
+      .book-mode-toggles button.selected {
+            background-color: #07529A;
+            color: #FFFFFF;
+      }
+
+      .book-mode-toggles button:nth-child(1) {
+            border-radius: 5px 0 0 5px;
+      }
+
+      .book-mode-toggles button:nth-child(2) {
+            border-radius: 0 5px 5px 0;
+      }
+
       .closeX { 
             float: right;
             padding: 3px;
