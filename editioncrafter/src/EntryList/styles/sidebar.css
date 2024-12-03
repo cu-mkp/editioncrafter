@@ -1,0 +1,7 @@
+.editioncrafter-entry-list .ec-sidebar {
+  background-color: #F3F4F7;
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
