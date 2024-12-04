@@ -1,6 +1,7 @@
 import { useMemo } from 'react'
 import { getObjs } from '../lib/sql'
 import Entry from './Entry'
+import '../styles/entry.css'
 
 function getData(db) {
   const elementsStmt = db.prepare(`
@@ -25,8 +26,8 @@ function EntryListView(props) {
   const elementTags = useMemo(() => getData(props.db), [props.db])
 
   return (
-    <div>
-      <h1>
+    <div className="entry-list-view">
+      <h1 className="entries-header">
         Entries (
         {elementTags.length}
         )

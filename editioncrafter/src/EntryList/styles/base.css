@@ -3,10 +3,59 @@
 .editioncrafter-entry-list {
   width: 100%;
   height: 100%;
-  display: grid;
-  grid-template-columns: 1fr 3fr;
+  display: flex;
   gap: 20px;
   font-family: 'Inter', sans-serif;
   margin: 0;
   padding: 0;
+}
+
+.editioncrafter-entry-list h1, h2, h3, h4, p {
+  margin: 0;
+  padding: 0;
+}
+
+.editioncrafter-entry-list h1 {
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+}
+
+.editioncrafter-entry-list h2 {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+}
+
+.editioncrafter-entry-list div.h-separator {
+  border-top: 1px solid #E1E3E6;
+  width: 100%;
+}
+
+.editioncrafter-entry-list * {
+  box-sizing: border-box;
+}
+
+.editioncrafter-entry-list a {
+  color: #07529A;
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.editioncrafter-entry-list button:hover {
+  cursor: pointer;
+}
+
+.editioncrafter-entry-list .loading {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  background-color: #ffffff;
 }
