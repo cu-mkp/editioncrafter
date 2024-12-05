@@ -182,6 +182,6 @@ By default, Storybook doesn't display the hash routing params used by `react-rou
 
 1. Bump the package numbers in `editioncrafter/package.json` and `editioncrafter-umd/package.json`.
 2. In the root level of the repo, run `npm run build` to make sure all changes are reflected in the `package-lock.json` files.
-3. Deploy these changes to `dev`, then merge `dev` into `main`.
+3. Commit these changes to `dev`, then merge `dev` into `main`.
 4. Create a new GitHub [release](https://github.com/cu-mkp/editioncrafter/releases) pointing to `main` with a version tag matching what you chose in step 1. Make sure to include a list of changes.
 5. The GitHub workflow will run automatically to publish the packages. Make sure that [editioncrafter](https://www.npmjs.com/package/@cu-mkp/editioncrafter) and [editioncrafter-umd](https://www.npmjs.com/package/@cu-mkp/editioncrafter-umd) have been successfully published.
