@@ -5,17 +5,11 @@ import {
   BiBookContent,
 } from 'react-icons/bi'
 import {
-  FaArrowCircleLeft,
-  FaArrowCircleRight,
   FaQuestionCircle,
-  FaRegArrowAltCircleLeft,
-  FaRegArrowAltCircleRight,
-  FaRegArrowAltCircleUp,
 } from 'react-icons/fa'
 import { HiOutlineBookOpen } from 'react-icons/hi'
 import { IoArrowBackCircleOutline, IoArrowForwardCircleOutline } from 'react-icons/io5'
 import { connect } from 'react-redux'
-import useIsWidthUp from '../hooks/useIsWidthUp'
 import DocumentHelper from '../model/DocumentHelper'
 import AlphabetLinks from './AlphabetLinks'
 import HelpPopper from './HelpPopper'
@@ -32,7 +26,7 @@ function NavArrows(props) {
         title="Go back"
         onClick={props.changeCurrentFolio}
         data-id={props.documentView[props.side].previousFolioShortID}
-        className={(!props.documentView[props.side].hasPrevious) ? 'disabled' : ''}
+        className={(!props.documentView[props.side].hasPrevious) ? 'disabled nav-arrow' : 'nav-arrow'}
       >
         <IoArrowBackCircleOutline />
       </span>
@@ -41,7 +35,7 @@ function NavArrows(props) {
         title="Go forward"
         onClick={props.changeCurrentFolio}
         data-id={props.documentView[props.side].nextFolioShortID}
-        className={(!props.documentView[props.side].hasNext) ? 'disabled' : ''}
+        className={(!props.documentView[props.side].hasNext) ? 'disabled nav-arrow' : 'nav-arrow'}
       >
         <IoArrowForwardCircleOutline />
       </span>
@@ -172,26 +166,12 @@ function Navigation(props) {
     onFilterChange,
   } = props
 
-  const isWidthUp = useIsWidthUp('md')
-
   if (!documentView) {
     return (
       <div>
         Unknown Transcription Type
       </div>
     )
-  }
-
-  const getSelectContainerStyle = () => {
-    if (isWidthUp) {
-      if (documentView[side].width < 500 && !document.variorum) {
-        return { display: 'none' }
-      }
-
-      return { display: 'flex' }
-    }
-
-    return null
   }
 
   const selectColorStyle = documentView[side].transcriptionType === 'f' ? { color: 'white' } : { color: 'black' }
@@ -221,55 +201,59 @@ function Navigation(props) {
                       onClick={documentView[side].transcriptionType !== 'g' && onGoToGrid}
                     />
 
-                    <div title={`${props.documentName || document.documentName}/${folioName}`} style={{ display: 'flex', overflowX: 'hidden', justifyContent: 'flex-end' }}>
-                      <span>{props.documentName || document.documentName}</span>
-                      <span>&nbsp;/&nbsp;</span>
-                      <div
-                        onClick={revealJumpBox}
-                        className="folioName"
-                        style={{ flexShrink: '0', minWidth: '40px' }}
-                      >
+                    <div className="toolbar-side toolbar-left">
+                      <div title={`${props.documentName || document.documentName}/${folioName}`} style={{ display: 'flex', overflowX: 'hidden', justifyContent: 'flex-end' }}>
+                        <span>{props.documentName || document.documentName}</span>
+                        <span>&nbsp;/&nbsp;</span>
+                        <div
+                          onClick={revealJumpBox}
+                          className="folioName"
+                          style={{ flexShrink: '0', minWidth: '40px' }}
+                        >
 
-                        {folioName}
+                          {folioName}
 
+                        </div>
                       </div>
-                    </div>
 
-                    <NavArrows
-                      changeCurrentFolio={changeCurrentFolio}
-                      side={side}
-                      documentView={documentView}
-                    />
-
-                    <div
-                      className="book-mode-toggles"
-                      title="Toggle book mode"
-                      onClick={toggleBookmode}
-                    >
-                      <button className={props.documentView.bookMode ? 'selected' : ''} type="button">
-                        <HiOutlineBookOpen />
-                      </button>
-                      <button className={props.documentView.bookMode ? '' : 'selected'} type="button">
-                        <BiBookContent />
-                      </button>
-                    </div>
-
-                    <div>
-                      <input
-                        onChange={toggleLockmode}
-                        title="Toggle coordination of views"
-                        type="checkbox"
+                      <NavArrows
+                        changeCurrentFolio={changeCurrentFolio}
+                        side={side}
+                        documentView={documentView}
                       />
                     </div>
 
-                    <span
-                      title="Toggle XML mode"
-                      onClick={toggleXMLMode}
-                      style={{ paddingRight: '15px' }}
-                      className={imageViewActive ? 'invisible' : xmlIconClass}
-                    />
+                    <div className="toolbar-side toolbar-right">
+                      <div
+                        className="book-mode-toggles"
+                        title="Toggle book mode"
+                        onClick={toggleBookmode}
+                      >
+                        <button className={props.documentView.bookMode ? 'selected' : ''} type="button">
+                          <HiOutlineBookOpen />
+                        </button>
+                        <button className={props.documentView.bookMode ? '' : 'selected'} type="button">
+                          <BiBookContent />
+                        </button>
+                      </div>
 
-                    <div className="vertical-separator" />
+                      <div>
+                        <input
+                          onChange={toggleLockmode}
+                          title="Toggle coordination of views"
+                          type="checkbox"
+                        />
+                      </div>
+
+                      <span
+                        title="Toggle XML mode"
+                        onClick={toggleXMLMode}
+                        style={{ paddingRight: '15px' }}
+                        className={imageViewActive ? 'invisible' : xmlIconClass}
+                      />
+
+                      <div className="vertical-separator" />
+                    </div>
 
                   </div>
                   <JumpToFolio

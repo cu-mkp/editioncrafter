@@ -1,9 +1,6 @@
 .editioncrafter {
 
       .navigationComponent {
-            #tool-bar-buttons{
-                  font-size: 15px;
-            }
             position: sticky;
             display: none;
             z-index: 2;
@@ -17,6 +14,8 @@
             padding:4px;
             background-color: white;
             border-radius: max(0.3rem, 4.8px);
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
             @include sm {
                   top: 80px;
             }
@@ -31,9 +30,6 @@
       }
       
       .navigationComponentNarrow {
-            #tool-bar-buttons{
-                  font-size: 15px;
-            }
             display: flex;
             width: auto;
             z-index: 2;
@@ -46,6 +42,7 @@
             user-select: none;
             padding:4px;
             background-color: white;
+            font-size: 14px;
             @include md {
                   display: none;
             }
@@ -91,6 +88,25 @@
             width:150px;
             margin-right:10px;
       }
+
+      .toolbar-side {
+		display: flex;
+		gap: 6px;
+		height: 100%;
+		align-items: center;
+		justify-content: center;
+	}
+
+      .nav-arrow {
+            height: 18px;
+            width: 18px;
+      }
+
+      .nav-arrow svg {
+            height: 100%;
+            width: 100%;
+      }
+
       
       .imageViewComponent .navigationComponent {
             background-color: #4A4A4A;
