@@ -1,15 +1,14 @@
 import MenuItem from '@material-ui/core/MenuItem'
 import Select from '@material-ui/core/Select'
 import React, { useRef, useState } from 'react'
-import {
-  BiBookContent,
-} from 'react-icons/bi'
+import { BsFillGrid3X3GapFill } from 'react-icons/bs'
 import {
   FaQuestionCircle,
 } from 'react-icons/fa'
 import { HiOutlineBookOpen } from 'react-icons/hi'
-import { IoArrowBackCircleOutline, IoArrowForwardCircleOutline } from 'react-icons/io5'
+import { IoArrowBackCircleOutline, IoArrowForwardCircleOutline, IoLockOpenOutline } from 'react-icons/io5'
 import { connect } from 'react-redux'
+import DocumentPagesIcon from '../icons/DocumentPagesIcon'
 import DocumentHelper from '../model/DocumentHelper'
 import AlphabetLinks from './AlphabetLinks'
 import HelpPopper from './HelpPopper'
@@ -43,6 +42,20 @@ function NavArrows(props) {
   )
 }
 
+function GridViewButton(props) {
+  return (
+    <button
+      className="grid-view-button"
+      style={{ cursor: props.documentView[props.side].transcriptionType !== 'g' ? 'pointer' : 'default', padding: '0 15px' }}
+      title={props.documentView[props.side].transcriptionType !== 'g' && 'Return to Grid View'}
+      onClick={props.documentView[props.side].transcriptionType !== 'g' && props.onGoToGrid}
+      type="button"
+    >
+      <BsFillGrid3X3GapFill />
+    </button>
+  )
+}
+
 function Navigation(props) {
   const [popover, setPopover] = useState({ ...initialPopoverObj })
   const [openHelp, setOpenHelp] = useState(false)
@@ -51,7 +64,7 @@ function Navigation(props) {
   const helpRef = useRef(null)
   const helpRefNarrow = useRef(null)
 
-  const onJumpBoxBlur = (event) => {
+  const onJumpBoxBlur = () => {
     setPopover({ anchorEl: null })
   }
 
@@ -64,19 +77,19 @@ function Navigation(props) {
     )
   }
 
-  const onGoToGrid = (event) => {
+  const onGoToGrid = () => {
     props.documentViewActions.changeTranscriptionType(props.side, 'g')
   }
 
-  const toggleHelp = (event) => {
+  const toggleHelp = () => {
     setOpenHelp(!openHelp)
   }
 
-  const toggleHelpNarrow = (event) => {
+  const toggleHelpNarrow = () => {
     setOpenHelpNarrow(!openHelpNarrow)
   }
 
-  const toggleBookmode = (event) => {
+  const toggleBookmode = () => {
     if (!props.documentView.bookMode) {
       props.documentViewActions.changeCurrentFolio(
         props.documentView.left.iiifShortID,
@@ -97,14 +110,14 @@ function Navigation(props) {
     )
   }
 
-  const toggleXMLMode = (event) => {
+  const toggleXMLMode = () => {
     props.documentViewActions.setXMLMode(
       props.side,
       !props.documentView[props.side].isXMLMode,
     )
   }
 
-  const toggleLockmode = (event) => {
+  const toggleLockmode = () => {
     if (props.documentView.bookMode) {
       toggleBookmode()
       return
@@ -187,194 +200,185 @@ function Navigation(props) {
   return (
     <>
       <div className="navigationComponent">
-        <div id="navigation-row" className="navigationRow">
 
-          { documentView[side].transcriptionType !== 'glossary'
-            ? (
+        { documentView[side].transcriptionType !== 'glossary'
+          ? (
 
-                <div id="tool-bar-buttons" className="breadcrumbs" style={showButtonsStyle}>
-                  <div style={{ display: 'flex', alignItems: 'baseline', gap: '4px' }}>
-                    <span
-                      className="fas fa-th"
-                      style={{ cursor: documentView[side].transcriptionType !== 'g' ? 'pointer' : 'default', padding: '0 15px' }}
-                      title={documentView[side].transcriptionType !== 'g' && 'Return to Grid View'}
-                      onClick={documentView[side].transcriptionType !== 'g' && onGoToGrid}
-                    />
+              <div id="tool-bar-buttons" className="breadcrumbs" style={showButtonsStyle}>
 
-                    <div className="toolbar-side toolbar-left">
-                      <div title={`${props.documentName || document.documentName}/${folioName}`} style={{ display: 'flex', overflowX: 'hidden', justifyContent: 'flex-end' }}>
-                        <span>{props.documentName || document.documentName}</span>
-                        <span>&nbsp;/&nbsp;</span>
-                        <div
-                          onClick={revealJumpBox}
-                          className="folioName"
-                          style={{ flexShrink: '0', minWidth: '40px' }}
-                        >
-
-                          {folioName}
-
-                        </div>
-                      </div>
-
-                      <NavArrows
-                        changeCurrentFolio={changeCurrentFolio}
-                        side={side}
-                        documentView={documentView}
-                      />
-                    </div>
-
-                    <div className="toolbar-side toolbar-right">
-                      <div
-                        className="book-mode-toggles"
-                        title="Toggle book mode"
-                        onClick={toggleBookmode}
-                      >
-                        <button className={props.documentView.bookMode ? 'selected' : ''} type="button">
-                          <HiOutlineBookOpen />
-                        </button>
-                        <button className={props.documentView.bookMode ? '' : 'selected'} type="button">
-                          <BiBookContent />
-                        </button>
-                      </div>
-
-                      <div>
-                        <input
-                          onChange={toggleLockmode}
-                          title="Toggle coordination of views"
-                          type="checkbox"
-                        />
-                      </div>
-
-                      <span
-                        title="Toggle XML mode"
-                        onClick={toggleXMLMode}
-                        style={{ paddingRight: '15px' }}
-                        className={imageViewActive ? 'invisible' : xmlIconClass}
-                      />
-
-                      <div className="vertical-separator" />
-                    </div>
-
-                  </div>
-                  <JumpToFolio
+                <div className="toolbar-side toolbar-left">
+                  <GridViewButton
+                    documentView={documentView}
+                    onGoToGrid={onGoToGrid}
                     side={side}
-                    anchorEl={popover.anchorEl}
-                    submitHandler={documentViewActions.jumpToFolio}
-                    blurHandler={onJumpBoxBlur}
                   />
+                  <div className="folio-path" title={`${props.documentName || document.documentName}/${folioName}`} style={{ display: 'flex', overflowX: 'hidden', justifyContent: 'flex-end' }}>
+                    <span>{props.documentName || document.documentName}</span>
+                    <span>/</span>
+                    <div
+                      onClick={revealJumpBox}
+                      className="folioName"
+                      style={{ flexShrink: '0', minWidth: '40px' }}
+                    >
+                      {folioName}
+                    </div>
+                  </div>
 
+                  <NavArrows
+                    changeCurrentFolio={changeCurrentFolio}
+                    side={side}
+                    documentView={documentView}
+                  />
                 </div>
-              )
-            : (<AlphabetLinks onFilterChange={onFilterChange} value={props.value} />)}
 
-          <div className="vertical-separator" />
+                <div className="toolbar-side toolbar-right">
+                  <div
+                    className="book-mode-toggles"
+                    title="Toggle book mode"
+                    onClick={toggleBookmode}
+                  >
+                    <button className={props.documentView.bookMode ? 'selected' : ''} type="button">
+                      <HiOutlineBookOpen />
+                    </button>
+                    <button className={props.documentView.bookMode ? '' : 'selected'} type="button">
+                      <DocumentPagesIcon />
+                    </button>
+                  </div>
 
-          <div id="doc-type-help" style={selectContainerStyle} ref={helpRef}>
-            <Select
-              className={selectClass}
-              style={{ ...selectColorStyle, marginRight: 15, fontSize: 'max(16px, 1rem)' }}
-              value={documentView[side].transcriptionType}
-              id="doc-type"
-              onClick={changeType}
-            >
-              {Object.keys(props.document.folios.find(fol => (fol.id === props.documentView[props.side].iiifShortID)).annotationURLs).map(ttKey => (
-                <MenuItem value={ttKey} key={ttKey}>{props.document.variorum ? props.document.transcriptionTypes[props.document.folios.find(fol => (fol.id === props.documentView[props.side].iiifShortID)).doc_id][ttKey] : props.document.transcriptionTypes[ttKey]}</MenuItem>
-              ))}
-              <MenuItem value="f" key="f">
-                {DocumentHelper.transcriptionTypeLabels.f}
-              </MenuItem>
-              { props.glossary && (
-                <MenuItem value="glossary" key="glossary">
-                  {DocumentHelper.transcriptionTypeLabels.glossary}
-                </MenuItem>
-              ) }
-            </Select>
-            <span
-              title="Toggle folio help"
-              onClick={toggleHelp}
-              className="helpIcon"
-            >
-              <FaQuestionCircle />
-            </span>
-            <HelpPopper
-              marginStyle={helpMarginStyle}
-              anchorEl={helpRef.current}
-              open={openHelp}
-              onClose={toggleHelp}
-            />
-          </div>
+                  <label className="lockmode-container">
+                    <input
+                      onChange={toggleLockmode}
+                      title="Toggle coordination of views"
+                      type="checkbox"
+                    />
+                    <span class="switch">
+                      <span class="slider">
+                        <IoLockOpenOutline />
+                      </span>
+                    </span>
+                  </label>
 
-        </div>
-      </div>
-      <div className="navigationComponentNarrow">
-        <div id="navigation-row" className="navigationRowNarrow">
+                  <div className="vertical-separator" />
 
-          { documentView[side].transcriptionType !== 'glossary'
-            ? (
-
-                <div id="tool-bar-buttons" className="breadcrumbsNarrow" style={showButtonsStyle}>
-
-                  <span
-                    className="fas fa-th"
-                    style={{ cursor: documentView[side].transcriptionType !== 'g' ? 'pointer' : 'default', padding: '0 15px' }}
-                    title={documentView[side].transcriptionType !== 'g' && 'Return to Grid View'}
-                    onClick={documentView[side].transcriptionType !== 'g' && onGoToGrid}
-                  />
-                                                &nbsp;
+                  <Select
+                    className={selectClass}
+                    style={{ ...selectColorStyle, marginRight: 15, fontSize: 'max(16px, 1rem)' }}
+                    value={documentView[side].transcriptionType}
+                    id="doc-type"
+                    onClick={changeType}
+                  >
+                    {Object.keys(props.document.folios.find(fol => (fol.id === props.documentView[props.side].iiifShortID)).annotationURLs).map(ttKey => (
+                      <MenuItem value={ttKey} key={ttKey}>{props.document.variorum ? props.document.transcriptionTypes[props.document.folios.find(fol => (fol.id === props.documentView[props.side].iiifShortID)).doc_id][ttKey] : props.document.transcriptionTypes[ttKey]}</MenuItem>
+                    ))}
+                    <MenuItem value="f" key="f">
+                      {DocumentHelper.transcriptionTypeLabels.f}
+                    </MenuItem>
+                    { props.glossary && (
+                      <MenuItem value="glossary" key="glossary">
+                        {DocumentHelper.transcriptionTypeLabels.glossary}
+                      </MenuItem>
+                    ) }
+                  </Select>
                   <span
                     title="Toggle XML mode"
                     onClick={toggleXMLMode}
+                    style={{ paddingRight: '15px' }}
                     className={imageViewActive ? 'invisible' : xmlIconClass}
                   />
-
-                  { imageViewActive && (
-                    <NavArrows
-                      changeCurrentFolio={changeCurrentFolio}
-                      side={side}
-                      documentView={documentView}
+                  <div className="vertical-separator" />
+                  <span
+                    title="Toggle folio help"
+                    onClick={toggleHelp}
+                    className="helpIcon"
+                    ref={helpRef}
+                  >
+                    <FaQuestionCircle />
+                    <HelpPopper
+                      marginStyle={helpMarginStyle}
+                      anchorEl={helpRef.current}
+                      open={openHelp}
+                      onClose={toggleHelp}
                     />
-                  )}
-
+                  </span>
                 </div>
-              )
-            : (<AlphabetLinks onFilterChange={onFilterChange} value={props.value} />)}
 
-          <div id="doc-type-help" style={selectContainerStyle} ref={helpRefNarrow}>
-            <Select
-              className={selectClass}
-              style={{ ...selectColorStyle, marginRight: 15, fontSize: 'max(16px, 1rem)' }}
-              value={documentView[side].transcriptionType}
-              id="doc-type"
-              onClick={changeType}
-            >
-              {Object.keys(props.document.folios.find(fol => (fol.id === props.documentView[props.side].iiifShortID)).annotationURLs).map(ttKey => (
-                <MenuItem value={ttKey} key={ttKey} title={ttKey}>{props.document.variorum ? props.document.transcriptionTypes[props.document.folios.find(fol => (fol.id === props.documentView[props.side].iiifShortID)).doc_id][ttKey] : props.document.transcriptionTypes[ttKey]}</MenuItem>
-              ))}
-              <MenuItem value="f" key="f">
-                {DocumentHelper.transcriptionTypeLabels.f}
+                <JumpToFolio
+                  side={side}
+                  anchorEl={popover.anchorEl}
+                  submitHandler={documentViewActions.jumpToFolio}
+                  blurHandler={onJumpBoxBlur}
+                />
+
+              </div>
+            )
+          : (<AlphabetLinks onFilterChange={onFilterChange} value={props.value} />)}
+
+      </div>
+      <div className="navigationComponentNarrow">
+        { documentView[side].transcriptionType !== 'glossary'
+          ? (
+
+              <div id="tool-bar-buttons" className="breadcrumbsNarrow" style={showButtonsStyle}>
+
+                <GridViewButton
+                  documentView={documentView}
+                  onGoToGrid={onGoToGrid}
+                  side={side}
+                />
+                                                &nbsp;
+                <span
+                  title="Toggle XML mode"
+                  onClick={toggleXMLMode}
+                  className={imageViewActive ? 'invisible' : xmlIconClass}
+                />
+
+                { imageViewActive && (
+                  <NavArrows
+                    changeCurrentFolio={changeCurrentFolio}
+                    side={side}
+                    documentView={documentView}
+                  />
+                )}
+
+              </div>
+            )
+          : (<AlphabetLinks onFilterChange={onFilterChange} value={props.value} />)}
+
+        <div id="doc-type-help" style={selectContainerStyle} ref={helpRefNarrow}>
+          <Select
+            className={selectClass}
+            style={{ ...selectColorStyle, marginRight: 15, fontSize: 'max(16px, 1rem)' }}
+            value={documentView[side].transcriptionType}
+            id="doc-type"
+            onClick={changeType}
+          >
+            {Object.keys(props.document.folios.find(fol => (fol.id === props.documentView[props.side].iiifShortID)).annotationURLs).map(ttKey => (
+              <MenuItem value={ttKey} key={ttKey} title={ttKey}>{props.document.variorum ? props.document.transcriptionTypes[props.document.folios.find(fol => (fol.id === props.documentView[props.side].iiifShortID)).doc_id][ttKey] : props.document.transcriptionTypes[ttKey]}</MenuItem>
+            ))}
+            <MenuItem value="f" key="f">
+              {DocumentHelper.transcriptionTypeLabels.f}
+            </MenuItem>
+            { props.glossary && (
+              <MenuItem value="glossary" key="glossary">
+                {DocumentHelper.transcriptionTypeLabels.glossary}
               </MenuItem>
-              { props.glossary && (
-                <MenuItem value="glossary" key="glossary">
-                  {DocumentHelper.transcriptionTypeLabels.glossary}
-                </MenuItem>
-              ) }
-            </Select>
-            <span
-              title="Toggle folio help"
-              onClick={toggleHelpNarrow}
-              className="helpIcon"
-            >
-              <FaQuestionCircle />
-            </span>
-            <HelpPopper
-              marginStyle={helpMarginStyle}
-              anchorEl={helpRefNarrow.current}
-              open={openHelpNarrow}
-              onClose={toggleHelpNarrow}
-            />
-          </div>
-
+            ) }
+          </Select>
+          <span
+            title="Toggle folio help"
+            onClick={toggleHelpNarrow}
+            className="helpIcon"
+          >
+            <FaQuestionCircle />
+          </span>
+          <HelpPopper
+            marginStyle={helpMarginStyle}
+            anchorEl={helpRefNarrow.current}
+            open={openHelpNarrow}
+            onClose={toggleHelpNarrow}
+          />
         </div>
+
       </div>
     </>
   )
