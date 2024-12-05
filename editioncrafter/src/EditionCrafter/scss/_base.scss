@@ -5,6 +5,10 @@ $dark-maroon: #460C0A;
 
 .editioncrafter {
 
+	.MuiInputBase-root {
+		font-family: 'Inter', sans-serif;
+	}
+
 	*{
 		box-sizing: border-box;
 	}
@@ -48,9 +52,8 @@ $dark-maroon: #460C0A;
 
 	.vertical-separator {
 		height: 100%;
-		border-right: 2px solid #6F747C;
+		border-right: 1px solid #6F747C;
 		margin: 10px 0;
-		width: 1px;
 	}
 	
 	.line-clamp {
@@ -136,7 +139,7 @@ $dark-maroon: #460C0A;
 	}
 	
 	.invisible{
-	  opacity:0;
+		display: none;
 	}
 	
 	.disabled{
