@@ -1,5 +1,5 @@
 function copyObject(a) {
-  return JSON.parse(JSON.stringify(a));
+  return JSON.parse(JSON.stringify(a))
 }
 
-export default copyObject;
+export default copyObject

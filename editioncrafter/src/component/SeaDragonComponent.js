@@ -1,28 +1,33 @@
-import React, { useEffect, useMemo, useRef, useState } from 'react';
-import { BigRingSpinner } from './RingSpinner';
+import React, {
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+} from 'react'
+import { BigRingSpinner } from './RingSpinner'
 
-const SeaDragonComponent = (props) => {
-  const { side, initViewer, tileSource } = props;
-  const [loading, setLoading] = useState(true);
-  const viewerRef = useRef(null);
+function SeaDragonComponent(props) {
+  const { side, initViewer, tileSource } = props
+  const [loading, setLoading] = useState(true)
+  const viewerRef = useRef(null)
 
   useEffect(() => {
     const loader = async () => {
       if (viewerRef.current) {
-        await initViewer(viewerRef.current, tileSource).then(() => setLoading(false));
+        await initViewer(viewerRef.current, tileSource).then(() => setLoading(false))
       }
-    };
+    }
 
-    loader();
-  }, []);
+    loader()
+  }, [])
 
   const viewer = useMemo(() => (
     <div id={`image-view-seadragon-${side}`} ref={viewerRef}>
       { loading && <BigRingSpinner color="light" delay={1000} />}
     </div>
-  ), [loading]);
+  ), [loading])
 
-  return viewer;
-};
+  return viewer
+}
 
-export default SeaDragonComponent;
+export default SeaDragonComponent

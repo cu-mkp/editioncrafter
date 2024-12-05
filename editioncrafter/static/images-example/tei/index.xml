@@ -1,0 +1,733 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <TEI xmlns="http://www.tei-c.org/ns/1.0">
+      <teiHeader>
+          <fileDesc>
+              <titleStmt>
+                  <title>
+                      <!-- Your Title Here -->
+                  </title>
+              </titleStmt>
+              <publicationStmt>
+                  <p></p>
+              </publicationStmt>
+              <sourceDesc>
+                  <p></p>
+              </sourceDesc>
+          </fileDesc>
+      </teiHeader>
+
+      <facsimile >
+                    <surface xml:id="f004" ulx="0" uly="0" lrx="3384" lry="5408">
+            <label>1r</label>
+            <graphic mimeType="image/jpeg" url="https://raw.githubusercontent.com/cu-mkp/editioncrafter/refs/heads/dev/editioncrafter/static/images-example/img/f004.jpg" />
+          </surface>
+          <surface xml:id="f005" ulx="0" uly="0" lrx="3429" lry="5432">
+            <label>1v</label>
+            <graphic mimeType="image/jpeg" url="https://raw.githubusercontent.com/cu-mkp/editioncrafter/refs/heads/dev/editioncrafter/static/images-example/img/f005.jpg" />
+          </surface>
+          <surface xml:id="f006" ulx="0" uly="0" lrx="3372" lry="5420">
+            <label>2r</label>
+            <graphic mimeType="image/jpeg" url="https://raw.githubusercontent.com/cu-mkp/editioncrafter/refs/heads/dev/editioncrafter/static/images-example/img/f006.jpg" />
+          </surface>
+          <surface xml:id="f007" ulx="0" uly="0" lrx="3408" lry="5420">
+            <label>2v</label>
+            <graphic mimeType="image/jpeg" url="https://raw.githubusercontent.com/cu-mkp/editioncrafter/refs/heads/dev/editioncrafter/static/images-example/img/f007.jpg" />
+          </surface>
+          <surface xml:id="f008" ulx="0" uly="0" lrx="3369" lry="5417">
+            <label>3r</label>
+            <graphic mimeType="image/jpeg" url="https://raw.githubusercontent.com/cu-mkp/editioncrafter/refs/heads/dev/editioncrafter/static/images-example/img/f008.jpg" />
+          </surface>
+          <surface xml:id="f009" ulx="0" uly="0" lrx="3393" lry="5426">
+            <label>3v</label>
+            <graphic mimeType="image/jpeg" url="https://raw.githubusercontent.com/cu-mkp/editioncrafter/refs/heads/dev/editioncrafter/static/images-example/img/f009.jpg" />
+          </surface>
+          <surface xml:id="f010" ulx="0" uly="0" lrx="3372" lry="5390">
+            <label>4r</label>
+            <graphic mimeType="image/jpeg" url="https://raw.githubusercontent.com/cu-mkp/editioncrafter/refs/heads/dev/editioncrafter/static/images-example/img/f010.jpg" />
+          </surface>
+          <surface xml:id="f011" ulx="0" uly="0" lrx="3402" lry="5390">
+            <label>4v</label>
+            <graphic mimeType="image/jpeg" url="https://raw.githubusercontent.com/cu-mkp/editioncrafter/refs/heads/dev/editioncrafter/static/images-example/img/f011.jpg" />
+          </surface>
+
+      </facsimile>
+
+      <text xml:id="text">
+<body><div>
+    <pb facs="#f004" />
+<ab>
+<lb />
+</ab>
+<ab>
+<lb />[List of names]
+</ab>
+<ab>
+<lb />Mestre Nico[illegible] Costé, in the
+<lb />Rue de la Heaumerie, at the
+<lb />sign of St Claude / Mirrors.
+</ab>
+<ab>
+<lb />Mestre Jehan Cousin, who resides in
+<lb />the Faubourg Saint-Germain, knows of the
+<lb />master.
+</ab>
+<ab>
+<lb />Mestre Jehan Garnier, in the Rue des
+<lb />Escrivains by St Jacques de la Boucherie,
+<lb />currier. Try pastel woad flowers.
+</ab>
+<ab>
+<lb />[List]
+</ab>
+<ab>
+<lb />The harvester that leaves some ears is not
+<lb />blamed.
+</ab>
+<ab>
+<lb />Sacra Eleusinæ deæ propalare
+<lb />nefas.
+</ab>
+<ab>
+<lb />Trumpets, see the book of funerals.
+</ab>
+<ab>
+<lb />[List of books and authors]
+</ab>
+<ab>
+<lb />Vuolfangus Lazius
+</ab>
+<ab>
+<lb />Petrus Appianus, mathematicus
+<lb />Ingolstadiensis, Comment. urb.
+<lb />rom.
+</ab>
+<ab>
+<lb />Hieronimo Ruscelli
+</ab>
+<ab>
+<lb />Hermolaus Barbarus
+</ab>
+<ab>
+<lb />Angelius Bargæus, De aucupio et
+<lb />venatione
+</ab>
+<ab>
+<lb />Nicolaus Damascenus
+</ab>
+<ab>
+<lb />Caresariensis, De rebus
+<lb />Persarum
+</ab>
+<ab>
+<lb />Isidorus
+</ab>
+<ab>
+<lb />Osorius
+</ab>
+<ab>
+<lb />Eupolemus, historicus gentilis
+<lb />qui de rebus Davidis &amp; Salomonis
+<lb />scripsit
+<lb />          
+<lb />          
+<lb />          
+<lb />          
+<lb />          
+<lb />mons{ieur}
+</ab>
+<ab>
+<lb />- Cathalogue des
+<lb />villes
+</ab>
+<ab>
+<lb />Calendrier des bergiers
+</ab>
+<ab>
+<lb />Grammaire italiene
+</ab>
+<ab>
+<lb />Arithmetique of Savonne
+</ab>
+<ab>
+<lb />Instruction pour le faict des finances
+</ab>
+<ab>
+<lb />Questions aeigmatiques
+</ab>
+<ab>
+<lb />Des præceptes d’agriculture
+</ab>
+<ab>
+<lb />+ Le secret des finances à
+<lb />Lyon
+</ab>
+<ab>
+<lb />Synesius
+</ab>
+<ab>
+<lb />Olaus Magnus
+</ab>
+<ab>
+<lb />+ Mestre Bernard Palissi, inventor of rustic
+<lb />figulines to the
+</ab>
+<ab>
+<lb />king and the queen mother
+</ab>
+<ab>
+<lb />Alexander Aphrodisæus
+</ab>
+<ab>
+<lb />Polydorus Vergilius
+</ab>
+<ab>
+<lb />Appianus
+</ab>
+<ab>
+<lb />Athenæus
+</ab>
+<ab>
+<lb />Pausanias
+</ab>
+<ab>
+<lb />Statius Thebaidos
+</ab>
+<ab>
+<lb />Servius, in Aeneidem
+</ab>
+<ab>
+<lb />Macrobius
+</ab>
+<ab>
+<lb />Aulus Gellius
+</ab>
+<ab>
+<lb />Alexander ab Alexandria
+</ab>
+<ab>
+<lb />Festus
+</ab>
+<ab>
+<lb />Nonius
+</ab>
+<ab>
+<lb />Magius, Miscellanea
+</ab>
+<ab>
+<lb />Pollux, Onomasticon
+</ab>
+<ab>
+<lb />Higinus
+</ab>
+<ab>
+<lb />Berosus
+</ab>
+<ab>
+<lb />Suetonius
+</ab>
+<ab>
+<lb />Valerius Maximus
+</ab>
+<ab>
+<lb />Cornelius Tacitus
+</ab>
+<ab>
+<lb />Xenophon
+</ab>
+<ab>
+<lb />Seneca
+</ab>
+<ab>
+<lb />Dionisius Halicarnassensis
+</ab>
+<ab>
+<lb />Sabellicus
+</ab>
+<ab>
+<lb />cum permultis
+</ab>
+<ab>
+<lb />aliis Julius Capitolinus
+</ab>
+<ab>
+<lb />Budæus
+</ab>
+<ab>
+<lb />Spartianus
+</ab>
+<ab>
+<lb />Blondus
+</ab>
+<ab>
+<lb />Volaterranus
+</ab>
+<ab>
+<lb />Herodotus
+</ab>
+<ab>
+<lb />Paulus Manutius
+</ab>
+<ab>
+<lb />Strabo
+</ab>
+<ab>
+<lb />Julius Firmicus
+</ab>
+<ab>
+<lb />Quintus Curtius
+</ab>
+<ab>
+<lb />Dion
+</ab>
+<ab>
+<lb />Cornelius Nepos
+</ab>
+<ab>
+<lb />Flavius Vopiscus
+</ab>
+<ab>
+<lb />   
+<lb />   
+</ab>
+<ab>
+<lb />          
+<lb />[List of books]
+</ab>
+<ab>
+<lb />Aquatilium animalium historiæ, Hypolito
+<lb />Salviano Typhernate authore, Romæ 1554
+<lb />        
+</ab>
+<ab>
+<lb />  
+<lb />  
+</ab>
+<ab>
+<lb />        
+<lb />Les Annales de
+<lb />Normandie
+</ab>
+<ab>
+<lb />
+</ab>
+
+<pb facs="#f005" />
+<ab>
+<lb />
+</ab>
+<ab>
+<lb />For loosening the belly
+</ab>
+<ab>
+<lb />Prunes of Saint Antonin, &amp;, if you like,
+<lb />you want put among them leaves of mallow &amp;
+<lb />gilliflower, adding in sugar &amp;, if one wants, a
+<lb />little cinnamon for the stomach.
+</ab>
+<ab>
+<lb />Or else, marshmallow root in a chicken
+<lb />broth. The fresh kind is more mollifying.
+</ab>
+<ab>
+<lb />Beating syrup of sweet jujubes with water &amp;
+<lb />taking it in the morning loosens the belly.
+</ab>
+<ab>
+<lb />
+</ab>
+
+<pb facs="#f006" />
+<ab>
+<lb />
+</ab>
+<ab>
+<lb />Books to recover
+</ab>
+<ab>
+<lb />The chronicles of Sigebert
+</ab>
+<ab>
+<lb />Ruffinus
+</ab>
+<ab>
+<lb />Ireniusin
+<lb />Exegesi
+</ab>
+<ab>
+<lb />Paule Emile
+</ab>
+<ab>
+<lb />Paule Jove
+</ab>
+<ab>
+<lb />Polydorus
+</ab>
+<ab>
+<lb />Bergomensis
+</ab>
+<ab>
+<lb />Philippe de Commines
+</ab>
+<ab>
+<lb />Against pains
+</ab>
+<ab>
+<lb />Turpentine oil, oil of Jacob, and salt extracted
+<lb />from cabbage ash.
+</ab>
+<ab>
+<lb />
+</ab>
+
+<pb facs="#f007" />
+<ab>
+<lb />
+</ab>
+<ab>
+<lb />[List of books]
+<lb />Practica, cioè nova inventione di contegiare, stampata in
+<lb />Brescia per Vincenzo Sabio.
+</ab>
+<ab>
+<lb />Emeralds of Brissac
+</ab>
+<ab>
+<lb />I have taken minium 26 ℥,
+<lb />crystal [illegible] and ground on marble 12
+<lb />℥, verdet 3
+<lb />|ʒ|. Incorporate all together, put in a
+<lb />crucible covered with another, well luted, that has a hole in the
+<lb />top. Fusion 7 hours without blowing. The mass
+<lb />was of a beautiful green.
+</ab>
+<ab>
+<lb />I have taken minium 12 ℥,
+<lb />crystal 6 ℥, verdet 2
+<lb />grains. Soft fusion vi hours, refired
+<lb />24 hours. The mass was green, yellow &amp;
+<lb />red.
+</ab>
+<ab>
+<lb />| Sapphire
+</ab>
+<ab>
+<lb />Pebbles or crystal 8 ℥,
+<lb />minium 16 ℥, blacksmith’s
+<lb />salt 4 ℥, sparkling
+<lb />coryal 4
+<lb />grains. Fusion 6 hours.
+</ab>
+<ab>
+<lb />
+</ab>
+
+<pb facs="#f008" />
+<ab>
+<lb />
+</ab>
+<ab>
+<lb />Counterfeit coral
+</ab>
+<ab>
+<lb />    
+<lb />                  
+<lb />                  
+<lb />        +
+<lb />    
+</ab>
+<ab>
+<lb />One needs to first make the branches of wood or take a
+<lb />bizarre thorn branch, then melt a lb of the most
+<lb />beautiful clear pitch resin and put in one ounce of
+<lb />subtly ground vermilion with walnut oil, and if
+<lb />you add in a little Venice laque platte, the
+<lb />color will be more vivid, and stir everything in the resin melted
+<lb />over a charcoal fire and not of flame, for fear that it catches fire. 
+<lb />Next dip in your branches while turning, &amp; if any filaments
+<lb />should remain on it, turn the branch over the heat of the
+<lb />charcoal.
+</ab>
+<ab>
+<lb />Colophony is nothing other than recooked resin. To do
+<lb />it well, take a leaded pot &amp; melt the resin,
+<lb />&amp; boil it over the brazier a good hour,
+<lb />&amp; until it appears not to be thick, but clear &amp; liquid like
+<lb />water, &amp; easily runs &amp; flows from the tip of a
+<lb />stick with which you grind it, &amp; test it. Then pour it
+<lb />through a coarse canvas or a very light tammy
+<lb />cloth, such that when pouring it falls into the
+<lb />strongest vinegar that you can find, for the vinegar gives
+<lb />it strength &amp; prevents it from being so fragile. Reiterate this two
+<lb />or three times &amp; it will be beautiful &amp; well purified. For
+<lb />counterfeiting your coral, you can mix a quarter part of
+<lb />mastic into your purified resin to render it more firm
+<lb />and more beautiful, &amp; if you were to take a single tear of
+<lb />mastic, it would be all the better, but it would be too long.
+</ab>
+<ab>
+<lb />Sulfur &amp; vermilion makes the same effect.
+</ab>
+<ab>
+<lb />The coral made of gules red enamel endures the
+<lb />file and polishing.
+</ab>
+<ab>
+<lb />It is made like cement that is stronger mixed with pestled
+<lb />&lt;-than of-&gt; glass rather than with brick. Thus, here one
+<lb />mixes well pestled gules red enamel, which
+<lb />is red in body, with the vermilion. Thus with all colors of
+<lb />enamels.
+</ab>
+<ab>
+<lb />Varnish for panels
+</ab>
+<ab>
+<lb />Take a lb of Venice turpentine &amp; heat
+<lb />it in a pot until it simmers, and put in half a lb of
+<lb />the turpentine oil of the whitest you can find, and stir it
+<lb />together well on a charcoal fire and take it off immediately. And
+<lb />&lt;-elle-&gt; it is done. But if it seems too thick to you,
+<lb />add in a little more oil. Similarly if it is too clear, you can
+<lb />thicken it by putting in a little turpentine. Thus you will give it
+<lb />whatever body you want. It could be made well without fire, but, when
+<lb />heated, it is more desiccative. It is appropriate for panel paintings
+<lb />and other painted things without corrupting the colors or yellowing. And
+<lb />it dries both in the shade and in the sun, and
+<lb />overnight, and during the winter as well as
+<lb />in the summer. It is commonly sold 15 sous a
+<lb />lb.
+</ab>
+<ab>
+<lb />A little more turpentine than turpentine oil is needed in
+<lb />order to give body to the varnish, which needs to be applied with
+<lb />the finger in order to spread it thinner and less thick,
+<lb />for when it is thick, it turns yellow and sticks. One does not
+<lb />varnish to make paintings shine, for it just takes the light out
+<lb />of them.
+</ab>
+<ab>
+<lb />Thick varnish for planks
+</ab>
+<ab>
+<lb />There is a varnish that takes a long time to dry &amp;
+<lb />drips more than two months after it has been applied to the
+<lb />planks. But this one does not drip like that of times
+<lb />past, which was made of linseed oil, garlic boiled in it
+<lb />to extinguish it &amp; rid it of grease, 
+<lb />&amp; with wheat. And this one yellowed &amp;
+<lb />rendered greenish the blue color of paintings. This one is made like the
+<lb />other one except that one puts coarse common turpentine
+</ab>
+<ab>
+<lb />        
+<lb />    
+<lb />But it is used to heighten colors which have soaked in and to keep them
+<lb />from dust. Mastic varnish does not resist rain,
+<lb />whereas that of oil and rosin does.  
+</ab>
+<ab>
+<lb />    
+<lb />
+</ab>
+
+<pb facs="#f009" />
+<ab>
+<lb />
+</ab>
+<ab>
+<lb />instead of fine turpentine. And you can put into two
+<lb />lb of &lt;-tou-&gt; common turpentine one lb
+<lb />of fine turpentine oil &amp; do everything as with the other one. This one
+<lb />will cost you no more than five or six sous per
+<lb />lb &amp; is sold for 40 sous per
+<lb />lb.
+</ab>
+<ab>
+<lb />This vessel is for making large quantities of
+<lb />turpentine oil, that is to say a bucket an
+<lb />hour, and no matter which turpentine it may be,
+<lb />whether fine or crude. One needs to give, as you know, a little
+<lb />fire at the beginning and always keep cold water in the cooler
+<lb />on the top. The lb is sold at xii sous, &amp;
+<lb />at the bottom of the vessel remains the colophony, or
+<lb />pix græca. In this vessel, eau-de-vie is also made well,
+<lb />and there is no need to distill it again. You
+<lb />do not need a oven for this copper vessel, but
+<lb />only charcoal around it if it has a flat bottom, but if it is
+<lb />round, you will place it on a trivet.
+</ab>
+<ab>
+<lb /> It is better to heat the varnish a little bit, rather than to
+<lb />put it out in the sun, because this makes the panel
+<lb />warp.
+</ab>
+<ab>
+<lb /> Some say it is not good to distil in this copper
+<lb />vessel because it makes things green. However, when tinned, it is
+<lb />good.
+</ab>
+<ab>
+<lb />For varnishing
+</ab>
+<ab>
+<lb />Turpentine varnish does not need any glue because it
+<lb />is fatty &amp; viscous &amp; it is not absorbed in the wood like that
+<lb />of spike lavender &amp; sandarac. Also, that of spike
+<lb />lavender does not require any glue on iron &amp;
+<lb />similar things that do not absorb. But on wood &amp; on colors
+<lb />which &lt;-have-&gt; do not have gum or 
+<lb />distemper glue, it is necessary to lay one coat of the said
+<lb />hide glue &amp; to let it dry &amp; to
+<lb />varnish.
+</ab>
+<ab>
+<lb />
+</ab>
+
+<pb facs="#f010" />
+<ab>
+<lb />
+</ab>
+<ab>
+<lb />Varnish of spike lavender oil
+</ab>
+<ab>
+<lb />One needs to heat spike lavender oil &amp; as it begins to
+<lb />simmer, put in powdered sandarac gum so that it soon melts. And
+<lb />over a charcoal fire stir continuously until the sandarac
+<lb />is well melted, which you will know by taking a little of the said
+<lb />varnish on a plate, and if it is fatty when you handle
+<lb />it with a finger, it is ready. And for one lb
+<lb />of spike lavender oil, you will put five ounces of
+<lb />pulverized sandarac, although some only put in four
+<lb />ounces, but this is neither so good nor so fatty. This one is
+<lb />promptly dry. Frame makers, to avoid the trouble of polishing
+<lb />their ebony, varnish it with this, as do guitar makers.
+<lb />This is not as appropriate for panels as that of fine turpentine,
+<lb />though it is good for the moldings of panels. One did not use to
+<lb />varnish the landscape of a panel when linseed varnish was in use,
+<lb />because it yellowed the landscape. But with that of
+<lb />turpentine, one varnishes everywhere. You can put in
+<lb />pulverized mastic extracted in tears or otherwise, &amp; it will be
+<lb />more desiccative, in place of sandarac.
+</ab>
+<ab>
+<lb />If you want to varnish on plaster or a wall, first put on
+<lb />your very hot hide glue, because if were cold it
+<lb />would not penetrate the wall, &amp; when you would put your
+<lb />varnish on, it would come off.
+</ab>
+<ab>
+<lb />Varnish of spike lavender oil is not as appropriate for colors as
+<lb />that of turpentine, for spike lavender oil &lt;-makes them
+<lb />die-&gt; eats the colors since it is too
+<lb />penetrating.
+</ab>
+<ab>
+<lb />For removing varnish from an old panel that is yellowish &amp;
+<lb />varnishing it anew
+</ab>
+<ab>
+<lb />Take white soap &amp; sieved ashes&lt;-e-&gt;, &amp;
+<lb />soak both in water. And with a sponge, take the said
+<lb />ashes &amp; soap &amp; rub the panel with them. And as you
+<lb />see that the old varnish is removed, throw a
+<lb />bucket of water against the panel to clean it.
+<lb />Next put it for a quarter of an hour in the
+<lb />sun to make it dry and to revive the colors. Next, once the panel
+<lb />is dry, you can spread your turpentine varnish on it.
+</ab>
+<ab>
+<lb />Make sure the colors do not come off.
+</ab>
+<ab>
+<lb />
+</ab>
+
+<pb facs="#f011" />
+<ab>
+<lb />
+</ab>
+<ab>
+<lb />Black varnish for sword guard, bands for trunks,
+<lb />&amp;c
+</ab>
+<ab>
+<lb />Take linseed oil or more cheaply, walnut
+<lb />oil, and rid it of grease with garlic &amp;
+<lb />&lt;-onions-&gt; +hog’s
+<lb />fennel, some also add bread crusts, which you will
+<lb />boil in it for a good quarter of an hour. Next, put
+<lb />in one lb of the oil thus boiled the size of a walnut of black
+<lb />pitch &amp; a double handful of grains of wheat, without
+<lb />removing the garlic &amp; onions, and let
+<lb />it boil together for a good quarter of an hour. And
+<lb />when the pitch is well melted &amp; when the oil has body,
+<lb />you can remove it from the fire. Then, to varnish, place your
+<lb />iron over a low charcoal fire &amp; apply your
+<lb />varnish with a feather or a brush.
+<lb />And when you see that it no longer smokes, it is done and your
+<lb />varnish is dry.
+</ab>
+<ab>
+<lb />For excellent black varnish, add two or three paternoster
+<lb />beads of jet among the rest.
+</ab>
+<ab>
+<lb />Some consider walnut oil better.
+</ab>
+<ab>
+<lb />If there is a lot of varnish, it needs to boil for at least
+<lb />half a day, for it is better the more it boils. It
+<lb />is dangerous if it catches fire, if it goes over the top, and is
+<lb />hard to extinguish. Make this therefore in a courtyard or an
+<lb />open space.
+</ab>
+<ab>
+<lb /> 
+</ab>
+<ab>
+<lb />In five or six lb of oil, one must put one lb
+<lb />of galipot, which costs 4 sous, &amp; some
+<lb />peeled garlic cloves. This varnish in and of
+<lb />itself is not black, but it blackens over the fire.
+</ab>
+<ab>
+<lb />See below, around the 3rd part of this book,
+<lb />after sands, in the chapter on furbishers.
+</ab>
+<ab>
+<lb />Black varnish without fire, without disassembling the
+<lb />harnesses or removing the bands from
+<lb />trunks
+</ab>
+<ab>
+<lb />Take varnish of spike lavender oil &amp; mix in
+<lb />soot black or lampblack, &amp; without fire it will mix in
+<lb />by itself. Varnish with a brush &amp; it will soon be
+<lb />dry. Turpentine varnish will be quite good, but it does not dry
+<lb />as soon.
+</ab>
+<ab>
+<lb />Varnish of iron engravers
+</ab>
+<ab>
+<lb />Take linseed oil or walnut oil
+<lb />&amp;, in place of black pitch, you will put in a little
+<lb />pitch resin, &amp; it needs to be cooked in the fashion of black
+<lb />varnish on fire. And for applying it, heat your iron &amp;
+<lb />give it only one layer of varnish, &amp; when it no longer
+<lb />smokes, it is dry. Next engrave with a steel point
+<lb />whatever you want. Next take salt &amp;
+<lb />verdigris &amp; mix as much of one as of the other in quite
+<lb />strong vinegar &amp; leave it for xx4 hours
+<lb />before using it, &amp; all will be tempered. Next spread some of this
+<lb />liquor or sauce on the engraved object with a sponge
+</ab>
+<ab>
+<lb />
+</ab>
+
+  </div></body>
+      </text>
+  </TEI>

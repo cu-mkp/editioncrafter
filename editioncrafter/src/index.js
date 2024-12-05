@@ -1,13 +1,13 @@
-import React from 'react';
-import { createTheme, ThemeProvider } from '@material-ui/core/styles';
-import DiploMatic from './component/DiploMatic';
-import { createReduxStore } from './model/ReduxStore';
-import './scss/editioncrafter.scss';
+import { createTheme, ThemeProvider } from '@material-ui/core/styles'
+import React from 'react'
+import DiploMatic from './component/DiploMatic'
+import { createReduxStore } from './model/ReduxStore'
+import './scss/editioncrafter.scss'
 
 /**
  * Default instantiation
  */
-const EditionCrafter = (props) => {
+function EditionCrafter(props) {
   const theme = createTheme({
     palette: {
       primary: {
@@ -17,13 +17,13 @@ const EditionCrafter = (props) => {
         main: '#EBE3DD',
       },
     },
-  });
+  })
 
   return (
     <ThemeProvider theme={theme}>
       <DiploMatic config={props} store={createReduxStore(props)} />
     </ThemeProvider>
-  );
-};
+  )
+}
 
-export default EditionCrafter;
+export default EditionCrafter

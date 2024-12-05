@@ -1,41 +1,44 @@
-import React from 'react';
-import { connect } from 'react-redux';
+import React from 'react'
 import {
   FaArrowCircleLeft,
   FaArrowCircleRight,
-} from 'react-icons/fa';
+} from 'react-icons/fa'
+import { connect } from 'react-redux'
 
 class Pagination extends React.Component {
   constructor(props, context) {
-    super(props, context);
-    this.changeCurrentFolio = this.changeCurrentFolio.bind(this);
+    super(props, context)
+    this.changeCurrentFolio = this.changeCurrentFolio.bind(this)
   }
 
   changeCurrentFolio = (event) => {
     const {
-      side, documentView, documentViewActions,
-    } = this.props;
-    const { dataset } = event.currentTarget;
+      side,
+      documentView,
+      documentViewActions,
+    } = this.props
+    const { dataset } = event.currentTarget
 
     if (typeof dataset.id === 'undefined' || dataset.id.length === 0) {
-      return;
+      return
     }
 
-    const folioID = dataset.id;
+    const folioID = dataset.id
 
     documentViewActions.changeCurrentFolio(
       folioID,
       side,
       documentView[side].transcriptionType,
-    );
-  };
+    )
+  }
 
   render() {
-    const { side, document, documentView, bottom = false } = this.props;
-    if( documentView[side].iiifShortID === '-1' ) return null;
-    const folioName = document.folioIndex[documentView[side].iiifShortID].name;
+    const { side, document, documentView, bottom = false } = this.props
+    if (documentView[side].iiifShortID === '-1')
+      return null
+    const folioName = document.folioIndex[documentView[side].iiifShortID].name
     return (
-      <div className={ bottom ? "paginationComponent bottom" : "paginationComponent"}>
+      <div className={bottom ? 'paginationComponent bottom' : 'paginationComponent'}>
         <div className="paginationControl">
 
           <span
@@ -62,14 +65,14 @@ class Pagination extends React.Component {
           </span>
         </div>
       </div>
-    );
+    )
   }
 }
 
 function mapStateToProps(state) {
   return {
     document: state.document,
-  };
+  }
 }
 
-export default connect(mapStateToProps)(Pagination);
+export default connect(mapStateToProps)(Pagination)

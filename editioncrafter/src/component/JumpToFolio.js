@@ -1,47 +1,39 @@
-import { Popover } from '@material-ui/core';
-import React, { useEffect, useState, useRef } from 'react';
+import { Popover } from '@material-ui/core'
+import React, { useEffect, useRef, useState } from 'react'
 
-const JumpToFolio = (props) => {
-  const [textInput, setTextInput] = useState('');
+function JumpToFolio(props) {
+  const [textInput, setTextInput] = useState('')
 
-  const open = Boolean(props.anchorEl);
-  const id = open ? `${props.side}_jumpInput` : undefined;
+  const open = Boolean(props.anchorEl)
+  const id = open ? `${props.side}_jumpInput` : undefined
 
   const handleSubmit = (event) => {
     // Consume the event
-    event.preventDefault();
+    event.preventDefault()
 
     // Parse out the target
-    const data = new FormData(event.target);
-    const folioID = data.get('folioID');
+    const data = new FormData(event.target)
+    const folioID = data.get('folioID')
 
     // Submit the request
-    props.submitHandler(folioID, props.side);
+    props.submitHandler(folioID, props.side)
 
     // Hide and clear
-    props.blurHandler();
-    setTextInput('');
-  };
+    props.blurHandler()
+    setTextInput('')
+  }
 
   const handleChange = (event) => {
-    setTextInput(event.target.value);
-  };
+    setTextInput(event.target.value)
+  }
 
-  const inputRef = useRef(null);
+  const inputRef = useRef(null)
 
   useEffect(() => {
     if (inputRef.current) {
-      inputRef.current.focus();
+      inputRef.current.focus()
     }
-  }, [inputRef, open]);
-
-  const divStyle = {
-    position: 'fixed',
-    zIndex: 1,
-    top: props.positionY,
-    left: props.positionX,
-    display: open ? 'inline' : 'none',
-  };
+  }, [inputRef, open])
 
   return (
     <Popover
@@ -67,7 +59,7 @@ const JumpToFolio = (props) => {
         />
       </form>
     </Popover>
-  );
-};
+  )
+}
 
-export default JumpToFolio;
+export default JumpToFolio

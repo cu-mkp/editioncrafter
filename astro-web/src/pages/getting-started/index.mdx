@@ -5,9 +5,11 @@ layout: ../../layouts/Docs.astro
 
 Welcome to the "Getting Started Guide" for EditionCrafter. This guide describes how to include EditionCrafter in your website. In order to do so, you must first create the artifacts EditionCrafter needs to work. These artifacts are a set of JSON, HTML, and XML files generated from a [TEI Document](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/index.html) that you supply. You can use the [EditionCrafter CLI](https://www.npmjs.com/package/@cu-mkp/editioncrafter-cli) to create all of these artifacts and a starting TEI Document in the correct format, based on a [IIIF Manifest](https://iiif.io/guides/using_iiif_resources/).
 
+If you don't have a TEI Document yet, don't worry, the command line tool can help you create one. You can create a TEI Document from a list of images or from a IIIF Manifest. The EditionCrafter CLI will generate a TEI Document that includes all of the images in the IIIF Manifest you provide. You can even provide plain text transcriptions to include in your TEI Document. 
+
 In order to use EditionCrafter, you will also need to publish the EditionCrafter artifacts online, either on your edition website or on a separate data site. GitHub Pages is a no-cost way to accomplish this. However, documenting the use of git and GitHub Pages is beyond the scope of this guide. You can see examples of this pattern [here](https://github.com/cu-mkp/editioncrafter-data). 
 
-You will also need a website where EditionCrafter will display your edition. We provide instructions for how to install EditionCrafter in a React app and in a HTML website. Lastly, the page images of your text need to be available online on a IIIF Image server. You can often obtain a link to your page images from the institution that is holding the originals. Here’s a good place to [start](https://iiif.io/guides/finding_resources/). 
+You will also need a website where EditionCrafter will display your edition. We provide instructions for how to install EditionCrafter in a React app and in a HTML website. Lastly, the page images of your text need to be available online on a IIIF Image server. You can often obtain a link to your page images from the institution that is holding the originals. Here's a good place to [start](https://iiif.io/guides/finding_resources/). 
 
 ## Installing the EditionCrafter CLI
 
@@ -23,20 +25,46 @@ To test it out, try the command below, which displays the CLI documentation in t
 editioncrafter help
 ```
 
-## Creating a TEI Document from your IIIF Manifest
+## Creating a TEI Document from a List of Images
 
-To prepare a TEI Document to use with EditionCrafter, you should first add all of the images to a `<facsimile>` element in the document. To aid in this process, you can use the CLI to generate one for you based on your IIIF Manifest:
+If you are starting with a list of images, you can use the EditionCrafter CLI to generate a TEI Document for you based on your images. To do this, create a CSV file that lists the images in your document. You can generate a CSV file from an Excel spreadsheet or a Google Sheet.
+
+The CSV file should have the following columns: `url`, `label`, and `xml_id`. The `url` column should contain the URL of the image, the `label` column should contain a label for the image, and the `xml_id` column should contain a unique identifier for the image. This ID will be used as the `xml:id` attribute for each surface and can be referenced when adding plain text transcriptions. 
+
+Once you have created this file, you can generate a TEI Document by running the following command:
 
 ```
-editioncrafter iiif <iiif_url> <output_path>
+editioncrafter images -i <images.csv> -o <output.xml>
+```
+
+## Creating a TEI Document from your IIIF Manifest
+
+If you are starting with a IIIF Manifest, you can use the EditionCrafter CLI to generate a TEI Document for you based on your IIIF Manifest:
+
+```
+editioncrafter iiif -i <iiif_url> -o <output.xml>
 ```
 
 This creates an XML file on your computer at the output file path based on the IIIF Manifest that you point to in the `<iiif_url>`. In a separate section below, we will describe how to edit this structure to fill in the textual content of your edition. Before we do that, let's finish setting things up. 
 
-The next step is to generate the EditionCrafter artifacts needed to display the document on the web. We do that with this command:
+In `iiif` mode, the XML ID for each generated surface will be `f000` for the first surface, `f001` for the second, and so on. This ID will be used as the `xml:id` for each surface and can also be referenced when adding plain text transcriptions. 
+
+## Adding Plain Text transcriptions
+
+If you have plain text transcriptions of your document, you can include them in the TEI Document that you are creating. To do this, create a folder on your computer that contains a text file for each page of your document. The text files should be named in the following format: `<xml_id>.txt`. For example, if you have a transcription for page 3 of your document and it has the ID of `f003`, the file should be named `f003.txt`. Once you have created these files, you can include them in the TEI Document by running the following command:
 
 ```
-editioncrafter process <tei_file> <output_path> <base_url>
+editioncrafter iiif -i <iiif_url> -o <output.xml> -t <transcription_folder_path>
+```
+
+Note: The `-t` flag works with both the `iiif` and `images` commands.
+
+## Processing a TEI Document to create EditionCrafter artifacts
+
+Once you have a TEI Document in the correct format, the next step is to generate the EditionCrafter artifacts needed to display the document on the web. We do that with this command:
+
+```
+editioncrafter process -i <tei_file> -o <output_path> -u <base_url>
 ```
 
 This creates the necessary artifacts at the `<output_path>`. These artifacts include a new IIIF Manifest that is now annotated with web annotations that link each page of the text with the corresponding HTML and XML renderings of that page. You will want to point to this manifest from the EditionCrafter viewer component. Once you have published these files online at the `<base_url>`, you are ready for the next step.
@@ -152,38 +180,6 @@ You could begin page 3r in your text like this:
 ```
 
 Additional functionality can be triggered by specific elements and attributes. See the TEI reference section for more information.
-
-# Reference 
-
-This section provides further details on the commands available to the EditionCrafter CLI and the configuration options available to the EditionCrafter viewer. 
-
-## EditionCrafter CLI Reference 
-
-The following commands are available to the EditionCrafter CLI:
-
-### help
-
-Usage:
-```
-editioncrafter help
-```
-This will display information on the syntax for passing commands to the CLI as well as a list of available commands.
-
-### iiif 
-
-Usage:
-```
-editioncrafter iiif <iiif_url> <output_path>
-```
-This will create an XML file at the location of the provided `<output_path>` based on the information in the IIIF manifest supplied. Note that in this case the `<output_path>` should be a single XML File, e.g. `/MyFiles/TEI/index.xml`.
-
-### process
-
-Usage:
-```
-editioncrafter process <tei_file> <output_path> <base_url>
-```
-This will create all of the artifacts that EditionCrafter needs in order to display your document on the web, and place them in the specified `<output_path>` folder. The `<base_url>` parameter should be the URL at which you intend to host these artifacts.
 
 ## EditionCrafter Viewer Reference 
 

@@ -1,62 +1,50 @@
+import { transformWithEsbuild } from 'vite'
+
 /** @type { import('@storybook/react-webpack5').StorybookConfig } */
 const config = {
-  stories: ["../stories/**/*.mdx", "../stories/**/*.stories.@(js|jsx|ts|tsx)"],
+  stories: ['../stories/**/*.mdx', '../stories/**/*.stories.@(js|jsx|ts|tsx)'],
+
   addons: [
-    "@storybook/addon-links",
-    "@storybook/addon-essentials",
-    "@storybook/addon-interactions",
-    "@storybook/addon-styling-webpack",
-    ({
-        name: "@storybook/addon-styling-webpack",
-
-        options: {
-          rules: [{
-        test: /\.css$/,
-        sideEffects: true,
-        use: [
-            require.resolve("style-loader"),
-            {
-                loader: require.resolve("css-loader"),
-                options: {
-
-
-                },
-            },
-        ],
-      },{
-        test: /\.s[ac]ss$/,
-        sideEffects: true,
-        use: [
-            require.resolve("style-loader"),
-            {
-                loader: require.resolve("css-loader"),
-                options: {
-
-                    importLoaders: 2,
-                },
-            },
-            require.resolve("resolve-url-loader"),
-            {
-                loader: require.resolve("sass-loader"),
-                options: {
-                    // Want to add more Sass options? Read more here: https://webpack.js.org/loaders/sass-loader/#options
-                    implementation: require.resolve("sass"),
-                    sourceMap: true,
-                    sassOptions: {},
-                },
-            },
-        ],
-      },],
-        }
-    })
+    '@storybook/addon-links',
+    '@storybook/addon-essentials',
+    '@storybook/addon-interactions',
+    '@chromatic-com/storybook',
   ],
+  docs: {},
+  core: {
+    builder: '@storybook/builder-vite',
+  },
   framework: {
-    name: "@storybook/react-webpack5",
-    options: {},
+    name: '@storybook/react-vite',
   },
-  docs: {
-    autodocs: "tag",
+
+  staticDirs: ['../static'],
+
+  typescript: {
+    reactDocgen: 'react-docgen-typescript',
   },
-  staticDirs: ['../static']
-};
-export default config;
+  async viteFinal(config) {
+    // Merge custom configuration into the default config
+    const { mergeConfig } = await import('vite')
+
+    return mergeConfig(config, {
+      plugins: [
+        {
+          name: 'treat-js-files-as-jsx',
+          async transform(code, id) {
+            if (!id.match(/src\/.*\.js$/))
+              return null
+
+            // Use the exposed transform from vite, instead of directly
+            // transforming with esbuild
+            return transformWithEsbuild(code, id, {
+              loader: 'jsx',
+              jsx: 'automatic',
+            })
+          },
+        },
+      ],
+    })
+  },
+}
+export default config

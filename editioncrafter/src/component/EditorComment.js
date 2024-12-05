@@ -1,28 +1,28 @@
-import React, { useState } from 'react';
-import Typography from '@material-ui/core/Typography';
-import Popper from '@material-ui/core/Popper';
-import Fade from '@material-ui/core/Fade';
-import Paper from '@material-ui/core/Paper';
-import Parser from 'html-react-parser';
+import Fade from '@material-ui/core/Fade'
+import Paper from '@material-ui/core/Paper'
+import Popper from '@material-ui/core/Popper'
+import Typography from '@material-ui/core/Typography'
+import Parser from 'html-react-parser'
+import React, { useState } from 'react'
 
-const EditorComment = (props) => {
-  const [anchorRef, setAnchorRef] = useState(null);
-  const [open, setOpen] = useState(false);
+function EditorComment(props) {
+  const [anchorRef, setAnchorRef] = useState(null)
+  const [open, setOpen] = useState(false)
 
   const onOpen = (event) => {
-    setAnchorRef(event.currentTarget);
-    setOpen(true);
-  };
+    setAnchorRef(event.currentTarget)
+    setOpen(true)
+  }
 
   const onClose = (event) => {
-    setOpen(false);
-  };
+    setOpen(false)
+  }
 
   const renderPopper = () => {
-    const interpreted = Parser(props.text);
-    const content = interpreted || `ERROR: Could not find comment for id: ${props.commentID}.`;
-    const style = { maxWidth: 200, padding: '25px 15px 15px 15px' };
-    const closeXStyle = { float: 'right', padding: 5, fontStyle: 'bold' };
+    const interpreted = Parser(props.text)
+    const content = interpreted || `ERROR: Could not find comment for id: ${props.commentID}.`
+    const style = { maxWidth: 200, padding: '25px 15px 15px 15px' }
+    const closeXStyle = { float: 'right', padding: 5, fontStyle: 'bold' }
 
     return (
       <Popper id={props.commentID} open={open} anchorEl={anchorRef}>
@@ -35,17 +35,17 @@ const EditorComment = (props) => {
           </Paper>
         </Fade>
       </Popper>
-    );
+    )
   }
 
-  const style = { display: 'inline' };
-  const asteriskStyle = { fontStyle: 'bold', fontSize: '18pt', color: 'red' };
+  const style = { display: 'inline' }
+  const asteriskStyle = { fontStyle: 'bold', fontSize: '18pt', color: 'red' }
   return (
     <div style={style}>
-      <span onClick={(e) => onOpen(e)} style={asteriskStyle}>*</span>
+      <span onClick={e => onOpen(e)} style={asteriskStyle}>*</span>
       {renderPopper()}
     </div>
-  );
+  )
 }
 
-export default EditorComment;
+export default EditorComment

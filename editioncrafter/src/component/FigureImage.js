@@ -1,12 +1,12 @@
-import React from 'react';
-import Dialog from '@material-ui/core/Dialog';
-import IconButton from '@material-ui/core/IconButton';
-import CloseIcon from '@material-ui/icons/Cancel';
+import Dialog from '@material-ui/core/Dialog'
+import IconButton from '@material-ui/core/IconButton'
+import CloseIcon from '@material-ui/icons/Cancel'
+import React from 'react'
 
-const FigureDialog = ({ img, onClose, open }) => {
+function FigureDialog({ img, onClose, open }) {
   const handleClose = () => {
-    onClose();
-  };
+    onClose()
+  }
 
   const closeButtonBackground = {
     position: 'absolute',
@@ -17,7 +17,7 @@ const FigureDialog = ({ img, onClose, open }) => {
     justifyContent: 'center',
     backgroundColor: 'rgb(0,0,0,0.2)',
     borderRadius: '0 0 0 50%',
-  };
+  }
 
   return (
     <Dialog
@@ -34,21 +34,21 @@ const FigureDialog = ({ img, onClose, open }) => {
         </IconButton>
       </div>
     </Dialog>
-  );
-};
+  )
+}
 
 FigureDialog.propTypes = {
-};
+}
 
-const FigureImage = ({ img }) => {
-  const [open, setOpen] = React.useState(false);
+function FigureImage({ img }) {
+  const [open, setOpen] = React.useState(false)
 
   const handleClickOpen = () => {
-    setOpen(true);
-  };
-  const handleClose = value => {
-    setOpen(false);
-  };
+    setOpen(true)
+  }
+  const handleClose = (value) => {
+    setOpen(false)
+  }
 
   return (
     <div className="figure-image-container">
@@ -57,7 +57,7 @@ const FigureImage = ({ img }) => {
       </div>
       <FigureDialog open={open} onClose={handleClose} img={img} />
     </div>
-  );
-};
+  )
+}
 
-export default FigureImage;
+export default FigureImage
