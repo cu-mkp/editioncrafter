@@ -1,0 +1,30 @@
+.editioncrafter-record-list .record-list-view {
+  flex-grow: 1;
+  display: flex;
+  flex-flow: column;
+  gap: 16px;
+}
+
+.editioncrafter-record-list .record-list-view .entries-header {
+  padding: 10px 0;
+}
+
+.editioncrafter-record-list .record-list-view .record-box {
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid #E1E3E6;
+  display: flex;
+  flex-flow: column;
+  gap: 6px;
+  padding: 16px;
+  transition: 0.3s;
+}
+
+.editioncrafter-record-list .record-list-view .record-box:hover {
+  box-shadow: 1px 1px 6px 0px rgba(0, 0, 0, 0.25);
+}
+
+.editioncrafter-record-list .record-list-view .record-box .category-list {
+  display: flex;
+  gap: 6px;
+}

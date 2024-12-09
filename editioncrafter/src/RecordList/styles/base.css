@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
-.editioncrafter-entry-list {
+.editioncrafter-record-list {
   width: 100%;
   height: 100%;
   display: flex;
@@ -10,33 +10,33 @@
   padding: 0;
 }
 
-.editioncrafter-entry-list h1, h2, h3, h4, p {
+.editioncrafter-record-list h1, h2, h3, h4, p {
   margin: 0;
   padding: 0;
 }
 
-.editioncrafter-entry-list h1 {
+.editioncrafter-record-list h1 {
   font-size: 32px;
   font-style: normal;
   font-weight: 600;
 }
 
-.editioncrafter-entry-list h2 {
+.editioncrafter-record-list h2 {
   font-size: 24px;
   font-style: normal;
   font-weight: 600;
 }
 
-.editioncrafter-entry-list div.h-separator {
+.editioncrafter-record-list div.h-separator {
   border-top: 1px solid #E1E3E6;
   width: 100%;
 }
 
-.editioncrafter-entry-list * {
+.editioncrafter-record-list * {
   box-sizing: border-box;
 }
 
-.editioncrafter-entry-list a {
+.editioncrafter-record-list a {
   color: #07529A;
   font-family: Inter;
   font-size: 18px;
@@ -45,11 +45,11 @@
   text-decoration: none;
 }
 
-.editioncrafter-entry-list button:hover {
+.editioncrafter-record-list button:hover {
   cursor: pointer;
 }
 
-.editioncrafter-entry-list .loading {
+.editioncrafter-record-list .loading {
   height: 100%;
   width: 100%;
   display: flex;
@@ -58,4 +58,21 @@
   justify-content: center;
   gap: 20px;
   background-color: #ffffff;
+}
+
+.editioncrafter-record-list .pill {
+  appearance: none;
+  display: flex;
+  height: 32px;
+  padding: 4px 12px;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  border-radius: 50px;
+  border: 1px solid #CEDAE7;
+  background: #CEDAE7;
+  color: #0A0A0A;
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 500;
 }

@@ -1,12 +1,13 @@
 import { useCallback, useEffect, useMemo, useState } from 'react'
 import initSqlJs from 'sql.js'
-import EntryListView from './component/EntryListView'
 import Loading from './component/Loading'
+import RecordListView from './component/RecordListView'
 import Sidebar from './component/Sidebar'
 
 import FilterContext from './context/FilterContext'
+
 import './styles/base.css'
-import './styles/entry.css'
+import './styles/record.css'
 import './styles/sidebar.css'
 
 const initialFilters = {
@@ -33,7 +34,7 @@ async function initDb(url) {
   return db
 }
 
-function EntryList(props) {
+function RecordList(props) {
   const [db, setDb] = useState(null)
   const [filters, setFilters] = useState(initialFilters)
 
@@ -80,12 +81,12 @@ function EntryList(props) {
 
   return (
     <FilterContext.Provider value={initialContext}>
-      <div className="editioncrafter-entry-list">
+      <div className="editioncrafter-record-list">
         <Sidebar db={db} />
-        <EntryListView db={db} />
+        <RecordListView db={db} />
       </div>
     </FilterContext.Provider>
   )
 }
 
-export default EntryList
+export default RecordList
