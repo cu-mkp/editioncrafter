@@ -7,7 +7,7 @@ function getData(db) {
   const tagsStmt = db.prepare('SELECT * FROM tags')
   const tags = getObjs(tagsStmt)
 
-  const taggingsStmt = db.prepare('SELECT * FROM elements_tags')
+  const taggingsStmt = db.prepare('SELECT * FROM taggings')
   const taggings = getObjs(taggingsStmt)
 
   const labeledTags = tags.map((tag) => {

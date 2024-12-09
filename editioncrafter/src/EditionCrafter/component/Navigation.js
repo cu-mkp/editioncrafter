@@ -56,6 +56,17 @@ function GridViewButton(props) {
   )
 }
 
+function XmlModeToggle(props) {
+  return (
+    <span
+      title="Toggle XML mode"
+      onClick={props.toggleXMLMode}
+      style={{ paddingRight: '15px' }}
+      className={props.xmlIconClass}
+    />
+  )
+}
+
 function Navigation(props) {
   const [popover, setPopover] = useState({ ...initialPopoverObj })
   const [openHelp, setOpenHelp] = useState(false)
@@ -279,12 +290,12 @@ function Navigation(props) {
                       </MenuItem>
                     ) }
                   </Select>
-                  <span
-                    title="Toggle XML mode"
-                    onClick={toggleXMLMode}
-                    style={{ paddingRight: '15px' }}
-                    className={imageViewActive ? 'invisible' : xmlIconClass}
-                  />
+                  {imageViewActive && (
+                    <XmlModeToggle
+                      toggleXMLMode={toggleXMLMode}
+                      xmlIconClass={xmlIconClass}
+                    />
+                  )}
                   <div className="vertical-separator" />
                   <span
                     title="Toggle folio help"
@@ -326,11 +337,13 @@ function Navigation(props) {
                   side={side}
                 />
                                                 &nbsp;
-                <span
-                  title="Toggle XML mode"
-                  onClick={toggleXMLMode}
-                  className={imageViewActive ? 'invisible' : xmlIconClass}
-                />
+
+                {imageViewActive && (
+                  <XmlModeToggle
+                    toggleXMLMode={toggleXMLMode}
+                    xmlIconClass={xmlIconClass}
+                  />
+                )}
 
                 { imageViewActive && (
                   <NavArrows

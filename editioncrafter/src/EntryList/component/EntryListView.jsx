@@ -6,16 +6,16 @@ import '../styles/entry.css'
 function getData(db) {
   const elementsStmt = db.prepare(`
   SELECT
-    elements_tags.id as id,
+    taggings.id as id,
     elements.name AS element_name,
     tags.name AS tag_name,
     surfaces.name AS surface_name
   FROM
-    elements_tags
+    taggings
   INNER JOIN elements
-    ON elements.id = elements_tags.element_id
+    ON elements.id = taggings.element_id
   INNER JOIN tags
-    ON tags.id = elements_tags.tag_id
+    ON tags.id = taggings.tag_id
   INNER JOIN surfaces
     ON surfaces.id = elements.surface_id`)
 
