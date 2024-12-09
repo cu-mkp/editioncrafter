@@ -2,7 +2,7 @@ import { createTheme, ThemeProvider } from '@material-ui/core/styles'
 import React from 'react'
 import DiploMatic from './EditionCrafter/component/DiploMatic'
 import { createReduxStore } from './EditionCrafter/model/ReduxStore'
-import _EntryList from './EntryList'
+import _RecordList from './RecordList'
 import './EditionCrafter/scss/editioncrafter.scss'
 
 /**
@@ -27,6 +27,6 @@ function EditionCrafter(props) {
   )
 }
 
-export { _EntryList as EntryList }
+export { _RecordList as RecordList }
 
 export default EditionCrafter

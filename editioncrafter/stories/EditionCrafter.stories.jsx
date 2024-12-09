@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import EditionCrafter, { EntryList } from '../src/index'
+import EditionCrafter, { RecordList } from '../src/index'
 
 export function BowInTheCloud() {
   return (
@@ -134,9 +134,9 @@ export function OrnamentDesignTranslation() {
   )
 }
 
-export function EntryListExample() {
+export function RecordListExample() {
   return (
-    <EntryList dbPath="/database-example/example.sqlite" />
+    <RecordList dbPath="/database-example/example.sqlite" recordLabel="Entries" />
   )
 }
 

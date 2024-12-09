@@ -1,7 +1,7 @@
 #diplomatic.editioncrafter {
 	container-type: inline-size;
 	container-name: diplomatic;
-	#content-view, .header-wrapper, #entry-list-view, #annotation-list-view {
+	#content-view, .header-wrapper, #annotation-list-view {
 		h1,
 		h2,
 		h3,
@@ -11,29 +11,29 @@
 			padding: 0;
 			margin: 0;
 		}
-		
+
 		h1{
 			font-family: 'Taviraj', serif;
 			font-size: 32px;
 		}
-		
+
 		h2,h3{
 			font-weight: 700;
 		}
-		
+
 		h2{
 			font-size: 22px;
 		}
-		
+
 		h3{
 			font-size: 18px;
 		}
-		
+
 		h4{
 			font-size: 18px;
 			font-weight: 700;
 		}
-		
+
 		p {
 			font-family: "Martel", serif;
 			line-height: 1.25;
@@ -43,17 +43,17 @@
 			line-height: 1.25;
 			margin: 0;
 		}
-		
+
 		a.MuiButton-containedPrimary.cta-button {
 			color: white;
 			padding: 10px 70px;
 			border-radius: 0;
 			.MuiButton-label span{
 				font-family: 'Lato', sans-serif;
-				font-size: 20px;	
+				font-size: 20px;
 			}
 		}
-		
+
 		a{
 			color: $maroon;
 			&:hover{
@@ -79,7 +79,7 @@
 			}
 			&.with-icon{
 				&:after{
-					font-family: "Font Awesome 5 Free"; 
+					font-family: "Font Awesome 5 Free";
 					margin-left: 7px;
 					font-weight: 600;
 					content: "\f054";
@@ -109,7 +109,7 @@
 				}
 			}
 		}
-		
+
 		a.cta-link.active{
 			&:before{
 				background-color: $maroon;
@@ -122,7 +122,7 @@
 				color: $maroon;
 			}
 		}
-		
+
 		a.cta-link.light{
 			color: #444444;
 			&:before{
@@ -134,7 +134,7 @@
 				}
 			}
 		}
-		
+
 		a.cta-link.video-link{
 			&:after{
 				content: "\f04b";
@@ -142,7 +142,7 @@
 				margin-bottom: -2px;
 			}
 		}
-		
+
 		a.cta-link.search-link{
 			&:after{
 				font-family: 'Material Icons';
@@ -287,7 +287,7 @@
 				}
 				@include sm {
 					width: 250px;
-				}	
+				}
 			}
 		}
 		.footer-links {

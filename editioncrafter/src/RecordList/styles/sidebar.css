@@ -1,0 +1,39 @@
+.editioncrafter-record-list .ec-sidebar {
+  background-color: #F3F4F7;
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 380px;
+  flex-grow: 0;
+}
+
+.editioncrafter-record-list .collapsible-menu .collapsible-menu-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  appearance: none;
+  background: none;
+  border: none;
+  width: 100%;
+}
+
+.editioncrafter-record-list .collapsible-menu .collapsible-menu-title {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.editioncrafter-record-list .sidebar-tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.editioncrafter-record-list .sidebar-tag-list .active {
+  background: #07529A;
+  color: #ffffff;
+}
+
+.editioncrafter-record-list .sidebar-tag-list .hidden {
+  visibility: hidden;
+}
