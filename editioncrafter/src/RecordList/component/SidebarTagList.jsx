@@ -1,4 +1,5 @@
 import { useContext, useMemo } from 'react'
+import { IoCheckmarkSharp } from 'react-icons/io5'
 import FilterContext from '../context/FilterContext'
 import Pill from './Pill'
 
@@ -18,7 +19,9 @@ function TagPill(props) {
       isActive={isActive}
       onClick={() => toggleFilter(props.tag.id)}
       label={props.tag.name}
-    />
+    >
+      {isActive && <IoCheckmarkSharp />}
+    </Pill>
   )
 }
 
