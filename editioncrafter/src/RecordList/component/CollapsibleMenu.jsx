@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { FaChevronDown, FaChevronUp } from 'react-icons/fa'
 
 function CollapsibleMenu(props) {
-  const [open, setOpen] = useState(false)
+  const [open, setOpen] = useState(true)
 
   return (
     <>
