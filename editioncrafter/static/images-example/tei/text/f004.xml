@@ -68,17 +68,20 @@
 <ab>
 <lb/>Osorius
 </ab>
-<ab>
-<lb/>Eupolemus, historicus gentilis
-<lb/>qui de rebus Davidis &amp; Salomonis
-<lb/>scripsit
-<lb/>          
-<lb/>          
-<lb/>          
-<lb/>          
-<lb/>          
-<lb/>mons{ieur}
-</ab>
+<div ana="#tax.b.a #food">
+  <head>I'm a named div</head>
+  <ab>
+  <lb/>Eupolemus, <seg ana="#tax.b.d">historicus gentilis</seg>
+  <lb/>qui de rebus Davidis &amp; Salomonis
+  <lb/>scripsit
+  <lb/>          
+  <lb/>          
+  <lb/>          
+  <lb/>          
+  <lb/>          
+  <lb/>mons{ieur}
+  </ab>
+</div>
 <ab>
 <lb/>- Cathalogue des
 <lb/>villes
@@ -154,9 +157,12 @@
 <ab>
 <lb/>Nonius
 </ab>
-<ab>
-<lb/>Magius, Miscellanea
-</ab>
+<div ana="#food">
+  <ab>
+  <lb/>Magius, Miscellanea
+  <lb/><seg ana="#food">pizza</seg>
+  </ab>
+</div>
 <ab>
 <lb/>Pollux, Onomasticon
 </ab>
@@ -230,24 +236,24 @@
 <lb/>Flavius Vopiscus
 </ab>
 <ab>
-<lb/>   
-<lb/>   
+<lb/>
+<lb/>
 </ab>
 <ab>
-<lb/>          
-<lb/>[List of books]
+<lb/>
+<lb/><seg ana="#food">[List of books]</seg>
 </ab>
 <ab>
 <lb/>Aquatilium animalium historiæ, Hypolito
 <lb/>Salviano Typhernate authore, Romæ 1554
-<lb/>        
+<lb/>
 </ab>
 <ab>
-<lb/>  
-<lb/>  
+<lb/>
+<lb/>
 </ab>
 <ab>
-<lb/>        
+<lb/>
 <lb/>Les Annales de
 <lb/>Normandie
 </ab>
