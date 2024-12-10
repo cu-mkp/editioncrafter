@@ -57,8 +57,8 @@ function DiploMatic(props) {
 }
 
 DiploMatic.propTypes = {
-  store: PropTypes.isRequired,
-  config: PropTypes.isRequired,
+  store: PropTypes.object.isRequired,
+  config: PropTypes.object.isRequired,
 }
 
 function mapStateToProps(state) {

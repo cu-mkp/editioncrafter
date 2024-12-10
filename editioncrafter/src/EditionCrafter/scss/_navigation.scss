@@ -55,17 +55,6 @@
             }
       }
       
-      .helpIcon {
-            display: inline-block;
-            // margin-top:6px;
-            // margin-right:16px;
-            height: 18px;
-            width: 18px;
-            @include md {
-                  display: block;
-            }
-      }
-      
       .dropdownV2 {
             width:150px;
             margin-right:10px;
@@ -185,6 +174,43 @@
 
       .imageViewComponent .grid-view-button {
             color: white;
+      }
+
+      .toggle-button {
+            appearance: none;
+            border: none;
+            background: none;
+            color: #6F747C;
+            display: flex;
+            width: 32px;
+            height: 32px;
+            padding: 8px;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            border-radius: 5px;
+      }
+      
+      .imageViewComponent .toggle-button {
+            background: none;
+            color: #ffffff;
+      }
+
+      .toggle-button.active {
+            background: #07529A;
+            color: #ffffff;
+      }
+
+      .tag-bar {
+            position: absolute;
+            background: #F3F4F7;
+            display: flex;
+            width: 100%;
+            z-index: 100;
+      }
+
+      .imageViewComponent .tag-bar {
+            background: #242629;
       }
 
       .book-mode-toggles {

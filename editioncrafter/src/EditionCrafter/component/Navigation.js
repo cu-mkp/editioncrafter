@@ -3,8 +3,10 @@ import Select from '@material-ui/core/Select'
 import React, { useRef, useState } from 'react'
 import { BsFillGrid3X3GapFill } from 'react-icons/bs'
 import {
+  FaCode,
   FaQuestionCircle,
 } from 'react-icons/fa'
+import { GoTag } from 'react-icons/go'
 import { HiOutlineBookOpen } from 'react-icons/hi'
 import { IoArrowBackCircleOutline, IoArrowForwardCircleOutline, IoLockOpenOutline } from 'react-icons/io5'
 import { connect } from 'react-redux'
@@ -56,14 +58,16 @@ function GridViewButton(props) {
   )
 }
 
-function XmlModeToggle(props) {
+function ToggleButton(props) {
   return (
-    <span
-      title="Toggle XML mode"
-      onClick={props.toggleXMLMode}
-      style={{ paddingRight: '15px' }}
-      className={props.xmlIconClass}
-    />
+    <button
+      className={`toggle-button ${props.active ? 'active' : ''}`}
+      onClick={props.onClick}
+      title="Toggle XML Mode"
+      type="button"
+    >
+      <props.icon />
+    </button>
   )
 }
 
@@ -71,6 +75,7 @@ function Navigation(props) {
   const [popover, setPopover] = useState({ ...initialPopoverObj })
   const [openHelp, setOpenHelp] = useState(false)
   const [openHelpNarrow, setOpenHelpNarrow] = useState(false)
+  const [openTags, setOpenTags] = useState(false)
 
   const helpRef = useRef(null)
   const helpRefNarrow = useRef(null)
@@ -99,6 +104,8 @@ function Navigation(props) {
   const toggleHelpNarrow = () => {
     setOpenHelpNarrow(!openHelpNarrow)
   }
+
+  const toggleTags = () => setOpenTags(!openTags)
 
   const toggleBookmode = () => {
     if (!props.documentView.bookMode) {
@@ -203,7 +210,6 @@ function Navigation(props) {
   const showButtonsStyle = documentView[side].transcriptionType === 'glossary' ? { visibility: 'hidden' } : { visibility: 'visible' }
   const selectContainerStyle = { display: 'flex' } // what's the reason we want this to be hidden sometimes?
   const imageViewActive = documentView[side].transcriptionType === 'f'
-  const xmlIconClass = (documentView[side].isXMLMode) ? 'fa fa-code active' : 'fa fa-code'
   const folioName = document.folioIndex[documentView[side].iiifShortID]?.name
   // this is messy but faster for the moment then figuring out why the sides dont behave the same
   const helpMarginStyle = side === 'left' ? { marginRight: '55px' } : { marginRight: '15px' }
@@ -261,6 +267,7 @@ function Navigation(props) {
                       onChange={toggleLockmode}
                       title="Toggle coordination of views"
                       type="checkbox"
+                      value={props.documentView.linkedMode}
                     />
                     <span className="switch">
                       <span className="slider">
@@ -291,17 +298,24 @@ function Navigation(props) {
                     ) }
                   </Select>
                   {!imageViewActive && (
-                    <XmlModeToggle
-                      toggleXMLMode={toggleXMLMode}
-                      xmlIconClass={xmlIconClass}
+                    <ToggleButton
+                      onClick={toggleXMLMode}
+                      active={props.documentView[props.side].isXMLMode}
+                      icon={FaCode}
                     />
                   )}
                   <div className="vertical-separator" />
-                  <span
+                  <ToggleButton
+                    active={openTags}
+                    onClick={toggleTags}
+                    icon={GoTag}
+                  />
+                  <button
                     title="Toggle folio help"
+                    className={`toggle-button ${openHelp ? 'active' : ''}`}
                     onClick={toggleHelp}
-                    className="helpIcon"
                     ref={helpRef}
+                    type="button"
                   >
                     <FaQuestionCircle />
                     <HelpPopper
@@ -310,7 +324,7 @@ function Navigation(props) {
                       open={openHelp}
                       onClose={toggleHelp}
                     />
-                  </span>
+                  </button>
                 </div>
 
                 <JumpToFolio
@@ -339,9 +353,10 @@ function Navigation(props) {
                                                 &nbsp;
 
                 {!imageViewActive && (
-                  <XmlModeToggle
-                    toggleXMLMode={toggleXMLMode}
-                    xmlIconClass={xmlIconClass}
+                  <ToggleButton
+                    onClick={toggleXMLMode}
+                    active={props.documentView[props.side].isXMLMode}
+                    icon={FaCode}
                   />
                 )}
 
@@ -393,6 +408,11 @@ function Navigation(props) {
         </div>
 
       </div>
+      {openTags && (
+        <div className="tag-bar">
+          hi
+        </div>
+      )}
     </>
   )
 }
