@@ -139,7 +139,7 @@ export function RecordListExample() {
     <RecordList
       dbUrl="/database-example/example.sqlite"
       recordLabel="Entries"
-      viewerUrl="/"
+      viewerUrl="http://localhost:6006/iframe.html?globals=&args=&id=editioncrafter--simple-images"
     />
   )
 }

@@ -262,8 +262,8 @@ function Navigation(props) {
                       title="Toggle coordination of views"
                       type="checkbox"
                     />
-                    <span class="switch">
-                      <span class="slider">
+                    <span className="switch">
+                      <span className="slider">
                         <IoLockOpenOutline />
                       </span>
                     </span>
@@ -290,7 +290,7 @@ function Navigation(props) {
                       </MenuItem>
                     ) }
                   </Select>
-                  {imageViewActive && (
+                  {!imageViewActive && (
                     <XmlModeToggle
                       toggleXMLMode={toggleXMLMode}
                       xmlIconClass={xmlIconClass}
@@ -338,7 +338,7 @@ function Navigation(props) {
                 />
                                                 &nbsp;
 
-                {imageViewActive && (
+                {!imageViewActive && (
                   <XmlModeToggle
                     toggleXMLMode={toggleXMLMode}
                     xmlIconClass={xmlIconClass}
