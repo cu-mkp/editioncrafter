@@ -136,7 +136,11 @@ export function OrnamentDesignTranslation() {
 
 export function RecordListExample() {
   return (
-    <RecordList dbPath="/database-example/example.sqlite" recordLabel="Entries" />
+    <RecordList
+      dbUrl="/database-example/example.sqlite"
+      recordLabel="Entries"
+      viewerUrl="/"
+    />
   )
 }
 
