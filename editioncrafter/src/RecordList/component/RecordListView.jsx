@@ -37,13 +37,41 @@ function getData(db) {
   }
 }
 
+function isFilterMatch(ctx, divData) {
+  const categoryMatch = (ctx.categories.length === 0
+    || divData.element.tagging_ids.some(id => ctx.categories.includes(id)))
+
+  const tagMatch = (ctx.tags.length === 0
+    || divData.childTags.some(id => ctx.tags.includes(id)))
+
+  return categoryMatch && tagMatch
+}
+
 function RecordListView(props) {
   const ctx = useContext(FilterContext)
 
   const { elements, tags } = useMemo(() => getData(props.db), [props.db])
 
-  const divs = useMemo(() => elements
-    .filter(el => el.element_type === 'div'), [elements])
+  const divs = useMemo(() => {
+    const arr = []
+
+    for (const el of elements) {
+      if (el.element_type !== 'div') {
+        continue
+      }
+
+      const children = elements.filter(childEl => childEl.parent_id === el.id)
+      const childTags = children.flatMap(childEl => childEl.tagging_ids)
+
+      arr.push({
+        element: el,
+        children,
+        childTags,
+      })
+    }
+
+    return arr
+  }, [elements])
 
   return (
     <div className="record-list-view">
@@ -53,13 +81,13 @@ function RecordListView(props) {
         )
       </h1>
       {divs
-        .map((div) => {
-          if (ctx.categories.length === 0 || div.tagging_ids.some(id => ctx.categories.includes(id))) {
+        .map((divData) => {
+          if (isFilterMatch(ctx, divData)) {
             return (
               <Record
-                childElements={elements.filter(el => el.parent_id === div.id)}
-                div={div}
-                key={div.id}
+                childElements={elements.filter(el => el.parent_id === divData.element.id)}
+                div={divData.element}
+                key={divData.element.id}
                 tags={tags}
               />
             )
