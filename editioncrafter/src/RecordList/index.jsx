@@ -60,7 +60,7 @@ function RecordList(props) {
 
   useEffect(() => {
     const loadDb = async () => {
-      const db = await initDb(props.dbPath)
+      const db = await initDb(props.dbUrl)
       setDb(db)
     }
 
@@ -73,7 +73,7 @@ function RecordList(props) {
         db.close()
       }
     }
-  }, [props.dbPath, db])
+  }, [props.dbUrl, db])
 
   if (!db) {
     return <Loading />
@@ -83,7 +83,7 @@ function RecordList(props) {
     <FilterContext.Provider value={initialContext}>
       <div className="editioncrafter-record-list">
         <Sidebar db={db} />
-        <RecordListView db={db} />
+        <RecordListView db={db} recordLabel={props.recordLabel} viewerUrl={props.viewerUrl} />
       </div>
     </FilterContext.Provider>
   )

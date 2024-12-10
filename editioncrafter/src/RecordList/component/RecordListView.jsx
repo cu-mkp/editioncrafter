@@ -55,16 +55,16 @@ function RecordListView(props) {
   const divs = useMemo(() => {
     const arr = []
 
-    for (const el of elements) {
-      if (el.element_type !== 'div') {
+    for (const element of elements) {
+      if (element.element_type !== 'div') {
         continue
       }
 
-      const children = elements.filter(childEl => childEl.parent_id === el.id)
+      const children = elements.filter(childEl => childEl.parent_id === element.id)
       const childTags = children.flatMap(childEl => childEl.tagging_ids)
 
       arr.push({
-        element: el,
+        element,
         children,
         childTags,
       })
@@ -76,26 +76,28 @@ function RecordListView(props) {
   return (
     <div className="record-list-view">
       <h1 className="entries-header">
-        Records (
+        {props.recordLabel || 'Records'}
+        {' '}
+        (
         {divs.length}
         )
       </h1>
-      {divs
-        .map((divData) => {
-          if (isFilterMatch(ctx, divData)) {
-            return (
-              <Record
-                childElements={elements.filter(el => el.parent_id === divData.element.id)}
-                div={divData.element}
-                key={divData.element.id}
-                tags={tags}
-              />
-            )
-          }
+      {divs.map((divData) => {
+        if (isFilterMatch(ctx, divData)) {
+          return (
+            <Record
+              childElements={elements.filter(el => el.parent_id === divData.element.id)}
+              div={divData.element}
+              key={divData.element.id}
+              tags={tags}
+              viewerUrl={props.viewerUrl}
+            />
+          )
+        }
 
-          return null
-        },
-        )}
+        return null
+      },
+      )}
     </div>
   )
 }
