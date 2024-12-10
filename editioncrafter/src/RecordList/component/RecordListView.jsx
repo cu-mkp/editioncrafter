@@ -18,6 +18,8 @@ function getData(db) {
     elements.type AS element_type,
     elements.parent_id AS parent_id,
     surfaces.name AS surface_name,
+    surfaces.xml_id AS surface_xml_id,
+    layers.xml_id AS layer_xml_id,
     GROUP_CONCAT(tags.id) as tagging_ids
   FROM
     taggings
@@ -27,6 +29,8 @@ function getData(db) {
     ON tags.id = taggings.tag_id
   INNER JOIN surfaces
     ON surfaces.id = elements.surface_id
+  INNER JOIN layers
+    ON layers.id = elements.layer_id
   GROUP BY elements.id`)
 
   const tagsStmt = db.prepare('SELECT * from tags')

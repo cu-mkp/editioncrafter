@@ -77,15 +77,6 @@
 			@include md {
 				font-size: 18px;
 			}
-			&.with-icon{
-				&:after{
-					font-family: "Font Awesome 5 Free";
-					margin-left: 7px;
-					font-weight: 600;
-					content: "\f054";
-					font-size: 15px;
-				}
-			}
 			&:before{
 				position: absolute;
 				content: "";

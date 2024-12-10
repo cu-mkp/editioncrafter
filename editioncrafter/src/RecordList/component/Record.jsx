@@ -16,6 +16,12 @@ function getTagObjects(ids, allTags) {
     .filter(Boolean)
 }
 
+function getSurfaceLink(baseUrl, div) {
+  return (
+    `${baseUrl}&viewMode=story#/ec/${div.surface_xml_id}/f/${div.surface_xml_id}/${div.layer_xml_id}`
+  )
+}
+
 function Record(props) {
   const ctx = useContext(FilterContext)
 
@@ -48,7 +54,11 @@ function Record(props) {
   return (
     <div className="record-box">
       <p>
-        <a href="#todo">
+        <a
+          href={getSurfaceLink(props.viewerUrl, props.div)}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           {getRecordName(props.div)}
         </a>
       </p>
