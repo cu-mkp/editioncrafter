@@ -15,7 +15,7 @@
   border: 1px solid #E1E3E6;
   display: flex;
   flex-flow: column;
-  gap: 6px;
+  gap: 8px;
   padding: 16px;
   transition: 0.3s;
 }
@@ -27,6 +27,19 @@
 .editioncrafter-record-list .record-list-view .record-box .category-list {
   display: flex;
   gap: 6px;
+}
+
+.editioncrafter-record-list .record-list-view .record-box .tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.editioncrafter-record-list .record-list-view .record-box .tag-list .tag-list-label {
+  font-weight: 600;
 }
 
 .editioncrafter-record-list .record-list-view .record-box .tag-list .pill {

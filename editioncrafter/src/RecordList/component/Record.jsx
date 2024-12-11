@@ -68,6 +68,7 @@ function Record(props) {
         ))}
       </div>
       <div className="tag-list">
+        <span className="tag-list-label">Tags</span>
         {Object.keys(tagCounts).map(tagName => (
           <Pill key={tagName} label={tagName} isActive={ctx.tags.includes(tagCounts[tagName].id)}>
             <span className="tag-count">{tagCounts[tagName].count}</span>
