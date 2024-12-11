@@ -139,7 +139,23 @@ export function RecordListExample() {
     <RecordList
       dbUrl="/database-example/example.sqlite"
       recordLabel="Entries"
-      viewerUrl="http://localhost:6006/iframe.html?args=&globals=&id=editioncrafter--simple-images"
+      viewerUrl="http://localhost:6006/iframe.html?globals=&id=editioncrafter--taxonomy-example"
+    />
+  )
+}
+
+export function TaxonomyExample() {
+  return (
+    <EditionCrafter
+      documentName="BnF Ms. Fr. 640 (Record List Example)"
+      transcriptionTypes={{
+        tc: 'Diplomatic (FR)',
+        tcn: 'Normalized (FR)',
+        tl: 'Translation (EN)',
+        test: 'Test Field (EN)',
+      }}
+      iiifManifest="https://cu-mkp.github.io/editioncrafter-data/fr640_3r-3v-example/iiif/manifest.json"
+      glossaryURL="https://cu-mkp.github.io/editioncrafter-data/fr640_3r-3v-example/glossary.json"
     />
   )
 }
