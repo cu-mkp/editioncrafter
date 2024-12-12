@@ -6,16 +6,17 @@ import { putResolveAction } from '../model/ReduxStore'
 const justDocument = state => state.document
 const justGlossary = state => state.glossary
 
-async function parseTags(headerUrl) {
-  const tagInfo = {}
+function* parseTags(headerUrl) {
+  const tags = {}
 
-  const res = await fetch(headerUrl)
+  const res = yield fetch(headerUrl)
 
   if (!res.ok) {
-    return tagInfo
+    yield putResolveAction('DocumentActions.loadTags', tags)
+    return null
   }
 
-  const html = await res.text()
+  const html = yield res.text()
 
   const headerDoc = new DOMParser().parseFromString(html, 'text/html')
 
@@ -28,21 +29,15 @@ async function parseTags(headerUrl) {
       const desc = categoryEl.querySelector('tei-catdesc')
       if (desc) {
         const name = desc.textContent
-        tagInfo[xmlId] = name
+        tags[xmlId] = name
       }
     }
   }
 
-  return tagInfo
+  yield putResolveAction('DocumentActions.loadTags', tags)
 }
 
 function* userNavigation(action) {
-  const document = yield select(justDocument)
-
-  if (!document.tags) {
-    document.tags = yield parseTags(document.headerUrl)
-  }
-
   const { pathname } = action.payload.params[0]
   const pathSegments = pathname.split('/')
 
@@ -50,7 +45,8 @@ function* userNavigation(action) {
     switch (pathSegments[1]) {
       case 'ec':
       {
-        const manifest = yield resolveDocumentManifest()
+        yield resolveDocumentManifest()
+        yield resolveDocumentTags()
         yield resolveGlossary()
         yield resolveFolio(pathSegments)
         break
@@ -60,8 +56,17 @@ function* userNavigation(action) {
   }
 }
 
+function* resolveDocumentTags() {
+  const document = yield select(justDocument)
+
+  if (!document.tags) {
+    yield parseTags(document.headerUrl)
+  }
+}
+
 function* resolveDocumentManifest() {
   const document = yield select(justDocument)
+
   if (!document.loaded) {
     // handle the case where we've passed in an array of manifest URLs, in which case the `variorum` parameter should be set to `true`
     if (document.variorum) {

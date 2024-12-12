@@ -16,6 +16,13 @@ DocumentActions.loadDocument = function loadDocument(state, manifestData) {
   }
 }
 
+DocumentActions.loadTags = function loadTags(state, tags) {
+  return {
+    ...state,
+    tags,
+  }
+}
+
 DocumentActions.loadFolio = function loadFolio(state, folio) {
   const oldFolio = state.folioIndex[folio.id]
   const folioIdx = state.folios.indexOf(oldFolio)

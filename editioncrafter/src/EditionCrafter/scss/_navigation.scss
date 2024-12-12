@@ -209,15 +209,82 @@
       }
 
       .tag-bar {
+            display: flex;
             position: absolute;
             background: #F3F4F7;
-            display: flex;
             width: 100%;
             z-index: 100;
       }
 
+      .tag-bar-close {
+            appearance: none;
+            height: 48px;
+            width: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            background: none;
+            border-radius: 50%;
+      }
+
+      .tag-bar-close:hover {
+            cursor: pointer;
+            background-color: rgb(221, 221, 221);
+      }
+
+      .tag-bar-close svg {
+            height: 24px;
+            width: 24px;
+      }
+
+      .tag-list {
+            width: calc(100% - 30px);
+            top: 46px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 6px;
+            align-self: stretch;
+            padding: 8px 16px;
+      }
+
+      .tag-list button {
+            display: flex;
+            padding: 6px 10px;
+            justify-content: center;
+            align-items: center;
+            gap: 4px;
+            border-radius: 50px;
+            border: 1px solid rgba(10, 10, 10, 0.20);
+            background: #ffffff;
+      }
+
+      .tag-list button:hover {
+            cursor: pointer;
+      }
+
+      .tag-list .tag-label {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+      }
+
       .imageViewComponent .tag-bar {
             background: #242629;
+            top: 44px;
+      }
+
+      .imageViewComponent .tag-bar * {
+            color: #ffffff
+      }
+
+      .imageViewComponent .tag-bar .tag-list button {
+            background-color: #484B51;
+      }
+
+      .imageViewComponent .tag-bar .tag-bar-close:hover {
+            background: rgb(137, 136, 136);
       }
 
       .book-mode-toggles {

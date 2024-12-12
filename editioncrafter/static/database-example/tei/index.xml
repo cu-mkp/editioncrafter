@@ -16,136 +16,136 @@
 				<taxonomy>
 					<bibl>Taxonomy 1</bibl>
 					<category n="animal" xml:id="rs-al">
-						<catDesc>denotes an animal</catDesc>
+						<catDesc>animal</catDesc>
 					</category>
 					<category n="body part" xml:id="rs-bp">
-						<catDesc>denotes a human body part</catDesc>
+						<catDesc>body part</catDesc>
 					</category>
 					<category n="currency" xml:id="rs-cn">
-						<catDesc>a known coin or currency</catDesc>
+						<catDesc>currency</catDesc>
 					</category>
 					<category n="definition" xml:id="rs-df">
-						<catDesc>denotes where the author-practitioner defines or explains a term</catDesc>
+						<catDesc>definition</catDesc>
 					</category>
 					<category n="environment" xml:id="rs-env">
-						<catDesc>reference to a physical space or environment, such as workshop space, room, mountains, forest, etc</catDesc>
+						<catDesc>environment</catDesc>
 					</category>
 					<category n="material" xml:id="rs-m">
-						<catDesc>a named physical material (e.g., "rose" but not "plant"), or a verb that implies a physical material, such as "to gild."</catDesc>
+						<catDesc>material</catDesc>
 					</category>
 					<category n="medical" xml:id="rs-md">
-						<catDesc>medical and health-related terms or phrases in an entry about some other topic. Medical recipes are categorized as such, but not marked with tags.</catDesc>
+						<catDesc>medical</catDesc>
 					</category>
 					<category n="measurement" xml:id="rs-ms">
-						<catDesc>units of measurement, including temporal, volume, mass, length</catDesc>
+						<catDesc>measurement</catDesc>
 					</category>
 					<category n="music" xml:id="rs-mu">
-						<catDesc>musical instrument</catDesc>
+						<catDesc>music</catDesc>
 					</category>
 					<category n="plant" xml:id="rs-pa">
-						<catDesc>a named plant or part of a plant, not including plant gums</catDesc>
+						<catDesc>plant</catDesc>
 					</category>
 					<category n="place" xml:id="rs-pl">
-						<catDesc>place name</catDesc>
+						<catDesc>place</catDesc>
 					</category>
 					<category n="personal name" xml:id="rs-pn">
-						<catDesc>a name, including authors, mythical personages, or reference to a specific individual or entity, such as God, King, and "the one who taught me to mold" (110r)</catDesc>
+						<catDesc>personal name</catDesc>
 					</category>
 					<category n="profession" xml:id="rs-pro">
-						<catDesc>denotes both a recognized trade, such as goldsmith, but also a social status or identity, such as peasant, or "rustic"</catDesc>
+						<catDesc>profession</catDesc>
 					</category>
 					<category n="sensory" xml:id="rs-sn">
-						<catDesc>use of the five senses to make a qualitative assessment</catDesc>
+						<catDesc>sensory</catDesc>
 					</category>
 					<category n="tool" xml:id="rs-tl">
-						<catDesc>tool, including any instrument, and physical or material object used to perform a process, including body parts and verbs such as "piler" (to pestle) that imply a tool.</catDesc>
+						<catDesc>tool</catDesc>
 					</category>
 					<category n="temporal" xml:id="rs-tmp">
-						<catDesc>references to time, including hour, day, season, holiday, span of time, time of day, etc.</catDesc>
+						<catDesc>temporal</catDesc>
 					</category>
 					<category n="arms and armor" xml:id="rs-wp">
-						<catDesc>word or phrase referring to arms and armor</catDesc>
+						<catDesc>arms and armor</catDesc>
 					</category>
 				</taxonomy>
 				<taxonomy>
 					<bibl>Taxonomy 2</bibl>
 					<category n="casting" xml:id="cat-casting">
-						<catDesc>making of molds for casting, and/or casting into molds</catDesc>
+						<catDesc>casting</catDesc>
 					</category>
 					<category n="painting" xml:id="cat-painting">
-						<catDesc>painting, paintings, or painters</catDesc>
+						<catDesc>painting</catDesc>
 					</category>
 					<category n="metal process" xml:id="cat-metal_process">
-						<catDesc>a process involving metals not being cast</catDesc>
+						<catDesc>metal process</catDesc>
 					</category>
 					<category n="varnish" xml:id="cat-varnish">
-						<catDesc>varnish making or application</catDesc>
+						<catDesc>varnish</catDesc>
 					</category>
 					<category n="arms and armor" xml:id="cat-arms_and_armor">
 						<catDesc>arms and armor</catDesc>
 					</category>
 					<category n="medicine" xml:id="cat-medicine">
-						<catDesc>medical, health, and healing recipes</catDesc>
+						<catDesc>medicine</catDesc>
 					</category>
 					<category n="household and daily life" xml:id="cat-household_and_daily_life">
-						<catDesc>household management or ornamentation, daily life, and quotidian subjects</catDesc>
+						<catDesc>household and daily life</catDesc>
 					</category>
 					<category n="cultivation" xml:id="cat-cultivation">
-						<catDesc>cultivating plants</catDesc>
+						<catDesc>cultivation</catDesc>
 					</category>
 					<category n="stones" xml:id="cat-stones">
-						<catDesc>significant references to precious and semi-precious stones, and their imitations</catDesc>
+						<catDesc>stones</catDesc>
 					</category>
 					<category n="wood and its coloring" xml:id="cat-wood_and_its_coloring">
-						<catDesc>significant references to wood and/or the coloring of wood</catDesc>
+						<catDesc>wood and its coloring</catDesc>
 					</category>
 					<category n="tool" xml:id="cat-tool">
-						<catDesc>references the use of a specific tool, or describes the making of tools</catDesc>
+						<catDesc>tool</catDesc>
 					</category>
 					<category n="tricks and sleight of hand" xml:id="cat-tricks_and_sleight_of_hand">
-						<catDesc>sleight of hand tricks and practical jokes</catDesc>
+						<catDesc>tricks and sleight of hand</catDesc>
 					</category>
 					<category n="decorative" xml:id="cat-decorative">
-						<catDesc>making of a material or object that is used to decorate</catDesc>
+						<catDesc>decorative</catDesc>
 					</category>
 					<category n="animal husbandry" xml:id="cat-animal_husbandry">
-						<catDesc>raising, care, and feeding of animals of any sort</catDesc>
+						<catDesc>animal husbandry</catDesc>
 					</category>
 					<category n="glass process" xml:id="cat-glass_process">
-						<catDesc>making or use of glass</catDesc>
+						<catDesc>glass process</catDesc>
 					</category>
 					<category n="corrosives" xml:id="cat-corrosives">
-						<catDesc>making or use of corrosive substances</catDesc>
+						<catDesc>corrosives</catDesc>
 					</category>
 					<category n="dyeing" xml:id="cat-dyeing">
-						<catDesc>preparation of dye, or the dyeing of other substances</catDesc>
+						<catDesc>dyeing</catDesc>
 					</category>
 					<category n="preserving" xml:id="cat-preserving">
-						<catDesc>preservation of flowers, candles, foods, and animals for future use or ornamentation</catDesc>
+						<catDesc>preserving</catDesc>
 					</category>
 					<category n="wax process" xml:id="cat-wax_process">
-						<catDesc>process involving wax as a main ingredient, and/or the manipulation of the properties of wax</catDesc>
+						<catDesc>wax process</catDesc>
 					</category>
 					<category n="practical optics" xml:id="cat-practical_optics">
-						<catDesc>objects or processes that cause optical effects, such as perspective construction, reflection, and magnification</catDesc>
+						<catDesc>practical optics</catDesc>
 					</category>
 					<category n="lists" xml:id="cat-lists">
-						<catDesc>text that is arrayed as a list</catDesc>
+						<catDesc>lists</catDesc>
 					</category>
 					<category n="merchants" xml:id="cat-merchants">
-						<catDesc>merchants or merchant practices</catDesc>
+						<catDesc>merchants</catDesc>
 					</category>
 					<category n="printing" xml:id="cat-printing">
-						<catDesc>references printing processes or printing tools</catDesc>
+						<catDesc>printing</catDesc>
 					</category>
 					<category n="la boutique" xml:id="cat-la_boutique">
-						<catDesc>refers to entries titled "La boutique" (the workshop); see fols. 162r and 166r</catDesc>
+						<catDesc>la boutique</catDesc>
 					</category>
 					<category n="alchemy" xml:id="cat-alchemy">
-						<catDesc>processes that pursue the making of gold</catDesc>
+						<catDesc>alchemy</catDesc>
 					</category>
 					<category n="manuscript structure" xml:id="cat-manuscript_structure">
-						<catDesc>structural note (fol. 170v only)</catDesc>
+						<catDesc>manuscript structure</catDesc>
 					</category>
 				</taxonomy>
 			</classDecl>

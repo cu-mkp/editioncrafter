@@ -1,6 +1,6 @@
 import MenuItem from '@material-ui/core/MenuItem'
 import Select from '@material-ui/core/Select'
-import React, { useRef, useState } from 'react'
+import React, { useMemo, useRef, useState } from 'react'
 import { BsFillGrid3X3GapFill } from 'react-icons/bs'
 import {
   FaCode,
@@ -15,6 +15,7 @@ import DocumentHelper from '../model/DocumentHelper'
 import AlphabetLinks from './AlphabetLinks'
 import HelpPopper from './HelpPopper'
 import JumpToFolio from './JumpToFolio'
+import TagToolbar from './TagToolbar'
 
 const initialPopoverObj = {
   anchorEl: null,
@@ -76,6 +77,11 @@ function Navigation(props) {
   const [openHelp, setOpenHelp] = useState(false)
   const [openHelpNarrow, setOpenHelpNarrow] = useState(false)
   const [openTags, setOpenTags] = useState(false)
+
+  const docHasTags = useMemo(
+    () => props.document.tags && Object.keys(props.document.tags.length > 0),
+    [props.document],
+  )
 
   const helpRef = useRef(null)
   const helpRefNarrow = useRef(null)
@@ -215,7 +221,7 @@ function Navigation(props) {
   const helpMarginStyle = side === 'left' ? { marginRight: '55px' } : { marginRight: '15px' }
 
   return (
-    <>
+    <div>
       <div className="navigationComponent">
 
         { documentView[side].transcriptionType !== 'glossary'
@@ -305,11 +311,13 @@ function Navigation(props) {
                     />
                   )}
                   <div className="vertical-separator" />
-                  <ToggleButton
-                    active={openTags}
-                    onClick={toggleTags}
-                    icon={GoTag}
-                  />
+                  {docHasTags && (
+                    <ToggleButton
+                      active={openTags}
+                      onClick={toggleTags}
+                      icon={GoTag}
+                    />
+                  )}
                   <button
                     title="Toggle folio help"
                     className={`toggle-button ${openHelp ? 'active' : ''}`}
@@ -339,6 +347,12 @@ function Navigation(props) {
           : (<AlphabetLinks onFilterChange={onFilterChange} value={props.value} />)}
 
       </div>
+      {openTags && (
+        <TagToolbar
+          document={props.document}
+          toggleTags={toggleTags}
+        />
+      )}
       <div className="navigationComponentNarrow">
         { documentView[side].transcriptionType !== 'glossary'
           ? (
@@ -406,14 +420,8 @@ function Navigation(props) {
             onClose={toggleHelpNarrow}
           />
         </div>
-
       </div>
-      {openTags && (
-        <div className="tag-bar">
-          hi
-        </div>
-      )}
-    </>
+    </div>
   )
 }
 
