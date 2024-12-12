@@ -185,7 +185,11 @@
 	  vertical-align: super;
 	  font-size: 10pt;
 	}
-	
+
+	tei-seg[ana] {
+		background: #D0DAE5;
+	}
+
 	.selected-zone {
 		background: #EAF1FD;
 		border-radius: 5px;

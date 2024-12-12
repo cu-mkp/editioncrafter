@@ -22,6 +22,7 @@ DocumentActions.loadFolio = function loadFolio(state, folio) {
   state.folios[folioIdx] = folio
   state.folioIndex[folio.id] = folio
   state.folioByName[folio.name] = folio
+
   return {
     ...state,
   }

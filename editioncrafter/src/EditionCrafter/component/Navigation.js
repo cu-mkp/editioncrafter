@@ -230,7 +230,7 @@ function Navigation(props) {
                     side={side}
                   />
                   <div className="folio-path" title={`${props.documentName || document.documentName}/${folioName}`} style={{ display: 'flex', overflowX: 'hidden', justifyContent: 'flex-end' }}>
-                    <span>{props.documentName || document.documentName}</span>
+                    <span className="document-title">{props.documentName || document.documentName}</span>
                     <span>/</span>
                     <div
                       onClick={revealJumpBox}

@@ -429,7 +429,9 @@ function DocumentView(props) {
           side={side}
         />
       )
-    } if (viewType === 'TranscriptionView') {
+    }
+
+    if (viewType === 'TranscriptionView') {
       return (
         <TranscriptionView
           key={key}
@@ -440,7 +442,9 @@ function DocumentView(props) {
           transcriptionType={transcriptionType}
         />
       )
-    } if (viewType === 'XMLView') {
+    }
+
+    if (viewType === 'XMLView') {
       return (
         <XMLView
           key={key}
@@ -451,7 +455,9 @@ function DocumentView(props) {
           side={side}
         />
       )
-    } if (viewType === 'ImageGridView') {
+    }
+
+    if (viewType === 'ImageGridView') {
       return (
         <ImageGridView
           key={key}
@@ -461,7 +467,9 @@ function DocumentView(props) {
           selectedDoc={document || props.document.variorum && Object.keys(props.document.derivativeNames)[side === 'left' ? 0 : side === 'right' ? 1 : Object.keys(props.document.derivativeNames).length > 2 ? 2 : 1]}
         />
       )
-    } if (viewType === 'GlossaryView') {
+    }
+
+    if (viewType === 'GlossaryView') {
       return (
         <GlossaryView
           key={key}
@@ -492,7 +500,9 @@ function DocumentView(props) {
     return `${side}-${pane.viewType}`
   }
 
-  if (!props.document.loaded) { return null }
+  if (!props.document.loaded) {
+    return null
+  }
 
   // combine component state with state from props
   const docView = {

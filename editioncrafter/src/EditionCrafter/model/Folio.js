@@ -18,7 +18,8 @@ export async function loadFolio(folioData) {
     const imageServerResponse = await response.json()
     // Handle the image server response
     folio.tileSource = new OpenSeadragon.IIIFTileSource(imageServerResponse)
-  } else {
+  }
+  else {
     folio.tileSource = new OpenSeadragon.ImageTileSource({
       type: 'image',
       url: folio.image_zoom_url,

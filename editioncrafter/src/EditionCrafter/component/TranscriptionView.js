@@ -120,6 +120,7 @@ function TranscriptionView(props) {
       />
     )
   }
+
   const transcriptionData = folio && folio.transcription && folio.transcription[transcriptionType]
 
   if (folio && !folio.loading && !transcriptionData) {

@@ -6,7 +6,43 @@ import { putResolveAction } from '../model/ReduxStore'
 const justDocument = state => state.document
 const justGlossary = state => state.glossary
 
+async function parseTags(headerUrl) {
+  const tagInfo = {}
+
+  const res = await fetch(headerUrl)
+
+  if (!res.ok) {
+    return tagInfo
+  }
+
+  const html = await res.text()
+
+  const headerDoc = new DOMParser().parseFromString(html, 'text/html')
+
+  const categoryEls = headerDoc.querySelectorAll('tei-category')
+
+  for (const categoryEl of categoryEls) {
+    const xmlId = categoryEl.getAttribute('id')
+
+    if (xmlId) {
+      const desc = categoryEl.querySelector('tei-catdesc')
+      if (desc) {
+        const name = desc.textContent
+        tagInfo[xmlId] = name
+      }
+    }
+  }
+
+  return tagInfo
+}
+
 function* userNavigation(action) {
+  const document = yield select(justDocument)
+
+  if (!document.tags) {
+    document.tags = yield parseTags(document.headerUrl)
+  }
+
   const { pathname } = action.payload.params[0]
   const pathSegments = pathname.split('/')
 

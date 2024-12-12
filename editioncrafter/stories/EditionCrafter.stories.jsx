@@ -154,8 +154,7 @@ export function TaxonomyExample() {
         tl: 'Translation (EN)',
         test: 'Test Field (EN)',
       }}
-      iiifManifest="https://cu-mkp.github.io/editioncrafter-data/fr640_3r-3v-example/iiif/manifest.json"
-      glossaryURL="https://cu-mkp.github.io/editioncrafter-data/fr640_3r-3v-example/glossary.json"
+      iiifManifest="/database-example/iiif/manifest.json"
     />
   )
 }

@@ -147,6 +147,13 @@
             gap: 6px;
             font-weight: 400;
       }
+
+      .breadcrumbs .folio-path .document-title {
+            max-width: 80px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+      }
       
       .breadcrumbs .folioName, .breadcrumbsNarrow .folioName {
             font-size: 14px;
