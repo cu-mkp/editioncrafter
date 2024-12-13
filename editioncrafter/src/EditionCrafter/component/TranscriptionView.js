@@ -53,7 +53,8 @@ function htmlToReactParserOptions(selectedZone, selectedTags) {
     replace(domNode) {
       switch (domNode.name) {
         case 'div': {
-          return handleTags(domNode, selectedTags)
+          domNode = handleTags(domNode, selectedTags)
+          return setUpForZoneHighlighting(selectedZone, domNode)
         }
         case 'tei-seg': {
           return handleTags(domNode, selectedTags)
@@ -92,10 +93,6 @@ function htmlToReactParserOptions(selectedZone, selectedTags) {
               { desc ? <figcaption>{desc}</figcaption> : null }
             </figure>
           )
-        }
-
-        case 'div': {
-          return setUpForZoneHighlighting(selectedZone, domNode)
         }
 
         default:
