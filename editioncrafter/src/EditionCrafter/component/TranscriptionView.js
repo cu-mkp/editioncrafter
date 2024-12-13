@@ -35,21 +35,28 @@ function setUpForZoneHighlighting(selectedZone, domNode) {
   return domNode
 }
 
+function handleTags(domNode, selectedTags) {
+  const ana = domNode.attribs?.ana
+
+  if (ana) {
+    const truncated = ana.slice(1)
+    if (selectedTags.includes(truncated)) {
+      domNode.attribs.class = 'active'
+    }
+  }
+
+  return domNode
+}
+
 function htmlToReactParserOptions(selectedZone, selectedTags) {
   const parserOptions = {
     replace(domNode) {
       switch (domNode.name) {
+        case 'tei-div': {
+          return handleTags(domNode, selectedTags)
+        }
         case 'tei-seg': {
-          const ana = domNode.attribs?.ana
-
-          if (ana) {
-            const truncated = ana.slice(1)
-            if (selectedTags.includes(truncated)) {
-              domNode.attribs.class = 'active'
-            }
-          }
-
-          return domNode
+          return handleTags(domNode, selectedTags)
         }
         case 'tei-line': {
           return setUpForZoneHighlighting(selectedZone, domNode)

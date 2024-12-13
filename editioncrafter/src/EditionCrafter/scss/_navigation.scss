@@ -288,6 +288,11 @@
             background-color: #484B51;
       }
 
+      .imageViewComponent .tag-bar .tag-list button.active {
+            background-color: #07529A;
+            color: #ffffff;
+      }
+
       .imageViewComponent .tag-bar .tag-bar-close:hover {
             background: rgb(137, 136, 136);
       }
