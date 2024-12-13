@@ -186,8 +186,13 @@
 	  font-size: 10pt;
 	}
 
-	tei-seg.active, tei-div.active {
-		background: #D0DAE5;
+	tei-seg.active {
+		background: #d4e9ff;
+	}
+
+	div.active {
+		background: #dde0e4;
+		border-radius: 5px;
 	}
 
 	.selected-zone {

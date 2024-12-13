@@ -8,12 +8,15 @@ function getTagIds(html) {
   const tagEls = doc.querySelectorAll('tei-div[ana], tei-seg[ana]')
 
   for (const tagEl of tagEls) {
-    const tagId = tagEl.getAttribute('ana')
+    const ana = tagEl.getAttribute('ana')
 
-    if (tagId) {
-      const formatted = tagId.slice(1)
-      if (!tagIds.includes(formatted)) {
-        tagIds.push(formatted)
+    if (ana) {
+      const split = ana.split(' ').map(t => t.slice(1))
+
+      for (const tag of split) {
+        if (!tagIds.includes(tag)) {
+          tagIds.push(tag)
+        }
       }
     }
   }

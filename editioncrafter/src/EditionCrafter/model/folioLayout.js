@@ -231,6 +231,7 @@ function layoutMargin(html, emptyZoneFrame, layoutDecoder) {
       const entryID = zone.id
       const blocks = zone.children
       const facs = zone.getAttribute('facs')
+      const tags = zone.getAttribute('ana')
 
       for (const block of blocks) {
         const layoutCode = validLayoutCode(block)
@@ -254,7 +255,7 @@ function layoutMargin(html, emptyZoneFrame, layoutDecoder) {
 
       for (const blockSet of Object.values(marginFrame)) {
         if (blockSet) {
-          gridContent = gridContent.concat(renderBlockSet(blockSet, facs))
+          gridContent = gridContent.concat(renderBlockSet(blockSet, facs, tags))
         }
       }
 
@@ -266,7 +267,7 @@ function layoutMargin(html, emptyZoneFrame, layoutDecoder) {
     }
   }
   catch (error) {
-    console.log(error)
+    console.error(error)
   }
 
   const gridLayout = zoneGridToLayout(zoneGrid)
@@ -295,7 +296,7 @@ function zoneGridToLayout(zoneGrid) {
   return gridLayout
 }
 
-function renderBlockSet(blockSet, facs) {
+function renderBlockSet(blockSet, facs, tags) {
   // use ID and class from the first block in the set
   const firstBlock = blockSet[0]
   const elementID = firstBlock.id
@@ -307,7 +308,7 @@ function renderBlockSet(blockSet, facs) {
 
   // combine the blocks in the block set. divs are all merged into a single div
   // other element types become children of the single div.
-  let el = `<div id="${elementID}" className="${classStr}" data-entry-id="${entryID}" data-facs="${facs || ''}">`
+  let el = `<div id="${elementID}" className="${classStr}" ana="${tags}" data-entry-id="${entryID}" data-facs="${facs || ''}">`
   for (const block of blockSet) {
     if (block.getAttribute('facs')) {
       block.setAttribute('data-facs', block.getAttribute('facs'))
@@ -382,7 +383,7 @@ export function layoutGrid(html) {
     }
   }
   catch (error) {
-    console.log(error)
+    console.error(error)
   }
 
   const gridLayout = zoneGridToLayout(zoneGrid)

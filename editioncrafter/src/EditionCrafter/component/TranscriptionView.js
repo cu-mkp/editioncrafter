@@ -39,8 +39,8 @@ function handleTags(domNode, selectedTags) {
   const ana = domNode.attribs?.ana
 
   if (ana) {
-    const truncated = ana.slice(1)
-    if (selectedTags.includes(truncated)) {
+    const truncated = ana.split(' ').map(t => t.slice(1))
+    if (truncated.some(tag => selectedTags.includes(tag))) {
       domNode.attribs.class = 'active'
     }
   }
@@ -52,7 +52,7 @@ function htmlToReactParserOptions(selectedZone, selectedTags) {
   const parserOptions = {
     replace(domNode) {
       switch (domNode.name) {
-        case 'tei-div': {
+        case 'div': {
           return handleTags(domNode, selectedTags)
         }
         case 'tei-seg': {
