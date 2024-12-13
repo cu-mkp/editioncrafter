@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { connect } from 'react-redux'
 import { useSearchParams } from 'react-router-dom'
+import TagFilterContext from '../context/TagFilterContext'
 import EditorComment from './EditorComment'
 import ErrorBoundary from './ErrorBoundary'
 import Navigation from './Navigation'
@@ -34,10 +35,22 @@ function setUpForZoneHighlighting(selectedZone, domNode) {
   return domNode
 }
 
-function htmlToReactParserOptions(selectedZone) {
+function htmlToReactParserOptions(selectedZone, selectedTags) {
   const parserOptions = {
     replace(domNode) {
       switch (domNode.name) {
+        case 'tei-seg': {
+          const ana = domNode.attribs?.ana
+
+          if (ana) {
+            const truncated = ana.slice(1)
+            if (selectedTags.includes(truncated)) {
+              domNode.attribs.class = 'active'
+            }
+          }
+
+          return domNode
+        }
         case 'tei-line': {
           return setUpForZoneHighlighting(selectedZone, domNode)
         }
@@ -90,6 +103,8 @@ function htmlToReactParserOptions(selectedZone) {
 function TranscriptionView(props) {
   const [searchParams] = useSearchParams()
 
+  const { tags } = useContext(TagFilterContext)
+
   const {
     side,
     folioID,
@@ -134,7 +149,7 @@ function TranscriptionView(props) {
   }
 
   // Configure parser to replace certain tags with components
-  const htmlToReactParserOptionsSide = htmlToReactParserOptions(searchParams.get('zone'))
+  const htmlToReactParserOptionsSide = htmlToReactParserOptions(searchParams.get('zone'), tags)
   const html = transcriptionData && transcriptionData.html
   const layout = transcriptionData && transcriptionData.layout
 
