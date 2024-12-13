@@ -78,11 +78,6 @@ function Navigation(props) {
   const [openHelpNarrow, setOpenHelpNarrow] = useState(false)
   const [openTags, setOpenTags] = useState(false)
 
-  const docHasTags = useMemo(
-    () => props.document.tags && Object.keys(props.document.tags.length > 0),
-    [props.document],
-  )
-
   const helpRef = useRef(null)
   const helpRefNarrow = useRef(null)
 
@@ -203,14 +198,6 @@ function Navigation(props) {
     onFilterChange,
   } = props
 
-  if (!documentView) {
-    return (
-      <div>
-        Unknown Transcription Type
-      </div>
-    )
-  }
-
   const selectColorStyle = documentView[side].transcriptionType === 'f' ? { color: 'white' } : { color: 'black' }
   const selectClass = documentView[side].transcriptionType === 'f' ? 'dark' : 'light'
   const showButtonsStyle = documentView[side].transcriptionType === 'glossary' ? { visibility: 'hidden' } : { visibility: 'visible' }
@@ -219,6 +206,23 @@ function Navigation(props) {
   const folioName = document.folioIndex[documentView[side].iiifShortID]?.name
   // this is messy but faster for the moment then figuring out why the sides dont behave the same
   const helpMarginStyle = side === 'left' ? { marginRight: '55px' } : { marginRight: '15px' }
+
+  const folio = folioName
+    ? document.folioByName[folioName]
+    : null
+
+  const docHasTags = useMemo(
+    () => folio?.tagIds && folio.tagIds.length > 0 && document.tags && Object.keys(document.tags).length > 0,
+    [folio, document],
+  )
+
+  if (!documentView) {
+    return (
+      <div>
+        Unknown Transcription Type
+      </div>
+    )
+  }
 
   return (
     <div>
@@ -350,6 +354,7 @@ function Navigation(props) {
       {openTags && (
         <TagToolbar
           document={props.document}
+          folio={folio}
           toggleTags={toggleTags}
         />
       )}

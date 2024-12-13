@@ -1,6 +1,26 @@
 import OpenSeadragon from 'openseadragon'
 import { layoutMargin3 } from './folioLayout'
 
+function getTagIds(html) {
+  const tagIds = []
+  const doc = new DOMParser().parseFromString(html, 'text/html')
+
+  const tagEls = doc.querySelectorAll('tei-div[ana], tei-seg[ana]')
+
+  for (const tagEl of tagEls) {
+    const tagId = tagEl.getAttribute('ana')
+
+    if (tagId) {
+      const formatted = tagId.slice(1)
+      if (!tagIds.includes(formatted)) {
+        tagIds.push(formatted)
+      }
+    }
+  }
+
+  return tagIds
+}
+
 export async function loadFolio(folioData) {
   if (folioData.loading) {
     return folioData
@@ -38,12 +58,14 @@ export async function loadFolio(folioData) {
         const xmlURLResponse = await fetch(xmlURL)
         const html = await htmlURLResponse.text()
         const xml = await xmlURLResponse.text()
+        const tagIds = getTagIds(html)
         const transcription = parseTranscription(html, xml)
         if (!transcription) {
           throw new Error(`Unable to load transcription: ${htmlURL}`)
         }
         else {
           folio.transcription[transcriptionType] = transcription
+          folio.tagIds = tagIds
           folio.loading = false
           transcriptionTypeTracker[transcriptionType] = true
         }

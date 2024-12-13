@@ -260,6 +260,11 @@
             background: #ffffff;
       }
 
+      .tag-list button.active {
+            background-color: #07529A;
+            color: #ffffff;
+      }
+
       .tag-list button:hover {
             cursor: pointer;
       }
