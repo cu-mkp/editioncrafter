@@ -11,13 +11,13 @@ function TagPill(props) {
     : toggleTagFilter
 
   const isActive = useMemo(() => props.type === 'categories'
-    ? categories.includes(props.tag.id)
-    : tags.includes(props.tag.id), [props.type, props.tag.id, tags, categories])
+    ? categories.includes(props.tag.xml_id)
+    : tags.includes(props.tag.xml_id), [props.type, props.tag.xml_id, categories, tags])
 
   return (
     <Pill
       isActive={isActive}
-      onClick={() => toggleFilter(props.tag.id)}
+      onClick={() => toggleFilter(props.tag.xml_id)}
       label={props.tag.name}
     >
       {isActive && <IoCheckmarkSharp />}

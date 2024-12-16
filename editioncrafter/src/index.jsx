@@ -1,7 +1,6 @@
 import { createTheme, ThemeProvider } from '@material-ui/core/styles'
 import React from 'react'
 import DiploMatic from './EditionCrafter/component/DiploMatic'
-import TagFilterProvider from './EditionCrafter/context/TagFilter'
 import { createReduxStore } from './EditionCrafter/model/ReduxStore'
 import _RecordList from './RecordList'
 import './EditionCrafter/scss/editioncrafter.scss'
@@ -23,9 +22,7 @@ function EditionCrafter(props) {
 
   return (
     <ThemeProvider theme={theme}>
-      <TagFilterProvider>
-        <DiploMatic config={props} store={createReduxStore(props)} />
-      </TagFilterProvider>
+      <DiploMatic config={props} store={createReduxStore(props)} />
     </ThemeProvider>
   )
 }

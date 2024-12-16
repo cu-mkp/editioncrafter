@@ -7,10 +7,10 @@ import { dispatchAction } from '../model/ReduxStore'
 function RouteListener(props) {
   const listening = useRef(false)
 
-  const location = useLocation()
+  const { pathname } = useLocation()
 
   const userNavigated = () => {
-    dispatchAction(props, 'RouteListenerSaga.userNavigatation', location)
+    dispatchAction(props, 'RouteListenerSaga.userNavigation', pathname)
   }
 
   useEffect(() => {
@@ -22,7 +22,7 @@ function RouteListener(props) {
 
   useEffect(() => {
     userNavigated()
-  }, [location])
+  }, [pathname])
 
   return null
 }

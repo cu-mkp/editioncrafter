@@ -6,7 +6,7 @@ import Record from './Record'
 function cleanUpTagIds(obj) {
   return {
     ...obj,
-    tagging_ids: obj.tagging_ids.split(',').map(id => Number.parseInt(id)),
+    tagging_ids: obj.tagging_ids.split(','),
   }
 }
 
@@ -20,7 +20,7 @@ function getData(db) {
     surfaces.name AS surface_name,
     surfaces.xml_id AS surface_xml_id,
     layers.xml_id AS layer_xml_id,
-    GROUP_CONCAT(tags.id) as tagging_ids
+    GROUP_CONCAT(tags.xml_id) as tagging_ids
   FROM
     taggings
   INNER JOIN elements

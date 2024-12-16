@@ -38,7 +38,7 @@ function* parseTags(headerUrl) {
 }
 
 function* userNavigation(action) {
-  const { pathname } = action.payload.params[0]
+  const pathname = action.payload.params[0]
   const pathSegments = pathname.split('/')
 
   if (pathSegments.length > 1) {
@@ -135,5 +135,5 @@ function* resolveGlossary() {
 }
 
 export default function* routeListenerSaga() {
-  yield takeEvery('RouteListenerSaga.userNavigatation', userNavigation)
+  yield takeEvery('RouteListenerSaga.userNavigation', userNavigation)
 }

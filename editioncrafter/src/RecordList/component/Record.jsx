@@ -12,13 +12,13 @@ function getRecordName(div) {
 
 function getTagObjects(ids, allTags) {
   return ids
-    .map(id => allTags.find(t => t.id === id))
+    .map(xmlId => allTags.find(t => t.xml_id === xmlId))
     .filter(Boolean)
 }
 
-function getSurfaceLink(baseUrl, div) {
+function getSurfaceLink(baseUrl, div, cats, tags) {
   return (
-    `${baseUrl}&viewMode=story#/ec/${div.surface_xml_id}/f/${div.surface_xml_id}/${div.layer_xml_id}`
+    `${baseUrl}&viewMode=story#/ec/${div.surface_xml_id}/f/${div.surface_xml_id}/${div.layer_xml_id}?tags=${[...cats, ...tags].join(',')}`
   )
 }
 
@@ -41,7 +41,7 @@ function Record(props) {
         }
         else {
           result[tag.name] = {
-            id: tag.id,
+            id: tag.xml_id,
             count: 1,
           }
         }
@@ -55,7 +55,7 @@ function Record(props) {
     <div className="record-box">
       <p>
         <a
-          href={getSurfaceLink(props.viewerUrl, props.div)}
+          href={getSurfaceLink(props.viewerUrl, props.div, ctx.categories, ctx.tags)}
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -64,7 +64,7 @@ function Record(props) {
       </p>
       <div className="category-list">
         {categories.map(cat => (
-          <Pill key={cat.id} label={cat.name} isActive={ctx.categories.includes(cat.id)} />
+          <Pill key={cat.id} label={cat.name} isActive={ctx.categories.includes(cat.xml_id)} />
         ))}
       </div>
       <div className="tag-list">

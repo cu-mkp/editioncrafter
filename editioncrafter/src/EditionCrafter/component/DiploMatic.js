@@ -9,6 +9,7 @@ import {
   Route,
   Routes,
 } from 'react-router-dom'
+import TagFilterProvider from '../context/TagFilter'
 import DocumentView from './DocumentView'
 import RouteListener from './RouteListener'
 
@@ -38,19 +39,21 @@ function DiploMatic(props) {
   return (
     <Provider store={props.store}>
       <HashRouter>
-        <div id="diplomatic" className={fixedFrameModeClass} ref={containerRef} style={{ height: containerHeight }}>
-          <RouteListener />
-          <div id="content" style={{ height: '100%' }}>
-            <Routes>
-              <Route path="/ec/:folioID/:transcriptionType/:folioID2/:transcriptionType2/:folioID3/:transcriptionType3" element={<DocumentView {...props} containerWidth={containerWidth} />} exact />
-              <Route path="/ec/:folioID/:transcriptionType/:folioID2/:transcriptionType2" element={<DocumentView {...props} containerWidth={containerWidth} />} exact />
-              <Route path="/ec/:folioID/:transcriptionType" element={<DocumentView {...props} containerWidth={containerWidth} />} exact />
-              <Route path="/ec/:folioID" element={<DocumentView {...props} containerWidth={containerWidth} />} exact />
-              <Route path="/ec" element={<DocumentView {...props} containerWidth={containerWidth} />} exact />
-              <Route path="/" element={<Navigate to="/ec" />} exact />
-            </Routes>
+        <TagFilterProvider>
+          <div id="diplomatic" className={fixedFrameModeClass} ref={containerRef} style={{ height: containerHeight }}>
+            <RouteListener />
+            <div id="content" style={{ height: '100%' }}>
+              <Routes>
+                <Route path="/ec/:folioID/:transcriptionType/:folioID2/:transcriptionType2/:folioID3/:transcriptionType3" element={<DocumentView {...props} containerWidth={containerWidth} />} exact />
+                <Route path="/ec/:folioID/:transcriptionType/:folioID2/:transcriptionType2" element={<DocumentView {...props} containerWidth={containerWidth} />} exact />
+                <Route path="/ec/:folioID/:transcriptionType" element={<DocumentView {...props} containerWidth={containerWidth} />} exact />
+                <Route path="/ec/:folioID" element={<DocumentView {...props} containerWidth={containerWidth} />} exact />
+                <Route path="/ec" element={<DocumentView {...props} containerWidth={containerWidth} />} exact />
+                <Route path="/" element={<Navigate to="/ec" />} exact />
+              </Routes>
+            </div>
           </div>
-        </div>
+        </TagFilterProvider>
       </HashRouter>
     </Provider>
   )

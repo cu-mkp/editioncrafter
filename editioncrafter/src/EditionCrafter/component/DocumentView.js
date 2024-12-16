@@ -34,7 +34,7 @@ function DocumentView(props) {
 
   // "reload" the page if the config props change
   useEffect(() => {
-    dispatchAction(props, 'RouteListenerSaga.userNavigatation', location)
+    dispatchAction(props, 'RouteListenerSaga.userNavigation', location.pathname)
   }, [props.config])
 
   useEffect(() => {

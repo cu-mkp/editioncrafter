@@ -239,13 +239,19 @@ function Navigation(props) {
                     onGoToGrid={onGoToGrid}
                     side={side}
                   />
-                  <div className="folio-path" title={`${props.documentName || document.documentName}/${folioName}`} style={{ display: 'flex', overflowX: 'hidden', justifyContent: 'flex-end' }}>
-                    <span className="document-title">{props.documentName || document.documentName}</span>
+                  <div className="folio-path" style={{ display: 'flex', overflowX: 'hidden', justifyContent: 'flex-end' }}>
+                    <span
+                      className="document-title"
+                      title={props.documentName || document.documentName}
+                    >
+                      {props.documentName || document.documentName}
+                    </span>
                     <span>/</span>
                     <div
                       onClick={revealJumpBox}
                       className="folioName"
                       style={{ flexShrink: '0', minWidth: '40px' }}
+                      title={folioName}
                     >
                       {folioName}
                     </div>
