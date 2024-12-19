@@ -1,0 +1,18 @@
+<text xmlns="http://www.tei-c.org/ns/1.0" xml:id="tl"><body><pb facs="#f011"/>
+			<div>
+				<p>instead of <seg ana="#rs-m">fine turpentine</seg>. And you can put into two <seg ana="#rs-ms">lb</seg> of <del><seg ana="#rs-fr">tou</seg></del> <seg ana="#rs-m">common turpentine</seg> one <seg ana="#rs-ms">lb</seg> of <seg ana="#rs-m">fine turpentine oil</seg> &amp; do everything as with the other one. This one will cost you no more than five or six <seg ana="#rs-cn">sous</seg> per <seg ana="#rs-ms">lb</seg> &amp; is sold for 40 <seg ana="#rs-cn">sous</seg> per <seg ana="#rs-ms">lb</seg>.</p>
+				<figure>
+					<graphic url="https://cu-mkp.github.io/editioncrafter-data/fr640_3r-3v-example/figures/p003v_1.png">
+						<desc/>
+					</graphic>
+				</figure>
+				<p>This <seg ana="#rs-tl">vessel</seg> is for making large quantities of <seg ana="#rs-m">turpentine oil</seg>, that is to say a <seg ana="#rs-ms">bucket an </seg><seg ana="#rs-tmp">hour</seg>, and no matter which <seg ana="#rs-m">turpentine it may be, whether fine or crude</seg>. One needs to give, as you know, a little fire at the beginning and always keep <seg ana="#rs-m">cold water</seg> in the cooler on the top. The <seg ana="#rs-ms">lb</seg> is sold at xii <seg ana="#rs-cn">sous</seg>, &amp; at the bottom of the <seg ana="#rs-tl">vessel</seg> remains the <seg ana="#rs-m">colophony</seg>, or <seg ana="#rs-la">pix græca</seg>.<note n="c_003v_01">Latin: "Greek pitch"</note> In this <seg ana="#rs-tl">vessel</seg>, <seg ana="#rs-m">eau-de-vie</seg> is also made well, and there is no need to distill it again. You do not need a <seg ana="#rs-tl">oven</seg> for this <seg ana="#rs-m">copper</seg> vessel, but only <seg ana="#rs-m">charcoal</seg> around it if it has a flat bottom, but if it is round, you will place it on a <seg ana="#rs-tl">trivet</seg>.</p>
+				<p rend="left-middle">It is better to heat the <seg ana="#rs-m">varnish</seg> a little bit, rather than to put it out <seg ana="#rs-env">in the sun</seg>, because this makes the panel <seg ana="#rs-po">warp</seg>.</p>
+				<p rend="left-middle">Some say it is not good to distil in this <seg ana="#rs-m">copper</seg> vessel because it makes things green. However, when <seg ana="#rs-m">tinned</seg>, it is good.</p>
+			</div>
+			<div ana="#cat-varnish" decls="#cat-varnish">
+				<head>For varnishing</head>
+				<p><seg ana="#rs-m">Turpentine varnish</seg> does not need any <seg ana="#rs-m">glue</seg> because it is fatty &amp; viscous &amp; it is not absorbed in the <seg ana="#rs-m">wood</seg> like that of <seg ana="#rs-m">spike lavender</seg> &amp; <seg ana="#rs-m">sandarac</seg>. Also, that of <seg ana="#rs-m">spike lavender</seg> does not require any <seg ana="#rs-m">glue</seg> on <seg ana="#rs-m">iron</seg> &amp; similar things that do not absorb. But on <seg ana="#rs-m">wood</seg> &amp; on colors which <del>have</del> <add>do not have</add> <seg ana="#rs-m">gum</seg> or <seg ana="#rs-m">distemper glue</seg>, it is necessary to lay one coat of the said <seg ana="#rs-m">hide glue</seg> &amp; to let it dry &amp; to varnish.</p>
+			</div>
+		</body>
+	</text>

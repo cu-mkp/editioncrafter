@@ -1,0 +1,468 @@
+.editioncrafter {
+
+      .navigationComponent {
+            position: sticky;
+            display: none;
+            z-index: 2;
+            height: 48px;
+            padding: 8px 16px;
+            width: 100%;
+            white-space: nowrap;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            padding:4px;
+            background-color: white;
+            border-radius: max(0.3rem, 4.8px);
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            justify-content: space-between;
+            align-items: center;
+            align-self: stretch;
+            @include sm {
+                  top: 80px;
+            }
+            @include md {
+                  top: 0;
+                  left: 0;
+                  display: flex;
+            }
+            button{
+                  cursor: pointer;
+            }
+      }
+      
+      .navigationComponentNarrow {
+            display: flex;
+            width: auto;
+            z-index: 2;
+            height:48px;
+            width: 100%;
+            white-space: nowrap;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            padding:4px;
+            background-color: white;
+            font-size: 14px;
+            @include md {
+                  display: none;
+            }
+            button{
+                  cursor: pointer;
+            }
+      }
+      
+      .dropdownV2 {
+            width:150px;
+            margin-right:10px;
+      }
+
+      .toolbar-side {
+		display: flex;
+		gap: 10px;
+		height: 48px;
+		align-items: center;
+		justify-content: center;
+	}
+
+      .nav-arrow {
+            height: 18px;
+            width: 18px;
+      }
+
+      .nav-arrow svg {
+            height: 100%;
+            width: 100%;
+      }
+
+      
+      .imageViewComponent .navigationComponent {
+            background-color: #4A4A4A;
+            border-radius: max(0.3rem, 4.8px);
+            opacity: 0.8;
+            @include md {
+                  background-color: rgba(0,0,0,1);
+                  color: #ffffff;
+                  border-radius: 0;
+                  opacity: 1;
+            }
+      
+      }
+      
+       .imageViewComponent .navigationComponentNarrow{
+            background-color: rgba(0,0,0,1);
+            color: #ffffff;
+            border-radius: 0;
+            opacity: 1;
+      }
+      
+      .transcriptionViewComponent .navigationComponent {
+            background-color: rgba(255,255,255,1);;
+            color: #000000;
+      }
+      
+      #doc-type-help:after {
+            color: rgb(151, 142, 142);
+      }
+      #doc-type-help{
+            .dark{
+                  .MuiSvgIcon-root.MuiSelect-icon{
+                        color: white;
+                  }
+            }
+      }
+      
+      .breadcrumbs {
+            overflow-x:hidden;
+            display: hidden;
+            align-items: baseline;
+            width: 100%;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+            @include md {
+                  display: flex;
+            }
+      }
+
+      .breadcrumbs .vertical-separator {
+            height: 24px;
+      }
+      
+      .breadcrumbsNarrow {
+            overflow-x:hidden;
+            display: flex;
+            align-items: baseline;
+            max-width: 70%;
+            @include md {
+                  display: none;
+            }
+      }
+
+      .breadcrumbs .folio-path {
+            display: flex;
+            gap: 6px;
+            font-weight: 400;
+      }
+
+      .breadcrumbs .folio-path .document-title {
+            max-width: 80px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+      }
+      
+      .breadcrumbs .folioName, .breadcrumbsNarrow .folioName {
+            font-size: 14px;
+            font-weight: 700;
+            text-decoration-line: underline;
+            text-decoration-style: solid;
+            text-decoration-skip-ink: none;
+            text-decoration-thickness: auto;
+            text-underline-offset: auto;
+            text-underline-position: from-font;
+      }
+
+      .grid-view-button {
+            height: 18px;
+            width: 18px;
+            appearance: none;
+            border: none;
+            background: none;
+      }
+
+      .grid-view-button svg {
+            height: 18px;
+            width: 18px;
+      }
+
+      .imageViewComponent .grid-view-button {
+            color: white;
+      }
+
+      .toggle-button {
+            appearance: none;
+            border: none;
+            background: none;
+            color: #6F747C;
+            display: flex;
+            width: 32px;
+            height: 32px;
+            padding: 8px;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            border-radius: 5px;
+      }
+      
+      .imageViewComponent .toggle-button {
+            background: none;
+            color: #ffffff;
+      }
+
+      .toggle-button.active {
+            background: #07529A;
+            color: #ffffff;
+      }
+
+      .tag-bar {
+            display: flex;
+            position: absolute;
+            background: #F3F4F7;
+            width: 100%;
+            z-index: 100;
+      }
+
+      .tag-bar-close {
+            appearance: none;
+            height: 48px;
+            width: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            background: none;
+            border-radius: 50%;
+      }
+
+      .tag-bar-close:hover {
+            cursor: pointer;
+            background-color: rgb(221, 221, 221);
+      }
+
+      .tag-bar-close svg {
+            height: 24px;
+            width: 24px;
+      }
+
+      .tag-list {
+            width: calc(100% - 30px);
+            top: 46px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 6px;
+            align-self: stretch;
+            padding: 8px 16px;
+      }
+
+      .tag-list button {
+            display: flex;
+            padding: 6px 10px;
+            justify-content: center;
+            align-items: center;
+            gap: 4px;
+            border-radius: 50px;
+            border: 1px solid rgba(10, 10, 10, 0.20);
+            background: #ffffff;
+      }
+
+      .tag-list button.active {
+            background-color: #07529A;
+            color: #ffffff;
+      }
+
+      .tag-list button:hover {
+            cursor: pointer;
+      }
+
+      .tag-list .tag-label {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+      }
+
+      .imageViewComponent .tag-bar {
+            background: #242629;
+            top: 44px;
+      }
+
+      .imageViewComponent .tag-bar * {
+            color: #ffffff
+      }
+
+      .imageViewComponent .tag-bar .tag-list button {
+            background-color: #484B51;
+      }
+
+      .imageViewComponent .tag-bar .tag-list button.active {
+            background-color: #07529A;
+            color: #ffffff;
+      }
+
+      .imageViewComponent .tag-bar .tag-bar-close:hover {
+            background: rgb(137, 136, 136);
+      }
+
+      .book-mode-toggles {
+            cursor: pointer;
+      }
+
+      .lockmode-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+      }
+
+      .lockmode-container:hover {
+            cursor: pointer;
+      }
+      
+      .lockmode-container .switch {
+            width: 42px;
+            position: relative;
+            background-color: #F3F4F7;
+            border-radius: 5px;
+            transition: all 0.2s ease-out;
+            display: flex;
+            padding: 1px;
+            align-items: center;
+            gap: 10px;
+            height: 22px;
+      }
+
+      .lockmode-container .switch:hover {
+            cursor: pointer;
+      }
+
+      .imageViewComponent .lockmode-container .switch {
+            background-color: #242629;
+      }
+          
+      .lockmode-container .switch .slider {
+            position: absolute;
+            left: calc(50% - 22px/2 - 9px);
+            top: calc(50% - 22px/2 + 1px);
+            border-radius: 5px;
+            transition: all 0.2s ease-out;
+            background-color: #ffffff;
+            display: flex;
+            width: 20px;
+            height: 20px;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            flex-shrink: 0;
+      }
+
+      .lockmode-container .switch .slider svg {
+            height: 12px;
+            width: 12px;
+      }
+
+      .imageViewComponent .lockmode-container .slider {
+            background-color: #0A0A0A;
+      }
+
+      .lockmode-container input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+            position: absolute;
+      }
+
+      .lockmode-container input:checked + .switch {
+            background-color: #07529A;
+      }
+
+      .lockmode-container input:checked + .switch .slider {
+            left: calc(50% - 22px/2 + 11px);
+      }
+      
+      .book-mode-toggles button {
+            appearance: none;
+            background-color: #F3F4F7;
+            border: none;
+            height: 32px;
+            width: 32px;
+            color: #6F747C;
+      }
+
+      .book-mode-toggles button svg {
+            height: 100%;
+            width: 100%;
+      }
+
+      .book-mode-toggles .document-pages-icon {
+            stroke-width: 0;
+            fill: #6F747C;
+      }
+
+      .book-mode-toggles button.selected,
+      .imageViewComponent .book-mode-toggles button.selected {
+            background-color: #07529A;
+            color: #FFFFFF;
+            stroke: #FFFFFF;
+      }
+
+      .book-mode-toggles button.selected .document-pages-icon {
+            fill: #FFFFFF;     
+      }
+
+      .book-mode-toggles button:nth-child(1) {
+            border-radius: 5px 0 0 5px;
+      }
+
+      .book-mode-toggles button:nth-child(2) {
+            border-radius: 0 5px 5px 0;
+      }
+
+      .imageViewComponent .book-mode-toggles button {
+            background-color: #242629;
+            color: #6F747C;
+      }
+
+      .closeX { 
+            float: right;
+            padding: 3px;
+            font-style: bold;
+            &:hover {
+                  cursor: pointer;
+            }
+      }
+      
+      .helpContainer .MuiListItem-root {
+            display: flex;
+            gap: 10px;
+          }
+      
+      .helpContainer {
+            padding:12px;
+            width:335px;
+            height: min(600px, calc(100vh - 40px));
+            position: relative;
+            top: 40px;
+            overflow-x: auto;
+      
+            .readingGuide {
+                  
+                  td {
+                        padding: 8px;
+                  }
+      
+                  h2 {
+                        margin-top: 16px;
+                        margin-bottom: 10px;
+                  }
+            }
+      }
+      
+      
+      .searchHelpContainer {
+            padding: 10px 15px 10px 0;
+            width:335px;
+      }
+      
+      .helpHeader{
+            text-align:center;
+      }
+
+}      
+
+
+
+
