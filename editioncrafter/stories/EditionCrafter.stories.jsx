@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import EditionCrafter from '../src/index'
+import EditionCrafter, { RecordList } from '../src/index'
 
 export function BowInTheCloud() {
   return (
@@ -130,6 +130,31 @@ export function OrnamentDesignTranslation() {
           'https://cu-mkp.github.io/odt-editioncrafter-data/texts/veelderley_veranderinghe_van_grotissen/iiif/manifest.json',
         },
       }}
+    />
+  )
+}
+
+export function RecordListExample() {
+  return (
+    <RecordList
+      dbUrl="/database-example/example.sqlite"
+      recordLabel="Entries"
+      viewerUrl="http://localhost:6006/iframe.html?globals=&id=editioncrafter--taxonomy-example"
+    />
+  )
+}
+
+export function TaxonomyExample() {
+  return (
+    <EditionCrafter
+      documentName="BnF Ms. Fr. 640 (Record List Example)"
+      transcriptionTypes={{
+        tc: 'Diplomatic (FR)',
+        tcn: 'Normalized (FR)',
+        tl: 'Translation (EN)',
+        test: 'Test Field (EN)',
+      }}
+      iiifManifest="/database-example/iiif/manifest.json"
     />
   )
 }
