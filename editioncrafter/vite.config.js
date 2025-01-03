@@ -26,7 +26,7 @@ export default defineConfig({
   loader: { '.js': 'jsx' },
   build: {
     lib: {
-      entry: resolve(__dirname, 'src/index.js'),
+      entry: resolve(__dirname, 'src/index.jsx'),
       name: 'EditionCrafter',
       fileName: 'editioncrafter',
       formats: ['es'],

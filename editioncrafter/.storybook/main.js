@@ -1,5 +1,3 @@
-import { transformWithEsbuild } from 'vite'
-
 /** @type { import('@storybook/react-webpack5').StorybookConfig } */
 const config = {
   stories: ['../stories/**/*.mdx', '../stories/**/*.stories.@(js|jsx|ts|tsx)'],
@@ -25,7 +23,7 @@ const config = {
   },
   async viteFinal(config) {
     // Merge custom configuration into the default config
-    const { mergeConfig } = await import('vite')
+    const { mergeConfig, transformWithEsbuild } = await import('vite')
 
     return mergeConfig(config, {
       plugins: [
