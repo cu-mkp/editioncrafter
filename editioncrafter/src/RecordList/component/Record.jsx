@@ -18,7 +18,7 @@ function getTagObjects(ids, allTags) {
 
 function getSurfaceLink(baseUrl, div, cats, tags) {
   return (
-    `${baseUrl}&viewMode=story#/ec/${div.surface_xml_id}/f/${div.surface_xml_id}/${div.layer_xml_id}?tags=${[...cats, ...tags].join(',')}`
+    `${baseUrl}#/ec/${div.surface_xml_id}/f/${div.surface_xml_id}/${div.layer_xml_id}?tags=${[...cats, ...tags].join(',')}`
   )
 }
 
