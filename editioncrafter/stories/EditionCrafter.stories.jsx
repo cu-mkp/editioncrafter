@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import EditionCrafter, { RecordList } from '../src/index'
+import EditionCrafter, { RecordList, TagExplore } from '../src/index'
 
 export function BowInTheCloud() {
   return (
@@ -222,6 +222,61 @@ export function stateChange() {
       }}
       iiifManifest={manifest}
       glossaryURL={glossary}
+    />
+  )
+}
+
+export function TagExploreExample() {
+  return (
+    <TagExplore
+      documentName="Ornament : Design : Translation"
+      documentInfo={{
+        caryatidum: {
+          documentName: 'caryatidum',
+          transcriptionTypes: {
+            'text-1': 'Text 1',
+            'text-2': 'Text 2',
+          },
+          iiifManifest:
+        'https://cu-mkp.github.io/odt-editioncrafter-data/texts/caryatidum/iiif/manifest.json',
+        },
+        grotisch_fur_alle_kunstler: {
+          documentName: 'grotisch_fur_alle_kunstler',
+          transcriptionTypes: {
+            'text-1': 'Text 1',
+            'text-2': 'Text 2',
+          },
+          iiifManifest:
+        'https://cu-mkp.github.io/odt-editioncrafter-data/texts/grotisch_fur_alle_kunstler/iiif/manifest.json',
+        },
+        mansches_de_coutiaus: {
+          documentName: 'mansches_de_coutiaus',
+          transcriptionTypes: {
+            'text-1': 'Text 1',
+            'text-2': 'Text 2',
+          },
+          iiifManifest:
+        'https://cu-mkp.github.io/odt-editioncrafter-data/texts/mansches_de_coutiaus/iiif/manifest.json',
+        },
+        passio_verbigenae: {
+          documentName: 'passio_verbigenae',
+          transcriptionTypes: {
+            'text-1': 'Text 1',
+            'text-2': 'Text 2',
+          },
+          iiifManifest:
+        'https://cu-mkp.github.io/odt-editioncrafter-data/texts/passio_verbigenae/iiif/manifest.json',
+        },
+        veelderley_veranderinghe_van_grotissen: {
+          documentName: 'veelderley_veranderinghe_van_grotissen',
+          transcriptionTypes: {
+            'text-1': 'Text 1',
+            'text-2': 'Text 2',
+          },
+          iiifManifest:
+        'https://cu-mkp.github.io/odt-editioncrafter-data/texts/veelderley_veranderinghe_van_grotissen/iiif/manifest.json',
+        },
+      }}
     />
   )
 }
