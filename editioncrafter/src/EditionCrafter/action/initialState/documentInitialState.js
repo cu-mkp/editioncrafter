@@ -4,7 +4,7 @@ function getHeaderUrlFromManifestUrl(manifestUrl) {
 }
 
 function getHeaderUrlsFromManifestUrls(data) {
-  if (typeof manifestUrl === 'string') {
+  if (typeof data === 'string') {
     return getHeaderUrlFromManifestUrl(data)
   }
 
