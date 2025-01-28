@@ -27,7 +27,16 @@ function TagToolbar(props) {
           Tags
         </span>
         {props.folio.tagIds.map((xmlId) => {
-          const name = props.document.tags[xmlId]
+          let name
+
+          if (props.document.variorum) {
+            name = props.document.tags[props.folio.doc_id]
+              ? props.document.tags[props.folio.doc_id][xmlId]
+              : undefined
+          }
+          else {
+            name = props.document.tags[xmlId]
+          }
 
           if (name) {
             return (

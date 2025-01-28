@@ -229,6 +229,7 @@ export function stateChange() {
 export function TagExploreExample() {
   return (
     <TagExplore
+      dbUrl="/odt.sqlite"
       documentName="Ornament : Design : Translation"
       documentInfo={{
         caryatidum: {
@@ -238,7 +239,7 @@ export function TagExploreExample() {
             'text-2': 'Text 2',
           },
           iiifManifest:
-        'https://cu-mkp.github.io/odt-editioncrafter-data/texts/caryatidum/iiif/manifest.json',
+        '/caryatidum_tagged/iiif/manifest.json',
         },
         grotisch_fur_alle_kunstler: {
           documentName: 'grotisch_fur_alle_kunstler',
@@ -247,7 +248,7 @@ export function TagExploreExample() {
             'text-2': 'Text 2',
           },
           iiifManifest:
-        'https://cu-mkp.github.io/odt-editioncrafter-data/texts/grotisch_fur_alle_kunstler/iiif/manifest.json',
+        '/grotisch_fur_alle_kunstler_tagged/iiif/manifest.json',
         },
         mansches_de_coutiaus: {
           documentName: 'mansches_de_coutiaus',
@@ -256,7 +257,7 @@ export function TagExploreExample() {
             'text-2': 'Text 2',
           },
           iiifManifest:
-        'https://cu-mkp.github.io/odt-editioncrafter-data/texts/mansches_de_coutiaus/iiif/manifest.json',
+        '/mansches_de_coutiaus_tagged/iiif/manifest.json',
         },
         passio_verbigenae: {
           documentName: 'passio_verbigenae',
@@ -265,16 +266,7 @@ export function TagExploreExample() {
             'text-2': 'Text 2',
           },
           iiifManifest:
-        'https://cu-mkp.github.io/odt-editioncrafter-data/texts/passio_verbigenae/iiif/manifest.json',
-        },
-        veelderley_veranderinghe_van_grotissen: {
-          documentName: 'veelderley_veranderinghe_van_grotissen',
-          transcriptionTypes: {
-            'text-1': 'Text 1',
-            'text-2': 'Text 2',
-          },
-          iiifManifest:
-        'https://cu-mkp.github.io/odt-editioncrafter-data/texts/veelderley_veranderinghe_van_grotissen/iiif/manifest.json',
+        '/passio_verbigenae_tagged/iiif/manifest.json',
         },
       }}
     />

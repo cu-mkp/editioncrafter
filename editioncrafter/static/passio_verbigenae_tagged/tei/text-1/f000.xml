@@ -1,0 +1,51 @@
+<text xmlns="http://www.tei-c.org/ns/1.0" xml:id="text-1"><body><pb facs="#f000"/>
+			<div>
+				<p facs="#f000_z044">
+					<foreign xml:lang="la">PASSIO VERBIGENAE QVAE NOSTRA REDEPTIO CHRISTI<lb/> NOS DVCIT AD SVMMI TECTA PATERNA POLI.<lb/></foreign>
+				</p>
+			</div>
+			<div>
+				<p facs="#f000_z045">
+					<name type="addressee">
+						<foreign xml:lang="la">AD SPECTATOREM</foreign>
+					</name>
+					<foreign xml:lang="la">.<lb/> Aspice </foreign>
+					<name type="addressee">
+						<foreign xml:lang="la">Sadleri Spectator</foreign>
+					</name>
+					<foreign xml:lang="la"> prouides quae sit<lb/> Docta manus, nulla quae peritura die<lb/></foreign>
+					<distinct type="utility">
+						<foreign xml:lang="la">Utile </foreign>
+					</distinct>
+					<name type="profession">
+						<distinct type="utility">
+							<foreign xml:lang="la">Pictori</foreign>
+						</distinct>
+					</name>
+					<distinct type="utility">
+						<foreign xml:lang="la"> monumentum est, vtile passim<lb/></foreign>
+					</distinct>
+					<name type="profession">
+						<distinct type="utility">
+							<foreign xml:lang="la">Sculptori</foreign>
+						</distinct>
+					</name>
+					<distinct type="utility">
+						<foreign xml:lang="la">, </foreign>
+					</distinct>
+					<distinct type="support">
+						<foreign xml:lang="la">auleis vtile purpureis</foreign>
+					</distinct>
+					<foreign xml:lang="la"><lb/> Utile si nitido </foreign>
+					<distinct type="support">
+						<foreign xml:lang="la">argentum</foreign>
+					</distinct>
+					<foreign xml:lang="la"> perfuderis auro,<lb/> Vtile si vestes Purpura </foreign>
+					<distinct type="support">
+						<foreign xml:lang="la">rubra</foreign>
+					</distinct>
+					<foreign xml:lang="la"> notet.<lb/> D. Favol canebat</foreign>
+				</p>
+			</div>
+		</body>
+	</text>

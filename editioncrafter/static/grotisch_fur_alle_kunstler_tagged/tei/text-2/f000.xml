@@ -1,0 +1,51 @@
+<text xmlns="http://www.tei-c.org/ns/1.0" xml:id="text-2"><body><pb facs="#f000"/>
+			<div facs="#f000_z076">
+				<p>
+					<foreign xml:lang="de">
+						<objectType>Grotisch</objectType>
+					</foreign>
+					<name type="profession">
+						<foreign xml:lang="de">fur</foreign>
+					</name>
+				</p>
+				<p>
+					<name type="profession">
+						<foreign xml:lang="de">alle Kunstler</foreign>
+					</name>
+					<foreign xml:lang="de">.</foreign>
+				</p>
+				<p>
+					<foreign xml:lang="la">
+						<objectType>Grotis</objectType>
+					</foreign>
+				</p>
+				<p>
+					<name type="profession">
+						<foreign xml:lang="la">pour tous</foreign>
+					</name>
+				</p>
+				<p>
+					<name type="profession">
+						<foreign xml:lang="la"> artisien</foreign>
+					</name>
+					<foreign xml:lang="la">.</foreign>
+				</p>
+			</div>
+			<div facs="#f000_z077">
+				<p>
+					<name type="printmaker+publisher">Theodor</name>
+				</p>
+				<p>
+					<name type="printmaker+publisher">de bry</name>
+				</p>
+			</div>
+			<div facs="#f000_z078">
+				<p>
+					<foreign xml:lang="la">fecit et</foreign>
+				</p>
+				<p>
+					<foreign xml:lang="la">excud.</foreign>
+				</p>
+			</div>
+		</body>
+	</text>

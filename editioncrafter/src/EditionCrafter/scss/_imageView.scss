@@ -31,6 +31,14 @@
 		stroke-linejoin: round;
 		fill: rgba(67, 133, 246, 0.1) !important;
 	}
+
+	.a9s-annotation.a9s-annotation.tag-selected > rect,
+	.a9s-annotation.a9s-annotation.tag-selected > polygon
+	 {
+		stroke: #83aaec !important;
+		stroke-linejoin: round;
+		fill: rgba(140, 179, 247, 0.1) !important;
+	}
 	
 	.a9s-annotation.a9s-annotation.hover > rect,
 	.a9s-annotation.a9s-annotation.hover > polygon

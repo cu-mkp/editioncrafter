@@ -1,6 +1,6 @@
 import Annotorious from '@recogito/annotorious-openseadragon'
 import OpenSeadragon from 'openseadragon'
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { connect } from 'react-redux'
 
 import {
@@ -9,10 +9,11 @@ import {
   useNavigate,
   useSearchParams,
 } from 'react-router-dom'
+import TagFilterContext from '../context/TagFilterContext'
 import ImageZoomControl from './ImageZoomControl'
 import Navigation from './Navigation'
-import { BigRingSpinner } from './RingSpinner'
 
+import { BigRingSpinner } from './RingSpinner'
 import SeaDragonComponent from './SeaDragonComponent'
 import '@recogito/annotorious-openseadragon/dist/annotorious.min.css'
 
@@ -20,11 +21,33 @@ function ImageView(props) {
   const [viewer, setViewer] = useState(null)
   const [anno, setAnno] = useState(null)
 
+  const { tags } = useContext(TagFilterContext)
+
   const location = useLocation()
   const navigate = useNavigate()
 
   const [searchParams] = useSearchParams()
   const [loading, setLoading] = useState(false)
+
+  const folio = props.document.folioIndex[props.folioID]
+
+  useEffect(() => {
+    if (folio.zoneTagIndex) {
+      const annotationEls = document.querySelectorAll('.a9s-annotation')
+      const zonesToHighlight = Object.keys(folio.zoneTagIndex)
+        .filter(zoneId => folio.zoneTagIndex[zoneId].some(tag => tags.includes(tag)))
+
+      annotationEls.forEach((annoEl) => {
+        const annoId = annoEl.getAttribute('data-id')
+        if (zonesToHighlight.includes(annoId)) {
+          annoEl.classList.add('tag-selected')
+        }
+        else {
+          annoEl.classList.remove('tag-selected')
+        }
+      })
+    }
+  }, [tags, anno, props.document.folioIndex, folio])
 
   useEffect(() => {
     if (anno && searchParams.get('zone')) {
@@ -34,27 +57,27 @@ function ImageView(props) {
     }
   }, [anno])
 
-  const onZoomGrid = (e) => {
+  const onZoomGrid = () => {
     props.documentViewActions.changeTranscriptionType(props.side, 'g')
   }
 
-  const onZoomFixed_1 = (e) => {
+  const onZoomFixed_1 = () => {
     viewer.viewport.zoomTo(viewer.viewport.getMaxZoom())
   }
 
-  const onZoomFixed_2 = (e) => {
+  const onZoomFixed_2 = () => {
     viewer.viewport.zoomTo((viewer.viewport.getMaxZoom() / 2))
   }
 
-  const onZoomFixed_3 = (e) => {
+  const onZoomFixed_3 = () => {
     viewer.viewport.fitVertically()
   }
 
-  const onZoomIn = (e) => {
+  const onZoomIn = () => {
     viewer.viewport.zoomBy(2)
   }
 
-  const onZoomOut = (e) => {
+  const onZoomOut = () => {
     viewer.viewport.zoomBy(0.5)
   }
 
@@ -117,9 +140,7 @@ function ImageView(props) {
     if (viewer) {
       viewer.destroy()
     }
-  }, [])
-
-  const { tileSource } = props.document.folioIndex[props.folioID]
+  }, [viewer])
 
   useEffect(() => {
     const folio = props.document.folioIndex[props.folioID]
@@ -139,7 +160,7 @@ function ImageView(props) {
 
   return (
     <div>
-      { tileSource
+      { folio.tileSource
         ? (
             <div className={`image-view imageViewComponent ${props.side}`} style={{ position: 'relative' }}>
               <Navigation
@@ -162,7 +183,7 @@ function ImageView(props) {
               <SeaDragonComponent
                 key={props.folioID}
                 side={props.side}
-                tileSource={tileSource}
+                tileSource={folio.tileSource}
                 initViewer={initViewer}
                 loading={loading}
               />

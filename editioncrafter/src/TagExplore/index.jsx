@@ -5,6 +5,11 @@ function TagExplore(props) {
     <div className="tag-explore-grid">
       <div className="tag-explore-pane">
         <p>work in progress</p>
+        <p>
+          db is at
+          {' '}
+          {props.dbUrl}
+        </p>
       </div>
       <EditionCrafter {...props} />
     </div>

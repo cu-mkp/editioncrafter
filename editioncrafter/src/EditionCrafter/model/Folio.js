@@ -24,6 +24,27 @@ function getTagIds(html) {
   return tagIds
 }
 
+function getZoneTagData(annotations) {
+  const tagIds = new Set()
+  const zoneTagIndex = {}
+
+  annotations.forEach((anno) => {
+    zoneTagIndex[anno.id] = []
+    anno.body.forEach((item) => {
+      if (item.purpose === 'classifying') {
+        const value = item.value.slice(1)
+        tagIds.add(value)
+        zoneTagIndex[anno.id].push(value)
+      }
+    })
+  })
+
+  return {
+    tagIds: Array.from(tagIds),
+    zoneTagIndex,
+  }
+}
+
 export async function loadFolio(folioData) {
   if (folioData.loading) {
     return folioData
@@ -48,6 +69,11 @@ export async function loadFolio(folioData) {
       url: folio.image_zoom_url,
     })
   }
+
+  const { tagIds, zoneTagIndex } = getZoneTagData(folio.annotations)
+
+  folio.tagIds = tagIds
+  folio.zoneTagIndex = zoneTagIndex
 
   if (transcriptionTypes.length > 0) {
     for await (const transcriptionType of transcriptionTypes) {
