@@ -56,14 +56,7 @@ function TagExplore(props) {
 
   return (
     <div className="tag-explore">
-      <div className="tag-explore-pane">
-        <TagFilters db={db} />
-        <p>
-          db is at
-          {' '}
-          {props.dbUrl}
-        </p>
-      </div>
+      <TagFilters db={db} />
       <EditionCrafter {...props} />
     </div>
   )

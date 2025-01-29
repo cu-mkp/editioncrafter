@@ -3,6 +3,13 @@ import Pill from '../../common/components/Pill'
 import { getObjs } from '../../common/lib/sql'
 
 function getData(db) {
+  const taxonomiesStmt = db.prepare(`
+    SELECT
+      *
+    FROM
+      taxonomies;
+  `)
+
   const tagsStmt = db.prepare(`
     SELECT
       tags.id AS id,
@@ -19,18 +26,19 @@ function getData(db) {
     GROUP BY
       tags.xml_id`)
 
-  return getObjs(tagsStmt)
+  return {
+    tags: getObjs(tagsStmt),
+    taxonomies: getObjs(taxonomiesStmt),
+  }
 }
 
 function TagFilters(props) {
-  const tags = useMemo(() => getData(props.db), [props.db])
-
-  console.log(tags)
+  const data = useMemo(() => getData(props.db), [props.db])
 
   return (
     <div className="tag-filters">
       <div className="tag-list">
-        {tags.map(tag => (
+        {data.tags.map(tag => (
           <Pill
             key={tag.key}
             label={tag.name}
