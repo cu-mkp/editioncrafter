@@ -1,6 +1,6 @@
 import { useContext, useMemo } from 'react'
+import Pill from '../../common/components/Pill'
 import FilterContext from '../context/FilterContext'
-import Pill from './Pill'
 
 function getRecordName(div) {
   if (div.element_name) {

@@ -1,5 +1,5 @@
 import { useMemo } from 'react'
-import { getObjs } from '../lib/sql'
+import { getObjs } from '../../common/lib/sql'
 import CollapsibleMenu from './CollapsibleMenu'
 import SidebarTagList from './SidebarTagList'
 

@@ -1,0 +1,16 @@
+.pill {
+  appearance: none;
+  display: flex;
+  height: 32px;
+  padding: 4px 12px;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  border-radius: 50px;
+  border: 1px solid #CEDAE7;
+  background: #CEDAE7;
+  color: #0A0A0A;
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 500;
+}
