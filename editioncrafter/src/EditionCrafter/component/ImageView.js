@@ -1,6 +1,6 @@
 import Annotorious from '@recogito/annotorious-openseadragon'
 import OpenSeadragon from 'openseadragon'
-import React, { useCallback, useContext, useEffect, useState } from 'react'
+import React, { useCallback, useContext, useEffect, useRef, useState } from 'react'
 import { connect } from 'react-redux'
 
 import {
@@ -28,11 +28,13 @@ function ImageView(props) {
 
   const [searchParams] = useSearchParams()
 
+  const imageViewRef = useRef(null)
+
   const folio = props.document.folioIndex[props.folioID]
 
   const updateHighlightedZones = useCallback(() => {
-    if (folio.zoneTagIndex) {
-      const annotationEls = document.querySelectorAll('.a9s-annotation')
+    if (folio.zoneTagIndex && imageViewRef.current) {
+      const annotationEls = imageViewRef.current.querySelectorAll('.a9s-annotation')
       const zonesToHighlight = Object.keys(folio.zoneTagIndex)
         .filter(zoneId => folio.zoneTagIndex[zoneId].some(tag => tags.includes(tag)))
 
@@ -46,7 +48,7 @@ function ImageView(props) {
         }
       })
     }
-  }, [folio.zoneTagIndex, tags])
+  }, [folio, tags, imageViewRef])
 
   useEffect(() => {
     setTimeout(() => updateHighlightedZones(), 50)
@@ -156,7 +158,7 @@ function ImageView(props) {
   }, [viewer])
 
   return (
-    <div>
+    <div ref={imageViewRef}>
       { folio.tileSource
         ? (
             <div className={`image-view imageViewComponent ${props.side}`} style={{ position: 'relative' }}>
