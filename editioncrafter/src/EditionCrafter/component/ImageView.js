@@ -1,6 +1,6 @@
 import Annotorious from '@recogito/annotorious-openseadragon'
 import OpenSeadragon from 'openseadragon'
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useCallback, useContext, useEffect, useState } from 'react'
 import { connect } from 'react-redux'
 
 import {
@@ -27,11 +27,10 @@ function ImageView(props) {
   const navigate = useNavigate()
 
   const [searchParams] = useSearchParams()
-  const [loading, setLoading] = useState(false)
 
   const folio = props.document.folioIndex[props.folioID]
 
-  useEffect(() => {
+  const updateHighlightedZones = useCallback(() => {
     if (folio.zoneTagIndex) {
       const annotationEls = document.querySelectorAll('.a9s-annotation')
       const zonesToHighlight = Object.keys(folio.zoneTagIndex)
@@ -47,15 +46,11 @@ function ImageView(props) {
         }
       })
     }
-  }, [tags, anno, props.document.folioIndex, folio])
+  }, [folio.zoneTagIndex, tags])
 
   useEffect(() => {
-    if (anno && searchParams.get('zone')) {
-      // TODO: Figure out why annotations are an empty list
-      // unless I wait for > 20 ms.
-      setTimeout(() => anno.selectAnnotation(searchParams.get('zone')), 50)
-    }
-  }, [anno])
+    setTimeout(() => updateHighlightedZones(), 50)
+  }, [updateHighlightedZones])
 
   const onZoomGrid = () => {
     props.documentViewActions.changeTranscriptionType(props.side, 'g')
@@ -97,14 +92,32 @@ function ImageView(props) {
       // every time it changes!
       anno.on('selectAnnotation', (annotation) => {
         searchParams.set('zone', annotation.id)
+        updateHighlightedZones()
         navigate(`${location.pathname}?${createSearchParams(searchParams.toString())}`)
       })
 
       anno.on('cancelSelected', () => {
-        navigate(location.pathname)
+        searchParams.delete('zone')
+        navigate(`${location.pathname}?${createSearchParams(searchParams.toString())}`)
       })
     }
-  }, [location.pathname, anno])
+  }, [searchParams, anno, updateHighlightedZones, folio, navigate, location.pathname])
+
+  useEffect(() => {
+    if (folio.tileSource && viewer) {
+      viewer.open(folio.tileSource)
+      if (folio.annotations && anno) {
+        anno.setAnnotations(folio.annotations)
+        anno.selectAnnotation(searchParams.get('zone'))
+      }
+    }
+  }, [anno, viewer, folio, props.document.folioIndex])
+
+  useEffect(() => {
+    if (anno && searchParams.get('zone')) {
+      setTimeout(() => anno.selectAnnotation(searchParams.get('zone')), 50)
+    }
+  }, [anno, folio])
 
   const initViewer = async (el, tileSource) => {
     if (!el) {
@@ -142,22 +155,6 @@ function ImageView(props) {
     }
   }, [viewer])
 
-  useEffect(() => {
-    const folio = props.document.folioIndex[props.folioID]
-    if (folio.loading) {
-      setLoading(true)
-    }
-    if (folio.tileSource && viewer) {
-      viewer.open(folio.tileSource)
-      if (folio.annotations && anno) {
-        anno.setAnnotations(folio.annotations)
-      }
-    }
-    if (!folio.loading) {
-      setLoading(false)
-    }
-  }, [anno, viewer, props.folioID, props.document.folioIndex])
-
   return (
     <div>
       { folio.tileSource
@@ -185,7 +182,7 @@ function ImageView(props) {
                 side={props.side}
                 tileSource={folio.tileSource}
                 initViewer={initViewer}
-                loading={loading}
+                loading={folio.loading}
               />
             </div>
           )

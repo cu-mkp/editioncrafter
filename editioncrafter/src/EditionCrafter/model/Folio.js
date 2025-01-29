@@ -72,8 +72,8 @@ export async function loadFolio(folioData) {
 
   const { tagIds, zoneTagIndex } = getZoneTagData(folio.annotations)
 
-  folio.tagIds = tagIds
-  folio.zoneTagIndex = zoneTagIndex
+  folio.tagIds = [...tagIds]
+  folio.zoneTagIndex = { ...zoneTagIndex }
 
   if (transcriptionTypes.length > 0) {
     for await (const transcriptionType of transcriptionTypes) {
@@ -94,7 +94,7 @@ export async function loadFolio(folioData) {
         }
         else {
           folio.transcription[transcriptionType] = transcription
-          folio.tagIds = tagIds
+          folio.tagIds = [...folio.tagIds, ...tagIds]
           folio.loading = false
           transcriptionTypeTracker[transcriptionType] = true
         }
