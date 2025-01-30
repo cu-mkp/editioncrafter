@@ -38,17 +38,23 @@ function ImageView(props) {
       const zonesToHighlight = Object.keys(folio.zoneTagIndex)
         .filter(zoneId => folio.zoneTagIndex[zoneId].some(tag => tags.includes(tag)))
 
+      const manualSelection = searchParams.get('zone')
+
+      if (manualSelection && !zonesToHighlight.includes(manualSelection)) {
+        zonesToHighlight.push(manualSelection)
+      }
+
       annotationEls.forEach((annoEl) => {
         const annoId = annoEl.getAttribute('data-id')
         if (zonesToHighlight.includes(annoId)) {
-          annoEl.classList.add('tag-selected')
+          annoEl.classList.add('selected')
         }
         else {
-          annoEl.classList.remove('tag-selected')
+          annoEl.classList.remove('selected')
         }
       })
     }
-  }, [folio, tags, imageViewRef])
+  }, [folio, tags, imageViewRef, searchParams])
 
   useEffect(() => {
     setTimeout(() => updateHighlightedZones(), 50)
@@ -110,16 +116,9 @@ function ImageView(props) {
       viewer.open(folio.tileSource)
       if (folio.annotations && anno) {
         anno.setAnnotations(folio.annotations)
-        anno.selectAnnotation(searchParams.get('zone'))
       }
     }
   }, [anno, viewer, folio, props.document.folioIndex])
-
-  useEffect(() => {
-    if (anno && searchParams.get('zone')) {
-      setTimeout(() => anno.selectAnnotation(searchParams.get('zone')), 50)
-    }
-  }, [anno, folio])
 
   const initViewer = async (el, tileSource) => {
     if (!el) {
