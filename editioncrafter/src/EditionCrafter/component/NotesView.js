@@ -16,8 +16,8 @@ class NotesView extends Component {
     }
     
   render() {
-    // if (!this.props.notes.loaded)
-    //   return null
+    if (!this.props.notes.loaded)
+      return null
 
     return (
       <div id="notesView" style={{ position: 'relative', overflow: 'auto' }}>
@@ -33,7 +33,7 @@ class NotesView extends Component {
           <div id="notesContent">
             <Typography variant="h2" className="title">Edition Notes</Typography>
                 <Markdown>
-                    This is the notes view. Can I [have](https://www.google.com) a link?
+                    { this.props.notes.notes }
                 </Markdown>
           </div>
         </div>

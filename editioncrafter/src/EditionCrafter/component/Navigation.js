@@ -312,9 +312,11 @@ function Navigation(props) {
                         {DocumentHelper.transcriptionTypeLabels.glossary}
                       </MenuItem>
                     ) }
-                    <MenuItem value="notes" key="notes">
-                      {DocumentHelper.transcriptionTypeLabels.notes}
-                    </MenuItem>
+                    { props.notes && (
+                      <MenuItem value="notes" key="notes">
+                        {DocumentHelper.transcriptionTypeLabels.notes}
+                      </MenuItem>
+                    )}
                   </Select>
                   {!imageViewActive && (
                     <ToggleButton
@@ -443,6 +445,7 @@ function mapStateToProps(state) {
   return {
     document: state.document,
     glossary: !!state.glossary.URL,
+    notes: !!state.notes.URL,
   }
 }
 

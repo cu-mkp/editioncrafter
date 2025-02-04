@@ -9,6 +9,7 @@ export function BowInTheCloud() {
         'eng-415-145a': 'Transcription',
       }}
       iiifManifest="https://cu-mkp.github.io/bic-editioncrafter-data/eng-415-145a/iiif/manifest.json"
+      notesURL="https://performant-software.github.io/elygreen-variorum-data/README.md"
     />
   )
 }
