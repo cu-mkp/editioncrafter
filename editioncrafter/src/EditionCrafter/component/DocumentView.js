@@ -8,6 +8,7 @@ import {
 } from 'react-router-dom'
 import { dispatchAction } from '../model/ReduxStore'
 import GlossaryView from './GlossaryView'
+import NotesView from './NotesView'
 import ImageGridView from './ImageGridView'
 import ImageView from './ImageView'
 import SinglePaneView from './SinglePaneView'
@@ -345,6 +346,9 @@ function DocumentView(props) {
     if (transcriptionType === 'glossary') {
       return 'GlossaryView'
     }
+    if (transcriptionType === 'notes') {
+      return 'NotesView'
+    }
     return xmlMode ? 'XMLView' : 'TranscriptionView'
   }
 
@@ -472,6 +476,16 @@ function DocumentView(props) {
     if (viewType === 'GlossaryView') {
       return (
         <GlossaryView
+          key={key}
+          documentView={docView}
+          documentViewActions={documentViewActions}
+          side={side}
+        />
+      )
+    }
+    if (viewType === 'NotesView') {
+      return (
+        <NotesView
           key={key}
           documentView={docView}
           documentViewActions={documentViewActions}

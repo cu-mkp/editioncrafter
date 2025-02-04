@@ -312,6 +312,9 @@ function Navigation(props) {
                         {DocumentHelper.transcriptionTypeLabels.glossary}
                       </MenuItem>
                     ) }
+                    <MenuItem value="notes" key="notes">
+                      {DocumentHelper.transcriptionTypeLabels.notes}
+                    </MenuItem>
                   </Select>
                   {!imageViewActive && (
                     <ToggleButton
