@@ -140,8 +140,8 @@ function* resolveNotes() {
   const notes = yield select(justNotes)
   if (!notes.loaded && notes.URL) {
     const response = yield fetch(notes.URL)
-    const json = yield response.json()
-    yield putResolveAction('NotesActions.loadNotes', json)
+    const txt = yield response.text()
+    yield putResolveAction('NotesActions.loadNotes', txt)
   }
 }
 
