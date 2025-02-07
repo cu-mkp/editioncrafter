@@ -4,48 +4,14 @@
 	
 		#notesViewInner {
 			margin: 5px 0 0 0;
-			@include md {
-				margin: 52px 0 0 0;
-			}
+			// @include md {
+			// 	margin: 52px 0 0 0;
+			// }
 			width: calc(100% - 1.2rem);
 				max-height: calc(100vh - 170px);
 				padding: 5px 16px;
 		}
-	
-		.title {
-			white-space: nowrap;
-			position: relative;
-			width: calc(100% - max(1.7rem, 27.2px));
-			text-align: center;
-			top: -2em;
-			font-size: max(1.8rem, 28.8px);
-			font-weight: 700;
-			-webkit-user-select: none;
-			-moz-user-select: none;
-			-ms-user-select: none;
-			user-select: none;
-			@include md {
-				top: -1em;
-			}
-		}
-	
-	
-		.subtitle {
-			white-space: nowrap;
-			position: relative;
-			width: calc(100% - max(1.7rem, 27.2px));
-			text-align: center;
-			top: -2em;
-			font-style: italic;
-			-webkit-user-select: none;
-			-moz-user-select: none;
-			-ms-user-select: none;
-			user-select: none;
-			@include md {
-				top: -1em;
-			}
-		}
-	
+		
 		#notesContent {
 			padding: max(80px, 5rem) 0 0;
 			max-height: 100vh;
@@ -57,7 +23,27 @@
 			@include md {
 				padding: max(3.5rem, 56px) 0 0;
 			}
+
+			table {
+				margin-top: 30px;
+			}
+
+			td, th {
+				border: 1px solid #ddd;
+				padding: 8px;
+			}
+			  
+			tr:nth-child(even){
+				background-color: #f2f2f2;
+			}
+			  
+			th {
+				padding-top: 12px;
+				padding-bottom: 12px;
+				text-align: left;
+				background-color: gray;
+				color: white;
+			}
 		}
-	
 	}
 }

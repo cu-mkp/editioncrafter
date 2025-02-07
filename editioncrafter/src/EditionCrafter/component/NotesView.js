@@ -1,6 +1,7 @@
 import { Typography } from '@material-ui/core'
 import React, { Component } from 'react'
-import Markdown from 'react-markdown'
+import ReactMarkdown from 'react-markdown'
+import remarkGfm from 'remark-gfm'
 import { connect } from 'react-redux'
 import Navigation from './Navigation'
 
@@ -31,10 +32,7 @@ class NotesView extends Component {
 
         <div id="notesViewInner">
           <div id="notesContent">
-            <Typography variant="h2" className="title">Edition Notes</Typography>
-                <Markdown>
-                    { this.props.notes.notes }
-                </Markdown>
+            <ReactMarkdown children={this.props.notes.notes} remarkPlugins={[remarkGfm]}/>
           </div>
         </div>
 
