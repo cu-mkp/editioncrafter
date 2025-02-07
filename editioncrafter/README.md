@@ -89,6 +89,10 @@ Required. (Note: This is required even in the case that you have also included a
 
 A *string* giving the name of the document(s).
 
+### notesURL
+
+Optional. Provide a URL to a Markdown file (GitHub Flavored Markdown supported). This will add a "Notes" item to the layers dropdown in which the contents of the Markdown will be displayed.
+
 ### iiifManifest
 
 Required if no `documentInfo` prop specified.
