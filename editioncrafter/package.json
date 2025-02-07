@@ -1,7 +1,7 @@
 {
   "name": "@cu-mkp/editioncrafter",
   "type": "module",
-  "version": "1.2.1",
+  "version": "1.3.0-beta.1",
   "private": false,
   "description": "A simple digital critical edition publication tool",
   "license": "MIT",
@@ -46,6 +46,7 @@
     "react-scroll": "^1.7.10",
     "redux": "^4.2.1",
     "redux-saga": "^1.2.2",
+    "remark-gfm": "^3.0.1",
     "sql.js": "^1.12.0"
   },
   "devDependencies": {
