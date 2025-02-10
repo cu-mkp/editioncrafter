@@ -1,45 +1,58 @@
 import { Typography } from '@material-ui/core'
-import React, { Component } from 'react'
+import React, { useEffect, useState } from 'react'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import { connect } from 'react-redux'
 import Navigation from './Navigation'
+import { useNavigate } from 'react-router'
 
-class NotesView extends Component {
-    constructor() {
-        super()
-        this.state = { filterTerm: '' }
-    }
 
-    onFilterChange = (event) => {
-        const filterTerm = event.target.value
-        this.setState({ ...this.state, filterTerm })
+function NotesView(props) {
+  const [filterTerm, setFilterTerm] = useState('')
+  const navigate = useNavigate();
+
+ useEffect(() => {
+    //convert links to use EC navigation
+    const notesPanel = window.document.querySelector('#notesView');
+    if (notesPanel) {
+      const allLinks = notesPanel.querySelectorAll('a');
+      for (let i = 0; i < allLinks.length; i++) {
+        const link = allLinks[i];
+        if (link.getAttribute('href')) {
+          link.addEventListener('click', (e) => {
+            e.preventDefault();
+            navigate(link.getAttribute('href'));
+          })
+        }
+      }
     }
-    
-  render() {
-    if (!this.props.notes.loaded)
-      return null
+  }, [props.notes]);
+
+  const onFilterChange = (event) => {
+    setFilterTerm(event.target.value);
+  }
+
 
     return (
-      <div id="notesView" style={{ position: 'relative', overflow: 'auto' }}>
+      props.notes.loaded && <div id="notesView" style={{ position: 'relative', overflow: 'auto' }}>
         <Navigation
-          side={this.props.side}
-          onFilterChange={this.onFilterChange}
-          value={this.state.filterTerm}
-          documentView={this.props.documentView}
-          documentViewActions={this.props.documentViewActions}
+          side={props.side}
+          onFilterChange={onFilterChange}
+          value={filterTerm}
+          documentView={props.documentView}
+          documentViewActions={props.documentViewActions}
         />
 
         <div id="notesViewInner">
           <div id="notesContent">
-            <ReactMarkdown children={this.props.notes.notes} remarkPlugins={[remarkGfm]}/>
+            <ReactMarkdown children={props.notes.notes} remarkPlugins={[remarkGfm]}/>
           </div>
         </div>
 
       </div>
     )
   }
-}
+
 
 function mapStateToProps(state) {
   return {
