@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useMemo, useState } from 'react'
 import initSqlJs from 'sql.js'
-import Loading from './component/Loading'
+import Loading from '../common/components/Loading'
 import RecordListView from './component/RecordListView'
 import Sidebar from './component/Sidebar'
 

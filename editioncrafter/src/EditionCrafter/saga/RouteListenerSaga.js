@@ -7,13 +7,10 @@ const justDocument = state => state.document
 const justGlossary = state => state.glossary
 const justNotes = state => state.notes
 
-function* parseTags(headerUrl) {
-  const tags = {}
-
-  const res = yield fetch(headerUrl)
+function* parseTagUrl(url) {
+  const res = yield fetch(url)
 
   if (!res.ok) {
-    yield putResolveAction('DocumentActions.loadTags', tags)
     return null
   }
 
@@ -23,6 +20,8 @@ function* parseTags(headerUrl) {
 
   const categoryEls = headerDoc.querySelectorAll('tei-category')
 
+  const documentTags = {}
+
   for (const categoryEl of categoryEls) {
     const xmlId = categoryEl.getAttribute('id')
 
@@ -30,12 +29,28 @@ function* parseTags(headerUrl) {
       const desc = categoryEl.querySelector('tei-catdesc')
       if (desc) {
         const name = desc.textContent
-        tags[xmlId] = name
+        documentTags[xmlId] = name
       }
     }
   }
 
-  yield putResolveAction('DocumentActions.loadTags', tags)
+  return documentTags
+}
+
+function* parseTags(headerUrl) {
+  if (typeof headerUrl === 'string') {
+    const result = yield parseTagUrl(headerUrl)
+    yield putResolveAction('DocumentActions.loadTags', result)
+  }
+  else {
+    const tags = {}
+
+    for (const docId of Object.keys(headerUrl)) {
+      tags[docId] = yield parseTagUrl(headerUrl[docId])
+    }
+
+    yield putResolveAction('DocumentActions.loadTags', tags)
+  }
 }
 
 function* userNavigation(action) {

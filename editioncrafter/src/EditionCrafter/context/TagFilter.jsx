@@ -8,7 +8,7 @@ import {
 import TagFilterContext from './TagFilterContext'
 
 function getTagsFromParams(val) {
-  if (val) {
+  if (val && val !== 'null') {
     return val.split(',')
   }
 

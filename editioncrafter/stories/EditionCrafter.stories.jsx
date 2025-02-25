@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import EditionCrafter, { RecordList } from '../src/index'
+import EditionCrafter, { RecordList, TagExplore } from '../src/index'
 
 export function ElyGreenVariorum() {
   return (
@@ -259,6 +259,53 @@ export function stateChange() {
       }}
       iiifManifest={manifest}
       glossaryURL={glossary}
+    />
+  )
+}
+
+export function TagExploreExample() {
+  return (
+    <TagExplore
+      dbUrl="/odt.sqlite"
+      documentName="Ornament : Design : Translation"
+      documentInfo={{
+        caryatidum: {
+          documentName: 'caryatidum',
+          transcriptionTypes: {
+            'text-1': 'Text 1',
+            'text-2': 'Text 2',
+          },
+          iiifManifest:
+        '/caryatidum_tagged/iiif/manifest.json',
+        },
+        grotisch_fur_alle_kunstler: {
+          documentName: 'grotisch_fur_alle_kunstler',
+          transcriptionTypes: {
+            'text-1': 'Text 1',
+            'text-2': 'Text 2',
+          },
+          iiifManifest:
+        '/grotisch_fur_alle_kunstler_tagged/iiif/manifest.json',
+        },
+        mansches_de_coutiaus: {
+          documentName: 'mansches_de_coutiaus',
+          transcriptionTypes: {
+            'text-1': 'Text 1',
+            'text-2': 'Text 2',
+          },
+          iiifManifest:
+        '/mansches_de_coutiaus_tagged/iiif/manifest.json',
+        },
+        passio_verbigenae: {
+          documentName: 'passio_verbigenae',
+          transcriptionTypes: {
+            'text-1': 'Text 1',
+            'text-2': 'Text 2',
+          },
+          iiifManifest:
+        '/passio_verbigenae_tagged/iiif/manifest.json',
+        },
+      }}
     />
   )
 }

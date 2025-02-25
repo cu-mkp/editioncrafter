@@ -12,7 +12,8 @@ class SplitPaneView extends Component {
     this.splitFraction = props.threePanel ? 0.49 : 0.5
     this.splitFractionRight = props.threePanel ? 0.01 : 0
     this.dividerWidth = 16
-    const whole = window.innerWidth
+    this.ecComponent = document.querySelector('#diplomatic')
+    const whole = this.ecComponent.clientWidth
     const leftW = whole / 3
 
     const split_left = (leftW / whole)
@@ -37,12 +38,12 @@ class SplitPaneView extends Component {
   // On drag, update the UI continuously
   onDrag = (e) => {
     if (this.dragging) {
-      const whole = window.innerWidth - 2 * this.dividerWidth
+      const whole = this.ecComponent.clientWidth - 2 * this.dividerWidth
       let left_viewWidth
       let right_viewWidth
       let third_viewWidth
       if (this.activeDivider === 1) {
-        left_viewWidth = e.clientX - this.dividerWidth / 2
+        left_viewWidth = (e.clientX - this.ecComponent.offsetLeft) - this.dividerWidth / 2
         third_viewWidth = whole * this.splitFractionRight
         right_viewWidth = whole - left_viewWidth - third_viewWidth
       }
@@ -98,9 +99,9 @@ class SplitPaneView extends Component {
   // Update the sizes of the panes
   updatePaneSize() {
     // Record state change
-    const left_px = Math.floor(Math.abs(window.innerWidth * this.splitFraction))
-    const third_px = Math.floor(Math.abs(window.innerWidth * this.splitFractionRight))
-    const right_px = Math.floor(window.innerWidth * (1.0 - this.splitFraction - this.splitFractionRight))
+    const left_px = Math.floor(Math.abs(this.ecComponent.clientWidth * this.splitFraction))
+    const third_px = Math.floor(Math.abs(this.ecComponent.clientWidth * this.splitFractionRight))
+    const right_px = Math.floor(this.ecComponent.clientWidth * (1.0 - this.splitFraction - this.splitFractionRight))
     if (this.props.onWidth && left_px >= this.leftPaneMinWidth && right_px >= this.rightPaneMinWidth && third_px >= this.thirdPaneMinWidth) {
       this.props.onWidth(left_px, right_px, third_px)
     }
@@ -113,9 +114,9 @@ class SplitPaneView extends Component {
     window.addEventListener('resize', this.onResize)
     // Set the default width on mount
     if (this.props.onWidth) {
-      const left_px = Math.floor(Math.abs(window.innerWidth * this.splitFraction))
-      const right_px = Math.floor(window.innerWidth * (1.0 - this.splitFraction))
-      const third_px = Math.floor(window.innerWidth * (1.0 - this.splitFraction))
+      const left_px = Math.floor(Math.abs(this.ecComponent.clientWidth * this.splitFraction))
+      const right_px = Math.floor(this.ecComponent.clientWidth * (1.0 - this.splitFraction))
+      const third_px = Math.floor(this.ecComponent.clientWidth * (1.0 - this.splitFraction))
       this.props.onWidth(left_px, right_px, third_px)
     }
   }

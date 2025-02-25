@@ -1,0 +1,16 @@
+.tag-explore {
+  display: grid;
+  max-height: 100vh;
+  grid-template-columns: 300px 1fr;
+}
+
+.tag-explore .tag-filters {
+  overflow-y: auto;
+  height: 100%;
+}
+
+.tag-explore .tag-filters .tag-list {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+}
