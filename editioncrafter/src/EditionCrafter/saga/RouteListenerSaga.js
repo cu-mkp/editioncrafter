@@ -5,6 +5,7 @@ import { putResolveAction } from '../model/ReduxStore'
 
 const justDocument = state => state.document
 const justGlossary = state => state.glossary
+const justNotes = state => state.notes
 
 function* parseTagUrl(url) {
   const res = yield fetch(url)
@@ -63,6 +64,7 @@ function* userNavigation(action) {
         yield resolveDocumentManifest()
         yield resolveDocumentTags()
         yield resolveGlossary()
+        yield resolveNotes()
         yield resolveFolio(pathSegments)
         break
       }
@@ -146,6 +148,15 @@ function* resolveGlossary() {
     const response = yield fetch(glossary.URL)
     const json = yield response.json()
     yield putResolveAction('GlossaryActions.loadGlossary', json)
+  }
+}
+
+function* resolveNotes() {
+  const notes = yield select(justNotes)
+  if (!notes.loaded && notes.URL) {
+    const response = yield fetch(notes.URL)
+    const txt = yield response.text()
+    yield putResolveAction('NotesActions.loadNotes', txt)
   }
 }
 

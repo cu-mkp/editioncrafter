@@ -1,6 +1,42 @@
 import React, { useEffect, useState } from 'react'
 import EditionCrafter, { RecordList, TagExplore } from '../src/index'
 
+export function ElyGreenVariorum() {
+  return (
+    <EditionCrafter
+      documentName='Ely Green Variorum'
+      notesURL="https://digitalelygreen.org/explore/alignment.md"
+//      notesURL="http://localhost:4321/alignment.md"
+      documentInfo={{
+          egA: {
+            documentName: 'EG A',
+            transcriptionTypes: {
+              'text': 'Transcription'
+            },
+            iiifManifest: 'https://faircopy.cloud/documents/eg-a/iiif/manifest.json'
+          },
+          egB: {
+            documentName: 'EG B',
+            transcriptionTypes: {
+              'DerivativeB': 'Transcription'
+            },
+            iiifManifest: 'https://faircopy.cloud/documents/eg-b/iiif/manifest.json'
+          },
+          ElyGreenMS: {
+            documentName: 'ElyGreen MS',
+            transcriptionTypes: {
+              'transcription': 'Transcription'
+            },
+            iiifManifest: 'https://faircopy.cloud/documents/ElyGreenMS/iiif/manifest.json'
+          },
+      }}
+      client:only
+      threePanel
+      transition:persist
+  />
+  )
+}
+
 export function BowInTheCloud() {
   return (
     <EditionCrafter
@@ -9,6 +45,7 @@ export function BowInTheCloud() {
         'eng-415-145a': 'Transcription',
       }}
       iiifManifest="https://cu-mkp.github.io/bic-editioncrafter-data/eng-415-145a/iiif/manifest.json"
+      notesURL="https://performant-software.github.io/elygreen-variorum-data/README.md"
     />
   )
 }

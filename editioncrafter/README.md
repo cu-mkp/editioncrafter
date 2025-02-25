@@ -89,6 +89,10 @@ Required. (Note: This is required even in the case that you have also included a
 
 A *string* giving the name of the document(s).
 
+### notesURL
+
+Optional. Provide a URL to a Markdown file (GitHub Flavored Markdown supported). This will add a "Notes" item to the layers dropdown in which the contents of the Markdown will be displayed.
+
 ### iiifManifest
 
 Required if no `documentInfo` prop specified.
@@ -146,3 +150,10 @@ Setup for Storybook was kind of rushed and the process could still be made simpl
 By default, Storybook doesn't display the hash routing params used by `react-router`. You can use the "Open canvas in new tab" button on the top right to open the component in its own tab:
 
 ![screenshot of new tab button](newtab.png)
+
+
+## Developer Note: Publishing a Beta Release
+
+To publish editioncrafter or editioncrafter-umd to the beta channel, update the package.json version number to the correct beta version (such as '1.3.0-beta.1') and then run this command in the edtioncrafter and editioncrafter-umd directories:
+
+```npm publish --tag beta```
