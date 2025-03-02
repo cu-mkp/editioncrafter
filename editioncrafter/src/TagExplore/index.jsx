@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import initSqlJs from 'sql.js'
 import Loading from '../common/components/Loading'
 import EditionCrafter from '../EditionCrafter'
-import TagFilters from './components/TagFilters'
+import TagExploreSidebar from './components/TagExploreSidebar'
 import './styles/base.css'
 
 const initialFilters = {
@@ -56,7 +56,7 @@ function TagExplore(props) {
 
   return (
     <div className="tag-explore">
-      <TagFilters db={db} />
+      <TagExploreSidebar db={db} />
       <EditionCrafter {...props} />
     </div>
   )

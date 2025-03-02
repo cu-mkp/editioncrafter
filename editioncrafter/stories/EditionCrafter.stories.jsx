@@ -5,8 +5,7 @@ export function ElyGreenVariorum() {
   return (
     <EditionCrafter
       documentName='Ely Green Variorum'
-      notesURL="https://digitalelygreen.org/explore/alignment.md"
-//      notesURL="http://localhost:4321/alignment.md"
+      // notesURL="http://localhost:4321/alignment.md"
       documentInfo={{
           egA: {
             documentName: 'EG A',

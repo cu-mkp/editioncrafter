@@ -1,15 +1,15 @@
 .tag-explore {
   display: grid;
   max-height: 100vh;
-  grid-template-columns: 300px 1fr;
+  grid-template-columns: 50px 1fr;
 }
 
-.tag-explore .tag-filters {
+.tag-explore .tag-filters, .tag-explore-sidebar {
   overflow-y: auto;
   height: 100%;
 }
 
-.tag-explore .tag-filters .tag-list {
+.tag-explore .tag-filters .tag-list, .tag-explore-sidebar {
   display: flex;
   gap: 4px;
   flex-wrap: wrap;
