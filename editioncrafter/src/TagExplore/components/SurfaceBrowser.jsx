@@ -6,6 +6,8 @@ import GridOnIcon from '@material-ui/icons/GridOn'
 import ListIcon from '@material-ui/icons/List'
 import TuneIcon from '@material-ui/icons/Tune'
 
+const MAX_THUMBNAIL_DIMENSION = 130
+
 function getData(db) {
   const tagsStmt = db.prepare(`
     SELECT
@@ -29,48 +31,77 @@ function getData(db) {
   }
 }
 
+function getThumbnailURL( imageType, width, height, imageURL) {
+    
+    const ratio = canvas.width / canvas.height
+
+    let thumbnailDimensions = []
+    if (ratio > 1) {
+      thumbnailDimensions = [MAX_THUMBNAIL_DIMENSION, Math.round(MAX_THUMBNAIL_DIMENSION / ratio)]
+    }
+    else {
+      thumbnailDimensions = [Math.round(MAX_THUMBNAIL_DIMENSION * ratio), MAX_THUMBNAIL_DIMENSION]
+    }
+
+    const thumbnailURL = imageType === 'iiif'
+      ? `${imageURL}/full/${thumbnailDimensions.join(',')}/0/default.jpg`
+      : imageURL
+
+    return thumbnailURL
+}
+
+// doc
+// name, surfaces
+// surface
+// id, name, imageURL, imageThumbURL
+
 function Thumbnail(props) {
-    const { onClickThumb, folio, width, height } = props
+    const { surface, onClick } = props
+    const { id, name, imageURL, thumbnailURL } = surface
 
     const onError = (currentTarget) => {
         currentTarget.onerror = null; 
-        if (folio.image_zoom_url && currentTarget.src !== `${folio.image_zoom_url.slice(0, -9)}full/full/0/default.jpg`) {
-            currentTarget.src = `${folio.image_zoom_url.slice(0, -9)}full/full/0/default.jpg` 
+        const fullImageURL = `${imageURL.slice(0, -9)}full/full/0/default.jpg`
+        if (currentTarget.src !== fullImageURL) {
+            currentTarget.src = fullImageURL
         } 
     }
 
     return (
         <li key={`thumb-${index}`} className="thumbnail">
             <figure>
-                <a id={folio.id} onClick={onClickThumb.bind(this, folio.id)}>
+                <a id={id} onClick={onClick.bind(this, id)}>
                     <img 
-                        src={folio.image_thumbnail_url} 
-                        alt={folio.name} 
-                        style={{ maxWidth: `${width}px`, maxHeight: `${height}px` }} 
+                        src={thumbnailURL} 
+                        alt={name} 
+                        style={{ maxWidth: `${MAX_THUMBNAIL_DIMENSION}px`, maxHeight: `${MAX_THUMBNAIL_DIMENSION}px` }} 
                         onError={onError}
                     ></img>
                 </a>
             </figure>
             <figcaption className="thumbnail-caption">
-                {folio.name}
+                {name}
             </figcaption>
       </li>
     )
 }
 
 function ThumbnailGrid(props) {
+    const { surfaces } = props
 
-    return folios.map((folio, index) => <Thumbnail
-            surfaceID={surfaceID}
-            name={surfaceName}
-            imageURL={imageURL}
-            width={130}
-            height={130}
+    const onClickThumb = () => {
+        console.log('click')
+    }
+
+    return surfaces.map(surface => <Thumbnail
+            surface={surface}
+            onClick={onClickThumb}
         ></Thumbnail>)
 }
 
 function DocumentDetail(props) {
     const { doc } = props
+    const { name, surfaces } = doc
     
     return (
         <Accordion>
@@ -79,10 +110,12 @@ function DocumentDetail(props) {
                 aria-controls="panel1a-content"
                 id="panel1a-header"
             >
-                <Typography>Caryatidum 57</Typography>
+                <Typography>{name}</Typography>
             </AccordionSummary>
             <AccordionDetails>
-                <ThumbnailGrid></ThumbnailGrid>
+                <ThumbnailGrid
+                    surfaces={surfaces}
+                ></ThumbnailGrid>
             </AccordionDetails>
         </Accordion>
     )
@@ -92,10 +125,9 @@ function SurfaceBrowser(props) {
     const { db, open, toggleOpen } = props
     const documents = useMemo(() => getData(db), [db])
     
-    const documentDetails = []
-    for( const doc of documents ) {
-        documentDetails.push( <DocumentDetail doc={doc}></DocumentDetail>)
-    }
+    const documentDetails = documents.map( doc => {
+        return <DocumentDetail doc={doc}></DocumentDetail>
+    })
 
     return (
         <Drawer
