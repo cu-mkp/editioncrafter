@@ -1,4 +1,6 @@
 import HelpPopper from '../../EditionCrafter/component/HelpPopper'
+import NarrowSidebar from './NarrowSidebar'
+import SurfaceBrowser from './SurfaceBrowser'
 import React, { useRef, useState } from 'react'
 
 function TagExploreSidebar(props) {
