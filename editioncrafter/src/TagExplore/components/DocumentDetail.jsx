@@ -1,5 +1,5 @@
 import { useMemo } from 'react'
-import { Accordion, AccordionDetails, AccordionSummary } from '@material-ui/core'
+import { Accordion, AccordionDetails, AccordionSummary, Typography } from '@material-ui/core'
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
 import { getObjs } from '../../common/lib/sql'
 
@@ -19,7 +19,7 @@ function getData(db,docID) {
         surfaces
       WHERE
         document_id=${docID}
-      ORDER
+      ORDER BY
         position
     `)
   
@@ -64,7 +64,7 @@ function getData(db,docID) {
       }
   
       return (
-          <li key={`surface-thumb-${surfaceID}`} className="surface-thumbnail">
+          <li className="surface-thumbnail">
               <figure>
                   <a id={surfaceID} onClick={onClick.bind(this, surfaceID)}>
                       <img 
@@ -94,6 +94,7 @@ function getData(db,docID) {
             {
                 surfaces.map(surface => 
                     <Thumbnail
+                        key={`doc-detail-thumb-${surface.id}`}
                         surfaceID={surface.id}
                         name={surface.name}
                         imageURL={surface.image_url}

@@ -24,7 +24,7 @@ function SurfaceBrowser(props) {
     const documents = useMemo(() => getData(db), [db])
     
     const documentDetails = documents.map( doc => {
-        return <DocumentDetail db={db} documentName={doc.name} documentID={doc.id}></DocumentDetail>
+        return <DocumentDetail key={`document-detail-${doc.id}`} db={db} documentName={doc.name} documentID={doc.id}></DocumentDetail>
     })
 
     return (
