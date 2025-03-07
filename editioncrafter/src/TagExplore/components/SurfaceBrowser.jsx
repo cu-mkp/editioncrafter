@@ -1,14 +1,10 @@
 import { useMemo, useState } from 'react'
+import { useLocation, useNavigate, useParams } from 'react-router-dom'
 import { Button, ButtonGroup, Divider, Drawer, IconButton, Typography } from '@material-ui/core'
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft'
 import GridOnIcon from '@material-ui/icons/GridOn'
 import ListIcon from '@material-ui/icons/List'
 import TuneIcon from '@material-ui/icons/Tune'
-import {
-    useLocation,
-    useNavigate,
-    useParams,
-} from 'react-router-dom'
 
 import DocumentDetail from './DocumentDetail'
 import { getObjs } from '../../common/lib/sql'
@@ -25,41 +21,42 @@ function getData(db) {
     return getObjs(docStmt)  
 }
 
-function getInitialSelection(documents) {
-    // set EC to initial state?
-    return {
-        left: {
-            documentID: 1,
-            surfaceID: 1,
-        },
-        right: {
-            documentID: 1,
-            surfaceID: 1,
-        }
+function parseFolioID(folioID) {
+    if( !folioID ) {
+        return null
     }
+    const parts = folioID.split('_')
+    const localID = parts.slice(0,parts.length-1).join('_')
+    const surfaceID = parts[parts.length-1]
+    
+    return {
+        localID,
+        surfaceID
+    }
+}
+
+function getSelection(params) {
+    const { folioID, folioID2 } = params
+    const left = parseFolioID(folioID)
+    const right = parseFolioID(folioID2)
+    return { left, right }
 }
 
 function SurfaceBrowser(props) {
     const { db, open, toggleOpen } = props
     const documents = useMemo(() => getData(db), [db])
-    const [selection, setSelection] = useState(getInitialSelection(documents))
     const [pageCount, setPageCount] = useState(0)
+
     const navigate = useNavigate()
     const location = useLocation()
     const params = useParams()
+    const selection = getSelection(params)
 
-    const {
-        folioID,
-        transcriptionType,
-        folioID2,
-        transcriptionType2,
-      } = params
-
-    const onSelection = (nextSelection) => {
-        // tell EC to adjust via routes
-        const navParams = `/ec/${document1}_${folioID}/f/${document2}_${folioID2}/f`
+    const navigateToSelection = (nextSelection) => {
+        const folioID = `${nextSelection.left.localID}_${nextSelection.left.surfaceID}`
+        const folioID2 = `${nextSelection.right.localID}_${nextSelection.right.surfaceID}`
+        const navParams = `/ec/${folioID}/f/${folioID2}/f`
         navigate(navParams + location.search)
-        setSelection(nextSelection)
     }
         
     const documentDetails = documents.map( doc => {
@@ -70,7 +67,7 @@ function SurfaceBrowser(props) {
                 documentName={doc.name} 
                 documentID={doc.id}
                 selection={selection}
-                onSelection={onSelection}
+                navigateToSelection={navigateToSelection}
             ></DocumentDetail>
         )
     })

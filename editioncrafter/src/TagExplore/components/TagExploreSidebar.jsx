@@ -1,3 +1,4 @@
+import { HashRouter } from 'react-router-dom'
 import HelpPopper from '../../EditionCrafter/component/HelpPopper'
 import NarrowSidebar from './NarrowSidebar'
 import SurfaceBrowser from './SurfaceBrowser'
@@ -20,24 +21,26 @@ function TagExploreSidebar(props) {
     const helpMarginStyle = { marginRight: '55px' } 
 
   return (
-    <div className="tag-explore-sidebar">
-        <NarrowSidebar
-            toggleDrawer={toggleDrawer}
-            toggleHelp={toggleHelp}
-            helpRef={helpRef}
-        ></NarrowSidebar>
-        <SurfaceBrowser
-            db={db}
-            open={openDrawer}
-            toggleOpen={toggleDrawer}
-        ></SurfaceBrowser>
-        <HelpPopper
-            marginStyle={helpMarginStyle}
-            anchorEl={helpRef.current}
-            open={openHelp}
-            onClose={toggleHelp}
-        />
-    </div>
+    <HashRouter>
+        <div className="tag-explore-sidebar">
+            <NarrowSidebar
+                toggleDrawer={toggleDrawer}
+                toggleHelp={toggleHelp}
+                helpRef={helpRef}
+            ></NarrowSidebar>
+            <SurfaceBrowser
+                db={db}
+                open={openDrawer}
+                toggleOpen={toggleDrawer}
+            ></SurfaceBrowser>
+            <HelpPopper
+                marginStyle={helpMarginStyle}
+                anchorEl={helpRef.current}
+                open={openHelp}
+                onClose={toggleHelp}
+            />
+        </div>
+    </HashRouter>
   )
 }
 

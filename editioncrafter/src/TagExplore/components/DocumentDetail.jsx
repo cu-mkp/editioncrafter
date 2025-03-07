@@ -83,12 +83,14 @@ function getData(db,docID) {
   }
   
   function ThumbnailGrid(props) {
-      const { surfaces, onSelection } = props
+      const { surfaces, selection, navigateToSelection } = props
   
       const onClickThumb = () => {
+
         // TODO
-        const nextSelection = {}
-        onSelection(nextSelection)
+        navigateToSelection({
+
+        })
       }
   
     return (
