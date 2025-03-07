@@ -13,7 +13,8 @@ function getData(db) {
     const docStmt = db.prepare(`
       SELECT
         documents.id AS id,
-        documents.name AS name
+        documents.name AS name,
+        documents.local_id AS local_id
       FROM
         documents
     `)
@@ -56,6 +57,7 @@ function SurfaceBrowser(props) {
         const folioID = `${nextSelection.left.localID}_${nextSelection.left.surfaceID}`
         const folioID2 = `${nextSelection.right.localID}_${nextSelection.right.surfaceID}`
         const navParams = `/ec/${folioID}/f/${folioID2}/f`
+        // TODO is this the right fn?
         navigate(navParams + location.search)
     }
         
@@ -64,8 +66,9 @@ function SurfaceBrowser(props) {
             <DocumentDetail 
                 key={`document-detail-${doc.id}`} 
                 db={db} 
-                documentName={doc.name} 
                 documentID={doc.id}
+                documentLocalID={doc.local_id}
+                documentName={doc.name} 
                 selection={selection}
                 navigateToSelection={navigateToSelection}
             ></DocumentDetail>

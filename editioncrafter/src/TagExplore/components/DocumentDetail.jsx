@@ -10,6 +10,7 @@ function getData(db,docID) {
       SELECT
         surfaces.id AS id,
         surfaces.name AS name,
+        surfaces.xml_id AS xml_id,
         surfaces.width AS width,
         surfaces.height AS height,
         surfaces.image_type AS image_type,
@@ -53,7 +54,7 @@ function getData(db,docID) {
   }
   
   function Thumbnail(props) {
-      const { surfaceID, name, imageURL, thumbnailURL, onClick } = props
+      const { surfaceID, surfaceXMLID, localID, name, imageURL, thumbnailURL, navigateToSelection } = props
   
       const onError = (currentTarget) => {
           currentTarget.onerror = null; 
@@ -66,7 +67,15 @@ function getData(db,docID) {
       return (
           <li className="surface-thumbnail">
               <figure>
-                  <a id={surfaceID} onClick={onClick.bind(this, surfaceID)}>
+                  <a id={surfaceID} 
+                    onClick={(e)=> {
+                        e.preventDefault()
+                        navigateToSelection({
+                            left: { localID, surfaceID: surfaceXMLID },
+                            right: { localID, surfaceID: surfaceXMLID },
+                        })
+                    }}
+                    >
                       <img 
                           src={thumbnailURL} 
                           alt={name} 
@@ -83,15 +92,7 @@ function getData(db,docID) {
   }
   
   function ThumbnailGrid(props) {
-      const { surfaces, selection, navigateToSelection } = props
-  
-      const onClickThumb = () => {
-
-        // TODO
-        navigateToSelection({
-
-        })
-      }
+    const { surfaces, selection, navigateToSelection, documentLocalID } = props
   
     return (
         <ul>
@@ -103,7 +104,9 @@ function getData(db,docID) {
                         name={surface.name}
                         imageURL={surface.image_url}
                         thumbnailURL={surface.thumbnail_url}
-                        onClick={onClickThumb}
+                        navigateToSelection={navigateToSelection}
+                        localID={documentLocalID}
+                        surfaceXMLID={surface.xml_id}
                     ></Thumbnail>
                 )
             }
@@ -112,7 +115,7 @@ function getData(db,docID) {
 }
 
 function DocumentDetail(props) {
-    const { db, documentName, documentID } = props
+    const { db, documentName, documentID, documentLocalID, navigateToSelection } = props
     const surfaces = useMemo(() => getData(db,documentID), [db])
     
     return (
@@ -126,6 +129,8 @@ function DocumentDetail(props) {
             </AccordionSummary>
             <AccordionDetails>
                 <ThumbnailGrid
+                    navigateToSelection={navigateToSelection}
+                    documentLocalID={documentLocalID}
                     surfaces={surfaces}
                 ></ThumbnailGrid>
             </AccordionDetails>
