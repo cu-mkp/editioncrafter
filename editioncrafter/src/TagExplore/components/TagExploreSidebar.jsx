@@ -21,26 +21,24 @@ function TagExploreSidebar(props) {
     const helpMarginStyle = { marginRight: '55px' } 
 
   return (
-    <HashRouter>
-        <div className="tag-explore-sidebar">
-            <NarrowSidebar
-                toggleDrawer={toggleDrawer}
-                toggleHelp={toggleHelp}
-                helpRef={helpRef}
-            ></NarrowSidebar>
-            <SurfaceBrowser
-                db={db}
-                open={openDrawer}
-                toggleOpen={toggleDrawer}
-            ></SurfaceBrowser>
-            <HelpPopper
-                marginStyle={helpMarginStyle}
-                anchorEl={helpRef.current}
-                open={openHelp}
-                onClose={toggleHelp}
-            />
-        </div>
-    </HashRouter>
+    <div className="tag-explore-sidebar">
+        <NarrowSidebar
+            toggleDrawer={toggleDrawer}
+            toggleHelp={toggleHelp}
+            helpRef={helpRef}
+        ></NarrowSidebar>
+        <SurfaceBrowser
+            db={db}
+            open={openDrawer}
+            toggleOpen={toggleDrawer}
+        ></SurfaceBrowser>
+        <HelpPopper
+            marginStyle={helpMarginStyle}
+            anchorEl={helpRef.current}
+            open={openHelp}
+            onClose={toggleHelp}
+        />
+    </div>
   )
 }
 

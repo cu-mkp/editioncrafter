@@ -93,7 +93,7 @@ function getData(db,docID) {
   
   function ThumbnailGrid(props) {
     const { surfaces, selection, navigateToSelection, documentLocalID } = props
-  
+    
     return (
         <ul>
             {
@@ -104,9 +104,19 @@ function getData(db,docID) {
                         name={surface.name}
                         imageURL={surface.image_url}
                         thumbnailURL={surface.thumbnail_url}
-                        navigateToSelection={navigateToSelection}
-                        localID={documentLocalID}
-                        surfaceXMLID={surface.xml_id}
+                        onClick={() => {
+                            debugger
+                            navigateToSelection({
+                                left: {
+                                    localID: documentLocalID,
+                                    surfaceID: surface.xml_id
+                                },
+                                right: {
+                                    localID: documentLocalID,
+                                    surfaceID: surface.xml_id
+                                }
+                            })
+                        }}
                     ></Thumbnail>
                 )
             }

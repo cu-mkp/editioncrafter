@@ -59,16 +59,16 @@ function SurfaceBrowser(props) {
         const navParams = `/ec/${folioID}/f/${folioID2}/f`
         // TODO is this the right fn?
         navigate(navParams + location.search)
-    }
+    } 
         
     const documentDetails = documents.map( doc => {
         return (
             <DocumentDetail 
                 key={`document-detail-${doc.id}`} 
                 db={db} 
-                documentID={doc.id}
-                documentLocalID={doc.local_id}
                 documentName={doc.name} 
+                documentLocalID={doc.local_id}
+                documentID={doc.id}
                 selection={selection}
                 navigateToSelection={navigateToSelection}
             ></DocumentDetail>

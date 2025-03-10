@@ -38,7 +38,6 @@ function DiploMatic(props) {
 
   return (
     <Provider store={props.store}>
-      <HashRouter>
         <TagFilterProvider>
           <div id="diplomatic" className={fixedFrameModeClass} ref={containerRef} style={{ height: containerHeight }}>
             <RouteListener />
@@ -54,7 +53,6 @@ function DiploMatic(props) {
             </div>
           </div>
         </TagFilterProvider>
-      </HashRouter>
     </Provider>
   )
 }

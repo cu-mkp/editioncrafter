@@ -5,6 +5,7 @@ import Loading from '../common/components/Loading'
 import EditionCrafter from '../EditionCrafter'
 import TagExploreSidebar from './components/TagExploreSidebar'
 import './styles/base.css'
+import { HashRouter } from 'react-router-dom'
 
 const initialFilters = {
   categories: [],
@@ -91,8 +92,10 @@ function TagExplore(props) {
 
   return (
     <div className="tag-explore">
-      <TagExploreSidebar db={db} />
-      <EditionCrafter {...ecProps} />
+      <HashRouter>
+        <TagExploreSidebar db={db} />
+        <EditionCrafter {...ecProps} />
+      </HashRouter>
     </div>
   )
 }
