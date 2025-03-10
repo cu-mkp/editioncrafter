@@ -59,6 +59,7 @@ function generateECProps(props,db) {
   return {
     documentName,
     documentInfo,
+    handleRouting: false
   }
 }
 

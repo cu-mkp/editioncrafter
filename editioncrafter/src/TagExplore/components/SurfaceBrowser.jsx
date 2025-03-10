@@ -57,7 +57,6 @@ function SurfaceBrowser(props) {
         const folioID = `${nextSelection.left.localID}_${nextSelection.left.surfaceID}`
         const folioID2 = `${nextSelection.right.localID}_${nextSelection.right.surfaceID}`
         const navParams = `/ec/${folioID}/f/${folioID2}/f`
-        // TODO is this the right fn?
         navigate(navParams + location.search)
     } 
         

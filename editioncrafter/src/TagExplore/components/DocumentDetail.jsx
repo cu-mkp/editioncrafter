@@ -54,7 +54,7 @@ function getData(db,docID) {
   }
   
   function Thumbnail(props) {
-      const { surfaceID, surfaceXMLID, localID, name, imageURL, thumbnailURL, navigateToSelection } = props
+      const { surfaceID, name, imageURL, thumbnailURL, onClick } = props
   
       const onError = (currentTarget) => {
           currentTarget.onerror = null; 
@@ -67,15 +67,7 @@ function getData(db,docID) {
       return (
           <li className="surface-thumbnail">
               <figure>
-                  <a id={surfaceID} 
-                    onClick={(e)=> {
-                        e.preventDefault()
-                        navigateToSelection({
-                            left: { localID, surfaceID: surfaceXMLID },
-                            right: { localID, surfaceID: surfaceXMLID },
-                        })
-                    }}
-                    >
+                  <a id={surfaceID} onClick={onClick} >
                       <img 
                           src={thumbnailURL} 
                           alt={name} 
@@ -104,8 +96,8 @@ function getData(db,docID) {
                         name={surface.name}
                         imageURL={surface.image_url}
                         thumbnailURL={surface.thumbnail_url}
-                        onClick={() => {
-                            debugger
+                        onClick={(e) => {
+                            e.preventDefault()
                             navigateToSelection({
                                 left: {
                                     localID: documentLocalID,

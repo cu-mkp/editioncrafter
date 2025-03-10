@@ -19,9 +19,11 @@ function EditionCrafter(props) {
     },
   })
 
+  const handleRouting = props.handleRouting === false ? false : true
+
   return (
     <ThemeProvider theme={theme}>
-      <DiploMatic config={props} store={createReduxStore(props)} />
+      <DiploMatic config={props} store={createReduxStore(props)} handleRouting={handleRouting} />
     </ThemeProvider>
   )
 }
