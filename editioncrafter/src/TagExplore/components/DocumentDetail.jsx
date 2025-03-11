@@ -1,9 +1,9 @@
 import { useMemo } from 'react'
-import { Accordion, AccordionDetails, AccordionSummary, Typography } from '@material-ui/core'
+import { Accordion, AccordionDetails, AccordionSummary, Grid, Paper, Typography } from '@material-ui/core'
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
 import { getObjs } from '../../common/lib/sql'
 
-const MAX_THUMBNAIL_DIMENSION = 130
+const MAX_THUMBNAIL_DIMENSION = 100
 
 function getData(db,docID) {
     const surfaceStmt = db.prepare(`
@@ -65,7 +65,7 @@ function getData(db,docID) {
       }
   
       return (
-          <li className="surface-thumbnail">
+          <div className="surface-thumbnail">
               <figure>
                   <a id={surfaceID} onClick={onClick} >
                       <img 
@@ -79,7 +79,7 @@ function getData(db,docID) {
               <figcaption className="surface-thumbnail-caption">
                   {name}
               </figcaption>
-        </li>
+        </div>
       )
   }
   
@@ -87,7 +87,7 @@ function getData(db,docID) {
     const { surfaces, selection, navigateToSelection, documentLocalID } = props
     
     return (
-        <ul>
+        <Grid className="thumbnail-grid">
             {
                 surfaces.map(surface => 
                     <Thumbnail
@@ -112,7 +112,7 @@ function getData(db,docID) {
                     ></Thumbnail>
                 )
             }
-        </ul>
+        </Grid>
     )
 }
 
