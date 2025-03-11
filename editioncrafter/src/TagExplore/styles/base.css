@@ -4,6 +4,10 @@
   grid-template-columns: 50px 1fr;
 }
 
+.tag-explore .narrow-sidebar {
+  height: 100vh;
+}
+
 .tag-explore .tag-filters, .tag-explore-sidebar {
   overflow-y: auto;
   height: 100%;
