@@ -9,8 +9,9 @@
 }
 
 .tag-explore .tag-filters, .tag-explore-sidebar {
-  overflow-y: auto;
+  overflow-y: none;
   height: 100%;
+  background-color: black;
 }
 
 .tag-explore .tag-filters .tag-list, .tag-explore-sidebar {

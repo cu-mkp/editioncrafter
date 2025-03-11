@@ -76,6 +76,7 @@ function SurfaceBrowser(props) {
 
     return (
         <Drawer
+            className='surface-browser'
             variant="persistent"
             anchor="left"
             open={open}

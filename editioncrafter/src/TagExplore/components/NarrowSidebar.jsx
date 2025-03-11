@@ -3,12 +3,12 @@ import {
 } from 'react-icons/fa'  
 
 import { BsFillGrid3X3GapFill } from 'react-icons/bs'
-import { List, ListItem, ListItemIcon } from '@material-ui/core'
+import { List, ListItem, ListItemIcon, Paper } from '@material-ui/core'
 
 function NarrowSidebar(props) {
     const { helpRef, toggleDrawer, toggleHelp } = props
     return (
-        <div className="narrow-sidebar">
+        <Paper className="narrow-sidebar">
             <List>
                 <ListItem 
                     onClick={toggleDrawer}
@@ -28,7 +28,7 @@ function NarrowSidebar(props) {
                     </ListItemIcon>
                 </ListItem>
             </List>
-        </div>
+        </Paper>
     )
 }
 

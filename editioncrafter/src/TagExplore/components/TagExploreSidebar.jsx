@@ -1,8 +1,9 @@
-import { HashRouter } from 'react-router-dom'
+import React, { useRef, useState } from 'react'
+import { createTheme, ThemeProvider } from '@material-ui/core/styles'
+
 import HelpPopper from '../../EditionCrafter/component/HelpPopper'
 import NarrowSidebar from './NarrowSidebar'
 import SurfaceBrowser from './SurfaceBrowser'
-import React, { useRef, useState } from 'react'
 
 function TagExploreSidebar(props) {
     const { db } = props
@@ -19,25 +20,32 @@ function TagExploreSidebar(props) {
 
     const helpRef = useRef(null)
     const helpMarginStyle = { marginRight: '55px' } 
+    const theme = createTheme({
+        palette: {
+          type: 'dark',
+        },
+    })
 
   return (
     <div className="tag-explore-sidebar">
-        <NarrowSidebar
-            toggleDrawer={toggleDrawer}
-            toggleHelp={toggleHelp}
-            helpRef={helpRef}
-        ></NarrowSidebar>
-        <SurfaceBrowser
-            db={db}
-            open={openDrawer}
-            toggleOpen={toggleDrawer}
-        ></SurfaceBrowser>
-        <HelpPopper
-            marginStyle={helpMarginStyle}
-            anchorEl={helpRef.current}
-            open={openHelp}
-            onClose={toggleHelp}
-        />
+         <ThemeProvider theme={theme}>
+            <NarrowSidebar
+                toggleDrawer={toggleDrawer}
+                toggleHelp={toggleHelp}
+                helpRef={helpRef}
+            ></NarrowSidebar>
+            <SurfaceBrowser
+                db={db}
+                open={openDrawer}
+                toggleOpen={toggleDrawer}
+            ></SurfaceBrowser>
+            <HelpPopper
+                marginStyle={helpMarginStyle}
+                anchorEl={helpRef.current}
+                open={openHelp}
+                onClose={toggleHelp}
+            />
+         </ThemeProvider>
     </div>
   )
 }
