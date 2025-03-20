@@ -1,6 +1,6 @@
-import { Accordion, AccordionDetails, AccordionSummary, Grid, Paper, Typography } from '@material-ui/core'
+import { Accordion, AccordionDetails, AccordionSummary, Grid, Typography } from '@material-ui/core'
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useMemo } from 'react'
 import { getObjs } from '../../common/lib/sql'
 import InsertLeft from '../assets/InsertLeft'
 import InsertRight from '../assets/InsertRight'
@@ -9,7 +9,7 @@ import Right from '../assets/Right'
 
 const MAX_THUMBNAIL_DIMENSION = 100
 
-function getData(db, docID) {
+function getData(db, docID, tags = []) {
   const surfaceStmt = db.prepare(`
       SELECT
         surfaces.id AS id,
@@ -22,8 +22,18 @@ function getData(db, docID) {
         surfaces.position AS position
       FROM
         surfaces
+      LEFT JOIN
+        elements
+      ON
+        surfaces.id = elements.surface_id
+      LEFT JOIN
+        taggings
+      ON
+        elements.id = taggings.element_id
       WHERE
-        document_id=${docID}
+        document_id=${docID}${tags.length ? ` AND taggings.tag_id IN (${tags.join(',')})` : ''} 
+      GROUP BY
+        surfaces.id
       ORDER BY
         position
     `)
@@ -166,12 +176,12 @@ function ThumbnailGrid(props) {
 }
 
 function DocumentDetail(props) {
-  const { db, documentName, documentID, documentLocalID, navigateToSelection, updatePageCount, selection } = props
-  const surfaces = useMemo(() => getData(db, documentID), [db, documentID])
+  const { db, documentName, documentID, documentLocalID, navigateToSelection, updatePageCount, selection, tags } = props
+  const surfaces = useMemo(() => getData(db, documentID, tags), [db, documentID, tags])
 
   useEffect(() => {
     updatePageCount(surfaces?.length)
-  }, [surfaces])
+  }, [surfaces, updatePageCount])
 
   return (
     <Accordion>

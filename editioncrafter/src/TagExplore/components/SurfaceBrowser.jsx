@@ -1,10 +1,10 @@
-import { Box, Button, ButtonGroup, Collapse, Divider, Drawer, IconButton, Typography } from '@material-ui/core'
+import { Box, Button, ButtonGroup, Collapse, Divider, IconButton, Typography } from '@material-ui/core'
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft'
 import GridOnIcon from '@material-ui/icons/GridOn'
 import ListIcon from '@material-ui/icons/List'
 import TuneIcon from '@material-ui/icons/Tune'
 import { useEffect, useMemo, useState } from 'react'
-import { useLocation, useNavigate, useParams } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
 
 import { getObjs } from '../../common/lib/sql'
 import DocumentDetail from './DocumentDetail'
@@ -50,6 +50,7 @@ function SurfaceBrowser(props) {
   const documents = useMemo(() => getData(db), [db])
   const [pageCount, setPageCount] = useState({})
   const [totalPages, setTotalPages] = useState(0)
+  const [tags, setTags] = useState([])
 
   const navigate = useNavigate()
   const location = useLocation()
@@ -87,6 +88,7 @@ function SurfaceBrowser(props) {
         selection={selection}
         navigateToSelection={navigateToSelection}
         updatePageCount={count => updatePageCount(doc.id, count)}
+        tags={tags}
       >
       </DocumentDetail>
     )
