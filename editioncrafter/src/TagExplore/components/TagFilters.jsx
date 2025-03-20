@@ -1,5 +1,5 @@
+import { Checkbox, FormControlLabel, FormGroup, Typography } from '@material-ui/core'
 import { useMemo } from 'react'
-import Pill from '../../common/components/Pill'
 import { getObjs } from '../../common/lib/sql'
 
 function getData(db) {
@@ -14,9 +14,13 @@ function getData(db) {
     SELECT
       tags.id AS id,
       tags.name AS name,
-      tags.xml_id AS xml_id
+      tags.xml_id AS xml_id,
+      taxonomies.name as taxonomy,
+      taxonomies.id as taxonomy_id
     FROM
       tags
+    LEFT JOIN taxonomies
+      ON tags.taxonomy_id = taxonomies.id
     INNER JOIN taggings
       ON taggings.tag_id = tags.id
     INNER JOIN elements
@@ -33,17 +37,24 @@ function getData(db) {
 }
 
 function TagFilters(props) {
+  const { onToggleSelected, filters } = props
   const data = useMemo(() => getData(props.db), [props.db])
 
   return (
     <div className="tag-filters">
       <div className="tag-list">
-        {data.tags.map(tag => (
-          <Pill
-            key={tag.key}
-            label={tag.name}
-          />
-        ))}
+        <FormGroup>
+          { data.taxonomies.map(tax => (
+            <div key={tax.id}>
+              <Typography>{tax.name}</Typography>
+              <ul>
+                { data.tags.map(tag => (
+                  <FormControlLabel as="li" control={<Checkbox checked={filters.includes(tag.id)} onChange={() => onToggleSelected(tag.id)} />} key={tag.id} label={tag.name} />
+                ))}
+              </ul>
+            </div>
+          ))}
+        </FormGroup>
       </div>
     </div>
   )

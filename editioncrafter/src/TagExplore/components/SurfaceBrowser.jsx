@@ -8,6 +8,7 @@ import { useLocation, useNavigate } from 'react-router-dom'
 
 import { getObjs } from '../../common/lib/sql'
 import DocumentDetail from './DocumentDetail'
+import TagFilters from './TagFilters'
 
 function getData(db) {
   const docStmt = db.prepare(`
@@ -51,6 +52,7 @@ function SurfaceBrowser(props) {
   const [pageCount, setPageCount] = useState({})
   const [totalPages, setTotalPages] = useState(0)
   const [tags, setTags] = useState([])
+  const [showFilters, setShowFilters] = useState(false)
 
   const navigate = useNavigate()
   const location = useLocation()
@@ -75,7 +77,7 @@ function SurfaceBrowser(props) {
       p += pageCount[key]
     }
     setTotalPages(p)
-  }, [pageCount])
+  }, [pageCount, tags])
 
   const documentDetails = documents.map((doc) => {
     return (
@@ -103,26 +105,43 @@ function SurfaceBrowser(props) {
           <ChevronLeftIcon />
         </IconButton>
         <Divider></Divider>
-        <Typography>Contents</Typography>
-        <Button
-          startIcon={<TuneIcon />}
-        >
-          Filter
-        </Button>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+          <Typography>Contents</Typography>
+          <Button
+            startIcon={<TuneIcon />}
+            onClick={() => setShowFilters(current => (!current))}
+          >
+            Filter
+          </Button>
+        </div>
         <Typography>
           {totalPages}
           {' '}
           Page
           { totalPages !== 1 ? 's' : ''}
         </Typography>
-        <ButtonGroup color="primary" aria-label="outlined primary button group">
+        {/* <ButtonGroup color="primary" aria-label="outlined primary button group">
           <IconButton aria-label="grid">
             <GridOnIcon></GridOnIcon>
           </IconButton>
           <IconButton aria-label="list">
             <ListIcon></ListIcon>
           </IconButton>
-        </ButtonGroup>
+        </ButtonGroup> */}
+        { showFilters && (
+          <TagFilters
+            db={db}
+            filters={tags}
+            onToggleSelected={(tagId) => {
+              if (tags.includes(tagId)) {
+                setTags(current => (current.filter(t => (t !== tagId))))
+              }
+              else {
+                setTags(current => ([...current, tagId]))
+              }
+            }}
+          />
+        ) }
         <Box className="surface-browser-document-details">
           { documentDetails }
         </Box>

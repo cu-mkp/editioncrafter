@@ -181,7 +181,7 @@ function DocumentDetail(props) {
 
   useEffect(() => {
     updatePageCount(surfaces?.length)
-  }, [surfaces, updatePageCount])
+  }, [surfaces, updatePageCount, tags])
 
   return (
     <Accordion>
