@@ -1,6 +1,7 @@
 import { Checkbox, FormControlLabel, FormGroup, Typography } from '@material-ui/core'
-import { useMemo } from 'react'
+import { useContext, useMemo } from 'react'
 import { getObjs } from '../../common/lib/sql'
+import TagFilterContext from '../../EditionCrafter/context/TagFilterContext'
 
 function getData(db) {
   const taxonomiesStmt = db.prepare(`
@@ -40,6 +41,8 @@ function TagFilters(props) {
   const { onToggleSelected, filters } = props
   const data = useMemo(() => getData(props.db), [props.db])
 
+  const { toggleTag } = useContext(TagFilterContext)
+
   return (
     <div className="tag-filters">
       <div className="tag-list">
@@ -49,7 +52,21 @@ function TagFilters(props) {
               <Typography>{tax.name}</Typography>
               <ul>
                 { data.tags.map(tag => (
-                  <FormControlLabel as="li" control={<Checkbox checked={filters.includes(tag.id)} onChange={() => onToggleSelected(tag.id)} />} key={tag.id} label={tag.name} />
+                  <FormControlLabel
+                    as="li"
+                    control={(
+                      <Checkbox
+                        checked={filters.includes(tag.id)}
+                        onChange={() => {
+                          onToggleSelected(tag.id)
+                          toggleTag(tag.xml_id, 'left')
+                          toggleTag(tag.xml_id, 'right')
+                        }}
+                      />
+                    )}
+                    key={tag.id}
+                    label={tag.name}
+                  />
                 ))}
               </ul>
             </div>

@@ -4,6 +4,7 @@ import initSqlJs from 'sql.js'
 import Loading from '../common/components/Loading'
 import { getObjs } from '../common/lib/sql'
 import EditionCrafter from '../EditionCrafter'
+import TagFilterProvider from '../EditionCrafter/context/TagFilter'
 import TagExploreSidebar from './components/TagExploreSidebar'
 import './styles/base.css'
 
@@ -95,8 +96,10 @@ function TagExplore(props) {
   return (
     <div className="tag-explore">
       <HashRouter>
-        <TagExploreSidebar db={db} />
-        <EditionCrafter {...ecProps} />
+        <TagFilterProvider>
+          <TagExploreSidebar db={db} />
+          <EditionCrafter {...ecProps} />
+        </TagFilterProvider>
       </HashRouter>
     </div>
   )

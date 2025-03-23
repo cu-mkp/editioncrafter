@@ -19,7 +19,8 @@ function getData(db, docID, tags = []) {
         surfaces.height AS height,
         surfaces.image_type AS image_type,
         surfaces.image_url AS image_url,
-        surfaces.position AS position
+        surfaces.position AS position,
+        taggings.tag_id
       FROM
         surfaces
       LEFT JOIN
@@ -32,10 +33,8 @@ function getData(db, docID, tags = []) {
         elements.id = taggings.element_id
       WHERE
         document_id=${docID}${tags.length ? ` AND taggings.tag_id IN (${tags.join(',')})` : ''} 
-      GROUP BY
-        surfaces.id
       ORDER BY
-        position
+        surfaces.id, position
     `)
 
   // add thumbnail URLs
@@ -177,7 +176,20 @@ function ThumbnailGrid(props) {
 
 function DocumentDetail(props) {
   const { db, documentName, documentID, documentLocalID, navigateToSelection, updatePageCount, selection, tags } = props
-  const surfaces = useMemo(() => getData(db, documentID, tags), [db, documentID, tags])
+  const surfaces = useMemo(() => {
+    const taggedSurfaces = getData(db, documentID, tags)
+    const data = []
+    for (const entry of taggedSurfaces) {
+      if (!data.find(d => (d.id === entry.id))) {
+        const tags = taggedSurfaces.filter(s => (s.id === entry.id)).map(s => (s.tag_id))
+        data.push({
+          ...entry,
+          tag_id: [...new Set(tags)],
+        })
+      }
+    }
+    return data.filter(s => (tags.every(t => s.tag_id.includes(t))))
+  }, [db, documentID, tags])
 
   useEffect(() => {
     updatePageCount(surfaces?.length)

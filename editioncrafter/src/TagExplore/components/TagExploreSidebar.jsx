@@ -15,7 +15,6 @@ function TagExploreSidebar(props) {
   }
 
   const toggleDrawer = () => {
-    console.log(openDrawer)
     setOpenDrawer(!openDrawer)
   }
 
