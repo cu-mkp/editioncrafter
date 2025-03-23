@@ -19,7 +19,7 @@ function TagExploreSidebar(props) {
   }
 
   const helpRef = useRef(null)
-  const helpMarginStyle = { marginRight: '55px' }
+  const helpMarginStyle = { marginLeft: '60px', backgroundColor: '#242629', zIndex: '9999' }
   const theme = createTheme({
     palette: {
       type: 'dark',

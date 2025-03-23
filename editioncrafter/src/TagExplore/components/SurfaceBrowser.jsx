@@ -1,11 +1,12 @@
 import { Box, Button, ButtonGroup, Collapse, Divider, IconButton, Typography } from '@material-ui/core'
+import { red } from '@material-ui/core/colors'
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft'
 import GridOnIcon from '@material-ui/icons/GridOn'
 import ListIcon from '@material-ui/icons/List'
 import TuneIcon from '@material-ui/icons/Tune'
 import { useEffect, useMemo, useState } from 'react'
-import { useLocation, useNavigate } from 'react-router-dom'
 
+import { useLocation, useNavigate } from 'react-router-dom'
 import { getObjs } from '../../common/lib/sql'
 import DocumentDetail from './DocumentDetail'
 import TagFilters from './TagFilters'
@@ -112,6 +113,28 @@ function SurfaceBrowser(props) {
             onClick={() => setShowFilters(current => (!current))}
           >
             Filter
+            { tags && tags.length
+              ? (
+                  <div style={{
+                    fontSize: 'small',
+                    backgroundColor: 'red',
+                    borderRadius: '999px',
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    padding: '3px',
+                    color: 'white',
+                    height: '16px',
+                    width: '16px',
+                    position: 'absolute',
+                    top: '0',
+                    left: '-12px',
+                  }}
+                  >
+                    {tags.length}
+                  </div>
+                )
+              : null}
           </Button>
         </div>
         <Typography>
