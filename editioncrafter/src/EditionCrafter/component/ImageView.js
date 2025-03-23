@@ -1,6 +1,6 @@
 import Annotorious from '@recogito/annotorious-openseadragon'
 import OpenSeadragon from 'openseadragon'
-import React, { useCallback, useContext, useEffect, useRef, useState } from 'react'
+import React, { useCallback, useContext, useEffect, useMemo, useRef, useState } from 'react'
 import { connect } from 'react-redux'
 
 import {
@@ -21,7 +21,9 @@ function ImageView(props) {
   const [viewer, setViewer] = useState(null)
   const [anno, setAnno] = useState(null)
 
-  const { tags } = useContext(TagFilterContext)
+  const { tagsLeft, tagsRight } = useContext(TagFilterContext)
+
+  const tags = useMemo(() => (props.side === 'right' ? tagsRight : tagsLeft), [props.side, tagsLeft, tagsRight])
 
   const location = useLocation()
   const navigate = useNavigate()
