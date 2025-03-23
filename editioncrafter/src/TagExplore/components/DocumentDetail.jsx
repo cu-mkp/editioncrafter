@@ -70,8 +70,8 @@ function getThumbnailURL(surface) {
 function Thumbnail(props) {
   const { surfaceID, name, imageURL, thumbnailURL, onClick, selection, info } = props
 
-  const isLeft = useMemo(() => (selection.left.localID === info.localID && selection.left.surfaceID === info.surfaceID), [selection, info])
-  const isRight = useMemo(() => (selection.right.localID === info.localID && selection.right.surfaceID === info.surfaceID), [selection, info])
+  const isLeft = useMemo(() => (selection && selection?.left?.localID === info?.localID && selection?.left?.surfaceID === info?.surfaceID), [selection, info])
+  const isRight = useMemo(() => (selection && selection?.right?.localID === info?.localID && selection?.right?.surfaceID === info?.surfaceID), [selection, info])
 
   const onError = (currentTarget) => {
     currentTarget.onerror = null

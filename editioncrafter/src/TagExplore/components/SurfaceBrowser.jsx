@@ -59,9 +59,9 @@ function SurfaceBrowser(props) {
   const selection = useMemo(() => getSelection(location.pathname), [location])
 
   const navigateToSelection = (nextSelection) => {
-    const folioID = `${nextSelection.left.localID}_${nextSelection.left.surfaceID}`
-    const folioID2 = `${nextSelection.right.localID}_${nextSelection.right.surfaceID}`
-    const navParams = `/ec/${folioID}/f/${folioID2}/f`
+    const folioID = nextSelection?.left ? `${nextSelection.left.localID}_${nextSelection.left.surfaceID}` : null
+    const folioID2 = nextSelection?.right ? `${nextSelection.right.localID}_${nextSelection.right.surfaceID}` : null
+    const navParams = `/ec/${folioID || '-1'}/${folioID ? 'f' : 'g'}/${folioID2 || '-1'}/${folioID2 ? 'f' : 'g'}`
     navigate(navParams + location.search)
   }
 

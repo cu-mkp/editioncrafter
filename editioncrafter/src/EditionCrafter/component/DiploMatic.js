@@ -36,7 +36,8 @@ function DiploMatic(props) {
   const { fixedFrameMode } = props.diplomatic
   const fixedFrameModeClass = fixedFrameMode ? 'editioncrafter' : 'editioncrafter sticky'
 
-  const mainBody = <TagFilterProvider>
+  const mainBody = (
+    <TagFilterProvider>
       <div id="diplomatic" className={fixedFrameModeClass} ref={containerRef} style={{ height: containerHeight }}>
         <RouteListener />
         <div id="content" style={{ height: '100%' }}>
@@ -51,8 +52,9 @@ function DiploMatic(props) {
         </div>
       </div>
     </TagFilterProvider>
+  )
 
-  const topLevel = props.handleRouting ? <HashRouter>{mainBody}</HashRouter> : mainBody
+  const topLevel = !(props.tagExplorerMode === true) ? <HashRouter>{mainBody}</HashRouter> : mainBody
 
   return (
     <Provider store={props.store}>

@@ -19,11 +19,11 @@ function EditionCrafter(props) {
     },
   })
 
-  const handleRouting = props.handleRouting === false ? false : true
+  const tagExplorerMode = props.tagExplorerMode === true
 
   return (
     <ThemeProvider theme={theme}>
-      <DiploMatic config={props} store={createReduxStore(props)} handleRouting={handleRouting} />
+      <DiploMatic config={props} store={createReduxStore(props)} tagExplorerMode={tagExplorerMode} />
     </ThemeProvider>
   )
 }
