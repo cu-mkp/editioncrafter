@@ -4,35 +4,35 @@ import EditionCrafter, { RecordList, TagExplore } from '../src/index'
 export function ElyGreenVariorum() {
   return (
     <EditionCrafter
-      documentName='Ely Green Variorum'
-      // notesURL="http://localhost:4321/alignment.md"
+      documentName="Ely Green Variorum"
+      notesURL="https://digitalelygreen.org/explore/alignment.md"
       documentInfo={{
-          egA: {
-            documentName: 'EG A',
-            transcriptionTypes: {
-              'text': 'Transcription'
-            },
-            iiifManifest: 'https://faircopy.cloud/documents/eg-a/iiif/manifest.json'
+        egA: {
+          documentName: 'EG A',
+          transcriptionTypes: {
+            text: 'Transcription',
           },
-          egB: {
-            documentName: 'EG B',
-            transcriptionTypes: {
-              'DerivativeB': 'Transcription'
-            },
-            iiifManifest: 'https://faircopy.cloud/documents/eg-b/iiif/manifest.json'
+          iiifManifest: 'https://faircopy.cloud/documents/eg-a/iiif/manifest.json',
+        },
+        egB: {
+          documentName: 'EG B',
+          transcriptionTypes: {
+            DerivativeB: 'Transcription',
           },
-          ElyGreenMS: {
-            documentName: 'ElyGreen MS',
-            transcriptionTypes: {
-              'transcription': 'Transcription'
-            },
-            iiifManifest: 'https://faircopy.cloud/documents/ElyGreenMS/iiif/manifest.json'
+          iiifManifest: 'https://faircopy.cloud/documents/eg-b/iiif/manifest.json',
+        },
+        ElyGreenMS: {
+          documentName: 'ElyGreen MS',
+          transcriptionTypes: {
+            transcription: 'Transcription',
           },
+          iiifManifest: 'https://faircopy.cloud/documents/ElyGreenMS/iiif/manifest.json',
+        },
       }}
       client:only
       threePanel
       transition:persist
-  />
+    />
   )
 }
 
@@ -175,6 +175,12 @@ export function RecordListExample() {
     <RecordList
       dbUrl="/database-example/example.sqlite"
       recordLabel="Entries"
+      layers={{
+        tc: 'Diplomatic (FR)',
+        tcn: 'Normalized (FR)',
+        tl: 'Translation (EN)',
+        test: 'Test Field (EN)',
+      }}
       viewerUrl="http://localhost:6006/iframe.html?globals=&id=editioncrafter--taxonomy-example&viewMode=story"
     />
   )

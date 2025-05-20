@@ -1,6 +1,8 @@
-import { useContext, useMemo } from 'react'
+import { useContext, useMemo, useState } from 'react'
+import { IoChevronDownOutline, IoChevronUpOutline } from 'react-icons/io5'
 import Pill from '../../common/components/Pill'
 import FilterContext from '../context/FilterContext'
+import PhraseList from './PhraseListTable'
 
 function getRecordName(div) {
   if (div.element_name) {
@@ -22,7 +24,24 @@ function getSurfaceLink(baseUrl, div, cats, tags) {
   )
 }
 
+function PhraseToggle(props) {
+  return (
+    <button
+      aria-label="Toggle phrases"
+      className="phrase-toggle"
+      onClick={props.onClick}
+      type="button"
+    >
+      {props.toggled
+        ? <IoChevronUpOutline />
+        : <IoChevronDownOutline />}
+    </button>
+  )
+}
+
 function Record(props) {
+  const [showPhrases, setShowPhrases] = useState(false)
+
   const ctx = useContext(FilterContext)
 
   const categories = useMemo(
@@ -38,11 +57,19 @@ function Record(props) {
       tags.forEach((tag) => {
         if (result[tag.name]) {
           result[tag.name].count++
+          result[tag.name].phrases.push({
+            name: el.element_name,
+            layer: el.layer_xml_id,
+          })
         }
         else {
           result[tag.name] = {
             id: tag.xml_id,
             count: 1,
+            phrases: [{
+              name: el.element_name,
+              layer: el.layer_xml_id,
+            }],
           }
         }
       })
@@ -74,7 +101,16 @@ function Record(props) {
             <span className="tag-count">{tagCounts[tagName].count}</span>
           </Pill>
         ))}
+        <PhraseToggle
+          toggled={showPhrases}
+          onClick={() => setShowPhrases(!showPhrases)}
+        />
       </div>
+      <PhraseList
+        tagCounts={tagCounts}
+        elements={props.childElements}
+        visible={showPhrases}
+      />
     </div>
   )
 }

@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { HashRouter } from 'react-router-dom'
 import initSqlJs from 'sql.js'
+import sqlJsInfo from 'sql.js/package.json'
 import Loading from '../common/components/Loading'
 import { getObjs } from '../common/lib/sql'
 import EditionCrafter from '../EditionCrafter'
@@ -24,7 +25,7 @@ async function initDb(url) {
   const arr = new Uint8Array(buf)
 
   const db = await initSqlJs({
-    locateFile: file => `https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.12.0/${file}`,
+    locateFile: file => `https://cdnjs.cloudflare.com/ajax/libs/sql.js/${sqlJsInfo.version}/${file}`,
   }).then((SQL) => {
     const db = new SQL.Database(arr)
     return db
