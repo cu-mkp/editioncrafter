@@ -367,6 +367,7 @@ function Navigation(props) {
           document={props.document}
           folio={folio}
           toggleTags={toggleTags}
+          side={side}
         />
       )}
       <div className="navigationComponentNarrow">

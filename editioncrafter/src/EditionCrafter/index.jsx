@@ -19,9 +19,11 @@ function EditionCrafter(props) {
     },
   })
 
+  const tagExplorerMode = props.tagExplorerMode === true
+
   return (
     <ThemeProvider theme={theme}>
-      <DiploMatic config={props} store={createReduxStore(props)} />
+      <DiploMatic config={props} store={createReduxStore(props)} tagExplorerMode={tagExplorerMode} />
     </ThemeProvider>
   )
 }
