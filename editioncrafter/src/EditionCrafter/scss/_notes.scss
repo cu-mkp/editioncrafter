@@ -1,0 +1,49 @@
+.editioncrafter {
+
+	#notesView {
+	
+		#notesViewInner {
+			margin: 5px 0 0 0;
+			// @include md {
+			// 	margin: 52px 0 0 0;
+			// }
+			width: calc(100% - 1.2rem);
+				max-height: calc(100vh - 170px);
+				padding: 5px 16px;
+		}
+		
+		#notesContent {
+			padding: max(80px, 5rem) 0 0;
+			max-height: 100vh;
+			-webkit-user-select: text;
+			-moz-user-select: text;
+			-ms-user-select: text;
+			user-select: text;
+			min-width: max(10rem, 160px);
+			@include md {
+				padding: max(3.5rem, 56px) 0 0;
+			}
+
+			table {
+				margin-top: 30px;
+			}
+
+			td, th {
+				border: 1px solid #ddd;
+				padding: 8px;
+			}
+			  
+			tr:nth-child(even){
+				background-color: #f2f2f2;
+			}
+			  
+			th {
+				padding-top: 12px;
+				padding-bottom: 12px;
+				text-align: left;
+				background-color: gray;
+				color: white;
+			}
+		}
+	}
+}

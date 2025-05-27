@@ -7,9 +7,11 @@ import {
   useParams,
 } from 'react-router-dom'
 import { dispatchAction } from '../model/ReduxStore'
+import EmptyPaneView from './EmptyPaneView'
 import GlossaryView from './GlossaryView'
 import ImageGridView from './ImageGridView'
 import ImageView from './ImageView'
+import NotesView from './NotesView'
 import SinglePaneView from './SinglePaneView'
 import SplitPaneView from './SplitPaneView'
 import TranscriptionView from './TranscriptionView'
@@ -345,6 +347,9 @@ function DocumentView(props) {
     if (transcriptionType === 'glossary') {
       return 'GlossaryView'
     }
+    if (transcriptionType === 'notes') {
+      return 'NotesView'
+    }
     return xmlMode ? 'XMLView' : 'TranscriptionView'
   }
 
@@ -458,20 +463,33 @@ function DocumentView(props) {
     }
 
     if (viewType === 'ImageGridView') {
-      return (
-        <ImageGridView
-          key={key}
-          documentView={docView}
-          documentViewActions={documentViewActions}
-          side={side}
-          selectedDoc={document || props.document.variorum && Object.keys(props.document.derivativeNames)[side === 'left' ? 0 : side === 'right' ? 1 : Object.keys(props.document.derivativeNames).length > 2 ? 2 : 1]}
-        />
+      return (props.tagExplorerMode
+        ? <EmptyPaneView side={side} documentView={docView} />
+        : (
+            <ImageGridView
+              key={key}
+              documentView={docView}
+              documentViewActions={documentViewActions}
+              side={side}
+              selectedDoc={document || props.document.variorum && Object.keys(props.document.derivativeNames)[side === 'left' ? 0 : side === 'right' ? 1 : Object.keys(props.document.derivativeNames).length > 2 ? 2 : 1]}
+            />
+          )
       )
     }
 
     if (viewType === 'GlossaryView') {
       return (
         <GlossaryView
+          key={key}
+          documentView={docView}
+          documentViewActions={documentViewActions}
+          side={side}
+        />
+      )
+    }
+    if (viewType === 'NotesView') {
+      return (
+        <NotesView
           key={key}
           documentView={docView}
           documentViewActions={documentViewActions}

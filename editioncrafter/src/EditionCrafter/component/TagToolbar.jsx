@@ -1,4 +1,4 @@
-import { useContext } from 'react'
+import { useContext, useMemo } from 'react'
 import { BsCheck, BsX } from 'react-icons/bs'
 import { GoTag } from 'react-icons/go'
 import TagFilterContext from '../context/TagFilterContext'
@@ -17,7 +17,8 @@ function TagPill(props) {
 }
 
 function TagToolbar(props) {
-  const { tags, toggleTag } = useContext(TagFilterContext)
+  const { tagsLeft, tagsRight, toggleTag } = useContext(TagFilterContext)
+  const tags = useMemo(() => (props.side === 'right' ? tagsRight : tagsLeft), [props.side, tagsRight, tagsLeft])
 
   return (
     <div className="tag-bar">
@@ -27,7 +28,16 @@ function TagToolbar(props) {
           Tags
         </span>
         {props.folio.tagIds.map((xmlId) => {
-          const name = props.document.tags[xmlId]
+          let name
+
+          if (props.document.variorum) {
+            name = props.document.tags[props.folio.doc_id]
+              ? props.document.tags[props.folio.doc_id][xmlId]
+              : undefined
+          }
+          else {
+            name = props.document.tags[xmlId]
+          }
 
           if (name) {
             return (
@@ -35,7 +45,7 @@ function TagToolbar(props) {
                 isActive={tags.includes(xmlId)}
                 key={xmlId}
                 name={name}
-                onClick={() => toggleTag(xmlId)}
+                onClick={() => toggleTag(xmlId, props.side)}
               />
             )
           }

@@ -1,6 +1,6 @@
 import { useContext, useMemo } from 'react'
+import { getObjs } from '../../common/lib/sql'
 import FilterContext from '../context/FilterContext'
-import { getObjs } from '../lib/sql'
 import Record from './Record'
 
 function cleanUpTagIds(obj) {

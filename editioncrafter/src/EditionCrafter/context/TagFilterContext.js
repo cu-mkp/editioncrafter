@@ -1,7 +1,8 @@
 import { createContext } from 'react'
 
 const TagFilterContext = createContext({
-  tags: [],
+  tagsLeft: [],
+  tagsRight: [],
   toggleTag: () => null,
 })
 

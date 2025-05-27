@@ -1,7 +1,7 @@
 import { useContext, useMemo } from 'react'
 import { IoCheckmarkSharp } from 'react-icons/io5'
+import Pill from '../../common/components/Pill'
 import FilterContext from '../context/FilterContext'
-import Pill from './Pill'
 
 function TagPill(props) {
   const { categories, toggleCategoryFilter, tags, toggleTagFilter } = useContext(FilterContext)

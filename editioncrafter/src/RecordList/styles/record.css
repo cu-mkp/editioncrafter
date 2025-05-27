@@ -36,13 +36,34 @@
   align-items: center;
   font-size: 14px;
   font-weight: 500;
+  position: relative;
 }
 
 .editioncrafter-record-list .record-list-view .record-box .tag-list .tag-list-label {
   font-weight: 600;
 }
 
-.editioncrafter-record-list .record-list-view .record-box .tag-list .pill {
+.editioncrafter-record-list .record-list-view .record-box .phrase-toggle {
+  position: absolute;
+  right: 0;
+  bottom: 2px;
+  background: #07529A;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+}
+
+.editioncrafter-record-list .record-list-view .record-box .phrase-toggle svg {
+  height: 18px;
+  width: 18px;
+}
+
+.editioncrafter-record-list .record-list-view .record-box .tag-list .pill,
+.editioncrafter-record-list .record-list-view .record-box .phrase-list-table .pill {
   background: #ffffff;
   display: flex;
   height: 32px;
@@ -59,7 +80,7 @@
   color: #ffffff
 }
 
-.editioncrafter-record-list .record-list-view .record-box .tag-list .pill .tag-count {
+.editioncrafter-record-list .record-list-view .record-box .pill .tag-count {
   display: inline-flex;
   height: 24px;
   min-width: 24px;
@@ -73,12 +94,79 @@
   background: #B5C8DC99;
 }
 
-.editioncrafter-record-list .record-list-view .record-box .tag-list .pill.active {
+.editioncrafter-record-list .record-list-view .record-box .pill.active {
   border: 1px solid #07529A;
   color: #07529A;
 }
 
-.editioncrafter-record-list .record-list-view .record-box .tag-list .pill.active .tag-count {
+.editioncrafter-record-list .record-list-view .record-box .pill.active .tag-count {
   background: #07529A;
   color: #ffffff;
+}
+
+.editioncrafter-record-list .record-list-view .record-box .phrase-list-table-container {
+  position: relative;
+}
+
+.editioncrafter-record-list .record-list-view .record-box .phrase-list-table-container .layer-select-container {
+  position: absolute;
+  right: 10px;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+}
+
+.editioncrafter-record-list .record-list-view .record-box .phrase-list-table-container button:hover {
+  cursor: default;
+}
+
+.editioncrafter-record-list .record-list-view .record-box .phrase-list-table-container .layer-select {
+  display: flex;
+  height: 32px;
+  padding: 0px 12px;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  border-radius: 4px;
+  border: 1px solid#E1E3E6;
+  background:#F3F4F7;
+}
+
+.editioncrafter-record-list .record-list-view .record-box .phrase-list-table-container .layer-select:hover {
+  cursor: pointer;
+}
+
+.editioncrafter-record-list .record-list-view .record-box .phrase-list-table th {
+  font-weight: 600;
+}
+
+.editioncrafter-record-list .record-list-view .record-box .phrase-list-table {
+  text-align: left;
+  border-collapse: collapse;
+  font-size: 14px;
+  width: 100%;
+}
+
+.editioncrafter-record-list .record-list-view .record-box .phrase-list-table tr {
+  border-bottom: 1px solid #E1E3E6;
+}
+
+.editioncrafter-record-list .record-list-view .record-box .phrase-list-table td,
+.editioncrafter-record-list .record-list-view .record-box .phrase-list-table th {
+  padding: 12px;
+
+}
+
+.editioncrafter-record-list .record-list-view .record-box .phrase-list-table .empty-table-container {
+  height: 80px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

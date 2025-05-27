@@ -1,0 +1,26 @@
+<text xmlns="http://www.tei-c.org/ns/1.0" xml:id="text-2"><body><pb facs="#f000"/>
+			<div facs="#f000_z085">
+				<p><foreign xml:lang="fr"><objectType>Mansches de<lb/> Coutiaus</objectType>, aveques<lb/> <objectType>les feremens de la gaine</objectType>,<lb/> de </foreign><distinct type="variety"><foreign xml:lang="fr">plusieurs sortes</foreign></distinct><foreign xml:lang="fr"/><distinct type="utility"><foreign xml:lang="fr">fort<lb/> profitable</foreign></distinct><foreign xml:lang="fr"> pour les </foreign><name type="profession"><foreign xml:lang="fr">argentiers</foreign></name><foreign xml:lang="fr"><lb/> ou </foreign><name type="profession"><foreign xml:lang="fr">aultres artisiens</foreign></name><foreign xml:lang="fr">, fair par</foreign><lb/> <name type="printmaker+publisher+designer">Io: Theodori de Brÿ</name>.</p>
+				<p>
+					<foreign xml:lang="de"><objectType>Neuwe Messer hauben</objectType> mit di<lb/> <objectType>beschlagē zu der scheiden</objectType> auf<lb/></foreign>
+					<distinct type="variety">
+						<foreign xml:lang="de">måncherleÿ weiss</foreign>
+					</distinct>
+					<foreign xml:lang="de">
+					</foreign>
+					<distinct type="utility">
+						<foreign xml:lang="de">zehr<lb/> nutzlich</foreign>
+					</distinct>
+					<foreign xml:lang="de"> fur </foreign>
+					<name type="profession">
+						<foreign xml:lang="de">goltschmid=<lb/> en</foreign>
+					</name>
+					<foreign xml:lang="de"> und </foreign>
+					<name type="profession">
+						<foreign xml:lang="de">andere<lb/> liebhaber</foreign>
+					</name>
+					<foreign xml:lang="de">.</foreign>
+				</p>
+			</div>
+		</body>
+	</text>
