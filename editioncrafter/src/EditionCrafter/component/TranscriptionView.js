@@ -107,8 +107,6 @@ function htmlToReactParserOptions(selectedZone, selectedTags) {
 function TranscriptionView(props) {
   const [searchParams] = useSearchParams()
 
-  const { tags } = useContext(TagFilterContext)
-
   const {
     side,
     folioID,
@@ -117,6 +115,9 @@ function TranscriptionView(props) {
     documentView,
     documentViewActions,
   } = props
+
+  const { tagsLeft, tagsRight } = useContext(TagFilterContext)
+  const tags = side === 'left' ? tagsLeft : tagsRight
 
   if (folioID === '-1') {
     return (
