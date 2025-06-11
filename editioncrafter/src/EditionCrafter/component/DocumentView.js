@@ -1,5 +1,5 @@
 import withWidth, { isWidthUp } from '@material-ui/core/withWidth'
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useMemo, useState } from 'react'
 import { connect } from 'react-redux'
 import {
   useLocation,
@@ -30,13 +30,55 @@ function DocumentView(props) {
   const [third, setThird] = useState(paneDefaults)
   const [singlePaneMode, setSinglePaneMode] = useState(props.containerWidth < 960)
 
-  const params = useParams()
-  const navigate = useNavigate()
+  const navigateRouter = useNavigate()
+  const navigateWindow = (path) => {
+    window.location.href = path
+  }
+  /**
+   * Memoize the navigation method
+   */
+  const navigate = useMemo(() => (props.config.serverNav
+    ? (props.config.navigate || navigateWindow)
+    : navigateRouter), [props.config.serverNav, props.config.navigate, navigateRouter])
+
+  /**
+   * Memoize the URL divider ('ec' by default)
+   */
+  const divider = useMemo(() => (props.config.divider || '/ec'), [props.config.divider])
   const location = useLocation()
+
+  /**
+   * Memoize the base URL of the current page (before the divider)
+   */
+  const baseUrl = useMemo(() => (
+    props.config.serverNav
+      ? location.pathname.split(divider)[0]
+      : null
+  ), [props.config.serverNav, location, divider])
+
+  const routerParams = useParams()
+
+  /**
+   * Memoize the folio parameters
+   */
+  const params = useMemo(() => {
+    if (!props.config.serverNav) {
+      return routerParams
+    }
+    const suffix = location.pathname.split(divider)[1]?.split('/')
+    return ({
+      folioID: suffix[1],
+      transcriptionType: suffix[2],
+      folioID2: suffix[3],
+      transcriptionType2: suffix[4],
+      folioID3: suffix[5],
+      transcriptionType3: suffix[6],
+    })
+  }, [location, routerParams, props.config.serverNav, divider])
 
   // "reload" the page if the config props change
   useEffect(() => {
-    dispatchAction(props, 'RouteListenerSaga.userNavigation', location.pathname)
+    dispatchAction(props, 'RouteListenerSaga.userNavigation', location.pathname, divider.replaceAll('/', ''))
   }, [props.config])
 
   useEffect(() => {
@@ -45,7 +87,7 @@ function DocumentView(props) {
 
   // Navigate while keeping existing search params
   const navigateWithParams = (pathname) => {
-    navigate(pathname + location.search)
+    navigate(baseUrl + pathname + location.search)
   }
 
   const getViewports = () => {
@@ -125,7 +167,7 @@ function DocumentView(props) {
 
   useEffect(() => {
     dispatchAction(props, 'DiplomaticActions.setFixedFrameMode', true)
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   const setXMLMode = (side, xmlMode) => {
