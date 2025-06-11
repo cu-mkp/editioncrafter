@@ -1,5 +1,5 @@
-import { useEffect, useState } from 'react'
-import { HashRouter } from 'react-router-dom'
+import { useEffect, useMemo, useState } from 'react'
+import { BrowserRouter, HashRouter } from 'react-router-dom'
 import initSqlJs from 'sql.js'
 import sqlJsInfo from 'sql.js/package.json'
 import Loading from '../common/components/Loading'
@@ -71,6 +71,8 @@ function TagExplore(props) {
   const [ecProps, setECProps] = useState(null)
   const [filters, setFilters] = useState(initialFilters)
 
+  const Router = useMemo(() => props.serverNav ? BrowserRouter : HashRouter, [props.serverNav])
+
   useEffect(() => {
     const loadDb = async () => {
       const db = await initDb(props.dbUrl)
@@ -96,12 +98,12 @@ function TagExplore(props) {
 
   return (
     <div className="tag-explore">
-      <HashRouter>
+      <Router>
         <TagFilterProvider>
           <TagExploreSidebar db={db} />
           <EditionCrafter {...ecProps} />
         </TagFilterProvider>
-      </HashRouter>
+      </Router>
     </div>
   )
 }
