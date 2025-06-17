@@ -81,7 +81,7 @@ export function SimpleImages() {
       transcriptionTypes={{
         text: 'Translation',
       }}
-      iiifManifest="/images-example/iiif/manifest.json"
+      iiifManifest="/editioncrafter/images-example/iiif/manifest.json"
     />
   )
 }
@@ -173,7 +173,7 @@ export function OrnamentDesignTranslation() {
 export function RecordListExample() {
   return (
     <RecordList
-      dbUrl="/database-example/example.sqlite"
+      dbUrl="/editioncrafter/database-example/example.sqlite"
       recordLabel="Entries"
       layers={{
         tc: 'Diplomatic (FR)',
@@ -196,7 +196,7 @@ export function TaxonomyExample() {
         tl: 'Translation (EN)',
         test: 'Test Field (EN)',
       }}
-      iiifManifest="/database-example/iiif/manifest.json"
+      iiifManifest="/editioncrafter/database-example/iiif/manifest.json"
     />
   )
 }
@@ -272,7 +272,7 @@ export function TagExploreExample() {
   return (
     <TagExplore
       documentName="Ornament : Design : Translation"
-      dbUrl="/odt.sqlite"
+      dbUrl="/editioncrafter/odt.sqlite"
       transcriptionTypes={{
         'text-1': 'Text 1',
         'text-2': 'Text 2',
