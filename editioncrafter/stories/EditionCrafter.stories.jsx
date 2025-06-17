@@ -277,7 +277,7 @@ export function TagExploreExample() {
         'text-1': 'Text 1',
         'text-2': 'Text 2',
       }}
-      baseURL="."
+      baseURL="/editioncrafter"
     />
   )
 }
