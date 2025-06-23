@@ -239,6 +239,10 @@
 		<surface xml:id="f010" ulx="0" uly="0" lrx="3369" lry="5417" sameAs="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f11">
 			<label>3r</label>
 			<graphic mimeType="application/json" url="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/f11"/>
+			<zone xml:id="example-zone-1" ana="#cat-wax_process" ulx="2024" uly="2527.011474609375" lrx="3703.915283203125" lry="3045.739013671875"/>
+			<zone xml:id="example-zone-2" ana="#rs-pn" ulx="415.31488037109375" uly="283.0415954589844" lrx="2085.26025390625" lry="867.9942016601562"/>
+			<zone xml:id="example-zone-3" ana="#rs-m" ulx="415.9102478027344" uly="2292.08154296875" lrx="2084.415771484375" lry="3050.935302734375"/>
+			<zone xml:id="example-zone-4" ana="#rs-m" ulx="2094.14453125" uly="331.70928955078125" lrx="3757.78564453125" lry="1494.3121337890625"/>
 		</surface>
 		<surface xml:id="f011" ulx="0" uly="0" lrx="3393" lry="5426" sameAs="https://gallica.bnf.fr/iiif/ark:/12148/btv1b10500001g/canvas/f12">
 			<label>3v</label>
