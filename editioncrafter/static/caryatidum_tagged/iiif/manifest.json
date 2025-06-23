@@ -3,20 +3,20 @@
 		"http://www.w3.org/ns/anno.jsonld",
 		"http://iiif.io/api/presentation/3/context.json"
 	],
-	"id": "/caryatidum_tagged/iiif/manifest.json",
+	"id": "/editioncrafter/caryatidum_tagged/iiif/manifest.json",
 	"type": "Manifest",
 	"items": [
 		{
-			"id": "/caryatidum_tagged/iiif/canvas/f000",
+			"id": "/editioncrafter/caryatidum_tagged/iiif/canvas/f000",
 			"type": "Canvas",
 			"items": [
 				{
-					"id": "/caryatidum_tagged/iiif/canvas/f000/annotationpage/0",
+					"id": "/editioncrafter/caryatidum_tagged/iiif/canvas/f000/annotationpage/0",
 					"type": "AnnotationPage",
 					"items": [
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "/caryatidum_tagged/iiif/canvas/f000/annotationpage/0/annotation/0",
+							"id": "/editioncrafter/caryatidum_tagged/iiif/canvas/f000/annotationpage/0/annotation/0",
 							"type": "Annotation",
 							"motivation": "painting",
 							"body": {
@@ -33,7 +33,7 @@
 									}
 								]
 							},
-							"target": "/caryatidum_tagged/iiif/canvas/f000"
+							"target": "/editioncrafter/caryatidum_tagged/iiif/canvas/f000"
 						}
 					]
 				}
@@ -3444,76 +3444,76 @@
 					}
 				},
 				{
-					"id": "/caryatidum_tagged/iiif/canvas/f000/annotationPage/1",
+					"id": "/editioncrafter/caryatidum_tagged/iiif/canvas/f000/annotationPage/1",
 					"type": "AnnotationPage",
 					"items": [
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "/caryatidum_tagged/iiif/canvas/f000/annotationPage/1/annotation/0",
+							"id": "/editioncrafter/caryatidum_tagged/iiif/canvas/f000/annotationPage/1/annotation/0",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "/caryatidum_tagged/tei/text-1/f000.xml",
+								"id": "/editioncrafter/caryatidum_tagged/tei/text-1/f000.xml",
 								"format": "text/xml",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "/caryatidum_tagged/iiif/canvas/f000"
+							"target": "/editioncrafter/caryatidum_tagged/iiif/canvas/f000"
 						},
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "/caryatidum_tagged/iiif/canvas/f000/annotationPage/1/annotation/1",
+							"id": "/editioncrafter/caryatidum_tagged/iiif/canvas/f000/annotationPage/1/annotation/1",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "/caryatidum_tagged/tei/text-2/f000.xml",
+								"id": "/editioncrafter/caryatidum_tagged/tei/text-2/f000.xml",
 								"format": "text/xml",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "/caryatidum_tagged/iiif/canvas/f000"
+							"target": "/editioncrafter/caryatidum_tagged/iiif/canvas/f000"
 						},
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "/caryatidum_tagged/iiif/canvas/f000/annotationPage/1/annotation/2",
+							"id": "/editioncrafter/caryatidum_tagged/iiif/canvas/f000/annotationPage/1/annotation/2",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "/caryatidum_tagged/html/text-1/f000.html",
+								"id": "/editioncrafter/caryatidum_tagged/html/text-1/f000.html",
 								"format": "text/html",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "/caryatidum_tagged/iiif/canvas/f000"
+							"target": "/editioncrafter/caryatidum_tagged/iiif/canvas/f000"
 						},
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "/caryatidum_tagged/iiif/canvas/f000/annotationPage/1/annotation/3",
+							"id": "/editioncrafter/caryatidum_tagged/iiif/canvas/f000/annotationPage/1/annotation/3",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "/caryatidum_tagged/html/text-2/f000.html",
+								"id": "/editioncrafter/caryatidum_tagged/html/text-2/f000.html",
 								"format": "text/html",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "/caryatidum_tagged/iiif/canvas/f000"
+							"target": "/editioncrafter/caryatidum_tagged/iiif/canvas/f000"
 						}
 					]
 				}
 			]
 		},
 		{
-			"id": "/caryatidum_tagged/iiif/canvas/f001",
+			"id": "/editioncrafter/caryatidum_tagged/iiif/canvas/f001",
 			"type": "Canvas",
 			"items": [
 				{
-					"id": "/caryatidum_tagged/iiif/canvas/f001/annotationpage/0",
+					"id": "/editioncrafter/caryatidum_tagged/iiif/canvas/f001/annotationpage/0",
 					"type": "AnnotationPage",
 					"items": [
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "/caryatidum_tagged/iiif/canvas/f001/annotationpage/0/annotation/0",
+							"id": "/editioncrafter/caryatidum_tagged/iiif/canvas/f001/annotationpage/0/annotation/0",
 							"type": "Annotation",
 							"motivation": "painting",
 							"body": {
@@ -3530,7 +3530,7 @@
 									}
 								]
 							},
-							"target": "/caryatidum_tagged/iiif/canvas/f001"
+							"target": "/editioncrafter/caryatidum_tagged/iiif/canvas/f001"
 						}
 					]
 				}
@@ -5868,16 +5868,16 @@
 			]
 		},
 		{
-			"id": "/caryatidum_tagged/iiif/canvas/f002",
+			"id": "/editioncrafter/caryatidum_tagged/iiif/canvas/f002",
 			"type": "Canvas",
 			"items": [
 				{
-					"id": "/caryatidum_tagged/iiif/canvas/f002/annotationpage/0",
+					"id": "/editioncrafter/caryatidum_tagged/iiif/canvas/f002/annotationpage/0",
 					"type": "AnnotationPage",
 					"items": [
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "/caryatidum_tagged/iiif/canvas/f002/annotationpage/0/annotation/0",
+							"id": "/editioncrafter/caryatidum_tagged/iiif/canvas/f002/annotationpage/0/annotation/0",
 							"type": "Annotation",
 							"motivation": "painting",
 							"body": {
@@ -5894,7 +5894,7 @@
 									}
 								]
 							},
-							"target": "/caryatidum_tagged/iiif/canvas/f002"
+							"target": "/editioncrafter/caryatidum_tagged/iiif/canvas/f002"
 						}
 					]
 				}
@@ -7804,16 +7804,16 @@
 			]
 		},
 		{
-			"id": "/caryatidum_tagged/iiif/canvas/f003",
+			"id": "/editioncrafter/caryatidum_tagged/iiif/canvas/f003",
 			"type": "Canvas",
 			"items": [
 				{
-					"id": "/caryatidum_tagged/iiif/canvas/f003/annotationpage/0",
+					"id": "/editioncrafter/caryatidum_tagged/iiif/canvas/f003/annotationpage/0",
 					"type": "AnnotationPage",
 					"items": [
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "/caryatidum_tagged/iiif/canvas/f003/annotationpage/0/annotation/0",
+							"id": "/editioncrafter/caryatidum_tagged/iiif/canvas/f003/annotationpage/0/annotation/0",
 							"type": "Annotation",
 							"motivation": "painting",
 							"body": {
@@ -7830,7 +7830,7 @@
 									}
 								]
 							},
-							"target": "/caryatidum_tagged/iiif/canvas/f003"
+							"target": "/editioncrafter/caryatidum_tagged/iiif/canvas/f003"
 						}
 					]
 				}
@@ -10172,16 +10172,16 @@
 			]
 		},
 		{
-			"id": "/caryatidum_tagged/iiif/canvas/f004",
+			"id": "/editioncrafter/caryatidum_tagged/iiif/canvas/f004",
 			"type": "Canvas",
 			"items": [
 				{
-					"id": "/caryatidum_tagged/iiif/canvas/f004/annotationpage/0",
+					"id": "/editioncrafter/caryatidum_tagged/iiif/canvas/f004/annotationpage/0",
 					"type": "AnnotationPage",
 					"items": [
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "/caryatidum_tagged/iiif/canvas/f004/annotationpage/0/annotation/0",
+							"id": "/editioncrafter/caryatidum_tagged/iiif/canvas/f004/annotationpage/0/annotation/0",
 							"type": "Annotation",
 							"motivation": "painting",
 							"body": {
@@ -10198,7 +10198,7 @@
 									}
 								]
 							},
-							"target": "/caryatidum_tagged/iiif/canvas/f004"
+							"target": "/editioncrafter/caryatidum_tagged/iiif/canvas/f004"
 						}
 					]
 				}
@@ -13458,16 +13458,16 @@
 			]
 		},
 		{
-			"id": "/caryatidum_tagged/iiif/canvas/f005",
+			"id": "/editioncrafter/caryatidum_tagged/iiif/canvas/f005",
 			"type": "Canvas",
 			"items": [
 				{
-					"id": "/caryatidum_tagged/iiif/canvas/f005/annotationpage/0",
+					"id": "/editioncrafter/caryatidum_tagged/iiif/canvas/f005/annotationpage/0",
 					"type": "AnnotationPage",
 					"items": [
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "/caryatidum_tagged/iiif/canvas/f005/annotationpage/0/annotation/0",
+							"id": "/editioncrafter/caryatidum_tagged/iiif/canvas/f005/annotationpage/0/annotation/0",
 							"type": "Annotation",
 							"motivation": "painting",
 							"body": {
@@ -13484,7 +13484,7 @@
 									}
 								]
 							},
-							"target": "/caryatidum_tagged/iiif/canvas/f005"
+							"target": "/editioncrafter/caryatidum_tagged/iiif/canvas/f005"
 						}
 					]
 				}
@@ -16108,16 +16108,16 @@
 			]
 		},
 		{
-			"id": "/caryatidum_tagged/iiif/canvas/f006",
+			"id": "/editioncrafter/caryatidum_tagged/iiif/canvas/f006",
 			"type": "Canvas",
 			"items": [
 				{
-					"id": "/caryatidum_tagged/iiif/canvas/f006/annotationpage/0",
+					"id": "/editioncrafter/caryatidum_tagged/iiif/canvas/f006/annotationpage/0",
 					"type": "AnnotationPage",
 					"items": [
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "/caryatidum_tagged/iiif/canvas/f006/annotationpage/0/annotation/0",
+							"id": "/editioncrafter/caryatidum_tagged/iiif/canvas/f006/annotationpage/0/annotation/0",
 							"type": "Annotation",
 							"motivation": "painting",
 							"body": {
@@ -16134,7 +16134,7 @@
 									}
 								]
 							},
-							"target": "/caryatidum_tagged/iiif/canvas/f006"
+							"target": "/editioncrafter/caryatidum_tagged/iiif/canvas/f006"
 						}
 					]
 				}
@@ -19079,16 +19079,16 @@
 			]
 		},
 		{
-			"id": "/caryatidum_tagged/iiif/canvas/f007",
+			"id": "/editioncrafter/caryatidum_tagged/iiif/canvas/f007",
 			"type": "Canvas",
 			"items": [
 				{
-					"id": "/caryatidum_tagged/iiif/canvas/f007/annotationpage/0",
+					"id": "/editioncrafter/caryatidum_tagged/iiif/canvas/f007/annotationpage/0",
 					"type": "AnnotationPage",
 					"items": [
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "/caryatidum_tagged/iiif/canvas/f007/annotationpage/0/annotation/0",
+							"id": "/editioncrafter/caryatidum_tagged/iiif/canvas/f007/annotationpage/0/annotation/0",
 							"type": "Annotation",
 							"motivation": "painting",
 							"body": {
@@ -19105,7 +19105,7 @@
 									}
 								]
 							},
-							"target": "/caryatidum_tagged/iiif/canvas/f007"
+							"target": "/editioncrafter/caryatidum_tagged/iiif/canvas/f007"
 						}
 					]
 				}
@@ -21193,16 +21193,16 @@
 			]
 		},
 		{
-			"id": "/caryatidum_tagged/iiif/canvas/f008",
+			"id": "/editioncrafter/caryatidum_tagged/iiif/canvas/f008",
 			"type": "Canvas",
 			"items": [
 				{
-					"id": "/caryatidum_tagged/iiif/canvas/f008/annotationpage/0",
+					"id": "/editioncrafter/caryatidum_tagged/iiif/canvas/f008/annotationpage/0",
 					"type": "AnnotationPage",
 					"items": [
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "/caryatidum_tagged/iiif/canvas/f008/annotationpage/0/annotation/0",
+							"id": "/editioncrafter/caryatidum_tagged/iiif/canvas/f008/annotationpage/0/annotation/0",
 							"type": "Annotation",
 							"motivation": "painting",
 							"body": {
@@ -21219,7 +21219,7 @@
 									}
 								]
 							},
-							"target": "/caryatidum_tagged/iiif/canvas/f008"
+							"target": "/editioncrafter/caryatidum_tagged/iiif/canvas/f008"
 						}
 					]
 				}
@@ -24447,16 +24447,16 @@
 			]
 		},
 		{
-			"id": "/caryatidum_tagged/iiif/canvas/f009",
+			"id": "/editioncrafter/caryatidum_tagged/iiif/canvas/f009",
 			"type": "Canvas",
 			"items": [
 				{
-					"id": "/caryatidum_tagged/iiif/canvas/f009/annotationpage/0",
+					"id": "/editioncrafter/caryatidum_tagged/iiif/canvas/f009/annotationpage/0",
 					"type": "AnnotationPage",
 					"items": [
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "/caryatidum_tagged/iiif/canvas/f009/annotationpage/0/annotation/0",
+							"id": "/editioncrafter/caryatidum_tagged/iiif/canvas/f009/annotationpage/0/annotation/0",
 							"type": "Annotation",
 							"motivation": "painting",
 							"body": {
@@ -24473,7 +24473,7 @@
 									}
 								]
 							},
-							"target": "/caryatidum_tagged/iiif/canvas/f009"
+							"target": "/editioncrafter/caryatidum_tagged/iiif/canvas/f009"
 						}
 					]
 				}
@@ -27374,16 +27374,16 @@
 			]
 		},
 		{
-			"id": "/caryatidum_tagged/iiif/canvas/f010",
+			"id": "/editioncrafter/caryatidum_tagged/iiif/canvas/f010",
 			"type": "Canvas",
 			"items": [
 				{
-					"id": "/caryatidum_tagged/iiif/canvas/f010/annotationpage/0",
+					"id": "/editioncrafter/caryatidum_tagged/iiif/canvas/f010/annotationpage/0",
 					"type": "AnnotationPage",
 					"items": [
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "/caryatidum_tagged/iiif/canvas/f010/annotationpage/0/annotation/0",
+							"id": "/editioncrafter/caryatidum_tagged/iiif/canvas/f010/annotationpage/0/annotation/0",
 							"type": "Annotation",
 							"motivation": "painting",
 							"body": {
@@ -27400,7 +27400,7 @@
 									}
 								]
 							},
-							"target": "/caryatidum_tagged/iiif/canvas/f010"
+							"target": "/editioncrafter/caryatidum_tagged/iiif/canvas/f010"
 						}
 					]
 				}
@@ -30782,16 +30782,16 @@
 			]
 		},
 		{
-			"id": "/caryatidum_tagged/iiif/canvas/f011",
+			"id": "/editioncrafter/caryatidum_tagged/iiif/canvas/f011",
 			"type": "Canvas",
 			"items": [
 				{
-					"id": "/caryatidum_tagged/iiif/canvas/f011/annotationpage/0",
+					"id": "/editioncrafter/caryatidum_tagged/iiif/canvas/f011/annotationpage/0",
 					"type": "AnnotationPage",
 					"items": [
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "/caryatidum_tagged/iiif/canvas/f011/annotationpage/0/annotation/0",
+							"id": "/editioncrafter/caryatidum_tagged/iiif/canvas/f011/annotationpage/0/annotation/0",
 							"type": "Annotation",
 							"motivation": "painting",
 							"body": {
@@ -30808,7 +30808,7 @@
 									}
 								]
 							},
-							"target": "/caryatidum_tagged/iiif/canvas/f011"
+							"target": "/editioncrafter/caryatidum_tagged/iiif/canvas/f011"
 						}
 					]
 				}
@@ -34082,16 +34082,16 @@
 			]
 		},
 		{
-			"id": "/caryatidum_tagged/iiif/canvas/f012",
+			"id": "/editioncrafter/caryatidum_tagged/iiif/canvas/f012",
 			"type": "Canvas",
 			"items": [
 				{
-					"id": "/caryatidum_tagged/iiif/canvas/f012/annotationpage/0",
+					"id": "/editioncrafter/caryatidum_tagged/iiif/canvas/f012/annotationpage/0",
 					"type": "AnnotationPage",
 					"items": [
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "/caryatidum_tagged/iiif/canvas/f012/annotationpage/0/annotation/0",
+							"id": "/editioncrafter/caryatidum_tagged/iiif/canvas/f012/annotationpage/0/annotation/0",
 							"type": "Annotation",
 							"motivation": "painting",
 							"body": {
@@ -34108,7 +34108,7 @@
 									}
 								]
 							},
-							"target": "/caryatidum_tagged/iiif/canvas/f012"
+							"target": "/editioncrafter/caryatidum_tagged/iiif/canvas/f012"
 						}
 					]
 				}
@@ -35935,16 +35935,16 @@
 			]
 		},
 		{
-			"id": "/caryatidum_tagged/iiif/canvas/f013",
+			"id": "/editioncrafter/caryatidum_tagged/iiif/canvas/f013",
 			"type": "Canvas",
 			"items": [
 				{
-					"id": "/caryatidum_tagged/iiif/canvas/f013/annotationpage/0",
+					"id": "/editioncrafter/caryatidum_tagged/iiif/canvas/f013/annotationpage/0",
 					"type": "AnnotationPage",
 					"items": [
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "/caryatidum_tagged/iiif/canvas/f013/annotationpage/0/annotation/0",
+							"id": "/editioncrafter/caryatidum_tagged/iiif/canvas/f013/annotationpage/0/annotation/0",
 							"type": "Annotation",
 							"motivation": "painting",
 							"body": {
@@ -35961,7 +35961,7 @@
 									}
 								]
 							},
-							"target": "/caryatidum_tagged/iiif/canvas/f013"
+							"target": "/editioncrafter/caryatidum_tagged/iiif/canvas/f013"
 						}
 					]
 				}
@@ -39176,16 +39176,16 @@
 			]
 		},
 		{
-			"id": "/caryatidum_tagged/iiif/canvas/f014",
+			"id": "/editioncrafter/caryatidum_tagged/iiif/canvas/f014",
 			"type": "Canvas",
 			"items": [
 				{
-					"id": "/caryatidum_tagged/iiif/canvas/f014/annotationpage/0",
+					"id": "/editioncrafter/caryatidum_tagged/iiif/canvas/f014/annotationpage/0",
 					"type": "AnnotationPage",
 					"items": [
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "/caryatidum_tagged/iiif/canvas/f014/annotationpage/0/annotation/0",
+							"id": "/editioncrafter/caryatidum_tagged/iiif/canvas/f014/annotationpage/0/annotation/0",
 							"type": "Annotation",
 							"motivation": "painting",
 							"body": {
@@ -39202,7 +39202,7 @@
 									}
 								]
 							},
-							"target": "/caryatidum_tagged/iiif/canvas/f014"
+							"target": "/editioncrafter/caryatidum_tagged/iiif/canvas/f014"
 						}
 					]
 				}
@@ -42681,16 +42681,16 @@
 			]
 		},
 		{
-			"id": "/caryatidum_tagged/iiif/canvas/f015",
+			"id": "/editioncrafter/caryatidum_tagged/iiif/canvas/f015",
 			"type": "Canvas",
 			"items": [
 				{
-					"id": "/caryatidum_tagged/iiif/canvas/f015/annotationpage/0",
+					"id": "/editioncrafter/caryatidum_tagged/iiif/canvas/f015/annotationpage/0",
 					"type": "AnnotationPage",
 					"items": [
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "/caryatidum_tagged/iiif/canvas/f015/annotationpage/0/annotation/0",
+							"id": "/editioncrafter/caryatidum_tagged/iiif/canvas/f015/annotationpage/0/annotation/0",
 							"type": "Annotation",
 							"motivation": "painting",
 							"body": {
@@ -42707,7 +42707,7 @@
 									}
 								]
 							},
-							"target": "/caryatidum_tagged/iiif/canvas/f015"
+							"target": "/editioncrafter/caryatidum_tagged/iiif/canvas/f015"
 						}
 					]
 				}
@@ -46090,16 +46090,16 @@
 			]
 		},
 		{
-			"id": "/caryatidum_tagged/iiif/canvas/f016",
+			"id": "/editioncrafter/caryatidum_tagged/iiif/canvas/f016",
 			"type": "Canvas",
 			"items": [
 				{
-					"id": "/caryatidum_tagged/iiif/canvas/f016/annotationpage/0",
+					"id": "/editioncrafter/caryatidum_tagged/iiif/canvas/f016/annotationpage/0",
 					"type": "AnnotationPage",
 					"items": [
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "/caryatidum_tagged/iiif/canvas/f016/annotationpage/0/annotation/0",
+							"id": "/editioncrafter/caryatidum_tagged/iiif/canvas/f016/annotationpage/0/annotation/0",
 							"type": "Annotation",
 							"motivation": "painting",
 							"body": {
@@ -46116,7 +46116,7 @@
 									}
 								]
 							},
-							"target": "/caryatidum_tagged/iiif/canvas/f016"
+							"target": "/editioncrafter/caryatidum_tagged/iiif/canvas/f016"
 						}
 					]
 				}
