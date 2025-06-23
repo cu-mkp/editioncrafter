@@ -181,7 +181,7 @@ export function RecordListExample() {
         tl: 'Translation (EN)',
         test: 'Test Field (EN)',
       }}
-      viewerUrl="http://localhost:6006/iframe.html?globals=&id=editioncrafter--taxonomy-example&viewMode=story"
+      viewerUrl="https://performant-software.github.io/editioncrafter/iframe.html?args=&globals=&id=editioncrafter--taxonomy-example&viewMode=story"
     />
   )
 }
