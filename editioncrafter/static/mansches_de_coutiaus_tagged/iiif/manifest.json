@@ -3,20 +3,20 @@
 		"http://www.w3.org/ns/anno.jsonld",
 		"http://iiif.io/api/presentation/3/context.json"
 	],
-	"id": "/mansches_de_coutiaus_tagged/iiif/manifest.json",
+	"id": "/editioncrafter/mansches_de_coutiaus_tagged/iiif/manifest.json",
 	"type": "Manifest",
 	"items": [
 		{
-			"id": "/mansches_de_coutiaus_tagged/iiif/canvas/f000",
+			"id": "/editioncrafter/mansches_de_coutiaus_tagged/iiif/canvas/f000",
 			"type": "Canvas",
 			"items": [
 				{
-					"id": "/mansches_de_coutiaus_tagged/iiif/canvas/f000/annotationpage/0",
+					"id": "/editioncrafter/mansches_de_coutiaus_tagged/iiif/canvas/f000/annotationpage/0",
 					"type": "AnnotationPage",
 					"items": [
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "/mansches_de_coutiaus_tagged/iiif/canvas/f000/annotationpage/0/annotation/0",
+							"id": "/editioncrafter/mansches_de_coutiaus_tagged/iiif/canvas/f000/annotationpage/0/annotation/0",
 							"type": "Annotation",
 							"motivation": "painting",
 							"body": {
@@ -33,7 +33,7 @@
 									}
 								]
 							},
-							"target": "/mansches_de_coutiaus_tagged/iiif/canvas/f000"
+							"target": "/editioncrafter/mansches_de_coutiaus_tagged/iiif/canvas/f000"
 						}
 					]
 				}
@@ -2616,76 +2616,76 @@
 					}
 				},
 				{
-					"id": "/mansches_de_coutiaus_tagged/iiif/canvas/f000/annotationPage/1",
+					"id": "/editioncrafter/mansches_de_coutiaus_tagged/iiif/canvas/f000/annotationPage/1",
 					"type": "AnnotationPage",
 					"items": [
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "/mansches_de_coutiaus_tagged/iiif/canvas/f000/annotationPage/1/annotation/0",
+							"id": "/editioncrafter/mansches_de_coutiaus_tagged/iiif/canvas/f000/annotationPage/1/annotation/0",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "/mansches_de_coutiaus_tagged/tei/text-1/f000.xml",
+								"id": "/editioncrafter/mansches_de_coutiaus_tagged/tei/text-1/f000.xml",
 								"format": "text/xml",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "/mansches_de_coutiaus_tagged/iiif/canvas/f000"
+							"target": "/editioncrafter/mansches_de_coutiaus_tagged/iiif/canvas/f000"
 						},
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "/mansches_de_coutiaus_tagged/iiif/canvas/f000/annotationPage/1/annotation/1",
+							"id": "/editioncrafter/mansches_de_coutiaus_tagged/iiif/canvas/f000/annotationPage/1/annotation/1",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "/mansches_de_coutiaus_tagged/tei/text-2/f000.xml",
+								"id": "/editioncrafter/mansches_de_coutiaus_tagged/tei/text-2/f000.xml",
 								"format": "text/xml",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "/mansches_de_coutiaus_tagged/iiif/canvas/f000"
+							"target": "/editioncrafter/mansches_de_coutiaus_tagged/iiif/canvas/f000"
 						},
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "/mansches_de_coutiaus_tagged/iiif/canvas/f000/annotationPage/1/annotation/2",
+							"id": "/editioncrafter/mansches_de_coutiaus_tagged/iiif/canvas/f000/annotationPage/1/annotation/2",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "/mansches_de_coutiaus_tagged/html/text-1/f000.html",
+								"id": "/editioncrafter/mansches_de_coutiaus_tagged/html/text-1/f000.html",
 								"format": "text/html",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "/mansches_de_coutiaus_tagged/iiif/canvas/f000"
+							"target": "/editioncrafter/mansches_de_coutiaus_tagged/iiif/canvas/f000"
 						},
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "/mansches_de_coutiaus_tagged/iiif/canvas/f000/annotationPage/1/annotation/3",
+							"id": "/editioncrafter/mansches_de_coutiaus_tagged/iiif/canvas/f000/annotationPage/1/annotation/3",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "/mansches_de_coutiaus_tagged/html/text-2/f000.html",
+								"id": "/editioncrafter/mansches_de_coutiaus_tagged/html/text-2/f000.html",
 								"format": "text/html",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "/mansches_de_coutiaus_tagged/iiif/canvas/f000"
+							"target": "/editioncrafter/mansches_de_coutiaus_tagged/iiif/canvas/f000"
 						}
 					]
 				}
 			]
 		},
 		{
-			"id": "/mansches_de_coutiaus_tagged/iiif/canvas/f001",
+			"id": "/editioncrafter/mansches_de_coutiaus_tagged/iiif/canvas/f001",
 			"type": "Canvas",
 			"items": [
 				{
-					"id": "/mansches_de_coutiaus_tagged/iiif/canvas/f001/annotationpage/0",
+					"id": "/editioncrafter/mansches_de_coutiaus_tagged/iiif/canvas/f001/annotationpage/0",
 					"type": "AnnotationPage",
 					"items": [
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "/mansches_de_coutiaus_tagged/iiif/canvas/f001/annotationpage/0/annotation/0",
+							"id": "/editioncrafter/mansches_de_coutiaus_tagged/iiif/canvas/f001/annotationpage/0/annotation/0",
 							"type": "Annotation",
 							"motivation": "painting",
 							"body": {
@@ -2702,7 +2702,7 @@
 									}
 								]
 							},
-							"target": "/mansches_de_coutiaus_tagged/iiif/canvas/f001"
+							"target": "/editioncrafter/mansches_de_coutiaus_tagged/iiif/canvas/f001"
 						}
 					]
 				}
@@ -4584,16 +4584,16 @@
 			]
 		},
 		{
-			"id": "/mansches_de_coutiaus_tagged/iiif/canvas/f002",
+			"id": "/editioncrafter/mansches_de_coutiaus_tagged/iiif/canvas/f002",
 			"type": "Canvas",
 			"items": [
 				{
-					"id": "/mansches_de_coutiaus_tagged/iiif/canvas/f002/annotationpage/0",
+					"id": "/editioncrafter/mansches_de_coutiaus_tagged/iiif/canvas/f002/annotationpage/0",
 					"type": "AnnotationPage",
 					"items": [
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "/mansches_de_coutiaus_tagged/iiif/canvas/f002/annotationpage/0/annotation/0",
+							"id": "/editioncrafter/mansches_de_coutiaus_tagged/iiif/canvas/f002/annotationpage/0/annotation/0",
 							"type": "Annotation",
 							"motivation": "painting",
 							"body": {
@@ -4610,7 +4610,7 @@
 									}
 								]
 							},
-							"target": "/mansches_de_coutiaus_tagged/iiif/canvas/f002"
+							"target": "/editioncrafter/mansches_de_coutiaus_tagged/iiif/canvas/f002"
 						}
 					]
 				}
@@ -6411,16 +6411,16 @@
 			]
 		},
 		{
-			"id": "/mansches_de_coutiaus_tagged/iiif/canvas/f003",
+			"id": "/editioncrafter/mansches_de_coutiaus_tagged/iiif/canvas/f003",
 			"type": "Canvas",
 			"items": [
 				{
-					"id": "/mansches_de_coutiaus_tagged/iiif/canvas/f003/annotationpage/0",
+					"id": "/editioncrafter/mansches_de_coutiaus_tagged/iiif/canvas/f003/annotationpage/0",
 					"type": "AnnotationPage",
 					"items": [
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "/mansches_de_coutiaus_tagged/iiif/canvas/f003/annotationpage/0/annotation/0",
+							"id": "/editioncrafter/mansches_de_coutiaus_tagged/iiif/canvas/f003/annotationpage/0/annotation/0",
 							"type": "Annotation",
 							"motivation": "painting",
 							"body": {
@@ -6437,7 +6437,7 @@
 									}
 								]
 							},
-							"target": "/mansches_de_coutiaus_tagged/iiif/canvas/f003"
+							"target": "/editioncrafter/mansches_de_coutiaus_tagged/iiif/canvas/f003"
 						}
 					]
 				}
@@ -9029,16 +9029,16 @@
 			]
 		},
 		{
-			"id": "/mansches_de_coutiaus_tagged/iiif/canvas/f004",
+			"id": "/editioncrafter/mansches_de_coutiaus_tagged/iiif/canvas/f004",
 			"type": "Canvas",
 			"items": [
 				{
-					"id": "/mansches_de_coutiaus_tagged/iiif/canvas/f004/annotationpage/0",
+					"id": "/editioncrafter/mansches_de_coutiaus_tagged/iiif/canvas/f004/annotationpage/0",
 					"type": "AnnotationPage",
 					"items": [
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "/mansches_de_coutiaus_tagged/iiif/canvas/f004/annotationpage/0/annotation/0",
+							"id": "/editioncrafter/mansches_de_coutiaus_tagged/iiif/canvas/f004/annotationpage/0/annotation/0",
 							"type": "Annotation",
 							"motivation": "painting",
 							"body": {
@@ -9055,7 +9055,7 @@
 									}
 								]
 							},
-							"target": "/mansches_de_coutiaus_tagged/iiif/canvas/f004"
+							"target": "/editioncrafter/mansches_de_coutiaus_tagged/iiif/canvas/f004"
 						}
 					]
 				}

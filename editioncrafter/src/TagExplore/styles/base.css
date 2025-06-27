@@ -26,13 +26,13 @@
   overflow-y: auto;
   position: absolute;
   top: 48px;
-  left: 0;
+  left: 400px;
   background-color: #242629;
   z-index: 10000;
   padding: 12px 0 12px 12px;
-  width: 100%;
+  width: 300px;
   height: 100%;
-  max-height: 100dvh;
+  max-height: calc(97dvh - 48px);
 }
 
 .tag-explore .tag-filter-button {
@@ -153,8 +153,8 @@
   position: absolute;
   top: 0;
   left: 48px;
-  height: 100vh;
-  min-width: 300px;
+  height: 97dvh;
+  width: 400px;
   display: flex;
   flex-direction: column;
   background-color: #242629;
