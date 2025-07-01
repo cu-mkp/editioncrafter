@@ -38,12 +38,20 @@ function getData(db) {
 }
 
 function TagFilters(props) {
-  const { onToggleSelected, filters } = props
-  const data = useMemo(() => getData(props.db), [props.db])
-  const [expanded, setExpanded] = useState(data.taxonomies?.map(() => (false)))
+  const { onToggleSelected, filters, query } = props
+  const fullData = useMemo(() => getData(props.db), [props.db])
+  const [expanded, setExpanded] = useState(fullData.taxonomies?.map(() => (false)))
   const [displayedTags, setDisplayedTags] = useState({})
 
   const { toggleTag } = useContext(TagFilterContext)
+
+  const data = useMemo(() => {
+    const tags = fullData.tags?.filter(tag => (!query || !query.length || tag.name.toLowerCase().includes(query.toLowerCase())))
+    return ({
+      tags,
+      taxonomies: fullData.taxonomies,
+    })
+  }, [fullData, query])
 
   useEffect(() => {
     const tags = {}
@@ -56,48 +64,64 @@ function TagFilters(props) {
   }, [expanded, data])
 
   return (
-    <div className="tag-list">
-      <FormGroup>
-        { data.taxonomies.map((tax, idx) => {
-          const tagList = displayedTags[tax.id]
-          return (
-            <div key={tax.id}>
-              <Typography>{tax.name}</Typography>
-              <ul>
-                { tagList?.map(tag => (
-                  <FormControlLabel
-                    as="li"
-                    control={(
-                      <Checkbox
-                        checked={filters.includes(tag.id)}
-                        onChange={() => {
-                          onToggleSelected(tag.id)
-                          toggleTag(tag.xml_id, 'left')
-                          toggleTag(tag.xml_id, 'right')
-                        }}
-                      />
-                    )}
-                    key={tag.id}
-                    label={tag.name}
-                  />
-                ))}
-              </ul>
-              <button
-                className="tag-filter-button"
-                type="button"
-                onClick={() => {
-                  const newState = [...expanded]
-                  newState[idx] = !expanded[idx]
-                  setExpanded(newState)
-                }}
-              >
-                { !data.tags.filter(t => (t.taxonomy_id === tax.id))?.length || data.tags.filter(t => (t.taxonomy_id === tax.id)).length < 6 ? null : expanded[idx] ? 'Show less' : 'Show more'}
-              </button>
-            </div>
-          )
-        })}
-      </FormGroup>
-    </div>
+    <>
+      {
+        data?.tags?.length
+          ? (
+              <div className="tag-list">
+                <FormGroup>
+                  { data.taxonomies.map((tax, idx) => {
+                    const tagList = displayedTags[tax.id]
+                    return (
+                      tagList?.length
+                        ? (
+                            <div key={tax.id}>
+                              <Typography>{tax.name}</Typography>
+                              <ul>
+                                { tagList?.map(tag => (
+                                  <FormControlLabel
+                                    as="li"
+                                    control={(
+                                      <Checkbox
+                                        checked={filters.includes(tag.id)}
+                                        onChange={() => {
+                                          onToggleSelected(tag.id)
+                                          toggleTag(tag.xml_id, 'left')
+                                          toggleTag(tag.xml_id, 'right')
+                                        }}
+                                      />
+                                    )}
+                                    key={tag.id}
+                                    label={tag.name}
+                                  />
+                                ))}
+                              </ul>
+                              { data.tags.filter(t => (t.taxonomy_id === tax.id))?.length && data.tags.filter(t => (t.taxonomy_id === tax.id)).length >= 6
+                                ? (
+                                    <button
+                                      className="tag-filter-button"
+                                      type="button"
+                                      onClick={() => {
+                                        const newState = [...expanded]
+                                        newState[idx] = !expanded[idx]
+                                        setExpanded(newState)
+                                      }}
+                                    >
+                                      { expanded[idx] ? 'Show less' : 'Show more'}
+                                    </button>
+                                  )
+                                : null }
+                            </div>
+                          )
+                        : null
+                    )
+                  })}
+                </FormGroup>
+              </div>
+            )
+          : null
+      }
+    </>
   )
 }
 

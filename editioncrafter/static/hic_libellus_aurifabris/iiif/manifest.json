@@ -1,0 +1,22 @@
+{
+	"@context": [
+		"http://www.w3.org/ns/anno.jsonld",
+		"http://iiif.io/api/presentation/3/context.json"
+	],
+	"id": "/editioncrafter/hic_libellus_aurifabris/iiif/manifest.json",
+	"type": "Manifest",
+	"items": [],
+	"label": {
+		"en": [
+			"hic_libellus_aurifabris"
+		]
+	},
+	"seeAlso": [
+		{
+			"id": "https://cu-mkp.github.io/editioncrafter-data/fr640_3r-3v-example/glossary.json",
+			"type": "Dataset",
+			"label": "Glossary",
+			"format": "text/json"
+		}
+	]
+}
