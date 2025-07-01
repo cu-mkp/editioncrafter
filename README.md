@@ -1,6 +1,6 @@
 [![DOI](https://zenodo.org/badge/574677398.svg)](https://zenodo.org/badge/latestdoi/574677398)
 
-# Editioncrafter
+# EditionCrafter
 EditionCrafter is an easy-to-use tool for scholars, educators, and research institutions to publish digital editions in a low-cost and sustainable manner. It can be included in a React app or a HTML website. Please see the [EditionCrafter User's Guide](https://editioncrafter.org/guide/) for installation instructions and documentation. 
 
 ## EditionCrafter in a React App
