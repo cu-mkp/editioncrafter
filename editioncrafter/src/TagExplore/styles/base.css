@@ -33,6 +33,11 @@
   width: 300px;
   height: 100%;
   max-height: calc(97dvh - 48px);
+  border-left: solid white 1px;
+}
+
+.tag-explore .tag-filters .tag-filters-search {
+  margin-bottom: 24px;
 }
 
 .tag-explore .tag-filter-button {

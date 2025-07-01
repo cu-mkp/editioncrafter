@@ -1,0 +1,22 @@
+{
+	"@context": [
+		"http://www.w3.org/ns/anno.jsonld",
+		"http://iiif.io/api/presentation/3/context.json"
+	],
+	"id": "/editioncrafter/fontane_diverse_che_si_vedano_nel'alma_città_di_roma_e_altre_parte_d'italia/iiif/manifest.json",
+	"type": "Manifest",
+	"items": [],
+	"label": {
+		"en": [
+			"fontane_diverse_che_si_vedano_nel'alma_città_di_roma_e_altre_parte_d'italia"
+		]
+	},
+	"seeAlso": [
+		{
+			"id": "https://cu-mkp.github.io/editioncrafter-data/fr640_3r-3v-example/glossary.json",
+			"type": "Dataset",
+			"label": "Glossary",
+			"format": "text/json"
+		}
+	]
+}

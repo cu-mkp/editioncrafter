@@ -1,4 +1,4 @@
-import { Box, Button, Collapse, Divider, IconButton, Typography } from '@material-ui/core'
+import { Box, Button, Collapse, Divider, IconButton, Input, Typography } from '@material-ui/core'
 // import { red } from '@material-ui/core/colors'
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft'
 // import GridOnIcon from '@material-ui/icons/GridOn'
@@ -68,27 +68,28 @@ function SurfaceBrowser(props) {
   const [langs, setLangs] = useState([])
   const [locations, setLocations] = useState([])
   const [showFilters, setShowFilters] = useState(false)
+  const [query, setQuery] = useState(null)
 
   const filterDocs = (docs, filters) => {
     const { agents, keywords, langs, locations } = filters
     return docs.filter((doc) => {
       for (const ag of agents) {
-        if (!JSON.parse(doc.agents).find(a => (ag.role === JSON.parse(a)[0] && ag.person === JSON.parse(a)[1]))) {
+        if (!JSON.parse(doc.agents)?.find(a => (a && ag.role === JSON.parse(a)[0] && ag.person === JSON.parse(a)[1]))) {
           return false
         }
       }
       for (const term of keywords) {
-        if (!JSON.parse(doc.keywords).includes(term.term)) {
+        if (!JSON.parse(doc.keywords)?.includes(term.term)) {
           return false
         }
       }
       for (const lang of langs) {
-        if (!JSON.parse(doc.languages).includes(lang)) {
+        if (!JSON.parse(doc.languages)?.includes(lang)) {
           return false
         }
       }
       for (const loc of locations) {
-        if (!JSON.parse(doc.locations).includes(loc)) {
+        if (!JSON.parse(doc.locations)?.includes(loc)) {
           return false
         }
       }
@@ -199,10 +200,12 @@ function SurfaceBrowser(props) {
           </IconButton>
         </ButtonGroup> */}
         { showFilters && (
-          <div class="tag-filters">
+          <div className="tag-filters">
+            <Input placeholder="Search for filters" value={query} onChange={(e) => { setQuery(e.target.value) }} className="tag-filters-search" />
             <TagFilters
               db={db}
               filters={tags}
+              query={query}
               onToggleSelected={(tagId) => {
                 if (tags.includes(tagId)) {
                   setTags(current => (current.filter(t => (t !== tagId))))
@@ -214,6 +217,7 @@ function SurfaceBrowser(props) {
             />
             <DocumentFilters
               db={db}
+              query={query}
               filters={{ agents: { data: agents, onUpdate: setAgents }, keywords: { data: keywords, onUpdate: setKeywords }, langs: { data: langs, onUpdate: setLangs }, locations: { data: locations, onUpdate: setLocations } }}
             />
           </div>

@@ -1,0 +1,22 @@
+{
+	"@context": [
+		"http://www.w3.org/ns/anno.jsonld",
+		"http://iiif.io/api/presentation/3/context.json"
+	],
+	"id": "/editioncrafter/veelderhande_cierlijcke_compertementen_profitelijck_voor_schilders_goutsmeden_beeldtsnijders_ende_ander_constenaren/iiif/manifest.json",
+	"type": "Manifest",
+	"items": [],
+	"label": {
+		"en": [
+			"veelderhande_cierlijcke_compertementen_profitelijck_voor_schilders_goutsmeden_beeldtsnijders_ende_ander_constenaren"
+		]
+	},
+	"seeAlso": [
+		{
+			"id": "https://cu-mkp.github.io/editioncrafter-data/fr640_3r-3v-example/glossary.json",
+			"type": "Dataset",
+			"label": "Glossary",
+			"format": "text/json"
+		}
+	]
+}

@@ -44,13 +44,28 @@ function getData(db) {
 }
 
 function DocumentFilters(props) {
-  const { filters } = props
-  const data = useMemo(() => getData(props.db), [props.db])
-  const [expanded, setExpanded] = useState(data.roles?.map(() => (false)))
-  const [keywordExpanded, setKeywordExpanded] = useState(data.types?.map(() => (false)))
+  const { filters, query } = props
+  const fullData = useMemo(() => getData(props.db), [props.db])
+  const [expanded, setExpanded] = useState(fullData.roles?.map(() => (false)))
+  const [keywordExpanded, setKeywordExpanded] = useState(fullData.types?.map(() => (false)))
   const [langExpanded, setLangExpanded] = useState(false)
   const [locExpanded, setLocExpanded] = useState(false)
   const [displayedTags, setDisplayedTags] = useState({})
+
+  const data = useMemo(() => {
+    const agents = fullData.agents?.filter(ag => (!query || !query.length || ag.name?.toLowerCase().includes(query.toLowerCase())))
+    const keywords = fullData.keywords?.filter(term => (!query || !query.length || term.name?.toLowerCase().includes(query.toLowerCase())))
+    const languages = fullData.languages?.filter(lang => (!query || !query.length || lang.name.toLowerCase().includes(query.toLowerCase())))
+    const locations = fullData.locations?.filter(loc => (!query || !query.length || loc.name.toLowerCase().includes(query.toLowerCase())))
+    return ({
+      agents,
+      keywords,
+      languages,
+      locations,
+      types: fullData.types,
+      roles: fullData.roles,
+    })
+  }, [fullData, query])
 
   useEffect(() => {
     const tags = {}
@@ -107,149 +122,169 @@ function DocumentFilters(props) {
       <FormGroup>
         { data.roles.map((tax, idx) => {
           const tagList = displayedTags[tax.id]
-          return (
-            <div key={tax.id}>
-              <Typography>{tax.name}</Typography>
-              <ul>
-                { tagList?.map(tag => (
-                  <FormControlLabel
-                    as="li"
-                    control={(
-                      <Checkbox
-                        checked={!!filters.agents.data.find(ag => (ag.role === tax.id && ag.person === tag.person_id))}
-                        onChange={() => {
-                          onToggleAgent(tax.id, tag.person_id)
-                        }}
+          return tagList?.length
+            ? (
+                <div key={tax.id}>
+                  <Typography>{tax.name}</Typography>
+                  <ul>
+                    { tagList?.map(tag => (
+                      <FormControlLabel
+                        as="li"
+                        control={(
+                          <Checkbox
+                            checked={!!filters.agents.data.find(ag => (ag.role === tax.id && ag.person === tag.person_id))}
+                            onChange={() => {
+                              onToggleAgent(tax.id, tag.person_id)
+                            }}
+                          />
+                        )}
+                        key={tag.person_id}
+                        label={tag.name}
                       />
-                    )}
-                    key={tag.person_id}
-                    label={tag.name}
-                  />
-                ))}
-              </ul>
-              { (data.agents.filter(t => (t.role_id === tax.id))?.length && data.agents.filter(t => (t.role_id === tax.id)).length >= 6) && (
-                <button
-                  className="tag-filter-button"
-                  type="button"
-                  onClick={() => {
-                    const newState = [...expanded]
-                    newState[idx] = !expanded[idx]
-                    setExpanded(newState)
-                  }}
-                >
-                  { expanded[idx] ? 'Show less' : 'Show more'}
-                </button>
-              ) }
-            </div>
-          )
+                    ))}
+                  </ul>
+                  { (data.agents.filter(t => (t.role_id === tax.id))?.length && data.agents.filter(t => (t.role_id === tax.id)).length >= 6)
+                    ? (
+                        <button
+                          className="tag-filter-button"
+                          type="button"
+                          onClick={() => {
+                            const newState = [...expanded]
+                            newState[idx] = !expanded[idx]
+                            setExpanded(newState)
+                          }}
+                        >
+                          { expanded[idx] ? 'Show less' : 'Show more'}
+                        </button>
+                      )
+                    : null }
+                </div>
+              )
+            : null
         })}
         { data.types.map((tax, idx) => {
           const tagList = data.keywords.filter(term => (term.type === tax.type))
-          return (
-            <div key={tax.type}>
-              <Typography>
-                {tax.type[0].toUpperCase()}
-                {tax.type.slice(1)}
-              </Typography>
-              <ul>
-                { tagList?.map(tag => (
-                  <FormControlLabel
-                    as="li"
-                    control={(
-                      <Checkbox
-                        checked={!!filters.keywords.data.find(item => (item.type === tax.type && item.term === tag.id))}
-                        onChange={() => {
-                          onToggleKeyword(tax.type, tag.id)
-                        }}
+          return tagList?.length
+            ? (
+                <div key={tax.type}>
+                  <Typography>
+                    {tax.type[0].toUpperCase()}
+                    {tax.type.slice(1)}
+                  </Typography>
+                  <ul>
+                    { tagList?.map(tag => (
+                      <FormControlLabel
+                        as="li"
+                        control={(
+                          <Checkbox
+                            checked={!!filters.keywords.data.find(item => (item.type === tax.type && item.term === tag.id))}
+                            onChange={() => {
+                              onToggleKeyword(tax.type, tag.id)
+                            }}
+                          />
+                        )}
+                        key={tag.id}
+                        label={tag.name}
                       />
-                    )}
-                    key={tag.id}
-                    label={tag.name}
-                  />
-                ))}
-              </ul>
-              { tagList.length >= 6 && (
-                <button
-                  className="tag-filter-button"
-                  type="button"
-                  onClick={() => {
-                    const newState = [...keywordExpanded]
-                    newState[idx] = !keywordExpanded[idx]
-                    setKeywordExpanded(newState)
-                  }}
-                >
-                  { keywordExpanded[idx] ? 'Show less' : 'Show more'}
-                </button>
-              ) }
-            </div>
-          )
+                    ))}
+                  </ul>
+                  { tagList.length >= 6
+                    ? (
+                        <button
+                          className="tag-filter-button"
+                          type="button"
+                          onClick={() => {
+                            const newState = [...keywordExpanded]
+                            newState[idx] = !keywordExpanded[idx]
+                            setKeywordExpanded(newState)
+                          }}
+                        >
+                          { keywordExpanded[idx] ? 'Show less' : 'Show more'}
+                        </button>
+                      )
+                    : null}
+                </div>
+              )
+            : null
         })}
-        <div>
-          <Typography>
-            Language
-          </Typography>
-          <ul>
-            { data.languages.map(tag => (
-              <FormControlLabel
-                as="li"
-                control={(
-                  <Checkbox
-                    checked={filters.langs.data.includes(tag.id)}
-                    onChange={() => {
-                      onToggleLanguage(tag.id)
-                    }}
-                  />
-                )}
-                key={tag.id}
-                label={tag.name}
-              />
-            ))}
-          </ul>
-          { data.languages.length >= 6 && (
-            <button
-              className="tag-filter-button"
-              type="button"
-              onClick={() => {
-                setLangExpanded(current => !current)
-              }}
-            >
-              { langExpanded ? 'Show less' : 'Show more'}
-            </button>
-          ) }
-        </div>
-        <div>
-          <Typography>
-            Location of Publication
-          </Typography>
-          <ul>
-            { data.locations.map(tag => (
-              <FormControlLabel
-                as="li"
-                control={(
-                  <Checkbox
-                    checked={filters.locations.data.includes(tag.id)}
-                    onChange={() => {
-                      onToggleLocation(tag.id)
-                    }}
-                  />
-                )}
-                key={tag.id}
-                label={tag.name}
-              />
-            ))}
-          </ul>
-          { data.locations.length >= 6 && (
-            <button
-              className="tag-filter-button"
-              type="button"
-              onClick={() => {
-                setLocExpanded(current => !current)
-              }}
-            >
-              { locExpanded ? 'Show less' : 'Show more'}
-            </button>
-          ) }
-        </div>
+        { data.languages?.length
+          ? (
+              <div>
+                <Typography>
+                  Language
+                </Typography>
+                <ul>
+                  { data.languages.map(tag => (
+                    <FormControlLabel
+                      as="li"
+                      control={(
+                        <Checkbox
+                          checked={filters.langs.data.includes(tag.id)}
+                          onChange={() => {
+                            onToggleLanguage(tag.id)
+                          }}
+                        />
+                      )}
+                      key={tag.id}
+                      label={tag.name}
+                    />
+                  ))}
+                </ul>
+                { data.languages.length >= 6
+                  ? (
+                      <button
+                        className="tag-filter-button"
+                        type="button"
+                        onClick={() => {
+                          setLangExpanded(current => !current)
+                        }}
+                      >
+                        { langExpanded ? 'Show less' : 'Show more'}
+                      </button>
+                    )
+                  : null}
+              </div>
+            )
+          : null }
+        { data.locations?.length
+          ? (
+              <div>
+                <Typography>
+                  Location of Publication
+                </Typography>
+                <ul>
+                  { data.locations.map(tag => (
+                    <FormControlLabel
+                      as="li"
+                      control={(
+                        <Checkbox
+                          checked={filters.locations.data.includes(tag.id)}
+                          onChange={() => {
+                            onToggleLocation(tag.id)
+                          }}
+                        />
+                      )}
+                      key={tag.id}
+                      label={tag.name}
+                    />
+                  ))}
+                </ul>
+                { data.locations.length >= 6
+                  ? (
+                      <button
+                        className="tag-filter-button"
+                        type="button"
+                        onClick={() => {
+                          setLocExpanded(current => !current)
+                        }}
+                      >
+                        { locExpanded ? 'Show less' : 'Show more'}
+                      </button>
+                    )
+                  : null}
+              </div>
+            )
+          : null }
       </FormGroup>
     </div>
   )

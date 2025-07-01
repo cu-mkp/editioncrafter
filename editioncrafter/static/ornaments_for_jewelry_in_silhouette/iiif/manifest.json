@@ -1,0 +1,22 @@
+{
+	"@context": [
+		"http://www.w3.org/ns/anno.jsonld",
+		"http://iiif.io/api/presentation/3/context.json"
+	],
+	"id": "/editioncrafter/ornaments_for_jewelry_in_silhouette/iiif/manifest.json",
+	"type": "Manifest",
+	"items": [],
+	"label": {
+		"en": [
+			"ornaments_for_jewelry_in_silhouette"
+		]
+	},
+	"seeAlso": [
+		{
+			"id": "https://cu-mkp.github.io/editioncrafter-data/fr640_3r-3v-example/glossary.json",
+			"type": "Dataset",
+			"label": "Glossary",
+			"format": "text/json"
+		}
+	]
+}

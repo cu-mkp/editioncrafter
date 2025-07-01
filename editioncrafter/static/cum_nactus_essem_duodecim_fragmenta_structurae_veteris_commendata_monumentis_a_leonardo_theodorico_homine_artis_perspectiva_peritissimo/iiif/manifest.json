@@ -1,0 +1,22 @@
+{
+	"@context": [
+		"http://www.w3.org/ns/anno.jsonld",
+		"http://iiif.io/api/presentation/3/context.json"
+	],
+	"id": "/editioncrafter/cum_nactus_essem_duodecim_fragmenta_structurae_veteris_commendata_monumentis_a_leonardo_theodorico_homine_artis_perspectiva_peritissimo/iiif/manifest.json",
+	"type": "Manifest",
+	"items": [],
+	"label": {
+		"en": [
+			"cum_nactus_essem_duodecim_fragmenta_structurae_veteris_commendata_monumentis_a_leonardo_theodorico_homine_artis_perspectiva_peritissimo"
+		]
+	},
+	"seeAlso": [
+		{
+			"id": "https://cu-mkp.github.io/editioncrafter-data/fr640_3r-3v-example/glossary.json",
+			"type": "Dataset",
+			"label": "Glossary",
+			"format": "text/json"
+		}
+	]
+}
