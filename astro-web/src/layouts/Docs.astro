@@ -7,11 +7,11 @@ const { frontmatter } = Astro.props;
 
 ---
 
-<Layout title="Getting Started" tab="getting-started">
+<Layout title="EditionCrafter User's Guide" tab="getting-started">
     <div class="bg-neutral w-full">
         <Container>
             <h1 class="font-serif text-5xl py-16">
-                Getting Started
+                EditionCrafter User's Guide
             </h1>
         </Container>
     </div>
@@ -28,19 +28,32 @@ const { frontmatter } = Astro.props;
                     <a href="#" class="font-semibold text-lg">
                         Getting Started
                     </a>
+                </div>
+                <div class="flex flex-col gap-4 p-4 rounded-sm hover:bg-neutral">
+                    <a href="#using-editioncrafter-cli" class="font-semibold text-lg">
+                        Using the EditionCrafter CLI
+                    </a>
                     <div class="flex flex-col pl-2 xl:pl-4">                   
                         <a href="#installing-the-editioncrafter-cli" class="w-full p-3 hover:bg-neutral-gray/20">
                             Installing the CLI
                         </a>
+                        <a href="#creating-a-tei-document-from-a-list-of-images" class="w-full p-3 hover:bg-neutral-gray/20">
+                            Creating TEI from Images
+                        </a>
                         <a href="#creating-a-tei-document-from-your-iiif-manifest" class="w-full p-3 hover:bg-neutral-gray/20">
-                            Creating a TEI Document
+                            Creating TEI from IIIF
+                        </a>
+                        <a href="#adding-plain-text-transcriptions" class="w-full p-3 hover:bg-neutral-gray/20">
+                            Adding Plain Text transcriptions
+                        </a>
+                        <a href="#processing-a-tei-document-to-create-editionCrafter-artifacts" class="w-full p-3 hover:bg-neutral-gray/20">
+                            Processing TEI
                         </a>
                     </div>
                 </div>
                 <div class="flex flex-col gap-4 p-4 rounded-sm hover:bg-neutral">
-
-                    <a href="#publishing-a-document" class="font-semibold text-lg">
-                        Publishing A Document
+                    <a href="#installing-the-viewer" class="font-semibold text-lg">
+                        Installing the Viewer
                     </a>
                     <div class="flex flex-col pl-2 xl:pl-4">                   
                         <a href="#editioncrafter-in-a-react-app" class="w-full p-3 hover:bg-neutral-gray/20">
@@ -49,25 +62,15 @@ const { frontmatter } = Astro.props;
                         <a href="#editioncrafter-in-an-html-website" class="w-full p-3 hover:bg-neutral-gray/20">
                             In an HTML Website
                         </a>
+                        <a href="#viewer-configuration" class="w-full p-3 hover:bg-neutral-gray/20">
+                            Viewer Configuration
+                        </a>
                     </div>
                 </div>
                 <div class="flex flex-col gap-4 p-4 rounded-sm hover:bg-neutral">
-                    <a href="#editing-a-document" class="font-semibold text-lg">
-                            Editing A Document
+                    <a href="#tei-requirements" class="font-semibold text-lg">
+                            TEI Requirements
                     </a>
-                </div>
-                <div class="flex flex-col gap-4 p-4 rounded-sm hover:bg-neutral">
-                    <a href="#reference" class="font-semibold text-lg">
-                        Reference
-                    </a>
-                    <div class="flex flex-col pl-2 xl:pl-4">                   
-                        <a href="#editioncrafter-cli-reference" class="w-full p-3 hover:bg-neutral-gray/20">
-                            CLI Reference
-                        </a>
-                        <a href="#editioncrafter-viewer-reference" class="w-full p-3 hover:bg-neutral-gray/20">
-                            Viewer Reference
-                        </a>
-                    </div>
                 </div>
             </div>
         </div>
