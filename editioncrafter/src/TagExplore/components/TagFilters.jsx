@@ -22,12 +22,6 @@ function getData(db) {
       tags
     LEFT JOIN taxonomies
       ON tags.taxonomy_id = taxonomies.id
-    INNER JOIN taggings
-      ON taggings.tag_id = tags.id
-    INNER JOIN elements
-      ON elements.id = taggings.element_id
-    WHERE
-      elements.type = 'zone'
     GROUP BY
       tags.xml_id`)
 
@@ -56,50 +50,66 @@ function TagFilters(props) {
   }, [expanded, data])
 
   return (
-    <div className="tag-filters">
-      <div className="tag-list">
-        <FormGroup>
-          { data.taxonomies.map((tax, idx) => {
-            const tagList = displayedTags[tax.id]
-            return (
-              <div key={tax.id}>
-                <Typography>{tax.name}</Typography>
-                <ul>
-                  { tagList?.map(tag => (
-                    <FormControlLabel
-                      as="li"
-                      control={(
-                        <Checkbox
-                          checked={filters.includes(tag.id)}
-                          onChange={() => {
-                            onToggleSelected(tag.id)
-                            toggleTag(tag.xml_id, 'left')
-                            toggleTag(tag.xml_id, 'right')
-                          }}
-                        />
-                      )}
-                      key={tag.id}
-                      label={tag.name}
-                    />
-                  ))}
-                </ul>
-                <button
-                  className="tag-filter-button"
-                  type="button"
-                  onClick={() => {
-                    const newState = [...expanded]
-                    newState[idx] = !expanded[idx]
-                    setExpanded(newState)
-                  }}
-                >
-                  { !data.tags.filter(t => (t.taxonomy_id === tax.id))?.length || data.tags.filter(t => (t.taxonomy_id === tax.id)).length < 6 ? null : expanded[idx] ? 'Show less' : 'Show more'}
-                </button>
+    <>
+      {
+        data?.tags?.length
+          ? (
+              <div className="tag-list">
+                <FormGroup>
+                  { data.taxonomies.map((tax, idx) => {
+                    const tagList = displayedTags[tax.id]
+                    return (
+                      tagList?.length
+                        ? (
+                            <div key={tax.id}>
+                              <Typography>{tax.name}</Typography>
+                              <ul>
+                                { tagList?.map(tag => (
+                                  <FormControlLabel
+                                    as="li"
+                                    control={(
+                                      <Checkbox
+                                        checked={filters.includes(tag.id)}
+                                        onChange={() => {
+                                          onToggleSelected(tag.id)
+                                          if (tax.is_surface) {
+                                            toggleTag(tag.xml_id, 'left')
+                                            toggleTag(tag.xml_id, 'right')
+                                          }
+                                        }}
+                                      />
+                                    )}
+                                    key={tag.id}
+                                    label={tag.name}
+                                  />
+                                ))}
+                              </ul>
+                              { data.tags.filter(t => (t.taxonomy_id === tax.id))?.length && data.tags.filter(t => (t.taxonomy_id === tax.id)).length >= 6
+                                ? (
+                                    <button
+                                      className="tag-filter-button"
+                                      type="button"
+                                      onClick={() => {
+                                        const newState = [...expanded]
+                                        newState[idx] = !expanded[idx]
+                                        setExpanded(newState)
+                                      }}
+                                    >
+                                      { expanded[idx] ? 'Show less' : 'Show more'}
+                                    </button>
+                                  )
+                                : null }
+                            </div>
+                          )
+                        : null
+                    )
+                  })}
+                </FormGroup>
               </div>
             )
-          })}
-        </FormGroup>
-      </div>
-    </div>
+          : null
+      }
+    </>
   )
 }
 
