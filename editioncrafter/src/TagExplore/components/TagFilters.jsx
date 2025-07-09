@@ -34,6 +34,7 @@ function getData(db) {
 function TagFilters(props) {
   const { onToggleSelected, filters, query } = props
   const data = useMemo(() => getData(props.db), [props.db])
+  console.log(data.taxonomies)
   const [expanded, setExpanded] = useState(data.taxonomies?.map(() => (false)))
   const [displayedTags, setDisplayedTags] = useState({})
 
@@ -65,7 +66,7 @@ function TagFilters(props) {
                       tagList?.length
                         ? (
                             <div key={tax.id}>
-                              <Typography>{tax.name}</Typography>
+                              <Typography>{`${tax.name.slice(0, 1).toUpperCase()}${tax.name.slice(1)}`}</Typography>
                               <ul>
                                 { tagList?.map(tag => (
                                   <FormControlLabel
