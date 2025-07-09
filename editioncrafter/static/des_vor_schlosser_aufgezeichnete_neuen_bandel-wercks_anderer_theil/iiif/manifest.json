@@ -5,7 +5,108 @@
 	],
 	"id": "/editioncrafter/des_vor_schlosser_aufgezeichnete_neuen_bandel-wercks_anderer_theil/iiif/manifest.json",
 	"type": "Manifest",
-	"items": [],
+	"items": [
+		{
+			"id": "/editioncrafter/des_vor_schlosser_aufgezeichnete_neuen_bandel-wercks_anderer_theil/iiif/canvas/f0001",
+			"type": "Canvas",
+			"items": [
+				{
+					"id": "/editioncrafter/des_vor_schlosser_aufgezeichnete_neuen_bandel-wercks_anderer_theil/iiif/canvas/f0001/annotationpage/0",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/des_vor_schlosser_aufgezeichnete_neuen_bandel-wercks_anderer_theil/iiif/canvas/f0001/annotationpage/0/annotation/0",
+							"type": "Annotation",
+							"motivation": "painting",
+							"body": {
+								"id": "https://corpora.dh.tamu.edu/iiif/2/corpora/6285564874d5f7a229b60520/Image/fbbe/62be5a58a8d13b35d0fbbedf/files/RP-P-1883-A-7495.jpg",
+								"format": "image/jpeg",
+								"type": "Image",
+								"height": 800,
+								"width": 1000,
+								"service": [
+									{
+										"id": "https://corpora.dh.tamu.edu/iiif/2/corpora/6285564874d5f7a229b60520/Image/fbbe/62be5a58a8d13b35d0fbbedf/files/RP-P-1883-A-7495.jpg",
+										"type": "ImageService2",
+										"profile": "http://iiif.io/api/image/2/level2.json"
+									}
+								]
+							},
+							"target": "/editioncrafter/des_vor_schlosser_aufgezeichnete_neuen_bandel-wercks_anderer_theil/iiif/canvas/f0001"
+						}
+					]
+				}
+			],
+			"height": 800,
+			"width": 1000,
+			"label": {
+				"none": [
+					"Des vor Schlosser a… (Title Page)"
+				]
+			},
+			"annotations": [
+				{
+					"id": "/editioncrafter/des_vor_schlosser_aufgezeichnete_neuen_bandel-wercks_anderer_theil/iiif/canvas/f0001/annotationPage/1",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/des_vor_schlosser_aufgezeichnete_neuen_bandel-wercks_anderer_theil/iiif/canvas/f0001/annotationPage/1/annotation/0",
+							"type": "Annotation",
+							"motivation": "supplementing",
+							"body": {
+								"id": "/editioncrafter/des_vor_schlosser_aufgezeichnete_neuen_bandel-wercks_anderer_theil/tei/transcription/f0001.xml",
+								"format": "text/xml",
+								"type": "TextPartial",
+								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
+							},
+							"target": "/editioncrafter/des_vor_schlosser_aufgezeichnete_neuen_bandel-wercks_anderer_theil/iiif/canvas/f0001"
+						},
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/des_vor_schlosser_aufgezeichnete_neuen_bandel-wercks_anderer_theil/iiif/canvas/f0001/annotationPage/1/annotation/1",
+							"type": "Annotation",
+							"motivation": "supplementing",
+							"body": {
+								"id": "/editioncrafter/des_vor_schlosser_aufgezeichnete_neuen_bandel-wercks_anderer_theil/tei/translation/f0001.xml",
+								"format": "text/xml",
+								"type": "TextPartial",
+								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
+							},
+							"target": "/editioncrafter/des_vor_schlosser_aufgezeichnete_neuen_bandel-wercks_anderer_theil/iiif/canvas/f0001"
+						},
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/des_vor_schlosser_aufgezeichnete_neuen_bandel-wercks_anderer_theil/iiif/canvas/f0001/annotationPage/1/annotation/2",
+							"type": "Annotation",
+							"motivation": "supplementing",
+							"body": {
+								"id": "/editioncrafter/des_vor_schlosser_aufgezeichnete_neuen_bandel-wercks_anderer_theil/html/transcription/f0001.html",
+								"format": "text/html",
+								"type": "TextPartial",
+								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
+							},
+							"target": "/editioncrafter/des_vor_schlosser_aufgezeichnete_neuen_bandel-wercks_anderer_theil/iiif/canvas/f0001"
+						},
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/des_vor_schlosser_aufgezeichnete_neuen_bandel-wercks_anderer_theil/iiif/canvas/f0001/annotationPage/1/annotation/3",
+							"type": "Annotation",
+							"motivation": "supplementing",
+							"body": {
+								"id": "/editioncrafter/des_vor_schlosser_aufgezeichnete_neuen_bandel-wercks_anderer_theil/html/translation/f0001.html",
+								"format": "text/html",
+								"type": "TextPartial",
+								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
+							},
+							"target": "/editioncrafter/des_vor_schlosser_aufgezeichnete_neuen_bandel-wercks_anderer_theil/iiif/canvas/f0001"
+						}
+					]
+				}
+			]
+		}
+	],
 	"label": {
 		"en": [
 			"des_vor_schlosser_aufgezeichnete_neuen_bandel-wercks_anderer_theil"

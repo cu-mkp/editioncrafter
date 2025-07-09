@@ -5,7 +5,108 @@
 	],
 	"id": "/editioncrafter/quinque_sensuum_typi_in_usum_aurifabroru_exarati/iiif/manifest.json",
 	"type": "Manifest",
-	"items": [],
+	"items": [
+		{
+			"id": "/editioncrafter/quinque_sensuum_typi_in_usum_aurifabroru_exarati/iiif/canvas/f0001",
+			"type": "Canvas",
+			"items": [
+				{
+					"id": "/editioncrafter/quinque_sensuum_typi_in_usum_aurifabroru_exarati/iiif/canvas/f0001/annotationpage/0",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/quinque_sensuum_typi_in_usum_aurifabroru_exarati/iiif/canvas/f0001/annotationpage/0/annotation/0",
+							"type": "Annotation",
+							"motivation": "painting",
+							"body": {
+								"id": "https://corpora.dh.tamu.edu/iiif/2/corpora/6285564874d5f7a229b60520/Image/9d16/628d667d1dbdf14e1b9d167d/files/2011FC8143.jpg",
+								"format": "image/jpeg",
+								"type": "Image",
+								"height": 800,
+								"width": 1000,
+								"service": [
+									{
+										"id": "https://corpora.dh.tamu.edu/iiif/2/corpora/6285564874d5f7a229b60520/Image/9d16/628d667d1dbdf14e1b9d167d/files/2011FC8143.jpg",
+										"type": "ImageService2",
+										"profile": "http://iiif.io/api/image/2/level2.json"
+									}
+								]
+							},
+							"target": "/editioncrafter/quinque_sensuum_typi_in_usum_aurifabroru_exarati/iiif/canvas/f0001"
+						}
+					]
+				}
+			],
+			"height": 800,
+			"width": 1000,
+			"label": {
+				"none": [
+					"Quinque sensuum typ… (Title Page)"
+				]
+			},
+			"annotations": [
+				{
+					"id": "/editioncrafter/quinque_sensuum_typi_in_usum_aurifabroru_exarati/iiif/canvas/f0001/annotationPage/1",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/quinque_sensuum_typi_in_usum_aurifabroru_exarati/iiif/canvas/f0001/annotationPage/1/annotation/0",
+							"type": "Annotation",
+							"motivation": "supplementing",
+							"body": {
+								"id": "/editioncrafter/quinque_sensuum_typi_in_usum_aurifabroru_exarati/tei/transcription/f0001.xml",
+								"format": "text/xml",
+								"type": "TextPartial",
+								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
+							},
+							"target": "/editioncrafter/quinque_sensuum_typi_in_usum_aurifabroru_exarati/iiif/canvas/f0001"
+						},
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/quinque_sensuum_typi_in_usum_aurifabroru_exarati/iiif/canvas/f0001/annotationPage/1/annotation/1",
+							"type": "Annotation",
+							"motivation": "supplementing",
+							"body": {
+								"id": "/editioncrafter/quinque_sensuum_typi_in_usum_aurifabroru_exarati/tei/translation/f0001.xml",
+								"format": "text/xml",
+								"type": "TextPartial",
+								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
+							},
+							"target": "/editioncrafter/quinque_sensuum_typi_in_usum_aurifabroru_exarati/iiif/canvas/f0001"
+						},
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/quinque_sensuum_typi_in_usum_aurifabroru_exarati/iiif/canvas/f0001/annotationPage/1/annotation/2",
+							"type": "Annotation",
+							"motivation": "supplementing",
+							"body": {
+								"id": "/editioncrafter/quinque_sensuum_typi_in_usum_aurifabroru_exarati/html/transcription/f0001.html",
+								"format": "text/html",
+								"type": "TextPartial",
+								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
+							},
+							"target": "/editioncrafter/quinque_sensuum_typi_in_usum_aurifabroru_exarati/iiif/canvas/f0001"
+						},
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/quinque_sensuum_typi_in_usum_aurifabroru_exarati/iiif/canvas/f0001/annotationPage/1/annotation/3",
+							"type": "Annotation",
+							"motivation": "supplementing",
+							"body": {
+								"id": "/editioncrafter/quinque_sensuum_typi_in_usum_aurifabroru_exarati/html/translation/f0001.html",
+								"format": "text/html",
+								"type": "TextPartial",
+								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
+							},
+							"target": "/editioncrafter/quinque_sensuum_typi_in_usum_aurifabroru_exarati/iiif/canvas/f0001"
+						}
+					]
+				}
+			]
+		}
+	],
 	"label": {
 		"en": [
 			"quinque_sensuum_typi_in_usum_aurifabroru_exarati"

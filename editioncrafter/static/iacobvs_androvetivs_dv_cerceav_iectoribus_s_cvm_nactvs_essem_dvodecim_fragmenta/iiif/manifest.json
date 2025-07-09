@@ -3,43 +3,43 @@
 		"http://www.w3.org/ns/anno.jsonld",
 		"http://iiif.io/api/presentation/3/context.json"
 	],
-	"id": "http://localhost:8080/iacobvs_androvetivs_dv_cerceav_iectoribus_s_cvm_nactvs_essem_dvodecim_fragmenta/iiif/manifest.json",
+	"id": "/editioncrafter/iacobvs_androvetivs_dv_cerceav_iectoribus_s_cvm_nactvs_essem_dvodecim_fragmenta/iiif/manifest.json",
 	"type": "Manifest",
 	"items": [
 		{
-			"id": "http://localhost:8080/iacobvs_androvetivs_dv_cerceav_iectoribus_s_cvm_nactvs_essem_dvodecim_fragmenta/iiif/canvas/f0001",
+			"id": "/editioncrafter/iacobvs_androvetivs_dv_cerceav_iectoribus_s_cvm_nactvs_essem_dvodecim_fragmenta/iiif/canvas/f0001",
 			"type": "Canvas",
 			"items": [
 				{
-					"id": "http://localhost:8080/iacobvs_androvetivs_dv_cerceav_iectoribus_s_cvm_nactvs_essem_dvodecim_fragmenta/iiif/canvas/f0001/annotationpage/0",
+					"id": "/editioncrafter/iacobvs_androvetivs_dv_cerceav_iectoribus_s_cvm_nactvs_essem_dvodecim_fragmenta/iiif/canvas/f0001/annotationpage/0",
 					"type": "AnnotationPage",
 					"items": [
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "http://localhost:8080/iacobvs_androvetivs_dv_cerceav_iectoribus_s_cvm_nactvs_essem_dvodecim_fragmenta/iiif/canvas/f0001/annotationpage/0/annotation/0",
+							"id": "/editioncrafter/iacobvs_androvetivs_dv_cerceav_iectoribus_s_cvm_nactvs_essem_dvodecim_fragmenta/iiif/canvas/f0001/annotationpage/0/annotation/0",
 							"type": "Annotation",
 							"motivation": "painting",
 							"body": {
-								"id": "https://corpora.dh.tamu.edu/image/uri/|corpus|6285564874d5f7a229b60520|Image|683f554eb575bda8eeb31389|file|789c1dca510a80200c00d013d9d4b9398fd05f7403ad194591d8fd21eaf7f160b97bbb7b06f642c4416258a9c6ec7d2a6cc95b18afbc291474082c588982168a54d62caa1f4b82ba9ffac0fecf7932937189837111dd70b4ed05914d1c33",
+								"id": "https://corpora.dh.tamu.edu/iiif/2/corpora/6285564874d5f7a229b60520/Image/b313/683f554eb575bda8eeb31389/files/image/RP-P-1964-1731.jpg",
 								"format": "image/jpeg",
 								"type": "Image",
-								"height": null,
-								"width": null,
+								"height": 800,
+								"width": 1000,
 								"service": [
 									{
-										"id": "https://corpora.dh.tamu.edu/image/uri/|corpus|6285564874d5f7a229b60520|Image|683f554eb575bda8eeb31389|file|789c1dca510a80200c00d013d9d4b9398fd05f7403ad194591d8fd21eaf7f160b97bbb7b06f642c4416258a9c6ec7d2a6cc95b18afbc291474082c588982168a54d62caa1f4b82ba9ffac0fecf7932937189837111dd70b4ed05914d1c33",
+										"id": "https://corpora.dh.tamu.edu/iiif/2/corpora/6285564874d5f7a229b60520/Image/b313/683f554eb575bda8eeb31389/files/image/RP-P-1964-1731.jpg",
 										"type": "ImageService2",
 										"profile": "http://iiif.io/api/image/2/level2.json"
 									}
 								]
 							},
-							"target": "http://localhost:8080/iacobvs_androvetivs_dv_cerceav_iectoribus_s_cvm_nactvs_essem_dvodecim_fragmenta/iiif/canvas/f0001"
+							"target": "/editioncrafter/iacobvs_androvetivs_dv_cerceav_iectoribus_s_cvm_nactvs_essem_dvodecim_fragmenta/iiif/canvas/f0001"
 						}
 					]
 				}
 			],
-			"height": null,
-			"width": null,
+			"height": 800,
+			"width": 1000,
 			"label": {
 				"none": [
 					"Iacobvs Androvetivs… (Title Page)"

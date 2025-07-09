@@ -3,7 +3,7 @@
 		"http://www.w3.org/ns/anno.jsonld",
 		"http://iiif.io/api/presentation/3/context.json"
 	],
-	"id": "http://localhost:8080/_veel_schoene_stucken_om_te_snydena/iiif/manifest.json",
+	"id": "/editioncrafter/_veel_schoene_stucken_om_te_snydena/iiif/manifest.json",
 	"type": "Manifest",
 	"items": [],
 	"label": {

@@ -3,43 +3,43 @@
 		"http://www.w3.org/ns/anno.jsonld",
 		"http://iiif.io/api/presentation/3/context.json"
 	],
-	"id": "http://localhost:8080/fruchtenbuchlein/iiif/manifest.json",
+	"id": "/editioncrafter/fruchtenbuchlein/iiif/manifest.json",
 	"type": "Manifest",
 	"items": [
 		{
-			"id": "http://localhost:8080/fruchtenbuchlein/iiif/canvas/f0001",
+			"id": "/editioncrafter/fruchtenbuchlein/iiif/canvas/f0001",
 			"type": "Canvas",
 			"items": [
 				{
-					"id": "http://localhost:8080/fruchtenbuchlein/iiif/canvas/f0001/annotationpage/0",
+					"id": "/editioncrafter/fruchtenbuchlein/iiif/canvas/f0001/annotationpage/0",
 					"type": "AnnotationPage",
 					"items": [
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "http://localhost:8080/fruchtenbuchlein/iiif/canvas/f0001/annotationpage/0/annotation/0",
+							"id": "/editioncrafter/fruchtenbuchlein/iiif/canvas/f0001/annotationpage/0/annotation/0",
 							"type": "Annotation",
 							"motivation": "painting",
 							"body": {
-								"id": "https://corpora.dh.tamu.edu/image/uri/|corpus|6285564874d5f7a229b60520|Image|683f3d73b575bda8eeb3134b|file|789c1dcadb0d80200c00c089b040698111fc336e40e5118c06a3fb27467f2f07dbb8af7127601b88d805ef32559fac8dc29aac86f94cad80a041e08015b347214f925328e5632750fb511ee8ff5c17b528139995d37adaaff6027a271c20",
+								"id": "https://corpora.dh.tamu.edu/iiif/2/corpora/6285564874d5f7a229b60520/Image/b313/683f3d73b575bda8eeb3134b/files/image/RP-P-1966-400.jpg",
 								"format": "image/jpeg",
 								"type": "Image",
-								"height": null,
-								"width": null,
+								"height": 800,
+								"width": 1000,
 								"service": [
 									{
-										"id": "https://corpora.dh.tamu.edu/image/uri/|corpus|6285564874d5f7a229b60520|Image|683f3d73b575bda8eeb3134b|file|789c1dcadb0d80200c00c089b040698111fc336e40e5118c06a3fb27467f2f07dbb8af7127601b88d805ef32559fac8dc29aac86f94cad80a041e08015b347214f925328e5632750fb511ee8ff5c17b528139995d37adaaff6027a271c20",
+										"id": "https://corpora.dh.tamu.edu/iiif/2/corpora/6285564874d5f7a229b60520/Image/b313/683f3d73b575bda8eeb3134b/files/image/RP-P-1966-400.jpg",
 										"type": "ImageService2",
 										"profile": "http://iiif.io/api/image/2/level2.json"
 									}
 								]
 							},
-							"target": "http://localhost:8080/fruchtenbuchlein/iiif/canvas/f0001"
+							"target": "/editioncrafter/fruchtenbuchlein/iiif/canvas/f0001"
 						}
 					]
 				}
 			],
-			"height": null,
-			"width": null,
+			"height": 800,
+			"width": 1000,
 			"label": {
 				"none": [
 					"Fruchtenbuchlein (Title Page)"

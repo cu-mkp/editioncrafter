@@ -3,7 +3,7 @@
 		"http://www.w3.org/ns/anno.jsonld",
 		"http://iiif.io/api/presentation/3/context.json"
 	],
-	"id": "http://localhost:8080/kunstbüchlein_(1572_edition)/iiif/manifest.json",
+	"id": "/editioncrafter/kunstbüchlein_(1572_edition)/iiif/manifest.json",
 	"type": "Manifest",
 	"items": [],
 	"label": {

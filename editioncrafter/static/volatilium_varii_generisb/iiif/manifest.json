@@ -3,43 +3,43 @@
 		"http://www.w3.org/ns/anno.jsonld",
 		"http://iiif.io/api/presentation/3/context.json"
 	],
-	"id": "http://localhost:8080/volatilium_varii_generisb/iiif/manifest.json",
+	"id": "/editioncrafter/volatilium_varii_generisb/iiif/manifest.json",
 	"type": "Manifest",
 	"items": [
 		{
-			"id": "http://localhost:8080/volatilium_varii_generisb/iiif/canvas/f0001",
+			"id": "/editioncrafter/volatilium_varii_generisb/iiif/canvas/f0001",
 			"type": "Canvas",
 			"items": [
 				{
-					"id": "http://localhost:8080/volatilium_varii_generisb/iiif/canvas/f0001/annotationpage/0",
+					"id": "/editioncrafter/volatilium_varii_generisb/iiif/canvas/f0001/annotationpage/0",
 					"type": "AnnotationPage",
 					"items": [
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "http://localhost:8080/volatilium_varii_generisb/iiif/canvas/f0001/annotationpage/0/annotation/0",
+							"id": "/editioncrafter/volatilium_varii_generisb/iiif/canvas/f0001/annotationpage/0/annotation/0",
 							"type": "Annotation",
 							"motivation": "painting",
 							"body": {
-								"id": "https://corpora.dh.tamu.edu/image/uri/|corpus|6285564874d5f7a229b60520|Image|683f34b2b575bda8eeb31330|file|789c1dca5b0a80201000c013d9eabed423f417ddc02d8da228eafe10f53b0c4ce77d9d7701c524a29c22cfd26241cca65ed0437f94a5825120d0448dd8d0248acd25d5fa317968eb5e1f58ff390e6e70212b3be41cbaed5a5e8e451c21",
+								"id": "https://corpora.dh.tamu.edu/iiif/2/corpora/6285564874d5f7a229b60520/Image/b313/683f34b2b575bda8eeb31330/files/image/RP-P-1964-2491.jpg",
 								"format": "image/jpeg",
 								"type": "Image",
-								"height": null,
-								"width": null,
+								"height": 800,
+								"width": 1000,
 								"service": [
 									{
-										"id": "https://corpora.dh.tamu.edu/image/uri/|corpus|6285564874d5f7a229b60520|Image|683f34b2b575bda8eeb31330|file|789c1dca5b0a80201000c013d9eabed423f417ddc02d8da228eafe10f53b0c4ce77d9d7701c524a29c22cfd26241cca65ed0437f94a5825120d0448dd8d0248acd25d5fa317968eb5e1f58ff390e6e70212b3be41cbaed5a5e8e451c21",
+										"id": "https://corpora.dh.tamu.edu/iiif/2/corpora/6285564874d5f7a229b60520/Image/b313/683f34b2b575bda8eeb31330/files/image/RP-P-1964-2491.jpg",
 										"type": "ImageService2",
 										"profile": "http://iiif.io/api/image/2/level2.json"
 									}
 								]
 							},
-							"target": "http://localhost:8080/volatilium_varii_generisb/iiif/canvas/f0001"
+							"target": "/editioncrafter/volatilium_varii_generisb/iiif/canvas/f0001"
 						}
 					]
 				}
 			],
-			"height": null,
-			"width": null,
+			"height": 800,
+			"width": 1000,
 			"label": {
 				"none": [
 					"Volatilium varii ge… (Title Page)"

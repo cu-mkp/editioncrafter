@@ -3,7 +3,7 @@
 		"http://www.w3.org/ns/anno.jsonld",
 		"http://iiif.io/api/presentation/3/context.json"
 	],
-	"id": "http://localhost:8080/_compertimenta_pictoriis_flosculis/iiif/manifest.json",
+	"id": "/editioncrafter/_compertimenta_pictoriis_flosculis/iiif/manifest.json",
 	"type": "Manifest",
 	"items": [],
 	"label": {

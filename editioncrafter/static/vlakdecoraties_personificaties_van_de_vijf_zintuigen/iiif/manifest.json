@@ -3,43 +3,43 @@
 		"http://www.w3.org/ns/anno.jsonld",
 		"http://iiif.io/api/presentation/3/context.json"
 	],
-	"id": "http://localhost:8080/vlakdecoraties_personificaties_van_de_vijf_zintuigen/iiif/manifest.json",
+	"id": "/editioncrafter/vlakdecoraties_personificaties_van_de_vijf_zintuigen/iiif/manifest.json",
 	"type": "Manifest",
 	"items": [
 		{
-			"id": "http://localhost:8080/vlakdecoraties_personificaties_van_de_vijf_zintuigen/iiif/canvas/f0001",
+			"id": "/editioncrafter/vlakdecoraties_personificaties_van_de_vijf_zintuigen/iiif/canvas/f0001",
 			"type": "Canvas",
 			"items": [
 				{
-					"id": "http://localhost:8080/vlakdecoraties_personificaties_van_de_vijf_zintuigen/iiif/canvas/f0001/annotationpage/0",
+					"id": "/editioncrafter/vlakdecoraties_personificaties_van_de_vijf_zintuigen/iiif/canvas/f0001/annotationpage/0",
 					"type": "AnnotationPage",
 					"items": [
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "http://localhost:8080/vlakdecoraties_personificaties_van_de_vijf_zintuigen/iiif/canvas/f0001/annotationpage/0/annotation/0",
+							"id": "/editioncrafter/vlakdecoraties_personificaties_van_de_vijf_zintuigen/iiif/canvas/f0001/annotationpage/0/annotation/0",
 							"type": "Annotation",
 							"motivation": "painting",
 							"body": {
-								"id": "https://corpora.dh.tamu.edu/image/uri/|corpus|6285564874d5f7a229b60520|Image|683f3ce7b575bda8eeb31347|file|789c1dca5b0e40301000c013d5d2ed3e1cc19fb8411fdb8610c2fd13e1773290cffb3aef08ec9588834a2854257a3f26eec9f7301db119241c1058b162364924944a54b38f83405d777b60fde732bbd90da3b243926ebbda0b7e6b1c33",
+								"id": "https://corpora.dh.tamu.edu/iiif/2/corpora/6285564874d5f7a229b60520/Image/b313/683f3ce7b575bda8eeb31347/files/image/RP-P-1986-357.jpg",
 								"format": "image/jpeg",
 								"type": "Image",
-								"height": null,
-								"width": null,
+								"height": 800,
+								"width": 1000,
 								"service": [
 									{
-										"id": "https://corpora.dh.tamu.edu/image/uri/|corpus|6285564874d5f7a229b60520|Image|683f3ce7b575bda8eeb31347|file|789c1dca5b0e40301000c013d5d2ed3e1cc19fb8411fdb8610c2fd13e1773290cffb3aef08ec9588834a2854257a3f26eec9f7301db119241c1058b162364924944a54b38f83405d777b60fde732bbd90da3b243926ebbda0b7e6b1c33",
+										"id": "https://corpora.dh.tamu.edu/iiif/2/corpora/6285564874d5f7a229b60520/Image/b313/683f3ce7b575bda8eeb31347/files/image/RP-P-1986-357.jpg",
 										"type": "ImageService2",
 										"profile": "http://iiif.io/api/image/2/level2.json"
 									}
 								]
 							},
-							"target": "http://localhost:8080/vlakdecoraties_personificaties_van_de_vijf_zintuigen/iiif/canvas/f0001"
+							"target": "/editioncrafter/vlakdecoraties_personificaties_van_de_vijf_zintuigen/iiif/canvas/f0001"
 						}
 					]
 				}
 			],
-			"height": null,
-			"width": null,
+			"height": 800,
+			"width": 1000,
 			"label": {
 				"none": [
 					"Vlakdecoraties. Per… (Title Page)"

@@ -195,29 +195,32 @@ function DocumentDetail(props) {
     updatePageCount(surfaces?.length)
   }, [surfaces, updatePageCount, tags])
 
-  return (
-    <Accordion>
-      <AccordionSummary
-        expandIcon={<ExpandMoreIcon />}
-        aria-controls={`document-detail-${documentID}-content`}
-        id={`document-detail-${documentID}`}
-        className="accordion-summary"
-      >
-        <Typography>{documentName}</Typography>
-        <Typography>{surfaces?.length || ''}</Typography>
-      </AccordionSummary>
-      <AccordionDetails
-        className="accordion-detail"
-      >
-        <ThumbnailGrid
-          navigateToSelection={navigateToSelection}
-          documentLocalID={documentLocalID}
-          surfaces={surfaces}
-          selection={selection}
-        >
-        </ThumbnailGrid>
-      </AccordionDetails>
-    </Accordion>
+  return ((!tags.length || surfaces.length)
+    ? (
+        <Accordion>
+          <AccordionSummary
+            expandIcon={<ExpandMoreIcon />}
+            aria-controls={`document-detail-${documentID}-content`}
+            id={`document-detail-${documentID}`}
+            className="accordion-summary"
+          >
+            <Typography>{documentName}</Typography>
+            <Typography>{surfaces?.length || ''}</Typography>
+          </AccordionSummary>
+          <AccordionDetails
+            className="accordion-detail"
+          >
+            <ThumbnailGrid
+              navigateToSelection={navigateToSelection}
+              documentLocalID={documentLocalID}
+              surfaces={surfaces}
+              selection={selection}
+            >
+            </ThumbnailGrid>
+          </AccordionDetails>
+        </Accordion>
+      )
+    : null
   )
 }
 
