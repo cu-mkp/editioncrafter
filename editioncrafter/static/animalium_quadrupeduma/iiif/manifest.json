@@ -3,20 +3,20 @@
 		"http://www.w3.org/ns/anno.jsonld",
 		"http://iiif.io/api/presentation/3/context.json"
 	],
-	"id": "/editioncrafter/_animalium_quadrupeduma/iiif/manifest.json",
+	"id": "/editioncrafter/animalium_quadrupeduma/iiif/manifest.json",
 	"type": "Manifest",
 	"items": [
 		{
-			"id": "/editioncrafter/_animalium_quadrupeduma/iiif/canvas/f0001",
+			"id": "/editioncrafter/animalium_quadrupeduma/iiif/canvas/f0001",
 			"type": "Canvas",
 			"items": [
 				{
-					"id": "/editioncrafter/_animalium_quadrupeduma/iiif/canvas/f0001/annotationpage/0",
+					"id": "/editioncrafter/animalium_quadrupeduma/iiif/canvas/f0001/annotationpage/0",
 					"type": "AnnotationPage",
 					"items": [
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "/editioncrafter/_animalium_quadrupeduma/iiif/canvas/f0001/annotationpage/0/annotation/0",
+							"id": "/editioncrafter/animalium_quadrupeduma/iiif/canvas/f0001/annotationpage/0/annotation/0",
 							"type": "Annotation",
 							"motivation": "painting",
 							"body": {
@@ -33,7 +33,7 @@
 									}
 								]
 							},
-							"target": "/editioncrafter/_animalium_quadrupeduma/iiif/canvas/f0001"
+							"target": "/editioncrafter/animalium_quadrupeduma/iiif/canvas/f0001"
 						}
 					]
 				}
@@ -50,7 +50,7 @@
 	],
 	"label": {
 		"en": [
-			"_animalium_quadrupeduma"
+			"animalium_quadrupeduma"
 		]
 	},
 	"seeAlso": [

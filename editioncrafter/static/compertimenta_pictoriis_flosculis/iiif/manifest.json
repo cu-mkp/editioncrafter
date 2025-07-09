@@ -3,12 +3,12 @@
 		"http://www.w3.org/ns/anno.jsonld",
 		"http://iiif.io/api/presentation/3/context.json"
 	],
-	"id": "/editioncrafter/_veel_schoene_stucken_om_te_snydena/iiif/manifest.json",
+	"id": "/editioncrafter/compertimenta_pictoriis_flosculis/iiif/manifest.json",
 	"type": "Manifest",
 	"items": [],
 	"label": {
 		"en": [
-			"_veel_schoene_stucken_om_te_snydena"
+			"compertimenta_pictoriis_flosculis"
 		]
 	},
 	"seeAlso": [
