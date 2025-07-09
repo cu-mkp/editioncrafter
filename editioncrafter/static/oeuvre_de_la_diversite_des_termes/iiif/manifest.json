@@ -1,0 +1,64 @@
+{
+	"@context": [
+		"http://www.w3.org/ns/anno.jsonld",
+		"http://iiif.io/api/presentation/3/context.json"
+	],
+	"id": "http://localhost:8080/oeuvre_de_la_diversite_des_termes/iiif/manifest.json",
+	"type": "Manifest",
+	"items": [
+		{
+			"id": "http://localhost:8080/oeuvre_de_la_diversite_des_termes/iiif/canvas/f0001",
+			"type": "Canvas",
+			"items": [
+				{
+					"id": "http://localhost:8080/oeuvre_de_la_diversite_des_termes/iiif/canvas/f0001/annotationpage/0",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "http://localhost:8080/oeuvre_de_la_diversite_des_termes/iiif/canvas/f0001/annotationpage/0/annotation/0",
+							"type": "Annotation",
+							"motivation": "painting",
+							"body": {
+								"id": "https://corpora.dh.tamu.edu/image/uri/|corpus|6285564874d5f7a229b60520|Image|683f49c5b575bda8eeb31367|file|789c1dcadb0980300c00c0896adaa449db11fc1337e89b8aa2e8fe20fa7b1ce4f3bece3b82a06716eb9d2ddc5c440c4934a386f988bd422243209e9a0d99133b4e25fa5a3f16076decf581f1cf75518b426d8222b1419969bbfa0bc8bd1c91",
+								"format": "image/jpeg",
+								"type": "Image",
+								"height": null,
+								"width": null,
+								"service": [
+									{
+										"id": "https://corpora.dh.tamu.edu/image/uri/|corpus|6285564874d5f7a229b60520|Image|683f49c5b575bda8eeb31367|file|789c1dcadb0980300c00c0896adaa449db11fc1337e89b8aa2e8fe20fa7b1ce4f3bece3b82a06716eb9d2ddc5c440c4934a386f988bd422243209e9a0d99133b4e25fa5a3f16076decf581f1cf75518b426d8222b1419969bbfa0bc8bd1c91",
+										"type": "ImageService2",
+										"profile": "http://iiif.io/api/image/2/level2.json"
+									}
+								]
+							},
+							"target": "http://localhost:8080/oeuvre_de_la_diversite_des_termes/iiif/canvas/f0001"
+						}
+					]
+				}
+			],
+			"height": null,
+			"width": null,
+			"label": {
+				"none": [
+					"Oeuvre de la divers… (Title Page)"
+				]
+			},
+			"annotations": []
+		}
+	],
+	"label": {
+		"en": [
+			"oeuvre_de_la_diversite_des_termes"
+		]
+	},
+	"seeAlso": [
+		{
+			"id": "https://cu-mkp.github.io/editioncrafter-data/fr640_3r-3v-example/glossary.json",
+			"type": "Dataset",
+			"label": "Glossary",
+			"format": "text/json"
+		}
+	]
+}

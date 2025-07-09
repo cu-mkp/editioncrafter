@@ -1,0 +1,64 @@
+{
+	"@context": [
+		"http://www.w3.org/ns/anno.jsonld",
+		"http://iiif.io/api/presentation/3/context.json"
+	],
+	"id": "http://localhost:8080/_animalium_quadrupeduma/iiif/manifest.json",
+	"type": "Manifest",
+	"items": [
+		{
+			"id": "http://localhost:8080/_animalium_quadrupeduma/iiif/canvas/f0001",
+			"type": "Canvas",
+			"items": [
+				{
+					"id": "http://localhost:8080/_animalium_quadrupeduma/iiif/canvas/f0001/annotationpage/0",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "http://localhost:8080/_animalium_quadrupeduma/iiif/canvas/f0001/annotationpage/0/annotation/0",
+							"type": "Annotation",
+							"motivation": "painting",
+							"body": {
+								"id": "https://corpora.dh.tamu.edu/image/uri/|corpus|6285564874d5f7a229b60520|Image|683f32a3b575bda8eeb3132a|file|789c1dca310e80200c00c01761b1b550573737e30f8a02c16824f8ffc4e87a39d8ee56efa6e05098dd207ed83979451c83b38c16e64b7384403d81134a844a813d875d25c68f512195333e50feb92e6631d36cd88a7447cd2f5e071c0b",
+								"format": "image/jpeg",
+								"type": "Image",
+								"height": null,
+								"width": null,
+								"service": [
+									{
+										"id": "https://corpora.dh.tamu.edu/image/uri/|corpus|6285564874d5f7a229b60520|Image|683f32a3b575bda8eeb3132a|file|789c1dca310e80200c00c01761b1b550573737e30f8a02c16824f8ffc4e87a39d8ee56efa6e05098dd207ed83979451c83b38c16e64b7384403d81134a844a813d875d25c68f512195333e50feb92e6631d36cd88a7447cd2f5e071c0b",
+										"type": "ImageService2",
+										"profile": "http://iiif.io/api/image/2/level2.json"
+									}
+								]
+							},
+							"target": "http://localhost:8080/_animalium_quadrupeduma/iiif/canvas/f0001"
+						}
+					]
+				}
+			],
+			"height": null,
+			"width": null,
+			"label": {
+				"none": [
+					"_Animalium quadrupe… (Title Page)"
+				]
+			},
+			"annotations": []
+		}
+	],
+	"label": {
+		"en": [
+			"_animalium_quadrupeduma"
+		]
+	},
+	"seeAlso": [
+		{
+			"id": "https://cu-mkp.github.io/editioncrafter-data/fr640_3r-3v-example/glossary.json",
+			"type": "Dataset",
+			"label": "Glossary",
+			"format": "text/json"
+		}
+	]
+}

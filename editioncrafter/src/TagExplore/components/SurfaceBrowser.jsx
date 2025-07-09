@@ -129,6 +129,7 @@ function SurfaceBrowser(props) {
   }, [pageCount, tags, filteredDocs])
 
   const documentDetails = filteredDocs.map((doc) => {
+  const documentDetails = filteredDocs.map((doc) => {
     return (
       <DocumentDetail
         key={`document-detail-${doc.id}`}

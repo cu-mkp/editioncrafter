@@ -1,0 +1,64 @@
+{
+	"@context": [
+		"http://www.w3.org/ns/anno.jsonld",
+		"http://iiif.io/api/presentation/3/context.json"
+	],
+	"id": "http://localhost:8080/nova_alphati_effectio;_1595/iiif/manifest.json",
+	"type": "Manifest",
+	"items": [
+		{
+			"id": "http://localhost:8080/nova_alphati_effectio;_1595/iiif/canvas/f0001",
+			"type": "Canvas",
+			"items": [
+				{
+					"id": "http://localhost:8080/nova_alphati_effectio;_1595/iiif/canvas/f0001/annotationpage/0",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "http://localhost:8080/nova_alphati_effectio;_1595/iiif/canvas/f0001/annotationpage/0/annotation/0",
+							"type": "Annotation",
+							"motivation": "painting",
+							"body": {
+								"id": "https://corpora.dh.tamu.edu/image/uri/|corpus|6285564874d5f7a229b60520|Image|683f3732b575bda8eeb31336|file|789c1dcadb0980300c00c0896a6ad224ed08fe891bb4f681a254747f10fd3d0ed67e5ffd8e20e899c5797599ab46c490c4325a98ced80a241a09c45325254cac9c72f4a57c4c02753bca03db3f97d9cc660caa0665d8aff60250381b97",
+								"format": "image/jpeg",
+								"type": "Image",
+								"height": null,
+								"width": null,
+								"service": [
+									{
+										"id": "https://corpora.dh.tamu.edu/image/uri/|corpus|6285564874d5f7a229b60520|Image|683f3732b575bda8eeb31336|file|789c1dcadb0980300c00c0896a6ad224ed08fe891bb4f681a254747f10fd3d0ed67e5ffd8e20e899c5797599ab46c490c4325a98ced80a241a09c45325254cac9c72f4a57c4c02753bca03db3f97d9cc660caa0665d8aff60250381b97",
+										"type": "ImageService2",
+										"profile": "http://iiif.io/api/image/2/level2.json"
+									}
+								]
+							},
+							"target": "http://localhost:8080/nova_alphati_effectio;_1595/iiif/canvas/f0001"
+						}
+					]
+				}
+			],
+			"height": null,
+			"width": null,
+			"label": {
+				"none": [
+					"Nova Alphati Effect… (Title Page)"
+				]
+			},
+			"annotations": []
+		}
+	],
+	"label": {
+		"en": [
+			"nova_alphati_effectio;_1595"
+		]
+	},
+	"seeAlso": [
+		{
+			"id": "https://cu-mkp.github.io/editioncrafter-data/fr640_3r-3v-example/glossary.json",
+			"type": "Dataset",
+			"label": "Glossary",
+			"format": "text/json"
+		}
+	]
+}

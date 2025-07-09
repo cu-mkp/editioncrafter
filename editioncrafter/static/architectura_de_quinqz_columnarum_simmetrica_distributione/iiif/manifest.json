@@ -1,0 +1,64 @@
+{
+	"@context": [
+		"http://www.w3.org/ns/anno.jsonld",
+		"http://iiif.io/api/presentation/3/context.json"
+	],
+	"id": "http://localhost:8080/architectura_de_quinqz_columnarum_simmetrica_distributione/iiif/manifest.json",
+	"type": "Manifest",
+	"items": [
+		{
+			"id": "http://localhost:8080/architectura_de_quinqz_columnarum_simmetrica_distributione/iiif/canvas/f0001",
+			"type": "Canvas",
+			"items": [
+				{
+					"id": "http://localhost:8080/architectura_de_quinqz_columnarum_simmetrica_distributione/iiif/canvas/f0001/annotationpage/0",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "http://localhost:8080/architectura_de_quinqz_columnarum_simmetrica_distributione/iiif/canvas/f0001/annotationpage/0/annotation/0",
+							"type": "Annotation",
+							"motivation": "painting",
+							"body": {
+								"id": "https://corpora.dh.tamu.edu/image/uri/|corpus|6285564874d5f7a229b60520|Image|683f51eab575bda8eeb3137e|file|789c1dcadb0980300c00c0896afa4a1347f04fdc20b569a9288aee0fa2bfc7c17aded7790b24cf882932c58295c4fb31278bdec2744853c8c105481c2a3a958c84b908ab7e4c0ab5effa40ffe7329bd9b891d8101a376c577b019eb61c8a",
+								"format": "image/jpeg",
+								"type": "Image",
+								"height": null,
+								"width": null,
+								"service": [
+									{
+										"id": "https://corpora.dh.tamu.edu/image/uri/|corpus|6285564874d5f7a229b60520|Image|683f51eab575bda8eeb3137e|file|789c1dcadb0980300c00c0896afa4a1347f04fdc20b569a9288aee0fa2bfc7c17aded7790b24cf882932c58295c4fb31278bdec2744853c8c105481c2a3a958c84b908ab7e4c0ab5effa40ffe7329bd9b891d8101a376c577b019eb61c8a",
+										"type": "ImageService2",
+										"profile": "http://iiif.io/api/image/2/level2.json"
+									}
+								]
+							},
+							"target": "http://localhost:8080/architectura_de_quinqz_columnarum_simmetrica_distributione/iiif/canvas/f0001"
+						}
+					]
+				}
+			],
+			"height": null,
+			"width": null,
+			"label": {
+				"none": [
+					"Architectura. De qu… (Title Page)"
+				]
+			},
+			"annotations": []
+		}
+	],
+	"label": {
+		"en": [
+			"architectura_de_quinqz_columnarum_simmetrica_distributione"
+		]
+	},
+	"seeAlso": [
+		{
+			"id": "https://cu-mkp.github.io/editioncrafter-data/fr640_3r-3v-example/glossary.json",
+			"type": "Dataset",
+			"label": "Glossary",
+			"format": "text/json"
+		}
+	]
+}

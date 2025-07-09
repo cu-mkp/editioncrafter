@@ -1,0 +1,64 @@
+{
+	"@context": [
+		"http://www.w3.org/ns/anno.jsonld",
+		"http://iiif.io/api/presentation/3/context.json"
+	],
+	"id": "http://localhost:8080/friezen_met_vogelsog/iiif/manifest.json",
+	"type": "Manifest",
+	"items": [
+		{
+			"id": "http://localhost:8080/friezen_met_vogelsog/iiif/canvas/f0001",
+			"type": "Canvas",
+			"items": [
+				{
+					"id": "http://localhost:8080/friezen_met_vogelsog/iiif/canvas/f0001/annotationpage/0",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "http://localhost:8080/friezen_met_vogelsog/iiif/canvas/f0001/annotationpage/0/annotation/0",
+							"type": "Annotation",
+							"motivation": "painting",
+							"body": {
+								"id": "https://corpora.dh.tamu.edu/image/uri/|corpus|6285564874d5f7a229b60520|Image|683f4dfdb575bda8eeb31370|file|789c1dca4b0a80201000d013d9f89b715ab66c27dd40f3835124767f88da3e1eecf7e8f708409a11c9b2b3098b0b5acf91246a09eb156a8668940162536c2a29a2c39802e7fcb19350da991f68ffdcbcf042f1acc4221421d174f4fa02f7cf1d31",
+								"format": "image/jpeg",
+								"type": "Image",
+								"height": null,
+								"width": null,
+								"service": [
+									{
+										"id": "https://corpora.dh.tamu.edu/image/uri/|corpus|6285564874d5f7a229b60520|Image|683f4dfdb575bda8eeb31370|file|789c1dca4b0a80201000d013d9f89b715ab66c27dd40f3835124767f88da3e1eecf7e8f708409a11c9b2b3098b0b5acf91246a09eb156a8668940162536c2a29a2c39802e7fcb19350da991f68ffdcbcf042f1acc4221421d174f4fa02f7cf1d31",
+										"type": "ImageService2",
+										"profile": "http://iiif.io/api/image/2/level2.json"
+									}
+								]
+							},
+							"target": "http://localhost:8080/friezen_met_vogelsog/iiif/canvas/f0001"
+						}
+					]
+				}
+			],
+			"height": null,
+			"width": null,
+			"label": {
+				"none": [
+					"Friezen met vogels.… (Title Page)"
+				]
+			},
+			"annotations": []
+		}
+	],
+	"label": {
+		"en": [
+			"friezen_met_vogelsog"
+		]
+	},
+	"seeAlso": [
+		{
+			"id": "https://cu-mkp.github.io/editioncrafter-data/fr640_3r-3v-example/glossary.json",
+			"type": "Dataset",
+			"label": "Glossary",
+			"format": "text/json"
+		}
+	]
+}
