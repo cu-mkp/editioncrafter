@@ -5,7 +5,656 @@
 	],
 	"id": "/editioncrafter/ornamental_friezes/iiif/manifest.json",
 	"type": "Manifest",
-	"items": [],
+	"items": [
+		{
+			"id": "/editioncrafter/ornamental_friezes/iiif/canvas/f0001",
+			"type": "Canvas",
+			"items": [
+				{
+					"id": "/editioncrafter/ornamental_friezes/iiif/canvas/f0001/annotationpage/0",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/ornamental_friezes/iiif/canvas/f0001/annotationpage/0/annotation/0",
+							"type": "Annotation",
+							"motivation": "painting",
+							"body": {
+								"id": "https://iiif.micr.io/kXYtr",
+								"format": "image/jpeg",
+								"type": "Image",
+								"height": 800,
+								"width": 1000,
+								"service": [
+									{
+										"id": "https://iiif.micr.io/kXYtr",
+										"type": "ImageService2",
+										"profile": "http://iiif.io/api/image/2/level2.json"
+									}
+								]
+							},
+							"target": "/editioncrafter/ornamental_friezes/iiif/canvas/f0001"
+						}
+					]
+				}
+			],
+			"height": 800,
+			"width": 1000,
+			"label": {
+				"none": [
+					"Ornamental Friezes (Title Page)"
+				]
+			},
+			"annotations": [
+				{
+					"id": "/editioncrafter/ornamental_friezes/iiif/canvas/f0001/annotationPage/1",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/ornamental_friezes/iiif/canvas/f0001/annotationPage/1/annotation/0",
+							"type": "Annotation",
+							"motivation": "supplementing",
+							"body": {
+								"id": "/editioncrafter/ornamental_friezes/tei/transcription/f0001.xml",
+								"format": "text/xml",
+								"type": "TextPartial",
+								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
+							},
+							"target": "/editioncrafter/ornamental_friezes/iiif/canvas/f0001"
+						},
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/ornamental_friezes/iiif/canvas/f0001/annotationPage/1/annotation/1",
+							"type": "Annotation",
+							"motivation": "supplementing",
+							"body": {
+								"id": "/editioncrafter/ornamental_friezes/html/transcription/f0001.html",
+								"format": "text/html",
+								"type": "TextPartial",
+								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
+							},
+							"target": "/editioncrafter/ornamental_friezes/iiif/canvas/f0001"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "/editioncrafter/ornamental_friezes/iiif/canvas/f0002",
+			"type": "Canvas",
+			"items": [
+				{
+					"id": "/editioncrafter/ornamental_friezes/iiif/canvas/f0002/annotationpage/0",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/ornamental_friezes/iiif/canvas/f0002/annotationpage/0/annotation/0",
+							"type": "Annotation",
+							"motivation": "painting",
+							"body": {
+								"id": "https://iiif.micr.io/vhfOB",
+								"format": "image/jpeg",
+								"type": "Image",
+								"height": 800,
+								"width": 1000,
+								"service": [
+									{
+										"id": "https://iiif.micr.io/vhfOB",
+										"type": "ImageService2",
+										"profile": "http://iiif.io/api/image/2/level2.json"
+									}
+								]
+							},
+							"target": "/editioncrafter/ornamental_friezes/iiif/canvas/f0002"
+						}
+					]
+				}
+			],
+			"height": 800,
+			"width": 1000,
+			"label": {
+				"none": [
+					"Ornamental Friezes (2)"
+				]
+			},
+			"annotations": []
+		},
+		{
+			"id": "/editioncrafter/ornamental_friezes/iiif/canvas/f0003",
+			"type": "Canvas",
+			"items": [
+				{
+					"id": "/editioncrafter/ornamental_friezes/iiif/canvas/f0003/annotationpage/0",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/ornamental_friezes/iiif/canvas/f0003/annotationpage/0/annotation/0",
+							"type": "Annotation",
+							"motivation": "painting",
+							"body": {
+								"id": "https://iiif.micr.io/ODvpR",
+								"format": "image/jpeg",
+								"type": "Image",
+								"height": 800,
+								"width": 1000,
+								"service": [
+									{
+										"id": "https://iiif.micr.io/ODvpR",
+										"type": "ImageService2",
+										"profile": "http://iiif.io/api/image/2/level2.json"
+									}
+								]
+							},
+							"target": "/editioncrafter/ornamental_friezes/iiif/canvas/f0003"
+						}
+					]
+				}
+			],
+			"height": 800,
+			"width": 1000,
+			"label": {
+				"none": [
+					"Ornamental Friezes (3)"
+				]
+			},
+			"annotations": []
+		},
+		{
+			"id": "/editioncrafter/ornamental_friezes/iiif/canvas/f0004",
+			"type": "Canvas",
+			"items": [
+				{
+					"id": "/editioncrafter/ornamental_friezes/iiif/canvas/f0004/annotationpage/0",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/ornamental_friezes/iiif/canvas/f0004/annotationpage/0/annotation/0",
+							"type": "Annotation",
+							"motivation": "painting",
+							"body": {
+								"id": "https://iiif.micr.io/TPOXM",
+								"format": "image/jpeg",
+								"type": "Image",
+								"height": 800,
+								"width": 1000,
+								"service": [
+									{
+										"id": "https://iiif.micr.io/TPOXM",
+										"type": "ImageService2",
+										"profile": "http://iiif.io/api/image/2/level2.json"
+									}
+								]
+							},
+							"target": "/editioncrafter/ornamental_friezes/iiif/canvas/f0004"
+						}
+					]
+				}
+			],
+			"height": 800,
+			"width": 1000,
+			"label": {
+				"none": [
+					"Ornamental Friezes (4)"
+				]
+			},
+			"annotations": []
+		},
+		{
+			"id": "/editioncrafter/ornamental_friezes/iiif/canvas/f0005",
+			"type": "Canvas",
+			"items": [
+				{
+					"id": "/editioncrafter/ornamental_friezes/iiif/canvas/f0005/annotationpage/0",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/ornamental_friezes/iiif/canvas/f0005/annotationpage/0/annotation/0",
+							"type": "Annotation",
+							"motivation": "painting",
+							"body": {
+								"id": "https://iiif.micr.io/IIUAq",
+								"format": "image/jpeg",
+								"type": "Image",
+								"height": 800,
+								"width": 1000,
+								"service": [
+									{
+										"id": "https://iiif.micr.io/IIUAq",
+										"type": "ImageService2",
+										"profile": "http://iiif.io/api/image/2/level2.json"
+									}
+								]
+							},
+							"target": "/editioncrafter/ornamental_friezes/iiif/canvas/f0005"
+						}
+					]
+				}
+			],
+			"height": 800,
+			"width": 1000,
+			"label": {
+				"none": [
+					"Ornamental Friezes (5)"
+				]
+			},
+			"annotations": []
+		},
+		{
+			"id": "/editioncrafter/ornamental_friezes/iiif/canvas/f0006",
+			"type": "Canvas",
+			"items": [
+				{
+					"id": "/editioncrafter/ornamental_friezes/iiif/canvas/f0006/annotationpage/0",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/ornamental_friezes/iiif/canvas/f0006/annotationpage/0/annotation/0",
+							"type": "Annotation",
+							"motivation": "painting",
+							"body": {
+								"id": "https://iiif.micr.io/BotpU",
+								"format": "image/jpeg",
+								"type": "Image",
+								"height": 800,
+								"width": 1000,
+								"service": [
+									{
+										"id": "https://iiif.micr.io/BotpU",
+										"type": "ImageService2",
+										"profile": "http://iiif.io/api/image/2/level2.json"
+									}
+								]
+							},
+							"target": "/editioncrafter/ornamental_friezes/iiif/canvas/f0006"
+						}
+					]
+				}
+			],
+			"height": 800,
+			"width": 1000,
+			"label": {
+				"none": [
+					"Ornamental Friezes (6)"
+				]
+			},
+			"annotations": []
+		},
+		{
+			"id": "/editioncrafter/ornamental_friezes/iiif/canvas/f0007",
+			"type": "Canvas",
+			"items": [
+				{
+					"id": "/editioncrafter/ornamental_friezes/iiif/canvas/f0007/annotationpage/0",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/ornamental_friezes/iiif/canvas/f0007/annotationpage/0/annotation/0",
+							"type": "Annotation",
+							"motivation": "painting",
+							"body": {
+								"id": "https://iiif.micr.io/bWVsK",
+								"format": "image/jpeg",
+								"type": "Image",
+								"height": 800,
+								"width": 1000,
+								"service": [
+									{
+										"id": "https://iiif.micr.io/bWVsK",
+										"type": "ImageService2",
+										"profile": "http://iiif.io/api/image/2/level2.json"
+									}
+								]
+							},
+							"target": "/editioncrafter/ornamental_friezes/iiif/canvas/f0007"
+						}
+					]
+				}
+			],
+			"height": 800,
+			"width": 1000,
+			"label": {
+				"none": [
+					"Ornamental Friezes (7)"
+				]
+			},
+			"annotations": []
+		},
+		{
+			"id": "/editioncrafter/ornamental_friezes/iiif/canvas/f0008",
+			"type": "Canvas",
+			"items": [
+				{
+					"id": "/editioncrafter/ornamental_friezes/iiif/canvas/f0008/annotationpage/0",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/ornamental_friezes/iiif/canvas/f0008/annotationpage/0/annotation/0",
+							"type": "Annotation",
+							"motivation": "painting",
+							"body": {
+								"id": "https://iiif.micr.io/PzJbE",
+								"format": "image/jpeg",
+								"type": "Image",
+								"height": 800,
+								"width": 1000,
+								"service": [
+									{
+										"id": "https://iiif.micr.io/PzJbE",
+										"type": "ImageService2",
+										"profile": "http://iiif.io/api/image/2/level2.json"
+									}
+								]
+							},
+							"target": "/editioncrafter/ornamental_friezes/iiif/canvas/f0008"
+						}
+					]
+				}
+			],
+			"height": 800,
+			"width": 1000,
+			"label": {
+				"none": [
+					"Ornamental Friezes (8)"
+				]
+			},
+			"annotations": []
+		},
+		{
+			"id": "/editioncrafter/ornamental_friezes/iiif/canvas/f0009",
+			"type": "Canvas",
+			"items": [
+				{
+					"id": "/editioncrafter/ornamental_friezes/iiif/canvas/f0009/annotationpage/0",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/ornamental_friezes/iiif/canvas/f0009/annotationpage/0/annotation/0",
+							"type": "Annotation",
+							"motivation": "painting",
+							"body": {
+								"id": "https://iiif.micr.io/mNFLa",
+								"format": "image/jpeg",
+								"type": "Image",
+								"height": 800,
+								"width": 1000,
+								"service": [
+									{
+										"id": "https://iiif.micr.io/mNFLa",
+										"type": "ImageService2",
+										"profile": "http://iiif.io/api/image/2/level2.json"
+									}
+								]
+							},
+							"target": "/editioncrafter/ornamental_friezes/iiif/canvas/f0009"
+						}
+					]
+				}
+			],
+			"height": 800,
+			"width": 1000,
+			"label": {
+				"none": [
+					"Ornamental Friezes (9)"
+				]
+			},
+			"annotations": []
+		},
+		{
+			"id": "/editioncrafter/ornamental_friezes/iiif/canvas/f0010",
+			"type": "Canvas",
+			"items": [
+				{
+					"id": "/editioncrafter/ornamental_friezes/iiif/canvas/f0010/annotationpage/0",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/ornamental_friezes/iiif/canvas/f0010/annotationpage/0/annotation/0",
+							"type": "Annotation",
+							"motivation": "painting",
+							"body": {
+								"id": "https://iiif.micr.io/NyonV",
+								"format": "image/jpeg",
+								"type": "Image",
+								"height": 800,
+								"width": 1000,
+								"service": [
+									{
+										"id": "https://iiif.micr.io/NyonV",
+										"type": "ImageService2",
+										"profile": "http://iiif.io/api/image/2/level2.json"
+									}
+								]
+							},
+							"target": "/editioncrafter/ornamental_friezes/iiif/canvas/f0010"
+						}
+					]
+				}
+			],
+			"height": 800,
+			"width": 1000,
+			"label": {
+				"none": [
+					"Ornamental Friezes (10)"
+				]
+			},
+			"annotations": []
+		},
+		{
+			"id": "/editioncrafter/ornamental_friezes/iiif/canvas/f0011",
+			"type": "Canvas",
+			"items": [
+				{
+					"id": "/editioncrafter/ornamental_friezes/iiif/canvas/f0011/annotationpage/0",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/ornamental_friezes/iiif/canvas/f0011/annotationpage/0/annotation/0",
+							"type": "Annotation",
+							"motivation": "painting",
+							"body": {
+								"id": "https://iiif.micr.io/BAxrY",
+								"format": "image/jpeg",
+								"type": "Image",
+								"height": 800,
+								"width": 1000,
+								"service": [
+									{
+										"id": "https://iiif.micr.io/BAxrY",
+										"type": "ImageService2",
+										"profile": "http://iiif.io/api/image/2/level2.json"
+									}
+								]
+							},
+							"target": "/editioncrafter/ornamental_friezes/iiif/canvas/f0011"
+						}
+					]
+				}
+			],
+			"height": 800,
+			"width": 1000,
+			"label": {
+				"none": [
+					"Ornamental Friezes (11)"
+				]
+			},
+			"annotations": []
+		},
+		{
+			"id": "/editioncrafter/ornamental_friezes/iiif/canvas/f0012",
+			"type": "Canvas",
+			"items": [
+				{
+					"id": "/editioncrafter/ornamental_friezes/iiif/canvas/f0012/annotationpage/0",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/ornamental_friezes/iiif/canvas/f0012/annotationpage/0/annotation/0",
+							"type": "Annotation",
+							"motivation": "painting",
+							"body": {
+								"id": "https://iiif.micr.io/BdxdP",
+								"format": "image/jpeg",
+								"type": "Image",
+								"height": 800,
+								"width": 1000,
+								"service": [
+									{
+										"id": "https://iiif.micr.io/BdxdP",
+										"type": "ImageService2",
+										"profile": "http://iiif.io/api/image/2/level2.json"
+									}
+								]
+							},
+							"target": "/editioncrafter/ornamental_friezes/iiif/canvas/f0012"
+						}
+					]
+				}
+			],
+			"height": 800,
+			"width": 1000,
+			"label": {
+				"none": [
+					"Ornamental Friezes (12)"
+				]
+			},
+			"annotations": []
+		},
+		{
+			"id": "/editioncrafter/ornamental_friezes/iiif/canvas/f0013",
+			"type": "Canvas",
+			"items": [
+				{
+					"id": "/editioncrafter/ornamental_friezes/iiif/canvas/f0013/annotationpage/0",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/ornamental_friezes/iiif/canvas/f0013/annotationpage/0/annotation/0",
+							"type": "Annotation",
+							"motivation": "painting",
+							"body": {
+								"id": "https://iiif.micr.io/gNQTA",
+								"format": "image/jpeg",
+								"type": "Image",
+								"height": 800,
+								"width": 1000,
+								"service": [
+									{
+										"id": "https://iiif.micr.io/gNQTA",
+										"type": "ImageService2",
+										"profile": "http://iiif.io/api/image/2/level2.json"
+									}
+								]
+							},
+							"target": "/editioncrafter/ornamental_friezes/iiif/canvas/f0013"
+						}
+					]
+				}
+			],
+			"height": 800,
+			"width": 1000,
+			"label": {
+				"none": [
+					"Ornamental Friezes (13)"
+				]
+			},
+			"annotations": []
+		},
+		{
+			"id": "/editioncrafter/ornamental_friezes/iiif/canvas/f0014",
+			"type": "Canvas",
+			"items": [
+				{
+					"id": "/editioncrafter/ornamental_friezes/iiif/canvas/f0014/annotationpage/0",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/ornamental_friezes/iiif/canvas/f0014/annotationpage/0/annotation/0",
+							"type": "Annotation",
+							"motivation": "painting",
+							"body": {
+								"id": "https://iiif.micr.io/RIdFc",
+								"format": "image/jpeg",
+								"type": "Image",
+								"height": 800,
+								"width": 1000,
+								"service": [
+									{
+										"id": "https://iiif.micr.io/RIdFc",
+										"type": "ImageService2",
+										"profile": "http://iiif.io/api/image/2/level2.json"
+									}
+								]
+							},
+							"target": "/editioncrafter/ornamental_friezes/iiif/canvas/f0014"
+						}
+					]
+				}
+			],
+			"height": 800,
+			"width": 1000,
+			"label": {
+				"none": [
+					"Ornamental Friezes (14)"
+				]
+			},
+			"annotations": []
+		},
+		{
+			"id": "/editioncrafter/ornamental_friezes/iiif/canvas/f0015",
+			"type": "Canvas",
+			"items": [
+				{
+					"id": "/editioncrafter/ornamental_friezes/iiif/canvas/f0015/annotationpage/0",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/ornamental_friezes/iiif/canvas/f0015/annotationpage/0/annotation/0",
+							"type": "Annotation",
+							"motivation": "painting",
+							"body": {
+								"id": "https://iiif.micr.io/tfMtz",
+								"format": "image/jpeg",
+								"type": "Image",
+								"height": 800,
+								"width": 1000,
+								"service": [
+									{
+										"id": "https://iiif.micr.io/tfMtz",
+										"type": "ImageService2",
+										"profile": "http://iiif.io/api/image/2/level2.json"
+									}
+								]
+							},
+							"target": "/editioncrafter/ornamental_friezes/iiif/canvas/f0015"
+						}
+					]
+				}
+			],
+			"height": 800,
+			"width": 1000,
+			"label": {
+				"none": [
+					"Ornamental Friezes (15)"
+				]
+			},
+			"annotations": []
+		}
+	],
 	"label": {
 		"en": [
 			"ornamental_friezes"

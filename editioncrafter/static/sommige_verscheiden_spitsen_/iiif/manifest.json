@@ -5,7 +5,272 @@
 	],
 	"id": "/editioncrafter/sommige_verscheiden_spitsen_/iiif/manifest.json",
 	"type": "Manifest",
-	"items": [],
+	"items": [
+		{
+			"id": "/editioncrafter/sommige_verscheiden_spitsen_/iiif/canvas/f0001",
+			"type": "Canvas",
+			"items": [
+				{
+					"id": "/editioncrafter/sommige_verscheiden_spitsen_/iiif/canvas/f0001/annotationpage/0",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/sommige_verscheiden_spitsen_/iiif/canvas/f0001/annotationpage/0/annotation/0",
+							"type": "Annotation",
+							"motivation": "painting",
+							"body": {
+								"id": "https://corpora.dh.tamu.edu/iiif/2/corpora/6285564874d5f7a229b60520/Image/ccc3/62c63b457fefb97c92ccc325/files/229558001.jpg",
+								"format": "image/jpeg",
+								"type": "Image",
+								"height": 800,
+								"width": 1000,
+								"service": [
+									{
+										"id": "https://corpora.dh.tamu.edu/iiif/2/corpora/6285564874d5f7a229b60520/Image/ccc3/62c63b457fefb97c92ccc325/files/229558001.jpg",
+										"type": "ImageService2",
+										"profile": "http://iiif.io/api/image/2/level2.json"
+									}
+								]
+							},
+							"target": "/editioncrafter/sommige_verscheiden_spitsen_/iiif/canvas/f0001"
+						}
+					]
+				}
+			],
+			"height": 800,
+			"width": 1000,
+			"label": {
+				"none": [
+					"Sommige verscheiden… (Title Page)"
+				]
+			},
+			"annotations": [
+				{
+					"id": "/editioncrafter/sommige_verscheiden_spitsen_/iiif/canvas/f0001/annotationPage/1",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/sommige_verscheiden_spitsen_/iiif/canvas/f0001/annotationPage/1/annotation/0",
+							"type": "Annotation",
+							"motivation": "supplementing",
+							"body": {
+								"id": "/editioncrafter/sommige_verscheiden_spitsen_/tei/transcription/f0001.xml",
+								"format": "text/xml",
+								"type": "TextPartial",
+								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
+							},
+							"target": "/editioncrafter/sommige_verscheiden_spitsen_/iiif/canvas/f0001"
+						},
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/sommige_verscheiden_spitsen_/iiif/canvas/f0001/annotationPage/1/annotation/1",
+							"type": "Annotation",
+							"motivation": "supplementing",
+							"body": {
+								"id": "/editioncrafter/sommige_verscheiden_spitsen_/tei/translation/f0001.xml",
+								"format": "text/xml",
+								"type": "TextPartial",
+								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
+							},
+							"target": "/editioncrafter/sommige_verscheiden_spitsen_/iiif/canvas/f0001"
+						},
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/sommige_verscheiden_spitsen_/iiif/canvas/f0001/annotationPage/1/annotation/2",
+							"type": "Annotation",
+							"motivation": "supplementing",
+							"body": {
+								"id": "/editioncrafter/sommige_verscheiden_spitsen_/html/transcription/f0001.html",
+								"format": "text/html",
+								"type": "TextPartial",
+								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
+							},
+							"target": "/editioncrafter/sommige_verscheiden_spitsen_/iiif/canvas/f0001"
+						},
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/sommige_verscheiden_spitsen_/iiif/canvas/f0001/annotationPage/1/annotation/3",
+							"type": "Annotation",
+							"motivation": "supplementing",
+							"body": {
+								"id": "/editioncrafter/sommige_verscheiden_spitsen_/html/translation/f0001.html",
+								"format": "text/html",
+								"type": "TextPartial",
+								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
+							},
+							"target": "/editioncrafter/sommige_verscheiden_spitsen_/iiif/canvas/f0001"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "/editioncrafter/sommige_verscheiden_spitsen_/iiif/canvas/f0002",
+			"type": "Canvas",
+			"items": [
+				{
+					"id": "/editioncrafter/sommige_verscheiden_spitsen_/iiif/canvas/f0002/annotationpage/0",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/sommige_verscheiden_spitsen_/iiif/canvas/f0002/annotationpage/0/annotation/0",
+							"type": "Annotation",
+							"motivation": "painting",
+							"body": {
+								"id": "https://iiif.micr.io/fJZcY",
+								"format": "image/jpeg",
+								"type": "Image",
+								"height": 800,
+								"width": 1000,
+								"service": [
+									{
+										"id": "https://iiif.micr.io/fJZcY",
+										"type": "ImageService2",
+										"profile": "http://iiif.io/api/image/2/level2.json"
+									}
+								]
+							},
+							"target": "/editioncrafter/sommige_verscheiden_spitsen_/iiif/canvas/f0002"
+						}
+					]
+				}
+			],
+			"height": 800,
+			"width": 1000,
+			"label": {
+				"none": [
+					"Sommige verscheiden… (2)"
+				]
+			},
+			"annotations": []
+		},
+		{
+			"id": "/editioncrafter/sommige_verscheiden_spitsen_/iiif/canvas/f0004",
+			"type": "Canvas",
+			"items": [
+				{
+					"id": "/editioncrafter/sommige_verscheiden_spitsen_/iiif/canvas/f0004/annotationpage/0",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/sommige_verscheiden_spitsen_/iiif/canvas/f0004/annotationpage/0/annotation/0",
+							"type": "Annotation",
+							"motivation": "painting",
+							"body": {
+								"id": "https://iiif.micr.io/okEda",
+								"format": "image/jpeg",
+								"type": "Image",
+								"height": 800,
+								"width": 1000,
+								"service": [
+									{
+										"id": "https://iiif.micr.io/okEda",
+										"type": "ImageService2",
+										"profile": "http://iiif.io/api/image/2/level2.json"
+									}
+								]
+							},
+							"target": "/editioncrafter/sommige_verscheiden_spitsen_/iiif/canvas/f0004"
+						}
+					]
+				}
+			],
+			"height": 800,
+			"width": 1000,
+			"label": {
+				"none": [
+					"Sommige verscheiden… (4)"
+				]
+			},
+			"annotations": []
+		},
+		{
+			"id": "/editioncrafter/sommige_verscheiden_spitsen_/iiif/canvas/f0006",
+			"type": "Canvas",
+			"items": [
+				{
+					"id": "/editioncrafter/sommige_verscheiden_spitsen_/iiif/canvas/f0006/annotationpage/0",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/sommige_verscheiden_spitsen_/iiif/canvas/f0006/annotationpage/0/annotation/0",
+							"type": "Annotation",
+							"motivation": "painting",
+							"body": {
+								"id": "https://iiif.micr.io/TClqI",
+								"format": "image/jpeg",
+								"type": "Image",
+								"height": 800,
+								"width": 1000,
+								"service": [
+									{
+										"id": "https://iiif.micr.io/TClqI",
+										"type": "ImageService2",
+										"profile": "http://iiif.io/api/image/2/level2.json"
+									}
+								]
+							},
+							"target": "/editioncrafter/sommige_verscheiden_spitsen_/iiif/canvas/f0006"
+						}
+					]
+				}
+			],
+			"height": 800,
+			"width": 1000,
+			"label": {
+				"none": [
+					"Sommige verscheiden… (6)"
+				]
+			},
+			"annotations": []
+		},
+		{
+			"id": "/editioncrafter/sommige_verscheiden_spitsen_/iiif/canvas/f0008",
+			"type": "Canvas",
+			"items": [
+				{
+					"id": "/editioncrafter/sommige_verscheiden_spitsen_/iiif/canvas/f0008/annotationpage/0",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/sommige_verscheiden_spitsen_/iiif/canvas/f0008/annotationpage/0/annotation/0",
+							"type": "Annotation",
+							"motivation": "painting",
+							"body": {
+								"id": "https://iiif.micr.io/DHEzf",
+								"format": "image/jpeg",
+								"type": "Image",
+								"height": 800,
+								"width": 1000,
+								"service": [
+									{
+										"id": "https://iiif.micr.io/DHEzf",
+										"type": "ImageService2",
+										"profile": "http://iiif.io/api/image/2/level2.json"
+									}
+								]
+							},
+							"target": "/editioncrafter/sommige_verscheiden_spitsen_/iiif/canvas/f0008"
+						}
+					]
+				}
+			],
+			"height": 800,
+			"width": 1000,
+			"label": {
+				"none": [
+					"Sommige verscheiden… (8)"
+				]
+			},
+			"annotations": []
+		}
+	],
 	"label": {
 		"en": [
 			"sommige_verscheiden_spitsen_"

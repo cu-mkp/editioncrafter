@@ -5,7 +5,82 @@
 	],
 	"id": "/editioncrafter/pendants_and_crosses/iiif/manifest.json",
 	"type": "Manifest",
-	"items": [],
+	"items": [
+		{
+			"id": "/editioncrafter/pendants_and_crosses/iiif/canvas/f0001",
+			"type": "Canvas",
+			"items": [
+				{
+					"id": "/editioncrafter/pendants_and_crosses/iiif/canvas/f0001/annotationpage/0",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/pendants_and_crosses/iiif/canvas/f0001/annotationpage/0/annotation/0",
+							"type": "Annotation",
+							"motivation": "painting",
+							"body": {
+								"id": "https://corpora.dh.tamu.edu/iiif/2/corpora/6285564874d5f7a229b60520/Image/ccc3/62c72b607fefb97c92ccc332/files/2011FB8445.jpg",
+								"format": "image/jpeg",
+								"type": "Image",
+								"height": 800,
+								"width": 1000,
+								"service": [
+									{
+										"id": "https://corpora.dh.tamu.edu/iiif/2/corpora/6285564874d5f7a229b60520/Image/ccc3/62c72b607fefb97c92ccc332/files/2011FB8445.jpg",
+										"type": "ImageService2",
+										"profile": "http://iiif.io/api/image/2/level2.json"
+									}
+								]
+							},
+							"target": "/editioncrafter/pendants_and_crosses/iiif/canvas/f0001"
+						}
+					]
+				}
+			],
+			"height": 800,
+			"width": 1000,
+			"label": {
+				"none": [
+					"Pendants and Crosses (Title Page)"
+				]
+			},
+			"annotations": [
+				{
+					"id": "/editioncrafter/pendants_and_crosses/iiif/canvas/f0001/annotationPage/1",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/pendants_and_crosses/iiif/canvas/f0001/annotationPage/1/annotation/0",
+							"type": "Annotation",
+							"motivation": "supplementing",
+							"body": {
+								"id": "/editioncrafter/pendants_and_crosses/tei/transcription/f0001.xml",
+								"format": "text/xml",
+								"type": "TextPartial",
+								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
+							},
+							"target": "/editioncrafter/pendants_and_crosses/iiif/canvas/f0001"
+						},
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/pendants_and_crosses/iiif/canvas/f0001/annotationPage/1/annotation/1",
+							"type": "Annotation",
+							"motivation": "supplementing",
+							"body": {
+								"id": "/editioncrafter/pendants_and_crosses/html/transcription/f0001.html",
+								"format": "text/html",
+								"type": "TextPartial",
+								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
+							},
+							"target": "/editioncrafter/pendants_and_crosses/iiif/canvas/f0001"
+						}
+					]
+				}
+			]
+		}
+	],
 	"label": {
 		"en": [
 			"pendants_and_crosses"

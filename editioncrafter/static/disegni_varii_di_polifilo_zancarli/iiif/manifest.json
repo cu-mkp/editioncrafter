@@ -5,7 +5,477 @@
 	],
 	"id": "/editioncrafter/disegni_varii_di_polifilo_zancarli/iiif/manifest.json",
 	"type": "Manifest",
-	"items": [],
+	"items": [
+		{
+			"id": "/editioncrafter/disegni_varii_di_polifilo_zancarli/iiif/canvas/f0001",
+			"type": "Canvas",
+			"items": [
+				{
+					"id": "/editioncrafter/disegni_varii_di_polifilo_zancarli/iiif/canvas/f0001/annotationpage/0",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/disegni_varii_di_polifilo_zancarli/iiif/canvas/f0001/annotationpage/0/annotation/0",
+							"type": "Annotation",
+							"motivation": "painting",
+							"body": {
+								"id": "https://iiif.micr.io/UxdwB",
+								"format": "image/jpeg",
+								"type": "Image",
+								"height": 800,
+								"width": 1000,
+								"service": [
+									{
+										"id": "https://iiif.micr.io/UxdwB",
+										"type": "ImageService2",
+										"profile": "http://iiif.io/api/image/2/level2.json"
+									}
+								]
+							},
+							"target": "/editioncrafter/disegni_varii_di_polifilo_zancarli/iiif/canvas/f0001"
+						}
+					]
+				}
+			],
+			"height": 800,
+			"width": 1000,
+			"label": {
+				"none": [
+					"Disegni varii di Po… (Title Page)"
+				]
+			},
+			"annotations": [
+				{
+					"id": "/editioncrafter/disegni_varii_di_polifilo_zancarli/iiif/canvas/f0001/annotationPage/1",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/disegni_varii_di_polifilo_zancarli/iiif/canvas/f0001/annotationPage/1/annotation/0",
+							"type": "Annotation",
+							"motivation": "supplementing",
+							"body": {
+								"id": "/editioncrafter/disegni_varii_di_polifilo_zancarli/tei/transcription/f0001.xml",
+								"format": "text/xml",
+								"type": "TextPartial",
+								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
+							},
+							"target": "/editioncrafter/disegni_varii_di_polifilo_zancarli/iiif/canvas/f0001"
+						},
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/disegni_varii_di_polifilo_zancarli/iiif/canvas/f0001/annotationPage/1/annotation/1",
+							"type": "Annotation",
+							"motivation": "supplementing",
+							"body": {
+								"id": "/editioncrafter/disegni_varii_di_polifilo_zancarli/tei/translation/f0001.xml",
+								"format": "text/xml",
+								"type": "TextPartial",
+								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
+							},
+							"target": "/editioncrafter/disegni_varii_di_polifilo_zancarli/iiif/canvas/f0001"
+						},
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/disegni_varii_di_polifilo_zancarli/iiif/canvas/f0001/annotationPage/1/annotation/2",
+							"type": "Annotation",
+							"motivation": "supplementing",
+							"body": {
+								"id": "/editioncrafter/disegni_varii_di_polifilo_zancarli/html/transcription/f0001.html",
+								"format": "text/html",
+								"type": "TextPartial",
+								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
+							},
+							"target": "/editioncrafter/disegni_varii_di_polifilo_zancarli/iiif/canvas/f0001"
+						},
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/disegni_varii_di_polifilo_zancarli/iiif/canvas/f0001/annotationPage/1/annotation/3",
+							"type": "Annotation",
+							"motivation": "supplementing",
+							"body": {
+								"id": "/editioncrafter/disegni_varii_di_polifilo_zancarli/html/translation/f0001.html",
+								"format": "text/html",
+								"type": "TextPartial",
+								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
+							},
+							"target": "/editioncrafter/disegni_varii_di_polifilo_zancarli/iiif/canvas/f0001"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "/editioncrafter/disegni_varii_di_polifilo_zancarli/iiif/canvas/f0002",
+			"type": "Canvas",
+			"items": [
+				{
+					"id": "/editioncrafter/disegni_varii_di_polifilo_zancarli/iiif/canvas/f0002/annotationpage/0",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/disegni_varii_di_polifilo_zancarli/iiif/canvas/f0002/annotationpage/0/annotation/0",
+							"type": "Annotation",
+							"motivation": "painting",
+							"body": {
+								"id": "https://iiif.micr.io/fWKYU",
+								"format": "image/jpeg",
+								"type": "Image",
+								"height": 800,
+								"width": 1000,
+								"service": [
+									{
+										"id": "https://iiif.micr.io/fWKYU",
+										"type": "ImageService2",
+										"profile": "http://iiif.io/api/image/2/level2.json"
+									}
+								]
+							},
+							"target": "/editioncrafter/disegni_varii_di_polifilo_zancarli/iiif/canvas/f0002"
+						}
+					]
+				}
+			],
+			"height": 800,
+			"width": 1000,
+			"label": {
+				"none": [
+					"Disegni varii di Po… (2)"
+				]
+			},
+			"annotations": []
+		},
+		{
+			"id": "/editioncrafter/disegni_varii_di_polifilo_zancarli/iiif/canvas/f0003",
+			"type": "Canvas",
+			"items": [
+				{
+					"id": "/editioncrafter/disegni_varii_di_polifilo_zancarli/iiif/canvas/f0003/annotationpage/0",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/disegni_varii_di_polifilo_zancarli/iiif/canvas/f0003/annotationpage/0/annotation/0",
+							"type": "Annotation",
+							"motivation": "painting",
+							"body": {
+								"id": "https://iiif.micr.io/JtAuW",
+								"format": "image/jpeg",
+								"type": "Image",
+								"height": 800,
+								"width": 1000,
+								"service": [
+									{
+										"id": "https://iiif.micr.io/JtAuW",
+										"type": "ImageService2",
+										"profile": "http://iiif.io/api/image/2/level2.json"
+									}
+								]
+							},
+							"target": "/editioncrafter/disegni_varii_di_polifilo_zancarli/iiif/canvas/f0003"
+						}
+					]
+				}
+			],
+			"height": 800,
+			"width": 1000,
+			"label": {
+				"none": [
+					"Disegni varii di Po… (3)"
+				]
+			},
+			"annotations": []
+		},
+		{
+			"id": "/editioncrafter/disegni_varii_di_polifilo_zancarli/iiif/canvas/f0004",
+			"type": "Canvas",
+			"items": [
+				{
+					"id": "/editioncrafter/disegni_varii_di_polifilo_zancarli/iiif/canvas/f0004/annotationpage/0",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/disegni_varii_di_polifilo_zancarli/iiif/canvas/f0004/annotationpage/0/annotation/0",
+							"type": "Annotation",
+							"motivation": "painting",
+							"body": {
+								"id": "https://iiif.micr.io/DkHIF",
+								"format": "image/jpeg",
+								"type": "Image",
+								"height": 800,
+								"width": 1000,
+								"service": [
+									{
+										"id": "https://iiif.micr.io/DkHIF",
+										"type": "ImageService2",
+										"profile": "http://iiif.io/api/image/2/level2.json"
+									}
+								]
+							},
+							"target": "/editioncrafter/disegni_varii_di_polifilo_zancarli/iiif/canvas/f0004"
+						}
+					]
+				}
+			],
+			"height": 800,
+			"width": 1000,
+			"label": {
+				"none": [
+					"Disegni varii di Po… (4)"
+				]
+			},
+			"annotations": []
+		},
+		{
+			"id": "/editioncrafter/disegni_varii_di_polifilo_zancarli/iiif/canvas/f0005",
+			"type": "Canvas",
+			"items": [
+				{
+					"id": "/editioncrafter/disegni_varii_di_polifilo_zancarli/iiif/canvas/f0005/annotationpage/0",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/disegni_varii_di_polifilo_zancarli/iiif/canvas/f0005/annotationpage/0/annotation/0",
+							"type": "Annotation",
+							"motivation": "painting",
+							"body": {
+								"id": "https://iiif.micr.io/ckhFg",
+								"format": "image/jpeg",
+								"type": "Image",
+								"height": 800,
+								"width": 1000,
+								"service": [
+									{
+										"id": "https://iiif.micr.io/ckhFg",
+										"type": "ImageService2",
+										"profile": "http://iiif.io/api/image/2/level2.json"
+									}
+								]
+							},
+							"target": "/editioncrafter/disegni_varii_di_polifilo_zancarli/iiif/canvas/f0005"
+						}
+					]
+				}
+			],
+			"height": 800,
+			"width": 1000,
+			"label": {
+				"none": [
+					"Disegni varii di Po… (5)"
+				]
+			},
+			"annotations": []
+		},
+		{
+			"id": "/editioncrafter/disegni_varii_di_polifilo_zancarli/iiif/canvas/f0006",
+			"type": "Canvas",
+			"items": [
+				{
+					"id": "/editioncrafter/disegni_varii_di_polifilo_zancarli/iiif/canvas/f0006/annotationpage/0",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/disegni_varii_di_polifilo_zancarli/iiif/canvas/f0006/annotationpage/0/annotation/0",
+							"type": "Annotation",
+							"motivation": "painting",
+							"body": {
+								"id": "https://iiif.micr.io/NLVBN",
+								"format": "image/jpeg",
+								"type": "Image",
+								"height": 800,
+								"width": 1000,
+								"service": [
+									{
+										"id": "https://iiif.micr.io/NLVBN",
+										"type": "ImageService2",
+										"profile": "http://iiif.io/api/image/2/level2.json"
+									}
+								]
+							},
+							"target": "/editioncrafter/disegni_varii_di_polifilo_zancarli/iiif/canvas/f0006"
+						}
+					]
+				}
+			],
+			"height": 800,
+			"width": 1000,
+			"label": {
+				"none": [
+					"Disegni varii di Po… (6)"
+				]
+			},
+			"annotations": []
+		},
+		{
+			"id": "/editioncrafter/disegni_varii_di_polifilo_zancarli/iiif/canvas/f0007",
+			"type": "Canvas",
+			"items": [
+				{
+					"id": "/editioncrafter/disegni_varii_di_polifilo_zancarli/iiif/canvas/f0007/annotationpage/0",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/disegni_varii_di_polifilo_zancarli/iiif/canvas/f0007/annotationpage/0/annotation/0",
+							"type": "Annotation",
+							"motivation": "painting",
+							"body": {
+								"id": "https://iiif.micr.io/MwekG",
+								"format": "image/jpeg",
+								"type": "Image",
+								"height": 800,
+								"width": 1000,
+								"service": [
+									{
+										"id": "https://iiif.micr.io/MwekG",
+										"type": "ImageService2",
+										"profile": "http://iiif.io/api/image/2/level2.json"
+									}
+								]
+							},
+							"target": "/editioncrafter/disegni_varii_di_polifilo_zancarli/iiif/canvas/f0007"
+						}
+					]
+				}
+			],
+			"height": 800,
+			"width": 1000,
+			"label": {
+				"none": [
+					"Disegni varii di Po… (7)"
+				]
+			},
+			"annotations": []
+		},
+		{
+			"id": "/editioncrafter/disegni_varii_di_polifilo_zancarli/iiif/canvas/f0008",
+			"type": "Canvas",
+			"items": [
+				{
+					"id": "/editioncrafter/disegni_varii_di_polifilo_zancarli/iiif/canvas/f0008/annotationpage/0",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/disegni_varii_di_polifilo_zancarli/iiif/canvas/f0008/annotationpage/0/annotation/0",
+							"type": "Annotation",
+							"motivation": "painting",
+							"body": {
+								"id": "https://iiif.micr.io/QpFad",
+								"format": "image/jpeg",
+								"type": "Image",
+								"height": 800,
+								"width": 1000,
+								"service": [
+									{
+										"id": "https://iiif.micr.io/QpFad",
+										"type": "ImageService2",
+										"profile": "http://iiif.io/api/image/2/level2.json"
+									}
+								]
+							},
+							"target": "/editioncrafter/disegni_varii_di_polifilo_zancarli/iiif/canvas/f0008"
+						}
+					]
+				}
+			],
+			"height": 800,
+			"width": 1000,
+			"label": {
+				"none": [
+					"Disegni varii di Po… (8)"
+				]
+			},
+			"annotations": []
+		},
+		{
+			"id": "/editioncrafter/disegni_varii_di_polifilo_zancarli/iiif/canvas/f0009",
+			"type": "Canvas",
+			"items": [
+				{
+					"id": "/editioncrafter/disegni_varii_di_polifilo_zancarli/iiif/canvas/f0009/annotationpage/0",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/disegni_varii_di_polifilo_zancarli/iiif/canvas/f0009/annotationpage/0/annotation/0",
+							"type": "Annotation",
+							"motivation": "painting",
+							"body": {
+								"id": "https://iiif.micr.io/BuNFN",
+								"format": "image/jpeg",
+								"type": "Image",
+								"height": 800,
+								"width": 1000,
+								"service": [
+									{
+										"id": "https://iiif.micr.io/BuNFN",
+										"type": "ImageService2",
+										"profile": "http://iiif.io/api/image/2/level2.json"
+									}
+								]
+							},
+							"target": "/editioncrafter/disegni_varii_di_polifilo_zancarli/iiif/canvas/f0009"
+						}
+					]
+				}
+			],
+			"height": 800,
+			"width": 1000,
+			"label": {
+				"none": [
+					"Disegni varii di Po… (9)"
+				]
+			},
+			"annotations": []
+		},
+		{
+			"id": "/editioncrafter/disegni_varii_di_polifilo_zancarli/iiif/canvas/f0010",
+			"type": "Canvas",
+			"items": [
+				{
+					"id": "/editioncrafter/disegni_varii_di_polifilo_zancarli/iiif/canvas/f0010/annotationpage/0",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/disegni_varii_di_polifilo_zancarli/iiif/canvas/f0010/annotationpage/0/annotation/0",
+							"type": "Annotation",
+							"motivation": "painting",
+							"body": {
+								"id": "https://iiif.micr.io/DCGMx",
+								"format": "image/jpeg",
+								"type": "Image",
+								"height": 800,
+								"width": 1000,
+								"service": [
+									{
+										"id": "https://iiif.micr.io/DCGMx",
+										"type": "ImageService2",
+										"profile": "http://iiif.io/api/image/2/level2.json"
+									}
+								]
+							},
+							"target": "/editioncrafter/disegni_varii_di_polifilo_zancarli/iiif/canvas/f0010"
+						}
+					]
+				}
+			],
+			"height": 800,
+			"width": 1000,
+			"label": {
+				"none": [
+					"Disegni varii di Po… (10)"
+				]
+			},
+			"annotations": []
+		}
+	],
 	"label": {
 		"en": [
 			"disegni_varii_di_polifilo_zancarli"

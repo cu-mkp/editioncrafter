@@ -5,7 +5,149 @@
 	],
 	"id": "/editioncrafter/grotis_for_die_goltschmit_und_andern_khunstiger/iiif/manifest.json",
 	"type": "Manifest",
-	"items": [],
+	"items": [
+		{
+			"id": "/editioncrafter/grotis_for_die_goltschmit_und_andern_khunstiger/iiif/canvas/f0001",
+			"type": "Canvas",
+			"items": [
+				{
+					"id": "/editioncrafter/grotis_for_die_goltschmit_und_andern_khunstiger/iiif/canvas/f0001/annotationpage/0",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/grotis_for_die_goltschmit_und_andern_khunstiger/iiif/canvas/f0001/annotationpage/0/annotation/0",
+							"type": "Annotation",
+							"motivation": "painting",
+							"body": {
+								"id": "https://iiif.micr.io/PJiXg",
+								"format": "image/jpeg",
+								"type": "Image",
+								"height": 800,
+								"width": 1000,
+								"service": [
+									{
+										"id": "https://iiif.micr.io/PJiXg",
+										"type": "ImageService2",
+										"profile": "http://iiif.io/api/image/2/level2.json"
+									}
+								]
+							},
+							"target": "/editioncrafter/grotis_for_die_goltschmit_und_andern_khunstiger/iiif/canvas/f0001"
+						}
+					]
+				}
+			],
+			"height": 800,
+			"width": 1000,
+			"label": {
+				"none": [
+					"Grotis for die golt… (Title Page)"
+				]
+			},
+			"annotations": [
+				{
+					"id": "/editioncrafter/grotis_for_die_goltschmit_und_andern_khunstiger/iiif/canvas/f0001/annotationPage/1",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/grotis_for_die_goltschmit_und_andern_khunstiger/iiif/canvas/f0001/annotationPage/1/annotation/0",
+							"type": "Annotation",
+							"motivation": "supplementing",
+							"body": {
+								"id": "/editioncrafter/grotis_for_die_goltschmit_und_andern_khunstiger/tei/transcription/f0001.xml",
+								"format": "text/xml",
+								"type": "TextPartial",
+								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
+							},
+							"target": "/editioncrafter/grotis_for_die_goltschmit_und_andern_khunstiger/iiif/canvas/f0001"
+						},
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/grotis_for_die_goltschmit_und_andern_khunstiger/iiif/canvas/f0001/annotationPage/1/annotation/1",
+							"type": "Annotation",
+							"motivation": "supplementing",
+							"body": {
+								"id": "/editioncrafter/grotis_for_die_goltschmit_und_andern_khunstiger/tei/translation/f0001.xml",
+								"format": "text/xml",
+								"type": "TextPartial",
+								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
+							},
+							"target": "/editioncrafter/grotis_for_die_goltschmit_und_andern_khunstiger/iiif/canvas/f0001"
+						},
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/grotis_for_die_goltschmit_und_andern_khunstiger/iiif/canvas/f0001/annotationPage/1/annotation/2",
+							"type": "Annotation",
+							"motivation": "supplementing",
+							"body": {
+								"id": "/editioncrafter/grotis_for_die_goltschmit_und_andern_khunstiger/html/transcription/f0001.html",
+								"format": "text/html",
+								"type": "TextPartial",
+								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
+							},
+							"target": "/editioncrafter/grotis_for_die_goltschmit_und_andern_khunstiger/iiif/canvas/f0001"
+						},
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/grotis_for_die_goltschmit_und_andern_khunstiger/iiif/canvas/f0001/annotationPage/1/annotation/3",
+							"type": "Annotation",
+							"motivation": "supplementing",
+							"body": {
+								"id": "/editioncrafter/grotis_for_die_goltschmit_und_andern_khunstiger/html/translation/f0001.html",
+								"format": "text/html",
+								"type": "TextPartial",
+								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
+							},
+							"target": "/editioncrafter/grotis_for_die_goltschmit_und_andern_khunstiger/iiif/canvas/f0001"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "/editioncrafter/grotis_for_die_goltschmit_und_andern_khunstiger/iiif/canvas/f0002",
+			"type": "Canvas",
+			"items": [
+				{
+					"id": "/editioncrafter/grotis_for_die_goltschmit_und_andern_khunstiger/iiif/canvas/f0002/annotationpage/0",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/grotis_for_die_goltschmit_und_andern_khunstiger/iiif/canvas/f0002/annotationpage/0/annotation/0",
+							"type": "Annotation",
+							"motivation": "painting",
+							"body": {
+								"id": "https://iiif.micr.io/usjtO",
+								"format": "image/jpeg",
+								"type": "Image",
+								"height": 800,
+								"width": 1000,
+								"service": [
+									{
+										"id": "https://iiif.micr.io/usjtO",
+										"type": "ImageService2",
+										"profile": "http://iiif.io/api/image/2/level2.json"
+									}
+								]
+							},
+							"target": "/editioncrafter/grotis_for_die_goltschmit_und_andern_khunstiger/iiif/canvas/f0002"
+						}
+					]
+				}
+			],
+			"height": 800,
+			"width": 1000,
+			"label": {
+				"none": [
+					"Grotis for die golt… (2)"
+				]
+			},
+			"annotations": []
+		}
+	],
 	"label": {
 		"en": [
 			"grotis_for_die_goltschmit_und_andern_khunstiger"

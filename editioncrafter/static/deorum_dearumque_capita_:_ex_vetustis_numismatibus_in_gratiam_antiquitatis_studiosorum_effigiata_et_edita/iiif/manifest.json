@@ -5,7 +5,82 @@
 	],
 	"id": "/editioncrafter/deorum_dearumque_capita_:_ex_vetustis_numismatibus_in_gratiam_antiquitatis_studiosorum_effigiata_et_edita/iiif/manifest.json",
 	"type": "Manifest",
-	"items": [],
+	"items": [
+		{
+			"id": "/editioncrafter/deorum_dearumque_capita_:_ex_vetustis_numismatibus_in_gratiam_antiquitatis_studiosorum_effigiata_et_edita/iiif/canvas/f0001",
+			"type": "Canvas",
+			"items": [
+				{
+					"id": "/editioncrafter/deorum_dearumque_capita_:_ex_vetustis_numismatibus_in_gratiam_antiquitatis_studiosorum_effigiata_et_edita/iiif/canvas/f0001/annotationpage/0",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/deorum_dearumque_capita_:_ex_vetustis_numismatibus_in_gratiam_antiquitatis_studiosorum_effigiata_et_edita/iiif/canvas/f0001/annotationpage/0/annotation/0",
+							"type": "Annotation",
+							"motivation": "painting",
+							"body": {
+								"id": "https://corpora.dh.tamu.edu/iiif/2/corpora/6285564874d5f7a229b60520/Image/09f0/62d05da2ae2442b53e09f02f/files/IMG_5241.jpg",
+								"format": "image/jpeg",
+								"type": "Image",
+								"height": 800,
+								"width": 1000,
+								"service": [
+									{
+										"id": "https://corpora.dh.tamu.edu/iiif/2/corpora/6285564874d5f7a229b60520/Image/09f0/62d05da2ae2442b53e09f02f/files/IMG_5241.jpg",
+										"type": "ImageService2",
+										"profile": "http://iiif.io/api/image/2/level2.json"
+									}
+								]
+							},
+							"target": "/editioncrafter/deorum_dearumque_capita_:_ex_vetustis_numismatibus_in_gratiam_antiquitatis_studiosorum_effigiata_et_edita/iiif/canvas/f0001"
+						}
+					]
+				}
+			],
+			"height": 800,
+			"width": 1000,
+			"label": {
+				"none": [
+					"Deorum dearumque ca… (Title Page)"
+				]
+			},
+			"annotations": [
+				{
+					"id": "/editioncrafter/deorum_dearumque_capita_:_ex_vetustis_numismatibus_in_gratiam_antiquitatis_studiosorum_effigiata_et_edita/iiif/canvas/f0001/annotationPage/1",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/deorum_dearumque_capita_:_ex_vetustis_numismatibus_in_gratiam_antiquitatis_studiosorum_effigiata_et_edita/iiif/canvas/f0001/annotationPage/1/annotation/0",
+							"type": "Annotation",
+							"motivation": "supplementing",
+							"body": {
+								"id": "/editioncrafter/deorum_dearumque_capita_:_ex_vetustis_numismatibus_in_gratiam_antiquitatis_studiosorum_effigiata_et_edita/tei/transcription/f0001.xml",
+								"format": "text/xml",
+								"type": "TextPartial",
+								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
+							},
+							"target": "/editioncrafter/deorum_dearumque_capita_:_ex_vetustis_numismatibus_in_gratiam_antiquitatis_studiosorum_effigiata_et_edita/iiif/canvas/f0001"
+						},
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/deorum_dearumque_capita_:_ex_vetustis_numismatibus_in_gratiam_antiquitatis_studiosorum_effigiata_et_edita/iiif/canvas/f0001/annotationPage/1/annotation/1",
+							"type": "Annotation",
+							"motivation": "supplementing",
+							"body": {
+								"id": "/editioncrafter/deorum_dearumque_capita_:_ex_vetustis_numismatibus_in_gratiam_antiquitatis_studiosorum_effigiata_et_edita/html/transcription/f0001.html",
+								"format": "text/html",
+								"type": "TextPartial",
+								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
+							},
+							"target": "/editioncrafter/deorum_dearumque_capita_:_ex_vetustis_numismatibus_in_gratiam_antiquitatis_studiosorum_effigiata_et_edita/iiif/canvas/f0001"
+						}
+					]
+				}
+			]
+		}
+	],
 	"label": {
 		"en": [
 			"deorum_dearumque_capita_:_ex_vetustis_numismatibus_in_gratiam_antiquitatis_studiosorum_effigiata_et_edita"

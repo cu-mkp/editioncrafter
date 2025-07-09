@@ -5,7 +5,723 @@
 	],
 	"id": "/editioncrafter/grottesco:_in_diversche_manieren/iiif/manifest.json",
 	"type": "Manifest",
-	"items": [],
+	"items": [
+		{
+			"id": "/editioncrafter/grottesco:_in_diversche_manieren/iiif/canvas/f0001",
+			"type": "Canvas",
+			"items": [
+				{
+					"id": "/editioncrafter/grottesco:_in_diversche_manieren/iiif/canvas/f0001/annotationpage/0",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/grottesco:_in_diversche_manieren/iiif/canvas/f0001/annotationpage/0/annotation/0",
+							"type": "Annotation",
+							"motivation": "painting",
+							"body": {
+								"id": "https://iiif.micr.io/CFnrl",
+								"format": "image/jpeg",
+								"type": "Image",
+								"height": 800,
+								"width": 1000,
+								"service": [
+									{
+										"id": "https://iiif.micr.io/CFnrl",
+										"type": "ImageService2",
+										"profile": "http://iiif.io/api/image/2/level2.json"
+									}
+								]
+							},
+							"target": "/editioncrafter/grottesco:_in_diversche_manieren/iiif/canvas/f0001"
+						}
+					]
+				}
+			],
+			"height": 800,
+			"width": 1000,
+			"label": {
+				"none": [
+					"Grottesco: in diver… (Title Page)"
+				]
+			},
+			"annotations": [
+				{
+					"id": "/editioncrafter/grottesco:_in_diversche_manieren/iiif/canvas/f0001/annotationPage/1",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/grottesco:_in_diversche_manieren/iiif/canvas/f0001/annotationPage/1/annotation/0",
+							"type": "Annotation",
+							"motivation": "supplementing",
+							"body": {
+								"id": "/editioncrafter/grottesco:_in_diversche_manieren/tei/transcription/f0001.xml",
+								"format": "text/xml",
+								"type": "TextPartial",
+								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
+							},
+							"target": "/editioncrafter/grottesco:_in_diversche_manieren/iiif/canvas/f0001"
+						},
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/grottesco:_in_diversche_manieren/iiif/canvas/f0001/annotationPage/1/annotation/1",
+							"type": "Annotation",
+							"motivation": "supplementing",
+							"body": {
+								"id": "/editioncrafter/grottesco:_in_diversche_manieren/tei/translation/f0001.xml",
+								"format": "text/xml",
+								"type": "TextPartial",
+								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
+							},
+							"target": "/editioncrafter/grottesco:_in_diversche_manieren/iiif/canvas/f0001"
+						},
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/grottesco:_in_diversche_manieren/iiif/canvas/f0001/annotationPage/1/annotation/2",
+							"type": "Annotation",
+							"motivation": "supplementing",
+							"body": {
+								"id": "/editioncrafter/grottesco:_in_diversche_manieren/html/transcription/f0001.html",
+								"format": "text/html",
+								"type": "TextPartial",
+								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
+							},
+							"target": "/editioncrafter/grottesco:_in_diversche_manieren/iiif/canvas/f0001"
+						},
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/grottesco:_in_diversche_manieren/iiif/canvas/f0001/annotationPage/1/annotation/3",
+							"type": "Annotation",
+							"motivation": "supplementing",
+							"body": {
+								"id": "/editioncrafter/grottesco:_in_diversche_manieren/html/translation/f0001.html",
+								"format": "text/html",
+								"type": "TextPartial",
+								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
+							},
+							"target": "/editioncrafter/grottesco:_in_diversche_manieren/iiif/canvas/f0001"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "/editioncrafter/grottesco:_in_diversche_manieren/iiif/canvas/f0002",
+			"type": "Canvas",
+			"items": [
+				{
+					"id": "/editioncrafter/grottesco:_in_diversche_manieren/iiif/canvas/f0002/annotationpage/0",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/grottesco:_in_diversche_manieren/iiif/canvas/f0002/annotationpage/0/annotation/0",
+							"type": "Annotation",
+							"motivation": "painting",
+							"body": {
+								"id": "https://iiif.micr.io/QHOva",
+								"format": "image/jpeg",
+								"type": "Image",
+								"height": 800,
+								"width": 1000,
+								"service": [
+									{
+										"id": "https://iiif.micr.io/QHOva",
+										"type": "ImageService2",
+										"profile": "http://iiif.io/api/image/2/level2.json"
+									}
+								]
+							},
+							"target": "/editioncrafter/grottesco:_in_diversche_manieren/iiif/canvas/f0002"
+						}
+					]
+				}
+			],
+			"height": 800,
+			"width": 1000,
+			"label": {
+				"none": [
+					"Grottesco: in diver… (2)"
+				]
+			},
+			"annotations": []
+		},
+		{
+			"id": "/editioncrafter/grottesco:_in_diversche_manieren/iiif/canvas/f0003",
+			"type": "Canvas",
+			"items": [
+				{
+					"id": "/editioncrafter/grottesco:_in_diversche_manieren/iiif/canvas/f0003/annotationpage/0",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/grottesco:_in_diversche_manieren/iiif/canvas/f0003/annotationpage/0/annotation/0",
+							"type": "Annotation",
+							"motivation": "painting",
+							"body": {
+								"id": "https://iiif.micr.io/BKeFV",
+								"format": "image/jpeg",
+								"type": "Image",
+								"height": 800,
+								"width": 1000,
+								"service": [
+									{
+										"id": "https://iiif.micr.io/BKeFV",
+										"type": "ImageService2",
+										"profile": "http://iiif.io/api/image/2/level2.json"
+									}
+								]
+							},
+							"target": "/editioncrafter/grottesco:_in_diversche_manieren/iiif/canvas/f0003"
+						}
+					]
+				}
+			],
+			"height": 800,
+			"width": 1000,
+			"label": {
+				"none": [
+					"Grottesco: in diver… (3)"
+				]
+			},
+			"annotations": []
+		},
+		{
+			"id": "/editioncrafter/grottesco:_in_diversche_manieren/iiif/canvas/f0004",
+			"type": "Canvas",
+			"items": [
+				{
+					"id": "/editioncrafter/grottesco:_in_diversche_manieren/iiif/canvas/f0004/annotationpage/0",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/grottesco:_in_diversche_manieren/iiif/canvas/f0004/annotationpage/0/annotation/0",
+							"type": "Annotation",
+							"motivation": "painting",
+							"body": {
+								"id": "https://iiif.micr.io/IEODV",
+								"format": "image/jpeg",
+								"type": "Image",
+								"height": 800,
+								"width": 1000,
+								"service": [
+									{
+										"id": "https://iiif.micr.io/IEODV",
+										"type": "ImageService2",
+										"profile": "http://iiif.io/api/image/2/level2.json"
+									}
+								]
+							},
+							"target": "/editioncrafter/grottesco:_in_diversche_manieren/iiif/canvas/f0004"
+						}
+					]
+				}
+			],
+			"height": 800,
+			"width": 1000,
+			"label": {
+				"none": [
+					"Grottesco: in diver… (4)"
+				]
+			},
+			"annotations": []
+		},
+		{
+			"id": "/editioncrafter/grottesco:_in_diversche_manieren/iiif/canvas/f0005",
+			"type": "Canvas",
+			"items": [
+				{
+					"id": "/editioncrafter/grottesco:_in_diversche_manieren/iiif/canvas/f0005/annotationpage/0",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/grottesco:_in_diversche_manieren/iiif/canvas/f0005/annotationpage/0/annotation/0",
+							"type": "Annotation",
+							"motivation": "painting",
+							"body": {
+								"id": "https://iiif.micr.io/AdvnV",
+								"format": "image/jpeg",
+								"type": "Image",
+								"height": 800,
+								"width": 1000,
+								"service": [
+									{
+										"id": "https://iiif.micr.io/AdvnV",
+										"type": "ImageService2",
+										"profile": "http://iiif.io/api/image/2/level2.json"
+									}
+								]
+							},
+							"target": "/editioncrafter/grottesco:_in_diversche_manieren/iiif/canvas/f0005"
+						}
+					]
+				}
+			],
+			"height": 800,
+			"width": 1000,
+			"label": {
+				"none": [
+					"Grottesco: in diver… (5)"
+				]
+			},
+			"annotations": []
+		},
+		{
+			"id": "/editioncrafter/grottesco:_in_diversche_manieren/iiif/canvas/f0006",
+			"type": "Canvas",
+			"items": [
+				{
+					"id": "/editioncrafter/grottesco:_in_diversche_manieren/iiif/canvas/f0006/annotationpage/0",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/grottesco:_in_diversche_manieren/iiif/canvas/f0006/annotationpage/0/annotation/0",
+							"type": "Annotation",
+							"motivation": "painting",
+							"body": {
+								"id": "https://iiif.micr.io/nisDJ",
+								"format": "image/jpeg",
+								"type": "Image",
+								"height": 800,
+								"width": 1000,
+								"service": [
+									{
+										"id": "https://iiif.micr.io/nisDJ",
+										"type": "ImageService2",
+										"profile": "http://iiif.io/api/image/2/level2.json"
+									}
+								]
+							},
+							"target": "/editioncrafter/grottesco:_in_diversche_manieren/iiif/canvas/f0006"
+						}
+					]
+				}
+			],
+			"height": 800,
+			"width": 1000,
+			"label": {
+				"none": [
+					"Grottesco: in diver… (6)"
+				]
+			},
+			"annotations": []
+		},
+		{
+			"id": "/editioncrafter/grottesco:_in_diversche_manieren/iiif/canvas/f0007",
+			"type": "Canvas",
+			"items": [
+				{
+					"id": "/editioncrafter/grottesco:_in_diversche_manieren/iiif/canvas/f0007/annotationpage/0",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/grottesco:_in_diversche_manieren/iiif/canvas/f0007/annotationpage/0/annotation/0",
+							"type": "Annotation",
+							"motivation": "painting",
+							"body": {
+								"id": "https://iiif.micr.io/WLIQt",
+								"format": "image/jpeg",
+								"type": "Image",
+								"height": 800,
+								"width": 1000,
+								"service": [
+									{
+										"id": "https://iiif.micr.io/WLIQt",
+										"type": "ImageService2",
+										"profile": "http://iiif.io/api/image/2/level2.json"
+									}
+								]
+							},
+							"target": "/editioncrafter/grottesco:_in_diversche_manieren/iiif/canvas/f0007"
+						}
+					]
+				}
+			],
+			"height": 800,
+			"width": 1000,
+			"label": {
+				"none": [
+					"Grottesco: in diver… (7)"
+				]
+			},
+			"annotations": []
+		},
+		{
+			"id": "/editioncrafter/grottesco:_in_diversche_manieren/iiif/canvas/f0009",
+			"type": "Canvas",
+			"items": [
+				{
+					"id": "/editioncrafter/grottesco:_in_diversche_manieren/iiif/canvas/f0009/annotationpage/0",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/grottesco:_in_diversche_manieren/iiif/canvas/f0009/annotationpage/0/annotation/0",
+							"type": "Annotation",
+							"motivation": "painting",
+							"body": {
+								"id": "https://iiif.micr.io/AdwGj",
+								"format": "image/jpeg",
+								"type": "Image",
+								"height": 800,
+								"width": 1000,
+								"service": [
+									{
+										"id": "https://iiif.micr.io/AdwGj",
+										"type": "ImageService2",
+										"profile": "http://iiif.io/api/image/2/level2.json"
+									}
+								]
+							},
+							"target": "/editioncrafter/grottesco:_in_diversche_manieren/iiif/canvas/f0009"
+						}
+					]
+				}
+			],
+			"height": 800,
+			"width": 1000,
+			"label": {
+				"none": [
+					"Grottesco: in diver… (9)"
+				]
+			},
+			"annotations": []
+		},
+		{
+			"id": "/editioncrafter/grottesco:_in_diversche_manieren/iiif/canvas/f0010",
+			"type": "Canvas",
+			"items": [
+				{
+					"id": "/editioncrafter/grottesco:_in_diversche_manieren/iiif/canvas/f0010/annotationpage/0",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/grottesco:_in_diversche_manieren/iiif/canvas/f0010/annotationpage/0/annotation/0",
+							"type": "Annotation",
+							"motivation": "painting",
+							"body": {
+								"id": "https://iiif.micr.io/MKlPK",
+								"format": "image/jpeg",
+								"type": "Image",
+								"height": 800,
+								"width": 1000,
+								"service": [
+									{
+										"id": "https://iiif.micr.io/MKlPK",
+										"type": "ImageService2",
+										"profile": "http://iiif.io/api/image/2/level2.json"
+									}
+								]
+							},
+							"target": "/editioncrafter/grottesco:_in_diversche_manieren/iiif/canvas/f0010"
+						}
+					]
+				}
+			],
+			"height": 800,
+			"width": 1000,
+			"label": {
+				"none": [
+					"Grottesco: in diver… (10)"
+				]
+			},
+			"annotations": []
+		},
+		{
+			"id": "/editioncrafter/grottesco:_in_diversche_manieren/iiif/canvas/f0011",
+			"type": "Canvas",
+			"items": [
+				{
+					"id": "/editioncrafter/grottesco:_in_diversche_manieren/iiif/canvas/f0011/annotationpage/0",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/grottesco:_in_diversche_manieren/iiif/canvas/f0011/annotationpage/0/annotation/0",
+							"type": "Annotation",
+							"motivation": "painting",
+							"body": {
+								"id": "https://iiif.micr.io/wSFaT",
+								"format": "image/jpeg",
+								"type": "Image",
+								"height": 800,
+								"width": 1000,
+								"service": [
+									{
+										"id": "https://iiif.micr.io/wSFaT",
+										"type": "ImageService2",
+										"profile": "http://iiif.io/api/image/2/level2.json"
+									}
+								]
+							},
+							"target": "/editioncrafter/grottesco:_in_diversche_manieren/iiif/canvas/f0011"
+						}
+					]
+				}
+			],
+			"height": 800,
+			"width": 1000,
+			"label": {
+				"none": [
+					"Grottesco: in diver… (11)"
+				]
+			},
+			"annotations": []
+		},
+		{
+			"id": "/editioncrafter/grottesco:_in_diversche_manieren/iiif/canvas/f0012",
+			"type": "Canvas",
+			"items": [
+				{
+					"id": "/editioncrafter/grottesco:_in_diversche_manieren/iiif/canvas/f0012/annotationpage/0",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/grottesco:_in_diversche_manieren/iiif/canvas/f0012/annotationpage/0/annotation/0",
+							"type": "Annotation",
+							"motivation": "painting",
+							"body": {
+								"id": "https://iiif.micr.io/GOzNl",
+								"format": "image/jpeg",
+								"type": "Image",
+								"height": 800,
+								"width": 1000,
+								"service": [
+									{
+										"id": "https://iiif.micr.io/GOzNl",
+										"type": "ImageService2",
+										"profile": "http://iiif.io/api/image/2/level2.json"
+									}
+								]
+							},
+							"target": "/editioncrafter/grottesco:_in_diversche_manieren/iiif/canvas/f0012"
+						}
+					]
+				}
+			],
+			"height": 800,
+			"width": 1000,
+			"label": {
+				"none": [
+					"Grottesco: in diver… (12)"
+				]
+			},
+			"annotations": []
+		},
+		{
+			"id": "/editioncrafter/grottesco:_in_diversche_manieren/iiif/canvas/f0013",
+			"type": "Canvas",
+			"items": [
+				{
+					"id": "/editioncrafter/grottesco:_in_diversche_manieren/iiif/canvas/f0013/annotationpage/0",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/grottesco:_in_diversche_manieren/iiif/canvas/f0013/annotationpage/0/annotation/0",
+							"type": "Annotation",
+							"motivation": "painting",
+							"body": {
+								"id": "https://iiif.micr.io/nQsHS",
+								"format": "image/jpeg",
+								"type": "Image",
+								"height": 800,
+								"width": 1000,
+								"service": [
+									{
+										"id": "https://iiif.micr.io/nQsHS",
+										"type": "ImageService2",
+										"profile": "http://iiif.io/api/image/2/level2.json"
+									}
+								]
+							},
+							"target": "/editioncrafter/grottesco:_in_diversche_manieren/iiif/canvas/f0013"
+						}
+					]
+				}
+			],
+			"height": 800,
+			"width": 1000,
+			"label": {
+				"none": [
+					"Grottesco: in diver… (13)"
+				]
+			},
+			"annotations": []
+		},
+		{
+			"id": "/editioncrafter/grottesco:_in_diversche_manieren/iiif/canvas/f0014",
+			"type": "Canvas",
+			"items": [
+				{
+					"id": "/editioncrafter/grottesco:_in_diversche_manieren/iiif/canvas/f0014/annotationpage/0",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/grottesco:_in_diversche_manieren/iiif/canvas/f0014/annotationpage/0/annotation/0",
+							"type": "Annotation",
+							"motivation": "painting",
+							"body": {
+								"id": "https://iiif.micr.io/URPPn",
+								"format": "image/jpeg",
+								"type": "Image",
+								"height": 800,
+								"width": 1000,
+								"service": [
+									{
+										"id": "https://iiif.micr.io/URPPn",
+										"type": "ImageService2",
+										"profile": "http://iiif.io/api/image/2/level2.json"
+									}
+								]
+							},
+							"target": "/editioncrafter/grottesco:_in_diversche_manieren/iiif/canvas/f0014"
+						}
+					]
+				}
+			],
+			"height": 800,
+			"width": 1000,
+			"label": {
+				"none": [
+					"Grottesco: in diver… (14)"
+				]
+			},
+			"annotations": []
+		},
+		{
+			"id": "/editioncrafter/grottesco:_in_diversche_manieren/iiif/canvas/f0015",
+			"type": "Canvas",
+			"items": [
+				{
+					"id": "/editioncrafter/grottesco:_in_diversche_manieren/iiif/canvas/f0015/annotationpage/0",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/grottesco:_in_diversche_manieren/iiif/canvas/f0015/annotationpage/0/annotation/0",
+							"type": "Annotation",
+							"motivation": "painting",
+							"body": {
+								"id": "https://iiif.micr.io/QVYpE",
+								"format": "image/jpeg",
+								"type": "Image",
+								"height": 800,
+								"width": 1000,
+								"service": [
+									{
+										"id": "https://iiif.micr.io/QVYpE",
+										"type": "ImageService2",
+										"profile": "http://iiif.io/api/image/2/level2.json"
+									}
+								]
+							},
+							"target": "/editioncrafter/grottesco:_in_diversche_manieren/iiif/canvas/f0015"
+						}
+					]
+				}
+			],
+			"height": 800,
+			"width": 1000,
+			"label": {
+				"none": [
+					"Grottesco: in diver… (15)"
+				]
+			},
+			"annotations": []
+		},
+		{
+			"id": "/editioncrafter/grottesco:_in_diversche_manieren/iiif/canvas/f0016",
+			"type": "Canvas",
+			"items": [
+				{
+					"id": "/editioncrafter/grottesco:_in_diversche_manieren/iiif/canvas/f0016/annotationpage/0",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/grottesco:_in_diversche_manieren/iiif/canvas/f0016/annotationpage/0/annotation/0",
+							"type": "Annotation",
+							"motivation": "painting",
+							"body": {
+								"id": "https://iiif.micr.io/ScVRP",
+								"format": "image/jpeg",
+								"type": "Image",
+								"height": 800,
+								"width": 1000,
+								"service": [
+									{
+										"id": "https://iiif.micr.io/ScVRP",
+										"type": "ImageService2",
+										"profile": "http://iiif.io/api/image/2/level2.json"
+									}
+								]
+							},
+							"target": "/editioncrafter/grottesco:_in_diversche_manieren/iiif/canvas/f0016"
+						}
+					]
+				}
+			],
+			"height": 800,
+			"width": 1000,
+			"label": {
+				"none": [
+					"Grottesco: in diver… (16)"
+				]
+			},
+			"annotations": []
+		},
+		{
+			"id": "/editioncrafter/grottesco:_in_diversche_manieren/iiif/canvas/f0017",
+			"type": "Canvas",
+			"items": [
+				{
+					"id": "/editioncrafter/grottesco:_in_diversche_manieren/iiif/canvas/f0017/annotationpage/0",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/grottesco:_in_diversche_manieren/iiif/canvas/f0017/annotationpage/0/annotation/0",
+							"type": "Annotation",
+							"motivation": "painting",
+							"body": {
+								"id": "https://iiif.micr.io/sTWgE",
+								"format": "image/jpeg",
+								"type": "Image",
+								"height": 800,
+								"width": 1000,
+								"service": [
+									{
+										"id": "https://iiif.micr.io/sTWgE",
+										"type": "ImageService2",
+										"profile": "http://iiif.io/api/image/2/level2.json"
+									}
+								]
+							},
+							"target": "/editioncrafter/grottesco:_in_diversche_manieren/iiif/canvas/f0017"
+						}
+					]
+				}
+			],
+			"height": 800,
+			"width": 1000,
+			"label": {
+				"none": [
+					"Grottesco: in diver… (17)"
+				]
+			},
+			"annotations": []
+		}
+	],
 	"label": {
 		"en": [
 			"grottesco:_in_diversche_manieren"

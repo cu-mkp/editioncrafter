@@ -1,37 +1,40 @@
 import { Box, Button, Collapse, Divider, IconButton, Input, Typography } from '@material-ui/core'
-// import { red } from '@material-ui/core/colors'
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft'
-// import GridOnIcon from '@material-ui/icons/GridOn'
-// import ListIcon from '@material-ui/icons/List'
 import TuneIcon from '@material-ui/icons/Tune'
-import { useEffect, useMemo, useState } from 'react'
+import { useCallback, useEffect, useMemo, useState } from 'react'
 
 import { useLocation, useNavigate } from 'react-router-dom'
 import { getObjs } from '../../common/lib/sql'
 import DocumentDetail from './DocumentDetail'
-import DocumentFilters from './DocumentFilters'
+// import DocumentFilters from './DocumentFilters'
 import TagFilters from './TagFilters'
 
 function getData(db) {
   const docStmt = db.prepare(`
-      WITH ags AS (SELECT document, json_array(role, person) as agent FROM agents)
       SELECT
         d.id AS id,
         d.name AS name,
         d.local_id AS local_id,
-        json_group_array(document_languages.language) as languages,
-        json_group_array(document_locations.location) as locations,
-        json_group_array(classifications.keyword) as keywords,
-        json_group_array(ags.agent) as agents
+        json_group_array(document_taggings.tag) as tags
       FROM
         documents d
-          LEFT JOIN document_languages ON d.id = document_languages.document
-          LEFT JOIN document_locations ON d.id = document_locations.document
-          LEFT JOIN classifications ON d.id = classifications.document
-          LEFT JOIN ags ON d.id = ags.document
+          LEFT JOIN document_taggings ON d.id = document_taggings.document
       GROUP BY d.id, d.name, d.local_id
     `)
   return getObjs(docStmt)
+}
+
+function getDocTags(db) {
+  const tagsStmt = db.prepare(`
+    SELECT
+      tags.id AS id
+    FROM
+      tags
+        LEFT JOIN taxonomies ON tags.taxonomy_id = taxonomies.id
+    WHERE
+      taxonomies.is_surface = 0 OR taxonomies.is_surface IS NULL
+    `)
+  return getObjs(tagsStmt)
 }
 
 function parseFolioID(folioID) {
@@ -60,76 +63,56 @@ function getSelection(path) {
 function SurfaceBrowser(props) {
   const { db, open, toggleOpen } = props
   const documents = useMemo(() => getData(db), [db])
+  const docTags = useMemo(() => getDocTags(db)?.map(tag => (tag.id)), [db])
   const [pageCount, setPageCount] = useState({})
   const [totalPages, setTotalPages] = useState(0)
   const [tags, setTags] = useState([])
-  const [agents, setAgents] = useState([])
-  const [keywords, setKeywords] = useState([])
-  const [langs, setLangs] = useState([])
-  const [locations, setLocations] = useState([])
   const [showFilters, setShowFilters] = useState(false)
-  const [query, setQuery] = useState(null)
+  const [query, setQuery] = useState(undefined)
 
-  const filterDocs = (docs, filters) => {
-    const { agents, keywords, langs, locations } = filters
+  const filterDocs = useCallback((docs, tags) => {
     return docs.filter((doc) => {
-      for (const ag of agents) {
-        if (!JSON.parse(doc.agents)?.find(a => (a && ag.role === JSON.parse(a)[0] && ag.person === JSON.parse(a)[1]))) {
-          return false
-        }
-      }
-      for (const term of keywords) {
-        if (!JSON.parse(doc.keywords)?.includes(term.term)) {
-          return false
-        }
-      }
-      for (const lang of langs) {
-        if (!JSON.parse(doc.languages)?.includes(lang)) {
-          return false
-        }
-      }
-      for (const loc of locations) {
-        if (!JSON.parse(doc.locations)?.includes(loc)) {
+      const docID = doc.id
+      for (const tag of tags) {
+        if (docTags.includes(tag) && !JSON.parse(doc.tags)?.includes(tag)) {
+          const newCount = pageCount
+          newCount[docID] = 0
+          setPageCount(newCount)
           return false
         }
       }
       return true
     })
-  }
+  }, [docTags, pageCount])
 
-  const filteredDocs = useMemo(() => (filterDocs(documents, { agents, keywords, langs, locations })), [documents, agents, keywords, langs, locations])
+  const filteredDocs = useMemo(() => (filterDocs(documents, tags)), [filterDocs, documents, tags])
 
   const navigate = useNavigate()
   const location = useLocation()
   const selection = useMemo(() => getSelection(location.pathname), [location])
 
-  const numFilters = useMemo(() => (agents.length + keywords.length + langs.length + locations.length + tags.length), [agents, keywords, langs, locations, tags])
-
-  const navigateToSelection = (nextSelection) => {
+  const navigateToSelection = useCallback((nextSelection) => {
     const folioID = nextSelection?.left ? `${nextSelection.left.localID}_${nextSelection.left.surfaceID}` : null
     const folioID2 = nextSelection?.right ? `${nextSelection.right.localID}_${nextSelection.right.surfaceID}` : null
     const navParams = `/ec/${folioID || '-1'}/${folioID ? 'f' : 'g'}/${folioID2 || '-1'}/${folioID2 ? 'f' : 'g'}`
     navigate(navParams + location.search)
-  }
+  }, [location.search, navigate])
 
-  const updatePageCount = (documentID, numPages) => {
+  const updatePageCount = useCallback((documentID, numPages) => {
     const newCount = pageCount
     newCount[documentID] = numPages
     setPageCount(newCount)
-  }
+  }, [pageCount])
 
   useEffect(() => {
     let p = 0
     for (const key of Object.keys(pageCount)) {
-      if (filteredDocs.find(doc => (doc.id.toString() === key.toString()))) {
-        p += pageCount[key]
-      }
+      p += pageCount[key]
     }
     setTotalPages(p)
-  }, [pageCount, tags, filteredDocs])
+  }, [pageCount, tags])
 
-  const documentDetails = filteredDocs.map((doc) => {
-  const documentDetails = filteredDocs.map((doc) => {
+  const documentDetails = useMemo(() => filteredDocs.map((doc) => {
     return (
       <DocumentDetail
         key={`document-detail-${doc.id}`}
@@ -140,11 +123,11 @@ function SurfaceBrowser(props) {
         selection={selection}
         navigateToSelection={navigateToSelection}
         updatePageCount={count => updatePageCount(doc.id, count)}
-        tags={tags}
+        tags={tags?.filter(tag => !docTags.includes(tag))}
       >
       </DocumentDetail>
     )
-  })
+  }), [db, docTags, filteredDocs, navigateToSelection, selection, tags, updatePageCount])
 
   return (
     <Collapse in={open} horizontal>
@@ -162,7 +145,7 @@ function SurfaceBrowser(props) {
             onClick={() => setShowFilters(current => (!current))}
           >
             Filter
-            { numFilters
+            { tags && tags.length
               ? (
                   <div style={{
                     fontSize: 'small',
@@ -180,7 +163,7 @@ function SurfaceBrowser(props) {
                     left: '-12px',
                   }}
                   >
-                    {numFilters}
+                    {tags.length}
                   </div>
                 )
               : null}
@@ -215,11 +198,6 @@ function SurfaceBrowser(props) {
                   setTags(current => ([...current, tagId]))
                 }
               }}
-            />
-            <DocumentFilters
-              db={db}
-              query={query}
-              filters={{ agents: { data: agents, onUpdate: setAgents }, keywords: { data: keywords, onUpdate: setKeywords }, langs: { data: langs, onUpdate: setLangs }, locations: { data: locations, onUpdate: setLocations } }}
             />
           </div>
         ) }

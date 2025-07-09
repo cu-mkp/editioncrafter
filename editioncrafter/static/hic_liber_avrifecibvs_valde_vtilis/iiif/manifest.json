@@ -5,7 +5,313 @@
 	],
 	"id": "/editioncrafter/hic_liber_avrifecibvs_valde_vtilis/iiif/manifest.json",
 	"type": "Manifest",
-	"items": [],
+	"items": [
+		{
+			"id": "/editioncrafter/hic_liber_avrifecibvs_valde_vtilis/iiif/canvas/f0001",
+			"type": "Canvas",
+			"items": [
+				{
+					"id": "/editioncrafter/hic_liber_avrifecibvs_valde_vtilis/iiif/canvas/f0001/annotationpage/0",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/hic_liber_avrifecibvs_valde_vtilis/iiif/canvas/f0001/annotationpage/0/annotation/0",
+							"type": "Annotation",
+							"motivation": "painting",
+							"body": {
+								"id": "https://iiif.micr.io/Bqcbz",
+								"format": "image/jpeg",
+								"type": "Image",
+								"height": 800,
+								"width": 1000,
+								"service": [
+									{
+										"id": "https://iiif.micr.io/Bqcbz",
+										"type": "ImageService2",
+										"profile": "http://iiif.io/api/image/2/level2.json"
+									}
+								]
+							},
+							"target": "/editioncrafter/hic_liber_avrifecibvs_valde_vtilis/iiif/canvas/f0001"
+						}
+					]
+				}
+			],
+			"height": 800,
+			"width": 1000,
+			"label": {
+				"none": [
+					"Hic liber avrifecib… (Title Page)"
+				]
+			},
+			"annotations": [
+				{
+					"id": "/editioncrafter/hic_liber_avrifecibvs_valde_vtilis/iiif/canvas/f0001/annotationPage/1",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/hic_liber_avrifecibvs_valde_vtilis/iiif/canvas/f0001/annotationPage/1/annotation/0",
+							"type": "Annotation",
+							"motivation": "supplementing",
+							"body": {
+								"id": "/editioncrafter/hic_liber_avrifecibvs_valde_vtilis/tei/transcription/f0001.xml",
+								"format": "text/xml",
+								"type": "TextPartial",
+								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
+							},
+							"target": "/editioncrafter/hic_liber_avrifecibvs_valde_vtilis/iiif/canvas/f0001"
+						},
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/hic_liber_avrifecibvs_valde_vtilis/iiif/canvas/f0001/annotationPage/1/annotation/1",
+							"type": "Annotation",
+							"motivation": "supplementing",
+							"body": {
+								"id": "/editioncrafter/hic_liber_avrifecibvs_valde_vtilis/tei/translation/f0001.xml",
+								"format": "text/xml",
+								"type": "TextPartial",
+								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
+							},
+							"target": "/editioncrafter/hic_liber_avrifecibvs_valde_vtilis/iiif/canvas/f0001"
+						},
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/hic_liber_avrifecibvs_valde_vtilis/iiif/canvas/f0001/annotationPage/1/annotation/2",
+							"type": "Annotation",
+							"motivation": "supplementing",
+							"body": {
+								"id": "/editioncrafter/hic_liber_avrifecibvs_valde_vtilis/html/transcription/f0001.html",
+								"format": "text/html",
+								"type": "TextPartial",
+								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
+							},
+							"target": "/editioncrafter/hic_liber_avrifecibvs_valde_vtilis/iiif/canvas/f0001"
+						},
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/hic_liber_avrifecibvs_valde_vtilis/iiif/canvas/f0001/annotationPage/1/annotation/3",
+							"type": "Annotation",
+							"motivation": "supplementing",
+							"body": {
+								"id": "/editioncrafter/hic_liber_avrifecibvs_valde_vtilis/html/translation/f0001.html",
+								"format": "text/html",
+								"type": "TextPartial",
+								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
+							},
+							"target": "/editioncrafter/hic_liber_avrifecibvs_valde_vtilis/iiif/canvas/f0001"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "/editioncrafter/hic_liber_avrifecibvs_valde_vtilis/iiif/canvas/f0002",
+			"type": "Canvas",
+			"items": [
+				{
+					"id": "/editioncrafter/hic_liber_avrifecibvs_valde_vtilis/iiif/canvas/f0002/annotationpage/0",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/hic_liber_avrifecibvs_valde_vtilis/iiif/canvas/f0002/annotationpage/0/annotation/0",
+							"type": "Annotation",
+							"motivation": "painting",
+							"body": {
+								"id": "https://iiif.micr.io/IhbyB",
+								"format": "image/jpeg",
+								"type": "Image",
+								"height": 800,
+								"width": 1000,
+								"service": [
+									{
+										"id": "https://iiif.micr.io/IhbyB",
+										"type": "ImageService2",
+										"profile": "http://iiif.io/api/image/2/level2.json"
+									}
+								]
+							},
+							"target": "/editioncrafter/hic_liber_avrifecibvs_valde_vtilis/iiif/canvas/f0002"
+						}
+					]
+				}
+			],
+			"height": 800,
+			"width": 1000,
+			"label": {
+				"none": [
+					"Hic liber avrifecib… (2)"
+				]
+			},
+			"annotations": []
+		},
+		{
+			"id": "/editioncrafter/hic_liber_avrifecibvs_valde_vtilis/iiif/canvas/f0003",
+			"type": "Canvas",
+			"items": [
+				{
+					"id": "/editioncrafter/hic_liber_avrifecibvs_valde_vtilis/iiif/canvas/f0003/annotationpage/0",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/hic_liber_avrifecibvs_valde_vtilis/iiif/canvas/f0003/annotationpage/0/annotation/0",
+							"type": "Annotation",
+							"motivation": "painting",
+							"body": {
+								"id": "https://iiif.micr.io/BLTHM",
+								"format": "image/jpeg",
+								"type": "Image",
+								"height": 800,
+								"width": 1000,
+								"service": [
+									{
+										"id": "https://iiif.micr.io/BLTHM",
+										"type": "ImageService2",
+										"profile": "http://iiif.io/api/image/2/level2.json"
+									}
+								]
+							},
+							"target": "/editioncrafter/hic_liber_avrifecibvs_valde_vtilis/iiif/canvas/f0003"
+						}
+					]
+				}
+			],
+			"height": 800,
+			"width": 1000,
+			"label": {
+				"none": [
+					"Hic liber avrifecib… (3)"
+				]
+			},
+			"annotations": []
+		},
+		{
+			"id": "/editioncrafter/hic_liber_avrifecibvs_valde_vtilis/iiif/canvas/f0004",
+			"type": "Canvas",
+			"items": [
+				{
+					"id": "/editioncrafter/hic_liber_avrifecibvs_valde_vtilis/iiif/canvas/f0004/annotationpage/0",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/hic_liber_avrifecibvs_valde_vtilis/iiif/canvas/f0004/annotationpage/0/annotation/0",
+							"type": "Annotation",
+							"motivation": "painting",
+							"body": {
+								"id": "https://iiif.micr.io/yAoHf",
+								"format": "image/jpeg",
+								"type": "Image",
+								"height": 800,
+								"width": 1000,
+								"service": [
+									{
+										"id": "https://iiif.micr.io/yAoHf",
+										"type": "ImageService2",
+										"profile": "http://iiif.io/api/image/2/level2.json"
+									}
+								]
+							},
+							"target": "/editioncrafter/hic_liber_avrifecibvs_valde_vtilis/iiif/canvas/f0004"
+						}
+					]
+				}
+			],
+			"height": 800,
+			"width": 1000,
+			"label": {
+				"none": [
+					"Hic liber avrifecib… (4)"
+				]
+			},
+			"annotations": []
+		},
+		{
+			"id": "/editioncrafter/hic_liber_avrifecibvs_valde_vtilis/iiif/canvas/f0005",
+			"type": "Canvas",
+			"items": [
+				{
+					"id": "/editioncrafter/hic_liber_avrifecibvs_valde_vtilis/iiif/canvas/f0005/annotationpage/0",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/hic_liber_avrifecibvs_valde_vtilis/iiif/canvas/f0005/annotationpage/0/annotation/0",
+							"type": "Annotation",
+							"motivation": "painting",
+							"body": {
+								"id": "https://iiif.micr.io/qkyEj",
+								"format": "image/jpeg",
+								"type": "Image",
+								"height": 800,
+								"width": 1000,
+								"service": [
+									{
+										"id": "https://iiif.micr.io/qkyEj",
+										"type": "ImageService2",
+										"profile": "http://iiif.io/api/image/2/level2.json"
+									}
+								]
+							},
+							"target": "/editioncrafter/hic_liber_avrifecibvs_valde_vtilis/iiif/canvas/f0005"
+						}
+					]
+				}
+			],
+			"height": 800,
+			"width": 1000,
+			"label": {
+				"none": [
+					"Hic liber avrifecib… (5)"
+				]
+			},
+			"annotations": []
+		},
+		{
+			"id": "/editioncrafter/hic_liber_avrifecibvs_valde_vtilis/iiif/canvas/f0006",
+			"type": "Canvas",
+			"items": [
+				{
+					"id": "/editioncrafter/hic_liber_avrifecibvs_valde_vtilis/iiif/canvas/f0006/annotationpage/0",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/hic_liber_avrifecibvs_valde_vtilis/iiif/canvas/f0006/annotationpage/0/annotation/0",
+							"type": "Annotation",
+							"motivation": "painting",
+							"body": {
+								"id": "https://iiif.micr.io/XPdsU",
+								"format": "image/jpeg",
+								"type": "Image",
+								"height": 800,
+								"width": 1000,
+								"service": [
+									{
+										"id": "https://iiif.micr.io/XPdsU",
+										"type": "ImageService2",
+										"profile": "http://iiif.io/api/image/2/level2.json"
+									}
+								]
+							},
+							"target": "/editioncrafter/hic_liber_avrifecibvs_valde_vtilis/iiif/canvas/f0006"
+						}
+					]
+				}
+			],
+			"height": 800,
+			"width": 1000,
+			"label": {
+				"none": [
+					"Hic liber avrifecib… (6)"
+				]
+			},
+			"annotations": []
+		}
+	],
 	"label": {
 		"en": [
 			"hic_liber_avrifecibvs_valde_vtilis"

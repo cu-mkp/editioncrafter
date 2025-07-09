@@ -3,43 +3,43 @@
 		"http://www.w3.org/ns/anno.jsonld",
 		"http://iiif.io/api/presentation/3/context.json"
 	],
-	"id": "http://localhost:8080/animalium_quadrupedumog/iiif/manifest.json",
+	"id": "/editioncrafter/animalium_quadrupedumog/iiif/manifest.json",
 	"type": "Manifest",
 	"items": [
 		{
-			"id": "http://localhost:8080/animalium_quadrupedumog/iiif/canvas/f0001",
+			"id": "/editioncrafter/animalium_quadrupedumog/iiif/canvas/f0001",
 			"type": "Canvas",
 			"items": [
 				{
-					"id": "http://localhost:8080/animalium_quadrupedumog/iiif/canvas/f0001/annotationpage/0",
+					"id": "/editioncrafter/animalium_quadrupedumog/iiif/canvas/f0001/annotationpage/0",
 					"type": "AnnotationPage",
 					"items": [
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "http://localhost:8080/animalium_quadrupedumog/iiif/canvas/f0001/annotationpage/0/annotation/0",
+							"id": "/editioncrafter/animalium_quadrupedumog/iiif/canvas/f0001/annotationpage/0/annotation/0",
 							"type": "Annotation",
 							"motivation": "painting",
 							"body": {
-								"id": "https://corpora.dh.tamu.edu/image/uri/|corpus|6285564874d5f7a229b60520|Image|683f30ceb575bda8eeb31327|file|789c1dca310e80200c00c01761a1585a474737e30f400ac16834faffc4e87a3958cffb3aef08018528f4c27da6c2117148c1125a988e581592771e82f8e2edaa8998528ea2fa313294b6eb03ed9fcb6c66e38407331a14c16ebbea0bd0a21cce",
+								"id": "https://corpora.dh.tamu.edu/iiif/2/corpora/6285564874d5f7a229b60520/Image/b313/683f30ceb575bda8eeb31327/files/image/RP-P-1879-A-2882.jpg",
 								"format": "image/jpeg",
 								"type": "Image",
-								"height": null,
-								"width": null,
+								"height": 800,
+								"width": 1000,
 								"service": [
 									{
-										"id": "https://corpora.dh.tamu.edu/image/uri/|corpus|6285564874d5f7a229b60520|Image|683f30ceb575bda8eeb31327|file|789c1dca310e80200c00c01761a1585a474737e30f400ac16834faffc4e87a3958cffb3aef08018528f4c27da6c2117148c1125a988e581592771e82f8e2edaa8998528ea2fa313294b6eb03ed9fcb6c66e38407331a14c16ebbea0bd0a21cce",
+										"id": "https://corpora.dh.tamu.edu/iiif/2/corpora/6285564874d5f7a229b60520/Image/b313/683f30ceb575bda8eeb31327/files/image/RP-P-1879-A-2882.jpg",
 										"type": "ImageService2",
 										"profile": "http://iiif.io/api/image/2/level2.json"
 									}
 								]
 							},
-							"target": "http://localhost:8080/animalium_quadrupedumog/iiif/canvas/f0001"
+							"target": "/editioncrafter/animalium_quadrupedumog/iiif/canvas/f0001"
 						}
 					]
 				}
 			],
-			"height": null,
-			"width": null,
+			"height": 800,
+			"width": 1000,
 			"label": {
 				"none": [
 					"Animalium quadruped… (Title Page)"

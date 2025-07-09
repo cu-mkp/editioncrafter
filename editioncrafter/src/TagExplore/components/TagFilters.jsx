@@ -22,12 +22,6 @@ function getData(db) {
       tags
     LEFT JOIN taxonomies
       ON tags.taxonomy_id = taxonomies.id
-    INNER JOIN taggings
-      ON taggings.tag_id = tags.id
-    INNER JOIN elements
-      ON elements.id = taggings.element_id
-    WHERE
-      elements.type = 'zone'
     GROUP BY
       tags.xml_id`)
 
@@ -39,29 +33,24 @@ function getData(db) {
 
 function TagFilters(props) {
   const { onToggleSelected, filters, query } = props
-  const fullData = useMemo(() => getData(props.db), [props.db])
-  const [expanded, setExpanded] = useState(fullData.taxonomies?.map(() => (false)))
+  const data = useMemo(() => getData(props.db), [props.db])
+  const [expanded, setExpanded] = useState(data.taxonomies?.map(() => (false)))
   const [displayedTags, setDisplayedTags] = useState({})
 
   const { toggleTag } = useContext(TagFilterContext)
 
-  const data = useMemo(() => {
-    const tags = fullData.tags?.filter(tag => (!query || !query.length || tag.name.toLowerCase().includes(query.toLowerCase())))
-    return ({
-      tags,
-      taxonomies: fullData.taxonomies,
-    })
-  }, [fullData, query])
-
   useEffect(() => {
     const tags = {}
+    const filteredTags = data.tags.filter(tag => (!query || !query.length || tag.name.toLowerCase().includes(query.toLowerCase())))
     for (let i = 0; i < data.taxonomies.length; i++) {
       const tax = data.taxonomies[i]
-      const tagList = expanded[i] ? data.tags.filter(t => (t.taxonomy_id === tax.id)) : data.tags.filter(t => (t.taxonomy_id === tax.id))?.slice(0, 5)
-      tags[tax.id] = tagList
+      const tagList = expanded[i] ? filteredTags.filter(t => (t.taxonomy_id === tax.id)) : filteredTags.filter(t => (t.taxonomy_id === tax.id))?.slice(0, 5)
+      if (tagList?.length) {
+        tags[tax.id] = tagList
+      }
     }
     setDisplayedTags(tags)
-  }, [expanded, data])
+  }, [expanded, data, query])
 
   return (
     <>
@@ -86,8 +75,10 @@ function TagFilters(props) {
                                         checked={filters.includes(tag.id)}
                                         onChange={() => {
                                           onToggleSelected(tag.id)
-                                          toggleTag(tag.xml_id, 'left')
-                                          toggleTag(tag.xml_id, 'right')
+                                          if (tax.is_surface) {
+                                            toggleTag(tag.xml_id, 'left')
+                                            toggleTag(tag.xml_id, 'right')
+                                          }
                                         }}
                                       />
                                     )}

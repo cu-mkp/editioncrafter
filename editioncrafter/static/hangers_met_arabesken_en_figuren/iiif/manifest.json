@@ -3,43 +3,43 @@
 		"http://www.w3.org/ns/anno.jsonld",
 		"http://iiif.io/api/presentation/3/context.json"
 	],
-	"id": "http://localhost:8080/hangers_met_arabesken_en_figuren/iiif/manifest.json",
+	"id": "/editioncrafter/hangers_met_arabesken_en_figuren/iiif/manifest.json",
 	"type": "Manifest",
 	"items": [
 		{
-			"id": "http://localhost:8080/hangers_met_arabesken_en_figuren/iiif/canvas/f0001",
+			"id": "/editioncrafter/hangers_met_arabesken_en_figuren/iiif/canvas/f0001",
 			"type": "Canvas",
 			"items": [
 				{
-					"id": "http://localhost:8080/hangers_met_arabesken_en_figuren/iiif/canvas/f0001/annotationpage/0",
+					"id": "/editioncrafter/hangers_met_arabesken_en_figuren/iiif/canvas/f0001/annotationpage/0",
 					"type": "AnnotationPage",
 					"items": [
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "http://localhost:8080/hangers_met_arabesken_en_figuren/iiif/canvas/f0001/annotationpage/0/annotation/0",
+							"id": "/editioncrafter/hangers_met_arabesken_en_figuren/iiif/canvas/f0001/annotationpage/0/annotation/0",
 							"type": "Annotation",
 							"motivation": "painting",
 							"body": {
-								"id": "https://corpora.dh.tamu.edu/image/uri/|corpus|6285564874d5f7a229b60520|Image|683f385ab575bda8eeb31338|file|789c1dcac10e40300c00d02f9aceaa5d5ddd9c883fe8d884902df3ff89707d79b0e65a7255602744dc89ef364a5e9deb035b7216c65bf708015b04164c28a4813c854d25c68f51201d577ce0f8e7329bd94c8361cbb639cbfe025ac51be8",
+								"id": "https://corpora.dh.tamu.edu/iiif/2/corpora/6285564874d5f7a229b60520/Image/b313/683f385ab575bda8eeb31338/files/image/RP-P-OB-6060.jpg",
 								"format": "image/jpeg",
 								"type": "Image",
-								"height": null,
-								"width": null,
+								"height": 800,
+								"width": 1000,
 								"service": [
 									{
-										"id": "https://corpora.dh.tamu.edu/image/uri/|corpus|6285564874d5f7a229b60520|Image|683f385ab575bda8eeb31338|file|789c1dcac10e40300c00d02f9aceaa5d5ddd9c883fe8d884902df3ff89707d79b0e65a7255602744dc89ef364a5e9deb035b7216c65bf708015b04164c28a4813c854d25c68f51201d577ce0f8e7329bd94c8361cbb639cbfe025ac51be8",
+										"id": "https://corpora.dh.tamu.edu/iiif/2/corpora/6285564874d5f7a229b60520/Image/b313/683f385ab575bda8eeb31338/files/image/RP-P-OB-6060.jpg",
 										"type": "ImageService2",
 										"profile": "http://iiif.io/api/image/2/level2.json"
 									}
 								]
 							},
-							"target": "http://localhost:8080/hangers_met_arabesken_en_figuren/iiif/canvas/f0001"
+							"target": "/editioncrafter/hangers_met_arabesken_en_figuren/iiif/canvas/f0001"
 						}
 					]
 				}
 			],
-			"height": null,
-			"width": null,
+			"height": 800,
+			"width": 1000,
 			"label": {
 				"none": [
 					"Hangers met arabesk… (Title Page)"

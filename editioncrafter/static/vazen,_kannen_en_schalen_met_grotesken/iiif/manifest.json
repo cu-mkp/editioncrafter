@@ -3,43 +3,43 @@
 		"http://www.w3.org/ns/anno.jsonld",
 		"http://iiif.io/api/presentation/3/context.json"
 	],
-	"id": "http://localhost:8080/vazen,_kannen_en_schalen_met_grotesken/iiif/manifest.json",
+	"id": "/editioncrafter/vazen,_kannen_en_schalen_met_grotesken/iiif/manifest.json",
 	"type": "Manifest",
 	"items": [
 		{
-			"id": "http://localhost:8080/vazen,_kannen_en_schalen_met_grotesken/iiif/canvas/f0001",
+			"id": "/editioncrafter/vazen,_kannen_en_schalen_met_grotesken/iiif/canvas/f0001",
 			"type": "Canvas",
 			"items": [
 				{
-					"id": "http://localhost:8080/vazen,_kannen_en_schalen_met_grotesken/iiif/canvas/f0001/annotationpage/0",
+					"id": "/editioncrafter/vazen,_kannen_en_schalen_met_grotesken/iiif/canvas/f0001/annotationpage/0",
 					"type": "AnnotationPage",
 					"items": [
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "http://localhost:8080/vazen,_kannen_en_schalen_met_grotesken/iiif/canvas/f0001/annotationpage/0/annotation/0",
+							"id": "/editioncrafter/vazen,_kannen_en_schalen_met_grotesken/iiif/canvas/f0001/annotationpage/0/annotation/0",
 							"type": "Annotation",
 							"motivation": "painting",
 							"body": {
-								"id": "https://corpora.dh.tamu.edu/image/uri/|corpus|6285564874d5f7a229b60520|Image|683f3abbb575bda8eeb3133c|file|789c1dca4b0e40301000d013d568c74c6b6b6745dc60a6bf1042b87f226c5f1ec4f3bece5b805d20e22ef82e51f1e25cafdc926b613ca46650b4081cb0a0a82a79d22421e78f314259f7fcc0facf6536b39906c3167db35df50570081c6f",
+								"id": "https://corpora.dh.tamu.edu/iiif/2/corpora/6285564874d5f7a229b60520/Image/b313/683f3abbb575bda8eeb3133c/files/image/RP-P-OB-6137.jpg",
 								"format": "image/jpeg",
 								"type": "Image",
-								"height": null,
-								"width": null,
+								"height": 800,
+								"width": 1000,
 								"service": [
 									{
-										"id": "https://corpora.dh.tamu.edu/image/uri/|corpus|6285564874d5f7a229b60520|Image|683f3abbb575bda8eeb3133c|file|789c1dca4b0e40301000d013d568c74c6b6b6745dc60a6bf1042b87f226c5f1ec4f3bece5b805d20e22ef82e51f1e25cafdc926b613ca46650b4081cb0a0a82a79d22421e78f314259f7fcc0facf6536b39906c3167db35df50570081c6f",
+										"id": "https://corpora.dh.tamu.edu/iiif/2/corpora/6285564874d5f7a229b60520/Image/b313/683f3abbb575bda8eeb3133c/files/image/RP-P-OB-6137.jpg",
 										"type": "ImageService2",
 										"profile": "http://iiif.io/api/image/2/level2.json"
 									}
 								]
 							},
-							"target": "http://localhost:8080/vazen,_kannen_en_schalen_met_grotesken/iiif/canvas/f0001"
+							"target": "/editioncrafter/vazen,_kannen_en_schalen_met_grotesken/iiif/canvas/f0001"
 						}
 					]
 				}
 			],
-			"height": null,
-			"width": null,
+			"height": 800,
+			"width": 1000,
 			"label": {
 				"none": [
 					"Vazen, kannen en sc… (Title Page)"

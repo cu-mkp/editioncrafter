@@ -3,43 +3,43 @@
 		"http://www.w3.org/ns/anno.jsonld",
 		"http://iiif.io/api/presentation/3/context.json"
 	],
-	"id": "http://localhost:8080/vazen_met_bloemena/iiif/manifest.json",
+	"id": "/editioncrafter/vazen_met_bloemena/iiif/manifest.json",
 	"type": "Manifest",
 	"items": [
 		{
-			"id": "http://localhost:8080/vazen_met_bloemena/iiif/canvas/f0001",
+			"id": "/editioncrafter/vazen_met_bloemena/iiif/canvas/f0001",
 			"type": "Canvas",
 			"items": [
 				{
-					"id": "http://localhost:8080/vazen_met_bloemena/iiif/canvas/f0001/annotationpage/0",
+					"id": "/editioncrafter/vazen_met_bloemena/iiif/canvas/f0001/annotationpage/0",
 					"type": "AnnotationPage",
 					"items": [
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "http://localhost:8080/vazen_met_bloemena/iiif/canvas/f0001/annotationpage/0/annotation/0",
+							"id": "/editioncrafter/vazen_met_bloemena/iiif/canvas/f0001/annotationpage/0/annotation/0",
 							"type": "Annotation",
 							"motivation": "painting",
 							"body": {
-								"id": "https://corpora.dh.tamu.edu/image/uri/|corpus|6285564874d5f7a229b60520|Image|683f3fe5b575bda8eeb31353|file|789c1dca510e40301005c013d5ea6edfb68ee04fdca0652b8410ee9f08bf93a1e9bcaff3cea49c000d2986193566e6ae680b6ea93ff26254c40b69922ad5501051e69ccc3e86505d777b68fde738b8c1f94ee1bc7a6eb66b790199b31c59",
+								"id": "https://corpora.dh.tamu.edu/iiif/2/corpora/6285564874d5f7a229b60520/Image/b313/683f3fe5b575bda8eeb31353/files/image/RP-P-1965-1612.jpg",
 								"format": "image/jpeg",
 								"type": "Image",
-								"height": null,
-								"width": null,
+								"height": 800,
+								"width": 1000,
 								"service": [
 									{
-										"id": "https://corpora.dh.tamu.edu/image/uri/|corpus|6285564874d5f7a229b60520|Image|683f3fe5b575bda8eeb31353|file|789c1dca510e40301005c013d5ea6edfb68ee04fdca0652b8410ee9f08bf93a1e9bcaff3cea49c000d2986193566e6ae680b6ea93ff26254c40b69922ad5501051e69ccc3e86505d777b68fde738b8c1f94ee1bc7a6eb66b790199b31c59",
+										"id": "https://corpora.dh.tamu.edu/iiif/2/corpora/6285564874d5f7a229b60520/Image/b313/683f3fe5b575bda8eeb31353/files/image/RP-P-1965-1612.jpg",
 										"type": "ImageService2",
 										"profile": "http://iiif.io/api/image/2/level2.json"
 									}
 								]
 							},
-							"target": "http://localhost:8080/vazen_met_bloemena/iiif/canvas/f0001"
+							"target": "/editioncrafter/vazen_met_bloemena/iiif/canvas/f0001"
 						}
 					]
 				}
 			],
-			"height": null,
-			"width": null,
+			"height": 800,
+			"width": 1000,
 			"label": {
 				"none": [
 					"Vazen met bloemen.A (Title Page)"

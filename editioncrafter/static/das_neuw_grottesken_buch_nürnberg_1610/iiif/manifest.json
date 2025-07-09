@@ -5,7 +5,2552 @@
 	],
 	"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/manifest.json",
 	"type": "Manifest",
-	"items": [],
+	"items": [
+		{
+			"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0001",
+			"type": "Canvas",
+			"items": [
+				{
+					"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0001/annotationpage/0",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0001/annotationpage/0/annotation/0",
+							"type": "Annotation",
+							"motivation": "painting",
+							"body": {
+								"id": "https://iiif.micr.io/cALBc",
+								"format": "image/jpeg",
+								"type": "Image",
+								"height": 800,
+								"width": 1000,
+								"service": [
+									{
+										"id": "https://iiif.micr.io/cALBc",
+										"type": "ImageService2",
+										"profile": "http://iiif.io/api/image/2/level2.json"
+									}
+								]
+							},
+							"target": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0001"
+						}
+					]
+				}
+			],
+			"height": 800,
+			"width": 1000,
+			"label": {
+				"none": [
+					"Das Neuw Grottesken… (Title Page)"
+				]
+			},
+			"annotations": [
+				{
+					"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0001/annotationPage/1",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0001/annotationPage/1/annotation/0",
+							"type": "Annotation",
+							"motivation": "supplementing",
+							"body": {
+								"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/tei/transcription/f0001.xml",
+								"format": "text/xml",
+								"type": "TextPartial",
+								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
+							},
+							"target": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0001"
+						},
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0001/annotationPage/1/annotation/1",
+							"type": "Annotation",
+							"motivation": "supplementing",
+							"body": {
+								"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/tei/translation/f0001.xml",
+								"format": "text/xml",
+								"type": "TextPartial",
+								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
+							},
+							"target": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0001"
+						},
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0001/annotationPage/1/annotation/2",
+							"type": "Annotation",
+							"motivation": "supplementing",
+							"body": {
+								"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/html/transcription/f0001.html",
+								"format": "text/html",
+								"type": "TextPartial",
+								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
+							},
+							"target": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0001"
+						},
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0001/annotationPage/1/annotation/3",
+							"type": "Annotation",
+							"motivation": "supplementing",
+							"body": {
+								"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/html/translation/f0001.html",
+								"format": "text/html",
+								"type": "TextPartial",
+								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
+							},
+							"target": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0001"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0002",
+			"type": "Canvas",
+			"items": [
+				{
+					"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0002/annotationpage/0",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0002/annotationpage/0/annotation/0",
+							"type": "Annotation",
+							"motivation": "painting",
+							"body": {
+								"id": "https://iiif.micr.io/xsQLG",
+								"format": "image/jpeg",
+								"type": "Image",
+								"height": 800,
+								"width": 1000,
+								"service": [
+									{
+										"id": "https://iiif.micr.io/xsQLG",
+										"type": "ImageService2",
+										"profile": "http://iiif.io/api/image/2/level2.json"
+									}
+								]
+							},
+							"target": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0002"
+						}
+					]
+				}
+			],
+			"height": 800,
+			"width": 1000,
+			"label": {
+				"none": [
+					"Das Neuw Grottesken… (2)"
+				]
+			},
+			"annotations": []
+		},
+		{
+			"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0003",
+			"type": "Canvas",
+			"items": [
+				{
+					"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0003/annotationpage/0",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0003/annotationpage/0/annotation/0",
+							"type": "Annotation",
+							"motivation": "painting",
+							"body": {
+								"id": "https://iiif.micr.io/beYmn",
+								"format": "image/jpeg",
+								"type": "Image",
+								"height": 800,
+								"width": 1000,
+								"service": [
+									{
+										"id": "https://iiif.micr.io/beYmn",
+										"type": "ImageService2",
+										"profile": "http://iiif.io/api/image/2/level2.json"
+									}
+								]
+							},
+							"target": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0003"
+						}
+					]
+				}
+			],
+			"height": 800,
+			"width": 1000,
+			"label": {
+				"none": [
+					"Das Neuw Grottesken… (3)"
+				]
+			},
+			"annotations": []
+		},
+		{
+			"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0004",
+			"type": "Canvas",
+			"items": [
+				{
+					"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0004/annotationpage/0",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0004/annotationpage/0/annotation/0",
+							"type": "Annotation",
+							"motivation": "painting",
+							"body": {
+								"id": "https://iiif.micr.io/WXUAv",
+								"format": "image/jpeg",
+								"type": "Image",
+								"height": 800,
+								"width": 1000,
+								"service": [
+									{
+										"id": "https://iiif.micr.io/WXUAv",
+										"type": "ImageService2",
+										"profile": "http://iiif.io/api/image/2/level2.json"
+									}
+								]
+							},
+							"target": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0004"
+						}
+					]
+				}
+			],
+			"height": 800,
+			"width": 1000,
+			"label": {
+				"none": [
+					"Das Neuw Grottesken… (4)"
+				]
+			},
+			"annotations": []
+		},
+		{
+			"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0005",
+			"type": "Canvas",
+			"items": [
+				{
+					"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0005/annotationpage/0",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0005/annotationpage/0/annotation/0",
+							"type": "Annotation",
+							"motivation": "painting",
+							"body": {
+								"id": "https://iiif.micr.io/nFNJa",
+								"format": "image/jpeg",
+								"type": "Image",
+								"height": 800,
+								"width": 1000,
+								"service": [
+									{
+										"id": "https://iiif.micr.io/nFNJa",
+										"type": "ImageService2",
+										"profile": "http://iiif.io/api/image/2/level2.json"
+									}
+								]
+							},
+							"target": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0005"
+						}
+					]
+				}
+			],
+			"height": 800,
+			"width": 1000,
+			"label": {
+				"none": [
+					"Das Neuw Grottesken… (5)"
+				]
+			},
+			"annotations": []
+		},
+		{
+			"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0006",
+			"type": "Canvas",
+			"items": [
+				{
+					"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0006/annotationpage/0",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0006/annotationpage/0/annotation/0",
+							"type": "Annotation",
+							"motivation": "painting",
+							"body": {
+								"id": "https://iiif.micr.io/czFph",
+								"format": "image/jpeg",
+								"type": "Image",
+								"height": 800,
+								"width": 1000,
+								"service": [
+									{
+										"id": "https://iiif.micr.io/czFph",
+										"type": "ImageService2",
+										"profile": "http://iiif.io/api/image/2/level2.json"
+									}
+								]
+							},
+							"target": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0006"
+						}
+					]
+				}
+			],
+			"height": 800,
+			"width": 1000,
+			"label": {
+				"none": [
+					"Das Neuw Grottesken… (6)"
+				]
+			},
+			"annotations": []
+		},
+		{
+			"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0007",
+			"type": "Canvas",
+			"items": [
+				{
+					"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0007/annotationpage/0",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0007/annotationpage/0/annotation/0",
+							"type": "Annotation",
+							"motivation": "painting",
+							"body": {
+								"id": "https://iiif.micr.io/ZaURm",
+								"format": "image/jpeg",
+								"type": "Image",
+								"height": 800,
+								"width": 1000,
+								"service": [
+									{
+										"id": "https://iiif.micr.io/ZaURm",
+										"type": "ImageService2",
+										"profile": "http://iiif.io/api/image/2/level2.json"
+									}
+								]
+							},
+							"target": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0007"
+						}
+					]
+				}
+			],
+			"height": 800,
+			"width": 1000,
+			"label": {
+				"none": [
+					"Das Neuw Grottesken… (7)"
+				]
+			},
+			"annotations": []
+		},
+		{
+			"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0008",
+			"type": "Canvas",
+			"items": [
+				{
+					"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0008/annotationpage/0",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0008/annotationpage/0/annotation/0",
+							"type": "Annotation",
+							"motivation": "painting",
+							"body": {
+								"id": "https://iiif.micr.io/zkmJR",
+								"format": "image/jpeg",
+								"type": "Image",
+								"height": 800,
+								"width": 1000,
+								"service": [
+									{
+										"id": "https://iiif.micr.io/zkmJR",
+										"type": "ImageService2",
+										"profile": "http://iiif.io/api/image/2/level2.json"
+									}
+								]
+							},
+							"target": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0008"
+						}
+					]
+				}
+			],
+			"height": 800,
+			"width": 1000,
+			"label": {
+				"none": [
+					"Das Neuw Grottesken… (8)"
+				]
+			},
+			"annotations": []
+		},
+		{
+			"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0009",
+			"type": "Canvas",
+			"items": [
+				{
+					"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0009/annotationpage/0",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0009/annotationpage/0/annotation/0",
+							"type": "Annotation",
+							"motivation": "painting",
+							"body": {
+								"id": "https://iiif.micr.io/xqYQr",
+								"format": "image/jpeg",
+								"type": "Image",
+								"height": 800,
+								"width": 1000,
+								"service": [
+									{
+										"id": "https://iiif.micr.io/xqYQr",
+										"type": "ImageService2",
+										"profile": "http://iiif.io/api/image/2/level2.json"
+									}
+								]
+							},
+							"target": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0009"
+						}
+					]
+				}
+			],
+			"height": 800,
+			"width": 1000,
+			"label": {
+				"none": [
+					"Das Neuw Grottesken… (9)"
+				]
+			},
+			"annotations": []
+		},
+		{
+			"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0010",
+			"type": "Canvas",
+			"items": [
+				{
+					"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0010/annotationpage/0",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0010/annotationpage/0/annotation/0",
+							"type": "Annotation",
+							"motivation": "painting",
+							"body": {
+								"id": "https://iiif.micr.io/piCLk",
+								"format": "image/jpeg",
+								"type": "Image",
+								"height": 800,
+								"width": 1000,
+								"service": [
+									{
+										"id": "https://iiif.micr.io/piCLk",
+										"type": "ImageService2",
+										"profile": "http://iiif.io/api/image/2/level2.json"
+									}
+								]
+							},
+							"target": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0010"
+						}
+					]
+				}
+			],
+			"height": 800,
+			"width": 1000,
+			"label": {
+				"none": [
+					"Das Neuw Grottesken… (10)"
+				]
+			},
+			"annotations": []
+		},
+		{
+			"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0011",
+			"type": "Canvas",
+			"items": [
+				{
+					"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0011/annotationpage/0",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0011/annotationpage/0/annotation/0",
+							"type": "Annotation",
+							"motivation": "painting",
+							"body": {
+								"id": "https://iiif.micr.io/AizGS",
+								"format": "image/jpeg",
+								"type": "Image",
+								"height": 800,
+								"width": 1000,
+								"service": [
+									{
+										"id": "https://iiif.micr.io/AizGS",
+										"type": "ImageService2",
+										"profile": "http://iiif.io/api/image/2/level2.json"
+									}
+								]
+							},
+							"target": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0011"
+						}
+					]
+				}
+			],
+			"height": 800,
+			"width": 1000,
+			"label": {
+				"none": [
+					"Das Neuw Grottesken… (11)"
+				]
+			},
+			"annotations": []
+		},
+		{
+			"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0012",
+			"type": "Canvas",
+			"items": [
+				{
+					"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0012/annotationpage/0",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0012/annotationpage/0/annotation/0",
+							"type": "Annotation",
+							"motivation": "painting",
+							"body": {
+								"id": "https://iiif.micr.io/IwIQK",
+								"format": "image/jpeg",
+								"type": "Image",
+								"height": 800,
+								"width": 1000,
+								"service": [
+									{
+										"id": "https://iiif.micr.io/IwIQK",
+										"type": "ImageService2",
+										"profile": "http://iiif.io/api/image/2/level2.json"
+									}
+								]
+							},
+							"target": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0012"
+						}
+					]
+				}
+			],
+			"height": 800,
+			"width": 1000,
+			"label": {
+				"none": [
+					"Das Neuw Grottesken… (12)"
+				]
+			},
+			"annotations": []
+		},
+		{
+			"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0013",
+			"type": "Canvas",
+			"items": [
+				{
+					"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0013/annotationpage/0",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0013/annotationpage/0/annotation/0",
+							"type": "Annotation",
+							"motivation": "painting",
+							"body": {
+								"id": "https://iiif.micr.io/puMSw",
+								"format": "image/jpeg",
+								"type": "Image",
+								"height": 800,
+								"width": 1000,
+								"service": [
+									{
+										"id": "https://iiif.micr.io/puMSw",
+										"type": "ImageService2",
+										"profile": "http://iiif.io/api/image/2/level2.json"
+									}
+								]
+							},
+							"target": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0013"
+						}
+					]
+				}
+			],
+			"height": 800,
+			"width": 1000,
+			"label": {
+				"none": [
+					"Das Neuw Grottesken… (13)"
+				]
+			},
+			"annotations": []
+		},
+		{
+			"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0014",
+			"type": "Canvas",
+			"items": [
+				{
+					"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0014/annotationpage/0",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0014/annotationpage/0/annotation/0",
+							"type": "Annotation",
+							"motivation": "painting",
+							"body": {
+								"id": "https://iiif.micr.io/EIZFW",
+								"format": "image/jpeg",
+								"type": "Image",
+								"height": 800,
+								"width": 1000,
+								"service": [
+									{
+										"id": "https://iiif.micr.io/EIZFW",
+										"type": "ImageService2",
+										"profile": "http://iiif.io/api/image/2/level2.json"
+									}
+								]
+							},
+							"target": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0014"
+						}
+					]
+				}
+			],
+			"height": 800,
+			"width": 1000,
+			"label": {
+				"none": [
+					"Das Neuw Grottesken… (14)"
+				]
+			},
+			"annotations": []
+		},
+		{
+			"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0015",
+			"type": "Canvas",
+			"items": [
+				{
+					"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0015/annotationpage/0",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0015/annotationpage/0/annotation/0",
+							"type": "Annotation",
+							"motivation": "painting",
+							"body": {
+								"id": "https://iiif.micr.io/ZmLEt",
+								"format": "image/jpeg",
+								"type": "Image",
+								"height": 800,
+								"width": 1000,
+								"service": [
+									{
+										"id": "https://iiif.micr.io/ZmLEt",
+										"type": "ImageService2",
+										"profile": "http://iiif.io/api/image/2/level2.json"
+									}
+								]
+							},
+							"target": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0015"
+						}
+					]
+				}
+			],
+			"height": 800,
+			"width": 1000,
+			"label": {
+				"none": [
+					"Das Neuw Grottesken… (15)"
+				]
+			},
+			"annotations": []
+		},
+		{
+			"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0016",
+			"type": "Canvas",
+			"items": [
+				{
+					"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0016/annotationpage/0",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0016/annotationpage/0/annotation/0",
+							"type": "Annotation",
+							"motivation": "painting",
+							"body": {
+								"id": "https://iiif.micr.io/lFCer",
+								"format": "image/jpeg",
+								"type": "Image",
+								"height": 800,
+								"width": 1000,
+								"service": [
+									{
+										"id": "https://iiif.micr.io/lFCer",
+										"type": "ImageService2",
+										"profile": "http://iiif.io/api/image/2/level2.json"
+									}
+								]
+							},
+							"target": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0016"
+						}
+					]
+				}
+			],
+			"height": 800,
+			"width": 1000,
+			"label": {
+				"none": [
+					"Das Neuw Grottesken… (16)"
+				]
+			},
+			"annotations": []
+		},
+		{
+			"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0017",
+			"type": "Canvas",
+			"items": [
+				{
+					"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0017/annotationpage/0",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0017/annotationpage/0/annotation/0",
+							"type": "Annotation",
+							"motivation": "painting",
+							"body": {
+								"id": "https://iiif.micr.io/QTVzy",
+								"format": "image/jpeg",
+								"type": "Image",
+								"height": 800,
+								"width": 1000,
+								"service": [
+									{
+										"id": "https://iiif.micr.io/QTVzy",
+										"type": "ImageService2",
+										"profile": "http://iiif.io/api/image/2/level2.json"
+									}
+								]
+							},
+							"target": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0017"
+						}
+					]
+				}
+			],
+			"height": 800,
+			"width": 1000,
+			"label": {
+				"none": [
+					"Das Neuw Grottesken… (17)"
+				]
+			},
+			"annotations": []
+		},
+		{
+			"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0018",
+			"type": "Canvas",
+			"items": [
+				{
+					"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0018/annotationpage/0",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0018/annotationpage/0/annotation/0",
+							"type": "Annotation",
+							"motivation": "painting",
+							"body": {
+								"id": "https://iiif.micr.io/bGTpC",
+								"format": "image/jpeg",
+								"type": "Image",
+								"height": 800,
+								"width": 1000,
+								"service": [
+									{
+										"id": "https://iiif.micr.io/bGTpC",
+										"type": "ImageService2",
+										"profile": "http://iiif.io/api/image/2/level2.json"
+									}
+								]
+							},
+							"target": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0018"
+						}
+					]
+				}
+			],
+			"height": 800,
+			"width": 1000,
+			"label": {
+				"none": [
+					"Das Neuw Grottesken… (18)"
+				]
+			},
+			"annotations": []
+		},
+		{
+			"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0019",
+			"type": "Canvas",
+			"items": [
+				{
+					"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0019/annotationpage/0",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0019/annotationpage/0/annotation/0",
+							"type": "Annotation",
+							"motivation": "painting",
+							"body": {
+								"id": "https://iiif.micr.io/eggQr",
+								"format": "image/jpeg",
+								"type": "Image",
+								"height": 800,
+								"width": 1000,
+								"service": [
+									{
+										"id": "https://iiif.micr.io/eggQr",
+										"type": "ImageService2",
+										"profile": "http://iiif.io/api/image/2/level2.json"
+									}
+								]
+							},
+							"target": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0019"
+						}
+					]
+				}
+			],
+			"height": 800,
+			"width": 1000,
+			"label": {
+				"none": [
+					"Das Neuw Grottesken… (19)"
+				]
+			},
+			"annotations": []
+		},
+		{
+			"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0020",
+			"type": "Canvas",
+			"items": [
+				{
+					"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0020/annotationpage/0",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0020/annotationpage/0/annotation/0",
+							"type": "Annotation",
+							"motivation": "painting",
+							"body": {
+								"id": "https://iiif.micr.io/RSpuP",
+								"format": "image/jpeg",
+								"type": "Image",
+								"height": 800,
+								"width": 1000,
+								"service": [
+									{
+										"id": "https://iiif.micr.io/RSpuP",
+										"type": "ImageService2",
+										"profile": "http://iiif.io/api/image/2/level2.json"
+									}
+								]
+							},
+							"target": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0020"
+						}
+					]
+				}
+			],
+			"height": 800,
+			"width": 1000,
+			"label": {
+				"none": [
+					"Das Neuw Grottesken… (20)"
+				]
+			},
+			"annotations": []
+		},
+		{
+			"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0021",
+			"type": "Canvas",
+			"items": [
+				{
+					"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0021/annotationpage/0",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0021/annotationpage/0/annotation/0",
+							"type": "Annotation",
+							"motivation": "painting",
+							"body": {
+								"id": "https://iiif.micr.io/HajRF",
+								"format": "image/jpeg",
+								"type": "Image",
+								"height": 800,
+								"width": 1000,
+								"service": [
+									{
+										"id": "https://iiif.micr.io/HajRF",
+										"type": "ImageService2",
+										"profile": "http://iiif.io/api/image/2/level2.json"
+									}
+								]
+							},
+							"target": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0021"
+						}
+					]
+				}
+			],
+			"height": 800,
+			"width": 1000,
+			"label": {
+				"none": [
+					"Das Neuw Grottesken… (21)"
+				]
+			},
+			"annotations": []
+		},
+		{
+			"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0022",
+			"type": "Canvas",
+			"items": [
+				{
+					"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0022/annotationpage/0",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0022/annotationpage/0/annotation/0",
+							"type": "Annotation",
+							"motivation": "painting",
+							"body": {
+								"id": "https://iiif.micr.io/pUBmX",
+								"format": "image/jpeg",
+								"type": "Image",
+								"height": 800,
+								"width": 1000,
+								"service": [
+									{
+										"id": "https://iiif.micr.io/pUBmX",
+										"type": "ImageService2",
+										"profile": "http://iiif.io/api/image/2/level2.json"
+									}
+								]
+							},
+							"target": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0022"
+						}
+					]
+				}
+			],
+			"height": 800,
+			"width": 1000,
+			"label": {
+				"none": [
+					"Das Neuw Grottesken… (22)"
+				]
+			},
+			"annotations": []
+		},
+		{
+			"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0023",
+			"type": "Canvas",
+			"items": [
+				{
+					"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0023/annotationpage/0",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0023/annotationpage/0/annotation/0",
+							"type": "Annotation",
+							"motivation": "painting",
+							"body": {
+								"id": "https://iiif.micr.io/DsdgW",
+								"format": "image/jpeg",
+								"type": "Image",
+								"height": 800,
+								"width": 1000,
+								"service": [
+									{
+										"id": "https://iiif.micr.io/DsdgW",
+										"type": "ImageService2",
+										"profile": "http://iiif.io/api/image/2/level2.json"
+									}
+								]
+							},
+							"target": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0023"
+						}
+					]
+				}
+			],
+			"height": 800,
+			"width": 1000,
+			"label": {
+				"none": [
+					"Das Neuw Grottesken… (23)"
+				]
+			},
+			"annotations": []
+		},
+		{
+			"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0024",
+			"type": "Canvas",
+			"items": [
+				{
+					"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0024/annotationpage/0",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0024/annotationpage/0/annotation/0",
+							"type": "Annotation",
+							"motivation": "painting",
+							"body": {
+								"id": "https://iiif.micr.io/iBQYC",
+								"format": "image/jpeg",
+								"type": "Image",
+								"height": 800,
+								"width": 1000,
+								"service": [
+									{
+										"id": "https://iiif.micr.io/iBQYC",
+										"type": "ImageService2",
+										"profile": "http://iiif.io/api/image/2/level2.json"
+									}
+								]
+							},
+							"target": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0024"
+						}
+					]
+				}
+			],
+			"height": 800,
+			"width": 1000,
+			"label": {
+				"none": [
+					"Das Neuw Grottesken… (24)"
+				]
+			},
+			"annotations": []
+		},
+		{
+			"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0025",
+			"type": "Canvas",
+			"items": [
+				{
+					"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0025/annotationpage/0",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0025/annotationpage/0/annotation/0",
+							"type": "Annotation",
+							"motivation": "painting",
+							"body": {
+								"id": "https://iiif.micr.io/kHmrv",
+								"format": "image/jpeg",
+								"type": "Image",
+								"height": 800,
+								"width": 1000,
+								"service": [
+									{
+										"id": "https://iiif.micr.io/kHmrv",
+										"type": "ImageService2",
+										"profile": "http://iiif.io/api/image/2/level2.json"
+									}
+								]
+							},
+							"target": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0025"
+						}
+					]
+				}
+			],
+			"height": 800,
+			"width": 1000,
+			"label": {
+				"none": [
+					"Das Neuw Grottesken… (25)"
+				]
+			},
+			"annotations": []
+		},
+		{
+			"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0026",
+			"type": "Canvas",
+			"items": [
+				{
+					"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0026/annotationpage/0",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0026/annotationpage/0/annotation/0",
+							"type": "Annotation",
+							"motivation": "painting",
+							"body": {
+								"id": "https://iiif.micr.io/eyunn",
+								"format": "image/jpeg",
+								"type": "Image",
+								"height": 800,
+								"width": 1000,
+								"service": [
+									{
+										"id": "https://iiif.micr.io/eyunn",
+										"type": "ImageService2",
+										"profile": "http://iiif.io/api/image/2/level2.json"
+									}
+								]
+							},
+							"target": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0026"
+						}
+					]
+				}
+			],
+			"height": 800,
+			"width": 1000,
+			"label": {
+				"none": [
+					"Das Neuw Grottesken… (26)"
+				]
+			},
+			"annotations": [
+				{
+					"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0026/annotationPage/1",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0026/annotationPage/1/annotation/0",
+							"type": "Annotation",
+							"motivation": "supplementing",
+							"body": {
+								"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/tei/transcription/f0026.xml",
+								"format": "text/xml",
+								"type": "TextPartial",
+								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
+							},
+							"target": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0026"
+						},
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0026/annotationPage/1/annotation/1",
+							"type": "Annotation",
+							"motivation": "supplementing",
+							"body": {
+								"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/html/transcription/f0026.html",
+								"format": "text/html",
+								"type": "TextPartial",
+								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
+							},
+							"target": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0026"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0027",
+			"type": "Canvas",
+			"items": [
+				{
+					"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0027/annotationpage/0",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0027/annotationpage/0/annotation/0",
+							"type": "Annotation",
+							"motivation": "painting",
+							"body": {
+								"id": "https://iiif.micr.io/qvPjD",
+								"format": "image/jpeg",
+								"type": "Image",
+								"height": 800,
+								"width": 1000,
+								"service": [
+									{
+										"id": "https://iiif.micr.io/qvPjD",
+										"type": "ImageService2",
+										"profile": "http://iiif.io/api/image/2/level2.json"
+									}
+								]
+							},
+							"target": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0027"
+						}
+					]
+				}
+			],
+			"height": 800,
+			"width": 1000,
+			"label": {
+				"none": [
+					"Das Neuw Grottesken… (27)"
+				]
+			},
+			"annotations": []
+		},
+		{
+			"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0028",
+			"type": "Canvas",
+			"items": [
+				{
+					"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0028/annotationpage/0",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0028/annotationpage/0/annotation/0",
+							"type": "Annotation",
+							"motivation": "painting",
+							"body": {
+								"id": "https://iiif.micr.io/PqtUq",
+								"format": "image/jpeg",
+								"type": "Image",
+								"height": 800,
+								"width": 1000,
+								"service": [
+									{
+										"id": "https://iiif.micr.io/PqtUq",
+										"type": "ImageService2",
+										"profile": "http://iiif.io/api/image/2/level2.json"
+									}
+								]
+							},
+							"target": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0028"
+						}
+					]
+				}
+			],
+			"height": 800,
+			"width": 1000,
+			"label": {
+				"none": [
+					"Das Neuw Grottesken… (28)"
+				]
+			},
+			"annotations": []
+		},
+		{
+			"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0029",
+			"type": "Canvas",
+			"items": [
+				{
+					"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0029/annotationpage/0",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0029/annotationpage/0/annotation/0",
+							"type": "Annotation",
+							"motivation": "painting",
+							"body": {
+								"id": "https://iiif.micr.io/Uojdb",
+								"format": "image/jpeg",
+								"type": "Image",
+								"height": 800,
+								"width": 1000,
+								"service": [
+									{
+										"id": "https://iiif.micr.io/Uojdb",
+										"type": "ImageService2",
+										"profile": "http://iiif.io/api/image/2/level2.json"
+									}
+								]
+							},
+							"target": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0029"
+						}
+					]
+				}
+			],
+			"height": 800,
+			"width": 1000,
+			"label": {
+				"none": [
+					"Das Neuw Grottesken… (29)"
+				]
+			},
+			"annotations": []
+		},
+		{
+			"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0030",
+			"type": "Canvas",
+			"items": [
+				{
+					"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0030/annotationpage/0",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0030/annotationpage/0/annotation/0",
+							"type": "Annotation",
+							"motivation": "painting",
+							"body": {
+								"id": "https://iiif.micr.io/Hafoz",
+								"format": "image/jpeg",
+								"type": "Image",
+								"height": 800,
+								"width": 1000,
+								"service": [
+									{
+										"id": "https://iiif.micr.io/Hafoz",
+										"type": "ImageService2",
+										"profile": "http://iiif.io/api/image/2/level2.json"
+									}
+								]
+							},
+							"target": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0030"
+						}
+					]
+				}
+			],
+			"height": 800,
+			"width": 1000,
+			"label": {
+				"none": [
+					"Das Neuw Grottesken… (30)"
+				]
+			},
+			"annotations": []
+		},
+		{
+			"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0031",
+			"type": "Canvas",
+			"items": [
+				{
+					"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0031/annotationpage/0",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0031/annotationpage/0/annotation/0",
+							"type": "Annotation",
+							"motivation": "painting",
+							"body": {
+								"id": "https://iiif.micr.io/wlNMI",
+								"format": "image/jpeg",
+								"type": "Image",
+								"height": 800,
+								"width": 1000,
+								"service": [
+									{
+										"id": "https://iiif.micr.io/wlNMI",
+										"type": "ImageService2",
+										"profile": "http://iiif.io/api/image/2/level2.json"
+									}
+								]
+							},
+							"target": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0031"
+						}
+					]
+				}
+			],
+			"height": 800,
+			"width": 1000,
+			"label": {
+				"none": [
+					"Das Neuw Grottesken… (31)"
+				]
+			},
+			"annotations": []
+		},
+		{
+			"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0032",
+			"type": "Canvas",
+			"items": [
+				{
+					"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0032/annotationpage/0",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0032/annotationpage/0/annotation/0",
+							"type": "Annotation",
+							"motivation": "painting",
+							"body": {
+								"id": "https://iiif.micr.io/Phnaj",
+								"format": "image/jpeg",
+								"type": "Image",
+								"height": 800,
+								"width": 1000,
+								"service": [
+									{
+										"id": "https://iiif.micr.io/Phnaj",
+										"type": "ImageService2",
+										"profile": "http://iiif.io/api/image/2/level2.json"
+									}
+								]
+							},
+							"target": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0032"
+						}
+					]
+				}
+			],
+			"height": 800,
+			"width": 1000,
+			"label": {
+				"none": [
+					"Das Neuw Grottesken… (32)"
+				]
+			},
+			"annotations": []
+		},
+		{
+			"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0033",
+			"type": "Canvas",
+			"items": [
+				{
+					"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0033/annotationpage/0",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0033/annotationpage/0/annotation/0",
+							"type": "Annotation",
+							"motivation": "painting",
+							"body": {
+								"id": "https://iiif.micr.io/pZKgU",
+								"format": "image/jpeg",
+								"type": "Image",
+								"height": 800,
+								"width": 1000,
+								"service": [
+									{
+										"id": "https://iiif.micr.io/pZKgU",
+										"type": "ImageService2",
+										"profile": "http://iiif.io/api/image/2/level2.json"
+									}
+								]
+							},
+							"target": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0033"
+						}
+					]
+				}
+			],
+			"height": 800,
+			"width": 1000,
+			"label": {
+				"none": [
+					"Das Neuw Grottesken… (33)"
+				]
+			},
+			"annotations": []
+		},
+		{
+			"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0034",
+			"type": "Canvas",
+			"items": [
+				{
+					"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0034/annotationpage/0",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0034/annotationpage/0/annotation/0",
+							"type": "Annotation",
+							"motivation": "painting",
+							"body": {
+								"id": "https://iiif.micr.io/ihRCr",
+								"format": "image/jpeg",
+								"type": "Image",
+								"height": 800,
+								"width": 1000,
+								"service": [
+									{
+										"id": "https://iiif.micr.io/ihRCr",
+										"type": "ImageService2",
+										"profile": "http://iiif.io/api/image/2/level2.json"
+									}
+								]
+							},
+							"target": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0034"
+						}
+					]
+				}
+			],
+			"height": 800,
+			"width": 1000,
+			"label": {
+				"none": [
+					"Das Neuw Grottesken… (34)"
+				]
+			},
+			"annotations": []
+		},
+		{
+			"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0035",
+			"type": "Canvas",
+			"items": [
+				{
+					"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0035/annotationpage/0",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0035/annotationpage/0/annotation/0",
+							"type": "Annotation",
+							"motivation": "painting",
+							"body": {
+								"id": "https://iiif.micr.io/xBjnt",
+								"format": "image/jpeg",
+								"type": "Image",
+								"height": 800,
+								"width": 1000,
+								"service": [
+									{
+										"id": "https://iiif.micr.io/xBjnt",
+										"type": "ImageService2",
+										"profile": "http://iiif.io/api/image/2/level2.json"
+									}
+								]
+							},
+							"target": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0035"
+						}
+					]
+				}
+			],
+			"height": 800,
+			"width": 1000,
+			"label": {
+				"none": [
+					"Das Neuw Grottesken… (35)"
+				]
+			},
+			"annotations": []
+		},
+		{
+			"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0036",
+			"type": "Canvas",
+			"items": [
+				{
+					"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0036/annotationpage/0",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0036/annotationpage/0/annotation/0",
+							"type": "Annotation",
+							"motivation": "painting",
+							"body": {
+								"id": "https://iiif.micr.io/fLyHR",
+								"format": "image/jpeg",
+								"type": "Image",
+								"height": 800,
+								"width": 1000,
+								"service": [
+									{
+										"id": "https://iiif.micr.io/fLyHR",
+										"type": "ImageService2",
+										"profile": "http://iiif.io/api/image/2/level2.json"
+									}
+								]
+							},
+							"target": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0036"
+						}
+					]
+				}
+			],
+			"height": 800,
+			"width": 1000,
+			"label": {
+				"none": [
+					"Das Neuw Grottesken… (36)"
+				]
+			},
+			"annotations": []
+		},
+		{
+			"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0037",
+			"type": "Canvas",
+			"items": [
+				{
+					"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0037/annotationpage/0",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0037/annotationpage/0/annotation/0",
+							"type": "Annotation",
+							"motivation": "painting",
+							"body": {
+								"id": "https://iiif.micr.io/sUpOj",
+								"format": "image/jpeg",
+								"type": "Image",
+								"height": 800,
+								"width": 1000,
+								"service": [
+									{
+										"id": "https://iiif.micr.io/sUpOj",
+										"type": "ImageService2",
+										"profile": "http://iiif.io/api/image/2/level2.json"
+									}
+								]
+							},
+							"target": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0037"
+						}
+					]
+				}
+			],
+			"height": 800,
+			"width": 1000,
+			"label": {
+				"none": [
+					"Das Neuw Grottesken… (37)"
+				]
+			},
+			"annotations": []
+		},
+		{
+			"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0038",
+			"type": "Canvas",
+			"items": [
+				{
+					"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0038/annotationpage/0",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0038/annotationpage/0/annotation/0",
+							"type": "Annotation",
+							"motivation": "painting",
+							"body": {
+								"id": "https://iiif.micr.io/ICNsy",
+								"format": "image/jpeg",
+								"type": "Image",
+								"height": 800,
+								"width": 1000,
+								"service": [
+									{
+										"id": "https://iiif.micr.io/ICNsy",
+										"type": "ImageService2",
+										"profile": "http://iiif.io/api/image/2/level2.json"
+									}
+								]
+							},
+							"target": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0038"
+						}
+					]
+				}
+			],
+			"height": 800,
+			"width": 1000,
+			"label": {
+				"none": [
+					"Das Neuw Grottesken… (38)"
+				]
+			},
+			"annotations": []
+		},
+		{
+			"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0039",
+			"type": "Canvas",
+			"items": [
+				{
+					"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0039/annotationpage/0",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0039/annotationpage/0/annotation/0",
+							"type": "Annotation",
+							"motivation": "painting",
+							"body": {
+								"id": "https://iiif.micr.io/qFAXR",
+								"format": "image/jpeg",
+								"type": "Image",
+								"height": 800,
+								"width": 1000,
+								"service": [
+									{
+										"id": "https://iiif.micr.io/qFAXR",
+										"type": "ImageService2",
+										"profile": "http://iiif.io/api/image/2/level2.json"
+									}
+								]
+							},
+							"target": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0039"
+						}
+					]
+				}
+			],
+			"height": 800,
+			"width": 1000,
+			"label": {
+				"none": [
+					"Das Neuw Grottesken… (39)"
+				]
+			},
+			"annotations": []
+		},
+		{
+			"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0040",
+			"type": "Canvas",
+			"items": [
+				{
+					"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0040/annotationpage/0",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0040/annotationpage/0/annotation/0",
+							"type": "Annotation",
+							"motivation": "painting",
+							"body": {
+								"id": "https://iiif.micr.io/aNRwo",
+								"format": "image/jpeg",
+								"type": "Image",
+								"height": 800,
+								"width": 1000,
+								"service": [
+									{
+										"id": "https://iiif.micr.io/aNRwo",
+										"type": "ImageService2",
+										"profile": "http://iiif.io/api/image/2/level2.json"
+									}
+								]
+							},
+							"target": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0040"
+						}
+					]
+				}
+			],
+			"height": 800,
+			"width": 1000,
+			"label": {
+				"none": [
+					"Das Neuw Grottesken… (40)"
+				]
+			},
+			"annotations": []
+		},
+		{
+			"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0041",
+			"type": "Canvas",
+			"items": [
+				{
+					"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0041/annotationpage/0",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0041/annotationpage/0/annotation/0",
+							"type": "Annotation",
+							"motivation": "painting",
+							"body": {
+								"id": "https://iiif.micr.io/UesJq",
+								"format": "image/jpeg",
+								"type": "Image",
+								"height": 800,
+								"width": 1000,
+								"service": [
+									{
+										"id": "https://iiif.micr.io/UesJq",
+										"type": "ImageService2",
+										"profile": "http://iiif.io/api/image/2/level2.json"
+									}
+								]
+							},
+							"target": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0041"
+						}
+					]
+				}
+			],
+			"height": 800,
+			"width": 1000,
+			"label": {
+				"none": [
+					"Das Neuw Grottesken… (41)"
+				]
+			},
+			"annotations": []
+		},
+		{
+			"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0042",
+			"type": "Canvas",
+			"items": [
+				{
+					"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0042/annotationpage/0",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0042/annotationpage/0/annotation/0",
+							"type": "Annotation",
+							"motivation": "painting",
+							"body": {
+								"id": "https://iiif.micr.io/sybga",
+								"format": "image/jpeg",
+								"type": "Image",
+								"height": 800,
+								"width": 1000,
+								"service": [
+									{
+										"id": "https://iiif.micr.io/sybga",
+										"type": "ImageService2",
+										"profile": "http://iiif.io/api/image/2/level2.json"
+									}
+								]
+							},
+							"target": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0042"
+						}
+					]
+				}
+			],
+			"height": 800,
+			"width": 1000,
+			"label": {
+				"none": [
+					"Das Neuw Grottesken… (42)"
+				]
+			},
+			"annotations": []
+		},
+		{
+			"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0043",
+			"type": "Canvas",
+			"items": [
+				{
+					"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0043/annotationpage/0",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0043/annotationpage/0/annotation/0",
+							"type": "Annotation",
+							"motivation": "painting",
+							"body": {
+								"id": "https://iiif.micr.io/QWcOB",
+								"format": "image/jpeg",
+								"type": "Image",
+								"height": 800,
+								"width": 1000,
+								"service": [
+									{
+										"id": "https://iiif.micr.io/QWcOB",
+										"type": "ImageService2",
+										"profile": "http://iiif.io/api/image/2/level2.json"
+									}
+								]
+							},
+							"target": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0043"
+						}
+					]
+				}
+			],
+			"height": 800,
+			"width": 1000,
+			"label": {
+				"none": [
+					"Das Neuw Grottesken… (43)"
+				]
+			},
+			"annotations": []
+		},
+		{
+			"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0044",
+			"type": "Canvas",
+			"items": [
+				{
+					"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0044/annotationpage/0",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0044/annotationpage/0/annotation/0",
+							"type": "Annotation",
+							"motivation": "painting",
+							"body": {
+								"id": "https://iiif.micr.io/vfdXO",
+								"format": "image/jpeg",
+								"type": "Image",
+								"height": 800,
+								"width": 1000,
+								"service": [
+									{
+										"id": "https://iiif.micr.io/vfdXO",
+										"type": "ImageService2",
+										"profile": "http://iiif.io/api/image/2/level2.json"
+									}
+								]
+							},
+							"target": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0044"
+						}
+					]
+				}
+			],
+			"height": 800,
+			"width": 1000,
+			"label": {
+				"none": [
+					"Das Neuw Grottesken… (44)"
+				]
+			},
+			"annotations": []
+		},
+		{
+			"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0045",
+			"type": "Canvas",
+			"items": [
+				{
+					"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0045/annotationpage/0",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0045/annotationpage/0/annotation/0",
+							"type": "Annotation",
+							"motivation": "painting",
+							"body": {
+								"id": "https://iiif.micr.io/jRKdw",
+								"format": "image/jpeg",
+								"type": "Image",
+								"height": 800,
+								"width": 1000,
+								"service": [
+									{
+										"id": "https://iiif.micr.io/jRKdw",
+										"type": "ImageService2",
+										"profile": "http://iiif.io/api/image/2/level2.json"
+									}
+								]
+							},
+							"target": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0045"
+						}
+					]
+				}
+			],
+			"height": 800,
+			"width": 1000,
+			"label": {
+				"none": [
+					"Das Neuw Grottesken… (45)"
+				]
+			},
+			"annotations": []
+		},
+		{
+			"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0046",
+			"type": "Canvas",
+			"items": [
+				{
+					"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0046/annotationpage/0",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0046/annotationpage/0/annotation/0",
+							"type": "Annotation",
+							"motivation": "painting",
+							"body": {
+								"id": "https://iiif.micr.io/WHRVQ",
+								"format": "image/jpeg",
+								"type": "Image",
+								"height": 800,
+								"width": 1000,
+								"service": [
+									{
+										"id": "https://iiif.micr.io/WHRVQ",
+										"type": "ImageService2",
+										"profile": "http://iiif.io/api/image/2/level2.json"
+									}
+								]
+							},
+							"target": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0046"
+						}
+					]
+				}
+			],
+			"height": 800,
+			"width": 1000,
+			"label": {
+				"none": [
+					"Das Neuw Grottesken… (46)"
+				]
+			},
+			"annotations": []
+		},
+		{
+			"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0047",
+			"type": "Canvas",
+			"items": [
+				{
+					"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0047/annotationpage/0",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0047/annotationpage/0/annotation/0",
+							"type": "Annotation",
+							"motivation": "painting",
+							"body": {
+								"id": "https://iiif.micr.io/nhgAH",
+								"format": "image/jpeg",
+								"type": "Image",
+								"height": 800,
+								"width": 1000,
+								"service": [
+									{
+										"id": "https://iiif.micr.io/nhgAH",
+										"type": "ImageService2",
+										"profile": "http://iiif.io/api/image/2/level2.json"
+									}
+								]
+							},
+							"target": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0047"
+						}
+					]
+				}
+			],
+			"height": 800,
+			"width": 1000,
+			"label": {
+				"none": [
+					"Das Neuw Grottesken… (47)"
+				]
+			},
+			"annotations": []
+		},
+		{
+			"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0049",
+			"type": "Canvas",
+			"items": [
+				{
+					"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0049/annotationpage/0",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0049/annotationpage/0/annotation/0",
+							"type": "Annotation",
+							"motivation": "painting",
+							"body": {
+								"id": "https://iiif.micr.io/yiFzc",
+								"format": "image/jpeg",
+								"type": "Image",
+								"height": 800,
+								"width": 1000,
+								"service": [
+									{
+										"id": "https://iiif.micr.io/yiFzc",
+										"type": "ImageService2",
+										"profile": "http://iiif.io/api/image/2/level2.json"
+									}
+								]
+							},
+							"target": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0049"
+						}
+					]
+				}
+			],
+			"height": 800,
+			"width": 1000,
+			"label": {
+				"none": [
+					"Das Neuw Grottesken… (49)"
+				]
+			},
+			"annotations": []
+		},
+		{
+			"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0050",
+			"type": "Canvas",
+			"items": [
+				{
+					"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0050/annotationpage/0",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0050/annotationpage/0/annotation/0",
+							"type": "Annotation",
+							"motivation": "painting",
+							"body": {
+								"id": "https://iiif.micr.io/wfbZn",
+								"format": "image/jpeg",
+								"type": "Image",
+								"height": 800,
+								"width": 1000,
+								"service": [
+									{
+										"id": "https://iiif.micr.io/wfbZn",
+										"type": "ImageService2",
+										"profile": "http://iiif.io/api/image/2/level2.json"
+									}
+								]
+							},
+							"target": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0050"
+						}
+					]
+				}
+			],
+			"height": 800,
+			"width": 1000,
+			"label": {
+				"none": [
+					"Das Neuw Grottesken… (50)"
+				]
+			},
+			"annotations": []
+		},
+		{
+			"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0051",
+			"type": "Canvas",
+			"items": [
+				{
+					"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0051/annotationpage/0",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0051/annotationpage/0/annotation/0",
+							"type": "Annotation",
+							"motivation": "painting",
+							"body": {
+								"id": "https://iiif.micr.io/rfhaY",
+								"format": "image/jpeg",
+								"type": "Image",
+								"height": 800,
+								"width": 1000,
+								"service": [
+									{
+										"id": "https://iiif.micr.io/rfhaY",
+										"type": "ImageService2",
+										"profile": "http://iiif.io/api/image/2/level2.json"
+									}
+								]
+							},
+							"target": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0051"
+						}
+					]
+				}
+			],
+			"height": 800,
+			"width": 1000,
+			"label": {
+				"none": [
+					"Das Neuw Grottesken… (51)"
+				]
+			},
+			"annotations": [
+				{
+					"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0051/annotationPage/1",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0051/annotationPage/1/annotation/0",
+							"type": "Annotation",
+							"motivation": "supplementing",
+							"body": {
+								"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/tei/transcription/f0051.xml",
+								"format": "text/xml",
+								"type": "TextPartial",
+								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
+							},
+							"target": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0051"
+						},
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0051/annotationPage/1/annotation/1",
+							"type": "Annotation",
+							"motivation": "supplementing",
+							"body": {
+								"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/html/transcription/f0051.html",
+								"format": "text/html",
+								"type": "TextPartial",
+								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
+							},
+							"target": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0051"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0052",
+			"type": "Canvas",
+			"items": [
+				{
+					"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0052/annotationpage/0",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0052/annotationpage/0/annotation/0",
+							"type": "Annotation",
+							"motivation": "painting",
+							"body": {
+								"id": "https://iiif.micr.io/vPnhA",
+								"format": "image/jpeg",
+								"type": "Image",
+								"height": 800,
+								"width": 1000,
+								"service": [
+									{
+										"id": "https://iiif.micr.io/vPnhA",
+										"type": "ImageService2",
+										"profile": "http://iiif.io/api/image/2/level2.json"
+									}
+								]
+							},
+							"target": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0052"
+						}
+					]
+				}
+			],
+			"height": 800,
+			"width": 1000,
+			"label": {
+				"none": [
+					"Das Neuw Grottesken… (52)"
+				]
+			},
+			"annotations": []
+		},
+		{
+			"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0053",
+			"type": "Canvas",
+			"items": [
+				{
+					"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0053/annotationpage/0",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0053/annotationpage/0/annotation/0",
+							"type": "Annotation",
+							"motivation": "painting",
+							"body": {
+								"id": "https://iiif.micr.io/AyuLX",
+								"format": "image/jpeg",
+								"type": "Image",
+								"height": 800,
+								"width": 1000,
+								"service": [
+									{
+										"id": "https://iiif.micr.io/AyuLX",
+										"type": "ImageService2",
+										"profile": "http://iiif.io/api/image/2/level2.json"
+									}
+								]
+							},
+							"target": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0053"
+						}
+					]
+				}
+			],
+			"height": 800,
+			"width": 1000,
+			"label": {
+				"none": [
+					"Das Neuw Grottesken… (53)"
+				]
+			},
+			"annotations": []
+		},
+		{
+			"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0054",
+			"type": "Canvas",
+			"items": [
+				{
+					"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0054/annotationpage/0",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0054/annotationpage/0/annotation/0",
+							"type": "Annotation",
+							"motivation": "painting",
+							"body": {
+								"id": "https://iiif.micr.io/bAhxy",
+								"format": "image/jpeg",
+								"type": "Image",
+								"height": 800,
+								"width": 1000,
+								"service": [
+									{
+										"id": "https://iiif.micr.io/bAhxy",
+										"type": "ImageService2",
+										"profile": "http://iiif.io/api/image/2/level2.json"
+									}
+								]
+							},
+							"target": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0054"
+						}
+					]
+				}
+			],
+			"height": 800,
+			"width": 1000,
+			"label": {
+				"none": [
+					"Das Neuw Grottesken… (54)"
+				]
+			},
+			"annotations": []
+		},
+		{
+			"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0055",
+			"type": "Canvas",
+			"items": [
+				{
+					"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0055/annotationpage/0",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0055/annotationpage/0/annotation/0",
+							"type": "Annotation",
+							"motivation": "painting",
+							"body": {
+								"id": "https://iiif.micr.io/LGfqM",
+								"format": "image/jpeg",
+								"type": "Image",
+								"height": 800,
+								"width": 1000,
+								"service": [
+									{
+										"id": "https://iiif.micr.io/LGfqM",
+										"type": "ImageService2",
+										"profile": "http://iiif.io/api/image/2/level2.json"
+									}
+								]
+							},
+							"target": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0055"
+						}
+					]
+				}
+			],
+			"height": 800,
+			"width": 1000,
+			"label": {
+				"none": [
+					"Das Neuw Grottesken… (55)"
+				]
+			},
+			"annotations": []
+		},
+		{
+			"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0056",
+			"type": "Canvas",
+			"items": [
+				{
+					"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0056/annotationpage/0",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0056/annotationpage/0/annotation/0",
+							"type": "Annotation",
+							"motivation": "painting",
+							"body": {
+								"id": "https://iiif.micr.io/pfxfk",
+								"format": "image/jpeg",
+								"type": "Image",
+								"height": 800,
+								"width": 1000,
+								"service": [
+									{
+										"id": "https://iiif.micr.io/pfxfk",
+										"type": "ImageService2",
+										"profile": "http://iiif.io/api/image/2/level2.json"
+									}
+								]
+							},
+							"target": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0056"
+						}
+					]
+				}
+			],
+			"height": 800,
+			"width": 1000,
+			"label": {
+				"none": [
+					"Das Neuw Grottesken… (56)"
+				]
+			},
+			"annotations": []
+		},
+		{
+			"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0057",
+			"type": "Canvas",
+			"items": [
+				{
+					"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0057/annotationpage/0",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0057/annotationpage/0/annotation/0",
+							"type": "Annotation",
+							"motivation": "painting",
+							"body": {
+								"id": "https://iiif.micr.io/qXcYs",
+								"format": "image/jpeg",
+								"type": "Image",
+								"height": 800,
+								"width": 1000,
+								"service": [
+									{
+										"id": "https://iiif.micr.io/qXcYs",
+										"type": "ImageService2",
+										"profile": "http://iiif.io/api/image/2/level2.json"
+									}
+								]
+							},
+							"target": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0057"
+						}
+					]
+				}
+			],
+			"height": 800,
+			"width": 1000,
+			"label": {
+				"none": [
+					"Das Neuw Grottesken… (57)"
+				]
+			},
+			"annotations": []
+		},
+		{
+			"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0058",
+			"type": "Canvas",
+			"items": [
+				{
+					"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0058/annotationpage/0",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0058/annotationpage/0/annotation/0",
+							"type": "Annotation",
+							"motivation": "painting",
+							"body": {
+								"id": "https://iiif.micr.io/OMvDd",
+								"format": "image/jpeg",
+								"type": "Image",
+								"height": 800,
+								"width": 1000,
+								"service": [
+									{
+										"id": "https://iiif.micr.io/OMvDd",
+										"type": "ImageService2",
+										"profile": "http://iiif.io/api/image/2/level2.json"
+									}
+								]
+							},
+							"target": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0058"
+						}
+					]
+				}
+			],
+			"height": 800,
+			"width": 1000,
+			"label": {
+				"none": [
+					"Das Neuw Grottesken… (58)"
+				]
+			},
+			"annotations": []
+		},
+		{
+			"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0059",
+			"type": "Canvas",
+			"items": [
+				{
+					"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0059/annotationpage/0",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0059/annotationpage/0/annotation/0",
+							"type": "Annotation",
+							"motivation": "painting",
+							"body": {
+								"id": "https://iiif.micr.io/htJvp",
+								"format": "image/jpeg",
+								"type": "Image",
+								"height": 800,
+								"width": 1000,
+								"service": [
+									{
+										"id": "https://iiif.micr.io/htJvp",
+										"type": "ImageService2",
+										"profile": "http://iiif.io/api/image/2/level2.json"
+									}
+								]
+							},
+							"target": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0059"
+						}
+					]
+				}
+			],
+			"height": 800,
+			"width": 1000,
+			"label": {
+				"none": [
+					"Das Neuw Grottesken… (59)"
+				]
+			},
+			"annotations": []
+		},
+		{
+			"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0060",
+			"type": "Canvas",
+			"items": [
+				{
+					"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0060/annotationpage/0",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0060/annotationpage/0/annotation/0",
+							"type": "Annotation",
+							"motivation": "painting",
+							"body": {
+								"id": "https://iiif.micr.io/FyCOZ",
+								"format": "image/jpeg",
+								"type": "Image",
+								"height": 800,
+								"width": 1000,
+								"service": [
+									{
+										"id": "https://iiif.micr.io/FyCOZ",
+										"type": "ImageService2",
+										"profile": "http://iiif.io/api/image/2/level2.json"
+									}
+								]
+							},
+							"target": "/editioncrafter/das_neuw_grottesken_buch_nürnberg_1610/iiif/canvas/f0060"
+						}
+					]
+				}
+			],
+			"height": 800,
+			"width": 1000,
+			"label": {
+				"none": [
+					"Das Neuw Grottesken… (60)"
+				]
+			},
+			"annotations": []
+		}
+	],
 	"label": {
 		"en": [
 			"das_neuw_grottesken_buch_nürnberg_1610"

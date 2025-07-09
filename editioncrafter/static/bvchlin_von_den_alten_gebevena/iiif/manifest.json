@@ -3,43 +3,43 @@
 		"http://www.w3.org/ns/anno.jsonld",
 		"http://iiif.io/api/presentation/3/context.json"
 	],
-	"id": "http://localhost:8080/bvchlin_von_den_alten_gebevena/iiif/manifest.json",
+	"id": "/editioncrafter/bvchlin_von_den_alten_gebevena/iiif/manifest.json",
 	"type": "Manifest",
 	"items": [
 		{
-			"id": "http://localhost:8080/bvchlin_von_den_alten_gebevena/iiif/canvas/f0001",
+			"id": "/editioncrafter/bvchlin_von_den_alten_gebevena/iiif/canvas/f0001",
 			"type": "Canvas",
 			"items": [
 				{
-					"id": "http://localhost:8080/bvchlin_von_den_alten_gebevena/iiif/canvas/f0001/annotationpage/0",
+					"id": "/editioncrafter/bvchlin_von_den_alten_gebevena/iiif/canvas/f0001/annotationpage/0",
 					"type": "AnnotationPage",
 					"items": [
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "http://localhost:8080/bvchlin_von_den_alten_gebevena/iiif/canvas/f0001/annotationpage/0/annotation/0",
+							"id": "/editioncrafter/bvchlin_von_den_alten_gebevena/iiif/canvas/f0001/annotationpage/0/annotation/0",
 							"type": "Annotation",
 							"motivation": "painting",
 							"body": {
-								"id": "https://corpora.dh.tamu.edu/image/uri/|corpus|6285564874d5f7a229b60520|Image|683f561bb575bda8eeb3138e|file|789c1dcac10e40300c00d02f9ad2ad5d5ddd9c883f58e984100bff9f08d79707f37597eb4ec028441c248685724c88ad724d58437fa6d5407de381c567e2469522e992c4ec6331c8db610f6cff9c4637baa173c28cd55ed617605e1c21",
+								"id": "https://corpora.dh.tamu.edu/iiif/2/corpora/6285564874d5f7a229b60520/Image/b313/683f561bb575bda8eeb3138e/files/image/RP-P-OB-8662.jpg",
 								"format": "image/jpeg",
 								"type": "Image",
-								"height": null,
-								"width": null,
+								"height": 800,
+								"width": 1000,
 								"service": [
 									{
-										"id": "https://corpora.dh.tamu.edu/image/uri/|corpus|6285564874d5f7a229b60520|Image|683f561bb575bda8eeb3138e|file|789c1dcac10e40300c00d02f9ad2ad5d5ddd9c883f58e984100bff9f08d79707f37597eb4ec028441c248685724c88ad724d58437fa6d5407de381c567e2469522e992c4ec6331c8db610f6cff9c4637baa173c28cd55ed617605e1c21",
+										"id": "https://corpora.dh.tamu.edu/iiif/2/corpora/6285564874d5f7a229b60520/Image/b313/683f561bb575bda8eeb3138e/files/image/RP-P-OB-8662.jpg",
 										"type": "ImageService2",
 										"profile": "http://iiif.io/api/image/2/level2.json"
 									}
 								]
 							},
-							"target": "http://localhost:8080/bvchlin_von_den_alten_gebevena/iiif/canvas/f0001"
+							"target": "/editioncrafter/bvchlin_von_den_alten_gebevena/iiif/canvas/f0001"
 						}
 					]
 				}
 			],
-			"height": null,
-			"width": null,
+			"height": 800,
+			"width": 1000,
 			"label": {
 				"none": [
 					"Bvchlin von den alt… (Title Page)"
