@@ -1,0 +1,64 @@
+{
+	"@context": [
+		"http://www.w3.org/ns/anno.jsonld",
+		"http://iiif.io/api/presentation/3/context.json"
+	],
+	"id": "http://localhost:8080/hangers_met_arabesken_en_figuren/iiif/manifest.json",
+	"type": "Manifest",
+	"items": [
+		{
+			"id": "http://localhost:8080/hangers_met_arabesken_en_figuren/iiif/canvas/f0001",
+			"type": "Canvas",
+			"items": [
+				{
+					"id": "http://localhost:8080/hangers_met_arabesken_en_figuren/iiif/canvas/f0001/annotationpage/0",
+					"type": "AnnotationPage",
+					"items": [
+						{
+							"@context": "https://www.w3.org/ns/anno.jsonld",
+							"id": "http://localhost:8080/hangers_met_arabesken_en_figuren/iiif/canvas/f0001/annotationpage/0/annotation/0",
+							"type": "Annotation",
+							"motivation": "painting",
+							"body": {
+								"id": "https://corpora.dh.tamu.edu/image/uri/|corpus|6285564874d5f7a229b60520|Image|683f385ab575bda8eeb31338|file|789c1dcac10e40300c00d02f9aceaa5d5ddd9c883fe8d884902df3ff89707d79b0e65a7255602744dc89ef364a5e9deb035b7216c65bf708015b04164c28a4813c854d25c68f51201d577ce0f8e7329bd94c8361cbb639cbfe025ac51be8",
+								"format": "image/jpeg",
+								"type": "Image",
+								"height": null,
+								"width": null,
+								"service": [
+									{
+										"id": "https://corpora.dh.tamu.edu/image/uri/|corpus|6285564874d5f7a229b60520|Image|683f385ab575bda8eeb31338|file|789c1dcac10e40300c00d02f9aceaa5d5ddd9c883fe8d884902df3ff89707d79b0e65a7255602744dc89ef364a5e9deb035b7216c65bf708015b04164c28a4813c854d25c68f51201d577ce0f8e7329bd94c8361cbb639cbfe025ac51be8",
+										"type": "ImageService2",
+										"profile": "http://iiif.io/api/image/2/level2.json"
+									}
+								]
+							},
+							"target": "http://localhost:8080/hangers_met_arabesken_en_figuren/iiif/canvas/f0001"
+						}
+					]
+				}
+			],
+			"height": null,
+			"width": null,
+			"label": {
+				"none": [
+					"Hangers met arabesk… (Title Page)"
+				]
+			},
+			"annotations": []
+		}
+	],
+	"label": {
+		"en": [
+			"hangers_met_arabesken_en_figuren"
+		]
+	},
+	"seeAlso": [
+		{
+			"id": "https://cu-mkp.github.io/editioncrafter-data/fr640_3r-3v-example/glossary.json",
+			"type": "Dataset",
+			"label": "Glossary",
+			"format": "text/json"
+		}
+	]
+}
