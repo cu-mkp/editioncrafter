@@ -1,9 +1,10 @@
 import withWidth from '@material-ui/core/withWidth'
 import { createBrowserHistory } from 'history'
 import PropTypes from 'prop-types'
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useMemo, useRef, useState } from 'react'
 import { connect, Provider } from 'react-redux'
 import {
+  BrowserRouter,
   HashRouter,
   Navigate,
   Route,
@@ -24,6 +25,8 @@ function DiploMatic(props) {
     })
   }, [])
 
+  const Router = useMemo(() => props.config.serverNav ? BrowserRouter : HashRouter, [props.config.serverNav])
+
   useEffect(() => {
     if (containerRef.current) {
       setContainerWidth(containerRef.current.offsetWidth)
@@ -36,23 +39,34 @@ function DiploMatic(props) {
   const { fixedFrameMode } = props.diplomatic
   const fixedFrameModeClass = fixedFrameMode ? 'editioncrafter' : 'editioncrafter sticky'
 
-  const mainBody = (
-    <div id="diplomatic" className={fixedFrameModeClass} ref={containerRef} style={{ height: containerHeight }}>
-      <RouteListener />
-      <div id="content" style={{ height: '100%' }}>
-        <Routes>
-          <Route path="/ec/:folioID/:transcriptionType/:folioID2/:transcriptionType2/:folioID3/:transcriptionType3" element={<DocumentView {...props} containerWidth={containerWidth} />} exact />
-          <Route path="/ec/:folioID/:transcriptionType/:folioID2/:transcriptionType2" element={<DocumentView {...props} containerWidth={containerWidth} />} exact />
-          <Route path="/ec/:folioID/:transcriptionType" element={<DocumentView {...props} containerWidth={containerWidth} />} exact />
-          <Route path="/ec/:folioID" element={<DocumentView {...props} containerWidth={containerWidth} />} exact />
-          <Route path="/ec" element={<DocumentView {...props} containerWidth={containerWidth} />} exact />
-          <Route path="/" element={<Navigate to="/ec" />} exact />
-        </Routes>
-      </div>
-    </div>
-  )
+  const mainBody
+        = (
+          <div id="diplomatic" className={fixedFrameModeClass} ref={containerRef} style={{ height: containerHeight }}>
+            <RouteListener divider={props.config.divider} />
+            <div id="content" style={{ height: '100%' }}>
+              {
+                props.config.serverNav
+                  ? (
+                      <DocumentView {...props} containerWidth={containerWidth} />
+                    )
+                  : (
+                      <Routes>
+                        <Route path="/ec/:folioID/:transcriptionType/:folioID2/:transcriptionType2/:folioID3/:transcriptionType3" element={<DocumentView {...props} containerWidth={containerWidth} />} exact />
+                        <Route path="/ec/:folioID/:transcriptionType/:folioID2/:transcriptionType2" element={<DocumentView {...props} containerWidth={containerWidth} />} exact />
+                        <Route path="/ec/:folioID/:transcriptionType" element={<DocumentView {...props} containerWidth={containerWidth} />} exact />
+                        <Route path="/ec/:folioID" element={<DocumentView {...props} containerWidth={containerWidth} />} exact />
+                        <Route path="/ec" element={<DocumentView {...props} containerWidth={containerWidth} />} exact />
+                        <Route path="/" element={<Navigate to="/ec" />} exact />
+                      </Routes>
+                    )
+              }
+            </div>
+          </div>
+        )
 
-  const topLevel = !(props.tagExplorerMode === true) ? <HashRouter><TagFilterProvider>{mainBody}</TagFilterProvider></HashRouter> : mainBody
+  const topLevel = !(props.tagExplorerMode === true)
+    ? <Router><TagFilterProvider>{mainBody}</TagFilterProvider></Router>
+    : mainBody
 
   return (
     <Provider store={props.store}>
