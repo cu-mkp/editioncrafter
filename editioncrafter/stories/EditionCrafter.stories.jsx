@@ -282,6 +282,19 @@ export function TagExploreExample() {
   )
 }
 
+export function FCC2Example() {
+  return (
+    <EditionCrafter
+      documentName="PerformantTesting"
+      transcriptionTypes={{
+        translation: 'Translation',
+        transcription: 'Transcription',
+      }}
+      iiifManifest="https://staging-api.faircopy.cloud/public/116/tei_documents/PerformantTesting/iiif"
+    />
+  )
+}
+
 export default {
   title: 'EditionCrafter',
 }
