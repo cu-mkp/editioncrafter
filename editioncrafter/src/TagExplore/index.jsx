@@ -48,14 +48,14 @@ function getData(db) {
 
 function generateECProps(props, db) {
   const documents = getData(db)
-  const { documentName, baseURL, transcriptionTypes } = props
+  const { documentName, baseURL, transcriptionTypes, manifestPath = '/iiif/manifest.json' } = props
   const documentInfo = {}
 
   for (const document of documents) {
     documentInfo[document.local_id] = {
       documentName: document.name,
       transcriptionTypes,
-      iiifManifest: `${baseURL}/${document.local_id}/iiif/manifest.json`,
+      iiifManifest: `${baseURL}/${document.local_id}${manifestPath}`,
     }
   }
 

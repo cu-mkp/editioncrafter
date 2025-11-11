@@ -85,21 +85,25 @@ function Thumbnail(props) {
       <figure className="surface-thumbnail-figure">
         {isLeft
           ? (
-              <div className="surface-thumbnail-overlay-selected left">
-                <div>
-                  <Left />
-                  <Typography>Left</Typography>
+              <a onDoubleClick={onClick.right} title="Double click to insert right">
+                <div className="surface-thumbnail-overlay-selected left">
+                  <div>
+                    <Left />
+                    <Typography>Left</Typography>
+                  </div>
                 </div>
-              </div>
+              </a>
             )
           : isRight
             ? (
-                <div className="surface-thumbnail-overlay-selected right">
-                  <div>
-                    <Right />
-                    <Typography>Right</Typography>
+                <a onDoubleClick={onClick.left} title="Double click to insert left">
+                  <div className="surface-thumbnail-overlay-selected right">
+                    <div>
+                      <Right />
+                      <Typography>Right</Typography>
+                    </div>
                   </div>
-                </div>
+                </a>
               )
             : (
                 <div className="surface-thumbnail-overlay">
@@ -195,29 +199,32 @@ function DocumentDetail(props) {
     updatePageCount(surfaces?.length)
   }, [surfaces, updatePageCount, tags])
 
-  return (
-    <Accordion>
-      <AccordionSummary
-        expandIcon={<ExpandMoreIcon />}
-        aria-controls={`document-detail-${documentID}-content`}
-        id={`document-detail-${documentID}`}
-        className="accordion-summary"
-      >
-        <Typography>{documentName}</Typography>
-        <Typography>{surfaces?.length || ''}</Typography>
-      </AccordionSummary>
-      <AccordionDetails
-        className="accordion-detail"
-      >
-        <ThumbnailGrid
-          navigateToSelection={navigateToSelection}
-          documentLocalID={documentLocalID}
-          surfaces={surfaces}
-          selection={selection}
-        >
-        </ThumbnailGrid>
-      </AccordionDetails>
-    </Accordion>
+  return ((!tags.length || surfaces.length)
+    ? (
+        <Accordion>
+          <AccordionSummary
+            expandIcon={<ExpandMoreIcon />}
+            aria-controls={`document-detail-${documentID}-content`}
+            id={`document-detail-${documentID}`}
+            className="accordion-summary"
+          >
+            <Typography>{documentName}</Typography>
+            <Typography>{surfaces?.length || ''}</Typography>
+          </AccordionSummary>
+          <AccordionDetails
+            className="accordion-detail"
+          >
+            <ThumbnailGrid
+              navigateToSelection={navigateToSelection}
+              documentLocalID={documentLocalID}
+              surfaces={surfaces}
+              selection={selection}
+            >
+            </ThumbnailGrid>
+          </AccordionDetails>
+        </Accordion>
+      )
+    : null
   )
 }
 
