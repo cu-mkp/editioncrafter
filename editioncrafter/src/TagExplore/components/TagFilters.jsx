@@ -34,7 +34,6 @@ function getData(db) {
 function TagFilters(props) {
   const { onToggleSelected, filters, query } = props
   const data = useMemo(() => getData(props.db), [props.db])
-  console.log(data.taxonomies)
   const [expanded, setExpanded] = useState(data.taxonomies?.map(() => (false)))
   const [displayedTags, setDisplayedTags] = useState({})
 

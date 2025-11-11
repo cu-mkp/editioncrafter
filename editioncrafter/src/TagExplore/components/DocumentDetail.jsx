@@ -85,21 +85,25 @@ function Thumbnail(props) {
       <figure className="surface-thumbnail-figure">
         {isLeft
           ? (
-              <div className="surface-thumbnail-overlay-selected left">
-                <div>
-                  <Left />
-                  <Typography>Left</Typography>
+              <a onDoubleClick={onClick.right} title="Double click to insert right">
+                <div className="surface-thumbnail-overlay-selected left">
+                  <div>
+                    <Left />
+                    <Typography>Left</Typography>
+                  </div>
                 </div>
-              </div>
+              </a>
             )
           : isRight
             ? (
-                <div className="surface-thumbnail-overlay-selected right">
-                  <div>
-                    <Right />
-                    <Typography>Right</Typography>
+                <a onDoubleClick={onClick.left} title="Double click to insert left">
+                  <div className="surface-thumbnail-overlay-selected right">
+                    <div>
+                      <Right />
+                      <Typography>Right</Typography>
+                    </div>
                   </div>
-                </div>
+                </a>
               )
             : (
                 <div className="surface-thumbnail-overlay">

@@ -1,12 +1,13 @@
 import { Box, Button, Collapse, Divider, IconButton, Input, Typography } from '@material-ui/core'
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft'
 import TuneIcon from '@material-ui/icons/Tune'
-import { useCallback, useEffect, useMemo, useState } from 'react'
+import { useCallback, useContext, useEffect, useMemo, useState } from 'react'
 
 import { useLocation, useNavigate } from 'react-router-dom'
 import { getObjs } from '../../common/lib/sql'
 import DocumentDetail from './DocumentDetail'
 // import DocumentFilters from './DocumentFilters'
+import TagFilterContext from '../../EditionCrafter/context/TagFilterContext'
 import TagFilters from './TagFilters'
 
 function getData(db) {
@@ -87,6 +88,8 @@ function SurfaceBrowser(props) {
 
   const filteredDocs = useMemo(() => (filterDocs(documents, tags)), [filterDocs, documents, tags])
 
+  const { clearTags } = useContext(TagFilterContext)
+
   const navigate = useNavigate()
   const location = useLocation()
   const selection = useMemo(() => getSelection(location.pathname), [location])
@@ -140,34 +143,51 @@ function SurfaceBrowser(props) {
         <Divider></Divider>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
           <Typography>Contents</Typography>
-          <Button
-            startIcon={<TuneIcon />}
-            onClick={() => setShowFilters(current => (!current))}
-          >
-            Filter
+          <div>
             { tags && tags.length
               ? (
-                  <div style={{
-                    fontSize: 'small',
-                    backgroundColor: 'red',
-                    borderRadius: '999px',
-                    display: 'flex',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    padding: '3px',
-                    color: 'white',
-                    height: '16px',
-                    width: '16px',
-                    position: 'absolute',
-                    top: '0',
-                    left: '-12px',
-                  }}
+                  <Button
+                    onClick={() => {
+                      setTags([])
+                      clearTags()
+                    }}
+                    style={{
+                      marginRight: '24px',
+                    }}
                   >
-                    {tags.length}
-                  </div>
+                    Clear All
+                  </Button>
                 )
               : null}
-          </Button>
+            <Button
+              startIcon={<TuneIcon />}
+              onClick={() => setShowFilters(current => (!current))}
+            >
+              Filter
+              { tags && tags.length
+                ? (
+                    <div style={{
+                      fontSize: 'small',
+                      backgroundColor: 'red',
+                      borderRadius: '999px',
+                      display: 'flex',
+                      justifyContent: 'center',
+                      alignItems: 'center',
+                      padding: '3px',
+                      color: 'white',
+                      height: '16px',
+                      width: '16px',
+                      position: 'absolute',
+                      top: '0',
+                      left: '-12px',
+                    }}
+                    >
+                      {tags.length}
+                    </div>
+                  )
+                : null}
+            </Button>
+          </div>
         </div>
         <Typography>
           {totalPages}

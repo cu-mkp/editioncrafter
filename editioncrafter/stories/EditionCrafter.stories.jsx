@@ -272,12 +272,12 @@ export function TagExploreExample() {
   return (
     <TagExplore
       documentName="Ornament : Design : Translation"
-      dbUrl="/editioncrafter/odt.sqlite"
+      dbUrl="https://performant-software.github.io/editioncrafter-odt/odt-fcc2.sqlite"
       transcriptionTypes={{
-        'text-1': 'Text 1',
-        'text-2': 'Text 2',
+        transcription: 'Transcription',
+        translation: 'Translation',
       }}
-      baseURL="/editioncrafter"
+      baseURL="https://performant-software.github.io/editioncrafter-odt"
     />
   )
 }
