@@ -272,25 +272,12 @@ export function TagExploreExample() {
   return (
     <TagExplore
       documentName="Ornament : Design : Translation"
-      dbUrl="/editioncrafter/odt.sqlite"
+      dbUrl="https://performant-software.github.io/editioncrafter-odt/odt-fcc2.sqlite"
       transcriptionTypes={{
-        'text-1': 'Text 1',
-        'text-2': 'Text 2',
-      }}
-      baseURL="/editioncrafter"
-    />
-  )
-}
-
-export function FCC2Example() {
-  return (
-    <EditionCrafter
-      documentName="PerformantTesting"
-      transcriptionTypes={{
-        translation: 'Translation',
         transcription: 'Transcription',
+        translation: 'Translation',
       }}
-      iiifManifest="https://staging-api.faircopy.cloud/public/116/tei_documents/PerformantTesting/iiif"
+      baseURL="https://performant-software.github.io/editioncrafter-odt"
     />
   )
 }
