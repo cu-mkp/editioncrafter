@@ -1,6 +1,6 @@
 import { Accordion, AccordionDetails, AccordionSummary, Checkbox, FormControlLabel, FormGroup, Typography } from '@material-ui/core'
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
-import { useContext, useEffect, useMemo, useState } from 'react'
+import { useCallback, useContext, useEffect, useMemo, useState } from 'react'
 import { getObjs } from '../../common/lib/sql'
 import TagFilterContext from '../../EditionCrafter/context/TagFilterContext'
 
@@ -10,13 +10,17 @@ function getData(db) {
       *
     FROM
       taxonomies;
+    ORDER BY
+      name ASC;
   `)
 
   const categoriesStmt = db.prepare(`
     SELECT
       *
     FROM 
-      categories; 
+      categories
+    ORDER BY
+      name ASC; 
   `)
 
   const tagsStmt = db.prepare(`
@@ -32,7 +36,9 @@ function getData(db) {
     LEFT JOIN taxonomies
       ON tags.taxonomy_id = taxonomies.id
     GROUP BY
-      tags.xml_id`)
+      tags.xml_id
+    ORDER BY
+      tags.name ASC`)
 
   return {
     tags: getObjs(tagsStmt),
@@ -53,6 +59,22 @@ function CategoryFilter(props) {
     filters,
   } = props
 
+  const hasDescendentTags = useCallback((catId) => {
+    if (tags?.filter(tag => (tag.parent_category_id === catId))?.length) {
+      return true
+    }
+
+    const subs = categories?.filter(cat => (cat.parent_category_id === catId))
+
+    for (const sub of subs) {
+      if (hasDescendentTags(sub.id)) {
+        return true
+      }
+    }
+
+    return false
+  }, [tags, categories])
+
   const categoryTags = useMemo(() => {
     return tags?.filter(tag => (tag.parent_category_id === categoryId))
   }, [tags, categoryId])
@@ -61,7 +83,7 @@ function CategoryFilter(props) {
     return categories?.filter(cat => (cat.parent_category_id === categoryId))
   }, [categories, categoryId])
 
-  return (
+  return hasDescendentTags(categoryId) && (
     <Accordion>
       <AccordionSummary
         expandIcon={<ExpandMoreIcon />}
