@@ -30,7 +30,7 @@
   background-color: #242629;
   z-index: 10000;
   padding: 12px 0 12px 12px;
-  width: 300px;
+  width: 600px;
   height: 100%;
   max-height: calc(97dvh - 48px);
   border-left: solid white 1px;
@@ -194,4 +194,7 @@
 
 .tag-explore .accordion-detail {
   background-color: #242629;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }
