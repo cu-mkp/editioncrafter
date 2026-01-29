@@ -153,11 +153,35 @@ function TagFilters(props) {
                 <FormGroup>
                   { data.taxonomies.map((tax) => {
                     const tagList = displayedTags[tax.id]
+                    const topLevelTags = tagList?.filter(tag => (!tag.parent_category_id))
                     return (
                       tagList?.length
                         ? (
                             <div key={tax.id}>
                               <Typography>{`${tax.name.slice(0, 1).toUpperCase()}${tax.name.slice(1)}`}</Typography>
+                              { !!topLevelTags?.length && (
+                                <ul>
+                                  { topLevelTags?.map(tag => (
+                                    <FormControlLabel
+                                      as="li"
+                                      control={(
+                                        <Checkbox
+                                          checked={filters.includes(tag.id)}
+                                          onChange={() => {
+                                            onToggleSelected(tag.id)
+                                            if (tax.is_surface) {
+                                              toggleTag(tag.xml_id, 'left')
+                                              toggleTag(tag.xml_id, 'right')
+                                            }
+                                          }}
+                                        />
+                                      )}
+                                      key={tag.id}
+                                      label={tag.name}
+                                    />
+                                  ))}
+                                </ul>
+                              )}
                               {
                                 data.categories?.filter(cat => (cat.taxonomy_id === tax.id && !cat.parent_category_id))?.map(cat => (
                                   <CategoryFilter
