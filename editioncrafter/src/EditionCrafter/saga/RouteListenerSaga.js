@@ -53,6 +53,34 @@ function* parseTags(headerUrl) {
   }
 }
 
+// A folio id is "{documentLocalID}_{surfaceID}" in variorum mode (see
+// SurfaceBrowser's parseFolioID, which this mirrors). Used to figure out
+// which document(s) a route actually needs data for.
+function parseFolioDocKey(folioID) {
+  const parts = folioID.split('_')
+  return parts.length > 1 ? parts.slice(0, -1).join('_') : null
+}
+
+function* getNeededDocumentKeys(pathSegments) {
+  const document = yield select(justDocument)
+  const keys = new Set()
+
+  if (!document.variorum) {
+    return keys
+  }
+
+  for (const id of [pathSegments[2], pathSegments[4], pathSegments[6]]) {
+    if (id && id !== '-1') {
+      const key = parseFolioDocKey(decodeURI(id))
+      if (key) {
+        keys.add(key)
+      }
+    }
+  }
+
+  return keys
+}
+
 function* userNavigation(action) {
   const pathname = action.payload.params[0]
   const pathSegments = pathname.split('/')
@@ -61,8 +89,9 @@ function* userNavigation(action) {
     switch (pathSegments[1]) {
       case 'ec':
       {
-        yield resolveDocumentManifest()
-        yield resolveDocumentTags()
+        const neededKeys = yield getNeededDocumentKeys(pathSegments)
+        yield resolveDocumentManifest(neededKeys)
+        yield resolveDocumentTags(neededKeys)
         yield resolveGlossary()
         yield resolveNotes()
         yield resolveFolio(pathSegments)
@@ -73,32 +102,55 @@ function* userNavigation(action) {
   }
 }
 
-function* resolveDocumentTags() {
+function* resolveDocumentTags(neededKeys) {
   const document = yield select(justDocument)
+
+  if (document.variorum) {
+    const tags = document.tags || {}
+    const keysToFetch = [...neededKeys].filter(key => document.headerUrl[key] && !(key in tags))
+
+    if (!keysToFetch.length) {
+      return
+    }
+
+    const newTags = { ...tags }
+    for (const key of keysToFetch) {
+      newTags[key] = yield parseTagUrl(document.headerUrl[key])
+    }
+    yield putResolveAction('DocumentActions.loadTags', newTags)
+    return
+  }
 
   if (!document.tags) {
     yield parseTags(document.headerUrl)
   }
 }
 
-function* resolveDocumentManifest() {
+function* resolveDocumentManifest(neededKeys) {
   const document = yield select(justDocument)
 
-  if (!document.loaded) {
-    // handle the case where we've passed in an array of manifest URLs, in which case the `variorum` parameter should be set to `true`
-    if (document.variorum) {
-      const variorumData = {}
-      for (const key of Object.keys(document.manifestURL)) {
-        const response = yield fetch(document.manifestURL[key])
-        variorumData[key] = yield response.json()
-      }
-      const variorumManifest = {
-        type: 'variorum',
-        documentData: variorumData,
-      }
-      yield putResolveAction('DocumentActions.loadDocument', variorumManifest)
-      return variorumManifest
+  if (document.variorum) {
+    const loadedManifestKeys = document.loadedManifestKeys || {}
+    const keysToFetch = [...neededKeys].filter(key => document.manifestURL[key] && !loadedManifestKeys[key])
+
+    if (!keysToFetch.length) {
+      return null
     }
+
+    const variorumData = {}
+    for (const key of keysToFetch) {
+      const response = yield fetch(document.manifestURL[key])
+      variorumData[key] = yield response.json()
+    }
+    const variorumManifest = {
+      type: 'variorum',
+      documentData: variorumData,
+    }
+    yield putResolveAction('DocumentActions.loadDocument', variorumManifest)
+    return variorumManifest
+  }
+
+  if (!document.loaded) {
     const singleResponse = yield fetch(document.manifestURL)
     const json = yield singleResponse.json()
     yield putResolveAction('DocumentActions.loadDocument', json)

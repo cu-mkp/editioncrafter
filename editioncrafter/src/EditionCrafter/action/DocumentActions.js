@@ -4,15 +4,26 @@ const DocumentActions = {}
 const textPartialResourceProfileID = 'https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md'
 
 DocumentActions.loadDocument = function loadDocument(state, manifestData) {
-  const folios = parseManifest(manifestData, state.transcriptionTypes)
-  const { folioIndex, folioByName } = createFolioIndex(folios)
+  const newFolios = parseManifest(manifestData, state.transcriptionTypes)
+  const { folioIndex: newFolioIndex, folioByName: newFolioByName } = createFolioIndex(newFolios)
+
+  // In variorum mode this is called incrementally, once per document as its
+  // folios are actually needed, so merge rather than replace. For a
+  // single-document edition this is still only ever called once.
+  const loadedManifestKeys = { ...state.loadedManifestKeys }
+  if (manifestData.type === 'variorum') {
+    Object.keys(manifestData.documentData).forEach((key) => {
+      loadedManifestKeys[key] = true
+    })
+  }
 
   return {
     ...state,
     loaded: true,
-    folios,
-    folioIndex,
-    folioByName,
+    folios: [...state.folios, ...newFolios],
+    folioIndex: { ...state.folioIndex, ...newFolioIndex },
+    folioByName: { ...state.folioByName, ...newFolioByName },
+    loadedManifestKeys,
   }
 }
 

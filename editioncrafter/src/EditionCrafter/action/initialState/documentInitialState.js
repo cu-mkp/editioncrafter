@@ -27,9 +27,16 @@ export default function documentInitalState(iiifManifest, documentName, transcri
     variorum,
     threePanel,
     folios: [],
-    loaded: false,
+    // Variorum editions (e.g. the tag-explorer's whole-corpus view) don't
+    // have a single upfront manifest fetch to wait on -- an unselected pane
+    // just shows an empty-state placeholder, and each document's manifest
+    // is fetched lazily once a folio from it is actually selected. A
+    // single-document edition still needs its one manifest before it has
+    // anything to show.
+    loaded: variorum,
+    loadedManifestKeys: {},
     folioIndex: {},
     folioByName: {},
-    tags: null,
+    tags: variorum ? {} : null,
   }
 }
