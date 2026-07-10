@@ -4,12 +4,11 @@ import { createReducer } from '../model/ReduxStore'
 import DiplomaticActions from './DiplomaticActions'
 import DocumentActions from './DocumentActions'
 import GlossaryActions from './GlossaryActions'
-import NotesActions from './NotesActions'
-
 import diplomaticInitialState from './initialState/diplomaticInitialState'
 import documentInitialState from './initialState/documentInitialState'
 import glossaryInitialState from './initialState/glossaryInitialState'
 import notesInitialState from './initialState/notesInitialState'
+import NotesActions from './NotesActions'
 
 export default function rootReducer(config) {
   const {
@@ -30,8 +29,14 @@ export default function rootReducer(config) {
       derivativesInfo[key] = config.documentInfo[key].documentName
     })
   }
-  const transcriptionTypes = variorum ? transcriptionTypesInfo : config.transcriptionTypes
-  const iiifManifest = variorum ? manifestInfo : config.iiifManifest
+
+  // handle the case that there's exactly one document in documentInfo
+  let docConfig = config
+  if (documentInfo && Object.keys(documentInfo).length === 1) {
+    docConfig = Object.values(documentInfo)[0]
+  }
+  const transcriptionTypes = variorum ? transcriptionTypesInfo : docConfig.transcriptionTypes
+  const iiifManifest = variorum ? manifestInfo : docConfig.iiifManifest
   const derivativeNames = variorum && derivativesInfo
   return combineReducers({
     diplomatic: createReducer('DiplomaticActions', DiplomaticActions, diplomaticInitialState),

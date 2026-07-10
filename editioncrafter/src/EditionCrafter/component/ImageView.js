@@ -10,6 +10,7 @@ import {
   useSearchParams,
 } from 'react-router-dom'
 import TagFilterContext from '../context/TagFilterContext'
+import ImageMetadata from './ImageMetadata'
 import ImageZoomControl from './ImageZoomControl'
 import Navigation from './Navigation'
 
@@ -187,6 +188,11 @@ function ImageView(props) {
                 initViewer={initViewer}
                 loading={folio.loading}
               />
+              {
+                folio.metadata && (
+                  <ImageMetadata data={folio.metadata} />
+                )
+              }
             </div>
           )
         : (

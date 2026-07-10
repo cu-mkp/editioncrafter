@@ -216,6 +216,7 @@ function parseSingleManifest(manifest, transcriptionTypes, document) {
         annotations: canvas.annotations
           ? canvas.annotations.filter(a => a.motivation === 'tagging')
           : [],
+        metadata: canvas.metadata,
       }
 
       folios.push(folio)
