@@ -47,6 +47,25 @@ function getData(db) {
   }
 }
 
+function getTagDocumentCount(tag, documents, db) {
+  const docsStmt = db.prepare(`
+    SELECT
+      count(1) as count
+    FROM
+      document_taggings
+    WHERE
+      tag=${tag}${documents?.length ? ` AND document IN (${documents.join(',')})` : ''}
+    `)
+
+  try {
+    const count = getObjs(docsStmt)[0]?.count
+    return count
+  }
+  catch {
+    return 1
+  }
+}
+
 function CategoryFilter(props) {
   const {
     name,
@@ -75,6 +94,18 @@ function CategoryFilter(props) {
     return false
   }, [tags, categories])
 
+  const countDescendentTags = useCallback((catId) => {
+    let count = tags?.filter(tag => (tag.parent_category_id === catId))?.length
+
+    const subs = categories?.filter(cat => (cat.parent_category_id === catId))
+
+    for (const sub of subs) {
+      count = count + countDescendentTags(sub.id)
+    }
+
+    return count
+  }, [tags, categories])
+
   const categoryTags = useMemo(() => {
     return tags?.filter(tag => (tag.parent_category_id === categoryId))
   }, [tags, categoryId])
@@ -92,7 +123,7 @@ function CategoryFilter(props) {
         className="accordion-summary"
       >
         <Typography>{name}</Typography>
-        <Typography>{categoryTags?.length || ''}</Typography>
+        <Typography>{countDescendentTags(categoryId) || ''}</Typography>
       </AccordionSummary>
       <AccordionDetails
         className="accordion-detail"
@@ -147,7 +178,7 @@ function CategoryFilter(props) {
 }
 
 function TagFilters(props) {
-  const { onToggleSelected, filters, query } = props
+  const { onToggleSelected, filters, query, documents } = props
   const data = useMemo(() => getData(props.db), [props.db])
   const [displayedTags, setDisplayedTags] = useState({})
 
@@ -155,7 +186,7 @@ function TagFilters(props) {
 
   useEffect(() => {
     const tags = {}
-    const filteredTags = data.tags.filter(tag => (!query || !query.length || tag.name.toLowerCase().includes(query.toLowerCase())))
+    const filteredTags = data.tags.filter(tag => (getTagDocumentCount(tag.id, documents, props.db) && (!query || !query.length || tag.name.toLowerCase().includes(query.toLowerCase()))))
     for (let i = 0; i < data.taxonomies.length; i++) {
       const tax = data.taxonomies[i]
       const tagList = filteredTags.filter(t => t.taxonomy_id === tax.id)
@@ -164,7 +195,7 @@ function TagFilters(props) {
       }
     }
     setDisplayedTags(tags)
-  }, [data, query])
+  }, [data, query, documents, props.db])
 
   return (
     <>
