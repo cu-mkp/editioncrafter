@@ -1,5 +1,6 @@
-import { Checkbox, FormControlLabel, FormGroup, Typography } from '@material-ui/core'
-import { useContext, useEffect, useMemo, useState } from 'react'
+import { Accordion, AccordionDetails, AccordionSummary, Checkbox, FormControlLabel, FormGroup, Typography } from '@material-ui/core'
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
+import { useCallback, useContext, useEffect, useMemo, useState } from 'react'
 import { getObjs } from '../../common/lib/sql'
 import TagFilterContext from '../../EditionCrafter/context/TagFilterContext'
 
@@ -9,6 +10,17 @@ function getData(db) {
       *
     FROM
       taxonomies;
+    ORDER BY
+      name ASC;
+  `)
+
+  const categoriesStmt = db.prepare(`
+    SELECT
+      *
+    FROM 
+      categories
+    ORDER BY
+      name ASC; 
   `)
 
   const tagsStmt = db.prepare(`
@@ -16,6 +28,7 @@ function getData(db) {
       tags.id AS id,
       tags.name AS name,
       tags.xml_id AS xml_id,
+      tags.parent_category_id AS parent_category_id,
       taxonomies.name as taxonomy,
       taxonomies.id as taxonomy_id
     FROM
@@ -23,19 +36,119 @@ function getData(db) {
     LEFT JOIN taxonomies
       ON tags.taxonomy_id = taxonomies.id
     GROUP BY
-      tags.xml_id`)
+      tags.xml_id
+    ORDER BY
+      tags.name ASC`)
 
   return {
     tags: getObjs(tagsStmt),
+    categories: getObjs(categoriesStmt),
     taxonomies: getObjs(taxonomiesStmt),
   }
+}
+
+function CategoryFilter(props) {
+  const {
+    name,
+    categoryId,
+    tags,
+    categories,
+    toggleTag,
+    onToggleSelected,
+    isSurface,
+    filters,
+  } = props
+
+  const hasDescendentTags = useCallback((catId) => {
+    if (tags?.filter(tag => (tag.parent_category_id === catId))?.length) {
+      return true
+    }
+
+    const subs = categories?.filter(cat => (cat.parent_category_id === catId))
+
+    for (const sub of subs) {
+      if (hasDescendentTags(sub.id)) {
+        return true
+      }
+    }
+
+    return false
+  }, [tags, categories])
+
+  const categoryTags = useMemo(() => {
+    return tags?.filter(tag => (tag.parent_category_id === categoryId))
+  }, [tags, categoryId])
+
+  const subcategories = useMemo(() => {
+    return categories?.filter(cat => (cat.parent_category_id === categoryId))
+  }, [categories, categoryId])
+
+  return hasDescendentTags(categoryId) && (
+    <Accordion>
+      <AccordionSummary
+        expandIcon={<ExpandMoreIcon />}
+        aria-controls={`category-tags-${name}-content`}
+        id={`category-tags-${name}`}
+        className="accordion-summary"
+      >
+        <Typography>{name}</Typography>
+        <Typography>{categoryTags?.length || ''}</Typography>
+      </AccordionSummary>
+      <AccordionDetails
+        className="accordion-detail"
+      >
+        { !!categoryTags?.length && (
+          <ul>
+            { categoryTags?.map(tag => (
+              <FormControlLabel
+                as="li"
+                control={(
+                  <Checkbox
+                    checked={filters.includes(tag.id)}
+                    onChange={() => {
+                      onToggleSelected(tag.id)
+                      if (isSurface) {
+                        toggleTag(tag.xml_id, 'left')
+                        toggleTag(tag.xml_id, 'right')
+                      }
+                    }}
+                  />
+                )}
+                key={tag.id}
+                label={tag.name}
+              />
+            ))}
+          </ul>
+        )}
+        {
+          !!subcategories?.length && (
+            <>
+              {
+                subcategories.map(cat => (
+                  <CategoryFilter
+                    key={cat.id}
+                    name={cat.name}
+                    categoryId={cat.id}
+                    tags={tags}
+                    categories={categories}
+                    toggleTag={toggleTag}
+                    onToggleSelected={onToggleSelected}
+                    isSurface={isSurface}
+                    filters={filters}
+                  />
+                ))
+              }
+            </>
+          )
+        }
+      </AccordionDetails>
+    </Accordion>
+  )
 }
 
 function TagFilters(props) {
   const { onToggleSelected, filters, query } = props
   const data = useMemo(() => getData(props.db), [props.db])
-  console.log(data.taxonomies)
-  const [expanded, setExpanded] = useState(data.taxonomies?.map(() => (false)))
   const [displayedTags, setDisplayedTags] = useState({})
 
   const { toggleTag } = useContext(TagFilterContext)
@@ -45,13 +158,13 @@ function TagFilters(props) {
     const filteredTags = data.tags.filter(tag => (!query || !query.length || tag.name.toLowerCase().includes(query.toLowerCase())))
     for (let i = 0; i < data.taxonomies.length; i++) {
       const tax = data.taxonomies[i]
-      const tagList = expanded[i] ? filteredTags.filter(t => (t.taxonomy_id === tax.id)) : filteredTags.filter(t => (t.taxonomy_id === tax.id))?.slice(0, 5)
+      const tagList = filteredTags.filter(t => t.taxonomy_id === tax.id)
       if (tagList?.length) {
         tags[tax.id] = tagList
       }
     }
     setDisplayedTags(tags)
-  }, [expanded, data, query])
+  }, [data, query])
 
   return (
     <>
@@ -60,49 +173,52 @@ function TagFilters(props) {
           ? (
               <div className="tag-list">
                 <FormGroup>
-                  { data.taxonomies.map((tax, idx) => {
+                  { data.taxonomies.map((tax) => {
                     const tagList = displayedTags[tax.id]
+                    const topLevelTags = tagList?.filter(tag => (!tag.parent_category_id))
                     return (
                       tagList?.length
                         ? (
                             <div key={tax.id}>
                               <Typography>{`${tax.name.slice(0, 1).toUpperCase()}${tax.name.slice(1)}`}</Typography>
-                              <ul>
-                                { tagList?.map(tag => (
-                                  <FormControlLabel
-                                    as="li"
-                                    control={(
-                                      <Checkbox
-                                        checked={filters.includes(tag.id)}
-                                        onChange={() => {
-                                          onToggleSelected(tag.id)
-                                          if (tax.is_surface) {
-                                            toggleTag(tag.xml_id, 'left')
-                                            toggleTag(tag.xml_id, 'right')
-                                          }
-                                        }}
-                                      />
-                                    )}
-                                    key={tag.id}
-                                    label={tag.name}
+                              { !!topLevelTags?.length && (
+                                <ul>
+                                  { topLevelTags?.map(tag => (
+                                    <FormControlLabel
+                                      as="li"
+                                      control={(
+                                        <Checkbox
+                                          checked={filters.includes(tag.id)}
+                                          onChange={() => {
+                                            onToggleSelected(tag.id)
+                                            if (tax.is_surface) {
+                                              toggleTag(tag.xml_id, 'left')
+                                              toggleTag(tag.xml_id, 'right')
+                                            }
+                                          }}
+                                        />
+                                      )}
+                                      key={tag.id}
+                                      label={tag.name}
+                                    />
+                                  ))}
+                                </ul>
+                              )}
+                              {
+                                data.categories?.filter(cat => (cat.taxonomy_id === tax.id && !cat.parent_category_id))?.map(cat => (
+                                  <CategoryFilter
+                                    key={cat.id}
+                                    name={cat.name}
+                                    categoryId={cat.id}
+                                    tags={tagList}
+                                    categories={data.categories}
+                                    toggleTag={toggleTag}
+                                    onToggleSelected={onToggleSelected}
+                                    isSurface={tax.is_surface}
+                                    filters={filters}
                                   />
-                                ))}
-                              </ul>
-                              { data.tags.filter(t => (t.taxonomy_id === tax.id))?.length && data.tags.filter(t => (t.taxonomy_id === tax.id)).length >= 6
-                                ? (
-                                    <button
-                                      className="tag-filter-button"
-                                      type="button"
-                                      onClick={() => {
-                                        const newState = [...expanded]
-                                        newState[idx] = !expanded[idx]
-                                        setExpanded(newState)
-                                      }}
-                                    >
-                                      { expanded[idx] ? 'Show less' : 'Show more'}
-                                    </button>
-                                  )
-                                : null }
+                                ))
+                              }
                             </div>
                           )
                         : null
