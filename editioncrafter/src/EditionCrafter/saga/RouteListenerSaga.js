@@ -55,11 +55,12 @@ function* parseTags(headerUrl) {
 
 function* userNavigation(action) {
   const pathname = action.payload.params[0]
+  const divider = action.payload.params[1] || 'ec'
   const pathSegments = pathname.split('/')
 
   if (pathSegments.length > 1) {
-    switch (pathSegments[1]) {
-      case 'ec':
+    switch (pathSegments.includes(divider)) {
+      case true:
       {
         yield resolveDocumentManifest()
         yield resolveDocumentTags()

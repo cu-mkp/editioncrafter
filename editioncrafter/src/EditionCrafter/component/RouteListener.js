@@ -10,7 +10,7 @@ function RouteListener(props) {
   const { pathname } = useLocation()
 
   const userNavigated = () => {
-    dispatchAction(props, 'RouteListenerSaga.userNavigation', pathname)
+    dispatchAction(props, 'RouteListenerSaga.userNavigation', pathname, props.divider && props.divider.replaceAll('/', ''))
   }
 
   useEffect(() => {
