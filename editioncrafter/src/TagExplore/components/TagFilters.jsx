@@ -204,53 +204,67 @@ function TagFilters(props) {
           ? (
               <div className="tag-list">
                 <FormGroup>
-                  { data.taxonomies.map((tax) => {
+                  { data.taxonomies.sort((a, b) => (a.name.toLowerCase() > b.name.toLowerCase() ? 1 : a.name.toLowerCase() < b.name.toLowerCase() ? -1 : 0)).map((tax) => {
                     const tagList = displayedTags[tax.id]
                     const topLevelTags = tagList?.filter(tag => (!tag.parent_category_id))
                     return (
                       tagList?.length
                         ? (
-                            <div key={tax.id}>
-                              <Typography>{`${tax.name.slice(0, 1).toUpperCase()}${tax.name.slice(1)}`}</Typography>
-                              { !!topLevelTags?.length && (
-                                <ul>
-                                  { topLevelTags?.map(tag => (
-                                    <FormControlLabel
-                                      as="li"
-                                      control={(
-                                        <Checkbox
-                                          checked={filters.includes(tag.id)}
-                                          onChange={() => {
-                                            onToggleSelected(tag.id)
-                                            if (tax.is_surface) {
-                                              toggleTag(tag.xml_id, 'left')
-                                              toggleTag(tag.xml_id, 'right')
-                                            }
-                                          }}
+                            <Accordion>
+                              <AccordionSummary
+                                expandIcon={<ExpandMoreIcon />}
+                                aria-controls={`tags-${tax.name}-content`}
+                                id={`tags-${tax.name}`}
+                                className="accordion-summary"
+                              >
+                                <Typography>{`${tax.name.slice(0, 1).toUpperCase()}${tax.name.slice(1)}`}</Typography>
+                                <Typography>{tagList?.length || ''}</Typography>
+                              </AccordionSummary>
+                              <AccordionDetails
+                                className="accordion-detail"
+                              >
+                                <div key={tax.id}>
+                                  { !!topLevelTags?.length && (
+                                    <ul>
+                                      { topLevelTags?.map(tag => (
+                                        <FormControlLabel
+                                          as="li"
+                                          control={(
+                                            <Checkbox
+                                              checked={filters.includes(tag.id)}
+                                              onChange={() => {
+                                                onToggleSelected(tag.id)
+                                                if (tax.is_surface) {
+                                                  toggleTag(tag.xml_id, 'left')
+                                                  toggleTag(tag.xml_id, 'right')
+                                                }
+                                              }}
+                                            />
+                                          )}
+                                          key={tag.id}
+                                          label={tag.name}
                                         />
-                                      )}
-                                      key={tag.id}
-                                      label={tag.name}
-                                    />
-                                  ))}
-                                </ul>
-                              )}
-                              {
-                                data.categories?.filter(cat => (cat.taxonomy_id === tax.id && !cat.parent_category_id))?.map(cat => (
-                                  <CategoryFilter
-                                    key={cat.id}
-                                    name={cat.name}
-                                    categoryId={cat.id}
-                                    tags={tagList}
-                                    categories={data.categories}
-                                    toggleTag={toggleTag}
-                                    onToggleSelected={onToggleSelected}
-                                    isSurface={tax.is_surface}
-                                    filters={filters}
-                                  />
-                                ))
-                              }
-                            </div>
+                                      ))}
+                                    </ul>
+                                  )}
+                                  {
+                                    data.categories?.filter(cat => (cat.taxonomy_id === tax.id && !cat.parent_category_id))?.map(cat => (
+                                      <CategoryFilter
+                                        key={cat.id}
+                                        name={cat.name}
+                                        categoryId={cat.id}
+                                        tags={tagList}
+                                        categories={data.categories}
+                                        toggleTag={toggleTag}
+                                        onToggleSelected={onToggleSelected}
+                                        isSurface={tax.is_surface}
+                                        filters={filters}
+                                      />
+                                    ))
+                                  }
+                                </div>
+                              </AccordionDetails>
+                            </Accordion>
                           )
                         : null
                     )
