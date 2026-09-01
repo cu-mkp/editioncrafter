@@ -7,13 +7,14 @@ import {
   FaQuestionCircle,
 } from 'react-icons/fa'
 import { GoTag } from 'react-icons/go'
-import { HiOutlineBookOpen } from 'react-icons/hi'
+import { HiOutlineBookOpen, HiOutlineInformationCircle } from 'react-icons/hi'
 import { IoArrowBackCircleOutline, IoArrowForwardCircleOutline, IoLockOpenOutline } from 'react-icons/io5'
 import { connect } from 'react-redux'
 import DocumentPagesIcon from '../icons/DocumentPagesIcon'
 import DocumentHelper from '../model/DocumentHelper'
 import AlphabetLinks from './AlphabetLinks'
 import HelpPopper from './HelpPopper'
+import InfoBar from './InfoBar'
 import JumpToFolio from './JumpToFolio'
 import TagToolbar from './TagToolbar'
 
@@ -77,6 +78,7 @@ function Navigation(props) {
   const [openHelp, setOpenHelp] = useState(false)
   const [openHelpNarrow, setOpenHelpNarrow] = useState(false)
   const [openTags, setOpenTags] = useState(false)
+  const [openMetadata, setOpenMetadata] = useState(false)
 
   const helpRef = useRef(null)
   const helpRefNarrow = useRef(null)
@@ -107,6 +109,8 @@ function Navigation(props) {
   }
 
   const toggleTags = () => setOpenTags(!openTags)
+
+  const toggleMetadata = () => setOpenMetadata(!openMetadata)
 
   const toggleBookmode = () => {
     if (!props.documentView.bookMode) {
@@ -214,6 +218,11 @@ function Navigation(props) {
   const docHasTags = useMemo(
     () => folio?.tagIds && folio.tagIds.length > 0 && document.tags && Object.keys(document.tags).length > 0,
     [folio, document],
+  )
+
+  const docHasMetadata = useMemo(
+    () => folio?.metadata && Object.keys(folio?.metadata)?.length > 0,
+    [folio],
   )
 
   if (!documentView) {
@@ -333,6 +342,13 @@ function Navigation(props) {
                       icon={GoTag}
                     />
                   )}
+                  {(docHasMetadata || true) && (
+                    <ToggleButton
+                      active={openMetadata}
+                      onClick={toggleMetadata}
+                      icon={HiOutlineInformationCircle}
+                    />
+                  )}
                   <button
                     title="Toggle folio help"
                     className={`toggle-button ${openHelp ? 'active' : ''}`}
@@ -368,6 +384,12 @@ function Navigation(props) {
           folio={folio}
           toggleTags={toggleTags}
           side={side}
+        />
+      )}
+      {openMetadata && (
+        <InfoBar
+          data={folio?.metadata}
+          toggleMetadata={toggleMetadata}
         />
       )}
       <div className="navigationComponentNarrow">
