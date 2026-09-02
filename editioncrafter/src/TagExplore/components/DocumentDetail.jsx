@@ -1,6 +1,6 @@
 import { Accordion, AccordionDetails, AccordionSummary, Grid, Typography } from '@material-ui/core'
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
-import { useEffect, useMemo } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { getObjs } from '../../common/lib/sql'
 import InsertLeft from '../assets/InsertLeft'
 import InsertRight from '../assets/InsertRight'
@@ -117,6 +117,8 @@ function Thumbnail(props) {
           <img
             src={thumbnailURL}
             alt={name}
+            loading="lazy"
+            decoding="async"
             style={{ maxWidth: `${MAX_THUMBNAIL_DIMENSION}px`, maxHeight: `${MAX_THUMBNAIL_DIMENSION}px` }}
             onError={onError}
           />
@@ -180,6 +182,9 @@ function ThumbnailGrid(props) {
 
 function DocumentDetail(props) {
   const { db, documentName, documentID, documentLocalID, navigateToSelection, updatePageCount, selection, tags } = props
+  const [expanded, setExpanded] = useState(false)
+  const [hasOpened, setHasOpened] = useState(false)
+
   const surfaces = useMemo(() => {
     const taggedSurfaces = getData(db, documentID, tags)
     const data = []
@@ -199,9 +204,16 @@ function DocumentDetail(props) {
     updatePageCount(surfaces?.length)
   }, [surfaces, updatePageCount, tags])
 
+  const handleChange = (event, isExpanded) => {
+    setExpanded(isExpanded)
+    if (isExpanded) {
+      setHasOpened(true)
+    }
+  }
+
   return ((!tags.length || surfaces.length)
     ? (
-        <Accordion>
+        <Accordion expanded={expanded} onChange={handleChange}>
           <AccordionSummary
             expandIcon={<ExpandMoreIcon />}
             aria-controls={`document-detail-${documentID}-content`}
@@ -214,13 +226,21 @@ function DocumentDetail(props) {
           <AccordionDetails
             className="accordion-detail"
           >
-            <ThumbnailGrid
-              navigateToSelection={navigateToSelection}
-              documentLocalID={documentLocalID}
-              surfaces={surfaces}
-              selection={selection}
-            >
-            </ThumbnailGrid>
+            {/* Thumbnails are only rendered (and their images fetched) once a
+                document has actually been expanded, since Accordion mounts
+                AccordionDetails eagerly regardless of collapsed state. Without
+                this, every document's thumbnails load on initial page render. */}
+            {hasOpened
+              ? (
+                  <ThumbnailGrid
+                    navigateToSelection={navigateToSelection}
+                    documentLocalID={documentLocalID}
+                    surfaces={surfaces}
+                    selection={selection}
+                  >
+                  </ThumbnailGrid>
+                )
+              : null}
           </AccordionDetails>
         </Accordion>
       )
