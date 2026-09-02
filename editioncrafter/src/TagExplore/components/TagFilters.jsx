@@ -47,6 +47,25 @@ function getData(db) {
   }
 }
 
+function getTagDocumentCount(tag, documents, db) {
+  const docsStmt = db.prepare(`
+    SELECT
+      count(1) as count
+    FROM
+      document_taggings
+    WHERE
+      tag=${tag}${documents?.length ? ` AND document IN (${documents.join(',')})` : ''}
+    `)
+
+  try {
+    const count = getObjs(docsStmt)[0]?.count
+    return count
+  }
+  catch {
+    return 1
+  }
+}
+
 function CategoryFilter(props) {
   const {
     name,
@@ -75,6 +94,18 @@ function CategoryFilter(props) {
     return false
   }, [tags, categories])
 
+  const countDescendentTags = useCallback((catId) => {
+    let count = tags?.filter(tag => (tag.parent_category_id === catId))?.length
+
+    const subs = categories?.filter(cat => (cat.parent_category_id === catId))
+
+    for (const sub of subs) {
+      count = count + countDescendentTags(sub.id)
+    }
+
+    return count
+  }, [tags, categories])
+
   const categoryTags = useMemo(() => {
     return tags?.filter(tag => (tag.parent_category_id === categoryId))
   }, [tags, categoryId])
@@ -92,7 +123,7 @@ function CategoryFilter(props) {
         className="accordion-summary"
       >
         <Typography>{name}</Typography>
-        <Typography>{categoryTags?.length || ''}</Typography>
+        <Typography>{countDescendentTags(categoryId) || ''}</Typography>
       </AccordionSummary>
       <AccordionDetails
         className="accordion-detail"
@@ -115,7 +146,7 @@ function CategoryFilter(props) {
                   />
                 )}
                 key={tag.id}
-                label={tag.name}
+                label={`${tag.name} (${tag.count})`}
               />
             ))}
           </ul>
@@ -147,7 +178,7 @@ function CategoryFilter(props) {
 }
 
 function TagFilters(props) {
-  const { onToggleSelected, filters, query } = props
+  const { onToggleSelected, filters, query, documents } = props
   const data = useMemo(() => getData(props.db), [props.db])
   const [displayedTags, setDisplayedTags] = useState({})
 
@@ -155,7 +186,11 @@ function TagFilters(props) {
 
   useEffect(() => {
     const tags = {}
-    const filteredTags = data.tags.filter(tag => (!query || !query.length || tag.name.toLowerCase().includes(query.toLowerCase())))
+    const filteredTags = data.tags.map(
+      tag => ({ ...tag, count: getTagDocumentCount(tag.id, documents, props.db) }),
+    ).filter(
+      tag => (tag.count && (!query || !query.length || tag.name.toLowerCase().includes(query.toLowerCase()))),
+    )
     for (let i = 0; i < data.taxonomies.length; i++) {
       const tax = data.taxonomies[i]
       const tagList = filteredTags.filter(t => t.taxonomy_id === tax.id)
@@ -164,7 +199,7 @@ function TagFilters(props) {
       }
     }
     setDisplayedTags(tags)
-  }, [data, query])
+  }, [data, query, documents, props.db])
 
   return (
     <>
@@ -173,53 +208,67 @@ function TagFilters(props) {
           ? (
               <div className="tag-list">
                 <FormGroup>
-                  { data.taxonomies.map((tax) => {
+                  { data.taxonomies.sort((a, b) => (a.name.toLowerCase() > b.name.toLowerCase() ? 1 : a.name.toLowerCase() < b.name.toLowerCase() ? -1 : 0)).map((tax) => {
                     const tagList = displayedTags[tax.id]
                     const topLevelTags = tagList?.filter(tag => (!tag.parent_category_id))
                     return (
                       tagList?.length
                         ? (
-                            <div key={tax.id}>
-                              <Typography>{`${tax.name.slice(0, 1).toUpperCase()}${tax.name.slice(1)}`}</Typography>
-                              { !!topLevelTags?.length && (
-                                <ul>
-                                  { topLevelTags?.map(tag => (
-                                    <FormControlLabel
-                                      as="li"
-                                      control={(
-                                        <Checkbox
-                                          checked={filters.includes(tag.id)}
-                                          onChange={() => {
-                                            onToggleSelected(tag.id)
-                                            if (tax.is_surface) {
-                                              toggleTag(tag.xml_id, 'left')
-                                              toggleTag(tag.xml_id, 'right')
-                                            }
-                                          }}
+                            <Accordion>
+                              <AccordionSummary
+                                expandIcon={<ExpandMoreIcon />}
+                                aria-controls={`tags-${tax.name}-content`}
+                                id={`tags-${tax.name}`}
+                                className="accordion-summary"
+                              >
+                                <Typography>{`${tax.name.slice(0, 1).toUpperCase()}${tax.name.slice(1)}`}</Typography>
+                                <Typography>{tagList?.length || ''}</Typography>
+                              </AccordionSummary>
+                              <AccordionDetails
+                                className="accordion-detail"
+                              >
+                                <div key={tax.id}>
+                                  { !!topLevelTags?.length && (
+                                    <ul>
+                                      { topLevelTags?.map(tag => (
+                                        <FormControlLabel
+                                          as="li"
+                                          control={(
+                                            <Checkbox
+                                              checked={filters.includes(tag.id)}
+                                              onChange={() => {
+                                                onToggleSelected(tag.id)
+                                                if (tax.is_surface) {
+                                                  toggleTag(tag.xml_id, 'left')
+                                                  toggleTag(tag.xml_id, 'right')
+                                                }
+                                              }}
+                                            />
+                                          )}
+                                          key={tag.id}
+                                          label={`${tag.name} (${tag.count})`}
                                         />
-                                      )}
-                                      key={tag.id}
-                                      label={tag.name}
-                                    />
-                                  ))}
-                                </ul>
-                              )}
-                              {
-                                data.categories?.filter(cat => (cat.taxonomy_id === tax.id && !cat.parent_category_id))?.map(cat => (
-                                  <CategoryFilter
-                                    key={cat.id}
-                                    name={cat.name}
-                                    categoryId={cat.id}
-                                    tags={tagList}
-                                    categories={data.categories}
-                                    toggleTag={toggleTag}
-                                    onToggleSelected={onToggleSelected}
-                                    isSurface={tax.is_surface}
-                                    filters={filters}
-                                  />
-                                ))
-                              }
-                            </div>
+                                      ))}
+                                    </ul>
+                                  )}
+                                  {
+                                    data.categories?.filter(cat => (cat.taxonomy_id === tax.id && !cat.parent_category_id))?.map(cat => (
+                                      <CategoryFilter
+                                        key={cat.id}
+                                        name={cat.name}
+                                        categoryId={cat.id}
+                                        tags={tagList}
+                                        categories={data.categories}
+                                        toggleTag={toggleTag}
+                                        onToggleSelected={onToggleSelected}
+                                        isSurface={tax.is_surface}
+                                        filters={filters}
+                                      />
+                                    ))
+                                  }
+                                </div>
+                              </AccordionDetails>
+                            </Accordion>
                           )
                         : null
                     )

@@ -188,11 +188,6 @@ function ImageView(props) {
                 initViewer={initViewer}
                 loading={folio.loading}
               />
-              {
-                folio.metadata && (
-                  <ImageMetadata data={folio.metadata} />
-                )
-              }
             </div>
           )
         : (

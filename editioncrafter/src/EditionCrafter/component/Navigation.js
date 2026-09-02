@@ -1,19 +1,20 @@
 import MenuItem from '@material-ui/core/MenuItem'
 import Select from '@material-ui/core/Select'
-import React, { useMemo, useRef, useState } from 'react'
+import React, { useEffect, useMemo, useRef, useState } from 'react'
 import { BsFillGrid3X3GapFill } from 'react-icons/bs'
 import {
   FaCode,
   FaQuestionCircle,
 } from 'react-icons/fa'
 import { GoTag } from 'react-icons/go'
-import { HiOutlineBookOpen } from 'react-icons/hi'
+import { HiOutlineBookOpen, HiOutlineInformationCircle } from 'react-icons/hi'
 import { IoArrowBackCircleOutline, IoArrowForwardCircleOutline, IoLockOpenOutline } from 'react-icons/io5'
 import { connect } from 'react-redux'
 import DocumentPagesIcon from '../icons/DocumentPagesIcon'
 import DocumentHelper from '../model/DocumentHelper'
 import AlphabetLinks from './AlphabetLinks'
 import HelpPopper from './HelpPopper'
+import InfoBar from './InfoBar'
 import JumpToFolio from './JumpToFolio'
 import TagToolbar from './TagToolbar'
 
@@ -64,7 +65,7 @@ function ToggleButton(props) {
     <button
       className={`toggle-button ${props.active ? 'active' : ''}`}
       onClick={props.onClick}
-      title="Toggle XML Mode"
+      title={props.title || 'Toggle XML Mode'}
       type="button"
     >
       <props.icon />
@@ -77,9 +78,34 @@ function Navigation(props) {
   const [openHelp, setOpenHelp] = useState(false)
   const [openHelpNarrow, setOpenHelpNarrow] = useState(false)
   const [openTags, setOpenTags] = useState(false)
+  const [openMetadata, setOpenMetadata] = useState(false)
 
   const helpRef = useRef(null)
   const helpRefNarrow = useRef(null)
+  const containerRef = useRef(null)
+  const menuRef = useRef(null)
+
+  useEffect(() => {
+    const container = containerRef.current
+    const menu = menuRef.current
+    if (!container || !menu) {
+      return
+    }
+
+    const resizeObserver = new ResizeObserver(() => {
+      // Remove the overflow class so the width can be read accurately
+      container.classList.remove('overflow')
+      const overflow = menu.scrollWidth > container.clientWidth
+
+      if (overflow) {
+        container.classList.add('overflow')
+      }
+    })
+
+    resizeObserver.observe(container)
+
+    return () => resizeObserver.disconnect()
+  }, [])
 
   const onJumpBoxBlur = () => {
     setPopover({ anchorEl: null })
@@ -107,6 +133,8 @@ function Navigation(props) {
   }
 
   const toggleTags = () => setOpenTags(!openTags)
+
+  const toggleMetadata = () => setOpenMetadata(!openMetadata)
 
   const toggleBookmode = () => {
     if (!props.documentView.bookMode) {
@@ -216,6 +244,11 @@ function Navigation(props) {
     [folio, document],
   )
 
+  const docHasMetadata = useMemo(
+    () => folio?.metadata && Object.keys(folio?.metadata)?.length > 0,
+    [folio],
+  )
+
   if (!documentView) {
     return (
       <div>
@@ -226,12 +259,12 @@ function Navigation(props) {
 
   return (
     <div>
-      <div className="navigationComponent">
+      <div className="navigationComponent" ref={containerRef}>
 
         { documentView[side].transcriptionType !== 'glossary'
           ? (
 
-              <div id="tool-bar-buttons" className="breadcrumbs" style={showButtonsStyle}>
+              <div id="tool-bar-buttons" className="breadcrumbs" style={showButtonsStyle} ref={menuRef}>
 
                 <div className="toolbar-side toolbar-left">
                   <GridViewButton
@@ -331,6 +364,15 @@ function Navigation(props) {
                       active={openTags}
                       onClick={toggleTags}
                       icon={GoTag}
+                      title="Toggle Tag Viewer"
+                    />
+                  )}
+                  {(docHasMetadata || true) && (
+                    <ToggleButton
+                      active={openMetadata}
+                      onClick={toggleMetadata}
+                      icon={HiOutlineInformationCircle}
+                      title="Toggle Document Info"
                     />
                   )}
                   <button
@@ -368,6 +410,12 @@ function Navigation(props) {
           folio={folio}
           toggleTags={toggleTags}
           side={side}
+        />
+      )}
+      {openMetadata && (
+        <InfoBar
+          data={folio?.metadata}
+          toggleMetadata={toggleMetadata}
         />
       )}
       <div className="navigationComponentNarrow">
