@@ -7,11 +7,11 @@ DocumentActions.loadDocument = function loadDocument(state, manifestData) {
   const newFolios = parseManifest(manifestData, state.transcriptionTypes)
   const { folioIndex: newFolioIndex, folioByName: newFolioByName } = createFolioIndex(newFolios)
 
-  // In variorum mode this is called incrementally, once per document as its
+  // In tag explorer mode this is called incrementally, once per document as its
   // folios are actually needed, so merge rather than replace. For a
   // single-document edition this is still only ever called once.
   const loadedManifestKeys = { ...state.loadedManifestKeys }
-  if (manifestData.type === 'variorum') {
+  if (state.tagExplorerMode) {
     Object.keys(manifestData.documentData).forEach((key) => {
       loadedManifestKeys[key] = true
     })

@@ -53,7 +53,7 @@ function* parseTags(headerUrl) {
   }
 }
 
-// A folio id is "{documentLocalID}_{surfaceID}" in variorum mode (see
+// A folio id is "{documentLocalID}_{surfaceID}" in tag explorer mode (see
 // SurfaceBrowser's parseFolioID, which this mirrors). Used to figure out
 // which document(s) a route actually needs data for.
 function parseFolioDocKey(folioID) {
@@ -65,7 +65,7 @@ function* getNeededDocumentKeys(pathSegments) {
   const document = yield select(justDocument)
   const keys = new Set()
 
-  if (!document.variorum) {
+  if (!document.tagExplorerMode) {
     return keys
   }
 
@@ -129,7 +129,8 @@ function* resolveDocumentTags(neededKeys) {
 function* resolveDocumentManifest(neededKeys) {
   const document = yield select(justDocument)
 
-  if (document.variorum) {
+  if (document.tagExplorerMode) {
+    // Treating this case separately because we load the manifest data incrementally as needed
     const loadedManifestKeys = document.loadedManifestKeys || {}
     const keysToFetch = [...neededKeys].filter(key => document.manifestURL[key] && !loadedManifestKeys[key])
 
@@ -151,6 +152,20 @@ function* resolveDocumentManifest(neededKeys) {
   }
 
   if (!document.loaded) {
+    // This applies in the case that we have a variorum manifest not using the tag explorer
+    if (document.variorum) {
+      const variorumData = {}
+      for (const key of Object.keys(document.manifestURL)) {
+        const response = yield fetch(document.manifestURL[key])
+        variorumData[key] = yield response.json()
+      }
+      const variorumManifest = {
+        type: 'variorum',
+        documentData: variorumData,
+      }
+      yield putResolveAction('DocumentActions.loadDocument', variorumManifest)
+      return variorumManifest
+    }
     const singleResponse = yield fetch(document.manifestURL)
     const json = yield singleResponse.json()
     yield putResolveAction('DocumentActions.loadDocument', json)
