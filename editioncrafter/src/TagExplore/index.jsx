@@ -2,7 +2,8 @@ import { useEffect, useState } from 'react'
 import { HashRouter } from 'react-router-dom'
 import initSqlJs from 'sql.js'
 import sqlJsInfo from 'sql.js/package.json'
-import Loading from '../common/components/Loading'
+import LoadingSplash from '../common/components/LoadingSplash'
+import { fetchCachedAsset } from '../common/lib/assetCache'
 import { getObjs } from '../common/lib/sql'
 import EditionCrafter from '../EditionCrafter'
 import TagFilterProvider from '../EditionCrafter/context/TagFilter'
@@ -14,24 +15,20 @@ const initialFilters = {
   tags: [],
 }
 
-async function initDb(url) {
-  const file = await fetch(url)
+const SQL_WASM_URL = `https://cdnjs.cloudflare.com/ajax/libs/sql.js/${sqlJsInfo.version}/sql-wasm.wasm`
 
-  if (!file.ok) {
-    throw new Error('Failed fetching SQLite file.')
-  }
+async function initDb(url, onProgress) {
+  const [dbBuffer, wasmBinary] = await Promise.all([
+    fetchCachedAsset(url, {
+      onProgress: (loaded, total) => onProgress?.('db', loaded, total),
+    }),
+    fetchCachedAsset(SQL_WASM_URL, {
+      onProgress: (loaded, total) => onProgress?.('wasm', loaded, total),
+    }),
+  ])
 
-  const buf = await file.arrayBuffer()
-  const arr = new Uint8Array(buf)
-
-  const db = await initSqlJs({
-    locateFile: file => `https://cdnjs.cloudflare.com/ajax/libs/sql.js/${sqlJsInfo.version}/${file}`,
-  }).then((SQL) => {
-    const db = new SQL.Database(arr)
-    return db
-  })
-
-  return db
+  const SQL = await initSqlJs({ wasmBinary })
+  return new SQL.Database(new Uint8Array(dbBuffer))
 }
 
 function getData(db) {
@@ -70,10 +67,16 @@ function TagExplore(props) {
   const [db, setDb] = useState(null)
   const [ecProps, setECProps] = useState(null)
   const [filters, setFilters] = useState(initialFilters)
+  const [progress, setProgress] = useState({
+    db: { loaded: 0, total: 0 },
+    wasm: { loaded: 0, total: 0 },
+  })
 
   useEffect(() => {
     const loadDb = async () => {
-      const db = await initDb(props.dbUrl)
+      const db = await initDb(props.dbUrl, (key, loaded, total) => {
+        setProgress(current => ({ ...current, [key]: { loaded, total } }))
+      })
       const ecProps = generateECProps(props, db)
       setDb(db)
       setECProps(ecProps)
@@ -91,7 +94,11 @@ function TagExplore(props) {
   }, [props.dbUrl, db])
 
   if (!db || !ecProps) {
-    return <Loading />
+    const totalLoaded = progress.db.loaded + progress.wasm.loaded
+    const totalSize = progress.db.total + progress.wasm.total
+    const percent = totalSize > 0 ? (totalLoaded / totalSize) * 100 : null
+
+    return <LoadingSplash label="Loading edition…" percent={percent} />
   }
 
   return (
