@@ -146,7 +146,7 @@ function CategoryFilter(props) {
                   />
                 )}
                 key={tag.id}
-                label={tag.name}
+                label={`${tag.name} (${tag.count})`}
               />
             ))}
           </ul>
@@ -186,7 +186,11 @@ function TagFilters(props) {
 
   useEffect(() => {
     const tags = {}
-    const filteredTags = data.tags.filter(tag => (getTagDocumentCount(tag.id, documents, props.db) && (!query || !query.length || tag.name.toLowerCase().includes(query.toLowerCase()))))
+    const filteredTags = data.tags.map(
+      tag => ({ ...tag, count: getTagDocumentCount(tag.id, documents, props.db) }),
+    ).filter(
+      tag => (tag.count && (!query || !query.length || tag.name.toLowerCase().includes(query.toLowerCase()))),
+    )
     for (let i = 0; i < data.taxonomies.length; i++) {
       const tax = data.taxonomies[i]
       const tagList = filteredTags.filter(t => t.taxonomy_id === tax.id)
@@ -242,7 +246,7 @@ function TagFilters(props) {
                                             />
                                           )}
                                           key={tag.id}
-                                          label={tag.name}
+                                          label={`${tag.name} (${tag.count})`}
                                         />
                                       ))}
                                     </ul>
