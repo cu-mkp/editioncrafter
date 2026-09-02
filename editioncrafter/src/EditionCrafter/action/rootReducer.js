@@ -17,6 +17,7 @@ export default function rootReducer(config) {
     glossaryURL,
     notesURL,
     threePanel = false,
+    tagExplorerMode = false,
   } = config
   const variorum = documentInfo && Object.keys(documentInfo).length > 1
   const transcriptionTypesInfo = {}
@@ -40,7 +41,7 @@ export default function rootReducer(config) {
   const derivativeNames = variorum && derivativesInfo
   return combineReducers({
     diplomatic: createReducer('DiplomaticActions', DiplomaticActions, diplomaticInitialState),
-    document: createReducer('DocumentActions', DocumentActions, documentInitialState(iiifManifest, documentName, transcriptionTypes, variorum, derivativeNames, threePanel)),
+    document: createReducer('DocumentActions', DocumentActions, documentInitialState(iiifManifest, documentName, transcriptionTypes, variorum, derivativeNames, threePanel, tagExplorerMode)),
     glossary: createReducer('GlossaryActions', GlossaryActions, glossaryInitialState(glossaryURL)),
     notes: createReducer('NotesActions', NotesActions, notesInitialState(notesURL)),
   })

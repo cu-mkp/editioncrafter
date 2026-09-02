@@ -17,7 +17,7 @@ function getHeaderUrlsFromManifestUrls(data) {
   return result
 }
 
-export default function documentInitalState(iiifManifest, documentName, transcriptionTypes, variorum = false, derivativeNames = null, threePanel = false) {
+export default function documentInitalState(iiifManifest, documentName, transcriptionTypes, variorum = false, derivativeNames = null, threePanel = false, tagExplorerMode = false) {
   return {
     documentName,
     derivativeNames,
@@ -27,9 +27,17 @@ export default function documentInitalState(iiifManifest, documentName, transcri
     variorum,
     threePanel,
     folios: [],
-    loaded: false,
+    // When using the Tag Explorer view, we don't
+    // have a single upfront manifest fetch to wait on -- an unselected pane
+    // just shows an empty-state placeholder, and each document's manifest
+    // is fetched lazily once a folio from it is actually selected. A
+    // single-document edition still needs its one manifest before it has
+    // anything to show.
+    loaded: tagExplorerMode,
+    loadedManifestKeys: {},
     folioIndex: {},
     folioByName: {},
-    tags: null,
+    tagExplorerMode,
+    tags: tagExplorerMode ? {} : null,
   }
 }
