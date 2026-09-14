@@ -32,6 +32,10 @@
                   cursor: pointer;
             }
       }
+
+      .navigationComponent.overflow {
+            height: 100px;
+      }
       
       .navigationComponentNarrow {
             display: flex;
@@ -126,6 +130,10 @@
             @include md {
                   display: flex;
             }
+      }
+
+      .navigationComponent.overflow .breadcrumbs {
+            flex-direction: column;
       }
 
       .breadcrumbs .vertical-separator {
@@ -459,6 +467,14 @@
       
       .helpHeader{
             text-align:center;
+      }
+
+      .info-bar-text {
+            display: flex;
+            flex-direction: row;
+            gap: 16px;
+            flex-wrap: wrap;
+            padding: 4px 6px;
       }
 
 }      

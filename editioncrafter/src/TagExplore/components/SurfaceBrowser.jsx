@@ -210,6 +210,7 @@ function SurfaceBrowser(props) {
               db={db}
               filters={tags}
               query={query}
+              documents={filteredDocs?.map(doc => (doc.id))}
               onToggleSelected={(tagId) => {
                 if (tags.includes(tagId)) {
                   setTags(current => (current.filter(t => (t !== tagId))))
