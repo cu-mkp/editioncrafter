@@ -131,7 +131,7 @@ function* resolveFolio(pathSegments) {
       folioIDs.push(thirdID)
 
     for (const folioID of folioIDs) {
-      const folioData = document.folioIndex[folioID]
+      const folioData = document.folioIndex[folioID] || document.folioIndex[decodeURI(folioID)]
       if (folioData && !folioData.loading) {
         // wait for folio to load and then advance state
         const folio = yield loadFolio(folioData)
