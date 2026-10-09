@@ -3,20 +3,20 @@
 		"http://www.w3.org/ns/anno.jsonld",
 		"http://iiif.io/api/presentation/3/context.json"
 	],
-	"id": "/passio_verbigenae_tagged/iiif/manifest.json",
+	"id": "/editioncrafter/passio_verbigenae_tagged/iiif/manifest.json",
 	"type": "Manifest",
 	"items": [
 		{
-			"id": "/passio_verbigenae_tagged/iiif/canvas/f000",
+			"id": "/editioncrafter/passio_verbigenae_tagged/iiif/canvas/f000",
 			"type": "Canvas",
 			"items": [
 				{
-					"id": "/passio_verbigenae_tagged/iiif/canvas/f000/annotationpage/0",
+					"id": "/editioncrafter/passio_verbigenae_tagged/iiif/canvas/f000/annotationpage/0",
 					"type": "AnnotationPage",
 					"items": [
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "/passio_verbigenae_tagged/iiif/canvas/f000/annotationpage/0/annotation/0",
+							"id": "/editioncrafter/passio_verbigenae_tagged/iiif/canvas/f000/annotationpage/0/annotation/0",
 							"type": "Annotation",
 							"motivation": "painting",
 							"body": {
@@ -33,7 +33,7 @@
 									}
 								]
 							},
-							"target": "/passio_verbigenae_tagged/iiif/canvas/f000"
+							"target": "/editioncrafter/passio_verbigenae_tagged/iiif/canvas/f000"
 						}
 					]
 				}
@@ -1410,76 +1410,76 @@
 					}
 				},
 				{
-					"id": "/passio_verbigenae_tagged/iiif/canvas/f000/annotationPage/1",
+					"id": "/editioncrafter/passio_verbigenae_tagged/iiif/canvas/f000/annotationPage/1",
 					"type": "AnnotationPage",
 					"items": [
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "/passio_verbigenae_tagged/iiif/canvas/f000/annotationPage/1/annotation/0",
+							"id": "/editioncrafter/passio_verbigenae_tagged/iiif/canvas/f000/annotationPage/1/annotation/0",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "/passio_verbigenae_tagged/tei/text-1/f000.xml",
+								"id": "/editioncrafter/passio_verbigenae_tagged/tei/text-1/f000.xml",
 								"format": "text/xml",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "/passio_verbigenae_tagged/iiif/canvas/f000"
+							"target": "/editioncrafter/passio_verbigenae_tagged/iiif/canvas/f000"
 						},
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "/passio_verbigenae_tagged/iiif/canvas/f000/annotationPage/1/annotation/1",
+							"id": "/editioncrafter/passio_verbigenae_tagged/iiif/canvas/f000/annotationPage/1/annotation/1",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "/passio_verbigenae_tagged/tei/text-2/f000.xml",
+								"id": "/editioncrafter/passio_verbigenae_tagged/tei/text-2/f000.xml",
 								"format": "text/xml",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "/passio_verbigenae_tagged/iiif/canvas/f000"
+							"target": "/editioncrafter/passio_verbigenae_tagged/iiif/canvas/f000"
 						},
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "/passio_verbigenae_tagged/iiif/canvas/f000/annotationPage/1/annotation/2",
+							"id": "/editioncrafter/passio_verbigenae_tagged/iiif/canvas/f000/annotationPage/1/annotation/2",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "/passio_verbigenae_tagged/html/text-1/f000.html",
+								"id": "/editioncrafter/passio_verbigenae_tagged/html/text-1/f000.html",
 								"format": "text/html",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "/passio_verbigenae_tagged/iiif/canvas/f000"
+							"target": "/editioncrafter/passio_verbigenae_tagged/iiif/canvas/f000"
 						},
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "/passio_verbigenae_tagged/iiif/canvas/f000/annotationPage/1/annotation/3",
+							"id": "/editioncrafter/passio_verbigenae_tagged/iiif/canvas/f000/annotationPage/1/annotation/3",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "/passio_verbigenae_tagged/html/text-2/f000.html",
+								"id": "/editioncrafter/passio_verbigenae_tagged/html/text-2/f000.html",
 								"format": "text/html",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "/passio_verbigenae_tagged/iiif/canvas/f000"
+							"target": "/editioncrafter/passio_verbigenae_tagged/iiif/canvas/f000"
 						}
 					]
 				}
 			]
 		},
 		{
-			"id": "/passio_verbigenae_tagged/iiif/canvas/f001",
+			"id": "/editioncrafter/passio_verbigenae_tagged/iiif/canvas/f001",
 			"type": "Canvas",
 			"items": [
 				{
-					"id": "/passio_verbigenae_tagged/iiif/canvas/f001/annotationpage/0",
+					"id": "/editioncrafter/passio_verbigenae_tagged/iiif/canvas/f001/annotationpage/0",
 					"type": "AnnotationPage",
 					"items": [
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "/passio_verbigenae_tagged/iiif/canvas/f001/annotationpage/0/annotation/0",
+							"id": "/editioncrafter/passio_verbigenae_tagged/iiif/canvas/f001/annotationpage/0/annotation/0",
 							"type": "Annotation",
 							"motivation": "painting",
 							"body": {
@@ -1496,7 +1496,7 @@
 									}
 								]
 							},
-							"target": "/passio_verbigenae_tagged/iiif/canvas/f001"
+							"target": "/editioncrafter/passio_verbigenae_tagged/iiif/canvas/f001"
 						}
 					]
 				}
@@ -3156,16 +3156,16 @@
 			]
 		},
 		{
-			"id": "/passio_verbigenae_tagged/iiif/canvas/f002",
+			"id": "/editioncrafter/passio_verbigenae_tagged/iiif/canvas/f002",
 			"type": "Canvas",
 			"items": [
 				{
-					"id": "/passio_verbigenae_tagged/iiif/canvas/f002/annotationpage/0",
+					"id": "/editioncrafter/passio_verbigenae_tagged/iiif/canvas/f002/annotationpage/0",
 					"type": "AnnotationPage",
 					"items": [
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "/passio_verbigenae_tagged/iiif/canvas/f002/annotationpage/0/annotation/0",
+							"id": "/editioncrafter/passio_verbigenae_tagged/iiif/canvas/f002/annotationpage/0/annotation/0",
 							"type": "Annotation",
 							"motivation": "painting",
 							"body": {
@@ -3182,7 +3182,7 @@
 									}
 								]
 							},
-							"target": "/passio_verbigenae_tagged/iiif/canvas/f002"
+							"target": "/editioncrafter/passio_verbigenae_tagged/iiif/canvas/f002"
 						}
 					]
 				}
@@ -4182,16 +4182,16 @@
 			]
 		},
 		{
-			"id": "/passio_verbigenae_tagged/iiif/canvas/f003",
+			"id": "/editioncrafter/passio_verbigenae_tagged/iiif/canvas/f003",
 			"type": "Canvas",
 			"items": [
 				{
-					"id": "/passio_verbigenae_tagged/iiif/canvas/f003/annotationpage/0",
+					"id": "/editioncrafter/passio_verbigenae_tagged/iiif/canvas/f003/annotationpage/0",
 					"type": "AnnotationPage",
 					"items": [
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "/passio_verbigenae_tagged/iiif/canvas/f003/annotationpage/0/annotation/0",
+							"id": "/editioncrafter/passio_verbigenae_tagged/iiif/canvas/f003/annotationpage/0/annotation/0",
 							"type": "Annotation",
 							"motivation": "painting",
 							"body": {
@@ -4208,7 +4208,7 @@
 									}
 								]
 							},
-							"target": "/passio_verbigenae_tagged/iiif/canvas/f003"
+							"target": "/editioncrafter/passio_verbigenae_tagged/iiif/canvas/f003"
 						}
 					]
 				}
@@ -5662,16 +5662,16 @@
 			]
 		},
 		{
-			"id": "/passio_verbigenae_tagged/iiif/canvas/f004",
+			"id": "/editioncrafter/passio_verbigenae_tagged/iiif/canvas/f004",
 			"type": "Canvas",
 			"items": [
 				{
-					"id": "/passio_verbigenae_tagged/iiif/canvas/f004/annotationpage/0",
+					"id": "/editioncrafter/passio_verbigenae_tagged/iiif/canvas/f004/annotationpage/0",
 					"type": "AnnotationPage",
 					"items": [
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "/passio_verbigenae_tagged/iiif/canvas/f004/annotationpage/0/annotation/0",
+							"id": "/editioncrafter/passio_verbigenae_tagged/iiif/canvas/f004/annotationpage/0/annotation/0",
 							"type": "Annotation",
 							"motivation": "painting",
 							"body": {
@@ -5688,7 +5688,7 @@
 									}
 								]
 							},
-							"target": "/passio_verbigenae_tagged/iiif/canvas/f004"
+							"target": "/editioncrafter/passio_verbigenae_tagged/iiif/canvas/f004"
 						}
 					]
 				}
@@ -7202,16 +7202,16 @@
 			]
 		},
 		{
-			"id": "/passio_verbigenae_tagged/iiif/canvas/f005",
+			"id": "/editioncrafter/passio_verbigenae_tagged/iiif/canvas/f005",
 			"type": "Canvas",
 			"items": [
 				{
-					"id": "/passio_verbigenae_tagged/iiif/canvas/f005/annotationpage/0",
+					"id": "/editioncrafter/passio_verbigenae_tagged/iiif/canvas/f005/annotationpage/0",
 					"type": "AnnotationPage",
 					"items": [
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "/passio_verbigenae_tagged/iiif/canvas/f005/annotationpage/0/annotation/0",
+							"id": "/editioncrafter/passio_verbigenae_tagged/iiif/canvas/f005/annotationpage/0/annotation/0",
 							"type": "Annotation",
 							"motivation": "painting",
 							"body": {
@@ -7228,7 +7228,7 @@
 									}
 								]
 							},
-							"target": "/passio_verbigenae_tagged/iiif/canvas/f005"
+							"target": "/editioncrafter/passio_verbigenae_tagged/iiif/canvas/f005"
 						}
 					]
 				}
@@ -8247,16 +8247,16 @@
 			]
 		},
 		{
-			"id": "/passio_verbigenae_tagged/iiif/canvas/f006",
+			"id": "/editioncrafter/passio_verbigenae_tagged/iiif/canvas/f006",
 			"type": "Canvas",
 			"items": [
 				{
-					"id": "/passio_verbigenae_tagged/iiif/canvas/f006/annotationpage/0",
+					"id": "/editioncrafter/passio_verbigenae_tagged/iiif/canvas/f006/annotationpage/0",
 					"type": "AnnotationPage",
 					"items": [
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "/passio_verbigenae_tagged/iiif/canvas/f006/annotationpage/0/annotation/0",
+							"id": "/editioncrafter/passio_verbigenae_tagged/iiif/canvas/f006/annotationpage/0/annotation/0",
 							"type": "Annotation",
 							"motivation": "painting",
 							"body": {
@@ -8273,7 +8273,7 @@
 									}
 								]
 							},
-							"target": "/passio_verbigenae_tagged/iiif/canvas/f006"
+							"target": "/editioncrafter/passio_verbigenae_tagged/iiif/canvas/f006"
 						}
 					]
 				}
@@ -9463,16 +9463,16 @@
 			]
 		},
 		{
-			"id": "/passio_verbigenae_tagged/iiif/canvas/f007",
+			"id": "/editioncrafter/passio_verbigenae_tagged/iiif/canvas/f007",
 			"type": "Canvas",
 			"items": [
 				{
-					"id": "/passio_verbigenae_tagged/iiif/canvas/f007/annotationpage/0",
+					"id": "/editioncrafter/passio_verbigenae_tagged/iiif/canvas/f007/annotationpage/0",
 					"type": "AnnotationPage",
 					"items": [
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "/passio_verbigenae_tagged/iiif/canvas/f007/annotationpage/0/annotation/0",
+							"id": "/editioncrafter/passio_verbigenae_tagged/iiif/canvas/f007/annotationpage/0/annotation/0",
 							"type": "Annotation",
 							"motivation": "painting",
 							"body": {
@@ -9489,7 +9489,7 @@
 									}
 								]
 							},
-							"target": "/passio_verbigenae_tagged/iiif/canvas/f007"
+							"target": "/editioncrafter/passio_verbigenae_tagged/iiif/canvas/f007"
 						}
 					]
 				}
@@ -10828,16 +10828,16 @@
 			]
 		},
 		{
-			"id": "/passio_verbigenae_tagged/iiif/canvas/f008",
+			"id": "/editioncrafter/passio_verbigenae_tagged/iiif/canvas/f008",
 			"type": "Canvas",
 			"items": [
 				{
-					"id": "/passio_verbigenae_tagged/iiif/canvas/f008/annotationpage/0",
+					"id": "/editioncrafter/passio_verbigenae_tagged/iiif/canvas/f008/annotationpage/0",
 					"type": "AnnotationPage",
 					"items": [
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "/passio_verbigenae_tagged/iiif/canvas/f008/annotationpage/0/annotation/0",
+							"id": "/editioncrafter/passio_verbigenae_tagged/iiif/canvas/f008/annotationpage/0/annotation/0",
 							"type": "Annotation",
 							"motivation": "painting",
 							"body": {
@@ -10854,7 +10854,7 @@
 									}
 								]
 							},
-							"target": "/passio_verbigenae_tagged/iiif/canvas/f008"
+							"target": "/editioncrafter/passio_verbigenae_tagged/iiif/canvas/f008"
 						}
 					]
 				}
@@ -11706,16 +11706,16 @@
 			]
 		},
 		{
-			"id": "/passio_verbigenae_tagged/iiif/canvas/f009",
+			"id": "/editioncrafter/passio_verbigenae_tagged/iiif/canvas/f009",
 			"type": "Canvas",
 			"items": [
 				{
-					"id": "/passio_verbigenae_tagged/iiif/canvas/f009/annotationpage/0",
+					"id": "/editioncrafter/passio_verbigenae_tagged/iiif/canvas/f009/annotationpage/0",
 					"type": "AnnotationPage",
 					"items": [
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "/passio_verbigenae_tagged/iiif/canvas/f009/annotationpage/0/annotation/0",
+							"id": "/editioncrafter/passio_verbigenae_tagged/iiif/canvas/f009/annotationpage/0/annotation/0",
 							"type": "Annotation",
 							"motivation": "painting",
 							"body": {
@@ -11732,7 +11732,7 @@
 									}
 								]
 							},
-							"target": "/passio_verbigenae_tagged/iiif/canvas/f009"
+							"target": "/editioncrafter/passio_verbigenae_tagged/iiif/canvas/f009"
 						}
 					]
 				}
@@ -12755,16 +12755,16 @@
 			]
 		},
 		{
-			"id": "/passio_verbigenae_tagged/iiif/canvas/f010",
+			"id": "/editioncrafter/passio_verbigenae_tagged/iiif/canvas/f010",
 			"type": "Canvas",
 			"items": [
 				{
-					"id": "/passio_verbigenae_tagged/iiif/canvas/f010/annotationpage/0",
+					"id": "/editioncrafter/passio_verbigenae_tagged/iiif/canvas/f010/annotationpage/0",
 					"type": "AnnotationPage",
 					"items": [
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "/passio_verbigenae_tagged/iiif/canvas/f010/annotationpage/0/annotation/0",
+							"id": "/editioncrafter/passio_verbigenae_tagged/iiif/canvas/f010/annotationpage/0/annotation/0",
 							"type": "Annotation",
 							"motivation": "painting",
 							"body": {
@@ -12781,7 +12781,7 @@
 									}
 								]
 							},
-							"target": "/passio_verbigenae_tagged/iiif/canvas/f010"
+							"target": "/editioncrafter/passio_verbigenae_tagged/iiif/canvas/f010"
 						}
 					]
 				}
@@ -13913,16 +13913,16 @@
 			]
 		},
 		{
-			"id": "/passio_verbigenae_tagged/iiif/canvas/f011",
+			"id": "/editioncrafter/passio_verbigenae_tagged/iiif/canvas/f011",
 			"type": "Canvas",
 			"items": [
 				{
-					"id": "/passio_verbigenae_tagged/iiif/canvas/f011/annotationpage/0",
+					"id": "/editioncrafter/passio_verbigenae_tagged/iiif/canvas/f011/annotationpage/0",
 					"type": "AnnotationPage",
 					"items": [
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "/passio_verbigenae_tagged/iiif/canvas/f011/annotationpage/0/annotation/0",
+							"id": "/editioncrafter/passio_verbigenae_tagged/iiif/canvas/f011/annotationpage/0/annotation/0",
 							"type": "Annotation",
 							"motivation": "painting",
 							"body": {
@@ -13939,7 +13939,7 @@
 									}
 								]
 							},
-							"target": "/passio_verbigenae_tagged/iiif/canvas/f011"
+							"target": "/editioncrafter/passio_verbigenae_tagged/iiif/canvas/f011"
 						}
 					]
 				}
@@ -14760,16 +14760,16 @@
 			]
 		},
 		{
-			"id": "/passio_verbigenae_tagged/iiif/canvas/f012",
+			"id": "/editioncrafter/passio_verbigenae_tagged/iiif/canvas/f012",
 			"type": "Canvas",
 			"items": [
 				{
-					"id": "/passio_verbigenae_tagged/iiif/canvas/f012/annotationpage/0",
+					"id": "/editioncrafter/passio_verbigenae_tagged/iiif/canvas/f012/annotationpage/0",
 					"type": "AnnotationPage",
 					"items": [
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "/passio_verbigenae_tagged/iiif/canvas/f012/annotationpage/0/annotation/0",
+							"id": "/editioncrafter/passio_verbigenae_tagged/iiif/canvas/f012/annotationpage/0/annotation/0",
 							"type": "Annotation",
 							"motivation": "painting",
 							"body": {
@@ -14786,7 +14786,7 @@
 									}
 								]
 							},
-							"target": "/passio_verbigenae_tagged/iiif/canvas/f012"
+							"target": "/editioncrafter/passio_verbigenae_tagged/iiif/canvas/f012"
 						}
 					]
 				}
@@ -15177,16 +15177,16 @@
 			]
 		},
 		{
-			"id": "/passio_verbigenae_tagged/iiif/canvas/f013",
+			"id": "/editioncrafter/passio_verbigenae_tagged/iiif/canvas/f013",
 			"type": "Canvas",
 			"items": [
 				{
-					"id": "/passio_verbigenae_tagged/iiif/canvas/f013/annotationpage/0",
+					"id": "/editioncrafter/passio_verbigenae_tagged/iiif/canvas/f013/annotationpage/0",
 					"type": "AnnotationPage",
 					"items": [
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "/passio_verbigenae_tagged/iiif/canvas/f013/annotationpage/0/annotation/0",
+							"id": "/editioncrafter/passio_verbigenae_tagged/iiif/canvas/f013/annotationpage/0/annotation/0",
 							"type": "Annotation",
 							"motivation": "painting",
 							"body": {
@@ -15203,7 +15203,7 @@
 									}
 								]
 							},
-							"target": "/passio_verbigenae_tagged/iiif/canvas/f013"
+							"target": "/editioncrafter/passio_verbigenae_tagged/iiif/canvas/f013"
 						}
 					]
 				}
