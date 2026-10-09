@@ -4,6 +4,7 @@ const TagFilterContext = createContext({
   tagsLeft: [],
   tagsRight: [],
   toggleTag: () => null,
+  clearTags: () => null,
 })
 
 export default TagFilterContext

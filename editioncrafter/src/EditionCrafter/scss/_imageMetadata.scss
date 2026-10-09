@@ -1,0 +1,16 @@
+.editioncrafter {
+
+  .image-metadata {
+    position: absolute;
+    bottom: 8px;
+    left: 8px;
+    background-color: rgba(128, 128, 128, 0.5);
+    color: white;
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    flex-wrap: wrap;
+    padding: 4px 6px;
+  }
+
+}

@@ -60,6 +60,7 @@
     "eslint-plugin-react-hooks": "^5.0.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "sass-embedded": "^1.100.0",
     "storybook": "^8.4.2",
     "vite": "^5.4.11",
     "vite-plugin-css-injected-by-js": "^3.5.2"

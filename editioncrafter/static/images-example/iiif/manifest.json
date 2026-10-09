@@ -3,20 +3,20 @@
 		"http://www.w3.org/ns/anno.jsonld",
 		"http://iiif.io/api/presentation/3/context.json"
 	],
-	"id": "/images-example/iiif/manifest.json",
+	"id": "/editioncrafter/images-example/iiif/manifest.json",
 	"type": "Manifest",
 	"items": [
 		{
-			"id": "/images-example/iiif/canvas/f004",
+			"id": "/editioncrafter/images-example/iiif/canvas/f004",
 			"type": "Canvas",
 			"items": [
 				{
-					"id": "/images-example/iiif/canvas/f004/annotationpage/0",
+					"id": "/editioncrafter/images-example/iiif/canvas/f004/annotationpage/0",
 					"type": "AnnotationPage",
 					"items": [
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "/images-example/iiif/canvas/f004/annotationpage/0/annotation/0",
+							"id": "/editioncrafter/images-example/iiif/canvas/f004/annotationpage/0/annotation/0",
 							"type": "Annotation",
 							"motivation": "painting",
 							"body": {
@@ -26,7 +26,7 @@
 								"height": 5408,
 								"width": 3384
 							},
-							"target": "/images-example/iiif/canvas/f004"
+							"target": "/editioncrafter/images-example/iiif/canvas/f004"
 						}
 					]
 				}
@@ -40,50 +40,50 @@
 			},
 			"annotations": [
 				{
-					"id": "/images-example/iiif/canvas/f004/annotationPage/1",
+					"id": "/editioncrafter/images-example/iiif/canvas/f004/annotationPage/1",
 					"type": "AnnotationPage",
 					"items": [
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "/images-example/iiif/canvas/f004/annotationPage/1/annotation/0",
+							"id": "/editioncrafter/images-example/iiif/canvas/f004/annotationPage/1/annotation/0",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "/images-example/tei/text/f004.xml",
+								"id": "/editioncrafter/images-example/tei/text/f004.xml",
 								"format": "text/xml",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "/images-example/iiif/canvas/f004"
+							"target": "/editioncrafter/images-example/iiif/canvas/f004"
 						},
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "/images-example/iiif/canvas/f004/annotationPage/1/annotation/1",
+							"id": "/editioncrafter/images-example/iiif/canvas/f004/annotationPage/1/annotation/1",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "/images-example/html/text/f004.html",
+								"id": "/editioncrafter/images-example/html/text/f004.html",
 								"format": "text/html",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "/images-example/iiif/canvas/f004"
+							"target": "/editioncrafter/images-example/iiif/canvas/f004"
 						}
 					]
 				}
 			]
 		},
 		{
-			"id": "/images-example/iiif/canvas/f005",
+			"id": "/editioncrafter/images-example/iiif/canvas/f005",
 			"type": "Canvas",
 			"items": [
 				{
-					"id": "/images-example/iiif/canvas/f005/annotationpage/0",
+					"id": "/editioncrafter/images-example/iiif/canvas/f005/annotationpage/0",
 					"type": "AnnotationPage",
 					"items": [
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "/images-example/iiif/canvas/f005/annotationpage/0/annotation/0",
+							"id": "/editioncrafter/images-example/iiif/canvas/f005/annotationpage/0/annotation/0",
 							"type": "Annotation",
 							"motivation": "painting",
 							"body": {
@@ -93,7 +93,7 @@
 								"height": 5432,
 								"width": 3429
 							},
-							"target": "/images-example/iiif/canvas/f005"
+							"target": "/editioncrafter/images-example/iiif/canvas/f005"
 						}
 					]
 				}
@@ -107,50 +107,50 @@
 			},
 			"annotations": [
 				{
-					"id": "/images-example/iiif/canvas/f005/annotationPage/1",
+					"id": "/editioncrafter/images-example/iiif/canvas/f005/annotationPage/1",
 					"type": "AnnotationPage",
 					"items": [
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "/images-example/iiif/canvas/f005/annotationPage/1/annotation/0",
+							"id": "/editioncrafter/images-example/iiif/canvas/f005/annotationPage/1/annotation/0",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "/images-example/tei/text/f005.xml",
+								"id": "/editioncrafter/images-example/tei/text/f005.xml",
 								"format": "text/xml",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "/images-example/iiif/canvas/f005"
+							"target": "/editioncrafter/images-example/iiif/canvas/f005"
 						},
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "/images-example/iiif/canvas/f005/annotationPage/1/annotation/1",
+							"id": "/editioncrafter/images-example/iiif/canvas/f005/annotationPage/1/annotation/1",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "/images-example/html/text/f005.html",
+								"id": "/editioncrafter/images-example/html/text/f005.html",
 								"format": "text/html",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "/images-example/iiif/canvas/f005"
+							"target": "/editioncrafter/images-example/iiif/canvas/f005"
 						}
 					]
 				}
 			]
 		},
 		{
-			"id": "/images-example/iiif/canvas/f006",
+			"id": "/editioncrafter/images-example/iiif/canvas/f006",
 			"type": "Canvas",
 			"items": [
 				{
-					"id": "/images-example/iiif/canvas/f006/annotationpage/0",
+					"id": "/editioncrafter/images-example/iiif/canvas/f006/annotationpage/0",
 					"type": "AnnotationPage",
 					"items": [
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "/images-example/iiif/canvas/f006/annotationpage/0/annotation/0",
+							"id": "/editioncrafter/images-example/iiif/canvas/f006/annotationpage/0/annotation/0",
 							"type": "Annotation",
 							"motivation": "painting",
 							"body": {
@@ -160,7 +160,7 @@
 								"height": 5420,
 								"width": 3372
 							},
-							"target": "/images-example/iiif/canvas/f006"
+							"target": "/editioncrafter/images-example/iiif/canvas/f006"
 						}
 					]
 				}
@@ -174,50 +174,50 @@
 			},
 			"annotations": [
 				{
-					"id": "/images-example/iiif/canvas/f006/annotationPage/1",
+					"id": "/editioncrafter/images-example/iiif/canvas/f006/annotationPage/1",
 					"type": "AnnotationPage",
 					"items": [
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "/images-example/iiif/canvas/f006/annotationPage/1/annotation/0",
+							"id": "/editioncrafter/images-example/iiif/canvas/f006/annotationPage/1/annotation/0",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "/images-example/tei/text/f006.xml",
+								"id": "/editioncrafter/images-example/tei/text/f006.xml",
 								"format": "text/xml",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "/images-example/iiif/canvas/f006"
+							"target": "/editioncrafter/images-example/iiif/canvas/f006"
 						},
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "/images-example/iiif/canvas/f006/annotationPage/1/annotation/1",
+							"id": "/editioncrafter/images-example/iiif/canvas/f006/annotationPage/1/annotation/1",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "/images-example/html/text/f006.html",
+								"id": "/editioncrafter/images-example/html/text/f006.html",
 								"format": "text/html",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "/images-example/iiif/canvas/f006"
+							"target": "/editioncrafter/images-example/iiif/canvas/f006"
 						}
 					]
 				}
 			]
 		},
 		{
-			"id": "/images-example/iiif/canvas/f007",
+			"id": "/editioncrafter/images-example/iiif/canvas/f007",
 			"type": "Canvas",
 			"items": [
 				{
-					"id": "/images-example/iiif/canvas/f007/annotationpage/0",
+					"id": "/editioncrafter/images-example/iiif/canvas/f007/annotationpage/0",
 					"type": "AnnotationPage",
 					"items": [
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "/images-example/iiif/canvas/f007/annotationpage/0/annotation/0",
+							"id": "/editioncrafter/images-example/iiif/canvas/f007/annotationpage/0/annotation/0",
 							"type": "Annotation",
 							"motivation": "painting",
 							"body": {
@@ -227,7 +227,7 @@
 								"height": 5420,
 								"width": 3408
 							},
-							"target": "/images-example/iiif/canvas/f007"
+							"target": "/editioncrafter/images-example/iiif/canvas/f007"
 						}
 					]
 				}
@@ -241,50 +241,50 @@
 			},
 			"annotations": [
 				{
-					"id": "/images-example/iiif/canvas/f007/annotationPage/1",
+					"id": "/editioncrafter/images-example/iiif/canvas/f007/annotationPage/1",
 					"type": "AnnotationPage",
 					"items": [
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "/images-example/iiif/canvas/f007/annotationPage/1/annotation/0",
+							"id": "/editioncrafter/images-example/iiif/canvas/f007/annotationPage/1/annotation/0",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "/images-example/tei/text/f007.xml",
+								"id": "/editioncrafter/images-example/tei/text/f007.xml",
 								"format": "text/xml",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "/images-example/iiif/canvas/f007"
+							"target": "/editioncrafter/images-example/iiif/canvas/f007"
 						},
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "/images-example/iiif/canvas/f007/annotationPage/1/annotation/1",
+							"id": "/editioncrafter/images-example/iiif/canvas/f007/annotationPage/1/annotation/1",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "/images-example/html/text/f007.html",
+								"id": "/editioncrafter/images-example/html/text/f007.html",
 								"format": "text/html",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "/images-example/iiif/canvas/f007"
+							"target": "/editioncrafter/images-example/iiif/canvas/f007"
 						}
 					]
 				}
 			]
 		},
 		{
-			"id": "/images-example/iiif/canvas/f008",
+			"id": "/editioncrafter/images-example/iiif/canvas/f008",
 			"type": "Canvas",
 			"items": [
 				{
-					"id": "/images-example/iiif/canvas/f008/annotationpage/0",
+					"id": "/editioncrafter/images-example/iiif/canvas/f008/annotationpage/0",
 					"type": "AnnotationPage",
 					"items": [
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "/images-example/iiif/canvas/f008/annotationpage/0/annotation/0",
+							"id": "/editioncrafter/images-example/iiif/canvas/f008/annotationpage/0/annotation/0",
 							"type": "Annotation",
 							"motivation": "painting",
 							"body": {
@@ -294,7 +294,7 @@
 								"height": 5417,
 								"width": 3369
 							},
-							"target": "/images-example/iiif/canvas/f008"
+							"target": "/editioncrafter/images-example/iiif/canvas/f008"
 						}
 					]
 				}
@@ -308,50 +308,50 @@
 			},
 			"annotations": [
 				{
-					"id": "/images-example/iiif/canvas/f008/annotationPage/1",
+					"id": "/editioncrafter/images-example/iiif/canvas/f008/annotationPage/1",
 					"type": "AnnotationPage",
 					"items": [
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "/images-example/iiif/canvas/f008/annotationPage/1/annotation/0",
+							"id": "/editioncrafter/images-example/iiif/canvas/f008/annotationPage/1/annotation/0",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "/images-example/tei/text/f008.xml",
+								"id": "/editioncrafter/images-example/tei/text/f008.xml",
 								"format": "text/xml",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "/images-example/iiif/canvas/f008"
+							"target": "/editioncrafter/images-example/iiif/canvas/f008"
 						},
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "/images-example/iiif/canvas/f008/annotationPage/1/annotation/1",
+							"id": "/editioncrafter/images-example/iiif/canvas/f008/annotationPage/1/annotation/1",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "/images-example/html/text/f008.html",
+								"id": "/editioncrafter/images-example/html/text/f008.html",
 								"format": "text/html",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "/images-example/iiif/canvas/f008"
+							"target": "/editioncrafter/images-example/iiif/canvas/f008"
 						}
 					]
 				}
 			]
 		},
 		{
-			"id": "/images-example/iiif/canvas/f009",
+			"id": "/editioncrafter/images-example/iiif/canvas/f009",
 			"type": "Canvas",
 			"items": [
 				{
-					"id": "/images-example/iiif/canvas/f009/annotationpage/0",
+					"id": "/editioncrafter/images-example/iiif/canvas/f009/annotationpage/0",
 					"type": "AnnotationPage",
 					"items": [
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "/images-example/iiif/canvas/f009/annotationpage/0/annotation/0",
+							"id": "/editioncrafter/images-example/iiif/canvas/f009/annotationpage/0/annotation/0",
 							"type": "Annotation",
 							"motivation": "painting",
 							"body": {
@@ -361,7 +361,7 @@
 								"height": 5426,
 								"width": 3393
 							},
-							"target": "/images-example/iiif/canvas/f009"
+							"target": "/editioncrafter/images-example/iiif/canvas/f009"
 						}
 					]
 				}
@@ -375,50 +375,50 @@
 			},
 			"annotations": [
 				{
-					"id": "/images-example/iiif/canvas/f009/annotationPage/1",
+					"id": "/editioncrafter/images-example/iiif/canvas/f009/annotationPage/1",
 					"type": "AnnotationPage",
 					"items": [
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "/images-example/iiif/canvas/f009/annotationPage/1/annotation/0",
+							"id": "/editioncrafter/images-example/iiif/canvas/f009/annotationPage/1/annotation/0",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "/images-example/tei/text/f009.xml",
+								"id": "/editioncrafter/images-example/tei/text/f009.xml",
 								"format": "text/xml",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "/images-example/iiif/canvas/f009"
+							"target": "/editioncrafter/images-example/iiif/canvas/f009"
 						},
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "/images-example/iiif/canvas/f009/annotationPage/1/annotation/1",
+							"id": "/editioncrafter/images-example/iiif/canvas/f009/annotationPage/1/annotation/1",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "/images-example/html/text/f009.html",
+								"id": "/editioncrafter/images-example/html/text/f009.html",
 								"format": "text/html",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "/images-example/iiif/canvas/f009"
+							"target": "/editioncrafter/images-example/iiif/canvas/f009"
 						}
 					]
 				}
 			]
 		},
 		{
-			"id": "/images-example/iiif/canvas/f010",
+			"id": "/editioncrafter/images-example/iiif/canvas/f010",
 			"type": "Canvas",
 			"items": [
 				{
-					"id": "/images-example/iiif/canvas/f010/annotationpage/0",
+					"id": "/editioncrafter/images-example/iiif/canvas/f010/annotationpage/0",
 					"type": "AnnotationPage",
 					"items": [
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "/images-example/iiif/canvas/f010/annotationpage/0/annotation/0",
+							"id": "/editioncrafter/images-example/iiif/canvas/f010/annotationpage/0/annotation/0",
 							"type": "Annotation",
 							"motivation": "painting",
 							"body": {
@@ -428,7 +428,7 @@
 								"height": 5390,
 								"width": 3372
 							},
-							"target": "/images-example/iiif/canvas/f010"
+							"target": "/editioncrafter/images-example/iiif/canvas/f010"
 						}
 					]
 				}
@@ -442,50 +442,50 @@
 			},
 			"annotations": [
 				{
-					"id": "/images-example/iiif/canvas/f010/annotationPage/1",
+					"id": "/editioncrafter/images-example/iiif/canvas/f010/annotationPage/1",
 					"type": "AnnotationPage",
 					"items": [
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "/images-example/iiif/canvas/f010/annotationPage/1/annotation/0",
+							"id": "/editioncrafter/images-example/iiif/canvas/f010/annotationPage/1/annotation/0",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "/images-example/tei/text/f010.xml",
+								"id": "/editioncrafter/images-example/tei/text/f010.xml",
 								"format": "text/xml",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "/images-example/iiif/canvas/f010"
+							"target": "/editioncrafter/images-example/iiif/canvas/f010"
 						},
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "/images-example/iiif/canvas/f010/annotationPage/1/annotation/1",
+							"id": "/editioncrafter/images-example/iiif/canvas/f010/annotationPage/1/annotation/1",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "/images-example/html/text/f010.html",
+								"id": "/editioncrafter/images-example/html/text/f010.html",
 								"format": "text/html",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "/images-example/iiif/canvas/f010"
+							"target": "/editioncrafter/images-example/iiif/canvas/f010"
 						}
 					]
 				}
 			]
 		},
 		{
-			"id": "/images-example/iiif/canvas/f011",
+			"id": "/editioncrafter/images-example/iiif/canvas/f011",
 			"type": "Canvas",
 			"items": [
 				{
-					"id": "/images-example/iiif/canvas/f011/annotationpage/0",
+					"id": "/editioncrafter/images-example/iiif/canvas/f011/annotationpage/0",
 					"type": "AnnotationPage",
 					"items": [
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "/images-example/iiif/canvas/f011/annotationpage/0/annotation/0",
+							"id": "/editioncrafter/images-example/iiif/canvas/f011/annotationpage/0/annotation/0",
 							"type": "Annotation",
 							"motivation": "painting",
 							"body": {
@@ -495,7 +495,7 @@
 								"height": 5390,
 								"width": 3402
 							},
-							"target": "/images-example/iiif/canvas/f011"
+							"target": "/editioncrafter/images-example/iiif/canvas/f011"
 						}
 					]
 				}
@@ -509,34 +509,34 @@
 			},
 			"annotations": [
 				{
-					"id": "/images-example/iiif/canvas/f011/annotationPage/1",
+					"id": "/editioncrafter/images-example/iiif/canvas/f011/annotationPage/1",
 					"type": "AnnotationPage",
 					"items": [
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "/images-example/iiif/canvas/f011/annotationPage/1/annotation/0",
+							"id": "/editioncrafter/images-example/iiif/canvas/f011/annotationPage/1/annotation/0",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "/images-example/tei/text/f011.xml",
+								"id": "/editioncrafter/images-example/tei/text/f011.xml",
 								"format": "text/xml",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "/images-example/iiif/canvas/f011"
+							"target": "/editioncrafter/images-example/iiif/canvas/f011"
 						},
 						{
 							"@context": "https://www.w3.org/ns/anno.jsonld",
-							"id": "/images-example/iiif/canvas/f011/annotationPage/1/annotation/1",
+							"id": "/editioncrafter/images-example/iiif/canvas/f011/annotationPage/1/annotation/1",
 							"type": "Annotation",
 							"motivation": "supplementing",
 							"body": {
-								"id": "/images-example/html/text/f011.html",
+								"id": "/editioncrafter/images-example/html/text/f011.html",
 								"format": "text/html",
 								"type": "TextPartial",
 								"profile": "https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md"
 							},
-							"target": "/images-example/iiif/canvas/f011"
+							"target": "/editioncrafter/images-example/iiif/canvas/f011"
 						}
 					]
 				}
