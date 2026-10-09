@@ -1,6 +1,6 @@
 import { Accordion, AccordionDetails, AccordionSummary, Grid, Typography } from '@material-ui/core'
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useMemo } from 'react'
 import { getObjs } from '../../common/lib/sql'
 import InsertLeft from '../assets/InsertLeft'
 import InsertRight from '../assets/InsertRight'
@@ -85,25 +85,21 @@ function Thumbnail(props) {
       <figure className="surface-thumbnail-figure">
         {isLeft
           ? (
-              <a onDoubleClick={onClick.right} title="Double click to insert right">
-                <div className="surface-thumbnail-overlay-selected left">
-                  <div>
-                    <Left />
-                    <Typography>Left</Typography>
-                  </div>
+              <div className="surface-thumbnail-overlay-selected left">
+                <div>
+                  <Left />
+                  <Typography>Left</Typography>
                 </div>
-              </a>
+              </div>
             )
           : isRight
             ? (
-                <a onDoubleClick={onClick.left} title="Double click to insert left">
-                  <div className="surface-thumbnail-overlay-selected right">
-                    <div>
-                      <Right />
-                      <Typography>Right</Typography>
-                    </div>
+                <div className="surface-thumbnail-overlay-selected right">
+                  <div>
+                    <Right />
+                    <Typography>Right</Typography>
                   </div>
-                </a>
+                </div>
               )
             : (
                 <div className="surface-thumbnail-overlay">
@@ -117,8 +113,6 @@ function Thumbnail(props) {
           <img
             src={thumbnailURL}
             alt={name}
-            loading="lazy"
-            decoding="async"
             style={{ maxWidth: `${MAX_THUMBNAIL_DIMENSION}px`, maxHeight: `${MAX_THUMBNAIL_DIMENSION}px` }}
             onError={onError}
           />
@@ -182,9 +176,6 @@ function ThumbnailGrid(props) {
 
 function DocumentDetail(props) {
   const { db, documentName, documentID, documentLocalID, navigateToSelection, updatePageCount, selection, tags } = props
-  const [expanded, setExpanded] = useState(false)
-  const [hasOpened, setHasOpened] = useState(false)
-
   const surfaces = useMemo(() => {
     const taggedSurfaces = getData(db, documentID, tags)
     const data = []
@@ -204,47 +195,29 @@ function DocumentDetail(props) {
     updatePageCount(surfaces?.length)
   }, [surfaces, updatePageCount, tags])
 
-  const handleChange = (event, isExpanded) => {
-    setExpanded(isExpanded)
-    if (isExpanded) {
-      setHasOpened(true)
-    }
-  }
-
-  return ((!tags.length || surfaces.length)
-    ? (
-        <Accordion expanded={expanded} onChange={handleChange}>
-          <AccordionSummary
-            expandIcon={<ExpandMoreIcon />}
-            aria-controls={`document-detail-${documentID}-content`}
-            id={`document-detail-${documentID}`}
-            className="accordion-summary"
-          >
-            <Typography>{documentName}</Typography>
-            <Typography>{surfaces?.length || ''}</Typography>
-          </AccordionSummary>
-          <AccordionDetails
-            className="accordion-detail"
-          >
-            {/* Thumbnails are only rendered (and their images fetched) once a
-                document has actually been expanded, since Accordion mounts
-                AccordionDetails eagerly regardless of collapsed state. Without
-                this, every document's thumbnails load on initial page render. */}
-            {hasOpened
-              ? (
-                  <ThumbnailGrid
-                    navigateToSelection={navigateToSelection}
-                    documentLocalID={documentLocalID}
-                    surfaces={surfaces}
-                    selection={selection}
-                  >
-                  </ThumbnailGrid>
-                )
-              : null}
-          </AccordionDetails>
-        </Accordion>
-      )
-    : null
+  return (
+    <Accordion>
+      <AccordionSummary
+        expandIcon={<ExpandMoreIcon />}
+        aria-controls={`document-detail-${documentID}-content`}
+        id={`document-detail-${documentID}`}
+        className="accordion-summary"
+      >
+        <Typography>{documentName}</Typography>
+        <Typography>{surfaces?.length || ''}</Typography>
+      </AccordionSummary>
+      <AccordionDetails
+        className="accordion-detail"
+      >
+        <ThumbnailGrid
+          navigateToSelection={navigateToSelection}
+          documentLocalID={documentLocalID}
+          surfaces={surfaces}
+          selection={selection}
+        >
+        </ThumbnailGrid>
+      </AccordionDetails>
+    </Accordion>
   )
 }
 

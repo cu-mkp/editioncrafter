@@ -81,7 +81,7 @@ export function SimpleImages() {
       transcriptionTypes={{
         text: 'Translation',
       }}
-      iiifManifest="/editioncrafter/images-example/iiif/manifest.json"
+      iiifManifest="/images-example/iiif/manifest.json"
     />
   )
 }
@@ -173,7 +173,7 @@ export function OrnamentDesignTranslation() {
 export function RecordListExample() {
   return (
     <RecordList
-      dbUrl="/editioncrafter/database-example/example.sqlite"
+      dbUrl="/database-example/example.sqlite"
       recordLabel="Entries"
       layers={{
         tc: 'Diplomatic (FR)',
@@ -181,7 +181,7 @@ export function RecordListExample() {
         tl: 'Translation (EN)',
         test: 'Test Field (EN)',
       }}
-      viewerUrl="https://performant-software.github.io/editioncrafter/iframe.html?args=&globals=&id=editioncrafter--taxonomy-example&viewMode=story"
+      viewerUrl="http://localhost:6006/iframe.html?globals=&id=editioncrafter--taxonomy-example&viewMode=story"
     />
   )
 }
@@ -196,7 +196,7 @@ export function TaxonomyExample() {
         tl: 'Translation (EN)',
         test: 'Test Field (EN)',
       }}
-      iiifManifest="/editioncrafter/database-example/iiif/manifest.json"
+      iiifManifest="/database-example/iiif/manifest.json"
     />
   )
 }
@@ -272,12 +272,12 @@ export function TagExploreExample() {
   return (
     <TagExplore
       documentName="Ornament : Design : Translation"
-      dbUrl="https://performant-software.github.io/editioncrafter-odt/odt-feb-2026.sqlite"
+      dbUrl="/odt.sqlite"
       transcriptionTypes={{
-        transcription: 'Transcription',
-        translation: 'Translation',
+        'text-1': 'Text 1',
+        'text-2': 'Text 2',
       }}
-      baseURL="https://performant-software.github.io/editioncrafter-odt"
+      baseURL="."
     />
   )
 }

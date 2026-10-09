@@ -26,18 +26,13 @@
   overflow-y: auto;
   position: absolute;
   top: 48px;
-  left: 400px;
+  left: 0;
   background-color: #242629;
   z-index: 10000;
   padding: 12px 0 12px 12px;
-  width: 430px;
+  width: 100%;
   height: 100%;
-  max-height: calc(97dvh - 48px);
-  border-left: solid white 1px;
-}
-
-.tag-explore .tag-filters .tag-filters-search {
-  margin-bottom: 24px;
+  max-height: 100dvh;
 }
 
 .tag-explore .tag-filter-button {
@@ -158,8 +153,8 @@
   position: absolute;
   top: 0;
   left: 48px;
-  height: 97dvh;
-  width: 400px;
+  height: 100vh;
+  min-width: 300px;
   display: flex;
   flex-direction: column;
   background-color: #242629;
@@ -194,6 +189,4 @@
 
 .tag-explore .accordion-detail {
   background-color: #242629;
-  display: flex;
-  flex-direction: column;
 }

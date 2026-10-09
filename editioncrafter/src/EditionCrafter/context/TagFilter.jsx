@@ -55,16 +55,10 @@ function TagFilterProvider(props) {
       }
     }
 
-    const clearTags = () => {
-      setTagsRight([])
-      setTagsLeft([])
-    }
-
     return {
       tagsLeft,
       tagsRight,
       toggleTag,
-      clearTags,
     }
   }, [location.pathname, navigate, searchParams, tagParamsLeft, tagParamsRight, tagsLeft, tagsRight])
 

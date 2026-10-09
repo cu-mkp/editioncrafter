@@ -4,26 +4,15 @@ const DocumentActions = {}
 const textPartialResourceProfileID = 'https://github.com/cu-mkp/editioncrafter-project/text-partial-resource.md'
 
 DocumentActions.loadDocument = function loadDocument(state, manifestData) {
-  const newFolios = parseManifest(manifestData, state.transcriptionTypes)
-  const { folioIndex: newFolioIndex, folioByName: newFolioByName } = createFolioIndex(newFolios)
-
-  // In tag explorer mode this is called incrementally, once per document as its
-  // folios are actually needed, so merge rather than replace. For a
-  // single-document edition this is still only ever called once.
-  const loadedManifestKeys = { ...state.loadedManifestKeys }
-  if (state.tagExplorerMode) {
-    Object.keys(manifestData.documentData).forEach((key) => {
-      loadedManifestKeys[key] = true
-    })
-  }
+  const folios = parseManifest(manifestData, state.transcriptionTypes)
+  const { folioIndex, folioByName } = createFolioIndex(folios)
 
   return {
     ...state,
     loaded: true,
-    folios: [...state.folios, ...newFolios],
-    folioIndex: { ...state.folioIndex, ...newFolioIndex },
-    folioByName: { ...state.folioByName, ...newFolioByName },
-    loadedManifestKeys,
+    folios,
+    folioIndex,
+    folioByName,
   }
 }
 
@@ -227,7 +216,6 @@ function parseSingleManifest(manifest, transcriptionTypes, document) {
         annotations: canvas.annotations
           ? canvas.annotations.filter(a => a.motivation === 'tagging')
           : [],
-        metadata: canvas.metadata,
       }
 
       folios.push(folio)
