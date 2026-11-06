@@ -74,7 +74,7 @@ function Thumbnail(props) {
 
   const onError = (currentTarget) => {
     currentTarget.onerror = null
-    const fullImageURL = `${imageURL.slice(0, -9)}full/full/0/default.jpg`
+    const fullImageURL = `${imageURL.slice(0, -9)}full/max/0/default.jpg`
     if (currentTarget.src !== fullImageURL) {
       currentTarget.src = fullImageURL
     }
